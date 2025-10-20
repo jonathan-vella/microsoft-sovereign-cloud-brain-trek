@@ -59,14 +59,24 @@ Before starting Level 100, ensure you have:
 
 **Duration:** 1-2 hours
 
-- [What is Digital Sovereignty?](digital-sovereignty.html)
-- [Microsoft's European Digital Commitments](digital-sovereignty.html#european-commitments)
-- [Regulatory Requirements Overview](digital-sovereignty.html#regulatory-requirements)
+📚 **Main Content:**
+- [Digital Sovereignty Overview](digital-sovereignty.html) - Core concepts, principles, and customer scenarios
+
+**Deep Dive Topics:**
+- [Microsoft's European Digital Commitments](european-commitments.html) - The 6 commitments and EU Data Boundary
+- [Regulatory Requirements Overview](regulatory-overview.html) - GDPR, FedRAMP, HIPAA, PCI DSS, ITAR
+- [Data Residency vs. Sovereignty](data-residency-concepts.html) - Definitions and Azure implementation
+- [Operational Sovereignty](operational-sovereignty.html) - Control plane concepts and Azure Local modes
+
+✅ **Assessment:**
+- [Knowledge Check Quiz](knowledge-check.html) - 15 questions to test your understanding
 
 **Key Concepts:**
 - Data residency and localization
 - Operational sovereignty
 - Compliance and regulatory frameworks
+- EU Data Boundary
+- Control plane models
 
 ### 2. Microsoft Sovereign Cloud Models
 
