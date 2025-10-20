@@ -1,0 +1,45 @@
+# CODEOWNERS file for Microsoft Sovereign Cloud Brain Trek
+# 
+# This file defines individuals or teams that are responsible for code in this repository.
+# When someone opens a pull request that modifies code owned by these owners, 
+# they will automatically be requested as reviewers.
+#
+# Syntax: path/to/files @username @team
+# More specific patterns take precedence over less specific ones.
+#
+# Documentation: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything in the repo
+# This ensures someone reviews all changes
+* @jonathan-vella
+
+# Documentation content - require review from documentation team
+/docs/ @jonathan-vella @OliCSADoerr
+
+# Specific documentation folders
+/docs/level-100/ @jonathan-vella @OliCSADoerr
+/docs/level-200/ @jonathan-vella @OliCSADoerr
+/docs/level-300/ @jonathan-vella @OliCSADoerr
+/docs/resources/ @jonathan-vella @OliCSADoerr
+
+# Visual assets - require review before changes
+/docs/assets/ @jonathan-vella @OliCSADoerr
+
+# Planning and project management files - primary owner only
+/.github/PROJECT_PLAN.md @jonathan-vella
+/.github/AGENT_GUIDE.md @jonathan-vella
+/.github/STATUS.md @jonathan-vella
+/.github/DELEGATION_*.md @jonathan-vella
+
+# Repository configuration - primary owner only
+/.github/workflows/ @jonathan-vella
+/.gitignore @jonathan-vella
+/CONTRIBUTING.md @jonathan-vella
+/LICENSE @jonathan-vella
+
+# Changelog - both can update after completing modules
+/CHANGELOG.md @jonathan-vella @OliCSADoerr
+
+# README - primary owner reviews major changes
+/README.md @jonathan-vella
+/docs/README.md @jonathan-vella @OliCSADoerr

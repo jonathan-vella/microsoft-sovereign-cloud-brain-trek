@@ -165,6 +165,13 @@ If you have questions about contributing:
 - Review existing Issues and PRs
 - Contact the maintainers
 
+## Contributors
+
+We thank the following people for their contributions to this project:
+
+- **[@jonathan-vella](https://github.com/jonathan-vella)** - Project Lead and Primary Author
+- **[@OliCSADoerr](https://github.com/OliCSADoerr)** - Content Contributor (Documentation)
+
 ## License
 
 By contributing to this project, you agree that your contributions will be licensed under the same MIT License that covers the project.
