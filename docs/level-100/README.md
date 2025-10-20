@@ -82,14 +82,24 @@ Before starting Level 100, ensure you have:
 
 **Duration:** 2-3 hours
 
-- [Sovereign Public Cloud](sovereign-cloud-models.html#public-cloud)
-- [Sovereign Private Cloud](sovereign-cloud-models.html#private-cloud)
-- [National Partner Clouds](sovereign-cloud-models.html#partner-clouds)
+📚 **Main Content:**
+- [Microsoft Sovereign Cloud Models Overview](sovereign-cloud-models.html) - Three models, comparison, and decision framework
+
+**Deep Dive Topics:**
+- [Sovereign Public Cloud](sovereign-public-cloud.html) - Azure with enhanced sovereignty controls and Microsoft Cloud for Sovereignty
+- [Sovereign Private Cloud](sovereign-private-cloud.html) - Azure Local (Connected and Disconnected modes) for dedicated infrastructure
+- [National Partner Clouds](national-partner-clouds.html) - Azure Government, Azure China, and partner-operated sovereign clouds
+
+✅ **Assessment:**
+- [Cloud Models Knowledge Check](cloud-models-quiz.html) - 15 questions testing model selection and technical understanding
 
 **Key Concepts:**
-- Model differentiation
-- Use case mapping
-- Customer scenarios
+- Model differentiation (Public, Private, Partner)
+- Microsoft Cloud for Sovereignty capabilities
+- Azure Local Connected vs. Disconnected
+- Customer Lockbox and Confidential Computing
+- Azure Government and Azure China
+- Use case mapping and decision criteria
 
 ### 3. Azure Local Overview
 

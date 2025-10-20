@@ -223,9 +223,104 @@ docs/assets/images/
 
 ---
 
+#### 8. Sovereign Cloud Models Comparison
+**File:** `level-100/sovereign-cloud-models-comparison.svg`
+
+**Description:** Side-by-side comparison of the three sovereign cloud models showing key characteristics, use cases, and decision criteria.
+
+**Content:**
+- Three columns: Sovereign Public | Sovereign Private | National Partner
+- Comparison rows: Infrastructure, Control Level, Compliance, Use Cases, Cost Model
+- Visual indicators for sovereignty level (Low/Medium/High)
+- Decision criteria for selecting each model
+
+**Visual Elements:**
+- Three-column layout with clear separation
+- Icons for each model type (cloud icon for Public, server icon for Private, partner icon for Partner)
+- Color coding: Blue (Public), Green (Private), Purple (Partner)
+- Comparison table with checkmarks and detailed attributes
+- Call-out boxes for key differentiators
+
+**Recommended Source:**
+- Create custom based on: [Microsoft Cloud for Sovereignty](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)
+- Reference: [Azure deployment models](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
+
+**Used In:**
+- `docs/level-100/sovereign-cloud-models.md`
+
+**Estimated Creation Time:** 2 hours
+
+---
+
+#### 9. Model Decision Tree
+**File:** `level-100/model-decision-tree.svg`
+
+**Description:** Decision flowchart to help customers select the appropriate sovereign cloud model based on their requirements.
+
+**Content:**
+- Start: "What are your sovereignty requirements?"
+- Decision nodes:
+  - Data residency only? → Sovereign Public Cloud
+  - Operational control needed? → Check connectivity requirements
+  - Disconnected operations? → Sovereign Private Cloud (Disconnected)
+  - National regulations? → National Partner Clouds
+  - Connected with control? → Sovereign Private Cloud (Connected)
+- End nodes: Recommended model for each path with example scenarios
+
+**Visual Elements:**
+- Flowchart with decision diamonds (yes/no branches)
+- Clear yes/no paths with arrows
+- Color-coded outcomes matching model colors
+- Example scenarios at each endpoint
+- Icons for each decision type (data, control, network, compliance)
+
+**Recommended Source:**
+- Create custom decision tree
+- Reference: [Azure decision guides](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/)
+
+**Used In:**
+- `docs/level-100/sovereign-cloud-models.md`
+
+**Estimated Creation Time:** 1.5 hours
+
+---
+
+#### 10. National Partner Clouds Map
+**File:** `level-100/partner-clouds-map.svg`
+
+**Description:** World map showing geographic distribution of national partner clouds and their sovereign guarantees.
+
+**Content:**
+- World map with regions highlighted
+- Azure Government (US regions): Virginia, Texas, Arizona, DoD regions
+- Azure China (21Vianet regions): Beijing, Shanghai
+- Azure Germany (historical, discontinued): Lessons learned callout
+- Legend showing sovereignty level and operator information
+- Connectivity lines showing isolation from global Azure
+
+**Visual Elements:**
+- World map base (simplified, focus on relevant regions)
+- Regional highlights with callouts and details
+- Flag icons for countries (US, China, Germany)
+- Sovereignty level indicators (color-coded)
+- Operator logos/names (Microsoft, 21Vianet, T-Systems historical)
+- Network isolation visualization (separate bubbles)
+
+**Recommended Source:**
+- Adapt from: [Azure global infrastructure](https://azure.microsoft.com/en-us/explore/global-infrastructure/)
+- Reference: [National clouds documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-national-cloud)
+
+**Used In:**
+- `docs/level-100/national-partner-clouds.md`
+- `docs/level-100/sovereign-cloud-models.md`
+
+**Estimated Creation Time:** 1 hour
+
+---
+
 ### Level 200 - Intermediate (Placeholder)
 
-#### 8. Azure Local Architecture
+#### 11. Azure Local Architecture
 **File:** `level-200/azure-local-architecture.svg`
 
 **Description:** Detailed architecture diagram of Azure Local infrastructure.
@@ -237,7 +332,7 @@ docs/assets/images/
 
 ---
 
-#### 9. Azure Arc Architecture
+#### 12. Azure Arc Architecture
 **File:** `level-200/azure-arc-architecture.svg`
 
 **Description:** Azure Arc unified control plane architecture showing on-premises, edge, and multi-cloud management.
@@ -249,7 +344,7 @@ docs/assets/images/
 
 ---
 
-#### 10. Edge RAG Architecture
+#### 13. Edge RAG Architecture
 **File:** `level-200/edge-rag-architecture.svg`
 
 **Description:** Edge RAG solution architecture showing data ingestion, vector database, LLM integration, and retrieval flow.
@@ -338,6 +433,9 @@ docs/assets/images/
 | regulatory-comparison-matrix.svg | 🔴 Needed | Medium | TBD | Table format, easy to create |
 | operational-sovereignty-levels.svg | 🔴 Needed | High | TBD | Critical for operational concepts |
 | azure-local-modes-comparison.svg | 🔴 Needed | High | TBD | Side-by-side comparison |
+| sovereign-cloud-models-comparison.svg | 🔴 Needed | High | TBD | Module 2 - Three model comparison |
+| model-decision-tree.svg | 🔴 Needed | High | TBD | Module 2 - Decision flowchart |
+| partner-clouds-map.svg | 🔴 Needed | High | TBD | Module 2 - Geographic map |
 | azure-local-architecture.svg | 🔴 Needed | Low | TBD | Level 200 content (future) |
 | azure-arc-architecture.svg | 🔴 Needed | Low | TBD | Level 200 content (future) |
 | edge-rag-architecture.svg | 🔴 Needed | Low | TBD | Level 200 content (future) |
@@ -386,6 +484,8 @@ Until assets are created, use placeholders:
 
 ### Immediate Actions (Level 100 Priority)
 
+**Module 1: Digital Sovereignty (7 diagrams)**
+
 1. **Create sovereignty-spectrum.svg**
    - Reference operational-sovereignty.md content
    - Show 5 levels with characteristics
@@ -421,7 +521,24 @@ Until assets are created, use placeholders:
    - Architecture diagrams for each mode
    - Est. time: 2 hours
 
-**Total Estimated Time: 10.5 hours**
+**Module 2: Sovereign Cloud Models (3 diagrams)**
+
+8. **Create sovereign-cloud-models-comparison.svg**
+   - Three-column comparison of models
+   - Icons and color coding
+   - Est. time: 2 hours
+
+9. **Create model-decision-tree.svg**
+   - Flowchart for model selection
+   - Decision nodes and outcomes
+   - Est. time: 1.5 hours
+
+10. **Create partner-clouds-map.svg**
+    - World map with partner cloud locations
+    - Azure Government, Azure China, historical Azure Germany
+    - Est. time: 1 hour
+
+**Total Estimated Time: 14 hours (10 diagrams)**
 
 ### Future Actions (Level 200/300)
 
