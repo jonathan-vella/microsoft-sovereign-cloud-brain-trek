@@ -591,3 +591,395 @@ If you create or adapt visual assets for this project:
 **Last Updated:** October 2025  
 **Maintained By:** Project Contributors  
 **Questions?** Open an issue in the GitHub repository
+
+---
+
+## Module 3: Azure Local Overview - Visual Assets
+
+### Asset 11: Azure Local Architecture Diagram
+**File:** `level-100/azure-local-architecture.svg`  
+**Priority:** High  
+**Status:** Documented (Not Created)
+
+**Description:** Comprehensive system architecture showing Azure Local components, connectivity modes, and Azure integration.
+
+**Content:**
+- Left: On-premises Azure Local stack (hardware, virtualization, system layer, management)
+- Center: Data and control plane separation
+- Right: Azure cloud control plane
+- Network connectivity paths (Connected vs. Disconnected)
+
+**Visual Elements:**
+- Hardware layer components
+- Software stack layers
+- Bidirectional arrows (Connected mode)
+- Dashed lines (optional Disconnected sync)
+- Color coding: Blue (on-prem), Light blue (Azure), Green (data), Orange (management)
+
+**Size:** 1400x1000px
+
+**Source:** [Azure Local Architecture](https://learn.microsoft.com/en-us/azure-local/concepts/architecture)
+
+**Used In:**
+- `docs/level-100/azure-local-overview.html`
+- `docs/level-100/azure-local-architecture.html`
+
+---
+
+### Asset 12: Connected vs. Disconnected Mode Comparison
+**File:** `level-100/azure-local-modes-comparison.svg`  
+**Priority:** High  
+**Status:** Documented (Not Created)
+
+**Description:** Side-by-side comparison of Connected and Disconnected deployment modes with feature matrix.
+
+**Content:**
+- Left panel: Connected Mode characteristics and architecture
+- Right panel: Disconnected Mode characteristics and architecture
+- Bottom: Feature availability matrix (✓ / ✗ / Limited)
+- Use case callouts for each mode
+
+**Visual Elements:**
+- Two parallel architectures
+- Feature comparison table
+- Checkmarks and X marks for features
+- Brief use case examples
+- Icons for connectivity state
+
+**Size:** 1200x800px
+
+**Design Notes:** Use green checkmarks and red X's consistently, show connectivity lines clearly
+
+**Used In:**
+- `docs/level-100/azure-local-overview.html`
+- `docs/level-100/azure-local-connected-mode.html`
+- `docs/level-100/azure-local-disconnected-mode.html`
+
+---
+
+### Asset 13: Hardware Topology Diagram
+**File:** `level-100/azure-local-hardware-topology.svg`  
+**Priority:** Medium  
+**Status:** Documented (Not Created)
+
+**Description:** Physical hardware configuration showing typical 2-3 node cluster setup.
+
+**Content:**
+- Node layout (2-4 nodes shown)
+- Per-node components: CPU, memory, storage, network adapters
+- Network topology: ToR switches, management network, storage network
+- External connections: WAN, storage array (optional)
+- Redundancy indicators
+
+**Visual Elements:**
+- Server hardware illustrations
+- Network connectivity lines
+- Cable/connection types labeled
+- Redundancy indicators (dual power, dual switches)
+- Component specifications callouts
+
+**Size:** 1400x1000px
+
+**Source:** [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure-local/system-requirements)
+
+**Used In:**
+- `docs/level-100/azure-local-hardware.html`
+- `docs/level-100/azure-local-architecture.html`
+
+---
+
+## Module 4: Azure Arc Introduction - Visual Assets
+
+### Asset 14: Azure Arc Architecture
+**File:** `level-100/azure-arc-architecture.svg`  
+**Priority:** High  
+**Status:** Documented (Not Created)
+
+**Description:** Unified view of Azure Arc connecting on-premises resources to Azure management plane.
+
+**Content:**
+- Left: On-premises resources (servers, Kubernetes, databases)
+- Center: Azure Arc control plane
+- Right: Azure cloud services (Portal, Monitor, Policy, Security Center)
+- Connection flows showing registration and management
+
+**Visual Elements:**
+- Three Arc services highlighted (Servers, Kubernetes, Data)
+- Color coding: Green (Servers), Blue (Kubernetes), Purple (Data Services)
+- Bidirectional arrows (management commands, telemetry)
+- Azure service icons
+
+**Size:** 1400x900px
+
+**Source:** [Azure Arc Overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
+
+**Used In:**
+- `docs/level-100/azure-arc-intro.html`
+- All Arc sub-pages
+
+---
+
+### Asset 15: Arc Services Comparison Matrix
+**File:** `level-100/azure-arc-services-comparison.svg`  
+**Priority:** Medium  
+**Status:** Documented (Not Created)
+
+**Description:** Comparison table showing capabilities of Arc Servers, Kubernetes, and Data Services.
+
+**Content:**
+- Three columns: Servers | Kubernetes | Data Services
+- Rows: Target resources, Management, Governance, Monitoring, Licensing, Best For
+- Visual indicators for feature availability
+
+**Visual Elements:**
+- Clean table layout
+- Service icons
+- Checkmarks for capabilities
+- Brief descriptions in cells
+- Color-coded headers
+
+**Size:** 1200x800px
+
+**Used In:**
+- `docs/level-100/azure-arc-intro.html`
+
+---
+
+### Asset 16: Arc Deployment Topology
+**File:** `level-100/azure-arc-deployment-topology.svg`  
+**Priority:** Low  
+**Status:** Documented (Not Created)
+
+**Description:** Multi-site deployment showing Arc managing resources across locations.
+
+**Content:**
+- Multiple sites (data center, branch office, edge location)
+- Arc-enabled resources at each site
+- Central Azure management plane
+- Network connectivity paths
+
+**Visual Elements:**
+- Geographic distribution representation
+- Site-specific resources
+- Unified management layer
+- Connection indicators
+
+**Size:** 1200x800px
+
+**Used In:**
+- `docs/level-100/azure-arc-intro.html`
+- `docs/level-100/azure-arc-servers.html`
+
+---
+
+## Module 5: Edge RAG Concepts - Visual Assets
+
+### Asset 17: Edge RAG System Architecture
+**File:** `level-100/edge-rag-architecture.svg`  
+**Priority:** High  
+**Status:** Documented (Not Created)
+
+**Description:** Complete Edge RAG system architecture showing all components and data flow.
+
+**Content:**
+- Document sources and ingestion pipeline
+- Embeddings generation and vector database
+- Query processing flow
+- Local LLM inference
+- Response generation with citations
+- Optional cloud connection (dashed)
+
+**Visual Elements:**
+- Component boxes with icons
+- Data flow arrows
+- Numbers indicating sequence (1, 2, 3...)
+- Color coding: Blue (data), Green (processing), Purple (AI)
+- Callouts for key components
+
+**Size:** 1400x1000px
+
+**Design Notes:** Show edge components prominently, cloud as optional/secondary
+
+**Used In:**
+- `docs/level-100/edge-rag-concepts.html`
+- `docs/level-100/edge-rag-architecture.html`
+
+---
+
+### Asset 18: Traditional LLM vs. RAG Comparison
+**File:** `level-100/llm-vs-rag-comparison.svg`  
+**Priority:** High  
+**Status:** Documented (Not Created)
+
+**Description:** Side-by-side comparison showing Traditional LLM flow vs. RAG-augmented flow.
+
+**Content:**
+- Left panel: Traditional LLM (Query → LLM → Answer)
+- Right panel: RAG flow (Query → Retrieval → Context + LLM → Answer with sources)
+- Comparison table: Accuracy, recency, citations, hallucinations
+
+**Visual Elements:**
+- Two parallel workflows
+- Simple flow diagrams
+- Comparison matrix
+- Icons for documents, LLM, search
+- Green/red indicators for pros/cons
+
+**Size:** 1200x800px
+
+**Used In:**
+- `docs/level-100/edge-rag-concepts.html`
+- `docs/level-100/rag-fundamentals.html`
+
+---
+
+### Asset 19: Edge RAG Deployment Options
+**File:** `level-100/edge-rag-deployment-options.svg`  
+**Priority:** Medium  
+**Status:** Documented (Not Created)
+
+**Description:** Three deployment topology options for Edge RAG systems.
+
+**Content:**
+- Option 1: Local edge only (disconnected/air-gapped)
+- Option 2: Edge with cloud sync (connected/hybrid)
+- Option 3: Multi-edge deployment with central coordination
+- Data flow patterns for each option
+
+**Visual Elements:**
+- Three topology diagrams
+- Network connectivity indicators
+- Data flow arrows
+- Use case labels
+- Pros/cons callouts
+
+**Size:** 1300x900px
+
+**Used In:**
+- `docs/level-100/edge-rag-concepts.html`
+- `docs/level-100/edge-rag-architecture.html`
+
+---
+
+### Asset 20: RAG Components and Data Flow
+**File:** `level-100/rag-components-flow.svg`  
+**Priority:** Medium  
+**Status:** Documented (Not Created)
+
+**Description:** Detailed data flow showing how a query moves through RAG system components.
+
+**Content:**
+- Step-by-step data flow with numbered sequence:
+  1. User query input
+  2. Query embedding generation
+  3. Vector database similarity search
+  4. Document retrieval (top-K)
+  5. Context assembly
+  6. LLM prompt construction
+  7. Answer generation
+  8. Response with citations
+
+**Visual Elements:**
+- Sequential flow diagram
+- Component icons
+- Data transformation at each step
+- Example data snippets
+- Timing/latency indicators
+
+**Size:** 1400x900px
+
+**Source:** [RAG Patterns](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/retrieval-augmented-generation)
+
+**Used In:**
+- `docs/level-100/edge-rag-architecture.html`
+- `docs/level-100/rag-fundamentals.html`
+
+---
+
+## Visual Asset Summary
+
+### Total Assets by Module
+- **Module 1 (Digital Sovereignty):** 7 assets (previously documented)
+- **Module 2 (Sovereign Cloud Models):** 3 assets (previously documented)
+- **Module 3 (Azure Local):** 3 assets ✅ NEWLY DOCUMENTED
+- **Module 4 (Azure Arc):** 3 assets ✅ NEWLY DOCUMENTED
+- **Module 5 (Edge RAG):** 4 assets ✅ NEWLY DOCUMENTED
+
+**Total Level 100 Assets:** 20 diagrams
+**Status:** All specifications documented, 0 created (creation is next phase)
+
+### Priority Distribution
+- **High Priority:** 8 assets (core concepts, architecture diagrams)
+- **Medium Priority:** 10 assets (supporting visualizations)
+- **Low Priority:** 2 assets (supplementary materials)
+
+---
+
+## Design Guidelines
+
+### Style Guide
+**Colors:**
+- Microsoft Blue: #0078D4
+- Azure colors: Various blues
+- Success/Active: #107C10 (green)
+- Warning: #FFB900 (yellow)
+- Error/Critical: #D83B01 (red/orange)
+- Neutral: #605E5C (gray)
+
+**Typography:**
+- Primary: Segoe UI or similar sans-serif
+- Headings: Bold, 16-24pt
+- Body text: Regular, 10-14pt
+- Labels: 8-12pt
+
+**Diagram Elements:**
+- Clean, minimalist design
+- Consistent icon style
+- Clear hierarchy
+- Adequate whitespace
+- Color-blind friendly palette
+
+### File Specifications
+- **Format:** SVG (scalable, web-friendly)
+- **Resolution:** Optimized for 96 DPI screens
+- **Size:** As specified per asset (typically 1200x800 to 1400x1000px)
+- **Optimization:** Minified SVG for web delivery
+- **Accessibility:** Include alt text descriptions
+
+---
+
+## Creation Workflow
+
+1. **Review Specifications:** Read full specification for each asset
+2. **Gather References:** Review linked Microsoft Learn documentation
+3. **Design Draft:** Create initial design following style guide
+4. **Review:** Validate against content requirements
+5. **Refine:** Incorporate feedback
+6. **Optimize:** Minify SVG, ensure accessibility
+7. **Integrate:** Place in appropriate directory, update references
+
+---
+
+## Tools and Resources
+
+**Design Tools:**
+- **draw.io / diagrams.net:** Free, web-based
+- **Figma:** Collaborative, professional
+- **Adobe Illustrator:** Professional, paid
+- **Inkscape:** Free, desktop-based
+- **Microsoft Visio:** Enterprise diagramming
+
+**Icon Resources:**
+- [Azure Architecture Icons](https://learn.microsoft.com/en-us/azure/architecture/icons/)
+- [Microsoft 365 Icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons)
+- [Font Awesome](https://fontawesome.com/) (for generic icons)
+
+**Templates:**
+- [Azure Architecture Diagrams](https://learn.microsoft.com/en-us/azure/architecture/browse/)
+- [Microsoft PowerPoint templates](https://www.microsoft.com/en-us/download/details.aspx?id=41937)
+
+---
+
+**Last Updated:** October 2025
+**Total Assets Documented:** 20 (10 from previous modules, 10 newly added)
+**Assets Created:** 0 (pending creation phase)

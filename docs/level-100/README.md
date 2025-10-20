@@ -105,40 +105,76 @@ Before starting Level 100, ensure you have:
 
 **Duration:** 2-3 hours
 
-- [Azure Local Architecture](azure-local-overview.html)
-- [Connected vs. Disconnected Operations](azure-local-overview.html#operating-modes)
-- [Key Technologies and Components](azure-local-overview.html#technologies)
+📚 **Main Content:**
+- [Azure Local Overview](azure-local-overview.html) - Architecture, deployment modes, customer scenarios
+
+**Deep Dive Topics:**
+- [Azure Local Architecture Deep Dive](azure-local-architecture.html) - Hardware, networking, security layers
+- [Connected Mode Operations](azure-local-connected-mode.html) - Azure integration, monitoring, update management
+- [Disconnected Mode Operations](azure-local-disconnected-mode.html) - Air-gapped deployment, periodic sync
+- [Hardware Requirements & Planning](azure-local-hardware.html) - Validated hardware, sizing, deployment checklist
+
+✅ **Assessment:**
+- [Azure Local Knowledge Check](azure-local-quiz.html) - 15 questions testing deployment modes and technical concepts
 
 **Key Concepts:**
-- Hyper-V and Storage Spaces Direct
+- Connected vs. Disconnected deployment modes
+- Data sovereignty and control plane separation
+- Hyper-V, Storage Spaces Direct, RDMA networking
 - Azure Arc integration
 - Validated hardware ecosystem
+- High availability and disaster recovery
+
+---
 
 ### 4. Azure Arc Introduction
 
-**Duration:** 1-2 hours
+**Duration:** 1.5-2 hours
 
-- [What is Azure Arc?](azure-arc-intro.html)
-- [Hybrid and Multi-Cloud Management](azure-arc-intro.html#management)
-- [Arc-enabled Services](azure-arc-intro.html#services)
+📚 **Main Content:**
+- [Azure Arc Introduction](azure-arc-intro.html) - Hybrid management, multi-cloud governance, three Arc services
+
+**Deep Dive Topics:**
+- [Arc-enabled Servers](azure-arc-servers.html) - Windows/Linux management, policy, monitoring
+- [Arc-enabled Kubernetes](azure-arc-kubernetes.html) - GitOps, multi-cluster management, policy enforcement
+- [Arc-enabled Data Services](azure-arc-data-services.html) - SQL MI and PostgreSQL on any infrastructure
+
+✅ **Assessment:**
+- [Azure Arc Knowledge Check](azure-arc-quiz.html) - 12 questions covering all Arc services
 
 **Key Concepts:**
-- Unified control plane
-- Server and Kubernetes management
-- Azure services anywhere
+- Unified control plane for hybrid/multi-cloud
+- Azure Arc Servers, Kubernetes, Data Services
+- Azure Policy enforcement everywhere
+- GitOps-based configuration management
+- Data services with managed experience anywhere
+- Multi-cloud governance and compliance
+
+---
 
 ### 5. Edge RAG Concepts
 
-**Duration:** 2-3 hours
+**Duration:** 2-2.5 hours
 
-- [What is RAG (Retrieval-Augmented Generation)?](edge-rag-concepts.html)
-- [Edge RAG Architecture](edge-rag-concepts.html#architecture)
-- [Use Cases and Value Proposition](edge-rag-concepts.html#use-cases)
+📚 **Main Content:**
+- [Edge RAG Concepts](edge-rag-concepts.html) - RAG fundamentals, edge deployment benefits, customer scenarios
+
+**Deep Dive Topics:**
+- [RAG Fundamentals](rag-fundamentals.html) - Embeddings, vector databases, LLM limitations
+- [Edge RAG Architecture](edge-rag-architecture.html) - Local LLM deployment, ingestion pipeline, query processing
+- [Edge RAG Use Cases and Implementation](edge-rag-use-cases.html) - Industry scenarios, best practices, ROI
+
+✅ **Assessment:**
+- [Edge RAG Knowledge Check](edge-rag-quiz.html) - 15 questions testing RAG concepts and implementation
 
 **Key Concepts:**
-- AI at the edge
-- On-premises data with generative AI
-- Privacy and sovereignty benefits
+- RAG (Retrieval-Augmented Generation) basics
+- Traditional LLMs vs. RAG-augmented systems
+- Edge deployment for data sovereignty
+- Vector embeddings and similarity search
+- Local LLM considerations
+- Privacy-preserving AI
+- Healthcare, manufacturing, financial use cases
 
 ---
 
