@@ -189,7 +189,37 @@ Azure Arc and Azure Local work together to provide comprehensive sovereignty:
 
 ---
 
+---
+
 ## Three Pillars of Azure Arc
+
+> **📊 Visual Reference Needed**  
+> *Azure Arc Architecture Diagram (Asset 14)*  
+> Unified view showing how Azure Arc connects on-premises resources to Azure management plane. Three-section layout: Left (on-premises resources - servers, Kubernetes, databases with icons), Center (Azure Arc control plane with three services highlighted), Right (Azure cloud services for management - Portal, Monitor, Policy, Security Center). Shows bidirectional arrows (management commands out, telemetry in). Arc services color-coded: Green (Servers), Blue (Kubernetes), Purple (Data Services).  
+> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 14  
+> **Source to adapt:** [Azure Arc Overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
+
+### Arc-Enabled Resources Comparison
+
+> **📊 Visual Reference Needed**  
+> *Arc-Enabled Resources Comparison Matrix (Asset 15)*  
+> Comparison table showing capabilities of Arc Servers, Kubernetes, and Data Services. Three columns with service-specific information. Rows include: Target Resources, Primary Use Cases, Management Capabilities, Compliance & Governance, Monitoring & Observability, Patching & Updates, Licensing, Best Suited For. Color-coded headers: Green (Servers), Blue (Kubernetes), Purple (Data). Concise cell content with icons for features.  
+> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 15  
+> **Source to adapt:** [Arc Servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview), [Arc Kubernetes](https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/overview), [Arc Data Services](https://learn.microsoft.com/en-us/azure/azure-arc/data/overview)
+
+---
+
+### Multi-Site Deployment Topology
+
+> **📊 Visual Reference Needed**  
+> *Arc Deployment Topology (Asset 16)*  
+> Multi-site deployment showing Arc managing resources across locations. Center: Azure management plane with Arc services. Around edges: Multiple sites (data center, branch office, edge location, remote office) with Arc-enabled resources. Connectivity lines show managed resources at each site unified through Arc. Site-specific callouts. Distributed operations concept demonstrated. Scale indicators showing multiple sites.  
+> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 16  
+> **Source to adapt:** [Arc Servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview)
+
+---
+
+## Core Arc Services
 
 Azure Arc consists of three main service categories:
 

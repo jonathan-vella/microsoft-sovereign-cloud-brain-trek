@@ -227,6 +227,24 @@ For customers requiring EU data residency:
 
 ---
 
+---
+
+> **📊 Visual Reference Needed**  
+> *Azure Global Infrastructure Map (Asset 2)*  
+> This section includes a world map showing Azure regions, availability zones, and data center locations. Special highlighting shows the EU Data Boundary and key regions (US Gov, China 21Vianet). Legend explains symbols and regional classifications.  
+> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 2  
+> **Source to adapt:** [Azure global infrastructure](https://azure.microsoft.com/en-us/explore/global-infrastructure/)
+
+---
+
+> **📊 Visual Reference Needed**  
+> *Data Residency vs. Sovereignty Comparison (Asset 4)*  
+> Side-by-side comparison showing the fundamental difference between Data Residency (location focus) and Data Sovereignty (location + control). Uses split-panel or Venn diagram layout with icons for location, control, and jurisdiction. Comparison matrix at bottom.  
+> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 4  
+> **Source to adapt:** [Digital sovereignty overview](https://learn.microsoft.com/en-us/industry/sovereign-cloud/overview/digital-sovereignty)
+
+---
+
 ## Implementing Data Residency in Azure
 
 ### Step 1: Determine Requirements

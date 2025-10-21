@@ -115,6 +115,12 @@ Different organizations have different sovereignty needs:
 
 ## Model Comparison Matrix
 
+> **📊 Visual Reference Needed**  
+> *Sovereign Cloud Models Comparison (Asset 8)*  
+> Side-by-side comparison diagram showing the three sovereign cloud models with key characteristics. Three-column layout with distinct colors: Blue (Public), Green (Private), Purple (Partner). Rows include: Infrastructure, Control Level, Compliance, Use Cases, Cost Model. Visual indicators for sovereignty level (Low/Medium/High). Icons for each model type. Comparison table with checkmarks.  
+> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 8  
+> **Source to adapt:** [Microsoft Cloud for Sovereignty](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)
+
 | Feature / Attribute | Sovereign Public Cloud | Sovereign Private Cloud | National Partner Clouds |
 |---------------------|------------------------|-------------------------|-------------------------|
 | **Infrastructure** | Shared (logical isolation) | Dedicated (physical isolation) | Shared (partner-operated) |
@@ -138,6 +144,14 @@ Different organizations have different sovereignty needs:
 ## Decision Framework
 
 Choosing the right sovereign cloud model depends on multiple factors. Use this framework to guide your decision:
+
+> **📊 Visual Reference Needed**  
+> *Sovereign Cloud Model Decision Tree (Asset 9)*  
+> Interactive decision flowchart to help customers select appropriate model based on requirements. Starts with "What are your sovereignty requirements?" with diamond decision nodes flowing downward. Yes/No branches at each node. Endpoints show recommended model with example scenarios. Diamond-shaped decision nodes, rectangular outcome boxes. Color-coded paths matching model colors. Icons for decision types.  
+> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 9  
+> **Source to adapt:** [Azure decision guides](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/)
+
+---
 
 ### Step 1: Assess Data Sovereignty Requirements
 

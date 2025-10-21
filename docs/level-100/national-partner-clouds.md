@@ -73,6 +73,16 @@ Many countries and sectors have regulations that require:
 
 ---
 
+## Major National Partner Clouds Overview
+
+> **📊 Visual Reference Needed**  
+> *National Partner Clouds Map (Asset 10)*  
+> World map showing geographic distribution of national partner clouds with sovereign guarantees. Highlights: Azure Government (US regions - Virginia, Texas, Arizona, DoD), Azure China (21Vianet regions - Beijing, Shanghai), Azure Germany (historical reference with sunset note). Regional callouts with details. Operator information and sovereignty level indicators. Network isolation visualization showing separate bubbles/regions.  
+> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 10  
+> **Source to adapt:** [Azure global infrastructure](https://azure.microsoft.com/en-us/explore/global-infrastructure/)
+
+---
+
 ## Major National Partner Clouds
 
 ### 1. Azure Government (United States)
