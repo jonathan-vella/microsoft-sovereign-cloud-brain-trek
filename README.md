@@ -8,6 +8,10 @@ A comprehensive learning journey for architects and solutions professionals
 [![Status: Ready for Jekyll](https://img.shields.io/badge/Status-Ready%20for%20Jekyll-brightgreen.svg)](#deployment-status)
 [![Content: 100% Complete](https://img.shields.io/badge/Content-100%25%20Complete-brightgreen.svg)](#project-status)
 
+[![Link Check](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/link-check.yml/badge.svg)](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/link-check.yml)
+[![Content Freshness](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/content-freshness.yml/badge.svg)](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/content-freshness.yml)
+[![MS Learn Monitor](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/ms-learn-monitor.yml/badge.svg)](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/ms-learn-monitor.yml)
+
 ## Project Status
 
 | Component | Status | Details |

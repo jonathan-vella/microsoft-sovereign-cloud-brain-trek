@@ -1,0 +1,52 @@
+name: Content Freshness Check
+
+on:
+  workflow_dispatch: # Manual trigger only
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-stale-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Full history for accurate dates
+
+      - name: Find content not modified in 6+ months
+        run: |
+          echo "# Files Not Modified in 6+ Months" > stale-report.md
+          echo "" >> stale-report.md
+          find docs -name "*.md" -type f -mtime +180 | while read file; do
+            last_modified=$(git log -1 --format="%ai" -- "$file" | cut -d' ' -f1)
+            echo "- \`$file\` (Last modified: $last_modified)" >> stale-report.md
+          done
+          
+          # Check if any files found
+          if [ $(wc -l < stale-report.md) -gt 2 ]; then
+            echo "STALE_FOUND=true" >> $GITHUB_ENV
+          else
+            echo "STALE_FOUND=false" >> $GITHUB_ENV
+          fi
+
+      - name: Create issue for stale content
+        if: env.STALE_FOUND == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('stale-report.md', 'utf8');
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '📅 Content Freshness Review Needed',
+              body: `${report}\n\n---\n\n**Action Required:** Review these files for accuracy and update if needed.\n\n- Verify Microsoft Learn links are current\n- Check for Azure service rebranding\n- Update screenshots/diagrams if needed\n- Refresh quiz questions if needed\n\n**Workflow Run:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              labels: ['maintenance', 'content-review']
+            })
+
+      - name: Report if no stale content
+        if: env.STALE_FOUND == 'false'
+        run: echo "✅ All content has been modified within the last 6 months!"
