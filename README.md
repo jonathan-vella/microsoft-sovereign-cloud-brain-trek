@@ -5,21 +5,15 @@ Master Sovereign Cloud, Azure Local, and Edge AI Technologies
 A comprehensive learning journey for architects and solutions professionals
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status: Ready for Jekyll](https://img.shields.io/badge/Status-Ready%20for%20Jekyll-brightgreen.svg)](#deployment-status)
-[![Content: 100% Complete](https://img.shields.io/badge/Content-100%25%20Complete-brightgreen.svg)](#project-status)
+[![Microsoft Azure](https://img.shields.io/badge/Microsoft%20Azure-0078D4?logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/)
+[![Microsoft Learn](https://img.shields.io/badge/Microsoft%20Learn-258ffa?logo=microsoft&logoColor=white)](https://learn.microsoft.com/)
+[![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-000000?logo=githubcopilot&logoColor=white)](https://github.com/features/copilot)
 
-[![Link Check](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/link-check.yml/badge.svg)](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/link-check.yml)
-[![Content Freshness](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/content-freshness.yml/badge.svg)](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/content-freshness.yml)
-[![MS Learn Monitor](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/ms-learn-monitor.yml/badge.svg)](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/actions/workflows/ms-learn-monitor.yml)
-
-## Project Status
-
-| Component | Status | Details |
-|-----------|--------|---------|
-| **Content Creation** | ✅ Complete | 79 files, 16 modules, ~10,000 lines |
-| **Visual Assets** | 🎨 Designer Phase | 59 assets specified, design creation in progress (3-4 weeks) |
-| **Jekyll Preparation** | ⏳ In Prep | Configuration structure ready, deployment coming November 2025 |
-| **Live Site** | 🚀 Planned | Target: Late November 2025 |
+[![Azure Arc](https://img.shields.io/badge/Azure%20Arc-0078D4?logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/en-us/products/azure-arc/)
+[![Azure Local](https://img.shields.io/badge/Azure%20Local-0078D4?logo=microsoftazure&logoColor=white)](https://learn.microsoft.com/en-us/azure/azure-local/)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Documentation](https://img.shields.io/badge/Documentation-Complete-brightgreen.svg)](docs/README.md)
 
 ## Overview
 
@@ -159,7 +153,7 @@ docs/
 
 ### For Content Contributors
 1. **Review** [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines
-2. **Check** [.github/README.md](.github/README.md) for current project status
+2. **Check** [.github/PROJECT_FILES.md](.github/PROJECT_FILES.md) for current project status
 3. **Reference** [docs/README.md](docs/README.md) for content structure
 
 ### For Deploying the Site

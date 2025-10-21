@@ -331,9 +331,9 @@ A: Check README.md in parent level has link with correct relative path.
 
 - **Content structure:** See this README.md
 - **Jekyll deployment:** See root README.md (Deployment section)
-- **Visual assets:** See [.github/README.md](../.github/README.md)
+- **Visual assets:** See [.github/PROJECT_FILES.md](../.github/PROJECT_FILES.md)
 - **Contributing:** See [CONTRIBUTING.md](../CONTRIBUTING.md)
-- **Project status:** See [.github/README.md](../.github/README.md)
+- **Project status:** See [.github/PROJECT_FILES.md](../.github/PROJECT_FILES.md)
 
 ---
 

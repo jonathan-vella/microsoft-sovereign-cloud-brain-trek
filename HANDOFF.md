@@ -16,7 +16,7 @@
 - Result: Clean, focused repository structure
 
 ✅ **Updated README Files:**
-- Created new `.github/README.md` (active files index)
+- Created new `.github/PROJECT_FILES.md` (active files index)
 - Updated root `README.md` (added status badges, clear getting started)
 - Created `docs/README.md` (comprehensive content guide)
 - All READMEs now direct users appropriately
@@ -184,7 +184,7 @@
 ### For Content Reference
 - **Overview:** `docs/README.md`
 - **Root Guide:** `README.md`
-- **Project Info:** `.github/README.md`
+- **Project Info:** `.github/PROJECT_FILES.md`
 
 ---
 
