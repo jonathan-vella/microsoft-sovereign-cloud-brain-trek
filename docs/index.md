@@ -2,18 +2,21 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Comprehensive skilling plan for Microsoft Sovereign Cloud & AI at the Edge"
+description: "Master Sovereign Cloud, Azure Local, and Edge AI Technologies - A comprehensive learning journey for architects and solutions professionals"
 permalink: /
 ---
 
-# Microsoft Sovereign Cloud & AI at the Edge
+# Microsoft Sovereign Cloud Brain Trek
 {: .fs-9 }
 
-A structured learning path for sales and technical professionals to master Microsoft's Sovereign Cloud offerings, Azure Local, and Edge AI solutions.
+Master Sovereign Cloud, Azure Local, and Edge AI Technologies
+{: .fs-7 .fw-600 }
+
+A comprehensive learning journey for architects and solutions professionals
 {: .fs-6 .fw-300 }
 
 [Get Started](introduction.html){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View on GitHub](https://github.com/YOUR-ORG/microsoft-sovereign-cloud-brain-trek){: .btn .fs-5 .mb-4 .mb-md-0 }
+[View on GitHub](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -120,7 +123,7 @@ Ready to begin your learning journey?
 - [Level 200: Intermediate](level-200/)
 - [Level 300: Advanced](level-300/)
 - [Resources & References](resources/)
-- [Contributing Guidelines](https://github.com/YOUR-ORG/microsoft-sovereign-cloud-brain-trek/blob/main/CONTRIBUTING.md)
+- [Contributing Guidelines](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/blob/main/CONTRIBUTING.md)
 
 ---
 

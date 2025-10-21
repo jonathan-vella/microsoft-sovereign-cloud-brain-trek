@@ -1,10 +1,13 @@
 <!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
 
-# Project: Microsoft Sovereign Cloud & AI at the Edge - Skilling Plan
+# Project: Microsoft Sovereign Cloud Brain Trek
 
 ## Project Overview
-- **Type:** Static website / Documentation site for skilling plan
-- **Target Audience:** Sales and technical professionals learning Microsoft Sovereign Cloud, Azure Local, and Edge RAG
+- **Official Name:** Microsoft Sovereign Cloud Brain Trek
+- **Tagline:** Master Sovereign Cloud, Azure Local, and Edge AI Technologies
+- **Subtitle:** A comprehensive learning journey for architects and solutions professionals
+- **Type:** Static website / Documentation site for comprehensive skilling program
+- **Target Audience:** Sales professionals, architects, and technical experts learning Microsoft Sovereign Cloud, Azure Local, and Edge AI technologies
 - **Delivery:** Markdown-based content in /docs folder, ready for Jekyll/GitHub Pages
 - **Structure:** Modular pages organized by learning levels (100/200/300)
 

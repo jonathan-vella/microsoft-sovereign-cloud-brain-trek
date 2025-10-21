@@ -8,7 +8,7 @@ Thank you for your interest in contributing to this project! We welcome contribu
 
 If you find errors, outdated information, or have suggestions for improvements:
 
-1. Check if the issue already exists in the [GitHub Issues](https://github.com/YOUR-ORG/microsoft-sovereign-cloud-brain-trek/issues)
+1. Check if the issue already exists in the [GitHub Issues](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/issues)
 2. If not, create a new issue with:
    - Clear title and description
    - Specific location (file and section)
@@ -18,12 +18,14 @@ If you find errors, outdated information, or have suggestions for improvements:
 ### Submitting Changes
 
 1. **Fork the repository**
+
    ```bash
-   git clone https://github.com/YOUR-ORG/microsoft-sovereign-cloud-brain-trek.git
+   git clone https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek.git
    cd microsoft-sovereign-cloud-brain-trek
    ```
 
 2. **Create a feature branch**
+
    ```bash
    git checkout -b feature/your-improvement
    ```
@@ -34,12 +36,14 @@ If you find errors, outdated information, or have suggestions for improvements:
    - Test your markdown locally if possible
 
 4. **Commit your changes**
+
    ```bash
    git add .
    git commit -m "Description of your changes"
    ```
 
 5. **Push to your fork**
+
    ```bash
    git push origin feature/your-improvement
    ```
@@ -93,6 +97,7 @@ When adding Microsoft Learn resources:
 - Specify estimated time to complete (if available)
 
 Example:
+
 ```markdown
 - **[Get started with Microsoft Cloud for Sovereignty](https://learn.microsoft.com/en-us/training/paths/get-started-sovereignty/)** - 4 modules covering sovereignty fundamentals (3 hours)
 ```

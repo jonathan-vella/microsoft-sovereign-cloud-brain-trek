@@ -1,14 +1,18 @@
-# Microsoft Sovereign Cloud & AI at the Edge - Skilling Plan
+# Microsoft Sovereign Cloud Brain Trek
+
+Master Sovereign Cloud, Azure Local, and Edge AI Technologies
+
+A comprehensive learning journey for architects and solutions professionals
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 
-This repository contains a comprehensive skilling plan for sales and technical professionals to develop expertise in:
+Welcome to the **Microsoft Sovereign Cloud Brain Trek** – your comprehensive skilling platform for mastering sovereign cloud technologies, hybrid infrastructure, and edge AI. This repository contains structured learning modules for sales and technical professionals to develop deep expertise in:
 
 - **Microsoft Sovereign Cloud** (Sovereign Public, Private, and National Partner Clouds)
 - **Azure Local** (Connected and Disconnected Operations)
-- **Azure Arc**
+- **Azure Arc** (Hybrid and Multi-Cloud Management)
 - **Retrieval-Augmented Generation (RAG)** on Azure Arc for Edge
 
 ## Target Audience
@@ -28,7 +32,7 @@ The skilling plan is organized into three progressive levels:
 
 ## Documentation Structure
 
-```
+```text
 docs/
 ├── index.md                    # Home page
 ├── introduction.md             # Project introduction

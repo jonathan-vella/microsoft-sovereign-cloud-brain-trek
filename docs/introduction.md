@@ -2,7 +2,7 @@
 layout: default
 title: Introduction
 nav_order: 2
-description: "Purpose, audience, and structure of the Microsoft Sovereign Cloud skilling plan"
+description: "Master Sovereign Cloud, Azure Local, and Edge AI Technologies - A comprehensive learning journey for architects and solutions professionals"
 ---
 
 # Introduction
@@ -18,7 +18,7 @@ description: "Purpose, audience, and structure of the Microsoft Sovereign Cloud 
 
 ## Purpose
 
-This document outlines a structured learning path for sales and technical professionals to develop expertise in Microsoft's Sovereign Cloud offerings, Azure Local for edge computing, and leveraging AI at the edge with Retrieval-Augmented Generation (RAG).
+This document outlines the **Microsoft Sovereign Cloud Brain Trek** – a comprehensive, structured learning path for architects and solutions professionals to develop deep expertise in sovereign cloud technologies, hybrid infrastructure, and edge AI.
 
 The skilling plan provides:
 
