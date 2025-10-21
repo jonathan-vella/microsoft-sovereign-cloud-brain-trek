@@ -56,7 +56,7 @@ jobs:
 
       - name: Create issue if broken links found
         if: env.BROKEN_COUNT != '0'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');

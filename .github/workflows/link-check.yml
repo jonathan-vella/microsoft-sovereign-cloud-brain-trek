@@ -22,7 +22,7 @@ jobs:
           
       - name: Create issue if links broken
         if: env.lychee_exit_code != 0
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             github.rest.issues.create({
