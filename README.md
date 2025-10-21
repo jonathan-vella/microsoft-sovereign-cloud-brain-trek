@@ -64,6 +64,21 @@ docs/
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
+### Visual Asset Creation
+
+If you're creating new content with visual assets, please follow the **mandatory 3-step workflow** documented in [VISUAL_ASSET_PROCESS.md](.github/VISUAL_ASSET_PROCESS.md):
+
+1. **Step #3:** Document all visual assets in `docs/assets/images/README.md`
+2. **Step #1:** Create detailed specifications and wireframes
+3. **Step #2:** Add placeholder callouts to content files
+
+This ensures alignment, consistency, and scalability across all documentation levels.
+
+**Related Documents:**
+- [Visual Asset Process](.github/VISUAL_ASSET_PROCESS.md) - Comprehensive workflow guide
+- [Visual Assets Alignment Summary](VISUAL_ASSETS_ALIGNMENT_SUMMARY.md) - Current project status
+- [Phase 1 Completion Report](PHASE_1_COMPLETION_REPORT.md) - What's been accomplished
+
 ## Resources
 
 - [Microsoft Sovereign Cloud Documentation](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)
