@@ -5,6 +5,17 @@ Master Sovereign Cloud, Azure Local, and Edge AI Technologies
 A comprehensive learning journey for architects and solutions professionals
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status: Ready for Jekyll](https://img.shields.io/badge/Status-Ready%20for%20Jekyll-brightgreen.svg)](#deployment-status)
+[![Content: 100% Complete](https://img.shields.io/badge/Content-100%25%20Complete-brightgreen.svg)](#project-status)
+
+## Project Status
+
+| Component | Status | Details |
+|-----------|--------|---------|
+| **Content Creation** | ✅ Complete | 79 files, 16 modules, ~10,000 lines |
+| **Visual Assets** | 🎨 Designer Phase | 59 assets specified, design creation in progress (3-4 weeks) |
+| **Jekyll Preparation** | ⏳ In Prep | Configuration structure ready, deployment coming November 2025 |
+| **Live Site** | 🚀 Planned | Target: Late November 2025 |
 
 ## Overview
 
@@ -45,10 +56,20 @@ docs/
 
 ## Getting Started
 
-1. **Browse the documentation** in the `/docs` folder
-2. **Follow the learning path** starting with [Level 100](docs/level-100/README.md)
-3. **Track your progress** using the checklists in each module
-4. **Contribute** improvements via pull requests
+### For Learners
+1. **Start with Level 100** in `/docs/level-100/README.md` - Foundational concepts
+2. **Progress to Level 200** for intermediate skills and solution design
+3. **Complete Level 300** for advanced expertise and deployment leadership
+
+### For Content Contributors
+1. **Review** [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines
+2. **Check** [.github/README.md](.github/README.md) for current project status
+3. **Reference** [docs/README.md](docs/README.md) for content structure
+
+### For Deploying the Site
+1. **See** [docs/README.md](docs/README.md) for content organization
+2. **Review** Jekyll configuration (coming soon)
+3. **Test locally** before GitHub Pages deployment
 
 ## Key Technologies Covered
 
@@ -62,29 +83,26 @@ docs/
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-### Visual Asset Creation
+### Content Contributions
 
-If you're creating new content with visual assets, please follow the **mandatory 3-step workflow** documented in [VISUAL_ASSET_PROCESS.md](.github/VISUAL_ASSET_PROCESS.md):
+New content should follow:
+1. Level/module structure in `docs/level-XXX/`
+2. YAML frontmatter template (see existing files)
+3. Markdown formatting standards
+4. Visual asset placeholder format (see examples in existing files)
 
-1. **Step #3:** Document all visual assets in `docs/assets/images/README.md`
-2. **Step #1:** Create detailed specifications and wireframes
-3. **Step #2:** Add placeholder callouts to content files
+### Jekyll Deployment
 
-This ensures alignment, consistency, and scalability across all documentation levels.
-
-**Related Documents:**
-- [Visual Asset Process](.github/VISUAL_ASSET_PROCESS.md) - Comprehensive workflow guide
-- [Visual Assets Alignment Summary](VISUAL_ASSETS_ALIGNMENT_SUMMARY.md) - Current project status
-- [Phase 1 Completion Report](PHASE_1_COMPLETION_REPORT.md) - What's been accomplished
+Site deployment preparation is underway for late November 2025. See [deployment status](#deployment-status) below.
 
 ## Resources
 
 - [Microsoft Sovereign Cloud Documentation](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)
 - [Azure Local Documentation](https://learn.microsoft.com/en-us/azure/azure-local/)
-- [Edge RAG Documentation](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/)
-- [Microsoft Learn Training Paths](https://learn.microsoft.com/en-us/training/)
+- [Azure Arc Documentation](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
+- [Microsoft Learn Training](https://learn.microsoft.com/en-us/training/)
 
 ## License
 
@@ -92,8 +110,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-This skilling plan is based on Microsoft's official documentation and best practices for Sovereign Cloud solutions.
+This skilling plan is based on Microsoft's official documentation and best practices for Sovereign Cloud, Azure Local, and Edge AI solutions.
 
 ---
 
-**Last Updated:** October 2025
+**Status:** ✅ Content Complete | Ready for Designer Engagement & Jekyll Deployment  
+**Last Updated:** October 21, 2025  
+**Repository:** [microsoft-sovereign-cloud-brain-trek](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek)
