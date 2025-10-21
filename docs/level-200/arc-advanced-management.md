@@ -7,6 +7,13 @@ nav_order: 2
 
 # Azure Arc Advanced Management
 
+> **📊 Visual References:**
+> - **Asset 24** - Arc Governance at Scale Architecture (policy enforcement, compliance)
+> - **Asset 25** - Arc Cost Analysis and Optimization Model (cost structure breakdown)
+> - **Asset 26** - Enterprise Arc Deployment at Scale (multi-site management)
+>
+> See docs/assets/images/README.md for complete asset specifications.
+
 ## Overview
 
 Azure Arc advanced management enables organizations to scale their hybrid and multi-cloud operations through centralized governance, policy enforcement, cost optimization, and security hardening. This module explores enterprise-grade techniques for managing hundreds or thousands of Arc-managed resources across diverse environments while maintaining compliance, security, and cost efficiency.

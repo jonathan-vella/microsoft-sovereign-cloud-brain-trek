@@ -8,6 +8,13 @@ nav_order: 4
 
 # Azure Arc Advanced Management Assessment
 
+> **📊 Visual References:**
+> - **Asset 24** - Arc Governance at Scale Architecture (policy evaluation scenarios)
+> - **Asset 25** - Arc Cost Analysis and Optimization Model (cost optimization questions)
+> - **Asset 26** - Enterprise Arc Deployment at Scale (multi-site scenarios)
+>
+> See docs/assets/images/README.md for complete asset specifications.
+
 ## Quiz Instructions
 
 This assessment contains 18 scenario-based questions designed to validate your understanding of Azure Arc advanced management. Choose the single best answer for each question. Detailed explanations follow the correct answer.

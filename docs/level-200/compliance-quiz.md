@@ -7,6 +7,14 @@ nav_order: 9
 
 # Compliance & Security Patterns - Assessment Quiz
 
+> **📊 Visual References:**
+> - **Asset 35** - GDPR Compliance Mapping (GDPR requirements)
+> - **Asset 36** - FedRAMP Compliance Architecture (FedRAMP questions)
+> - **Asset 37** - Encryption and Key Management Architecture (key management)
+> - **Asset 38** - Zero-Trust Security Architecture (zero-trust patterns)
+>
+> See docs/assets/images/README.md for complete asset specifications.
+
 Test your understanding of compliance frameworks, security patterns, encryption, and hardening techniques for Microsoft Sovereign Cloud deployments.
 
 ---

@@ -7,6 +7,10 @@ nav_order: 5
 
 # Compliance & Security Patterns
 
+> **📊 Visual Reference: Asset 38 - Zero-Trust Security Architecture**  
+> *Placeholder - See docs/assets/images/README.md#asset-38*  
+> Zero-Trust security model implementation showing core "never trust, always verify" principle, five pillar rings (Identity & Access, Endpoints, Networks, Data, Applications), specific Azure service controls, detection and response loops, and least-privilege access indicators across all layers.
+
 ## Overview
 
 Security and compliance are foundational requirements for enterprise deployments of sovereign cloud solutions. This module covers compliance frameworks, security hardening patterns, encryption strategies, and security architecture for Microsoft Sovereign Cloud, Azure Local, and Edge AI deployments.

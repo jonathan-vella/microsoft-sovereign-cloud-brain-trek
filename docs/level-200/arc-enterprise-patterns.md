@@ -8,6 +8,10 @@ nav_order: 3
 
 # Enterprise Governance and Deployment Patterns
 
+> **📊 Visual Reference: Asset 26 - Enterprise Arc Deployment at Scale**  
+> *Placeholder - See docs/assets/images/README.md#asset-26*  
+> Diagram showing multi-site Arc-managed infrastructure with network connectivity (direct, hybrid, satellite), agent communication patterns, resilience indicators, and distributed management structure.
+
 ## Overview
 
 Large enterprises require proven patterns for deploying Azure Arc at scale while maintaining security, compliance, cost control, and operational excellence. This page covers the most successful enterprise governance models and their applications.

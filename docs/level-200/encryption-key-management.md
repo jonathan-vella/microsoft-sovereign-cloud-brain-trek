@@ -7,6 +7,10 @@ nav_order: 7
 
 # Encryption & Key Management
 
+> **📊 Visual Reference: Asset 37 - Encryption and Key Management Architecture**  
+> *Placeholder - See docs/assets/images/README.md#asset-37*  
+> Comprehensive encryption and key management architecture showing encryption layers (at-rest, in-transit, in-use), key hierarchy (tenant/data/master keys), key lifecycle (generation, rotation, revocation, archival), Azure Key Vault integration, customer-managed keys (BYOK), HSM options, and access control points.
+
 ## Overview
 
 Encryption is the foundation of data protection in Microsoft Sovereign Cloud deployments. This page covers encryption algorithms, key lifecycle management, Azure Key Vault architecture, disaster recovery, and compliance evidence collection for regulatory requirements like GDPR and FedRAMP.

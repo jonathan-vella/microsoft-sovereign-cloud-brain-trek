@@ -7,6 +7,12 @@ nav_order: 10
 
 # Module 6: Hands-On Labs
 
+> **📊 Visual References:**
+> - **Asset 39** - Lab Architecture Progression (shows how each lab builds on previous, creating integrated infrastructure)
+> - **Asset 40** - Lab Environment Cost and Time Matrix (estimated costs and duration for each lab)
+>
+> See docs/assets/images/README.md for complete asset specifications.
+
 ## Overview
 
 This module provides practical, hands-on labs to reinforce the concepts covered in Modules 1-5. Each lab is designed to be completed in 2-4 hours and builds progressively toward a complete sovereign cloud deployment with compliance and security controls.

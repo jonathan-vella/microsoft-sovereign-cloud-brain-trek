@@ -7,6 +7,10 @@ nav_order: 3
 
 # Vector Databases for Edge
 
+> **📊 Visual Reference: Asset 29 - Vector Database Architecture Comparison**  
+> *Placeholder - See docs/assets/images/README.md#asset-29*  
+> Comparison of vector database options (Weaviate, Milvus, PostgreSQL+pgvector) showing architecture diagrams, indexing methods (HNSW, IVF), query latency/throughput characteristics, memory footprint, HA options, and deployment considerations.
+
 ## Overview
 
 Vector databases are the foundation of RAG systems, enabling fast similarity search across millions of embeddings. This page explores vector database selection, indexing strategies, and optimization techniques for enterprise edge deployments where performance and resource efficiency are critical.

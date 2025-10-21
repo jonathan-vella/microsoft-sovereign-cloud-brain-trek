@@ -1,11 +1,18 @@
 ---
 layout: default
-title: Pre-Sales & Solution Design
+title: Pre-Sales Solution Design
 parent: Level 200 - Intermediate
 nav_order: 4
 ---
 
-# Pre-Sales & Solution Design
+# Pre-Sales Solution Design
+
+> **📊 Visual References:**
+> - **Asset 32** - Customer Discovery Framework (discovery process)
+> - **Asset 33** - Solution Sizing Framework (architecture sizing)
+> - **Asset 34** - TCO and ROI Analysis Model (financial modeling)
+>
+> See docs/assets/images/README.md for complete asset specifications.
 
 ## Overview
 

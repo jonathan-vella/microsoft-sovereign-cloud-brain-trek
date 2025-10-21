@@ -7,6 +7,15 @@ nav_order: 3
 
 # RAG Implementation Quiz
 
+> **📊 Visual References:**
+> - **Asset 27** - Production RAG Architecture (implementation questions)
+> - **Asset 28** - LLM Inference Optimization (optimization scenarios)
+> - **Asset 29** - Vector Database Comparison (database selection)
+> - **Asset 30** - RAG Deployment Topologies (deployment patterns)
+> - **Asset 31** - RAG Monitoring and Observability (operations)
+>
+> See docs/assets/images/README.md for complete asset specifications.
+
 ## Assessment: Edge RAG Implementation Mastery
 
 This quiz tests your understanding of production RAG deployment, LLM optimization, vector database tuning, and operational excellence for edge scenarios.

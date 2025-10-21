@@ -5,7 +5,18 @@ parent: Level 200 - Intermediate
 nav_order: 4
 ---
 
-# Customer Discovery & Requirements Gathering
+---
+layout: default
+title: Customer Discovery
+parent: Level 200 - Intermediate
+nav_order: 4
+---
+
+# Customer Discovery Framework
+
+> **📊 Visual Reference: Asset 32 - Customer Discovery Framework**  
+> *Placeholder - See docs/assets/images/README.md#asset-32*  
+> Structured discovery process showing phases (business objectives, technical requirements, compliance, budget, success criteria), key questions, pain point mapping, and decision tree for solution recommendations.
 
 ## Overview
 

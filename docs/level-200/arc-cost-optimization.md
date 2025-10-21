@@ -8,6 +8,10 @@ nav_order: 2
 
 # Arc Cost Optimization Strategies
 
+> **📊 Visual Reference: Asset 25 - Arc Cost Analysis and Optimization Model**  
+> *Placeholder - See docs/assets/images/README.md#asset-25*  
+> Diagram showing cost structure breakdown (licensing, extensions, Azure services), optimization opportunities, cost modeling calculations, and savings scenarios.
+
 ## Overview
 
 Managing costs across hybrid and multi-cloud environments is complex. Arc enables unified cost analysis, optimization strategies, and budget controls across diverse environments—from on-premises to cloud providers. This page covers techniques to reduce costs by 20-35% while maintaining performance and availability.

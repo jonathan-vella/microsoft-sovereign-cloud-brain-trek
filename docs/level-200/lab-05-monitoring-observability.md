@@ -1,11 +1,17 @@
 ---
 layout: default
-title: "Lab 5: Monitoring and Observability"
+title: "Lab 5: Monitoring & Observability"
 parent: Level 200 - Intermediate
 nav_order: 15
 ---
 
-# Lab 5: Monitoring and Observability
+# Lab 5: Monitoring & Observability
+
+> **📊 Visual References:**
+> - **Asset 39** - Lab Architecture Progression (Lab 5 as observability layer across all infrastructure)
+> - **Asset 40** - Lab Environment Cost and Time Matrix (complete deployment cost and timeline)
+>
+> Shows Lab 5 adding observability layer - comprehensive monitoring, logging, and alerting across complete Labs 1-4 deployment.
 
 ## Objective
 

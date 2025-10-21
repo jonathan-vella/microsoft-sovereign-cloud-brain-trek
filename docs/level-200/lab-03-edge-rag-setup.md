@@ -7,6 +7,10 @@ nav_order: 13
 
 # Lab 3: Edge RAG Setup
 
+> **📊 Visual Reference: Asset 39 - Lab Architecture Progression**  
+> *Placeholder - See docs/assets/images/README.md#asset-39*  
+> Shows Lab 3 adding application layer - Edge RAG system deployment with vector database and LLM inference on Lab 1 cluster.
+
 ## Objective
 
 Deploy a complete Edge RAG (Retrieval-Augmented Generation) solution on Azure Local, including vector database, embedding models, LLM inference engine, and RAG pipeline. This is the most comprehensive lab demonstrating AI at the edge.

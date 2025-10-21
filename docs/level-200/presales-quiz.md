@@ -7,6 +7,13 @@ nav_order: 4
 
 # Pre-Sales & Solution Design Quiz
 
+> **📊 Visual References:**
+> - **Asset 32** - Customer Discovery Framework (discovery questions)
+> - **Asset 33** - Solution Sizing Framework (sizing scenarios)
+> - **Asset 34** - TCO and ROI Analysis Model (financial questions)
+>
+> See docs/assets/images/README.md for complete asset specifications.
+
 ## Assessment: Master Pre-Sales for Sovereign Cloud Solutions
 
 This quiz tests your understanding of customer discovery, solution sizing, cost modeling, proposal development, and sales techniques for Microsoft Sovereign Cloud and Edge AI solutions.

@@ -1,11 +1,15 @@
 ---
 layout: default
-title: "Lab 4: Policy and Governance"
+title: "Lab 4: Policy & Governance"
 parent: Level 200 - Intermediate
 nav_order: 14
 ---
 
-# Lab 4: Policy and Governance
+# Lab 4: Policy & Governance
+
+> **📊 Visual Reference: Asset 39 - Lab Architecture Progression**  
+> *Placeholder - See docs/assets/images/README.md#asset-39*  
+> Shows Lab 4 adding control layer - Azure Policy enforcement across Labs 1-3 infrastructure, applying compliance and security controls.
 
 ## Objective
 

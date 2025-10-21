@@ -8,6 +8,10 @@ nav_order: 3
 
 # Advanced Networking
 
+> **📊 Visual Reference: Asset 21 - Advanced Networking Architecture**  
+> *Placeholder - See docs/assets/images/README.md#asset-21*  
+> Diagram showing server NICs, virtual switch, VLAN segmentation (management, storage, cluster, customer), RDMA paths, dual ToR switches, and failover connectivity.
+
 Network design significantly impacts Azure Local performance and reliability. This section covers advanced networking patterns used in enterprise deployments.
 
 ## Switch Embedded Teaming (SET)

@@ -7,6 +7,10 @@ nav_order: 3
 
 # RAG Operations & Monitoring
 
+> **📊 Visual Reference: Asset 31 - RAG Monitoring and Observability**  
+> *Placeholder - See docs/assets/images/README.md#asset-31*  
+> Comprehensive monitoring architecture showing data collection points (application, vector DB, LLM, infrastructure), metrics/logs/traces processing pipelines, alert evaluation and routing flows, dashboard visualization layers, and feedback loops for continuous improvement.
+
 ## Overview
 
 Production RAG systems require robust operational patterns, comprehensive monitoring, and continuous quality assessment. This page covers monitoring strategies, operational excellence practices, observability patterns, and incident response for enterprise edge RAG deployments.

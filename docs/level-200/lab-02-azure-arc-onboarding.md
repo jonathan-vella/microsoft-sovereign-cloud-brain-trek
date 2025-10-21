@@ -7,6 +7,10 @@ nav_order: 12
 
 # Lab 2: Azure Arc Onboarding
 
+> **📊 Visual Reference: Asset 39 - Lab Architecture Progression**  
+> *Placeholder - See docs/assets/images/README.md#asset-39*  
+> Shows Lab 2 adding management plane layer - Arc integration enabling centralized governance and monitoring on Lab 1 cluster.
+
 ## Objective
 
 Onboard hybrid resources (Azure Local from Lab 1) to Azure Arc for centralized management, governance, and monitoring across hybrid environments.

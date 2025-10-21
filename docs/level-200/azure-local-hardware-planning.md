@@ -12,6 +12,10 @@ Selecting and sizing the correct hardware is fundamental to Azure Local success.
 
 ## CPU Selection and Performance
 
+> **📊 Visual Reference: Asset 23 - Hardware Planning Decision Tree**  
+> *Placeholder - See docs/assets/images/README.md#asset-23*  
+> Decision flowchart for selecting hardware based on workload class, capacity requirements, redundancy needs, and budget constraints.
+
 ### Processor Families
 
 **3rd Generation Intel Xeon Scalable (Ice Lake):**

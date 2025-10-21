@@ -7,6 +7,10 @@ nav_order: 11
 
 # Lab 1: Azure Local Deployment
 
+> **📊 Visual Reference: Asset 39 - Lab Architecture Progression**  
+> *Placeholder - See docs/assets/images/README.md#asset-39*  
+> Shows Lab 1 as foundational infrastructure layer - Azure Local cluster deployment establishing the platform for subsequent labs.
+
 ## Objective
 
 Deploy and configure Azure Local in connected mode, including networking, storage, and a sample workload. This lab simulates the deployment process and validates connectivity.

@@ -5,7 +5,18 @@ parent: Level 200 - Intermediate
 nav_order: 4
 ---
 
-# Cost Estimation & Total Cost of Ownership
+---
+layout: default
+title: Cost Estimation
+parent: Level 200 - Intermediate
+nav_order: 4
+---
+
+# Cost Estimation and ROI Analysis
+
+> **📊 Visual Reference: Asset 34 - TCO and ROI Analysis Model**  
+> *Placeholder - See docs/assets/images/README.md#asset-34*  
+> TCO and ROI comparison framework showing cost categories (hardware, licensing, operations, personnel), TCO timelines (3-year/5-year models), ROI drivers (agility, compliance enablement, data value, risk reduction), break-even analysis, and sensitivity analysis for what-if scenarios.
 
 ## Overview
 

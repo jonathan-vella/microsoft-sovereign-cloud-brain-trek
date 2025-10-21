@@ -8,6 +8,10 @@ nav_order: 1
 
 # Azure Policy and Governance for Arc
 
+> **📊 Visual Reference: Asset 24 - Arc Governance at Scale Architecture**  
+> *Placeholder - See docs/assets/images/README.md#asset-24*  
+> Diagram showing multi-site Arc-managed infrastructure with policy enforcement flows, compliance monitoring, and centralized governance across on-premises, cloud, and edge locations.
+
 ## Overview
 
 Azure Policy is the cornerstone of Arc governance at scale. This page covers how to design, deploy, and manage policies that enforce compliance, security, and operational standards across thousands of Arc-managed resources in hybrid and multi-cloud environments.

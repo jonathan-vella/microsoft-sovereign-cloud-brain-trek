@@ -8,6 +8,13 @@ nav_order: 4
 
 # Knowledge Check - Azure Local Architecture Deep Dive
 
+> **📊 Visual References:**
+> - **Asset 21** - Advanced Networking Architecture (referenced in networking questions)
+> - **Asset 22** - High-Availability Architecture (referenced in HA/failover questions)
+> - **Asset 23** - Hardware Planning Decision Tree (referenced in hardware selection questions)
+> 
+> See docs/assets/images/README.md for complete asset specifications.
+
 Test your understanding of advanced Azure Local architecture concepts. These scenario-based questions help verify your readiness for production deployments.
 
 ## Questions

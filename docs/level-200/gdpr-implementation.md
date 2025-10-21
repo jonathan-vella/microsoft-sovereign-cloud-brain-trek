@@ -5,7 +5,11 @@ parent: Level 200 - Intermediate
 nav_order: 5
 ---
 
-# GDPR Implementation & Data Residency
+# GDPR Implementation Guide
+
+> **📊 Visual Reference: Asset 35 - GDPR Compliance Mapping**  
+> *Placeholder - See docs/assets/images/README.md#asset-35*  
+> Detailed mapping of GDPR requirements to Azure Local, Arc, and Edge RAG technical controls, showing principles (lawfulness, fairness, transparency), key requirements (processing, consent, right to access/erasure), and compliance evidence collection flows.
 
 ## Overview
 

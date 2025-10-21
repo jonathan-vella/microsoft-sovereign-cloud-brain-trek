@@ -7,6 +7,10 @@ nav_order: 4
 
 # Solution Sizing & Planning
 
+> **📊 Visual Reference: Asset 33 - Solution Sizing Framework**  
+> *Placeholder - See docs/assets/images/README.md#asset-33*  
+> Interactive sizing process showing input variables (workload type, user count, data volume, growth), calculation layers (compute/storage/network sizing), decision points for HA/redundancy, and output configurations with cost estimates and confidence ranges.
+
 ## Overview
 
 Solution sizing translates customer requirements into specific hardware configurations, software components, and deployment architectures. This page covers workload assessment, sizing calculators, capacity planning, and validation techniques.
