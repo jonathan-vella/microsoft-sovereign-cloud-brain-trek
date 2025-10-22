@@ -35,3 +35,6 @@ package-lock.json
 # Ignore personal notes
 notes/
 scratch/
+
+# Ignore reference repos
+azmigrate/
