@@ -60,4 +60,4 @@ Implement machine learning operations for managing model lifecycle in production
 
 ---
 
-**See also:** [Architecture](edge-rag-architecture-production.html) | [Lab](edge-rag-production-lab.html)
+**See also:** [Architecture](edge-rag-architecture-production) | [Lab](edge-rag-production-lab)

@@ -587,7 +587,7 @@ Higher sovereignty typically involves:
 This module provides a foundational overview of digital sovereignty. For detailed exploration of specific topics, continue to these pages:
 
 ### 📘 Microsoft's European Digital Commitments
-**[Read Full Article →](european-commitments.html)**
+**[Read Full Article →](european-commitments)**
 
 Learn about Microsoft's 6 commitments to European sovereignty including:
 - EU Data Boundary implementation
@@ -596,7 +596,7 @@ Learn about Microsoft's 6 commitments to European sovereignty including:
 - Technical implementations
 
 ### 📘 Regulatory Requirements Overview
-**[Read Full Article →](regulatory-overview.html)**
+**[Read Full Article →](regulatory-overview)**
 
 Understand key regulations driving sovereignty requirements:
 - GDPR (European Union)
@@ -606,7 +606,7 @@ Understand key regulations driving sovereignty requirements:
 - ITAR (Defense)
 
 ### 📘 Data Residency vs. Sovereignty
-**[Read Full Article →](data-residency-concepts.html)**
+**[Read Full Article →](data-residency-concepts)**
 
 Deep dive into data location and control concepts:
 - Key definitions and differences
@@ -615,7 +615,7 @@ Deep dive into data location and control concepts:
 - Implementation best practices
 
 ### 📘 Operational Sovereignty
-**[Read Full Article →](operational-sovereignty.html)**
+**[Read Full Article →](operational-sovereignty)**
 
 Explore control plane and operational independence:
 - Sovereignty spectrum (5 levels)
@@ -624,7 +624,7 @@ Explore control plane and operational independence:
 - Implementation guidance
 
 ### ✅ Test Your Knowledge
-**[Take the Knowledge Check Quiz →](knowledge-check.html)**
+**[Take the Knowledge Check Quiz →](knowledge-check)**
 
 15 questions covering all digital sovereignty fundamentals.
 
@@ -632,8 +632,8 @@ Explore control plane and operational independence:
 
 ## Next Steps
 
-- **[Explore Microsoft Sovereign Cloud Models →](sovereign-cloud-models.html)**
-- **[Learn about Azure Local Overview →](azure-local-overview.html)**
+- **[Explore Microsoft Sovereign Cloud Models →](sovereign-cloud-models)**
+- **[Learn about Azure Local Overview →](azure-local-overview)**
 - **[Review Regulatory Compliance Resources →](../resources/)**
 
 ---

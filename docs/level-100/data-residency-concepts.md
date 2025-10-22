@@ -554,10 +554,10 @@ For customers requiring EU data residency:
 
 ## Next Steps
 
-- **[Learn about Operational Sovereignty →](operational-sovereignty.html)**
-- **[Review European Digital Commitments →](european-commitments.html)**
-- **[Explore Regulatory Requirements →](regulatory-overview.html)**
-- **[Return to Digital Sovereignty Overview →](digital-sovereignty.html)**
+- **[Learn about Operational Sovereignty →](operational-sovereignty)**
+- **[Review European Digital Commitments →](european-commitments)**
+- **[Explore Regulatory Requirements →](regulatory-overview)**
+- **[Return to Digital Sovereignty Overview →](digital-sovereignty)**
 
 ---
 

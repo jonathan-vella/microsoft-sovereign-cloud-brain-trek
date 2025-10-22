@@ -350,8 +350,8 @@ If any layer is breached, others still provide protection.
 
 ## Next Steps
 
-1. Continue to [Monitoring & Compliance →](zero-trust-monitoring.html)
-2. Ready for hands-on work? [Lab: Implement Zero Trust →](zero-trust-lab.html)
+1. Continue to [Monitoring & Compliance →](zero-trust-monitoring)
+2. Ready for hands-on work? [Lab: Implement Zero Trust →](zero-trust-lab)
 
 ---
 

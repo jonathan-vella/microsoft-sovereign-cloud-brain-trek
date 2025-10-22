@@ -64,4 +64,4 @@ nav_order: 3
 
 ---
 
-**See also:** [Air-Gapped Architecture](azure-local-air-gapped.html) | [Certificate Management](azure-local-certificate-management.html)
+**See also:** [Air-Gapped Architecture](azure-local-air-gapped) | [Certificate Management](azure-local-certificate-management)

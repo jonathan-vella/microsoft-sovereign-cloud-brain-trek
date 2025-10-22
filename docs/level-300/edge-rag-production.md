@@ -39,10 +39,10 @@ Deploy and operate Retrieval-Augmented Generation (RAG) systems at production sc
 
 ## Core Topics
 
-1. **Production Architecture** → [edge-rag-architecture-production.md](edge-rag-architecture-production.html)
-2. **Performance Optimization** → [edge-rag-optimization.md](edge-rag-optimization.html)
-3. **MLOps & Model Management** → [edge-rag-mlops.md](edge-rag-mlops.html)
-4. **Hands-On Lab** → [edge-rag-production-lab.md](edge-rag-production-lab.html)
+1. **Production Architecture** → [edge-rag-architecture-production.md](edge-rag-architecture-production)
+2. **Performance Optimization** → [edge-rag-optimization.md](edge-rag-optimization)
+3. **MLOps & Model Management** → [edge-rag-mlops.md](edge-rag-mlops)
+4. **Hands-On Lab** → [edge-rag-production-lab.md](edge-rag-production-lab)
 
 ---
 
@@ -100,10 +100,10 @@ Deploy and operate Retrieval-Augmented Generation (RAG) systems at production sc
 
 ## Recommended Learning Path
 
-1. Start: [Production Architecture](edge-rag-architecture-production.html)
-2. Optimize: [Performance Tuning](edge-rag-optimization.html)
-3. Automate: [MLOps Pipeline](edge-rag-mlops.html)
-4. Hands-On: [Lab](edge-rag-production-lab.html)
+1. Start: [Production Architecture](edge-rag-architecture-production)
+2. Optimize: [Performance Tuning](edge-rag-optimization)
+3. Automate: [MLOps Pipeline](edge-rag-mlops)
+4. Hands-On: [Lab](edge-rag-production-lab)
 
 ---
 

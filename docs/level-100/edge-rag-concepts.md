@@ -240,7 +240,7 @@ User Question → Retrieve Relevant Docs → LLM + Context → Enhanced Answer
 - Local control over AI capabilities
 - No external dependencies
 
-**[Review Digital Sovereignty Concepts →](digital-sovereignty.html)**
+**[Review Digital Sovereignty Concepts →](digital-sovereignty)**
 
 ### Integration with Azure Local
 
@@ -265,7 +265,7 @@ User Question → Retrieve Relevant Docs → LLM + Context → Enhanced Answer
 └──────────────────────────────────────┘
 ```
 
-**[Learn About Azure Local →](azure-local-overview.html)**
+**[Learn About Azure Local →](azure-local-overview)**
 
 ---
 
@@ -506,28 +506,28 @@ User Question → Retrieve Relevant Docs → LLM + Context → Enhanced Answer
 
 Continue your learning journey:
 
-### [RAG Fundamentals Deep Dive →](rag-fundamentals.html)
+### [RAG Fundamentals Deep Dive →](rag-fundamentals)
 Explore the technical foundations of RAG, including embedding models, vector databases, and retrieval algorithms.
 
 **Duration:** 20-25 minutes
 
 ---
 
-### [Edge RAG Architecture →](edge-rag-architecture.html)
+### [Edge RAG Architecture →](edge-rag-architecture)
 Learn the reference architecture for deploying RAG systems at the edge, including hardware requirements and component selection.
 
 **Duration:** 25-30 minutes
 
 ---
 
-### [RAG Use Cases and Implementation →](edge-rag-use-cases.html)
+### [RAG Use Cases and Implementation →](edge-rag-use-cases)
 Discover industry-specific use cases and practical implementation guidance for Edge RAG systems.
 
 **Duration:** 20-25 minutes
 
 ---
 
-### [Edge RAG Knowledge Check Quiz →](edge-rag-quiz.html)
+### [Edge RAG Knowledge Check Quiz →](edge-rag-quiz)
 Test your understanding with 15 questions covering RAG concepts, architecture, and use cases.
 
 **Duration:** 15-20 minutes

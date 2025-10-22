@@ -174,4 +174,4 @@ After completing this lab, you will:
 
 ---
 
-**See also:** [Connected Mode Overview](azure-local-advanced-connected.html) | [Multi-Site Architectures](azure-local-multi-site.html) | [Networking Guide](azure-local-networking-advanced.html)
+**See also:** [Connected Mode Overview](azure-local-advanced-connected) | [Multi-Site Architectures](azure-local-multi-site) | [Networking Guide](azure-local-networking-advanced)

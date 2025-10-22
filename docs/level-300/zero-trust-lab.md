@@ -457,8 +457,8 @@ You have successfully completed this lab when:
 
 ## Next Steps
 
-1. Review [Module Summary →](zero-trust.html)
-2. Continue to [Module 2: Azure Local at Scale - Connected →](../azure-local-advanced-connected.html)
+1. Review [Module Summary →](zero-trust)
+2. Continue to [Module 2: Azure Local at Scale - Connected →](../azure-local-advanced-connected)
 3. Complete all Level 300 modules before final assessment
 
 ---

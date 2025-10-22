@@ -490,10 +490,10 @@ Customer Question
 
 ## Next Steps
 
-- [RAG Fundamentals →](rag-fundamentals.html)
-- [Edge RAG Architecture →](edge-rag-architecture.html)
-- [Edge RAG Quiz →](edge-rag-quiz.html)
-- [Back to Edge RAG Overview →](edge-rag-concepts.html)
+- [RAG Fundamentals →](rag-fundamentals)
+- [Edge RAG Architecture →](edge-rag-architecture)
+- [Edge RAG Quiz →](edge-rag-quiz)
+- [Back to Edge RAG Overview →](edge-rag-concepts)
 
 ---
 

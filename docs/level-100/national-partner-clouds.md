@@ -859,10 +859,10 @@ Is local operator legally required?
 
 ### Continue Learning
 
-- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models.html)**
-- **[← Previous: Sovereign Private Cloud](sovereign-private-cloud.html)**
-- **[← Previous: Sovereign Public Cloud](sovereign-public-cloud.html)**
-- **[✅ Take the Quiz →](cloud-models-quiz.html)**
+- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models)**
+- **[← Previous: Sovereign Private Cloud](sovereign-private-cloud)**
+- **[← Previous: Sovereign Public Cloud](sovereign-public-cloud)**
+- **[✅ Take the Quiz →](cloud-models-quiz)**
 
 ### Hands-On Learning
 

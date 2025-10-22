@@ -63,11 +63,11 @@ Before starting Level 200, ensure you have:
 Explore advanced Azure Local deployment patterns, hardware planning, high-availability architectures, and advanced networking scenarios for enterprise edge deployments.
 
 **Core Topics:**
-- [Main Page: Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive.html)
-- [Hardware Planning & Sizing](azure-local-hardware-planning.html)
-- [High-Availability Patterns](azure-local-ha-patterns.html)
-- [Advanced Networking Configurations](azure-local-advanced-networking.html)
-- [Assessment: Deep Dive Quiz](azure-local-deep-dive-quiz.html)
+- [Main Page: Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive)
+- [Hardware Planning & Sizing](azure-local-hardware-planning)
+- [High-Availability Patterns](azure-local-ha-patterns)
+- [Advanced Networking Configurations](azure-local-advanced-networking)
+- [Assessment: Deep Dive Quiz](azure-local-deep-dive-quiz)
 
 ---
 
@@ -78,11 +78,11 @@ Explore advanced Azure Local deployment patterns, hardware planning, high-availa
 Master enterprise-scale governance, cost optimization, and security hardening for Azure Arc across hybrid and multi-cloud environments.
 
 **Core Topics:**
-- [Main Page: Arc Advanced Management](arc-advanced-management.html)
-- [Policy & Governance at Scale](arc-policy-and-governance.html)
-- [Cost Optimization Strategies](arc-cost-optimization.html)
-- [Enterprise Deployment Patterns](arc-enterprise-patterns.html)
-- [Assessment: Advanced Quiz](arc-advanced-quiz.html)
+- [Main Page: Arc Advanced Management](arc-advanced-management)
+- [Policy & Governance at Scale](arc-policy-and-governance)
+- [Cost Optimization Strategies](arc-cost-optimization)
+- [Enterprise Deployment Patterns](arc-enterprise-patterns)
+- [Assessment: Advanced Quiz](arc-advanced-quiz)
 
 ---
 
@@ -93,12 +93,12 @@ Master enterprise-scale governance, cost optimization, and security hardening fo
 Master production-ready Retrieval-Augmented Generation deployment patterns, LLM optimization, vector database tuning, and operational excellence for enterprise edge deployments.
 
 **Core Topics:**
-- [Main Page: Edge RAG Implementation](edge-rag-implementation.html)
-- [LLM Inference Optimization](llm-inference-optimization.html)
-- [Vector Databases for Edge](vector-databases-edge.html)
-- [RAG Deployment Strategies](rag-deployment-strategies.html)
-- [RAG Operations & Monitoring](rag-operations-monitoring.html)
-- [Assessment: Implementation Quiz](rag-implementation-quiz.html)
+- [Main Page: Edge RAG Implementation](edge-rag-implementation)
+- [LLM Inference Optimization](llm-inference-optimization)
+- [Vector Databases for Edge](vector-databases-edge)
+- [RAG Deployment Strategies](rag-deployment-strategies)
+- [RAG Operations & Monitoring](rag-operations-monitoring)
+- [Assessment: Implementation Quiz](rag-implementation-quiz)
 
 ---
 
@@ -109,11 +109,11 @@ Master production-ready Retrieval-Augmented Generation deployment patterns, LLM 
 Master customer discovery, solution architecture, sizing methodologies, and business case development for sovereign cloud implementations.
 
 **Core Topics:**
-- [Main Page: Pre-Sales Solution Design](presales-solution-design.html)
-- [Customer Discovery Framework](customer-discovery.html)
-- [Solution Sizing Methodologies](solution-sizing.html)
-- [TCO & Cost Estimation](cost-estimation.html)
-- [Assessment: Sales Scenarios Quiz](presales-quiz.html)
+- [Main Page: Pre-Sales Solution Design](presales-solution-design)
+- [Customer Discovery Framework](customer-discovery)
+- [Solution Sizing Methodologies](solution-sizing)
+- [TCO & Cost Estimation](cost-estimation)
+- [Assessment: Sales Scenarios Quiz](presales-quiz)
 
 ---
 
@@ -124,12 +124,12 @@ Master customer discovery, solution architecture, sizing methodologies, and busi
 Master regulatory compliance frameworks (GDPR, FedRAMP), encryption strategies, key management, security hardening, and incident response for sovereign cloud deployments.
 
 **Core Topics:**
-- [Main Page: Compliance & Security Patterns](compliance-security-patterns.html)
-- [GDPR Implementation Guide](gdpr-implementation.html)
-- [FedRAMP Compliance](fedramp-compliance.html)
-- [Encryption & Key Management](encryption-key-management.html)
-- [Security Hardening Practices](security-hardening.html)
-- [Assessment: Compliance Quiz](compliance-quiz.html)
+- [Main Page: Compliance & Security Patterns](compliance-security-patterns)
+- [GDPR Implementation Guide](gdpr-implementation)
+- [FedRAMP Compliance](fedramp-compliance)
+- [Encryption & Key Management](encryption-key-management)
+- [Security Hardening Practices](security-hardening)
+- [Assessment: Compliance Quiz](compliance-quiz)
 
 ---
 
@@ -140,18 +140,18 @@ Master regulatory compliance frameworks (GDPR, FedRAMP), encryption strategies, 
 Five progressive hands-on labs reinforcing Modules 1-5 through practical implementation of Azure Local, Azure Arc, Edge RAG, policy governance, and monitoring in a complete sovereign cloud environment.
 
 **Lab Overview:**
-1. [Lab 1: Azure Local Deployment](lab-01-azure-local-deployment.html) (2-3h)
+1. [Lab 1: Azure Local Deployment](lab-01-azure-local-deployment) (2-3h)
    - Deploy Azure Local in connected mode with sample applications
-2. [Lab 2: Azure Arc Onboarding](lab-02-azure-arc-onboarding.html) (2-3h)
+2. [Lab 2: Azure Arc Onboarding](lab-02-azure-arc-onboarding) (2-3h)
    - Register and manage resources with Arc, GitOps, extensions
-3. [Lab 3: Edge RAG Setup](lab-03-edge-rag-setup.html) (3-4h)
+3. [Lab 3: Edge RAG Setup](lab-03-edge-rag-setup) (3-4h)
    - Complete RAG system with Weaviate, Ollama, and FastAPI
-4. [Lab 4: Policy & Governance](lab-04-policy-governance.html) (2-3h)
+4. [Lab 4: Policy & Governance](lab-04-policy-governance) (2-3h)
    - Custom policies, Kubernetes enforcement, compliance monitoring
-5. [Lab 5: Monitoring & Observability](lab-05-monitoring-observability.html) (2-3h)
+5. [Lab 5: Monitoring & Observability](lab-05-monitoring-observability) (2-3h)
    - End-to-end monitoring with Log Analytics, alerts, and dashboards
 
-**[Module 6 Overview & Navigation](../level-200/README.html)**
+**[Module 6 Overview & Navigation](../level-200/README)**
 
 ---
 

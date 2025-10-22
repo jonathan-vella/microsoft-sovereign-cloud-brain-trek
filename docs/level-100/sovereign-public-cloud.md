@@ -81,7 +81,7 @@ Azure Policy → Audit compliance continuously
 Customer Lockbox → Control exceptions to data boundary
 ```
 
-**[Learn More: EU Data Boundary](european-commitments.html#eu-data-boundary)**
+**[Learn More: EU Data Boundary](european-commitments#eu-data-boundary)**
 
 ---
 
@@ -771,9 +771,9 @@ Follow a phased migration approach:
 
 ### Continue Learning
 
-- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models.html)**
-- **[→ Next: Sovereign Private Cloud](sovereign-private-cloud.html)**
-- **[Explore: National Partner Clouds](national-partner-clouds.html)**
+- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models)**
+- **[→ Next: Sovereign Private Cloud](sovereign-private-cloud)**
+- **[Explore: National Partner Clouds](national-partner-clouds)**
 
 ### Hands-On Learning
 

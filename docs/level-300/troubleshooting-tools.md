@@ -91,4 +91,4 @@ Master the tools and systematic approaches for diagnosing issues across sovereig
 
 ---
 
-**See also:** [Common Issues](troubleshooting-common-issues.html) | [Escalation Procedures](troubleshooting-escalation.html)
+**See also:** [Common Issues](troubleshooting-common-issues) | [Escalation Procedures](troubleshooting-escalation)

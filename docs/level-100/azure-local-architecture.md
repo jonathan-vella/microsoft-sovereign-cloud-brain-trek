@@ -27,7 +27,7 @@ This page provides an in-depth look at:
 - Security layers and encryption mechanisms
 - Integration with Azure cloud services
 
-**[← Back to Azure Local Overview](azure-local-overview.html)**
+**[← Back to Azure Local Overview](azure-local-overview)**
 
 ---
 
@@ -481,7 +481,7 @@ Azure Arc is the foundation for Azure Local's cloud integration:
 - Resource tagging and organization
 - Cost tracking and billing
 
-**Reference:** [Azure Arc Overview](azure-arc-intro.html)
+**Reference:** [Azure Arc Overview](azure-arc-intro)
 
 ### Azure Monitor Integration
 
@@ -898,10 +898,10 @@ For scenarios beyond 16 nodes:
 ## Next Steps
 
 **Continue Learning:**
-- [Connected Mode Operations →](azure-local-connected-mode.html)
-- [Disconnected Mode Operations →](azure-local-disconnected-mode.html)
-- [Hardware Requirements & Planning →](azure-local-hardware.html)
-- [Azure Local Quiz →](azure-local-quiz.html)
+- [Connected Mode Operations →](azure-local-connected-mode)
+- [Disconnected Mode Operations →](azure-local-disconnected-mode)
+- [Hardware Requirements & Planning →](azure-local-hardware)
+- [Azure Local Quiz →](azure-local-quiz)
 
 **External Resources:**
 - [Azure Local Architecture Docs](https://learn.microsoft.com/en-us/azure-local/concepts/architecture)

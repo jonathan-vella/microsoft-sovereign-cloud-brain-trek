@@ -40,7 +40,7 @@ D) RAG uses smaller models
 **Explanation:**
 RAG's primary advantage is grounding LLM responses in retrieved documents, which reduces hallucinations (false information), enables source citations, and provides answers based on current, relevant information. Speed varies, RAG still uses an LLM (just augments it), and model size is independent of using RAG.
 
-**Reference:** [Traditional LLMs vs. RAG](edge-rag-concepts.html#traditional-llms-vs-rag-augmented-systems)
+**Reference:** [Traditional LLMs vs. RAG](edge-rag-concepts#traditional-llms-vs-rag-augmented-systems)
 </details>
 
 ---
@@ -62,7 +62,7 @@ D) It doesn't address this problem
 **Explanation:**
 RAG solves the knowledge cutoff problem by retrieving information from a knowledge base that can be updated at any time without retraining the LLM. The LLM generates answers based on these retrieved, current documents. Retraining is expensive and impractical for daily updates, model size doesn't affect knowledge cutoff, and RAG specifically addresses this problem.
 
-**Reference:** [RAG Fundamentals](rag-fundamentals.html#traditional-llms-and-their-limitations)
+**Reference:** [RAG Fundamentals](rag-fundamentals#traditional-llms-and-their-limitations)
 </details>
 
 ---
@@ -84,7 +84,7 @@ D) Cloud deployment is not technically possible
 **Explanation:**
 Edge deployment maintains data sovereignty (sensitive data stays on-premises), reduces latency (no internet round-trip), and enables offline operation (works during internet outages). Cost varies by scenario, cloud hardware is often more powerful, and cloud RAG deployment is certainly possible - edge is chosen for sovereignty and latency reasons.
 
-**Reference:** [Edge RAG Benefits](edge-rag-concepts.html#edge-rag-definition-and-benefits)
+**Reference:** [Edge RAG Benefits](edge-rag-concepts#edge-rag-definition-and-benefits)
 </details>
 
 ---
@@ -106,7 +106,7 @@ D) Document metadata
 **Explanation:**
 Embeddings are dense numerical vectors (e.g., 384 or 1536 dimensions) that represent text in a way that captures semantic meaning. Similar meanings result in similar vectors, enabling semantic search. They're not images, hyperlinks, or metadata, though embeddings can be generated from any of these.
 
-**Reference:** [Embedding Models](rag-fundamentals.html#embedding-models-and-representation-learning)
+**Reference:** [Embedding Models](rag-fundamentals#embedding-models-and-representation-learning)
 </details>
 
 ---
@@ -128,7 +128,7 @@ D) To parse documents
 **Explanation:**
 A vector database stores document embeddings (vector representations) and enables fast similarity search to find documents most relevant to a query. It doesn't store LLM weights (those are in the model file), generate responses (LLM does that), or parse documents (done in ingestion pipeline).
 
-**Reference:** [Vector Databases](rag-fundamentals.html#vector-databases-and-similarity-search)
+**Reference:** [Vector Databases](rag-fundamentals#vector-databases-and-similarity-search)
 </details>
 
 ---
@@ -150,7 +150,7 @@ D) Nothing - all data is sent to cloud
 **Explanation:**
 In Edge RAG, ALL data stays on-premises: the documents/knowledge base, embeddings, user queries, and generated responses. This ensures complete data sovereignty and compliance with data residency requirements. The LLM model also runs locally.
 
-**Reference:** [Data Sovereignty](edge-rag-concepts.html#connection-to-sovereign-cloud-strategies)
+**Reference:** [Data Sovereignty](edge-rag-concepts#connection-to-sovereign-cloud-strategies)
 </details>
 
 ---
@@ -172,7 +172,7 @@ D) Chunking is not necessary
 **Explanation:**
 Chunking breaks documents into smaller pieces to: 1) Fit within LLM context windows (typically 4K-32K tokens), and 2) Improve retrieval precision (retrieve only relevant sections, not entire documents). While it may help with storage and loading, those aren't the primary reasons.
 
-**Reference:** [RAG Architecture](edge-rag-architecture.html#data-ingestion-and-indexing-pipeline)
+**Reference:** [RAG Architecture](edge-rag-architecture#data-ingestion-and-indexing-pipeline)
 </details>
 
 ---
@@ -194,7 +194,7 @@ D) Model size doesn't matter
 **Explanation:**
 Larger LLMs (e.g., 70B parameters) generally provide better quality responses but require significantly more GPU memory and are slower to generate responses. Smaller models (7B-13B) are faster and require less hardware but may produce lower quality outputs. The choice depends on quality requirements and available resources.
 
-**Reference:** [Local LLM Deployment](edge-rag-architecture.html#local-llm-deployment-considerations)
+**Reference:** [Local LLM Deployment](edge-rag-architecture#local-llm-deployment-considerations)
 </details>
 
 ---
@@ -216,7 +216,7 @@ D) Real-time stock trading algorithms
 **Explanation:**
 Healthcare with HIPAA requirements is ideal for Edge RAG because: 1) Sensitive patient data must stay on-premises, 2) Complex queries benefit from RAG's semantic understanding, 3) Citation of sources is important for clinical decisions. Public websites don't need edge deployment, keyword search doesn't need RAG, and trading algorithms require different technology.
 
-**Reference:** [Customer Scenarios](edge-rag-concepts.html#scenario-1-healthcare-documentation-assistant-disconnected-edge)
+**Reference:** [Customer Scenarios](edge-rag-concepts#scenario-1-healthcare-documentation-assistant-disconnected-edge)
 </details>
 
 ---
@@ -238,7 +238,7 @@ D) When you have unlimited budget and time
 **Explanation:**
 RAG is better for frequently changing factual information because you can update the knowledge base without retraining the model. Fine-tuning is better for changing style, teaching vocabulary, or task-specific behavior. RAG is actually more cost-effective than repeated fine-tuning.
 
-**Reference:** [Fine-Tuning vs. RAG](rag-fundamentals.html#fine-tuning-vs-rag-trade-offs)
+**Reference:** [Fine-Tuning vs. RAG](rag-fundamentals#fine-tuning-vs-rag-trade-offs)
 </details>
 
 ---
@@ -260,7 +260,7 @@ D) The user interface design
 **Explanation:**
 Retrieval quality is the most critical factor - "garbage in, garbage out." If the system retrieves irrelevant or incorrect documents, even the best LLM will generate poor answers. While LLM size, database speed, and UI matter, retrieval quality is foundational to RAG success.
 
-**Reference:** [RAG Fundamentals](rag-fundamentals.html#evaluation-metrics-for-rag-systems)
+**Reference:** [RAG Fundamentals](rag-fundamentals#evaluation-metrics-for-rag-systems)
 </details>
 
 ---
@@ -282,7 +282,7 @@ D) RAG doesn't reduce hallucinations
 **Explanation:**
 RAG reduces hallucinations by providing the LLM with relevant, factual documents as context and instructing it to base answers only on that context. This grounds the response in real information rather than allowing the model to generate potentially false content from its training. Model size and additional training are not RAG techniques.
 
-**Reference:** [Why RAG for Enterprise](edge-rag-concepts.html#why-rag-for-enterprise-applications)
+**Reference:** [Why RAG for Enterprise](edge-rag-concepts#why-rag-for-enterprise-applications)
 </details>
 
 ---
@@ -304,7 +304,7 @@ D) Network card
 **Explanation:**
 GPU with sufficient VRAM is most critical for running the LLM efficiently. LLMs are computationally intensive and benefit greatly from GPU acceleration. VRAM requirements vary by model size (24GB for 7B, 40-80GB for 13B-70B). While storage, CPU, and networking matter, the GPU is the bottleneck for LLM inference.
 
-**Reference:** [Hardware Requirements](edge-rag-architecture.html#hardware-requirements)
+**Reference:** [Hardware Requirements](edge-rag-architecture#hardware-requirements)
 </details>
 
 ---
@@ -326,7 +326,7 @@ D) Mixing different document types
 **Explanation:**
 Hybrid Edge RAG deploys RAG locally for sensitive data that must stay on-premises while optionally using cloud services (like Azure OpenAI) for general, non-sensitive queries. This balances sovereignty requirements with the convenience of cloud AI. Using both GPUs and CPUs is standard, not "hybrid deployment."
 
-**Reference:** [Scenario 4: Research Lab](edge-rag-concepts.html#scenario-4-research-lab-data-analysis-hybrid)
+**Reference:** [Scenario 4: Research Lab](edge-rag-concepts#scenario-4-research-lab-data-analysis-hybrid)
 </details>
 
 ---
@@ -348,7 +348,7 @@ D) Reduced training costs
 **Explanation:**
 The largest ROI typically comes from time savings - employees finding information 50-80% faster, making better decisions, and being more productive. While reduced cloud costs and training costs contribute, the productivity gains from instant access to organizational knowledge usually provide the largest financial benefit.
 
-**Reference:** [ROI and Business Value](edge-rag-use-cases.html#roi-and-business-value)
+**Reference:** [ROI and Business Value](edge-rag-use-cases#roi-and-business-value)
 </details>
 
 ---
@@ -365,19 +365,19 @@ The largest ROI typically comes from time savings - employees finding informatio
 ## Study Recommendations
 
 **If you missed questions on RAG fundamentals (Q1, Q2, Q4, Q12):**
-- Review [Edge RAG Concepts](edge-rag-concepts.html)
-- Review [RAG Fundamentals](rag-fundamentals.html)
+- Review [Edge RAG Concepts](edge-rag-concepts)
+- Review [RAG Fundamentals](rag-fundamentals)
 
 **If you missed questions on deployment (Q3, Q6, Q13, Q14):**
-- Review [Edge RAG Architecture](edge-rag-architecture.html)
+- Review [Edge RAG Architecture](edge-rag-architecture)
 
 **If you missed questions on implementation (Q7, Q8, Q10, Q11):**
-- Review [RAG Fundamentals](rag-fundamentals.html)
-- Review [Edge RAG Architecture](edge-rag-architecture.html)
+- Review [RAG Fundamentals](rag-fundamentals)
+- Review [Edge RAG Architecture](edge-rag-architecture)
 
 **If you missed questions on use cases (Q9, Q15):**
-- Review [Edge RAG Use Cases](edge-rag-use-cases.html)
-- Review customer scenarios in [Edge RAG Concepts](edge-rag-concepts.html)
+- Review [Edge RAG Use Cases](edge-rag-use-cases)
+- Review customer scenarios in [Edge RAG Concepts](edge-rag-concepts)
 
 ---
 
@@ -388,10 +388,10 @@ The largest ROI typically comes from time savings - employees finding informatio
 1. ✅ **Congratulations!** You've completed Level 100 foundation content!
 
 2. 📚 **Review other Level 100 modules if needed:**
-   - [Digital Sovereignty](digital-sovereignty.html)
-   - [Sovereign Cloud Models](sovereign-cloud-models.html)
-   - [Azure Local Overview](azure-local-overview.html)
-   - [Azure Arc Introduction](azure-arc-intro.html)
+   - [Digital Sovereignty](digital-sovereignty)
+   - [Sovereign Cloud Models](sovereign-cloud-models)
+   - [Azure Local Overview](azure-local-overview)
+   - [Azure Arc Introduction](azure-arc-intro)
 
 3. 🎯 **Prepare for Level 200:** Intermediate deep dives (coming soon)
 
@@ -409,4 +409,4 @@ The largest ROI typically comes from time savings - employees finding informatio
 
 ---
 
-**[← Back to Edge RAG Concepts](edge-rag-concepts.html)**
+**[← Back to Edge RAG Concepts](edge-rag-concepts)**

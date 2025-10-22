@@ -41,7 +41,7 @@ Azure Local serves as the **Sovereign Private Cloud** option in Microsoft's thre
 - Data processing that never leaves their premises
 - Compliance with strict regulatory requirements
 
-**[Review Digital Sovereignty Concepts →](digital-sovereignty.html)**
+**[Review Digital Sovereignty Concepts →](digital-sovereignty)**
 
 ---
 
@@ -141,7 +141,7 @@ Azure Local ensures data sovereignty through:
 - **Encryption at rest**: All storage volumes encrypted by default
 - **Compliance alignment**: Meet GDPR, HIPAA, FedRAMP requirements
 
-**[Learn More About Data Residency →](data-residency-concepts.html)**
+**[Learn More About Data Residency →](data-residency-concepts)**
 
 ### 4. Customization and Control
 
@@ -192,7 +192,7 @@ Azure Local excels at running AI/ML workloads on-premises:
 - Maintain privacy for confidential information
 - Reduce latency for real-time AI responses
 
-**[Explore Edge RAG Concepts →](edge-rag-concepts.html)**
+**[Explore Edge RAG Concepts →](edge-rag-concepts)**
 
 ### 7. Security and Encryption at Rest
 
@@ -307,7 +307,7 @@ Azure Local physical architecture includes:
 - Optional external connectivity
 - Software-defined networking (SDN) support
 
-**[Deep Dive: Hardware Requirements →](azure-local-hardware.html)**
+**[Deep Dive: Hardware Requirements →](azure-local-hardware)**
 
 ### Logical Components
 
@@ -377,7 +377,7 @@ When in Connected Mode:
 - Specific URLs for Azure Arc, monitoring, updates
 - No inbound connections from internet required
 
-**[Deep Dive: Network Architecture →](azure-local-architecture.html)**
+**[Deep Dive: Network Architecture →](azure-local-architecture)**
 
 ### Scalability Patterns
 
@@ -923,7 +923,7 @@ Can you have continuous/regular internet connectivity?
 
 Ready to explore Azure Local in depth? Continue with these detailed topics:
 
-### [Azure Local Architecture Deep Dive](azure-local-architecture.html)
+### [Azure Local Architecture Deep Dive](azure-local-architecture)
 Explore the physical and logical architecture, including hardware topology, networking design, storage architecture, and high availability patterns.
 
 **Topics Covered:**
@@ -938,7 +938,7 @@ Explore the physical and logical architecture, including hardware topology, netw
 
 ---
 
-### [Connected Mode Operations](azure-local-connected-mode.html)
+### [Connected Mode Operations](azure-local-connected-mode)
 Learn how Azure Local integrates with Azure services in Connected Mode, including management, monitoring, backup, and hybrid workloads.
 
 **Topics Covered:**
@@ -953,7 +953,7 @@ Learn how Azure Local integrates with Azure services in Connected Mode, includin
 
 ---
 
-### [Disconnected Mode Operations](azure-local-disconnected-mode.html)
+### [Disconnected Mode Operations](azure-local-disconnected-mode)
 Understand how Azure Local operates in air-gapped and disconnected environments, including management strategies and feature limitations.
 
 **Topics Covered:**
@@ -968,7 +968,7 @@ Understand how Azure Local operates in air-gapped and disconnected environments,
 
 ---
 
-### [Hardware Requirements & Planning](azure-local-hardware.html)
+### [Hardware Requirements & Planning](azure-local-hardware)
 Get detailed guidance on hardware requirements, validated partners, sizing, and deployment planning.
 
 **Topics Covered:**
@@ -987,7 +987,7 @@ Get detailed guidance on hardware requirements, validated partners, sizing, and 
 
 Ready to test your understanding of Azure Local? Take the module quiz:
 
-### [Azure Local Knowledge Check Quiz →](azure-local-quiz.html)
+### [Azure Local Knowledge Check Quiz →](azure-local-quiz)
 
 **Quiz Details:**
 - 15 multiple-choice questions
@@ -1019,12 +1019,12 @@ After completing this module:
    - Review explanations for missed questions
 
 3. **✅ Explore Related Modules**
-   - [Digital Sovereignty Fundamentals](digital-sovereignty.html) - Core concepts
-   - [Microsoft Sovereign Cloud Models](sovereign-cloud-models.html) - Model comparison
-   - [Azure Arc Introduction](azure-arc-intro.html) - Hybrid management
+   - [Digital Sovereignty Fundamentals](digital-sovereignty) - Core concepts
+   - [Microsoft Sovereign Cloud Models](sovereign-cloud-models) - Model comparison
+   - [Azure Arc Introduction](azure-arc-intro) - Hybrid management
 
 4. **🎯 Continue to Next Module**
-   - [Azure Arc Introduction →](azure-arc-intro.html) - Learn how Arc extends Azure management
+   - [Azure Arc Introduction →](azure-arc-intro) - Learn how Arc extends Azure management
 
 ---
 

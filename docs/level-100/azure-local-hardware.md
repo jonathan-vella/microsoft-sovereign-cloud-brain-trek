@@ -27,7 +27,7 @@ Selecting the right hardware is critical for Azure Local success. This page prov
 - Network adapter and storage requirements
 - Deployment planning checklist
 
-**[← Back to Azure Local Overview](azure-local-overview.html)**
+**[← Back to Azure Local Overview](azure-local-overview)**
 
 ---
 
@@ -947,10 +947,10 @@ Resiliency Factors:
 ## Next Steps
 
 **Continue Learning:**
-- [Azure Local Overview →](azure-local-overview.html)
-- [Connected Mode Operations →](azure-local-connected-mode.html)
-- [Disconnected Mode Operations →](azure-local-disconnected-mode.html)
-- [Azure Local Quiz →](azure-local-quiz.html)
+- [Azure Local Overview →](azure-local-overview)
+- [Connected Mode Operations →](azure-local-connected-mode)
+- [Disconnected Mode Operations →](azure-local-disconnected-mode)
+- [Azure Local Quiz →](azure-local-quiz)
 
 **External Resources:**
 - [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure-local/system-requirements)

@@ -41,7 +41,7 @@ nav_order: 3.3
 - Manual update deployment
 - Complete operational sovereignty
 
-**[← Back to Azure Local Overview](azure-local-overview.html)**
+**[← Back to Azure Local Overview](azure-local-overview)**
 
 ---
 
@@ -890,12 +890,12 @@ Critical for disconnected environments:
 ## Next Steps
 
 **Continue Learning:**
-- [Hardware Requirements & Planning →](azure-local-hardware.html)
-- [Connected Mode Operations →](azure-local-connected-mode.html)
-- [Azure Local Quiz →](azure-local-quiz.html)
+- [Hardware Requirements & Planning →](azure-local-hardware)
+- [Connected Mode Operations →](azure-local-connected-mode)
+- [Azure Local Quiz →](azure-local-quiz)
 
 **Back to:**
-- [Azure Local Overview →](azure-local-overview.html)
+- [Azure Local Overview →](azure-local-overview)
 
 **External Resources:**
 - [Azure Local Disconnected Deployment](https://learn.microsoft.com/en-us/azure-local/deploy/deployment-disconnected)

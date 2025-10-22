@@ -426,9 +426,9 @@ A commitment to store and process customer data within the European Union, with 
 
 ## Next Steps
 
-- **[Learn about Regulatory Requirements →](regulatory-overview.html)**
-- **[Explore Data Residency Concepts →](data-residency-concepts.html)**
-- **[Return to Digital Sovereignty Overview →](digital-sovereignty.html)**
+- **[Learn about Regulatory Requirements →](regulatory-overview)**
+- **[Explore Data Residency Concepts →](data-residency-concepts)**
+- **[Return to Digital Sovereignty Overview →](digital-sovereignty)**
 
 ---
 

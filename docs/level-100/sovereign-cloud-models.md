@@ -59,7 +59,7 @@ Different organizations have different sovereignty needs:
 - Workloads needing cloud scalability with data residency
 - Customers wanting balance between control and cloud benefits
 
-**[Learn More →](sovereign-public-cloud.html)**
+**[Learn More →](sovereign-public-cloud)**
 
 ---
 
@@ -82,7 +82,7 @@ Different organizations have different sovereignty needs:
 - Organizations with air-gap or disconnected requirements
 - Scenarios requiring complete operational independence
 
-**[Learn More →](sovereign-private-cloud.html)**
+**[Learn More →](sovereign-private-cloud)**
 
 ---
 
@@ -109,7 +109,7 @@ Different organizations have different sovereignty needs:
 - Organizations subject to national cloud requirements
 - Workloads requiring local operator model
 
-**[Learn More →](national-partner-clouds.html)**
+**[Learn More →](national-partner-clouds)**
 
 ---
 
@@ -928,7 +928,7 @@ Real-world examples illustrating when and why organizations choose each sovereig
 For detailed exploration of each sovereign cloud model, continue to these pages:
 
 ### 📘 Sovereign Public Cloud
-**[Read Full Article →](sovereign-public-cloud.html)**
+**[Read Full Article →](sovereign-public-cloud)**
 
 Deep dive into Azure with enhanced sovereignty controls:
 - Microsoft Cloud for Sovereignty capabilities
@@ -939,7 +939,7 @@ Deep dive into Azure with enhanced sovereignty controls:
 - Use cases and customer stories
 
 ### 📘 Sovereign Private Cloud
-**[Read Full Article →](sovereign-private-cloud.html)**
+**[Read Full Article →](sovereign-private-cloud)**
 
 Comprehensive guide to Azure Local:
 - Connected vs. Disconnected operating modes
@@ -950,7 +950,7 @@ Comprehensive guide to Azure Local:
 - Total cost of ownership analysis
 
 ### 📘 National Partner Clouds
-**[Read Full Article →](national-partner-clouds.html)**
+**[Read Full Article →](national-partner-clouds)**
 
 Understanding partner-operated sovereign clouds:
 - Azure Government (US FedRAMP)
@@ -961,7 +961,7 @@ Understanding partner-operated sovereign clouds:
 - Partner ecosystem and value chain
 
 ### ✅ Test Your Knowledge
-**[Take the Cloud Models Quiz →](cloud-models-quiz.html)**
+**[Take the Cloud Models Quiz →](cloud-models-quiz)**
 
 12-15 questions covering all three sovereign cloud models, decision criteria, and use case selection.
 
@@ -976,7 +976,7 @@ After completing this module:
 3. ✅ **Read the customer scenarios** to see real-world applications
 4. ✅ **Explore deep dive pages** for detailed technical information
 5. 🎯 **Take the quiz** to validate your understanding
-6. 🎯 **[Proceed to Azure Local Overview →](azure-local-overview.html)** (Module 3)
+6. 🎯 **[Proceed to Azure Local Overview →](azure-local-overview)** (Module 3)
 
 ---
 

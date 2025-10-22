@@ -428,10 +428,10 @@ print(answer)
 
 ## Next Steps
 
-- [Edge RAG Architecture →](edge-rag-architecture.html)
-- [Edge RAG Use Cases →](edge-rag-use-cases.html)
-- [Edge RAG Quiz →](edge-rag-quiz.html)
-- [Back to Edge RAG Overview →](edge-rag-concepts.html)
+- [Edge RAG Architecture →](edge-rag-architecture)
+- [Edge RAG Use Cases →](edge-rag-use-cases)
+- [Edge RAG Quiz →](edge-rag-quiz)
+- [Back to Edge RAG Overview →](edge-rag-concepts)
 
 ---
 

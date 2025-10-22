@@ -49,4 +49,4 @@ Complete end-to-end architecture for Retrieval-Augmented Generation systems at p
 
 ---
 
-**See also:** [Optimization Strategies](edge-rag-optimization.html) | [MLOps Pipeline](edge-rag-mlops.html)
+**See also:** [Optimization Strategies](edge-rag-optimization) | [MLOps Pipeline](edge-rag-mlops)

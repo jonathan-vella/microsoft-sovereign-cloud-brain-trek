@@ -63,4 +63,4 @@ nav_order: 4
 
 ---
 
-**See also:** [Architecture](edge-rag-architecture-production.html) | [Optimization](edge-rag-optimization.html) | [MLOps](edge-rag-mlops.html)
+**See also:** [Architecture](edge-rag-architecture-production) | [Optimization](edge-rag-optimization) | [MLOps](edge-rag-mlops)

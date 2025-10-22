@@ -48,4 +48,4 @@ Each issue type follows a diagnostic workflow leading to specific resolution pro
 
 ---
 
-**See also:** [Tools & Procedures](troubleshooting-tools.html) | [Escalation](troubleshooting-escalation.html)
+**See also:** [Tools & Procedures](troubleshooting-tools) | [Escalation](troubleshooting-escalation)

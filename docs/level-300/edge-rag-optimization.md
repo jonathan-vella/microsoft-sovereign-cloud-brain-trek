@@ -45,4 +45,4 @@ Optimize retrieval and inference performance for production RAG systems on edge 
 
 ---
 
-**See also:** [Architecture](edge-rag-architecture-production.html) | [MLOps Pipeline](edge-rag-mlops.html)
+**See also:** [Architecture](edge-rag-architecture-production) | [MLOps Pipeline](edge-rag-mlops)

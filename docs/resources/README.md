@@ -246,15 +246,15 @@ description: "Additional resources, references, and support for Microsoft Sovere
 - **Air-Gapped:** Isolated environment with no external connectivity
 - **Zero Trust:** Security model assuming breach and verifying each request
 
-**[Full Glossary →](glossary.html)**
+**[Full Glossary →](glossary)**
 
 ---
 
 ## Next Steps
 
-- **[Return to Home](../index.html)**
+- **[Return to Home](../index)**
 - **[Start Level 100](../level-100/)**
-- **[Review Introduction](../introduction.html)**
+- **[Review Introduction](../introduction)**
 
 ---
 

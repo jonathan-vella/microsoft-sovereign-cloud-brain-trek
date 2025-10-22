@@ -276,9 +276,9 @@ This page covers operational aspects of Zero Trust: monitoring, compliance autom
 
 ## Next Steps
 
-1. Ready for hands-on implementation? [Lab: Implement Zero Trust →](zero-trust-lab.html)
-2. Return to [Module Overview →](zero-trust.html)
-3. Continue to [Module 2: Azure Local at Scale - Connected](../azure-local-advanced-connected.html)
+1. Ready for hands-on implementation? [Lab: Implement Zero Trust →](zero-trust-lab)
+2. Return to [Module Overview →](zero-trust)
+3. Continue to [Module 2: Azure Local at Scale - Connected](../azure-local-advanced-connected)
 
 ---
 

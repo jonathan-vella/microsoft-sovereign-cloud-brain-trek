@@ -91,4 +91,4 @@ Design and implement completely isolated Azure Local deployments with zero cloud
 
 ---
 
-**See also:** [Certificate Management](azure-local-certificate-management.html) | [Disconnected Lab](azure-local-disconnected-lab.html)
+**See also:** [Certificate Management](azure-local-certificate-management) | [Disconnected Lab](azure-local-disconnected-lab)

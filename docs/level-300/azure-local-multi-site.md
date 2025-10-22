@@ -92,4 +92,4 @@ Deploy Azure Local clusters across multiple physical sites with synchronized ope
 
 ---
 
-**See also:** [Connected Mode Architecture](azure-local-advanced-connected.html) | [Networking Deep Dive](azure-local-networking-advanced.html) | [Lab Exercise](azure-local-connected-lab.html)
+**See also:** [Connected Mode Architecture](azure-local-advanced-connected) | [Networking Deep Dive](azure-local-networking-advanced) | [Lab Exercise](azure-local-connected-lab)

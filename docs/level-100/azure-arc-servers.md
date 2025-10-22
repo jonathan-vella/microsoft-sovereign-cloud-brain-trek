@@ -28,7 +28,7 @@ Azure Arc-enabled Servers extends Azure management to Windows and Linux machines
 - Manage updates with Azure Update Management
 - Automate with Azure Automation runbooks
 
-**[← Back to Azure Arc Introduction](azure-arc-intro.html)**
+**[← Back to Azure Arc Introduction](azure-arc-intro)**
 
 ---
 
@@ -313,10 +313,10 @@ azcmagent connect --resource-group "myResourceGroup"   --tenant-id "tenant-id"  
 
 ## Next Steps
 
-- [Arc-Enabled Kubernetes →](azure-arc-kubernetes.html)
-- [Arc Data Services →](azure-arc-data-services.html)
-- [Azure Arc Quiz →](azure-arc-quiz.html)
-- [Back to Arc Overview →](azure-arc-intro.html)
+- [Arc-Enabled Kubernetes →](azure-arc-kubernetes)
+- [Arc Data Services →](azure-arc-data-services)
+- [Azure Arc Quiz →](azure-arc-quiz)
+- [Back to Arc Overview →](azure-arc-intro)
 
 **External Resources:**
 - [Azure Arc-enabled servers documentation](https://learn.microsoft.com/en-us/azure/azure-arc/servers/)

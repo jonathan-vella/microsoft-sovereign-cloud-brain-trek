@@ -40,7 +40,7 @@ D) To provide backup services for on-premises servers
 **Explanation:**
 Azure Arc's primary purpose is to extend Azure management, governance, and services to any infrastructure - on-premises, multi-cloud, or edge. It does not migrate workloads (that's Azure Migrate), doesn't replace tools (it complements them), and backup is just one of many capabilities.
 
-**Reference:** [Azure Arc Introduction](azure-arc-intro.html#what-is-azure-arc)
+**Reference:** [Azure Arc Introduction](azure-arc-intro#what-is-azure-arc)
 </details>
 
 ---
@@ -62,7 +62,7 @@ D) Arc-enabled Virtual Networks
 **Explanation:**
 The three pillars of Azure Arc are Arc-enabled Servers (Windows/Linux machines), Arc-enabled Kubernetes (any CNCF-certified K8s), and Arc-enabled Data Services (SQL MI and PostgreSQL). Arc-enabled Virtual Networks is not an Arc service.
 
-**Reference:** [Three Pillars of Azure Arc](azure-arc-intro.html#three-pillars-of-azure-arc)
+**Reference:** [Three Pillars of Azure Arc](azure-arc-intro#three-pillars-of-azure-arc)
 </details>
 
 ---
@@ -84,7 +84,7 @@ D) All data is kept 100% local with no Azure sync
 **Explanation:**
 Arc synchronizes metadata (inventory, configuration), metrics, and logs to Azure for management purposes, but workload data (application data, databases, files) stays on-premises. This enables cloud-based management while maintaining data sovereignty.
 
-**Reference:** [Arc and Sovereignty](azure-arc-intro.html#arc-and-sovereignty)
+**Reference:** [Arc and Sovereignty](azure-arc-intro#arc-and-sovereignty)
 </details>
 
 ---
@@ -106,7 +106,7 @@ D) Purchase special Arc licenses
 **Explanation:**
 Onboarding requires installing the Connected Machine agent on the server and authenticating to Azure (via service principal or interactive login). Servers can be anywhere (not just Azure), domain-join is optional, and Arc itself has no additional license cost.
 
-**Reference:** [Arc Servers Onboarding](azure-arc-servers.html#onboarding-process-and-architecture)
+**Reference:** [Arc Servers Onboarding](azure-arc-servers#onboarding-process-and-architecture)
 </details>
 
 ---
@@ -128,7 +128,7 @@ D) Reduces Kubernetes licensing costs
 **Explanation:**
 GitOps uses Git as the source of truth for cluster configuration. Changes committed to Git automatically sync to clusters via Flux, providing version control, audit trail, and consistent deployments. It doesn't create clusters, doesn't eliminate kubectl (complements it), and Kubernetes is open source (no licensing).
 
-**Reference:** [GitOps Configuration Management](azure-arc-kubernetes.html#gitops-based-configuration-management)
+**Reference:** [GitOps Configuration Management](azure-arc-kubernetes#gitops-based-configuration-management)
 </details>
 
 ---
@@ -150,7 +150,7 @@ D) Increase server hardware resources
 **Explanation:**
 Azure Policy can audit server configurations for compliance and optionally remediate drift (deploy missing extensions, configure settings, etc.). It doesn't migrate servers, change OS, or modify hardware - those require different tools/processes.
 
-**Reference:** [Applying Azure Policy](azure-arc-servers.html#applying-azure-policy)
+**Reference:** [Applying Azure Policy](azure-arc-servers#applying-azure-policy)
 </details>
 
 ---
@@ -172,7 +172,7 @@ D) Only Microsoft technologies
 **Explanation:**
 Azure Arc supports any infrastructure - Microsoft Azure, AWS, Google Cloud, on-premises, edge, and any other cloud. It's designed for multi-cloud and hybrid scenarios and supports non-Microsoft technologies (Linux, any K8s distribution, PostgreSQL, etc.).
 
-**Reference:** [Multi-Cloud Governance](azure-arc-intro.html#multi-cloud-governance-capabilities)
+**Reference:** [Multi-Cloud Governance](azure-arc-intro#multi-cloud-governance-capabilities)
 </details>
 
 ---
@@ -194,7 +194,7 @@ D) Azure Migrate
 **Explanation:**
 Arc-enabled Kubernetes is designed for managing multiple Kubernetes clusters with consistent GitOps deployment and Azure Policy enforcement. Arc Servers is for individual machines, Data Services is for databases, and Azure Migrate is for migrations (not management).
 
-**Reference:** [Arc Kubernetes Scenarios](azure-arc-kubernetes.html#use-case-scenarios)
+**Reference:** [Arc Kubernetes Scenarios](azure-arc-kubernetes#use-case-scenarios)
 </details>
 
 ---
@@ -216,7 +216,7 @@ D) Free (no licensing cost)
 **Explanation:**
 Arc SQL MI supports both pay-as-you-go (Azure consumption billing) and BYOL where you can bring existing SQL Server licenses and leverage Azure Hybrid Benefit for up to 55% savings. It's not free - either model incurs costs.
 
-**Reference:** [Data Services Billing](azure-arc-data-services.html#billing-model)
+**Reference:** [Data Services Billing](azure-arc-data-services#billing-model)
 </details>
 
 ---
@@ -238,7 +238,7 @@ D) High availability is not supported on Arc
 **Explanation:**
 Arc SQL MI uses Always-On Availability Groups (AG) with synchronous replication and automatic failover, providing 99.95% SLA. It doesn't replicate to Azure SQL Database, hourly backups don't provide HA, and HA is a core feature.
 
-**Reference:** [Elastic Scale and HA](azure-arc-data-services.html#elastic-scale-and-high-availability)
+**Reference:** [Elastic Scale and HA](azure-arc-data-services#elastic-scale-and-high-availability)
 </details>
 
 ---
@@ -260,7 +260,7 @@ D) Features (Indirect mode has more features)
 **Explanation:**
 Directly Connected mode maintains regular connectivity to Azure with automatic billing uploads and Azure portal management. Indirectly Connected mode supports air-gapped scenarios with manual export/import of usage data and local management only. Performance is similar, costs are based on usage, and Direct mode has more features (not Indirect).
 
-**Reference:** [Deployment Modes](azure-arc-data-services.html#deployment-modes)
+**Reference:** [Deployment Modes](azure-arc-data-services#deployment-modes)
 </details>
 
 ---
@@ -282,7 +282,7 @@ D) Monthly subscription per cluster
 **Explanation:**
 Azure Arc itself is free - there's no charge to connect servers, Kubernetes clusters, or deploy the data controller. You only pay for Azure services you consume (Azure Monitor, Defender, Update Management, etc.). No EA required, no per-server fees, no subscriptions for Arc itself.
 
-**Reference:** [Arc Servers Cost Model](azure-arc-servers.html#cost-model-and-licensing)
+**Reference:** [Arc Servers Cost Model](azure-arc-servers#cost-model-and-licensing)
 </details>
 
 ---
@@ -299,26 +299,26 @@ Azure Arc itself is free - there's no charge to connect servers, Kubernetes clus
 ## Study Recommendations
 
 **If you missed questions on Arc fundamentals (Q1, Q3, Q7):**
-- Review [Azure Arc Introduction](azure-arc-intro.html)
+- Review [Azure Arc Introduction](azure-arc-intro)
 - Focus on what Arc does and doesn't do
 
 **If you missed questions on specific services (Q2, Q4, Q5, Q8):**
-- Review [Arc Servers](azure-arc-servers.html)
-- Review [Arc Kubernetes](azure-arc-kubernetes.html)
+- Review [Arc Servers](azure-arc-servers)
+- Review [Arc Kubernetes](azure-arc-kubernetes)
 
 **If you missed questions on Data Services (Q9, Q10, Q11):**
-- Review [Arc Data Services](azure-arc-data-services.html)
+- Review [Arc Data Services](azure-arc-data-services)
 
 **If you missed questions on policy and governance (Q6):**
-- Review [Azure Policy for Arc](azure-arc-servers.html#applying-azure-policy)
+- Review [Azure Policy for Arc](azure-arc-servers#applying-azure-policy)
 
 ---
 
 ## Next Steps
 
 **After passing:**
-1. ✅ Continue to [Edge RAG Concepts →](edge-rag-concepts.html)
-2. 📚 Review [Azure Local Overview](azure-local-overview.html) if you haven't
+1. ✅ Continue to [Edge RAG Concepts →](edge-rag-concepts)
+2. 📚 Review [Azure Local Overview](azure-local-overview) if you haven't
 3. 🌐 Explore [Azure Arc Jumpstart](https://azurearcjumpstart.io/) for hands-on labs
 
 ---
@@ -330,4 +330,4 @@ Azure Arc itself is free - there's no charge to connect servers, Kubernetes clus
 
 ---
 
-**[← Back to Azure Arc Introduction](azure-arc-intro.html)**
+**[← Back to Azure Arc Introduction](azure-arc-intro)**

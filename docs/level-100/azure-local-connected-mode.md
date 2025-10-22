@@ -41,7 +41,7 @@ nav_order: 3.2
 - Azure Security Center for threat protection
 - Azure Update Manager for patch management
 
-**[← Back to Azure Local Overview](azure-local-overview.html)**
+**[← Back to Azure Local Overview](azure-local-overview)**
 
 ---
 
@@ -219,7 +219,7 @@ Connected Mode maintains near real-time synchronization of metadata and telemetr
 - Configurable log filtering available
 - Data encrypted in transit (TLS 1.2+)
 
-**[Review Data Residency Concepts →](data-residency-concepts.html)**
+**[Review Data Residency Concepts →](data-residency-concepts)**
 
 ---
 
@@ -955,12 +955,12 @@ Set-CauClusterRole -DaysOfWeek Saturday `
 ## Next Steps
 
 **Continue Learning:**
-- [Disconnected Mode Operations →](azure-local-disconnected-mode.html)
-- [Hardware Requirements & Planning →](azure-local-hardware.html)
-- [Azure Local Quiz →](azure-local-quiz.html)
+- [Disconnected Mode Operations →](azure-local-disconnected-mode)
+- [Hardware Requirements & Planning →](azure-local-hardware)
+- [Azure Local Quiz →](azure-local-quiz)
 
 **Back to:**
-- [Azure Local Overview →](azure-local-overview.html)
+- [Azure Local Overview →](azure-local-overview)
 
 **External Resources:**
 - [Azure Arc Documentation](https://learn.microsoft.com/en-us/azure/azure-arc/)

@@ -71,9 +71,9 @@ Azure Arc plays a critical role in sovereignty by enabling organizations to:
 - Preserve investments while modernizing
 
 **Connection to Sovereignty Concepts:**
-- [Review Digital Sovereignty →](digital-sovereignty.html)
-- [Review Operational Sovereignty →](operational-sovereignty.html)
-- [Review Azure Local (Sovereign Private Cloud) →](azure-local-overview.html)
+- [Review Digital Sovereignty →](digital-sovereignty)
+- [Review Operational Sovereignty →](operational-sovereignty)
+- [Review Azure Local (Sovereign Private Cloud) →](azure-local-overview)
 
 ---
 
@@ -247,7 +247,7 @@ Azure Arc consists of three main service categories:
 - Centralized compliance reporting
 - Reduced operational complexity
 
-**[Learn More →](azure-arc-servers.html)**
+**[Learn More →](azure-arc-servers)**
 
 ---
 
@@ -277,7 +277,7 @@ Azure Arc consists of three main service categories:
 - Cloud-native GitOps workflows
 - Unified security and compliance
 
-**[Learn More →](azure-arc-kubernetes.html)**
+**[Learn More →](azure-arc-kubernetes)**
 
 ---
 
@@ -303,7 +303,7 @@ Azure Arc consists of three main service categories:
 - Reduced database administration overhead
 - Data stays on-premises (sovereignty)
 
-**[Learn More →](azure-arc-data-services.html)**
+**[Learn More →](azure-arc-data-services)**
 
 ---
 
@@ -473,7 +473,7 @@ Azure Arc consists of three main service categories:
 - Strategic governance from Azure
 - Best of both worlds
 
-**[Review Operational Sovereignty Concepts →](operational-sovereignty.html)**
+**[Review Operational Sovereignty Concepts →](operational-sovereignty)**
 
 ---
 
@@ -856,28 +856,28 @@ Azure Arc consists of three main service categories:
 
 Ready to explore Azure Arc in depth? Continue with these topics:
 
-### [Arc-Enabled Servers Deep Dive →](azure-arc-servers.html)
+### [Arc-Enabled Servers Deep Dive →](azure-arc-servers)
 Learn how to manage Windows and Linux servers with Azure Arc, including onboarding, policy application, and monitoring.
 
 **Duration:** 20-25 minutes
 
 ---
 
-### [Arc-Enabled Kubernetes Deep Dive →](azure-arc-kubernetes.html)
+### [Arc-Enabled Kubernetes Deep Dive →](azure-arc-kubernetes)
 Explore how to connect Kubernetes clusters to Azure Arc and implement GitOps-based application deployment.
 
 **Duration:** 20-25 minutes
 
 ---
 
-### [Arc Data Services Overview →](azure-arc-data-services.html)
+### [Arc Data Services Overview →](azure-arc-data-services)
 Understand how to deploy Azure SQL Managed Instance and PostgreSQL on any infrastructure with Arc Data Services.
 
 **Duration:** 20-25 minutes
 
 ---
 
-### [Azure Arc Knowledge Check Quiz →](azure-arc-quiz.html)
+### [Azure Arc Knowledge Check Quiz →](azure-arc-quiz)
 Test your understanding with 12 questions covering all aspects of Azure Arc.
 
 **Duration:** 15-20 minutes

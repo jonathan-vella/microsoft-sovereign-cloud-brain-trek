@@ -574,10 +574,10 @@ Based on requirements:
 
 ## Next Steps
 
-- **[Take the Knowledge Check Quiz →](knowledge-check.html)**
-- **[Review Data Residency Concepts →](data-residency-concepts.html)**
-- **[Explore Azure Local Overview →](azure-local-overview.html)**
-- **[Return to Digital Sovereignty Overview →](digital-sovereignty.html)**
+- **[Take the Knowledge Check Quiz →](knowledge-check)**
+- **[Review Data Residency Concepts →](data-residency-concepts)**
+- **[Explore Azure Local Overview →](azure-local-overview)**
+- **[Return to Digital Sovereignty Overview →](digital-sovereignty)**
 
 ---
 

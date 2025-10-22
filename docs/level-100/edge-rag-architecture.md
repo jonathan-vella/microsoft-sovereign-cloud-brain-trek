@@ -541,10 +541,10 @@ When deployed in Connected Mode on Azure Local:
 
 ## Next Steps
 
-- [Edge RAG Use Cases →](edge-rag-use-cases.html)
-- [RAG Fundamentals →](rag-fundamentals.html)
-- [Edge RAG Quiz →](edge-rag-quiz.html)
-- [Back to Edge RAG Overview →](edge-rag-concepts.html)
+- [Edge RAG Use Cases →](edge-rag-use-cases)
+- [RAG Fundamentals →](rag-fundamentals)
+- [Edge RAG Quiz →](edge-rag-quiz)
+- [Back to Edge RAG Overview →](edge-rag-concepts)
 
 ---
 

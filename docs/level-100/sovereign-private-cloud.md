@@ -800,9 +800,9 @@ Dell PowerEdge R750
 
 ### Continue Learning
 
-- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models.html)**
-- **[→ Next: National Partner Clouds](national-partner-clouds.html)**
-- **[Explore: Operational Sovereignty Concepts](operational-sovereignty.html)**
+- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models)**
+- **[→ Next: National Partner Clouds](national-partner-clouds)**
+- **[Explore: Operational Sovereignty Concepts](operational-sovereignty)**
 
 ### Hands-On Learning
 

@@ -24,7 +24,7 @@ Azure Arc-enabled Data Services bring Azure database services to any infrastruct
 - **Azure SQL Managed Instance:** Fully compatible SQL Server with PaaS benefits
 - **PostgreSQL Hyperscale:** Scalable PostgreSQL with Citus extension
 
-**[← Back to Azure Arc Introduction](azure-arc-intro.html)**
+**[← Back to Azure Arc Introduction](azure-arc-intro)**
 
 ---
 
@@ -435,10 +435,10 @@ Azure Arc-enabled Data Services bring Azure database services to any infrastruct
 
 ## Next Steps
 
-- [Arc Servers →](azure-arc-servers.html)
-- [Arc Kubernetes →](azure-arc-kubernetes.html)
-- [Azure Arc Quiz →](azure-arc-quiz.html)
-- [Back to Arc Overview →](azure-arc-intro.html)
+- [Arc Servers →](azure-arc-servers)
+- [Arc Kubernetes →](azure-arc-kubernetes)
+- [Azure Arc Quiz →](azure-arc-quiz)
+- [Back to Arc Overview →](azure-arc-intro)
 
 **External Resources:**
 - [Azure Arc-enabled data services docs](https://learn.microsoft.com/en-us/azure/azure-arc/data/)

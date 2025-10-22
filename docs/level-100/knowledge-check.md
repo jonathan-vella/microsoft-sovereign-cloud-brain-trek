@@ -199,7 +199,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** Digital sovereignty is broader than just data location. It encompasses control, governance, and independence over digital infrastructure and data within specific jurisdictional boundaries.
 
-**Reference:** [Digital Sovereignty Overview](digital-sovereignty.html)
+**Reference:** [Digital Sovereignty Overview](digital-sovereignty)
 
 ---
 
@@ -208,7 +208,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** Microsoft offers three sovereign cloud models: Sovereign Public Cloud (enhanced Azure with sovereignty controls), Sovereign Private Cloud (dedicated infrastructure), and National Partner Clouds (country-specific clouds operated by local partners). There is no "Sovereign Regional Cloud" model.
 
-**Reference:** [Digital Sovereignty Overview](digital-sovereignty.html#sovereignty-spectrum)
+**Reference:** [Digital Sovereignty Overview](digital-sovereignty#sovereignty-spectrum)
 
 ---
 
@@ -217,7 +217,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** Data residency focuses specifically on the geographic location where data is stored. Data sovereignty is broader, encompassing residency requirements plus who can access the data, how it's governed, operational controls, and legal jurisdiction.
 
-**Reference:** [Data Residency Concepts](data-residency-concepts.html#key-definitions)
+**Reference:** [Data Residency Concepts](data-residency-concepts#key-definitions)
 
 ---
 
@@ -226,7 +226,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** GDPR does not require data to be stored in the EU, but it does regulate how personal data can be transferred outside the EU/EEA. Transfers are allowed with appropriate safeguards such as adequacy decisions or Standard Contractual Clauses.
 
-**Reference:** [Regulatory Overview - GDPR](regulatory-overview.html#gdpr-general-data-protection-regulation)
+**Reference:** [Regulatory Overview - GDPR](regulatory-overview#gdpr-general-data-protection-regulation)
 
 ---
 
@@ -235,7 +235,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** The EU Data Boundary commitment ensures customer data is stored and processed within the EU. There are some documented exceptions (like customer-initiated transfers or certain support scenarios with Customer Lockbox), but these are transparent and often under customer control.
 
-**Reference:** [European Digital Commitments](european-commitments.html#eu-data-boundary-for-the-microsoft-cloud)
+**Reference:** [European Digital Commitments](european-commitments#eu-data-boundary-for-the-microsoft-cloud)
 
 ---
 
@@ -247,7 +247,7 @@ D) It eliminated the need for Standard Contractual Clauses
 - **Moderate:** Internal government information (most common)
 - **High:** National security information (most stringent requirements)
 
-**Reference:** [Regulatory Overview - FedRAMP](regulatory-overview.html#fedramp-federal-risk-and-authorization-management-program)
+**Reference:** [Regulatory Overview - FedRAMP](regulatory-overview#fedramp-federal-risk-and-authorization-management-program)
 
 ---
 
@@ -256,7 +256,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** Microsoft Azure operates more than 60 regions globally, more than any other major cloud provider. This extensive footprint provides customers with more options for data residency and low-latency access.
 
-**Reference:** [Data Residency Concepts](data-residency-concepts.html#azure-regions-and-data-residency)
+**Reference:** [Data Residency Concepts](data-residency-concepts#azure-regions-and-data-residency)
 
 ---
 
@@ -265,7 +265,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** Operational sovereignty focuses on control over operations: who can access systems, where personnel are located, operational independence, and the ability to maintain control under various circumstances.
 
-**Reference:** [Operational Sovereignty](operational-sovereignty.html#what-is-operational-sovereignty)
+**Reference:** [Operational Sovereignty](operational-sovereignty#what-is-operational-sovereignty)
 
 ---
 
@@ -276,7 +276,7 @@ D) It eliminated the need for Standard Contractual Clauses
 - **Connected Mode:** Managed via Azure portal and Azure Arc (cloud control plane)
 - **Disconnected Mode:** Managed via local portal/Windows Admin Center (local control plane)
 
-**Reference:** [Operational Sovereignty - Control Plane](operational-sovereignty.html#control-plane-connected-vs-disconnected)
+**Reference:** [Operational Sovereignty - Control Plane](operational-sovereignty#control-plane-connected-vs-disconnected)
 
 ---
 
@@ -285,7 +285,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** Customer Lockbox provides customers with explicit control over Microsoft support access to their data. Support personnel can only access customer data after the customer approves the request.
 
-**Reference:** [Operational Sovereignty - Access Controls](operational-sovereignty.html#access-control-mechanisms)
+**Reference:** [Operational Sovereignty - Access Controls](operational-sovereignty#access-control-mechanisms)
 
 ---
 
@@ -294,7 +294,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** Standard Contractual Clauses (SCCs) are EU Commission-approved contract templates that provide appropriate safeguards for international data transfers when transferring personal data from the EU to countries that don't have an adequacy decision.
 
-**Reference:** [Data Residency Concepts - Data Transfers](data-residency-concepts.html#legal-mechanisms-for-transfers)
+**Reference:** [Data Residency Concepts - Data Transfers](data-residency-concepts#legal-mechanisms-for-transfers)
 
 ---
 
@@ -303,7 +303,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** HIPAA requires that "Business Associates" (including cloud service providers) handling Protected Health Information (PHI) on behalf of covered entities sign a Business Associate Agreement. Microsoft provides BAAs for Azure services used with PHI.
 
-**Reference:** [Regulatory Overview - HIPAA](regulatory-overview.html#hipaa-health-insurance-portability-and-accountability-act)
+**Reference:** [Regulatory Overview - HIPAA](regulatory-overview#hipaa-health-insurance-portability-and-accountability-act)
 
 ---
 
@@ -312,7 +312,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** Azure Arc extends the Azure control plane to enable unified management of resources regardless of where they're located—on-premises, at the edge, or in other clouds.
 
-**Reference:** [Introduction - Azure Arc](../introduction.html#azure-arc)
+**Reference:** [Introduction - Azure Arc](../introduction#azure-arc)
 
 ---
 
@@ -321,7 +321,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** Air-gapped classified defense systems require the maximum level of sovereignty: complete operational independence, no external connectivity, local control plane, US persons-only access, and physical isolation. This is Level 5 on the sovereignty spectrum.
 
-**Reference:** [Operational Sovereignty - Spectrum](operational-sovereignty.html#level-5-air-gapped)
+**Reference:** [Operational Sovereignty - Spectrum](operational-sovereignty#level-5-air-gapped)
 
 ---
 
@@ -330,7 +330,7 @@ D) It eliminated the need for Standard Contractual Clauses
 
 **Explanation:** The Schrems II decision (July 2020) by the Court of Justice of the European Union invalidated the EU-US Privacy Shield framework. While Standard Contractual Clauses remain valid, the decision increased requirements for assessing and mitigating risks in international data transfers, particularly to the US.
 
-**Reference:** [Data Residency Concepts - Schrems II](data-residency-concepts.html#schrems-ii-decision)
+**Reference:** [Data Residency Concepts - Schrems II](data-residency-concepts#schrems-ii-decision)
 
 </details>
 
@@ -354,15 +354,15 @@ Review the explanations for any questions you answered incorrectly. Each answer 
 
 ### Common Areas for Review:
 
-**If you missed questions 1-3:** Review [Digital Sovereignty fundamentals](digital-sovereignty.html)
+**If you missed questions 1-3:** Review [Digital Sovereignty fundamentals](digital-sovereignty)
 
-**If you missed questions 4-7:** Review [Regulatory Overview](regulatory-overview.html) and [European Commitments](european-commitments.html)
+**If you missed questions 4-7:** Review [Regulatory Overview](regulatory-overview) and [European Commitments](european-commitments)
 
-**If you missed questions 8-10:** Review [Operational Sovereignty](operational-sovereignty.html)
+**If you missed questions 8-10:** Review [Operational Sovereignty](operational-sovereignty)
 
-**If you missed questions 11-12:** Review [Regulatory Overview](regulatory-overview.html)
+**If you missed questions 11-12:** Review [Regulatory Overview](regulatory-overview)
 
-**If you missed questions 13-15:** Review [Data Residency Concepts](data-residency-concepts.html)
+**If you missed questions 13-15:** Review [Data Residency Concepts](data-residency-concepts)
 
 ---
 
@@ -431,4 +431,4 @@ Want to test yourself again? Refresh the page and try to answer all questions fr
 
 ---
 
-**[Return to Level 100 Overview](README.html)** | **[Proceed to Level 200](../level-200/)**
+**[Return to Level 100 Overview](README)** | **[Proceed to Level 200](../level-200/)**

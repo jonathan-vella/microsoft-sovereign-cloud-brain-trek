@@ -406,10 +406,10 @@ This overview provides a high-level introduction to the major regulatory framewo
 
 ## Next Steps
 
-- **[Explore Data Residency Concepts →](data-residency-concepts.html)**
-- **[Learn about Operational Sovereignty →](operational-sovereignty.html)**
-- **[Review European Digital Commitments →](european-commitments.html)**
-- **[Return to Digital Sovereignty Overview →](digital-sovereignty.html)**
+- **[Explore Data Residency Concepts →](data-residency-concepts)**
+- **[Learn about Operational Sovereignty →](operational-sovereignty)**
+- **[Review European Digital Commitments →](european-commitments)**
+- **[Return to Digital Sovereignty Overview →](digital-sovereignty)**
 
 ---
 

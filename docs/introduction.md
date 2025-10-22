@@ -356,7 +356,7 @@ Each level has clear success metrics to validate learning outcomes:
 
 Ready to begin? Start your learning journey:
 
-1. **[Review Level 100 Prerequisites](level-100/prerequisites.html)**
+1. **[Review Level 100 Prerequisites](level-100/prerequisites)**
 2. **[Begin Level 100: Foundational Concepts](level-100/)**
 3. **[Explore Additional Resources](resources/)**
 

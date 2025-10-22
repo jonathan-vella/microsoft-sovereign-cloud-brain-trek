@@ -77,4 +77,4 @@ Before escalating, gather:
 
 ---
 
-**See also:** [Troubleshooting Tools](troubleshooting-tools.html) | [Common Issues](troubleshooting-common-issues.html)
+**See also:** [Troubleshooting Tools](troubleshooting-tools) | [Common Issues](troubleshooting-common-issues)

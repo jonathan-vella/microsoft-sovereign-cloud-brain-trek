@@ -41,10 +41,10 @@ Master the Zero Trust security model and its application to sovereign cloud envi
 
 ## Table of Contents
 
-1. **Zero Trust Principles** → [zero-trust.md](zero-trust.html)
-2. **Implementation Architecture** → [zero-trust-architecture.md](zero-trust-architecture.html)
-3. **Monitoring & Compliance** → [zero-trust-monitoring.md](zero-trust-monitoring.html)
-4. **Hands-On Lab** → [zero-trust-lab.md](zero-trust-lab.html)
+1. **Zero Trust Principles** → [zero-trust.md](zero-trust)
+2. **Implementation Architecture** → [zero-trust-architecture.md](zero-trust-architecture)
+3. **Monitoring & Compliance** → [zero-trust-monitoring.md](zero-trust-monitoring)
+4. **Hands-On Lab** → [zero-trust-lab.md](zero-trust-lab)
 
 ---
 
@@ -216,19 +216,19 @@ Secure cloud infrastructure, container orchestration, and compute resources.
 
 ## Recommended Learning Path
 
-1. **Start:** [Zero Trust Principles Page](zero-trust.html) - Understand core concepts
-2. **Deep Dive:** [Implementation Architecture](zero-trust-architecture.html) - See how components work
-3. **Operations:** [Monitoring & Compliance](zero-trust-monitoring.html) - Learn operational procedures
-4. **Practice:** [Hands-On Lab](zero-trust-lab.html) - Implement Zero Trust controls
+1. **Start:** [Zero Trust Principles Page](zero-trust) - Understand core concepts
+2. **Deep Dive:** [Implementation Architecture](zero-trust-architecture) - See how components work
+3. **Operations:** [Monitoring & Compliance](zero-trust-monitoring) - Learn operational procedures
+4. **Practice:** [Hands-On Lab](zero-trust-lab) - Implement Zero Trust controls
 
 ---
 
 ## Next Steps
 
-Ready to begin? Start with [Zero Trust Principles →](zero-trust.html)
+Ready to begin? Start with [Zero Trust Principles →](zero-trust)
 
 ---
 
 **Module Duration:** 6-8 hours  
 **Completion Time:** ~1-1.5 weeks at 6 hours/week  
-**Recommended Prerequisites:** Complete before [Module 2: Azure Local at Scale - Connected](../azure-local-advanced-connected.html)
+**Recommended Prerequisites:** Complete before [Module 2: Azure Local at Scale - Connected](../azure-local-advanced-connected)

@@ -28,7 +28,7 @@ Azure Arc-enabled Kubernetes allows you to attach and configure Kubernetes clust
 - Deploy Azure services to clusters (App Services, Event Grid, etc.)
 - Implement security best practices at scale
 
-**[← Back to Azure Arc Introduction](azure-arc-intro.html)**
+**[← Back to Azure Arc Introduction](azure-arc-intro)**
 
 ---
 
@@ -359,10 +359,10 @@ All clusters auto-sync from Git, ensuring consistent deployment patterns.
 
 ## Next Steps
 
-- [Arc Data Services →](azure-arc-data-services.html)
-- [Arc Servers →](azure-arc-servers.html)
-- [Azure Arc Quiz →](azure-arc-quiz.html)
-- [Back to Arc Overview →](azure-arc-intro.html)
+- [Arc Data Services →](azure-arc-data-services)
+- [Arc Servers →](azure-arc-servers)
+- [Azure Arc Quiz →](azure-arc-quiz)
+- [Back to Arc Overview →](azure-arc-intro)
 
 **External Resources:**
 - [Azure Arc-enabled Kubernetes docs](https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/)

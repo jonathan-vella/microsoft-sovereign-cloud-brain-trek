@@ -39,9 +39,9 @@ Master advanced troubleshooting techniques, diagnostic tools, and system optimiz
 
 ## Core Topics
 
-1. **Diagnostic Tools & Procedures** → [troubleshooting-tools.md](troubleshooting-tools.html)
-2. **Common Issues & Resolution** → [troubleshooting-common-issues.md](troubleshooting-common-issues.html)
-3. **Escalation & Advanced Support** → [troubleshooting-escalation.md](troubleshooting-escalation.html)
+1. **Diagnostic Tools & Procedures** → [troubleshooting-tools.md](troubleshooting-tools)
+2. **Common Issues & Resolution** → [troubleshooting-common-issues.md](troubleshooting-common-issues)
+3. **Escalation & Advanced Support** → [troubleshooting-escalation.md](troubleshooting-escalation)
 
 ---
 
@@ -103,10 +103,10 @@ Master advanced troubleshooting techniques, diagnostic tools, and system optimiz
 
 ## Recommended Learning Path
 
-1. Start: [Tools & Procedures](troubleshooting-tools.html)
-2. Cases: [Common Issues](troubleshooting-common-issues.html)
-3. Support: [Escalation Procedures](troubleshooting-escalation.html)
-4. Reference: [Decision Tree](troubleshooting-tools.html#decision-tree)
+1. Start: [Tools & Procedures](troubleshooting-tools)
+2. Cases: [Common Issues](troubleshooting-common-issues)
+3. Support: [Escalation Procedures](troubleshooting-escalation)
+4. Reference: [Decision Tree](troubleshooting-tools#decision-tree)
 
 ---
 
