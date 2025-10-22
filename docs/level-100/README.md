@@ -60,16 +60,16 @@ Before starting Level 100, ensure you have:
 **Duration:** 1-2 hours
 
 📚 **Main Content:**
-- [Digital Sovereignty Overview](digital-sovereignty) - Core concepts, principles, and customer scenarios
+- [Digital Sovereignty Overview](/level-100/digital-sovereignty) - Core concepts, principles, and customer scenarios
 
 **Deep Dive Topics:**
-- [Microsoft's European Digital Commitments](european-commitments) - The 6 commitments and EU Data Boundary
-- [Regulatory Requirements Overview](regulatory-overview) - GDPR, FedRAMP, HIPAA, PCI DSS, ITAR
-- [Data Residency vs. Sovereignty](data-residency-concepts) - Definitions and Azure implementation
-- [Operational Sovereignty](operational-sovereignty) - Control plane concepts and Azure Local modes
+- [Microsoft's European Digital Commitments](/level-100/european-commitments) - The 6 commitments and EU Data Boundary
+- [Regulatory Requirements Overview](/level-100/regulatory-overview) - GDPR, FedRAMP, HIPAA, PCI DSS, ITAR
+- [Data Residency vs. Sovereignty](/level-100/data-residency-concepts) - Definitions and Azure implementation
+- [Operational Sovereignty](/level-100/operational-sovereignty) - Control plane concepts and Azure Local modes
 
 ✅ **Assessment:**
-- [Knowledge Check Quiz](knowledge-check) - 15 questions to test your understanding
+- [Knowledge Check Quiz](/level-100/knowledge-check) - 15 questions to test your understanding
 
 **Key Concepts:**
 - Data residency and localization
@@ -83,15 +83,15 @@ Before starting Level 100, ensure you have:
 **Duration:** 2-3 hours
 
 📚 **Main Content:**
-- [Microsoft Sovereign Cloud Models Overview](sovereign-cloud-models) - Three models, comparison, and decision framework
+- [Microsoft Sovereign Cloud Models Overview](/level-100/sovereign-cloud-models) - Three models, comparison, and decision framework
 
 **Deep Dive Topics:**
-- [Sovereign Public Cloud](sovereign-public-cloud) - Azure with enhanced sovereignty controls and Microsoft Cloud for Sovereignty
-- [Sovereign Private Cloud](sovereign-private-cloud) - Azure Local (Connected and Disconnected modes) for dedicated infrastructure
-- [National Partner Clouds](national-partner-clouds) - Azure Government, Azure China, and partner-operated sovereign clouds
+- [Sovereign Public Cloud](/level-100/sovereign-public-cloud) - Azure with enhanced sovereignty controls and Microsoft Cloud for Sovereignty
+- [Sovereign Private Cloud](/level-100/sovereign-private-cloud) - Azure Local (Connected and Disconnected modes) for dedicated infrastructure
+- [National Partner Clouds](/level-100/national-partner-clouds) - Azure Government, Azure China, and partner-operated sovereign clouds
 
 ✅ **Assessment:**
-- [Cloud Models Knowledge Check](cloud-models-quiz) - 15 questions testing model selection and technical understanding
+- [Cloud Models Knowledge Check](/level-100/cloud-models-quiz) - 15 questions testing model selection and technical understanding
 
 **Key Concepts:**
 - Model differentiation (Public, Private, Partner)
@@ -106,16 +106,16 @@ Before starting Level 100, ensure you have:
 **Duration:** 2-3 hours
 
 📚 **Main Content:**
-- [Azure Local Overview](azure-local-overview) - Architecture, deployment modes, customer scenarios
+- [Azure Local Overview](/level-100/azure-local-overview) - Architecture, deployment modes, customer scenarios
 
 **Deep Dive Topics:**
-- [Azure Local Architecture Deep Dive](azure-local-architecture) - Hardware, networking, security layers
-- [Connected Mode Operations](azure-local-connected-mode) - Azure integration, monitoring, update management
-- [Disconnected Mode Operations](azure-local-disconnected-mode) - Air-gapped deployment, periodic sync
-- [Hardware Requirements & Planning](azure-local-hardware) - Validated hardware, sizing, deployment checklist
+- [Azure Local Architecture Deep Dive](/level-100/azure-local-architecture) - Hardware, networking, security layers
+- [Connected Mode Operations](/level-100/azure-local-connected-mode) - Azure integration, monitoring, update management
+- [Disconnected Mode Operations](/level-100/azure-local-disconnected-mode) - Air-gapped deployment, periodic sync
+- [Hardware Requirements & Planning](/level-100/azure-local-hardware) - Validated hardware, sizing, deployment checklist
 
 ✅ **Assessment:**
-- [Azure Local Knowledge Check](azure-local-quiz) - 15 questions testing deployment modes and technical concepts
+- [Azure Local Knowledge Check](/level-100/azure-local-quiz) - 15 questions testing deployment modes and technical concepts
 
 **Key Concepts:**
 - Connected vs. Disconnected deployment modes
@@ -132,15 +132,15 @@ Before starting Level 100, ensure you have:
 **Duration:** 1.5-2 hours
 
 📚 **Main Content:**
-- [Azure Arc Introduction](azure-arc-intro) - Hybrid management, multi-cloud governance, three Arc services
+- [Azure Arc Introduction](/level-100/azure-arc-intro) - Hybrid management, multi-cloud governance, three Arc services
 
 **Deep Dive Topics:**
-- [Arc-enabled Servers](azure-arc-servers) - Windows/Linux management, policy, monitoring
-- [Arc-enabled Kubernetes](azure-arc-kubernetes) - GitOps, multi-cluster management, policy enforcement
-- [Arc-enabled Data Services](azure-arc-data-services) - SQL MI and PostgreSQL on any infrastructure
+- [Arc-enabled Servers](/level-100/azure-arc-servers) - Windows/Linux management, policy, monitoring
+- [Arc-enabled Kubernetes](/level-100/azure-arc-kubernetes) - GitOps, multi-cluster management, policy enforcement
+- [Arc-enabled Data Services](/level-100/azure-arc-data-services) - SQL MI and PostgreSQL on any infrastructure
 
 ✅ **Assessment:**
-- [Azure Arc Knowledge Check](azure-arc-quiz) - 12 questions covering all Arc services
+- [Azure Arc Knowledge Check](/level-100/azure-arc-quiz) - 12 questions covering all Arc services
 
 **Key Concepts:**
 - Unified control plane for hybrid/multi-cloud
@@ -157,15 +157,15 @@ Before starting Level 100, ensure you have:
 **Duration:** 2-2.5 hours
 
 📚 **Main Content:**
-- [Edge RAG Concepts](edge-rag-concepts) - RAG fundamentals, edge deployment benefits, customer scenarios
+- [Edge RAG Concepts](/level-100/edge-rag-concepts) - RAG fundamentals, edge deployment benefits, customer scenarios
 
 **Deep Dive Topics:**
-- [RAG Fundamentals](rag-fundamentals) - Embeddings, vector databases, LLM limitations
-- [Edge RAG Architecture](edge-rag-architecture) - Local LLM deployment, ingestion pipeline, query processing
-- [Edge RAG Use Cases and Implementation](edge-rag-use-cases) - Industry scenarios, best practices, ROI
+- [RAG Fundamentals](/level-100/rag-fundamentals) - Embeddings, vector databases, LLM limitations
+- [Edge RAG Architecture](/level-100/edge-rag-architecture) - Local LLM deployment, ingestion pipeline, query processing
+- [Edge RAG Use Cases and Implementation](/level-100/edge-rag-use-cases) - Industry scenarios, best practices, ROI
 
 ✅ **Assessment:**
-- [Edge RAG Knowledge Check](edge-rag-quiz) - 15 questions testing RAG concepts and implementation
+- [Edge RAG Knowledge Check](/level-100/edge-rag-quiz) - 15 questions testing RAG concepts and implementation
 
 **Key Concepts:**
 - RAG (Retrieval-Augmented Generation) basics
@@ -243,7 +243,7 @@ Test your understanding with these questions:
 4. What is Retrieval-Augmented Generation (RAG)?
 5. Why is data residency important for sovereign workloads?
 
-**[Take the Level 100 Quiz →](knowledge-check)**
+**[Take the Level 100 Quiz →](/level-100/knowledge-check)**
 
 ---
 
