@@ -18,6 +18,7 @@ author:
   email: jonathan@microsoft.com
 
 # Build Settings
+source: docs
 markdown: kramdown
 kramdown:
   input: GFM
