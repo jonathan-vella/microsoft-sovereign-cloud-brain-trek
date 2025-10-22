@@ -15,7 +15,7 @@ Master Sovereign Cloud, Azure Local, and Edge AI Technologies
 A comprehensive learning journey for architects and solutions professionals
 {: .fs-6 .fw-300 }
 
-[Get Started]({{ site.baseurl }}{% link docs/introduction.md %}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Get Started]({{ site.baseurl }}{% link introduction.md %}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View on GitHub](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
@@ -31,21 +31,21 @@ This skilling plan provides a comprehensive, structured approach to mastering Mi
     <h4>🎯 Level 100: Foundation</h4>
     <p>Build core understanding of concepts, terminology, and value propositions</p>
     <p><strong>Duration:</strong> 2-4 weeks</p>
-    <a href="{{ site.baseurl }}{% link docs/level-100/README.md %}" class="btn btn-outline">Start Level 100</a>
+    <a href="{{ site.baseurl }}{% link level-100/README.md %}" class="btn btn-outline">Start Level 100</a>
   </div>
   
   <div class="col-md-4">
     <h4>🏗️ Level 200: Intermediate</h4>
     <p>Design solutions, plan deployments, and address customer requirements</p>
     <p><strong>Duration:</strong> 4-6 weeks</p>
-    <a href="{{ site.baseurl }}{% link docs/level-200/README.md %}" class="btn btn-outline">Start Level 200</a>
+    <a href="{{ site.baseurl }}{% link level-200/README.md %}" class="btn btn-outline">Start Level 200</a>
   </div>
   
   <div class="col-md-4">
     <h4>🚀 Level 300: Advanced</h4>
     <p>Lead complex deployments and provide expert guidance</p>
     <p><strong>Duration:</strong> 8-12 weeks</p>
-    <a href="{{ site.baseurl }}{% link docs/level-300/README.md %}" class="btn btn-outline">Start Level 300</a>
+    <a href="{{ site.baseurl }}{% link level-300/README.md %}" class="btn btn-outline">Start Level 300</a>
   </div>
 </div>
 
@@ -109,19 +109,19 @@ Track your progress through each level with clear completion criteria:
 
 Ready to begin your learning journey?
 
-1. **Read the [Introduction]({{ site.baseurl }}{% link docs/introduction.md %})** to understand the full program
+1. **Read the [Introduction]({{ site.baseurl }}{% link introduction.md %})** to understand the full program
 2. **Review Prerequisites** for Level 100
-3. **Start with [Level 100 - Foundational Concepts]({{ site.baseurl }}{% link docs/level-100/README.md %})**
+3. **Start with [Level 100 - Foundational Concepts]({{ site.baseurl }}{% link level-100/README.md %})**
 4. **Track your progress** using the checklists in each module
 
 ---
 
 ## Quick Links
 
-- [Learning Path Overview]({{ site.baseurl }}{% link docs/introduction.md %})
-- [Level 100: Foundation]({{ site.baseurl }}{% link docs/level-100/README.md %})
-- [Level 200: Intermediate]({{ site.baseurl }}{% link docs/level-200/README.md %})
-- [Level 300: Advanced]({{ site.baseurl }}{% link docs/level-300/README.md %})
+- [Learning Path Overview]({{ site.baseurl }}{% link introduction.md %})
+- [Level 100: Foundation]({{ site.baseurl }}{% link level-100/README.md %})
+- [Level 200: Intermediate]({{ site.baseurl }}{% link level-200/README.md %})
+- [Level 300: Advanced]({{ site.baseurl }}{% link level-300/README.md %})
 - [Contributing Guidelines](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/blob/main/CONTRIBUTING.md)
 
 ---

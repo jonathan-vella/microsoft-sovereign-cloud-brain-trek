@@ -164,7 +164,7 @@ The skilling plan is divided into three progressive levels, each building upon t
 
 ### 🎯 Level 100: Foundational Concepts
 
-**[Start Level 100 →]({{ site.baseurl }}{% link docs/level-100/README.md %})**
+**[Start Level 100 →]({{ site.baseurl }}{% link level-100/README.md %})**
 
 **Goal:** Build a solid understanding of core concepts, terminology, and value propositions.
 
@@ -184,7 +184,7 @@ The skilling plan is divided into three progressive levels, each building upon t
 
 ### 🏗️ Level 200: Intermediate Skills
 
-**[Start Level 200 →]({{ site.baseurl }}{% link docs/level-200/README.md %})**
+**[Start Level 200 →]({{ site.baseurl }}{% link level-200/README.md %})**
 
 **Goal:** Develop the ability to design solutions, plan deployments, and address customer-specific requirements.
 
@@ -204,7 +204,7 @@ The skilling plan is divided into three progressive levels, each building upon t
 
 ### 🚀 Level 300: Advanced Expertise
 
-**[Start Level 300 →]({{ site.baseurl }}{% link docs/level-300/README.md %})**
+**[Start Level 300 →]({{ site.baseurl }}{% link level-300/README.md %})**
 
 **Goal:** Achieve expert-level proficiency to lead complex deployments, manage production environments, and drive strategic engagements.
 
