@@ -8,6 +8,12 @@ nav_order: 3
 # Lab 1: Implement Zero Trust Security Controls
 {: .no_toc }
 
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
 ## Overview
 
 In this hands-on lab, you will implement Zero Trust security controls in a sovereign cloud environment. You will configure identity-based access controls, device compliance policies, conditional access rules, and set up monitoring for a production-like deployment.

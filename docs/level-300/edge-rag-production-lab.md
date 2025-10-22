@@ -7,6 +7,12 @@ nav_order: 4
 
 # Lab: Production Edge RAG Deployment
 
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
 ## Lab Scenario
 
 **Company:** IntelliData Systems  

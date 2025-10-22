@@ -7,6 +7,12 @@ nav_order: 3
 
 # Lab: Air-Gapped Azure Local Deployment
 
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
 ## Lab Scenario
 
 **Company:** SecureGov Systems  

@@ -124,6 +124,11 @@ Before starting Level 300, ensure you have:
 
 ### Lab 1: Zero Trust Implementation
 
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026
+
 **Objective:** Implement Zero Trust security controls for a sovereign environment
 
 **Prerequisites:**
@@ -132,9 +137,14 @@ Before starting Level 300, ensure you have:
 
 **Estimated Time:** 4-6 hours
 
-**[Lab Instructions →](labs/lab-01-zero-trust)**
+**[Lab Instructions →]({{ site.baseurl }}{% link level-300/zero-trust-lab.md %})**
 
 ### Lab 2: Air-Gapped Azure Local Deployment
+
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026
 
 **Objective:** Configure a complete air-gapped deployment with certificate management
 
@@ -144,9 +154,14 @@ Before starting Level 300, ensure you have:
 
 **Estimated Time:** 8-10 hours
 
-**[Lab Instructions →](labs/lab-02-air-gapped)**
+**[Lab Instructions →]({{ site.baseurl }}{% link level-300/azure-local-disconnected-lab.md %})**
 
 ### Lab 3: Production Edge RAG with Custom Models
+
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026
 
 **Objective:** Deploy and optimize Edge RAG with custom language models
 
@@ -156,7 +171,7 @@ Before starting Level 300, ensure you have:
 
 **Estimated Time:** 10-12 hours
 
-**[Lab Instructions →](labs/lab-03-edge-rag-production)**
+**[Lab Instructions →]({{ site.baseurl }}{% link level-300/edge-rag-production-lab.md %})**
 
 ---
 
