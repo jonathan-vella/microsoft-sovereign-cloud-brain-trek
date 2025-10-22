@@ -3,6 +3,42 @@
 
 ## [Unreleased] - 2025-10-22
 
+### Added - GitHub Pages Deployment Configuration
+
+#### Jekyll Configuration Complete
+- **Created `_config.yml`** - Complete Jekyll configuration for Just the Docs theme
+  - Site metadata and branding
+  - Just the Docs theme v0.10.0 configured
+  - Search functionality enabled
+  - Mermaid diagram support
+  - Code copy button
+  - Navigation structure for 3 learning levels
+  - SEO and sitemap plugins
+- **Created `Gemfile`** - Ruby dependencies for Jekyll build
+  - Jekyll 4.3.4
+  - GitHub Pages compatible gems
+  - Just the Docs theme
+  - Essential plugins (feed, SEO, sitemap, metadata)
+- **Created `.github/workflows/jekyll-deploy.yml`** - Automated deployment workflow
+  - Builds on push to main branch
+  - Deploys to GitHub Pages automatically
+  - Manual trigger option available
+- **Updated `.gitignore`** - Added Ruby/Jekyll build artifacts
+
+#### Theme Selection: Just the Docs ⭐
+- **Chosen for:** Documentation-focused design, multi-level navigation, built-in search
+- **Key features:** Sidebar navigation, ToC generation, breadcrumbs, dark mode, Mermaid support
+- **Perfect fit for:** 16 modules across 3 progressive learning levels
+
+#### Next Steps for Deployment
+1. Enable GitHub Pages in repository settings (Settings → Pages → Source: GitHub Actions)
+2. Install Ruby dependencies: `bundle install`
+3. Test locally: `bundle exec jekyll serve`
+4. Commit and push to trigger automatic deployment
+5. Site will be live at: `https://jonathan-vella.github.io/microsoft-sovereign-cloud-brain-trek/`
+
+---
+
 ### Added - Repository Automation & Contributor Management
 
 #### New Contributor Added

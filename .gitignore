@@ -15,6 +15,11 @@ _site/
 .jekyll-metadata
 .sass-cache/
 
+# Ignore Ruby/Bundler files
+vendor/
+Gemfile.lock
+.bundle/
+
 # Ignore node modules if using any npm packages
 node_modules/
 package-lock.json
@@ -23,6 +28,9 @@ package-lock.json
 *.tmp
 *.temp
 *.log
+
+# Ignore backup files created by scripts
+*.backup.*
 
 # Ignore personal notes
 notes/

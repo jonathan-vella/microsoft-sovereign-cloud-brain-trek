@@ -1,0 +1,180 @@
+# Microsoft Sovereign Cloud Brain Trek - Jekyll Configuration
+# Built: October 22, 2025
+# Theme: Just the Docs
+
+# Site Settings
+title: Microsoft Sovereign Cloud Brain Trek
+description: >-
+  Master Sovereign Cloud, Azure Local, and Edge AI Technologies.
+  A comprehensive learning journey for architects and solutions professionals.
+tagline: Master Sovereign Cloud, Azure Local, and Edge AI Technologies
+url: https://jonathan-vella.github.io
+baseurl: /microsoft-sovereign-cloud-brain-trek
+repository: jonathan-vella/microsoft-sovereign-cloud-brain-trek
+
+# Author Information
+author:
+  name: Jonathan Vella
+  email: jonathan@microsoft.com
+
+# Build Settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+  auto_ids: true
+  
+# Theme Configuration
+remote_theme: just-the-docs/just-the-docs@v0.10.0
+color_scheme: light
+
+# Just the Docs Theme Configuration
+# Navigation
+aux_links:
+  "View on GitHub": "https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek"
+  "Microsoft Sovereign Cloud": "https://www.microsoft.com/en-us/industry/sovereignty/cloud"
+
+# Footer
+footer_content: >-
+  &copy; 2025 Jonathan Vella. Licensed under the MIT License. 
+  Built with <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://just-the-docs.com/">Just the Docs</a>.
+
+# Search
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: true
+
+# Navigation Structure
+nav_sort: case_insensitive
+nav_fold: true
+
+# Heading Anchors
+heading_anchors: true
+
+# Mermaid Diagrams
+mermaid:
+  version: "10.6.1"
+
+# Code Copy Button
+enable_copy_code_button: true
+
+# Callouts (for tips, warnings, notes)
+callouts_level: quiet
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
+
+# Collections (for organizing content)
+collections:
+  level-100:
+    output: true
+    permalink: /level-100/:name
+  level-200:
+    output: true
+    permalink: /level-200/:name
+  level-300:
+    output: true
+    permalink: /level-300/:name
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "docs/level-100"
+    values:
+      layout: "default"
+      parent: "Level 100"
+      grand_parent: "Learning Paths"
+  - scope:
+      path: "docs/level-200"
+    values:
+      layout: "default"
+      parent: "Level 200"
+      grand_parent: "Learning Paths"
+  - scope:
+      path: "docs/level-300"
+    values:
+      layout: "default"
+      parent: "Level 300"
+      grand_parent: "Learning Paths"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-github-metadata
+  - jekyll-include-cache
+
+# Exclude from Build
+exclude:
+  - .git/
+  - .github/
+  - .archive/
+  - .gitignore
+  - .vscode/
+  - scripts/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - "*.backup.*"
+  - CONTRIBUTING.md
+  - CHANGELOG.md
+  - LICENSE
+  - README.md
+  - HANDOFF.md
+  - JEKYLL_PREP.md
+  - AUTOMATION.md
+  - microsoft-sovereign-cloud-brain-trek.code-workspace
+
+# Include
+include:
+  - _pages
+  - .htaccess
+
+# Sass/SCSS
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Timezone
+timezone: America/New_York
+
+# Encoding
+encoding: UTF-8
+
+# Permalink Structure
+permalink: pretty
+
+# Pagination (if needed later)
+# paginate: 10
+# paginate_path: "/blog/page:num/"
+
+# GitHub Pages Safe Mode
+safe: true
+lsi: false
+incremental: false
