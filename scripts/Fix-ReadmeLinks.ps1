@@ -5,11 +5,11 @@
     Fixes relative links in README.md files to use absolute paths.
 
 .DESCRIPTION
-    README.md files with absolute paths like /level-100/file break when there's
-    a baseurl in Jekyll (they go to domain root instead of /baseurl/level-100/file).
+    README.md files with relative paths like (file) break when there's a baseurl
+    in Jekyll (they go to domain root instead of /baseurl/level-100/file).
     
-    This script converts absolute paths to relative paths within README files.
-    Changes: [text](/level-100/file) -> [text](file)
+    This script converts relative paths to Jekyll link tags with baseurl.
+    Changes: [text](file) -> [text]({{ site.baseurl }}{% link level-100/file.md %})
 
 .EXAMPLE
     .\Fix-ReadmeLinks.ps1 -DryRun
@@ -49,20 +49,26 @@ function Fix-ReadmeLinks {
     $originalContent = $content
     $fileChanges = 0
     
-    # Pattern: [text](/level-XXX/file) - absolute paths that need to be relative
-    # These need to become relative: digital-sovereignty (no path prefix)
-    $pattern = '\]\(/' + [regex]::Escape($levelFolder) + '/([a-z0-9\-]+)\)'
+    # Pattern: [text](relative-file) - relative paths that need Jekyll link tags
+    # These need to become: {{ site.baseurl }}{% link level-XXX/file.md %}
+    $pattern = '\[([^\]]+)\]\(([a-z0-9\-]+)\)'
     $linkMatches = [regex]::Matches($content, $pattern)
     
     if ($linkMatches.Count -gt 0) {
-        Write-Verbose "  Found $($linkMatches.Count) absolute links to fix"
+        Write-Verbose "  Found $($linkMatches.Count) relative links to fix"
         
         foreach ($match in $linkMatches) {
             $fullMatch = $match.Value
-            $fileName = $match.Groups[1].Value
+            $linkText = $match.Groups[1].Value
+            $fileName = $match.Groups[2].Value
             
-            # Convert to relative path (just the filename)
-            $newLink = "]($fileName)"
+            # Skip if it looks like a URL scheme or anchor
+            if ($fileName -match '^(http|https|mailto|ftp)') {
+                continue
+            }
+            
+            # Convert to Jekyll link tag with baseurl
+            $newLink = "[$linkText]({{ site.baseurl }}{% link $levelFolder/$fileName.md %})"
             
             $content = $content.Replace($fullMatch, $newLink)
             $fileChanges++
