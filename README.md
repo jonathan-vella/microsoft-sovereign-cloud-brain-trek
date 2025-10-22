@@ -12,6 +12,7 @@ A comprehensive learning journey for architects and solutions professionals
 [![Azure Arc](https://img.shields.io/badge/Azure%20Arc-0078D4?logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/en-us/products/azure-arc/)
 [![Azure Local](https://img.shields.io/badge/Azure%20Local-0078D4?logo=microsoftazure&logoColor=white)](https://learn.microsoft.com/en-us/azure/azure-local/)
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![Claude Haiku](https://img.shields.io/badge/Claude%20Haiku-191919?logo=anthropic&logoColor=white)](https://www.anthropic.com/claude)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Documentation](https://img.shields.io/badge/Documentation-Complete-brightgreen.svg)](docs/README.md)
 
