@@ -60,7 +60,7 @@ Before starting Level 300, ensure you have:
 
 **Duration:** 6-8 hours
 
-- [Zero Trust Principles](zero-trust)
+- [Zero Trust Principles]({{ site.baseurl }}{% link level-300/zero-trust.md %})
 - [Implementation Patterns](zero-trust#implementation)
 - [Monitoring and Compliance](zero-trust#monitoring)
 
@@ -68,7 +68,7 @@ Before starting Level 300, ensure you have:
 
 **Duration:** 8-10 hours
 
-- [Advanced Networking](azure-local-advanced-connected)
+- [Advanced Networking]({{ site.baseurl }}{% link level-300/azure-local-advanced-connected.md %})
 - [Multi-Site Deployments](azure-local-advanced-connected#multi-site)
 - [Cloud-Integrated Updates](azure-local-advanced-connected#updates)
 
@@ -76,7 +76,7 @@ Before starting Level 300, ensure you have:
 
 **Duration:** 8-10 hours
 
-- [Air-Gapped Operations](azure-local-advanced-disconnected)
+- [Air-Gapped Operations]({{ site.baseurl }}{% link level-300/azure-local-advanced-disconnected.md %})
 - [Manual Update Procedures](azure-local-advanced-disconnected#updates)
 - [Certificate Lifecycle Management](azure-local-advanced-disconnected#certificates)
 
@@ -84,7 +84,7 @@ Before starting Level 300, ensure you have:
 
 **Duration:** 10-12 hours
 
-- [Production Architecture](edge-rag-production)
+- [Production Architecture]({{ site.baseurl }}{% link level-300/edge-rag-production.md %})
 - [Performance Optimization](edge-rag-production#optimization)
 - [MLOps at the Edge](edge-rag-production#mlops)
 
@@ -92,7 +92,7 @@ Before starting Level 300, ensure you have:
 
 **Duration:** 6-8 hours
 
-- [Diagnostic Tools and Techniques](troubleshooting)
+- [Diagnostic Tools and Techniques]({{ site.baseurl }}{% link level-300/troubleshooting.md %})
 - [Common Issues and Resolutions](troubleshooting#common-issues)
 - [Support Escalation Paths](troubleshooting#escalation)
 
