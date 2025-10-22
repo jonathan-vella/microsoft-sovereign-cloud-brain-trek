@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Customer Discovery
-parent: Level 200 - Intermediate
+parent: Pre-Sales & Solution Design
 nav_order: 4
 ---
 
 ---
 layout: default
 title: Customer Discovery
-parent: Level 200 - Intermediate
+parent: Pre-Sales & Solution Design
 nav_order: 4
 ---
 

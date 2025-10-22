@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Cost Estimation & TCO
-parent: Level 200 - Intermediate
+parent: Pre-Sales & Solution Design
 nav_order: 4
 ---
 
 ---
 layout: default
 title: Cost Estimation
-parent: Level 200 - Intermediate
+parent: Pre-Sales & Solution Design
 nav_order: 4
 ---
 

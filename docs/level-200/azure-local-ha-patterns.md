@@ -2,7 +2,7 @@
 layout: default
 title: High Availability Patterns
 parent: Azure Local Architecture Deep Dive
-grand_parent: Level 200 - Intermediate
+grand_parent: Azure Local Architecture Deep Dive
 nav_order: 2
 ---
 

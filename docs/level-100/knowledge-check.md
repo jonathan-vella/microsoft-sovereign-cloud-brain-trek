@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Knowledge Check
-parent: Level 100 - Foundation
+parent: Digital Sovereignty
 nav_order: 6
 ---
 

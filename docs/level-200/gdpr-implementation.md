@@ -1,7 +1,7 @@
 ---
 layout: default
 title: GDPR Implementation
-parent: Level 200 - Intermediate
+parent: Compliance & Security Patterns
 nav_order: 5
 ---
 

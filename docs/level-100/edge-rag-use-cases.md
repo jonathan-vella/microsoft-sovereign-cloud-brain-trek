@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Edge RAG Use Cases
-parent: Level 100 - Foundation
+parent: Edge RAG Concepts
 nav_order: 5.3
 ---
 

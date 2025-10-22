@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Azure Local Connected Mode
-parent: Level 100 - Foundation
+parent: Azure Local Overview
 nav_order: 3.2
 ---
 

@@ -2,7 +2,7 @@
 layout: default
 title: Arc Advanced Quiz
 parent: Arc Advanced Management
-grand_parent: Level 200 - Intermediate
+grand_parent: Arc Advanced Management
 nav_order: 4
 ---
 

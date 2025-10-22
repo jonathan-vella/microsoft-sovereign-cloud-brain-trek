@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Operational Sovereignty
-parent: Level 100 - Foundation
+parent: Digital Sovereignty
 nav_order: 5
 ---
 

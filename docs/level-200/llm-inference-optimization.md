@@ -1,7 +1,7 @@
 ---
 layout: default
 title: LLM Inference Optimization
-parent: Level 200 - Intermediate
+parent: Edge RAG Implementation
 nav_order: 3
 ---
 

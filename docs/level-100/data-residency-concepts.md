@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Residency Concepts
-parent: Level 100 - Foundation
+parent: Digital Sovereignty
 nav_order: 4
 ---
 

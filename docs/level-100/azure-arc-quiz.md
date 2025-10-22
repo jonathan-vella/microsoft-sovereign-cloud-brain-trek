@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Azure Arc Quiz
-parent: Level 100 - Foundation
+parent: Azure Arc Introduction
 nav_order: 4.4
 ---
 

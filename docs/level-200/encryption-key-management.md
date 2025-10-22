@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Encryption & Key Management
-parent: Level 200 - Intermediate
+parent: Compliance & Security Patterns
 nav_order: 7
 ---
 

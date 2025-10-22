@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Compliance & Security Quiz
-parent: Level 200 - Intermediate
+parent: Compliance & Security Patterns
 nav_order: 9
 ---
 

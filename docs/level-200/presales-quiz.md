@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Pre-Sales & Solution Design Quiz
-parent: Level 200 - Intermediate
+parent: Pre-Sales & Solution Design
 nav_order: 4
 ---
 
