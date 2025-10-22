@@ -531,7 +531,7 @@ class RAGPipeline:
             query_embedding = self.embed_text(query)
             
             graphql_query = f"""
-            {{
+            {% raw %}{{
               Get {{
                 Document(
                   nearVector: {{
@@ -543,7 +543,7 @@ class RAGPipeline:
                   source
                 }}
               }}
-            }}
+            }}{% endraw %}
             """
             
             response = requests.post(
