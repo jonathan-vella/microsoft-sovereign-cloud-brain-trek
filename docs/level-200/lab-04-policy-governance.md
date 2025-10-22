@@ -7,6 +7,24 @@ nav_order: 14
 
 # Lab 4: Policy & Governance
 
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
 > **📊 Visual Reference: Asset 39 - Lab Architecture Progression**  
 > *Placeholder - See docs/assets/images/README.md#asset-39*  
 > Shows Lab 4 adding control layer - Azure Policy enforcement across Labs 1-3 infrastructure, applying compliance and security controls.

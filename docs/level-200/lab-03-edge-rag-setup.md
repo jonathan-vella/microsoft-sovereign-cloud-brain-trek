@@ -7,6 +7,24 @@ nav_order: 13
 
 # Lab 3: Edge RAG Setup
 
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
 > **📊 Visual Reference: Asset 39 - Lab Architecture Progression**  
 > *Placeholder - See docs/assets/images/README.md#asset-39*  
 > Shows Lab 3 adding application layer - Edge RAG system deployment with vector database and LLM inference on Lab 1 cluster.

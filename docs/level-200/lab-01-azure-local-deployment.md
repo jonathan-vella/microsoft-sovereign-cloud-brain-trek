@@ -7,6 +7,12 @@ nav_order: 11
 
 # Lab 1: Azure Local Deployment
 
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
 > **📊 Visual Reference: Asset 39 - Lab Architecture Progression**  
 > *Placeholder - See docs/assets/images/README.md#asset-39*  
 > Shows Lab 1 as foundational infrastructure layer - Azure Local cluster deployment establishing the platform for subsequent labs.

@@ -7,6 +7,24 @@ nav_order: 12
 
 # Lab 2: Azure Arc Onboarding
 
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
 > **📊 Visual Reference: Asset 39 - Lab Architecture Progression**  
 > *Placeholder - See docs/assets/images/README.md#asset-39*  
 > Shows Lab 2 adding management plane layer - Arc integration enabling centralized governance and monitoring on Lab 1 cluster.

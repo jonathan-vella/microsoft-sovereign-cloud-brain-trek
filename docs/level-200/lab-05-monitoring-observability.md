@@ -7,6 +7,24 @@ nav_order: 15
 
 # Lab 5: Monitoring & Observability
 
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
+{: .warning }
+> **🚧 Lab Under Development**  
+> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **Expected Release:** Q1 2026  
+> You can review the lab steps and prepare your environment in advance.
+
 > **📊 Visual References:**
 > - **Asset 39** - Lab Architecture Progression (Lab 5 as observability layer across all infrastructure)
 > - **Asset 40** - Lab Environment Cost and Time Matrix (complete deployment cost and timeline)

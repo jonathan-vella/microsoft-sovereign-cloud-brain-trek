@@ -15,6 +15,11 @@ Master Sovereign Cloud, Azure Local, and Edge AI Technologies
 A comprehensive learning journey for architects and solutions professionals
 {: .fs-6 .fw-300 }
 
+{: .warning }
+> **📢 Public Preview Notice**  
+> This content is currently in **public preview**. All learning modules and assessments are complete and ready for use.  
+> **Hands-on labs** are currently in development and will be released in Q1 2026.
+
 [Get Started]({{ site.baseurl }}{% link introduction.md %}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View on GitHub](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek){: .btn .fs-5 .mb-4 .mb-md-0 }
 

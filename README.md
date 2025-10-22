@@ -4,6 +4,10 @@ Master Sovereign Cloud, Azure Local, and Edge AI Technologies
 
 A comprehensive learning journey for architects and solutions professionals
 
+> **📢 Public Preview Notice**  
+> This content is currently in **public preview**. All learning modules and assessments are complete and ready for use.  
+> **Hands-on labs** are currently in development and will be released in Q1 2026.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Microsoft Azure](https://img.shields.io/badge/Microsoft%20Azure-0078D4?logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/)
 [![Microsoft Learn](https://img.shields.io/badge/Microsoft%20Learn-258ffa?logo=microsoft&logoColor=white)](https://learn.microsoft.com/)
