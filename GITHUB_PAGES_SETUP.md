@@ -275,8 +275,14 @@ bundle exec jekyll serve --port 4001
 
 **Check baseurl:**
 - Must be `/microsoft-sovereign-cloud-brain-trek/`
-- All links should be relative: `[link](../page.md)`
-- Images should use: `![alt](/assets/images/file.svg)`
+- All content links MUST use Jekyll link tags: `[text]({{ site.baseurl }}{% link level-100/file.md %})`
+- Navigation buttons already use this format
+- Images should use: `![alt]({{ site.baseurl }}/assets/images/file.svg)`
+
+**Why this matters:**
+- ❌ Relative links like `[text](file)` resolve to domain root, not baseurl path
+- ❌ Absolute links like `[text](/level-100/file)` also go to domain root
+- ✅ Jekyll link tags with baseurl work correctly: `{{ site.baseurl }}{% link level-100/file.md %}`
 
 ---
 
@@ -313,6 +319,14 @@ bundle exec jekyll serve --port 4001
 4. Cache refresh
 
 **Build time:** ~30 seconds (incremental builds)
+
+### Link Format Validation
+
+**When adding new content:**
+- ✅ Use Jekyll link tags: `[text]({{ site.baseurl }}{% link level-100/file.md %})`
+- ✅ Run Check-BrokenLinks.ps1 script before committing
+- ❌ Never use relative paths like `[text](file)` in content
+- ❌ Never use absolute paths like `[text](/level-100/file)` in content
 
 ### Visual Assets Integration
 

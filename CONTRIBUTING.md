@@ -63,6 +63,28 @@ If you find errors, outdated information, or have suggestions for improvements:
 - Use code blocks with language specifications
 - Add alt text for images
 
+### Link Formatting (CRITICAL for GitHub Pages)
+
+**All internal content links MUST use Jekyll link tags with baseurl:**
+
+✅ **CORRECT:**
+```markdown
+[Azure Arc Introduction]({{ site.baseurl }}{% link level-100/azure-arc-intro.md %})
+```
+
+❌ **WRONG (breaks with baseurl):**
+```markdown
+[Azure Arc Introduction](azure-arc-intro)           # Relative path
+[Azure Arc Introduction](/level-100/azure-arc-intro) # Absolute path
+[Azure Arc Introduction](azure-arc-intro.md)        # With extension
+```
+
+**Why:** GitHub Pages uses a baseurl (`/microsoft-sovereign-cloud-brain-trek/`). Relative and absolute paths resolve to the domain root instead of including the baseurl prefix.
+
+**Navigation links** (buttons, cards) already use this format - match them for all content links.
+
+**Before committing:** Run `.\scripts\Check-BrokenLinks.ps1` to validate all links.
+
 ### Content Standards
 
 - **Accuracy:** All technical content should reference official Microsoft documentation
