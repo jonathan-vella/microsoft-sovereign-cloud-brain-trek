@@ -176,6 +176,7 @@ We thank the following people for their contributions to this project:
 
 - **[@jonathan-vella](https://github.com/jonathan-vella)** - Project Lead and Primary Author
 - **[@OliCSADoerr](https://github.com/OliCSADoerr)** - Content Contributor (Documentation)
+- **[@sohamda](https://github.com/sohamda)** - Content Contributor (Documentation)
 
 ## License
 

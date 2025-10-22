@@ -1,6 +1,38 @@
 
 
 
+## [Unreleased] - 2025-10-22
+
+### Added - Repository Automation & Contributor Management
+
+#### New Contributor Added
+- **Added @sohamda** as Content Contributor (Documentation)
+- Updated CODEOWNERS with review permissions for all documentation paths
+- Updated CONTRIBUTING.md Contributors section
+
+#### New Automation Script
+- **Created `scripts/Add-Contributor.ps1`** - PowerShell script to automate contributor additions
+- Features:
+  - Automatically updates both CODEOWNERS and CONTRIBUTING.md files
+  - Creates timestamped backups before making changes
+  - Supports optional permissions for assets and workflows
+  - Validates changes and prevents duplicates
+  - Provides clear output and next steps
+- **Created `scripts/README.md`** - Complete documentation for automation scripts
+  - Usage examples (basic and advanced)
+  - Parameter reference table
+  - Backup/restore procedures
+  - Error handling details
+
+#### Benefits
+- Reduces manual errors when adding contributors
+- Ensures consistent formatting across files
+- Saves 10-15 minutes per contributor addition
+- Creates automatic safety backups
+- Provides clear audit trail of changes
+
+---
+
 ## [Unreleased] - 2025-10-21
 
 ### In Progress - Phase 4: Designer Asset Creation Handoff

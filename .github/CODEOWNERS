@@ -14,16 +14,16 @@
 * @jonathan-vella
 
 # Documentation content - require review from documentation team
-/docs/ @jonathan-vella @OliCSADoerr
+/docs/ @jonathan-vella @OliCSADoerr @sohamda
 
 # Specific documentation folders
-/docs/level-100/ @jonathan-vella @OliCSADoerr
-/docs/level-200/ @jonathan-vella @OliCSADoerr
-/docs/level-300/ @jonathan-vella @OliCSADoerr
-/docs/resources/ @jonathan-vella @OliCSADoerr
+/docs/level-100/ @jonathan-vella @OliCSADoerr @sohamda
+/docs/level-200/ @jonathan-vella @OliCSADoerr @sohamda
+/docs/level-300/ @jonathan-vella @OliCSADoerr @sohamda
+/docs/resources/ @jonathan-vella @OliCSADoerr @sohamda
 
 # Visual assets - require review before changes
-/docs/assets/ @jonathan-vella @OliCSADoerr
+/docs/assets/ @jonathan-vella @OliCSADoerr @sohamda
 
 # Planning and project management files - primary owner only
 /.github/PROJECT_PLAN.md @jonathan-vella
@@ -37,9 +37,9 @@
 /CONTRIBUTING.md @jonathan-vella
 /LICENSE @jonathan-vella
 
-# Changelog - both can update after completing modules
-/CHANGELOG.md @jonathan-vella @OliCSADoerr
+# Changelog - all contributors can update
+/CHANGELOG.md @jonathan-vella @OliCSADoerr @sohamda
 
 # README - primary owner reviews major changes
 /README.md @jonathan-vella
-/docs/README.md @jonathan-vella @OliCSADoerr
+/docs/README.md @jonathan-vella @OliCSADoerr @sohamda

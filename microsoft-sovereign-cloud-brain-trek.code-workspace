@@ -1,0 +1,110 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "Microsoft Sovereign Cloud Brain Trek"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			".git": true,
+			".archive": false
+		},
+		"files.associations": {
+			"*.md": "markdown"
+		},
+		"markdown.validate.enabled": true,
+		"markdown.preview.breaks": true,
+		"editor.formatOnSave": false,
+		"editor.wordWrap": "on",
+		"editor.rulers": [
+			120
+		],
+		"files.encoding": "utf8",
+		"files.eol": "\n",
+		"files.trimTrailingWhitespace": true,
+		"files.insertFinalNewline": true,
+		"[markdown]": {
+			"editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+			"editor.formatOnSave": false,
+			"editor.wordWrap": "on",
+			"editor.quickSuggestions": {
+				"comments": "off",
+				"strings": "off",
+				"other": "off"
+			}
+		},
+		"markdownlint.config": {
+			"MD022": false,
+			"MD024": false,
+			"MD032": false,
+			"MD036": false,
+			"MD051": false
+		},
+		"git.ignoreLimitWarning": true,
+		"github.copilot.enable": {
+			"*": true,
+			"markdown": true
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"DavidAnson.vscode-markdownlint",
+			"yzhang.markdown-all-in-one",
+			"bierner.markdown-mermaid",
+			"GitHub.copilot",
+			"GitHub.copilot-chat",
+			"streetsidesoftware.code-spell-checker",
+			"shd101wyy.markdown-preview-enhanced",
+			"ms-vscode.powershell"
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": []
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Preview Site Locally (Jekyll)",
+				"type": "shell",
+				"command": "bundle exec jekyll serve --livereload",
+				"problemMatcher": [],
+				"group": "build",
+				"presentation": {
+					"reveal": "always",
+					"panel": "new"
+				}
+			},
+			{
+				"label": "Build Site (Jekyll)",
+				"type": "shell",
+				"command": "bundle exec jekyll build",
+				"problemMatcher": [],
+				"group": "build"
+			},
+			{
+				"label": "Validate All Links",
+				"type": "shell",
+				"command": "gh workflow run link-check.yml",
+				"problemMatcher": [],
+				"group": "test"
+			},
+			{
+				"label": "Check Content Freshness",
+				"type": "shell",
+				"command": "gh workflow run content-freshness.yml",
+				"problemMatcher": [],
+				"group": "test"
+			},
+			{
+				"label": "Monitor MS Learn Links",
+				"type": "shell",
+				"command": "gh workflow run ms-learn-monitor.yml",
+				"problemMatcher": [],
+				"group": "test"
+			}
+		]
+	}
+}
