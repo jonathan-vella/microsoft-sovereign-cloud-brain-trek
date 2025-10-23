@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Azure Local Overview
+title: Overview
 parent: Azure Local Overview
-nav_order: 3
+nav_order: 1
 ---
 
 # Azure Local Overview

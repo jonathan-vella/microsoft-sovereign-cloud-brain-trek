@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Microsoft Sovereign Cloud Models
+title: Overview
 parent: Microsoft Sovereign Cloud Models
-nav_order: 2
+nav_order: 1
 ---
 
 # Microsoft Sovereign Cloud Models
