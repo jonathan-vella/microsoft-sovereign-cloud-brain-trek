@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Azure Arc Introduction
-parent: Azure Arc Introduction
+parent: Level 100 - Foundation
 nav_order: 4
 ---
 

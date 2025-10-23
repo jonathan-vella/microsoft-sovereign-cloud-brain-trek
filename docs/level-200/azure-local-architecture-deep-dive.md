@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Azure Local Architecture Deep Dive
-parent: Azure Local Architecture Deep Dive
+parent: Level 200 - Intermediate
 nav_order: 1
 ---
 
