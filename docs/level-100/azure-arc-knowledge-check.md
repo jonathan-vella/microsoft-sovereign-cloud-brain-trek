@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Azure Arc Quiz
+title: Azure Arc Knowledge Check
 parent: Azure Arc Introduction
 nav_order: 4.4
 ---

@@ -27,7 +27,7 @@ Build foundational understanding of digital sovereignty concepts, regulatory req
 - [Operational Sovereignty]({{ site.baseurl }}{% link level-100/operational-sovereignty.md %}) - Control plane concepts and Azure Local modes
 
 ✅ **Assessment:**
-- [Knowledge Check Quiz]({{ site.baseurl }}{% link level-100/knowledge-check.md %}) - 15 questions to test your understanding
+- [Knowledge Check]({{ site.baseurl }}{% link level-100/knowledge-check.md %}) - 15 questions to test your understanding
 
 ---
 

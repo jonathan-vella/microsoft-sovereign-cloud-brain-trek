@@ -26,7 +26,7 @@ Learn how Azure Arc enables unified hybrid and multi-cloud management across any
 - [Arc-Enabled Data Services]({{ site.baseurl }}{% link level-100/azure-arc-data-services.md %}) - SQL MI and PostgreSQL on any infrastructure
 
 ✅ **Assessment:**
-- [Azure Arc Quiz]({{ site.baseurl }}{% link level-100/azure-arc-quiz.md %}) - 12 questions covering all Arc services
+- [Knowledge Check]({{ site.baseurl }}{% link level-100/azure-arc-knowledge-check.md %}) - 12 questions covering all Arc services
 
 ---
 

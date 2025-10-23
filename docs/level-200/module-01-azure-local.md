@@ -19,4 +19,4 @@ Explore advanced Azure Local deployment patterns, hardware planning, high-availa
 - [Hardware Planning & Sizing]({{ site.baseurl }}{% link level-200/azure-local-hardware-planning.md %})
 - [High-Availability Patterns]({{ site.baseurl }}{% link level-200/azure-local-ha-patterns.md %})
 - [Advanced Networking]({{ site.baseurl }}{% link level-200/azure-local-advanced-networking.md %})
-- [Assessment Quiz]({{ site.baseurl }}{% link level-200/azure-local-deep-dive-quiz.md %})
+- [Knowledge Check]({{ site.baseurl }}{% link level-200/azure-local-deep-dive-knowledge-check.md %})

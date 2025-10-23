@@ -19,4 +19,4 @@ Master regulatory compliance frameworks (GDPR, FedRAMP), encryption strategies, 
 - [GDPR Implementation]({{ site.baseurl }}{% link level-200/gdpr-implementation.md %})
 - [FedRAMP Compliance]({{ site.baseurl }}{% link level-200/fedramp-compliance.md %})
 - [Encryption & Key Management]({{ site.baseurl }}{% link level-200/encryption-key-management.md %})
-- [Assessment Quiz]({{ site.baseurl }}{% link level-200/compliance-quiz.md %})
+- [Knowledge Check]({{ site.baseurl }}{% link level-200/compliance-knowledge-check.md %})

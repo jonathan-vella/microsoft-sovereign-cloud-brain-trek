@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Compliance & Security Quiz
+title: Compliance & Security Knowledge Check
 parent: Compliance & Security Patterns
-nav_order: 9
+nav_order: 5.3
 ---
 
 # Compliance & Security Patterns - Assessment Quiz

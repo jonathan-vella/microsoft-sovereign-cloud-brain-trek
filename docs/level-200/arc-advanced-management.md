@@ -664,7 +664,7 @@ Learn cost analysis frameworks, optimization strategies, right-sizing recommenda
 Explore hub-and-spoke governance, federation patterns, multi-cloud management, security at scale, and zero-trust architecture.
 
 ### Assessment
-**[Take the Quiz: arc-advanced-quiz.md](./arc-advanced-quiz.md)**
+**[Take the Knowledge Check: arc-advanced-knowledge-check.md](./arc-advanced-knowledge-check.md)**
 
 Validate your understanding with 18 advanced scenario-based questions covering enterprise governance, cost optimization, and patterns.
 

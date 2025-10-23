@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Edge RAG Quiz
+title: Edge RAG Knowledge Check
 parent: Edge RAG Concepts
 nav_order: 5.4
 ---

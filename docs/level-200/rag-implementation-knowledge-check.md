@@ -1,8 +1,8 @@
 ---
 layout: default
-title: RAG Implementation Quiz
+title: RAG Implementation Knowledge Check
 parent: Edge RAG Implementation
-nav_order: 3
+nav_order: 3.4
 ---
 
 # RAG Implementation Quiz

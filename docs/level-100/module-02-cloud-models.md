@@ -26,7 +26,7 @@ Understand the three Microsoft Sovereign Cloud models and learn how to select th
 - [National Partner Clouds]({{ site.baseurl }}{% link level-100/national-partner-clouds.md %}) - Azure Government, Azure China, and partner-operated sovereign clouds
 
 ✅ **Assessment:**
-- [Cloud Models Knowledge Check]({{ site.baseurl }}{% link level-100/cloud-models-quiz.md %}) - 15 questions testing model selection and technical understanding
+- [Knowledge Check]({{ site.baseurl }}{% link level-100/cloud-models-knowledge-check.md %}) - 15 questions testing model selection and technical understanding
 
 ---
 

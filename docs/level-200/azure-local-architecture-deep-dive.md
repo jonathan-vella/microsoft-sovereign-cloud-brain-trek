@@ -940,5 +940,5 @@ For more detailed information on specific topics:
 - [Hardware Planning and Sizing](./azure-local-hardware-planning.md) - Detailed hardware specifications and capacity calculations
 - [High Availability Patterns](./azure-local-ha-patterns.md) - Advanced HA/DR strategies and quorum options
 - [Advanced Networking](./azure-local-advanced-networking.md) - Network design, RDMA optimization, and QoS configuration
-- [Knowledge Check](./azure-local-deep-dive-quiz.md) - Test your understanding with scenario-based questions
+- [Knowledge Check](./azure-local-deep-dive-knowledge-check.md) - Test your understanding with scenario-based questions
 

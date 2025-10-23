@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Arc Advanced Quiz
+title: Arc Advanced Knowledge Check
 parent: Arc Advanced Management
 grand_parent: Arc Advanced Management
 nav_order: 4

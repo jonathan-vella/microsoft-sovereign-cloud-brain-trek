@@ -27,7 +27,7 @@ Master the fundamentals of Azure Local architecture, deployment modes, and hybri
 - [Hardware Requirements]({{ site.baseurl }}{% link level-100/azure-local-hardware.md %}) - Validated hardware, sizing, deployment checklist
 
 ✅ **Assessment:**
-- [Azure Local Quiz]({{ site.baseurl }}{% link level-100/azure-local-quiz.md %}) - 15 questions testing deployment modes and technical concepts
+- [Knowledge Check]({{ site.baseurl }}{% link level-100/azure-local-knowledge-check.md %}) - 15 questions testing deployment modes and technical concepts
 
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Pre-Sales & Solution Design Quiz
+title: Pre-Sales & Solution Design Knowledge Check
 parent: Pre-Sales & Solution Design
-nav_order: 4
+nav_order: 4.3
 ---
 
 # Pre-Sales & Solution Design Quiz

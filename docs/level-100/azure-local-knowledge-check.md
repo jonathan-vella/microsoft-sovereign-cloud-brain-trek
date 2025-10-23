@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Azure Local Quiz
+title: Azure Local Knowledge Check
 parent: Azure Local Overview
 nav_order: 3.5
 ---

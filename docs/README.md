@@ -203,7 +203,7 @@ Each level includes a README with:
 Each module includes:
 - **Main page** (`module-name.md`) - Overview, learning objectives, key concepts
 - **Sub-pages** (2-4 files) - Detailed content deep-dives
-- **Quiz** (`module-name-quiz.md`) - 10-15 assessment questions
+- **Knowledge Check** (`module-name-knowledge-check.md`) - 10-15 assessment questions
 - **Lab** (Level 200+) - Hands-on exercises with step-by-step instructions
 
 ---

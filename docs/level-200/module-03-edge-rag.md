@@ -19,4 +19,4 @@ Master production-ready Retrieval-Augmented Generation deployment patterns, LLM 
 - [LLM Inference Optimization]({{ site.baseurl }}{% link level-200/llm-inference-optimization.md %})
 - [RAG Deployment Strategies]({{ site.baseurl }}{% link level-200/rag-deployment-strategies.md %})
 - [Operations & Monitoring]({{ site.baseurl }}{% link level-200/rag-operations-monitoring.md %})
-- [Assessment Quiz]({{ site.baseurl }}{% link level-200/rag-implementation-quiz.md %})
+- [Knowledge Check]({{ site.baseurl }}{% link level-200/rag-implementation-knowledge-check.md %})

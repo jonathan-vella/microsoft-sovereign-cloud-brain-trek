@@ -26,7 +26,7 @@ Explore Retrieval-Augmented Generation (RAG) fundamentals and learn how to deplo
 - [Edge RAG Use Cases]({{ site.baseurl }}{% link level-100/edge-rag-use-cases.md %}) - Industry scenarios, best practices, ROI
 
 ✅ **Assessment:**
-- [Edge RAG Quiz]({{ site.baseurl }}{% link level-100/edge-rag-quiz.md %}) - 15 questions testing RAG concepts and implementation
+- [Knowledge Check]({{ site.baseurl }}{% link level-100/edge-rag-knowledge-check.md %}) - 15 questions testing RAG concepts and implementation
 
 ---
 

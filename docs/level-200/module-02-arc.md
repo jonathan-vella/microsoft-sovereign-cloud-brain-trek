@@ -19,4 +19,4 @@ Master enterprise-scale governance, cost optimization, and security hardening fo
 - [Policy & Governance]({{ site.baseurl }}{% link level-200/arc-policy-and-governance.md %})
 - [Cost Optimization]({{ site.baseurl }}{% link level-200/arc-cost-optimization.md %})
 - [Enterprise Patterns]({{ site.baseurl }}{% link level-200/arc-enterprise-patterns.md %})
-- [Assessment Quiz]({{ site.baseurl }}{% link level-200/arc-advanced-quiz.md %})
+- [Knowledge Check]({{ site.baseurl }}{% link level-200/arc-advanced-knowledge-check.md %})
