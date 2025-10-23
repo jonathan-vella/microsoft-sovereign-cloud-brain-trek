@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Edge RAG Concepts
+title: Overview
 parent: Edge RAG Concepts
-nav_order: 5
+nav_order: 1
 ---
 
 # Edge RAG Concepts

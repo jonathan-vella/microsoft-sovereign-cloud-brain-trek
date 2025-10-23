@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Arc Advanced Management
+title: Overview
 parent: Arc Advanced Management
-nav_order: 2
+nav_order: 1
 ---
 
 # Azure Arc Advanced Management

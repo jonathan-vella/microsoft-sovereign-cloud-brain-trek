@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Azure Arc Introduction
+title: Overview
 parent: Azure Arc Introduction
-nav_order: 4
+nav_order: 1
 ---
 
 # Azure Arc Introduction

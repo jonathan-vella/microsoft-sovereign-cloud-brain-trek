@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Edge RAG Implementation
+title: Overview
 parent: Edge RAG Implementation
-nav_order: 3
+nav_order: 1
 ---
 
 # Edge RAG Implementation

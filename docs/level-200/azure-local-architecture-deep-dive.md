@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Azure Local Architecture Deep Dive
+title: Overview
 parent: Azure Local Architecture Deep Dive
 nav_order: 1
 ---

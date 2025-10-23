@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Digital Sovereignty
+title: Overview
 parent: Digital Sovereignty
 nav_order: 1
 ---

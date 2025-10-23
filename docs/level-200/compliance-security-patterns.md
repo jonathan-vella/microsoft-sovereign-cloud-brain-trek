@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Compliance & Security Patterns
+title: Overview
 parent: Compliance & Security Patterns
-nav_order: 5
+nav_order: 1
 ---
 
 # Compliance & Security Patterns
