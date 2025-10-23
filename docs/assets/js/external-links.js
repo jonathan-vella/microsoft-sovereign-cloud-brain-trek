@@ -22,8 +22,9 @@
     links.forEach(function(link) {
       const href = link.getAttribute('href');
       
-      // Skip if href is empty, an anchor, or javascript
-      if (!href || href.startsWith('#') || href.startsWith('javascript:')) {
+      // Skip if href is empty, an anchor, or potentially dangerous protocol
+      if (!href || href.startsWith('#') || href.startsWith('javascript:') || 
+          href.startsWith('data:') || href.startsWith('vbscript:')) {
         return;
       }
       
