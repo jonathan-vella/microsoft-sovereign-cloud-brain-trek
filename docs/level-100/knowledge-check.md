@@ -33,6 +33,17 @@ B) The ability to control and govern digital assets within jurisdictional bounda
 C) A type of cloud security certification  
 D) A regulation specific to the European Union
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:**
+Digital sovereignty is broader than just data location. It encompasses control, governance, and independence over digital infrastructure and data within specific jurisdictional boundaries.
+
+**Reference:** [Digital Sovereignty Overview](digital-sovereignty)
+</details>
+
 ---
 
 ### Question 2: Microsoft Sovereign Cloud Models
@@ -43,6 +54,17 @@ A) Sovereign Public Cloud
 B) Sovereign Private Cloud  
 C) Sovereign Regional Cloud  
 D) National Partner Clouds
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:**
+Microsoft offers three sovereign cloud models: Sovereign Public Cloud (enhanced Azure with sovereignty controls), Sovereign Private Cloud (dedicated infrastructure), and National Partner Clouds (country-specific clouds operated by local partners). There is no "Sovereign Regional Cloud" model.
+
+**Reference:** [Digital Sovereignty Overview](digital-sovereignty#sovereignty-spectrum)
+</details>
 
 ---
 
@@ -55,6 +77,17 @@ B) Data residency is where data is stored; data sovereignty includes residency p
 C) Data sovereignty is only about location; data residency includes access controls  
 D) Data residency applies to public cloud; data sovereignty applies to private cloud
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:**
+Data residency focuses specifically on the geographic location where data is stored. Data sovereignty is broader, encompassing residency requirements plus who can access the data, how it's governed, operational controls, and legal jurisdiction.
+
+**Reference:** [Data Residency Concepts](data-residency-concepts#key-definitions)
+</details>
+
 ---
 
 ### Question 4: GDPR Requirements
@@ -65,6 +98,17 @@ A) GDPR requires all data to be stored in the EU
 B) GDPR prohibits any data transfers outside the EU  
 C) GDPR requires data minimization and allows international transfers with appropriate safeguards  
 D) GDPR only applies to government organizations
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:**
+GDPR does not require data to be stored in the EU, but it does regulate how personal data can be transferred outside the EU/EEA. Transfers are allowed with appropriate safeguards such as adequacy decisions or Standard Contractual Clauses.
+
+**Reference:** [Regulatory Overview - GDPR](regulatory-overview#gdpr-general-data-protection-regulation)
+</details>
 
 ---
 
@@ -77,6 +121,17 @@ B) Customer data is stored and processed within the EU with documented, limited 
 C) All Microsoft employees must be based in the EU  
 D) Only applies to Azure, not Microsoft 365
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:**
+The EU Data Boundary commitment ensures customer data is stored and processed within the EU. There are some documented exceptions (like customer-initiated transfers or certain support scenarios with Customer Lockbox), but these are transparent and often under customer control.
+
+**Reference:** [European Digital Commitments](european-commitments#eu-data-boundary-for-the-microsoft-cloud)
+</details>
+
 ---
 
 ### Question 6: FedRAMP Impact Levels
@@ -87,6 +142,20 @@ A) Moderate is for public data; High is for internal government data
 B) Moderate is for internal government data; High is for national security information  
 C) There is no difference in security requirements  
 D) High requires more documentation but same security controls
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:**
+FedRAMP has three impact levels based on the sensitivity of data:
+- **Low:** Public information
+- **Moderate:** Internal government information (most common)
+- **High:** National security information (most stringent requirements)
+
+**Reference:** [Regulatory Overview - FedRAMP](regulatory-overview#fedramp-federal-risk-and-authorization-management-program)
+</details>
 
 ---
 
@@ -99,6 +168,17 @@ B) 40+
 C) 60+  
 D) 80+
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:**
+Microsoft Azure operates more than 60 regions globally, more than any other major cloud provider. This extensive footprint provides customers with more options for data residency and low-latency access.
+
+**Reference:** [Data Residency Concepts](data-residency-concepts#azure-regions-and-data-residency)
+</details>
+
 ---
 
 ### Question 8: Operational Sovereignty
@@ -109,6 +189,17 @@ A) Where data is stored geographically
 B) The cost of cloud operations  
 C) Who can access and manage infrastructure and under what conditions  
 D) The speed of data processing
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:**
+Operational sovereignty focuses on control over operations: who can access systems, where personnel are located, operational independence, and the ability to maintain control under various circumstances.
+
+**Reference:** [Operational Sovereignty](operational-sovereignty#what-is-operational-sovereignty)
+</details>
 
 ---
 
@@ -121,6 +212,19 @@ B) Connected mode uses cloud control plane; Disconnected mode uses local control
 C) Disconnected mode is cheaper  
 D) Connected mode doesn't support virtualization
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:**
+The fundamental difference is the control plane location:
+- **Connected Mode:** Managed via Azure portal and Azure Arc (cloud control plane)
+- **Disconnected Mode:** Managed via local portal/Windows Admin Center (local control plane)
+
+**Reference:** [Operational Sovereignty - Control Plane](operational-sovereignty#control-plane-connected-vs-disconnected)
+</details>
+
 ---
 
 ### Question 10: Customer Lockbox
@@ -131,6 +235,17 @@ A) To encrypt customer data automatically
 B) To require customer approval before Microsoft support can access customer data  
 C) To lock customer resources from accidental deletion  
 D) To store encryption keys securely
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:**
+Customer Lockbox provides customers with explicit control over Microsoft support access to their data. Support personnel can only access customer data after the customer approves the request.
+
+**Reference:** [Operational Sovereignty - Access Controls](operational-sovereignty#access-control-mechanisms)
+</details>
 
 ---
 
@@ -143,6 +258,17 @@ B) Legally compliant data transfers from the EU to countries without adequacy de
 C) Defining service level agreements  
 D) Contract templates for employee agreements
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:**
+Standard Contractual Clauses (SCCs) are EU Commission-approved contract templates that provide appropriate safeguards for international data transfers when transferring personal data from the EU to countries that don't have an adequacy decision.
+
+**Reference:** [Data Residency Concepts - Data Transfers](data-residency-concepts#legal-mechanisms-for-transfers)
+</details>
+
 ---
 
 ### Question 12: HIPAA Business Associate Agreement
@@ -153,6 +279,17 @@ A) FedRAMP authorization
 B) A Business Associate Agreement (BAA) with Microsoft  
 C) ITAR compliance  
 D) PCI DSS certification
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:**
+HIPAA requires that "Business Associates" (including cloud service providers) handling Protected Health Information (PHI) on behalf of covered entities sign a Business Associate Agreement. Microsoft provides BAAs for Azure services used with PHI.
+
+**Reference:** [Regulatory Overview - HIPAA](regulatory-overview#hipaa-health-insurance-portability-and-accountability-act)
+</details>
 
 ---
 
@@ -165,6 +302,17 @@ B) To enable management of on-premises and multi-cloud resources from Azure cont
 C) To encrypt data in transit  
 D) To replace traditional VPNs
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:**
+Azure Arc extends the Azure control plane to enable unified management of resources regardless of where they're located—on-premises, at the edge, or in other clouds.
+
+**Reference:** [Introduction - Azure Arc](../introduction#azure-arc)
+</details>
+
 ---
 
 ### Question 14: Sovereignty Spectrum
@@ -175,6 +323,17 @@ A) Public website hosting
 B) Internal business applications  
 C) Regulated healthcare data  
 D) Air-gapped classified defense systems
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: D**
+
+**Explanation:**
+Air-gapped classified defense systems require the maximum level of sovereignty: complete operational independence, no external connectivity, local control plane, US persons-only access, and physical isolation. This is Level 5 on the sovereignty spectrum.
+
+**Reference:** [Operational Sovereignty - Spectrum](operational-sovereignty#level-5-air-gapped)
+</details>
 
 ---
 
@@ -187,151 +346,15 @@ B) It invalidated the EU-US Privacy Shield and increased scrutiny on data transf
 C) It prohibited all data transfers from the EU  
 D) It eliminated the need for Standard Contractual Clauses
 
----
+<details>
+<summary>Click to reveal answer</summary>
 
-## Answers
+**Correct Answer: B**
 
-<details markdown="1">
-<summary><strong>Click to reveal answers</strong></summary>
-
-### Answer 1: B
-**Correct:** The ability to control and govern digital assets within jurisdictional boundaries
-
-**Explanation:** Digital sovereignty is broader than just data location. It encompasses control, governance, and independence over digital infrastructure and data within specific jurisdictional boundaries.
-
-**Reference:** [Digital Sovereignty Overview](digital-sovereignty)
-
----
-
-### Answer 2: C
-**Correct:** Sovereign Regional Cloud
-
-**Explanation:** Microsoft offers three sovereign cloud models: Sovereign Public Cloud (enhanced Azure with sovereignty controls), Sovereign Private Cloud (dedicated infrastructure), and National Partner Clouds (country-specific clouds operated by local partners). There is no "Sovereign Regional Cloud" model.
-
-**Reference:** [Digital Sovereignty Overview](digital-sovereignty#sovereignty-spectrum)
-
----
-
-### Answer 3: B
-**Correct:** Data residency is where data is stored; data sovereignty includes residency plus operational and legal control
-
-**Explanation:** Data residency focuses specifically on the geographic location where data is stored. Data sovereignty is broader, encompassing residency requirements plus who can access the data, how it's governed, operational controls, and legal jurisdiction.
-
-**Reference:** [Data Residency Concepts](data-residency-concepts#key-definitions)
-
----
-
-### Answer 4: C
-**Correct:** GDPR requires data minimization and allows international transfers with appropriate safeguards
-
-**Explanation:** GDPR does not require data to be stored in the EU, but it does regulate how personal data can be transferred outside the EU/EEA. Transfers are allowed with appropriate safeguards such as adequacy decisions or Standard Contractual Clauses.
-
-**Reference:** [Regulatory Overview - GDPR](regulatory-overview#gdpr-general-data-protection-regulation)
-
----
-
-### Answer 5: B
-**Correct:** Customer data is stored and processed within the EU with documented, limited exceptions
-
-**Explanation:** The EU Data Boundary commitment ensures customer data is stored and processed within the EU. There are some documented exceptions (like customer-initiated transfers or certain support scenarios with Customer Lockbox), but these are transparent and often under customer control.
-
-**Reference:** [European Digital Commitments](european-commitments#eu-data-boundary-for-the-microsoft-cloud)
-
----
-
-### Answer 6: B
-**Correct:** Moderate is for internal government data; High is for national security information
-
-**Explanation:** FedRAMP has three impact levels based on the sensitivity of data:
-- **Low:** Public information
-- **Moderate:** Internal government information (most common)
-- **High:** National security information (most stringent requirements)
-
-**Reference:** [Regulatory Overview - FedRAMP](regulatory-overview#fedramp-federal-risk-and-authorization-management-program)
-
----
-
-### Answer 7: C
-**Correct:** 60+
-
-**Explanation:** Microsoft Azure operates more than 60 regions globally, more than any other major cloud provider. This extensive footprint provides customers with more options for data residency and low-latency access.
-
-**Reference:** [Data Residency Concepts](data-residency-concepts#azure-regions-and-data-residency)
-
----
-
-### Answer 8: C
-**Correct:** Who can access and manage infrastructure and under what conditions
-
-**Explanation:** Operational sovereignty focuses on control over operations: who can access systems, where personnel are located, operational independence, and the ability to maintain control under various circumstances.
-
-**Reference:** [Operational Sovereignty](operational-sovereignty#what-is-operational-sovereignty)
-
----
-
-### Answer 9: B
-**Correct:** Connected mode uses cloud control plane; Disconnected mode uses local control plane
-
-**Explanation:** The fundamental difference is the control plane location:
-- **Connected Mode:** Managed via Azure portal and Azure Arc (cloud control plane)
-- **Disconnected Mode:** Managed via local portal/Windows Admin Center (local control plane)
-
-**Reference:** [Operational Sovereignty - Control Plane](operational-sovereignty#control-plane-connected-vs-disconnected)
-
----
-
-### Answer 10: B
-**Correct:** To require customer approval before Microsoft support can access customer data
-
-**Explanation:** Customer Lockbox provides customers with explicit control over Microsoft support access to their data. Support personnel can only access customer data after the customer approves the request.
-
-**Reference:** [Operational Sovereignty - Access Controls](operational-sovereignty#access-control-mechanisms)
-
----
-
-### Answer 11: B
-**Correct:** Legally compliant data transfers from the EU to countries without adequacy decisions
-
-**Explanation:** Standard Contractual Clauses (SCCs) are EU Commission-approved contract templates that provide appropriate safeguards for international data transfers when transferring personal data from the EU to countries that don't have an adequacy decision.
-
-**Reference:** [Data Residency Concepts - Data Transfers](data-residency-concepts#legal-mechanisms-for-transfers)
-
----
-
-### Answer 12: B
-**Correct:** A Business Associate Agreement (BAA) with Microsoft
-
-**Explanation:** HIPAA requires that "Business Associates" (including cloud service providers) handling Protected Health Information (PHI) on behalf of covered entities sign a Business Associate Agreement. Microsoft provides BAAs for Azure services used with PHI.
-
-**Reference:** [Regulatory Overview - HIPAA](regulatory-overview#hipaa-health-insurance-portability-and-accountability-act)
-
----
-
-### Answer 13: B
-**Correct:** To enable management of on-premises and multi-cloud resources from Azure control plane
-
-**Explanation:** Azure Arc extends the Azure control plane to enable unified management of resources regardless of where they're located—on-premises, at the edge, or in other clouds.
-
-**Reference:** [Introduction - Azure Arc](../introduction#azure-arc)
-
----
-
-### Answer 14: D
-**Correct:** Air-gapped classified defense systems
-
-**Explanation:** Air-gapped classified defense systems require the maximum level of sovereignty: complete operational independence, no external connectivity, local control plane, US persons-only access, and physical isolation. This is Level 5 on the sovereignty spectrum.
-
-**Reference:** [Operational Sovereignty - Spectrum](operational-sovereignty#level-5-air-gapped)
-
----
-
-### Answer 15: B
-**Correct:** It invalidated the EU-US Privacy Shield and increased scrutiny on data transfers to the US
-
-**Explanation:** The Schrems II decision (July 2020) by the Court of Justice of the European Union invalidated the EU-US Privacy Shield framework. While Standard Contractual Clauses remain valid, the decision increased requirements for assessing and mitigating risks in international data transfers, particularly to the US.
+**Explanation:**
+The Schrems II decision (July 2020) by the Court of Justice of the European Union invalidated the EU-US Privacy Shield framework. While Standard Contractual Clauses remain valid, the decision increased requirements for assessing and mitigating risks in international data transfers, particularly to the US.
 
 **Reference:** [Data Residency Concepts - Schrems II](data-residency-concepts#schrems-ii-decision)
-
 </details>
 
 ---
