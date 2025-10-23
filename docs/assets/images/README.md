@@ -1,3 +1,9 @@
+---
+layout: default
+title: Visual Assets for Microsoft Sovereign Cloud Skilling Plan
+nav_exclude: true
+---
+
 # Visual Assets for Microsoft Sovereign Cloud Skilling Plan
 
 This directory contains visual assets (diagrams, architecture illustrations, infographics) used throughout the skilling plan documentation.

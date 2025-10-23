@@ -1,3 +1,9 @@
+---
+layout: default
+title: Level 100 Visual Asset Specifications
+nav_exclude: true
+---
+
 # Level 100 Visual Asset Specifications
 
 Purpose: Detailed design briefs for all 20 Level 100 visual assets (Assets 1–20)

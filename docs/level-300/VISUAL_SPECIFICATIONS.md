@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Level 300 Visual Asset Specifications
-parent: Level 300 - Advanced
-nav_order: 0.5
+nav_exclude: true
 ---
 
 # Level 300 Visual Asset Specifications

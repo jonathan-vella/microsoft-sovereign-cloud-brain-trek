@@ -1,3 +1,9 @@
+---
+layout: default
+title: Level 200 Visual Asset Specifications
+nav_exclude: true
+---
+
 # Level 200 Visual Asset Specifications
 
 Purpose: Detailed design briefs for all 20 Level 200 visual assets (Assets 21–40)
