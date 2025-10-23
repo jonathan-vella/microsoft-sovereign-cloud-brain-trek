@@ -821,7 +821,7 @@ Annually:
   - [FedRAMP Compliance Path](./fedramp-compliance.md)
   - [Encryption & Key Management](./encryption-key-management.md)
   - [Security Hardening Patterns](./security-hardening.md)
-  - [Assessment Quiz](./compliance-quiz.md)
+  - [Knowledge Check](./compliance-knowledge-check.md)
 
 - **Supporting Modules:**
   - [Pre-Sales & Solution Design](./presales-solution-design.md)

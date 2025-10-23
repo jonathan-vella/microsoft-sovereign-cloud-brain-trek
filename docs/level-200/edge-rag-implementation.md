@@ -474,7 +474,7 @@ Learn quantization techniques, prompt engineering, batch processing, latency opt
 Implement operational patterns, monitoring strategies, quality metrics, observability, logging, and incident response for production RAG systems.
 
 ### Assessment
-**[Take the Quiz: rag-implementation-quiz.md](./rag-implementation-quiz.md)**
+**[Take the Knowledge Check: rag-implementation-knowledge-check.md](./rag-implementation-knowledge-check.md)**
 
 Validate your understanding with 18 scenario-based questions covering RAG architecture, deployment, optimization, and operations.
 

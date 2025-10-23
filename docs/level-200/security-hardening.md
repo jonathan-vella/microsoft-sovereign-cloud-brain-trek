@@ -963,7 +963,7 @@ The Security Team
 - **GDPR:** [GDPR Implementation & Data Residency](./gdpr-implementation.md)
 - **FedRAMP:** [FedRAMP Compliance Path](./fedramp-compliance.md)
 - **Encryption:** [Encryption & Key Management](./encryption-key-management.md)
-- **Quiz:** [Compliance & Security Quiz](./compliance-quiz.md)
+- **Assessment:** [Compliance & Security Knowledge Check](./compliance-knowledge-check.md)
 
 ---
 

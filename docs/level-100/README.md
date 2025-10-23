@@ -91,7 +91,7 @@ Before starting Level 100, ensure you have:
 - [National Partner Clouds]({{ site.baseurl }}{% link level-100/national-partner-clouds.md %}) - Azure Government, Azure China, and partner-operated sovereign clouds
 
 ✅ **Assessment:**
-- [Cloud Models Knowledge Check]({{ site.baseurl }}{% link level-100/cloud-models-quiz.md %}) - 15 questions testing model selection and technical understanding
+- [Cloud Models Knowledge Check]({{ site.baseurl }}{% link level-100/cloud-models-knowledge-check.md %}) - 15 questions testing model selection and technical understanding
 
 **Key Concepts:**
 - Model differentiation (Public, Private, Partner)
@@ -115,7 +115,7 @@ Before starting Level 100, ensure you have:
 - [Hardware Requirements & Planning]({{ site.baseurl }}{% link level-100/azure-local-hardware.md %}) - Validated hardware, sizing, deployment checklist
 
 ✅ **Assessment:**
-- [Azure Local Knowledge Check]({{ site.baseurl }}{% link level-100/azure-local-quiz.md %}) - 15 questions testing deployment modes and technical concepts
+- [Azure Local Knowledge Check]({{ site.baseurl }}{% link level-100/azure-local-knowledge-check.md %}) - 15 questions testing deployment modes and technical concepts
 
 **Key Concepts:**
 - Connected vs. Disconnected deployment modes
@@ -140,7 +140,7 @@ Before starting Level 100, ensure you have:
 - [Arc-enabled Data Services]({{ site.baseurl }}{% link level-100/azure-arc-data-services.md %}) - SQL MI and PostgreSQL on any infrastructure
 
 ✅ **Assessment:**
-- [Azure Arc Knowledge Check]({{ site.baseurl }}{% link level-100/azure-arc-quiz.md %}) - 12 questions covering all Arc services
+- [Azure Arc Knowledge Check]({{ site.baseurl }}{% link level-100/azure-arc-knowledge-check.md %}) - 12 questions covering all Arc services
 
 **Key Concepts:**
 - Unified control plane for hybrid/multi-cloud
@@ -165,7 +165,7 @@ Before starting Level 100, ensure you have:
 - [Edge RAG Use Cases and Implementation]({{ site.baseurl }}{% link level-100/edge-rag-use-cases.md %}) - Industry scenarios, best practices, ROI
 
 ✅ **Assessment:**
-- [Edge RAG Knowledge Check]({{ site.baseurl }}{% link level-100/edge-rag-quiz.md %}) - 15 questions testing RAG concepts and implementation
+- [Edge RAG Knowledge Check]({{ site.baseurl }}{% link level-100/edge-rag-knowledge-check.md %}) - 15 questions testing RAG concepts and implementation
 
 **Key Concepts:**
 - RAG (Retrieval-Augmented Generation) basics

@@ -519,7 +519,7 @@ Sample Alert Rules:
 - **Deployment:** [RAG Deployment Strategies](./rag-deployment-strategies.md)
 - **Vector Databases:** [Vector Databases for Edge](./vector-databases-edge.md)
 - **LLM Optimization:** [LLM Inference Optimization](./llm-inference-optimization.md)
-- **Assessment:** [RAG Implementation Quiz](./rag-implementation-quiz.md)
+- **Assessment:** [RAG Implementation Knowledge Check](./rag-implementation-knowledge-check.md)
 
 ---
 

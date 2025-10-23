@@ -494,7 +494,7 @@ GET /metrics
 - **Vector Databases:** [Vector Databases & Indexing](./vector-databases-edge.md)
 - **LLM Optimization:** [LLM Inference Optimization](./llm-inference-optimization.md)
 - **Operations:** [RAG Operations & Monitoring](./rag-operations-monitoring.md)
-- **Assessment:** [RAG Implementation Quiz](./rag-implementation-quiz.md)
+- **Assessment:** [RAG Implementation Knowledge Check](./rag-implementation-knowledge-check.md)
 
 ---
 

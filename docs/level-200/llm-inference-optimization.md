@@ -497,7 +497,7 @@ GPU is 18.6x more efficient
 - **Deployment:** [RAG Deployment Strategies](./rag-deployment-strategies.md)
 - **Vector Databases:** [Vector Databases for Edge](./vector-databases-edge.md)
 - **Operations:** [RAG Operations & Monitoring](./rag-operations-monitoring.md)
-- **Assessment:** [RAG Implementation Quiz](./rag-implementation-quiz.md)
+- **Assessment:** [RAG Implementation Knowledge Check](./rag-implementation-knowledge-check.md)
 
 ---
 

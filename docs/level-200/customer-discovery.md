@@ -541,7 +541,7 @@ POST-INTERVIEW FOLLOW-UP
 - **Solution Sizing:** [Solution Sizing & Planning](./solution-sizing.md)
 - **Cost Analysis:** [Cost Estimation & TCO](./cost-estimation.md)
 - **Proposal Writing:** [Proposal Development](./proposal-development.md)
-- **Assessment:** [Pre-Sales Quiz](./presales-quiz.md)
+- **Assessment:** [Pre-Sales & Solution Design Knowledge Check](./presales-knowledge-check.md)
 
 ---
 

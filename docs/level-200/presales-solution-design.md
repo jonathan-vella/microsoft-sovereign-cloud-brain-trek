@@ -764,7 +764,7 @@ Would a hybrid approach work better for you?"
   - [Solution Sizing & Planning](./solution-sizing.md)
   - [Cost Estimation & TCO](./cost-estimation.md)
   - [Proposal Development](./proposal-development.md)
-  - [Assessment Quiz](./presales-quiz.md)
+  - [Knowledge Check](./presales-knowledge-check.md)
 
 - **Supporting Modules:**
   - [Edge RAG Implementation](./edge-rag-implementation.md)

@@ -589,7 +589,7 @@ Confidence Level: [%]
 - **Discovery:** [Customer Discovery](./customer-discovery.md)
 - **Cost Analysis:** [Cost Estimation & TCO](./cost-estimation.md)
 - **Proposals:** [Proposal Development](./proposal-development.md)
-- **Quiz:** [Pre-Sales Quiz](./presales-quiz.md)
+- **Assessment:** [Pre-Sales & Solution Design Knowledge Check](./presales-knowledge-check.md)
 
 ---
 

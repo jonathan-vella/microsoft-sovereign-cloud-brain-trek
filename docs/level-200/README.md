@@ -67,7 +67,7 @@ Explore advanced Azure Local deployment patterns, hardware planning, high-availa
 - [Hardware Planning & Sizing]({{ site.baseurl }}{% link level-200/azure-local-hardware-planning.md %})
 - [High-Availability Patterns]({{ site.baseurl }}{% link level-200/azure-local-ha-patterns.md %})
 - [Advanced Networking Configurations]({{ site.baseurl }}{% link level-200/azure-local-advanced-networking.md %})
-- [Assessment: Deep Dive Quiz]({{ site.baseurl }}{% link level-200/azure-local-deep-dive-quiz.md %})
+- [Knowledge Check]({{ site.baseurl }}{% link level-200/azure-local-deep-dive-knowledge-check.md %})
 
 ---
 
@@ -82,7 +82,7 @@ Master enterprise-scale governance, cost optimization, and security hardening fo
 - [Policy & Governance at Scale]({{ site.baseurl }}{% link level-200/arc-policy-and-governance.md %})
 - [Cost Optimization Strategies]({{ site.baseurl }}{% link level-200/arc-cost-optimization.md %})
 - [Enterprise Deployment Patterns]({{ site.baseurl }}{% link level-200/arc-enterprise-patterns.md %})
-- [Assessment: Advanced Quiz]({{ site.baseurl }}{% link level-200/arc-advanced-quiz.md %})
+- [Knowledge Check]({{ site.baseurl }}{% link level-200/arc-advanced-knowledge-check.md %})
 
 ---
 
@@ -98,7 +98,7 @@ Master production-ready Retrieval-Augmented Generation deployment patterns, LLM 
 - [Vector Databases for Edge]({{ site.baseurl }}{% link level-200/vector-databases-edge.md %})
 - [RAG Deployment Strategies]({{ site.baseurl }}{% link level-200/rag-deployment-strategies.md %})
 - [RAG Operations & Monitoring]({{ site.baseurl }}{% link level-200/rag-operations-monitoring.md %})
-- [Assessment: Implementation Quiz]({{ site.baseurl }}{% link level-200/rag-implementation-quiz.md %})
+- [Knowledge Check]({{ site.baseurl }}{% link level-200/rag-implementation-knowledge-check.md %})
 
 ---
 
@@ -113,7 +113,7 @@ Master customer discovery, solution architecture, sizing methodologies, and busi
 - [Customer Discovery Framework]({{ site.baseurl }}{% link level-200/customer-discovery.md %})
 - [Solution Sizing Methodologies]({{ site.baseurl }}{% link level-200/solution-sizing.md %})
 - [TCO & Cost Estimation]({{ site.baseurl }}{% link level-200/cost-estimation.md %})
-- [Assessment: Sales Scenarios Quiz]({{ site.baseurl }}{% link level-200/presales-quiz.md %})
+- [Knowledge Check]({{ site.baseurl }}{% link level-200/presales-knowledge-check.md %})
 
 ---
 
@@ -129,7 +129,7 @@ Master regulatory compliance frameworks (GDPR, FedRAMP), encryption strategies, 
 - [FedRAMP Compliance]({{ site.baseurl }}{% link level-200/fedramp-compliance.md %})
 - [Encryption & Key Management]({{ site.baseurl }}{% link level-200/encryption-key-management.md %})
 - [Security Hardening Practices]({{ site.baseurl }}{% link level-200/security-hardening.md %})
-- [Assessment: Compliance Quiz]({{ site.baseurl }}{% link level-200/compliance-quiz.md %})
+- [Knowledge Check]({{ site.baseurl }}{% link level-200/compliance-knowledge-check.md %})
 
 ---
 

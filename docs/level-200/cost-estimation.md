@@ -700,7 +700,7 @@ Strategic Value (Intangible):
 - **Discovery:** [Customer Discovery](./customer-discovery.md)
 - **Sizing:** [Solution Sizing & Planning](./solution-sizing.md)
 - **Proposals:** [Proposal Development](./proposal-development.md)
-- **Quiz:** [Pre-Sales Quiz](./presales-quiz.md)
+- **Assessment:** [Pre-Sales & Solution Design Knowledge Check](./presales-knowledge-check.md)
 
 ---
 

@@ -669,7 +669,7 @@ PREVENTION CHECKLIST:
 - **FedRAMP:** [FedRAMP Compliance Path](./fedramp-compliance.md)
 - **Encryption:** [Encryption & Key Management](./encryption-key-management.md)
 - **Security:** [Security Hardening Patterns](./security-hardening.md)
-- **Quiz:** [Compliance & Security Quiz](./compliance-quiz.md)
+- **Assessment:** [Compliance & Security Knowledge Check](./compliance-knowledge-check.md)
 
 ---
 

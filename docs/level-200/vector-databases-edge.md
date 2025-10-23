@@ -482,7 +482,7 @@ Data Health:
 - **Deployment:** [RAG Deployment Strategies](./rag-deployment-strategies.md)
 - **LLM Optimization:** [LLM Inference Optimization](./llm-inference-optimization.md)
 - **Operations:** [RAG Operations & Monitoring](./rag-operations-monitoring.md)
-- **Assessment:** [RAG Implementation Quiz](./rag-implementation-quiz.md)
+- **Assessment:** [RAG Implementation Knowledge Check](./rag-implementation-knowledge-check.md)
 
 ---
 
