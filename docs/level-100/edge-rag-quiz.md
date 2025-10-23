@@ -19,6 +19,12 @@ Test your understanding of Edge RAG concepts, architecture, and implementation.
 - **Time Estimate:** 15-20 minutes
 - **Format:** Multiple choice (A/B/C/D)
 
+**Tips:**
+- Read each question carefully
+- Consider real-world scenarios
+- Review module content if unsure
+- Check your answers against explanations below
+
 ---
 
 ## Questions
@@ -355,10 +361,36 @@ The largest ROI typically comes from time savings - employees finding informatio
 
 ## Scoring Guide
 
-**12-15 correct (80-100%):** ✅ **Excellent!** Strong grasp of Edge RAG concepts.  
-**10-11 correct (67-79%):** ⚠️ **Good, but review needed.** Focus on architecture and deployment.  
-**7-9 correct (47-66%):** ❌ **More study required.** Review all module content.  
-**0-6 correct (0-46%):** ❌ **Significant review needed.** Start from Edge RAG Concepts.
+**Calculate your score:**
+- Count the number of correct answers
+- Divide by 15 and multiply by 100 for percentage
+
+**Score Interpretation:**
+
+**12-15 correct (80-100%):** ✅ **Excellent!** You have a strong understanding of Edge RAG concepts.
+- Ready to proceed to next level or module
+- Consider reviewing missed questions for completeness
+
+**10-11 correct (67-79%):** ⚠️ **Good progress, but review needed**
+- Review the module content, especially areas where you missed questions
+- Pay attention to RAG architecture and deployment patterns
+- Revisit fundamentals like embeddings and vector databases
+- Retake quiz after review
+
+**7-9 correct (47-66%):** ❌ **More study required**
+- Thoroughly review all module content
+- Focus on core concepts: RAG fundamentals, edge deployment benefits, architecture
+- Review customer scenarios to understand real-world applications
+- Consider hands-on practice if available
+- Retake quiz after comprehensive review
+
+**0-6 correct (0-46%):** ❌ **Significant review needed**
+- Start from the beginning with [Edge RAG Concepts](edge-rag-concepts)
+- Read each sub-page carefully: RAG Fundamentals, Architecture, Use Cases
+- Take notes on key concepts
+- Review all scenarios
+- Consider additional resources on RAG and LLMs
+- Retake quiz only after thorough review
 
 ---
 
@@ -383,22 +415,39 @@ The largest ROI typically comes from time savings - employees finding informatio
 
 ## Next Steps
 
-**After passing:**
+**After passing this quiz:**
 
-1. ✅ **Congratulations!** You've completed Level 100 foundation content!
+1. **✅ Congratulations!** You've completed all Level 100 foundation modules!
 
-2. 📚 **Review other Level 100 modules if needed:**
+2. **📚 Review other Level 100 modules if needed:**
    - [Digital Sovereignty](digital-sovereignty)
    - [Sovereign Cloud Models](sovereign-cloud-models)
    - [Azure Local Overview](azure-local-overview)
    - [Azure Arc Introduction](azure-arc-intro)
 
-3. 🎯 **Prepare for Level 200:** Intermediate deep dives (coming soon)
+3. **🎯 Prepare for Level 200:**
+   - Level 200 provides intermediate deep dives into architecture and implementation
 
-4. 🌐 **Explore hands-on resources:**
+4. **🌐 Explore external resources:**
    - [LangChain Documentation](https://python.langchain.com/)
-   - [LlamaIndex](https://gpt-index.readthedocs.io/)
+   - [LlamaIndex Documentation](https://gpt-index.readthedocs.io/)
    - [Hugging Face](https://huggingface.co/)
+   - [Azure AI Documentation](https://learn.microsoft.com/azure/ai-services/)
+
+5. **💡 Consider hands-on practice:**
+   - Build a simple RAG system locally
+   - Experiment with different embedding models
+   - Explore vector database options
+
+---
+
+## Retake Policy
+
+You may retake this quiz as many times as needed. We recommend:
+- Reviewing missed topics before retaking
+- Waiting at least 1 hour between attempts
+- Reading explanations for all questions, not just missed ones
+- Taking notes on key concepts
 
 ---
 

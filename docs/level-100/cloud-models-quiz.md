@@ -12,13 +12,18 @@ Test your understanding of Microsoft's three sovereign cloud models with this co
 
 ---
 
-## Instructions
+## Quiz Instructions
 
-- Answer all 15 questions
-- No time limit - take as long as you need
-- Answers are provided at the bottom of the page
-- Aim for 80% (12/15) or higher to demonstrate mastery
-- Review related content for any questions you miss
+- **Total Questions:** 15
+- **Passing Score:** 80% (12 of 15 correct)
+- **Time Estimate:** 20-25 minutes
+- **Format:** Multiple choice (A/B/C/D)
+
+**Tips:**
+- Read each question carefully
+- Consider real-world scenarios
+- Review module content if unsure
+- Check your answers against explanations below
 
 ---
 

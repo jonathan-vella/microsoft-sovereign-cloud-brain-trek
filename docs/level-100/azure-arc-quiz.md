@@ -19,6 +19,12 @@ Test your understanding of Azure Arc concepts, services, and use cases.
 - **Time Estimate:** 15-20 minutes
 - **Format:** Multiple choice (A/B/C/D)
 
+**Tips:**
+- Read each question carefully
+- Consider real-world scenarios
+- Review module content if unsure
+- Check your answers against explanations below
+
 ---
 
 ## Questions
@@ -289,10 +295,36 @@ Azure Arc itself is free - there's no charge to connect servers, Kubernetes clus
 
 ## Scoring Guide
 
-**10-12 correct (83-100%):** ✅ **Excellent!** Strong understanding of Azure Arc.  
-**8-9 correct (67-82%):** ⚠️ **Good, but review needed.** Focus on Arc services differences.  
-**6-7 correct (50-66%):** ❌ **More study required.** Review all module content.  
-**0-5 correct (0-49%):** ❌ **Significant review needed.** Start from Azure Arc Introduction.
+**Calculate your score:**
+- Count the number of correct answers
+- Divide by 12 and multiply by 100 for percentage
+
+**Score Interpretation:**
+
+**10-12 correct (83-100%):** ✅ **Excellent!** You have a strong understanding of Azure Arc concepts.
+- Ready to proceed to next module
+- Consider reviewing missed questions for completeness
+
+**8-9 correct (67-82%):** ⚠️ **Good progress, but review needed**
+- Review the module content, especially areas where you missed questions
+- Pay attention to differences between Arc services
+- Revisit Azure Arc fundamentals and data sovereignty concepts
+- Retake quiz after review
+
+**6-7 correct (50-66%):** ❌ **More study required**
+- Thoroughly review all module content
+- Focus on core concepts: Arc services, data residency, multi-cloud management
+- Review customer scenarios to understand real-world applications
+- Consider hands-on practice if available
+- Retake quiz after comprehensive review
+
+**0-5 correct (0-49%):** ❌ **Significant review needed**
+- Start from the beginning with [Azure Arc Introduction](azure-arc-intro)
+- Read each sub-page carefully
+- Take notes on key concepts
+- Review all use case scenarios
+- Consider additional Microsoft Learn resources
+- Retake quiz only after thorough review
 
 ---
 
@@ -316,10 +348,36 @@ Azure Arc itself is free - there's no charge to connect servers, Kubernetes clus
 
 ## Next Steps
 
-**After passing:**
-1. ✅ Continue to [Edge RAG Concepts →](edge-rag-concepts)
-2. 📚 Review [Azure Local Overview](azure-local-overview) if you haven't
-3. 🌐 Explore [Azure Arc Jumpstart](https://azurearcjumpstart.io/) for hands-on labs
+**After passing this quiz:**
+
+1. **✅ Celebrate your achievement!** You've completed Azure Arc foundational concepts.
+
+2. **📚 Continue to next module:**
+   - [Edge RAG Concepts →](edge-rag-concepts)
+
+3. **� Review related concepts:**
+   - [Azure Local Overview](azure-local-overview)
+   - [Digital Sovereignty Fundamentals](digital-sovereignty)
+
+4. **🌐 Explore external resources:**
+   - [Azure Arc Documentation](https://learn.microsoft.com/azure/azure-arc/)
+   - [Azure Arc Jumpstart](https://azurearcjumpstart.io/)
+   - [Azure Arc Tech Community](https://techcommunity.microsoft.com/t5/azure-arc/bd-p/AzureArc)
+
+5. **💡 Consider hands-on practice:**
+   - Set up Arc-enabled servers in a lab
+   - Deploy Arc-enabled Kubernetes cluster
+   - Explore Arc Data Services
+
+---
+
+## Retake Policy
+
+You may retake this quiz as many times as needed. We recommend:
+- Reviewing missed topics before retaking
+- Waiting at least 1 hour between attempts
+- Reading explanations for all questions, not just missed ones
+- Taking notes on key concepts
 
 ---
 
