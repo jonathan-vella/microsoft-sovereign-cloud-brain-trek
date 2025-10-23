@@ -1,7 +1,34 @@
 
 
 
-## [Unreleased] - 2025-10-22
+## [Unreleased] - 2025-10-23
+
+### Added - External Links Handler
+
+#### JavaScript Enhancement for Better UX
+- **Created `docs/assets/js/external-links.js`** - Automatic external link handler
+  - Opens external links in new tab (`target="_blank"`)
+  - Adds security attributes (`rel="noopener noreferrer"`)
+  - Detects links by hostname comparison
+  - Preserves internal navigation behavior
+  - Adds `external-link` CSS class for styling
+- **Created `docs/_includes/head_custom.html`** - Jekyll custom head include
+  - Loads external links JavaScript with defer attribute
+  - Integrates seamlessly with Just the Docs theme
+- **Created `docs/assets/js/README.md`** - Feature documentation
+  - Explains functionality and security considerations
+  - Provides testing and maintenance guidelines
+
+#### Benefits
+- ✅ Automatically handles 486+ external links across all documentation
+- ✅ No changes needed to existing markdown files
+- ✅ Works for all future links added to the site
+- ✅ Implements security best practices
+- ✅ Improves user experience by keeping documentation accessible
+
+---
+
+## [2025-10-22]
 
 ### Added - GitHub Pages Deployment Configuration
 
