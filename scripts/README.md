@@ -1,82 +1,275 @@
-# Project Automation Scripts
+# Project Automation Scripts# Project Automation Scripts# Project Automation Scripts
 
-This folder contains PowerShell scripts to automate common repository maintenance tasks.
 
-## Available Scripts
 
-### Add-Contributor.ps1
+This folder previously contained PowerShell scripts for repository maintenance.
 
-Automates adding new contributors to the project by updating both the CODEOWNERS file and CONTRIBUTING.md file.
 
-#### Features
+
+> **All automation has been migrated to GitHub Actions workflows.**  This folder previously contained PowerShell scripts for repository maintenance.This folder previously contained PowerShell scripts for repository maintenance.
+
+> See [AUTOMATION.md](../AUTOMATION.md) for monthly maintenance procedures.
+
+
+
+---
+
+> **All automation has been migrated to GitHub Actions workflows.**> **Note:** All automation has been migrated to GitHub Actions workflows in `.github/workflows/`.
+
+## Active Automation
+
+> See [AUTOMATION.md](../AUTOMATION.md) for monthly maintenance procedures.> See [AUTOMATION.md](../AUTOMATION.md) for monthly maintenance procedures.
+
+All automation now runs via GitHub Actions in `.github/workflows/`:
+
+
+
+- **Link Validation** → `.github/workflows/link-check.yml`
+
+  - Validates all internal and external links---## GitHub Actions Workflows
+
+  - Manual trigger only
+
+  - Creates issue if broken links found
+
+
+
+- **Content Freshness Check** → `.github/workflows/content-freshness.yml`## Active AutomationActive automation (replaces local scripts):
+
+  - Identifies stale content (180+ days old)
+
+  - Manual trigger only- **Link Validation** → `.github/workflows/link-check.yml` (manual trigger)
+
+  - Reports content needing updates
+
+All automation now runs via GitHub Actions in `.github/workflows/`:- **Content Freshness** → `.github/workflows/content-freshness.yml` (manual trigger)
+
+- **Microsoft Learn Link Monitor** → `.github/workflows/ms-learn-monitor.yml`
+
+  - Checks Microsoft Learn URLs for changes- **Microsoft Learn Monitoring** → `.github/workflows/ms-learn-monitor.yml` (manual trigger)
+
+  - Manual trigger only
+
+  - Alerts on deprecated/moved content- **Link Validation** → `.github/workflows/link-check.yml`
+
+
+
+---  - Validates all internal and external links## Previously Available Scripts
+
+
+
+## Running Automation  - Manual trigger only
+
+
+
+Trigger workflows from GitHub Actions tab:  - Creates issue if broken links found### Add-Contributor.ps1 (Removed - October 2025)
+
+
+
+1. Go to **Actions** tab in repository
+
+2. Select desired workflow
+
+3. Click **Run workflow**- **Content Freshness Check** → `.github/workflows/content-freshness.yml`**Reason for removal:** Manual contributor management preferred; script unused.
+
+4. View results and any created issues
+
+  - Identifies stale content (180+ days old)
+
+---
+
+  - Manual trigger only**To add contributors now:**
+
+## Local Development
+
+  - Reports content needing updates
+
+For local validation before committing:
 
 - ✅ Updates CODEOWNERS with review permissions for documentation paths
-- ✅ Adds contributor to CONTRIBUTING.md Contributors section
-- ✅ Creates automatic backups before making changes
-- ✅ Validates file existence and changes before applying
-- ✅ Provides clear summary and next steps
-- ✅ Supports optional permissions for assets and workflows
 
-#### Basic Usage
+```bash
 
-```powershell
-# Add a standard documentation contributor
-.\scripts\Add-Contributor.ps1 -GitHubUsername "sohamda" -FullName "Soham Da"
-```
+# Install markdownlint- **Microsoft Learn Link Monitor** → `.github/workflows/ms-learn-monitor.yml`- ✅ Adds contributor to CONTRIBUTING.md Contributors section
 
-#### Advanced Usage
+npm install -g markdownlint-cli
 
-```powershell
-# Add contributor with custom role
+  - Checks Microsoft Learn URLs for changes- ✅ Creates automatic backups before making changes
+
+# Check markdown syntax
+
+markdownlint docs/**/*.md  - Manual trigger only- ✅ Validates file existence and changes before applying
+
+
+
+# Preview Jekyll site locally (requires Ruby + Jekyll)  - Alerts on deprecated/moved content- ✅ Provides clear summary and next steps
+
+bundle exec jekyll serve
+
+```- ✅ Supports optional permissions for assets and workflows
+
+
+
+------
+
+
+
+## Adding Contributors#### Basic Usage
+
+
+
+To add contributors to the project:## Running Automation
+
+
+
+1. **Update `.github/CODEOWNERS`**```powershell
+
+
+
+   ```plaintextTrigger workflows from GitHub Actions tab:# Add a standard documentation contributor
+
+   /docs/ @jonathan-vella @new-contributor
+
+   ```.\scripts\Add-Contributor.ps1 -GitHubUsername "sohamda" -FullName "Soham Da"
+
+
+
+2. **Update `CONTRIBUTING.md`**1. Go to **Actions** tab in repository```
+
+
+
+   ```markdown2. Select desired workflow
+
+   - [Contributor Name](https://github.com/username) - Role
+
+   ```3. Click **Run workflow**#### Advanced Usage
+
+
+
+3. **Commit changes**4. View results and any created issues
+
+
+
+   ```bash```powershell
+
+   git add .github/CODEOWNERS CONTRIBUTING.md
+
+   git commit -m "Add [name] as contributor"---# Add contributor with custom role
+
+   ```
+
 .\scripts\Add-Contributor.ps1 `
-    -GitHubUsername "johndoe" `
+
+---
+
+## Local Development    -GitHubUsername "johndoe" `
+
+## Migration History
+
     -FullName "John Doe" `
-    -Role "Technical Reviewer"
 
-# Add contributor with asset review permissions
-.\scripts\Add-Contributor.ps1 `
-    -GitHubUsername "janedoe" `
+**October 2025:**
+
+- Removed `Check-BrokenLinks.ps1` (superseded by `link-check.yml` workflow)For local validation before committing:    -Role "Technical Reviewer"
+
+- Removed `Fix-ReadmeLinks.ps1` (one-time fix completed)
+
+- All functionality preserved in GitHub Actions workflows
+
+
+
+---```bash# Add contributor with asset review permissions
+
+
+
+**Last Updated:** October 23, 2025# Install markdownlint.\scripts\Add-Contributor.ps1 `
+
+
+npm install -g markdownlint-cli    -GitHubUsername "janedoe" `
+
     -FullName "Jane Doe" `
-    -Role "Visual Designer" `
-    -IncludeAssets
 
-# Add contributor with workflow review permissions
-.\scripts\Add-Contributor.ps1 `
-    -GitHubUsername "alexsmith" `
+# Check markdown syntax    -Role "Visual Designer" `
+
+markdownlint docs/**/*.md    -IncludeAssets
+
+
+
+# Preview Jekyll site locally (requires Ruby + Jekyll)# Add contributor with workflow review permissions
+
+bundle exec jekyll serve.\scripts\Add-Contributor.ps1 `
+
+```    -GitHubUsername "alexsmith" `
+
     -FullName "Alex Smith" `
-    -Role "DevOps Engineer" `
+
+---    -Role "DevOps Engineer" `
+
     -IncludeWorkflows
-```
 
-#### Parameters
+## Adding Contributors```
 
-| Parameter | Required | Default | Description |
-|-----------|----------|---------|-------------|
-| `GitHubUsername` | Yes | - | GitHub username (without @) |
-| `FullName` | Yes | - | Full name for display in CONTRIBUTING.md |
+
+
+To add contributors to the project:#### Parameters
+
+
+
+1. **Update `.github/CODEOWNERS`:**| Parameter | Required | Default | Description |
+
+   ```|-----------|----------|---------|-------------|
+
+   /docs/ @jonathan-vella @new-contributor| `GitHubUsername` | Yes | - | GitHub username (without @) |
+
+   ```| `FullName` | Yes | - | Full name for display in CONTRIBUTING.md |
+
 | `Role` | No | "Content Contributor (Documentation)" | Role description |
-| `IncludeAssets` | No | False | Grant review permissions for /docs/assets/ |
-| `IncludeWorkflows` | No | False | Grant review permissions for /.github/workflows/ |
 
-#### What Gets Updated
+2. **Update `CONTRIBUTING.md`:**| `IncludeAssets` | No | False | Grant review permissions for /docs/assets/ |
 
-**CODEOWNERS File:**
-- `/docs/` - Documentation content
-- `/docs/level-100/` - Level 100 content
-- `/docs/level-200/` - Level 200 content
-- `/docs/level-300/` - Level 300 content
+   ```markdown| `IncludeWorkflows` | No | False | Grant review permissions for /.github/workflows/ |
+
+   - [Contributor Name](https://github.com/username) - Role
+
+   ```#### What Gets Updated
+
+
+
+3. **Commit changes:****CODEOWNERS File:**
+
+   ```bash- `/docs/` - Documentation content
+
+   git add .github/CODEOWNERS CONTRIBUTING.md- `/docs/level-100/` - Level 100 content
+
+   git commit -m "Add [name] as contributor"- `/docs/level-200/` - Level 200 content
+
+   ```- `/docs/level-300/` - Level 300 content
+
 - `/docs/resources/` - Resources folder
-- `/CHANGELOG.md` - Changelog file
+
+---- `/CHANGELOG.md` - Changelog file
+
 - `/docs/README.md` - Documentation README
-- `/docs/assets/` - Visual assets (if `-IncludeAssets` specified)
+
+## Migration History- `/docs/assets/` - Visual assets (if `-IncludeAssets` specified)
+
 - `/.github/workflows/` - GitHub Actions (if `-IncludeWorkflows` specified)
 
-**CONTRIBUTING.md File:**
-- Adds entry to Contributors section with name, GitHub link, and role
+**October 2025:**
+
+- Removed `Check-BrokenLinks.ps1` (superseded by `link-check.yml` workflow)**CONTRIBUTING.md File:**
+
+- Removed `Fix-ReadmeLinks.ps1` (one-time fix completed)- Adds entry to Contributors section with name, GitHub link, and role
+
+- All functionality preserved in GitHub Actions workflows
 
 #### Backups
 
+---
+
 The script automatically creates timestamped backups before making changes:
+
+**Last Updated:** October 23, 2025
 
 ```
 .github/CODEOWNERS.backup.20251022_143015
