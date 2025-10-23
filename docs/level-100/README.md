@@ -63,7 +63,7 @@ Before starting Level 100, ensure you have:
 - [Digital Sovereignty Overview]({{ site.baseurl }}{% link level-100/digital-sovereignty.md %}) - Core concepts, principles, and customer scenarios
 
 **Deep Dive Topics:**
-- [Microsoft's European Digital Commitments]({{ site.baseurl }}{% link level-100/european-commitments.md %}) - The 6 commitments and EU Data Boundary
+- [Microsoft's European Digital Commitments]({{ site.baseurl }}{% link level-100/european-commitments.md %}) - The 5 commitments and EU Data Boundary
 - [Regulatory Requirements Overview]({{ site.baseurl }}{% link level-100/regulatory-overview.md %}) - GDPR, FedRAMP, HIPAA, PCI DSS, ITAR
 - [Data Residency vs. Sovereignty]({{ site.baseurl }}{% link level-100/data-residency-concepts.md %}) - Definitions and Azure implementation
 - [Operational Sovereignty]({{ site.baseurl }}{% link level-100/operational-sovereignty.md %}) - Control plane concepts and Azure Local modes
