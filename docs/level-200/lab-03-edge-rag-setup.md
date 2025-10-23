@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "Lab 3: Edge RAG Setup"
-parent: Level 200 - Intermediate
-nav_order: 13
+parent: Hands-On Labs Overview
+nav_order: 3
 ---
 
 # Lab 3: Edge RAG Setup

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "Lab 1: Azure Local Deployment"
-parent: Level 200 - Intermediate
-nav_order: 11
+parent: Hands-On Labs Overview
+nav_order: 1
 ---
 
 # Lab 1: Azure Local Deployment

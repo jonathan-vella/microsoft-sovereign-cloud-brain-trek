@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "Lab 2: Azure Arc Onboarding"
-parent: Level 200 - Intermediate
-nav_order: 12
+parent: Hands-On Labs Overview
+nav_order: 2
 ---
 
 # Lab 2: Azure Arc Onboarding

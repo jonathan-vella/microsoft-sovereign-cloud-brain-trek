@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "Lab 5: Monitoring & Observability"
-parent: Level 200 - Intermediate
-nav_order: 15
+parent: Hands-On Labs Overview
+nav_order: 5
 ---
 
 # Lab 5: Monitoring & Observability

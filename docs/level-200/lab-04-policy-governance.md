@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "Lab 4: Policy & Governance"
-parent: Level 200 - Intermediate
-nav_order: 14
+parent: Hands-On Labs Overview
+nav_order: 4
 ---
 
 # Lab 4: Policy & Governance

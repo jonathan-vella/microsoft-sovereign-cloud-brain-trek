@@ -3,6 +3,7 @@ layout: default
 title: Hands-On Labs Overview
 parent: Level 200 - Intermediate
 nav_order: 10
+has_children: true
 ---
 
 # Module 6: Hands-On Labs
