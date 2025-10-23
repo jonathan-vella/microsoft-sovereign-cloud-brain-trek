@@ -423,7 +423,7 @@ When a node fails, the cluster's high availability mechanisms automatically rest
 
 ## Next Steps
 
-**After passing this quiz:**
+**After completing this assessment:**
 
 1. **✅ Celebrate your achievement!** You've completed Azure Local foundational concepts.
 
@@ -447,7 +447,7 @@ When a node fails, the cluster's high availability mechanisms automatically rest
 
 ## Retake Policy
 
-You may retake this quiz as many times as needed. We recommend:
+You may retake this assessment as many times as needed. We recommend:
 - Reviewing missed topics before retaking
 - Waiting at least 1 hour between attempts
 - Reading explanations for all questions, not just missed ones

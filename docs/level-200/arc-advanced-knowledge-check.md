@@ -1488,7 +1488,7 @@ With Method B (Proportional):
 
 ## Next Steps
 
-**After passing this quiz:**
+**After completing this assessment:**
 
 1. **✅ Celebrate your achievement!** You've mastered Arc advanced management concepts.
 

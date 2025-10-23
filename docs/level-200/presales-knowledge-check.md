@@ -565,7 +565,7 @@ D) Plan the reference call for 6 months post-go-live
 
 ## Next Steps
 
-**After passing this quiz:**
+**After completing this assessment:**
 
 1. **✅ Congratulations!** You're ready for customer-facing pre-sales engagements.
 

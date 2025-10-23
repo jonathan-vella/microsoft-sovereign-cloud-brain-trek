@@ -752,7 +752,7 @@ D) Skip improvements, maintain current performance
 
 ## Next Steps
 
-**After passing this quiz:**
+**After completing this assessment:**
 
 1. **✅ Congratulations!** You're ready for production edge RAG implementation.
 

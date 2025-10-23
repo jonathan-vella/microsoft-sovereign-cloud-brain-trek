@@ -501,7 +501,7 @@ Variable workloads (A) and short-term projects (B) benefit from public cloud's p
 
 ## Next Steps
 
-After completing this quiz:
+After completing this assessment:
 
 ### 1. 🎯 Celebrate Your Progress
 - Level 100 Cloud Models foundation complete
@@ -533,7 +533,7 @@ After completing this quiz:
 
 ## Retake Policy
 
-This is a Level 100 foundational assessment. You may retake this quiz as many times as needed to achieve mastery:
+This is a Level 100 foundational assessment. You may retake this assessment as many times as needed to achieve mastery:
 
 - ✅ **No waiting period** - Retake immediately after review
 - ✅ **Unlimited attempts** - Practice until you achieve 80%+

@@ -415,7 +415,7 @@ The largest ROI typically comes from time savings - employees finding informatio
 
 ## Next Steps
 
-**After passing this quiz:**
+**After completing this assessment:**
 
 1. **✅ Congratulations!** You've completed all Level 100 foundation modules!
 
@@ -443,7 +443,7 @@ The largest ROI typically comes from time savings - employees finding informatio
 
 ## Retake Policy
 
-You may retake this quiz as many times as needed. We recommend:
+You may retake this assessment as many times as needed. We recommend:
 - Reviewing missed topics before retaking
 - Waiting at least 1 hour between attempts
 - Reading explanations for all questions, not just missed ones

@@ -19,7 +19,7 @@ Test your expertise in advanced Azure Local deployments, multi-site architecture
 **Time Estimate:** 35-45 minutes  
 **Format:** Expert-level scenario-based questions
 
-This quiz covers:
+This assessment covers:
 - Multi-site deployment patterns and architecture decisions
 - Advanced networking (hub-and-spoke, mesh, hybrid topologies)
 - Air-gapped operations and certificate management
@@ -993,7 +993,7 @@ D) Time-based access restrictions
 
 ## Next Steps
 
-After completing this quiz:
+After completing this assessment:
 
 ### 1. 🎯 Continue Learning
 - **Next Quiz:** [Zero Trust & Arc Advanced Quiz](zero-trust-arc-quiz) *(Coming soon)*

@@ -19,7 +19,7 @@ Test your expertise in production Edge RAG deployment, MLOps workflows, performa
 **Time Estimate:** 30-40 minutes  
 **Format:** Expert-level scenario-based questions
 
-This quiz covers:
+This assessment covers:
 - Production RAG architecture and deployment patterns
 - MLOps workflows for edge AI models
 - Performance optimization techniques
@@ -1267,10 +1267,10 @@ Cons:
 
 ## Next Steps
 
-After completing this quiz:
+After completing this assessment:
 
 ### 1. 🎯 Course Completion
-- **Congratulations!** You've completed all Level 300 quizzes
+- **Congratulations!** You've completed all Level 300 assessments
 - **Previous Quiz:** [Zero Trust & Troubleshooting Quiz](zero-trust-troubleshooting-quiz)
 - **Back to Start:** [Level 300 Overview](README)
 

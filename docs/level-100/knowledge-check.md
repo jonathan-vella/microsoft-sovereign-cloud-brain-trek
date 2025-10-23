@@ -8,7 +8,7 @@ nav_order: 6
 # Level 100 Knowledge Check
 {: .no_toc }
 
-Test your understanding of Digital Sovereignty fundamentals with this knowledge check. This quiz covers concepts from all Level 100 modules.
+Test your understanding of Digital Sovereignty fundamentals with this knowledge check. This assessment covers concepts from all Level 100 modules.
 
 ---
 

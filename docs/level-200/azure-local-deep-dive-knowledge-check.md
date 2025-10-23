@@ -277,7 +277,7 @@ D) One 6-node cluster split across two sites using active-active configuration.
 
 ## Next Steps
 
-**After passing this quiz:**
+**After completing this assessment:**
 
 1. **✅ Celebrate your achievement!** You've mastered Azure Local advanced architecture.
 

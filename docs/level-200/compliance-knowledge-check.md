@@ -800,7 +800,7 @@ Zero-trust is essential for sovereign cloud deployments:
 
 ## Next Steps
 
-**After passing this quiz:**
+**After completing this assessment:**
 
 1. **✅ Celebrate your achievement!** You've mastered compliance and security patterns.
 

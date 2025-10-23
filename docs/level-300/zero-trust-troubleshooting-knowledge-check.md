@@ -19,7 +19,7 @@ Test your expertise in Zero Trust security architecture, implementation patterns
 **Time Estimate:** 30-40 minutes  
 **Format:** Expert-level scenario-based questions
 
-This quiz covers:
+This assessment covers:
 - Zero Trust principles and architecture for sovereign clouds
 - Identity and access management with conditional access
 - Advanced troubleshooting methodologies and tools
@@ -1104,10 +1104,10 @@ D) Never; handle everything internally
 
 ## Next Steps
 
-After completing this quiz:
+After completing this assessment:
 
 ### 1. 🎯 Continue Learning
-- **Next Quiz:** [Edge RAG Production Quiz](edge-rag-production-quiz) *(Coming soon)*
+- **Next Assessment:** [Edge RAG Production Knowledge Check](edge-rag-production-knowledge-check)
 - **Previous Quiz:** [Azure Local Advanced Quiz](azure-local-advanced-quiz)
 - **Hands-On:** Complete [Zero Trust Lab](zero-trust-lab)
 
