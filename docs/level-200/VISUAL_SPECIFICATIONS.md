@@ -55,7 +55,7 @@ Acceptance Criteria:
 - [ ] Alt text provided in final SVG
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/networking
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-architecture?view=azloc-2509
 - Adapt SET examples and include RDMA notes from system requirements
 
 ---
@@ -131,7 +131,7 @@ Acceptance Criteria:
 - [ ] All endpoints have brief cost guidance
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/deploy/validate-hardware
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-checklist?view=azloc-2509
 
 ---
 
@@ -165,7 +165,7 @@ Acceptance Criteria:
 - [ ] Links to policy definition examples included
 
 Microsoft Learn Adaptation:
-- Arc Policy: https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview-arc-server-policy
+- Arc Policy: https://learn.microsoft.com/en-us/azure/azure-arc/servers/security-overview
 - Azure Policy overview: https://learn.microsoft.com/en-us/azure/governance/policy/overview
 
 ---
@@ -228,7 +228,7 @@ Acceptance Criteria:
 - [ ] Resilience and offline scenarios noted
 
 Microsoft Learn Adaptation:
-- Arc at scale: https://learn.microsoft.com/en-us/azure/azure-arc/servers/onboard-at-scale
+- Arc at scale: https://learn.microsoft.com/en-us/azure/azure-arc/servers/onboard-group-policy-powershell
 
 ---
 
@@ -300,7 +300,7 @@ Acceptance Criteria:
 - [ ] Clear recommendations for edge configurations
 
 Microsoft Learn Adaptation:
-- LLM optimization references: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/evaluation-measures
+- LLM optimization references: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/model-versions
 
 ---
 
@@ -329,7 +329,7 @@ Acceptance Criteria:
 - [ ] Performance indicators and cost notes included
 
 Microsoft Learn Adaptation:
-- Vector DB comparison reference: https://learn.microsoft.com/en-us/semantic-kernel/memories/vector-db-search
+- Vector DB comparison reference: https://learn.microsoft.com/en-us/semantic-kernel/concepts/vector-store-connectors/
 
 ---
 
@@ -358,7 +358,7 @@ Acceptance Criteria:
 - [ ] Pros/cons bullets present
 
 Microsoft Learn Adaptation:
-- RAG patterns: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/retrieval-augmented-generation
+- RAG patterns: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data
 
 ---
 

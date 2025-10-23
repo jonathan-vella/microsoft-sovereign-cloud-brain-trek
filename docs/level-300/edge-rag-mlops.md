@@ -19,7 +19,7 @@ Implement machine learning operations for managing model lifecycle in production
 > *MLOps Pipeline for Edge RAG (Asset 54)*  
 > End-to-end workflow: training, validation, deployment, monitoring, retraining triggers, rollback procedures.  
 > **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 54  
-> **Source to adapt:** [MLOps for edge AI](https://learn.microsoft.com/en-us/azure/machine-learning/concept-edge-mlops)
+> **Source to adapt:** [MLOps for edge AI](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment)
 
 ---
 

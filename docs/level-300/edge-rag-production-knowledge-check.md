@@ -1289,7 +1289,7 @@ After completing this assessment:
 - [Azure Machine Learning MLOps](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment)
 - [RAG Best Practices](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)
 - [Vector Search Optimization](https://learn.microsoft.com/en-us/azure/search/vector-search-overview)
-- [Edge AI Deployment](https://learn.microsoft.com/en-us/azure/azure-local/manage/edge-inference-optimization)
+- [Edge AI Deployment](https://learn.microsoft.com/en-us/azure/azure-local/manage/azure-benefits?view=azloc-2509)
 
 ### 5. ✋ Need Help?
 - Review [CONTRIBUTING.md](../../CONTRIBUTING.md)

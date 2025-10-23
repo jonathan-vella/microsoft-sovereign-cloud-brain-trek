@@ -1504,7 +1504,7 @@ With Method B (Proportional):
    - [Arc Enterprise Patterns](arc-enterprise-patterns)
 
 4. **🌐 Explore external resources:**
-   - [Azure Arc Best Practices](https://learn.microsoft.com/azure/azure-arc/best-practices/)
+   - [Azure Arc Best Practices](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
    - [Azure Policy Documentation](https://learn.microsoft.com/azure/governance/policy/)
    - [Arc Jumpstart](https://azurearcjumpstart.io/)
 

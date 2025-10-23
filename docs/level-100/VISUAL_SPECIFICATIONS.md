@@ -57,7 +57,7 @@ Acceptance Criteria:
 - [ ] Alt text describes progression and color meaning
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-options
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509
 - Reference: https://learn.microsoft.com/en-us/industry/sovereign-cloud/
 - Adapt Azure Local and sovereignty documentation concepts
 
@@ -309,7 +309,7 @@ Acceptance Criteria:
 
 Microsoft Learn Adaptation:
 - Reference: https://learn.microsoft.com/en-us/azure/azure-local/overview
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/disconnected-scenarios
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2509
 - Based on operational sovereignty concepts
 
 ---
@@ -367,8 +367,8 @@ Acceptance Criteria:
 - [ ] Deployment architecture differences evident
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-options
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/disconnected-scenarios
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2509
 - Based on official deployment documentation
 
 ---
@@ -428,7 +428,7 @@ Acceptance Criteria:
 
 Microsoft Learn Adaptation:
 - Reference: https://learn.microsoft.com/en-us/industry/sovereign-cloud/
-- Reference: https://learn.microsoft.com/en-us/azure/deployment-stacks/overview
+- Reference: https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deployment-stacks
 - Create custom based on sovereign cloud documentation
 
 ---
@@ -594,8 +594,8 @@ Acceptance Criteria:
 - [ ] Connectivity flows unambiguous
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/architecture
-- Reference: https://learn.microsoft.com/en-us/azure-local/system-requirements
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-architecture?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/system-requirements?view=azloc-2509
 - Use official architecture documentation as basis
 
 ---
@@ -648,8 +648,8 @@ Acceptance Criteria:
 - [ ] Operational accuracy verified
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-options
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/disconnected-scenarios
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2509
 - Create custom based on operational documentation
 
 ---
@@ -707,8 +707,8 @@ Acceptance Criteria:
 - [ ] Scalable appearance (shows 4-node variant feasibility)
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/system-requirements
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-requirements
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-requirements-23h2?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-architecture?view=azloc-2509
 - Based on validated hardware configurations
 
 ---
@@ -945,7 +945,7 @@ Acceptance Criteria:
 - [ ] Readable at 1024px width
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/retrieval-augmented-generation
+- Reference: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data
 - Reference: https://learn.microsoft.com/en-us/azure/ai-services/
 - Create custom based on RAG concepts and LLM/embeddings architecture
 
@@ -1009,7 +1009,7 @@ Acceptance Criteria:
 - [ ] Decision support evident (when to use each)
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/retrieval-augmented-generation
+- Reference: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data
 - Reference: https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models
 - Create custom based on LLM and RAG concepts
 
@@ -1070,7 +1070,7 @@ Acceptance Criteria:
 
 Microsoft Learn Adaptation:
 - Reference: https://learn.microsoft.com/en-us/azure/ai-services/
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/disconnected-scenarios
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2509
 - Create custom based on deployment patterns and edge computing
 
 ---
@@ -1127,7 +1127,7 @@ Acceptance Criteria:
 - [ ] Technical accuracy verified
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/retrieval-augmented-generation
+- Reference: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data
 - Reference: https://learn.microsoft.com/en-us/azure/cognitive-services/openai/
 - Create custom based on detailed RAG architecture
 

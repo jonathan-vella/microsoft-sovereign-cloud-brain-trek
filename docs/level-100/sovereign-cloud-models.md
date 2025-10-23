@@ -993,7 +993,7 @@ After completing this module:
 
 - **[Get started with Microsoft Cloud for Sovereignty](https://learn.microsoft.com/en-us/training/paths/get-started-sovereignty/)** - 4 modules, ~3 hours
 - **[Azure fundamentals](https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/)** - Essential Azure background
-- **[Hybrid cloud infrastructure](https://learn.microsoft.com/en-us/training/paths/hybrid-cloud-infrastructure/)** - Azure Arc and hybrid scenarios
+- **[Hybrid cloud infrastructure](https://learn.microsoft.com/en-us/training/paths/manage-hybrid-infrastructure-with-azure-arc/)** - Azure Arc and hybrid scenarios
 
 ### Community and Support
 

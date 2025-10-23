@@ -20,7 +20,7 @@ This page provides a detailed technical architecture for implementing Zero Trust
 > *Zero Trust Implementation Architecture (Asset 43)*  
 > Comprehensive technical architecture showing Identity Provider → Conditional Access → Device → Network → Application → Data protection with decision points and monitoring feedback loop.  
 > **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 43  
-> **Source to adapt:** [Zero Trust implementation Azure](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-implementation)
+> **Source to adapt:** [Zero Trust implementation Azure](https://learn.microsoft.com/en-us/security/zero-trust/deploy/overview)
 
 ---
 

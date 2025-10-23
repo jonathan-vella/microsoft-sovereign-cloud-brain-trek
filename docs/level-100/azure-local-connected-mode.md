@@ -964,8 +964,8 @@ Set-CauClusterRole -DaysOfWeek Saturday `
 
 **External Resources:**
 - [Azure Arc Documentation](https://learn.microsoft.com/en-us/azure/azure-arc/)
-- [Azure Monitor for Azure Local](https://learn.microsoft.com/en-us/azure-local/manage/monitor-overview)
-- [Azure Backup for Azure Local](https://learn.microsoft.com/en-us/azure-local/manage/use-azure-backup)
+- [Azure Monitor for Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/monitor-overview?view=azloc-2509)
+- [Azure Backup for Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/use-azure-backup?view=azloc-2509)
 
 ---
 

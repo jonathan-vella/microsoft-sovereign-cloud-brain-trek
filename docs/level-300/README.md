@@ -102,21 +102,21 @@ Before starting Level 300, ensure you have:
 
 ### Essential Learning
 
-1. **[Design identity and access management solutions](https://learn.microsoft.com/en-us/training/modules/design-identity-access-management-solutions/)**
+1. **[Design identity and access management solutions](https://learn.microsoft.com/en-us/training/modules/design-authentication-authorization-solutions/)**
    - Advanced identity architecture
 
-2. **[Design for high availability](https://learn.microsoft.com/en-us/training/modules/design-high-availability/)**
+2. **[Design for high availability](https://learn.microsoft.com/en-us/training/modules/design-for-high-availability/)**
    - Resilient architecture patterns
 
-3. **[Azure Local networking deep dive](https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-patterns-overview)**
+3. **[Azure Local networking deep dive](https://learn.microsoft.com/en-us/azure/azure-local/plan/network-patterns?view=azloc-2509)**
    - Advanced networking architectures
 
 ### Recommended Reading
 
 - **[Zero Trust security model](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)** - Comprehensive security framework
 - **[Disconnected operations detailed guide](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)** - Air-gapped operations best practices
-- **[Edge RAG production deployment](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/deploy-edge-rag)** - Complete deployment walkthrough
-- **[Azure Local update management](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-24h2)** - Update strategies
+- **[Edge RAG production deployment](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/overview)** - Complete deployment walkthrough
+- **[Azure Local update management](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509)** - Update strategies
 
 ---
 

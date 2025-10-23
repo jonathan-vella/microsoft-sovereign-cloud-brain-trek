@@ -443,7 +443,7 @@ Azure Arc-enabled Data Services bring Azure database services to any infrastruct
 **External Resources:**
 - [Azure Arc-enabled data services docs](https://learn.microsoft.com/en-us/azure/azure-arc/data/)
 - [SQL Managed Instance on Arc](https://learn.microsoft.com/en-us/azure/azure-arc/data/managed-instance-overview)
-- [PostgreSQL Hyperscale on Arc](https://learn.microsoft.com/en-us/azure/azure-arc/data/what-is-azure-arc-enabled-postgresql-hyperscale)
+- [PostgreSQL Hyperscale on Arc](https://learn.microsoft.com/en-us/azure/azure-arc/data/overview)
 
 ---
 

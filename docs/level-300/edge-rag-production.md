@@ -62,7 +62,7 @@ Deploy and operate Retrieval-Augmented Generation (RAG) systems at production sc
 > *Optimization Strategies & Trade-offs (Asset 53)*  
 > Decision matrix showing optimization approaches (batch processing, caching, quantization, pruning) with performance/resource trade-offs.  
 > **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 53  
-> **Source to adapt:** [Optimize inference performance on edge](https://learn.microsoft.com/en-us/azure/azure-local/manage/edge-inference-optimization)
+> **Source to adapt:** [Optimize inference performance on edge](https://learn.microsoft.com/en-us/azure/azure-local/manage/azure-benefits?view=azloc-2509)
 
 ---
 
@@ -72,7 +72,7 @@ Deploy and operate Retrieval-Augmented Generation (RAG) systems at production sc
 > *MLOps Pipeline for Edge RAG (Asset 54)*  
 > End-to-end workflow showing model training, validation, edge deployment, monitoring, retraining triggers, and rollback procedures.  
 > **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 54  
-> **Source to adapt:** [MLOps for edge AI workloads](https://learn.microsoft.com/en-us/azure/machine-learning/concept-edge-mlops)
+> **Source to adapt:** [MLOps for edge AI workloads](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment)
 
 ---
 

@@ -194,7 +194,7 @@ Organizations have different sovereignty requirements based on their:
 > *Digital Sovereignty Spectrum (Asset 1)*  
 > This section includes a visual diagram showing the 5-level digital sovereignty spectrum from standard cloud (full connectivity/cloud-managed) to air-gapped systems (no connectivity/complete operational control). Each level shows progressive increase in control and decrease in connectivity.  
 > **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 1  
-> **Source to adapt:** [Azure Local deployment models](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-options)
+> **Source to adapt:** [Azure Local deployment models](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
 
 ```text
 ├── Standard Public Cloud

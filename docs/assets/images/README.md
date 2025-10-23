@@ -58,7 +58,7 @@ docs/assets/images/
 - Color coding: Green (public) → Yellow (enhanced) → Orange (dedicated) → Red (isolated/air-gapped)
 
 **Recommended Source:**
-- Adapt from: [Azure Local deployment models](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-options)
+- Adapt from: [Azure Local deployment models](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
 - Reference: [Microsoft Cloud for Sovereignty](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)
 
 **Used In:**
@@ -193,7 +193,7 @@ docs/assets/images/
 
 **Recommended Source:**
 - Adapt from: [Azure Local overview](https://learn.microsoft.com/en-us/azure/azure-local/overview)
-- Reference: [Disconnected scenarios](https://learn.microsoft.com/en-us/azure/azure-local/concepts/disconnected-scenarios)
+- Reference: [Disconnected scenarios](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2509)
 
 **Used In:**
 - `docs/level-100/operational-sovereignty.md`
@@ -220,8 +220,8 @@ docs/assets/images/
 - Feature matrix at bottom
 
 **Recommended Source:**
-- Adapt from: [Azure Local deployment options](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-options)
-- Reference: [Disconnected deployment](https://learn.microsoft.com/en-us/azure/azure-local/concepts/disconnected-scenarios)
+- Adapt from: [Azure Local deployment options](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
+- Reference: [Disconnected deployment](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2509)
 
 **Used In:**
 - `docs/level-100/operational-sovereignty.md`
@@ -481,7 +481,7 @@ Until assets are created, use placeholders:
 > **📊 Visual Reference Needed**  
 > *Sovereignty Spectrum Diagram*  
 > This section will include a visual diagram showing the 5 levels of digital sovereignty from standard cloud to air-gapped systems.  
-> **Source to adapt:** [Azure Local deployment models](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-options)
+> **Source to adapt:** [Azure Local deployment models](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
 ```
 
 ---
@@ -624,7 +624,7 @@ If you create or adapt visual assets for this project:
 
 **Size:** 1400x1000px
 
-**Source:** [Azure Local Architecture](https://learn.microsoft.com/en-us/azure-local/concepts/architecture)
+**Source:** [Azure Local Architecture](https://learn.microsoft.com/en-us/azure/azure-local/concepts/architecture?view=azloc-2509)
 
 **Used In:**
 - `docs/level-100/azure-local-overview.html`
@@ -686,7 +686,7 @@ If you create or adapt visual assets for this project:
 
 **Size:** 1400x1000px
 
-**Source:** [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure-local/system-requirements)
+**Source:** [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure/azure-local/system-requirements?view=azloc-2509)
 
 **Used In:**
 - `docs/level-100/azure-local-hardware.html`
@@ -894,7 +894,7 @@ If you create or adapt visual assets for this project:
 
 **Size:** 1400x900px
 
-**Source:** [RAG Patterns](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/retrieval-augmented-generation)
+**Source:** [RAG Patterns](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data)
 
 **Used In:**
 - `docs/level-100/edge-rag-architecture.html`
@@ -954,7 +954,7 @@ If you create or adapt visual assets for this project:
 - `docs/level-200/azure-local-advanced-networking.md`
 - `docs/level-200/azure-local-architecture-deep-dive.md`
 
-**Source Refs:** [SET Documentation](https://learn.microsoft.com/en-us/azure/azure-local/concepts/networking), [RDMA Configuration](https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-requirements#network-requirements)
+**Source Refs:** [SET Documentation](https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-architecture?view=azloc-2509), [RDMA Configuration](https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-requirements#network-requirements)
 
 ---
 
@@ -1020,7 +1020,7 @@ If you create or adapt visual assets for this project:
 **Used In:**
 - `docs/level-200/azure-local-hardware-planning.md`
 
-**Source Refs:** [Validated Hardware](https://learn.microsoft.com/en-us/azure/azure-local/deploy/validate-hardware)
+**Source Refs:** [Validated Hardware](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-checklist?view=azloc-2509)
 
 ---
 
@@ -1055,7 +1055,7 @@ If you create or adapt visual assets for this project:
 - `docs/level-200/arc-policy-and-governance.md`
 - `docs/level-200/arc-advanced-management.md`
 
-**Source Refs:** [Arc Governance](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview-arc-server-policy), [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
+**Source Refs:** [Arc Governance](https://learn.microsoft.com/en-us/azure/azure-arc/servers/security-overview), [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
 
 ---
 
@@ -1121,7 +1121,7 @@ If you create or adapt visual assets for this project:
 - `docs/level-200/arc-enterprise-patterns.md`
 - `docs/level-200/arc-advanced-management.md`
 
-**Source Refs:** [Arc at Scale](https://learn.microsoft.com/en-us/azure/azure-arc/servers/onboard-at-scale), [Hybrid Connectivity](https://learn.microsoft.com/en-us/azure/hybrid/hybrid-how-to-setup)
+**Source Refs:** [Arc at Scale](https://learn.microsoft.com/en-us/azure/azure-arc/servers/onboard-group-policy-powershell), [Hybrid Connectivity](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/)
 
 ---
 
@@ -1192,7 +1192,7 @@ If you create or adapt visual assets for this project:
 **Used In:**
 - `docs/level-200/llm-inference-optimization.md`
 
-**Source Refs:** [LLM Optimization](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/evaluation-measures), [Ollama Quantization](https://ollama.ai)
+**Source Refs:** [LLM Optimization](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/model-versions), [Ollama Quantization](https://ollama.ai)
 
 ---
 
@@ -1226,7 +1226,7 @@ If you create or adapt visual assets for this project:
 **Used In:**
 - `docs/level-200/vector-databases-edge.md`
 
-**Source Refs:** [Vector Database Comparison](https://learn.microsoft.com/en-us/semantic-kernel/memories/vector-db-search), [Weaviate vs. Milvus](https://weaviate.io)
+**Source Refs:** [Vector Database Comparison](https://learn.microsoft.com/en-us/semantic-kernel/concepts/vector-store-connectors/), [Weaviate vs. Milvus](https://weaviate.io)
 
 ---
 
@@ -1257,7 +1257,7 @@ If you create or adapt visual assets for this project:
 **Used In:**
 - `docs/level-200/rag-deployment-strategies.md`
 
-**Source Refs:** [RAG Patterns](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/retrieval-augmented-generation)
+**Source Refs:** [RAG Patterns](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data)
 
 ---
 
@@ -1413,7 +1413,7 @@ If you create or adapt visual assets for this project:
 - `docs/level-200/gdpr-implementation.md`
 - `docs/level-200/compliance-security-patterns.md`
 
-**Source Refs:** [GDPR in Azure](https://learn.microsoft.com/en-us/compliance/regulatory/offering-gdpr), [EU Data Boundary](https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn)
+**Source Refs:** [GDPR in Azure](https://learn.microsoft.com/en-us/compliance/regulatory/gdpr), [EU Data Boundary](https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn)
 
 ---
 
@@ -1732,7 +1732,7 @@ If you create or adapt visual assets for this project:
 **Description:** Side-by-side comparison showing how Zero Trust implementation differs across sovereign cloud deployment models.
 
 **Used In:** `docs/level-300/zero-trust.md`  
-**Source Refs:** [Cloud models comparison](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/identity/identity-decision-guide)
+**Source Refs:** [Cloud models comparison](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access)
 
 ---
 
@@ -1832,7 +1832,7 @@ If you create or adapt visual assets for this project:
 **Description:** Step-by-step process showing export, secure transfer, validation, and import of updates in air-gapped systems.
 
 **Used In:** `docs/level-300/azure-local-disconnected-lab.md`  
-**Source Refs:** [Manual update procedures](https://learn.microsoft.com/en-us/azure/azure-local/manage/update-management-disconnected)
+**Source Refs:** [Manual update procedures](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509-disconnected)
 
 ---
 
@@ -1844,7 +1844,7 @@ If you create or adapt visual assets for this project:
 **Description:** Timeline showing certificate issuance, validity periods, renewal windows, and key procedures for disconnected environments.
 
 **Used In:** `docs/level-300/azure-local-certificate-management.md`  
-**Source Refs:** [Certificate lifecycle](https://learn.microsoft.com/en-us/azure/azure-local/manage/certificate-lifecycle)
+**Source Refs:** [Certificate lifecycle](https://learn.microsoft.com/en-us/azure/azure-local/manage/certificate-management?view=azloc-2509)
 
 ---
 

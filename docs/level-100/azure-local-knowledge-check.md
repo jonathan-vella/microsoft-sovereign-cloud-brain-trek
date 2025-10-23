@@ -435,7 +435,7 @@ When a node fails, the cluster's high availability mechanisms automatically rest
    - [Microsoft Sovereign Cloud Models](sovereign-cloud-models)
 
 4. **🌐 Explore external resources:**
-   - [Azure Local Documentation](https://learn.microsoft.com/en-us/azure-local/)
+   - [Azure Local Documentation](https://learn.microsoft.com/en-us/azure/azure-local/?view=azloc-2509)
    - [Azure Local Tech Community](https://techcommunity.microsoft.com/t5/azure-local/ct-p/AzureLocal)
 
 5. **💡 Consider hands-on practice:**

@@ -83,7 +83,7 @@ The transition to Azure Local reflects Microsoft's commitment to:
 > *Azure Local System Architecture (Asset 11)*  
 > Comprehensive system architecture showing Azure Local's hardware, software layers, and connectivity to Azure cloud. Three-section layout: Left (on-premises Azure Local stack), Center (data/control plane separation), Right (Azure cloud control plane). Includes hardware layer, virtualization layer, system software, and management layer. Shows connected mode (bidirectional arrows) and disconnected mode (dashed lines). Color-coded by layer: Blue (on-prem), Light blue (Azure), Green (data), Orange (control).  
 > **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 11  
-> **Source to adapt:** [Azure Local Architecture](https://learn.microsoft.com/en-us/azure/azure-local/concepts/architecture)
+> **Source to adapt:** [Azure Local Architecture](https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-architecture?view=azloc-2509)
 
 ---
 
@@ -93,7 +93,7 @@ The transition to Azure Local reflects Microsoft's commitment to:
 > *Connected vs. Disconnected Mode Feature Matrix (Asset 12)*  
 > Detailed feature comparison showing capabilities available in Connected Mode versus Disconnected Mode. Table/matrix format with category headers and rows for: Connectivity & Management, Monitoring & Diagnostics, Policy & Governance, Updates & Patches, Disaster Recovery, Scaling & Operations, Support & Assistance. Cells show ✓ (supported), ✗ (not supported), or ◐ (limited). Notes column with explanations. Color-coded for accessibility: green checkmarks, red X marks, yellow limited indicators.  
 > **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 12  
-> **Source to adapt:** [Azure Local deployment options](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-options)
+> **Source to adapt:** [Azure Local deployment options](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
 
 ---
 
@@ -206,7 +206,7 @@ Azure Local implements defense-in-depth security:
 - **RBAC and MFA**: Granular access controls
 - **Security baselines**: CIS and STIG compliance
 
-**Reference:** [Azure Local Security Best Practices](https://learn.microsoft.com/en-us/azure-local/security/)
+**Reference:** [Azure Local Security Best Practices](https://learn.microsoft.com/en-us/azure/azure-local/security/?view=azloc-2509)
 
 ---
 
@@ -335,7 +335,7 @@ Azure Local physical architecture includes:
 > **📊 Visual Reference Needed**  
 > *Azure Local Architecture Diagram*  
 > Shows physical hardware layer, logical components, and Azure cloud integration for both Connected and Disconnected modes  
-> **Source:** [Azure Local Architecture Documentation](https://learn.microsoft.com/en-us/azure-local/concepts/architecture)
+> **Source:** [Azure Local Architecture Documentation](https://learn.microsoft.com/en-us/azure/azure-local/concepts/architecture?view=azloc-2509)
 
 ### Integration Points with Azure
 
@@ -844,7 +844,7 @@ Can you have continuous/regular internet connectivity?
 > **📊 Visual Reference Needed**  
 > *Azure Local Decision Tree*  
 > Flowchart showing when to choose Azure Local vs. public cloud, and Connected vs. Disconnected mode  
-> **Source:** [Azure Local Planning Guide](https://learn.microsoft.com/en-us/azure-local/plan/overview)
+> **Source:** [Azure Local Planning Guide](https://learn.microsoft.com/en-us/azure/azure-local/plan/overview?view=azloc-2509)
 
 ### Comparison with Alternatives
 
@@ -1032,17 +1032,17 @@ After completing this module:
 
 ### Microsoft Learn Modules
 
-- **[What is Azure Local?](https://learn.microsoft.com/en-us/azure-local/overview)**
+- **[What is Azure Local?](https://learn.microsoft.com/en-us/azure/azure-local/overview?view=azloc-2509)**
   - Official product overview
   - Architecture fundamentals
   - Getting started guide
 
-- **[Azure Local Concepts](https://learn.microsoft.com/en-us/azure-local/concepts/)**
+- **[Azure Local Concepts](https://learn.microsoft.com/en-us/azure/azure-local/concepts/?view=azloc-2509)**
   - Deep technical documentation
   - Architecture patterns
   - Best practices
 
-- **[Plan an Azure Local deployment](https://learn.microsoft.com/en-us/azure-local/plan/)**
+- **[Plan an Azure Local deployment](https://learn.microsoft.com/en-us/azure/azure-local/plan/?view=azloc-2509)**
   - Sizing calculator
   - Hardware requirements
   - Network planning
