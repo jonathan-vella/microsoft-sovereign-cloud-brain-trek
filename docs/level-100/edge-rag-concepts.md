@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Edge RAG Concepts
-parent: Edge RAG Concepts
+parent: Level 100 - Foundation
 nav_order: 5
 ---
 

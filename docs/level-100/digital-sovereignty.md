@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Digital Sovereignty
-parent: Digital Sovereignty
+parent: Level 100 - Foundation
 nav_order: 1
 ---
 
