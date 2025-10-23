@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Edge RAG Implementation
-parent: Level 200 - Intermediate
+parent: Edge RAG Implementation
 nav_order: 3
 ---
 
