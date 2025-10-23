@@ -588,9 +588,9 @@ This module provides a foundational overview of digital sovereignty. For detaile
 ### 📘 Microsoft's European Digital Commitments
 **[Read Full Article →](european-commitments)**
 
-Learn about Microsoft's 6 commitments to European sovereignty including:
+Learn about Microsoft's 5 commitments to European sovereignty including:
 - EU Data Boundary implementation
-- Timeline and progress (2021-2025)
+- Timeline and progress (2022-2025)
 - Customer control mechanisms
 - Technical implementations
 
