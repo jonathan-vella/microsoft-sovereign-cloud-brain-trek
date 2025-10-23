@@ -99,14 +99,13 @@ Microsoft recognizes that organizations require varying degrees of sovereignty b
 
 **[Learn More →](https://learn.microsoft.com/en-us/industry/sovereign-cloud/overview/european-digital-commitments)**
 
-In December 2021, Microsoft announced six commitments for Europe's digital sovereignty:
+On April 30, 2025, Microsoft announced five commitments for Europe's digital sovereignty:
 
 1. **Expanded cloud regions:** More Azure regions across Europe
 2. **Cloud for European data boundary:** Ability to store and process data within EU
 3. **Increased capacity:** Infrastructure investments to support growth
 4. **Sovereign cloud controls:** Enhanced sovereignty features
 5. **Digital skilling:** Training programs for European workforce
-6. **Ecosystem support:** Partnerships with European companies
 
 ### Data Boundary for the European Union
 
@@ -589,9 +588,9 @@ This module provides a foundational overview of digital sovereignty. For detaile
 ### 📘 Microsoft's European Digital Commitments
 **[Read Full Article →](european-commitments)**
 
-Learn about Microsoft's 6 commitments to European sovereignty including:
+Learn about Microsoft's 5 commitments to European sovereignty including:
 - EU Data Boundary implementation
-- Timeline and progress (2021-2025)
+- Timeline and progress (2022-2025)
 - Customer control mechanisms
 - Technical implementations
 

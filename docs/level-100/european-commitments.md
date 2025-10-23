@@ -18,13 +18,13 @@ nav_order: 2
 
 ## Overview
 
-In December 2021, Microsoft announced six comprehensive commitments to support digital sovereignty and innovation across Europe. These commitments demonstrate Microsoft's recognition that European organizations require enhanced control, transparency, and sovereignty over their digital infrastructure and data.
+On April 30, 2025, Microsoft announced five comprehensive commitments to support digital sovereignty and innovation across Europe. These commitments demonstrate Microsoft's recognition that European organizations require enhanced control, transparency, and sovereignty over their digital infrastructure and data.
 
-**Official Announcement:** [Microsoft's commitment to the European Union Data Boundary](https://blogs.microsoft.com/eupolicy/2021/05/06/eu-data-boundary/)
+**Official Announcement:** [Microsoft's European Digital Commitments](https://blogs.microsoft.com/on-the-issues/2025/04/30/european-digital-commitments/)
 
 ---
 
-## The Six Commitments
+## The Five Commitments
 
 ### 1. Expanded Cloud Regions Across Europe
 
@@ -181,38 +181,6 @@ In December 2021, Microsoft announced six comprehensive commitments to support d
 
 ---
 
-### 6. Supporting Europe's Ecosystem and Startups
-
-**Commitment:** Foster innovation and growth among European technology companies, startups, and partners.
-
-**Support Programs:**
-
-**Microsoft for Startups:**
-- Azure credits for early-stage companies
-- Technical mentorship and support
-- Go-to-market assistance
-- Access to Microsoft's global network
-
-**Partner Ecosystem:**
-- Support for European ISVs (Independent Software Vendors)
-- Co-innovation initiatives
-- Marketplace opportunities
-- Technical enablement
-
-**Industry Solutions:**
-- Vertical-specific solutions for European markets
-- Support for regulated industries
-- Collaboration with European technology leaders
-- Open-source contributions
-
-**Research and Innovation:**
-- University partnerships
-- Research grants and projects
-- AI and cloud research initiatives
-- Support for European innovation hubs
-
----
-
 ## EU Data Boundary: Deep Dive
 
 The EU Data Boundary is one of the most significant commitments for organizations with strict sovereignty requirements.
@@ -284,10 +252,6 @@ A commitment to store and process customer data within the European Union, with 
 
 ## Progress and Timeline
 
-### 2021
-- **December:** Six commitments announced
-- Initial planning and design phase
-
 ### 2022
 - **Q1:** EU Data Boundary architecture defined
 - **Q2:** First services available with EU boundary
@@ -304,6 +268,7 @@ A commitment to store and process customer data within the European Union, with 
 - Enhanced sovereign controls
 
 ### 2025 (Current)
+- **April 30:** Five commitments announced
 - **Ongoing:** Full EU Data Boundary for core services
 - New sovereignty features and capabilities
 - Continued investment and expansion
