@@ -7,6 +7,7 @@ nav_order: 4
 ---
 
 # Knowledge Check - Azure Local Architecture Deep Dive
+{: .no_toc }
 
 > **📊 Visual References:**
 > - **Asset 21** - Advanced Networking Architecture (referenced in networking questions)
@@ -16,6 +17,18 @@ nav_order: 4
 > See docs/assets/images/README.md for complete asset specifications.
 
 Test your understanding of advanced Azure Local architecture concepts. These scenario-based questions help verify your readiness for production deployments.
+
+---
+
+## Quiz Instructions
+
+- **Total Questions:** 10
+- **Passing Score:** 70% (7 of 10 correct)
+- **Time Estimate:** 20-25 minutes
+- **Format:** Scenario-based multiple choice (A/B/C/D)
+- **Note:** Choose the single best answer for each question based on production deployment best practices.
+
+---
 
 ## Questions
 
@@ -191,24 +204,112 @@ D) One 6-node cluster split across two sites using active-active configuration.
 
 ## Scoring Guide
 
-- **9-10 Correct:** Excellent understanding of Azure Local advanced architecture. Ready for production deployment responsibilities.
-- **7-8 Correct:** Good understanding with minor gaps. Recommend reviewing specific sections before lead role.
-- **5-6 Correct:** Foundational understanding. Recommend additional study before independent design work.
-- **< 5 Correct:** Significant gaps. Return to core sections and retake assessment.
+**Calculate your score:**
+- Count the number of correct answers
+- Divide by 10 and multiply by 100 for percentage
+
+**Score Interpretation:**
+
+**9-10 correct (90-100%):** 🏆 **Excellent - Production Ready**
+- You have excellent understanding of Azure Local advanced architecture
+- Ready for production deployment design and implementation responsibilities
+- Qualified for lead architect or senior implementation roles
+- Consider pursuing Azure Stack HCI certifications
+
+**7-8 correct (70-80%):** ✅ **Good - Competent**
+- You have good understanding with minor gaps
+- Ready for most production deployment scenarios
+- Recommend reviewing specific sections before taking lead architect role
+- Focus on areas where you missed questions
+
+**5-6 correct (50-60%):** ⚠️ **Foundational - Needs Review**
+- You have foundational understanding but need additional study
+- Not yet ready for independent design work
+- Review module content, especially architecture layers and HA patterns
+- Practice with hands-on labs before production deployments
+- Retake quiz after comprehensive review
+
+**Below 5 correct (<50%):** ❌ **Significant Gaps - Major Review Needed**
+- Significant knowledge gaps present
+- Return to core module sections and study thoroughly
+- Focus on fundamentals: architecture layers, storage resilience, networking
+- Consider starting with Level 100 Azure Local content
+- Retake quiz only after thorough study
 
 ---
 
-## Key Concepts Covered
+## Study Recommendations by Topic
 
-This assessment validates understanding of:
-- System architecture layers and their independence
-- Network design with VLANs and QoS
-- Storage resilience and rebuild processes
-- Hardware selection and capacity planning
-- Deployment pattern selection based on constraints
-- Quorum mechanisms and failure scenarios
-- Automatic failure recovery timelines
-- Capacity planning with redundancy overhead
-- Network optimization and troubleshooting
-- Disaster recovery architecture decisions
+**If you missed questions on Architecture (Q1):**
+- Review [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive)
+- Focus on the four architecture layers and their relationships
+- Study how layer independence affects failure scenarios
+
+**If you missed questions on Networking (Q2, Q9):**
+- Review [Azure Local Advanced Networking](azure-local-advanced-networking)
+- Study VLAN configuration and QoS policies
+- Focus on converged networking design patterns
+- Review RDMA configuration and troubleshooting
+
+**If you missed questions on Storage (Q3, Q8):**
+- Review [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive)
+- Study storage resiliency options (2-way, 3-way mirror)
+- Focus on rebuild processes during failures
+- Review capacity planning with redundancy overhead
+
+**If you missed questions on Hardware Planning (Q4):**
+- Review [Azure Local Hardware Planning](azure-local-hardware-planning)
+- Study memory configuration and NUMA optimization
+- Focus on symmetric hardware configurations
+
+**If you missed questions on Deployment Patterns (Q5):**
+- Review [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive)
+- Study multi-site deployment patterns
+- Focus on bandwidth requirements for different patterns
+
+**If you missed questions on High Availability (Q6, Q7, Q10):**
+- Review [Azure Local HA Patterns](azure-local-ha-patterns)
+- Study quorum mechanisms for 2-node clusters
+- Focus on automatic failure recovery timelines
+- Review RTO/RPO requirements and DR patterns
+
+---
+
+## Next Steps
+
+**After passing this quiz:**
+
+1. **✅ Celebrate your achievement!** You've mastered Azure Local advanced architecture.
+
+2. **📚 Continue learning:**
+   - [Module 2: Arc Advanced Management →](../arc-advanced-management)
+   - [Module 3: Edge RAG Implementation →](../edge-rag-implementation)
+
+3. **🔗 Review related content:**
+   - [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive)
+   - [Azure Local Hardware Planning](azure-local-hardware-planning)
+   - [Azure Local HA Patterns](azure-local-ha-patterns)
+   - [Azure Local Advanced Networking](azure-local-advanced-networking)
+
+4. **🌐 Explore external resources:**
+   - [Azure Stack HCI Documentation](https://learn.microsoft.com/azure-stack/hci/)
+   - [Azure Stack HCI Architecture Guide](https://learn.microsoft.com/azure-stack/hci/concepts/system-requirements)
+   - [Azure Stack HCI Tech Community](https://techcommunity.microsoft.com/t5/azure-stack-hci/ct-p/AzureStackHCI)
+
+5. **💡 Consider hands-on practice:**
+   - Deploy Azure Local in a lab environment
+   - Practice cluster operations and maintenance
+   - Test failure scenarios and recovery
+   - Experiment with different storage configurations
+
+---
+
+**Quiz Version:** 1.0  
+**Last Updated:** October 2025  
+**Questions:** 10  
+**Passing Score:** 70% (7 of 10 correct)
+
+---
+
+**[← Back to Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive)**
 

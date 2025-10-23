@@ -6,6 +6,7 @@ nav_order: 4
 ---
 
 # Pre-Sales & Solution Design Quiz
+{: .no_toc }
 
 > **📊 Visual References:**
 > - **Asset 32** - Customer Discovery Framework (discovery questions)
@@ -14,13 +15,17 @@ nav_order: 4
 >
 > See docs/assets/images/README.md for complete asset specifications.
 
-## Assessment: Master Pre-Sales for Sovereign Cloud Solutions
+Master pre-sales skills for sovereign cloud and edge AI solutions with scenario-based questions covering discovery, sizing, TCO analysis, and proposal development.
 
-This quiz tests your understanding of customer discovery, solution sizing, cost modeling, proposal development, and sales techniques for Microsoft Sovereign Cloud and Edge AI solutions.
+---
 
-**Format:** 15 scenario-based questions
-**Passing Score:** 70% (11+ correct)
-**Time Estimate:** 25-35 minutes
+## Quiz Instructions
+
+- **Total Questions:** 15
+- **Passing Score:** 70% (11 of 15 correct)
+- **Time Estimate:** 25-35 minutes
+- **Format:** Scenario-based multiple choice (A/B/C/D)
+- **Note:** Focus on practical pre-sales scenarios and real-world customer engagements.
 
 ---
 
@@ -483,23 +488,145 @@ D) Plan the reference call for 6 months post-go-live
 
 ## Scoring Guide
 
-- **15 Correct (100%):** Master Pre-Sales Architect ⭐
-- **14 Correct (93%):** Senior Pre-Sales Expert
-- **13 Correct (87%):** Experienced Pre-Sales Professional
-- **11-12 Correct (73-80%):** **PASSING** - Ready for customer engagements
-- **10 Correct (67%):** Review recommended before customer presentations
-- **<10 Correct (<67%):** Strong review needed before customer work
+**Calculate your score:**
+- Count the number of correct answers
+- Divide by 15 and multiply by 100 for percentage
+
+**Score Interpretation:**
+
+**15 correct (100%):** 🏆 **Master Pre-Sales Architect**
+- Perfect score! You have mastery-level pre-sales expertise
+- Ready to lead complex sovereign cloud engagements
+- Qualified for senior pre-sales architect or principal consultant roles
+- Consider mentoring other pre-sales professionals
+
+**13-14 correct (87-93%):** ⭐ **Senior Pre-Sales Expert**
+- Excellent pre-sales skills and judgment
+- Ready for complex customer engagements
+- Minor review recommended on missed topics
+- Consider pursuing advanced sales certifications
+
+**11-12 correct (73-80%):** ✅ **Experienced Professional - Ready**
+- **PASSING** - Ready for customer engagements
+- Solid understanding of pre-sales process
+- Review areas where you missed questions
+- Focus on discovery techniques and sizing validation
+
+**9-10 correct (60-67%):** ⚠️ **Review Recommended**
+- Foundational understanding but gaps exist
+- Review recommended before customer presentations
+- Focus on discovery questioning and TCO analysis
+- Practice with scenario-based exercises
+- Retake quiz after review
+
+**Below 9 correct (<60%):** ❌ **Strong Review Needed**
+- Significant gaps in pre-sales knowledge
+- Strong review needed before customer-facing work
+- Study all module content thoroughly
+- Focus on fundamentals: discovery, sizing, TCO, proposals
+- Consider shadowing experienced pre-sales professionals
+- Retake quiz only after comprehensive study
 
 ---
 
-## Related Topics
+## Study Recommendations by Topic
 
-- **Main Page:** [Pre-Sales & Solution Design](./presales-solution-design.md)
-- **Discovery:** [Customer Discovery & Requirements](./customer-discovery.md)
-- **Sizing:** [Solution Sizing & Planning](./solution-sizing.md)
-- **Cost Analysis:** [Cost Estimation & TCO](./cost-estimation.md)
-- **Proposals:** [Proposal Development](./proposal-development.md)
+**If you missed questions on Discovery (Q1, Q2, Q11):**
+- Review [Customer Discovery](customer-discovery)
+- Study effective discovery questioning techniques
+- Focus on stakeholder mapping and identification
+- Practice uncovering root requirements vs stated needs
+
+**If you missed questions on Sizing (Q3, Q4, Q5, Q12):**
+- Review [Pre-Sales & Solution Design](presales-solution-design)
+- Study workload characterization methods
+- Focus on hardware and database sizing calculations
+- Review sizing validation techniques
+
+**If you missed questions on TCO/Financial (Q6, Q8):**
+- Review [Cost Estimation](cost-estimation)
+- Study TCO break-even analysis
+- Focus on strategic value articulation
+- Review ROI calculation methods
+
+**If you missed questions on Proposals (Q7, Q9, Q13):**
+- Review proposal development best practices
+- Study phased deployment strategies
+- Focus on proposal completeness and win strategies
+- Review competitive differentiation
+
+**If you missed questions on Sales Strategy (Q10, Q14, Q15):**
+- Review objection handling techniques
+- Study competitive positioning strategies
+- Focus on post-sale success planning
+- Review customer engagement best practices
 
 ---
 
-*Last Updated: October 21, 2025*
+## Next Steps
+
+**After passing this quiz:**
+
+1. **✅ Congratulations!** You're ready for customer-facing pre-sales engagements.
+
+2. **📚 Apply your knowledge:**
+   - Practice discovery calls with colleagues
+   - Create sample proposals
+   - Develop sizing calculators
+   - Build TCO models
+
+3. **🔗 Review related content:**
+   - [Pre-Sales & Solution Design](presales-solution-design)
+   - [Customer Discovery](customer-discovery)
+   - [Cost Estimation](cost-estimation)
+
+4. **🌐 Explore external resources:**
+   - [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/)
+   - [Azure TCO Calculator](https://azure.microsoft.com/pricing/tco/)
+   - [Microsoft Sales Resources](https://partner.microsoft.com/en-us/training/)
+
+5. **💡 Consider hands-on practice:**
+   - Shadow experienced pre-sales calls
+   - Create customer discovery templates
+   - Build sizing and TCO calculators
+   - Develop proposal frameworks
+   - Practice objection handling
+
+---
+
+## Key Pre-Sales Skills Summary
+
+**Discovery Excellence:**
+- Ask open-ended questions to uncover root requirements
+- Map all stakeholders (technical, business, executive)
+- Understand regulatory drivers and compliance needs
+- Validate stated requirements with deeper questioning
+
+**Sizing Precision:**
+- Characterize workloads with specific metrics (QPS, latency)
+- Size hardware based on peak load + growth
+- Validate sizing with benchmarks and references
+- Build in capacity for redundancy and growth
+
+**Financial Acumen:**
+- Calculate accurate TCO (hardware, software, operations)
+- Identify break-even points and ROI timelines
+- Articulate strategic value beyond cost savings
+- Present clear financial justification
+
+**Proposal Mastery:**
+- Include all required sections (technical, financial, timeline)
+- Propose phased deployments to reduce risk
+- Differentiate from competitors with unique value
+- Set clear success metrics and milestones
+
+---
+
+**Quiz Version:** 1.0  
+**Last Updated:** October 2025  
+**Questions:** 15  
+**Passing Score:** 70% (11 of 15 correct)
+
+---
+
+**[← Back to Pre-Sales & Solution Design](presales-solution-design)**

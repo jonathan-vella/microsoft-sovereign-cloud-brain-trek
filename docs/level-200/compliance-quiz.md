@@ -6,6 +6,7 @@ nav_order: 9
 ---
 
 # Compliance & Security Patterns - Assessment Quiz
+{: .no_toc }
 
 > **📊 Visual References:**
 > - **Asset 35** - GDPR Compliance Mapping (GDPR requirements)
@@ -19,7 +20,17 @@ Test your understanding of compliance frameworks, security patterns, encryption,
 
 ---
 
-## Quiz (15 Questions)
+## Quiz Instructions
+
+- **Total Questions:** 15
+- **Passing Score:** 70% (11 of 15 correct)
+- **Time Estimate:** 25-30 minutes
+- **Format:** Scenario-based multiple choice (A/B/C/D)
+- **Note:** Focus on real-world compliance and security scenarios for sovereign cloud deployments.
+
+---
+
+## Questions
 
 ### Question 1: GDPR Data Residency
 
@@ -717,46 +728,137 @@ Zero-trust is essential for sovereign cloud deployments:
 
 ---
 
-## Study Tips
+## Scoring Guide
 
-**Master These Concepts:**
+**Calculate your score:**
+- Count the number of correct answers
+- Divide by 15 and multiply by 100 for percentage
 
-1. **GDPR Timeline Deadlines:**
-   - 30 days: Data subject access requests
-   - 72 hours: DPA breach notification
-   - 3 years: Log retention minimum
+**Score Interpretation:**
 
-2. **FedRAMP Requirements:**
-   - Level 2 (Moderate) for PII
-   - Monthly continuous monitoring
-   - 110+ baseline controls
+**14-15 correct (93-100%):** 🏆 **Excellent - Compliance Expert**
+- You have mastery-level understanding of compliance and security patterns
+- Ready to lead compliance initiatives and security audits
+- Qualified for security architect or compliance officer roles
+- Consider pursuing security certifications (CISSP, CISM, Azure Security Engineer)
 
-3. **Encryption Standards:**
-   - At-rest: AES-256
-   - In-transit: TLS 1.3
-   - Key management: Azure Key Vault with HSM
+**11-13 correct (73-87%):** ✅ **Good - Competent**
+- You have solid understanding of compliance frameworks
+- Ready for most compliance implementation projects
+- Review areas where you missed questions
+- Focus on specific compliance deadlines and requirements
 
-4. **Security Principles:**
-   - Defense-in-depth: Multiple layers
-   - Least privilege: Minimum permissions
-   - Zero-trust: Verify everything
-   - Network segmentation: Limit blast radius
+**8-10 correct (53-67%):** ⚠️ **Fair - Needs Review**
+- You have foundational understanding but gaps exist
+- Additional study needed before compliance implementation
+- Review GDPR timelines, FedRAMP requirements, and encryption standards
+- Practice with scenario-based questions
+- Retake quiz after comprehensive review
 
-5. **Incident Response:**
-   - Detection → Containment → Investigation → Recovery
-   - Preserve evidence immediately
-   - 72-hour DPA notification (GDPR)
-
----
-
-## Related Topics
-
-- **Main Page:** [Compliance & Security Patterns](./compliance-security-patterns.md)
-- **GDPR:** [GDPR Implementation & Data Residency](./gdpr-implementation.md)
-- **FedRAMP:** [FedRAMP Compliance Path](./fedramp-compliance.md)
-- **Encryption:** [Encryption & Key Management](./encryption-key-management.md)
-- **Security:** [Security Hardening Patterns](./security-hardening.md)
+**Below 8 correct (<53%):** ❌ **Needs Significant Review**
+- Significant knowledge gaps in compliance and security
+- Thoroughly review all module content
+- Focus on fundamentals: GDPR, FedRAMP, encryption, zero-trust
+- Consider starting with compliance framework documentation
+- Seek additional training resources
+- Retake quiz only after thorough study
 
 ---
 
-*Last Updated: October 21, 2025*
+## Study Recommendations by Topic
+
+**If you missed questions on GDPR (Q1, Q2, Q5, Q12):**
+- Review [GDPR Implementation](gdpr-implementation)
+- Master key timelines: 30-day access, 72-hour breach notification
+- Study EU Data Boundary requirements
+- Focus on data subject rights and breach notification procedures
+
+**If you missed questions on FedRAMP (Q3, Q4):**
+- Review [FedRAMP Compliance](fedramp-compliance)
+- Study authorization levels (Low, Moderate, High)
+- Focus on continuous monitoring requirements
+- Review control baselines (NIST 800-53)
+
+**If you missed questions on Encryption (Q5, Q6, Q7, Q11):**
+- Review [Encryption & Key Management](encryption-key-management)
+- Study encryption standards: AES-256 (at-rest), TLS 1.3 (in-transit)
+- Focus on Azure Key Vault architecture and geo-replication
+- Review key rotation policies
+
+**If you missed questions on Security Patterns (Q8, Q9, Q13, Q15):**
+- Review [Compliance & Security Patterns](compliance-security-patterns)
+- Study defense-in-depth architecture
+- Focus on least privilege and zero-trust principles
+- Review network segmentation strategies
+
+**If you missed questions on Operations (Q10, Q14):**
+- Review security operations best practices
+- Study patch management timelines for critical vulnerabilities
+- Focus on key rotation compliance and remediation
+
+---
+
+## Next Steps
+
+**After passing this quiz:**
+
+1. **✅ Celebrate your achievement!** You've mastered compliance and security patterns.
+
+2. **📚 Continue learning:**
+   - Complete other Level 200 modules
+   - Explore Level 300 advanced content
+
+3. **🔗 Review related content:**
+   - [Compliance & Security Patterns](compliance-security-patterns)
+   - [GDPR Implementation](gdpr-implementation)
+   - [FedRAMP Compliance](fedramp-compliance)
+   - [Encryption & Key Management](encryption-key-management)
+
+4. **🌐 Explore external resources:**
+   - [GDPR Official Text](https://gdpr-info.eu/)
+   - [FedRAMP Documentation](https://www.fedramp.gov/)
+   - [NIST 800-53 Controls](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
+   - [Azure Security Documentation](https://learn.microsoft.com/azure/security/)
+   - [Azure Compliance Documentation](https://learn.microsoft.com/azure/compliance/)
+
+5. **💡 Consider hands-on practice:**
+   - Implement GDPR-compliant data processing
+   - Configure Azure Policy for compliance
+   - Set up Azure Key Vault with geo-replication
+   - Practice zero-trust architecture design
+
+---
+
+## Master These Key Concepts
+
+**GDPR Timeline Deadlines:**
+- 30 days: Data subject access requests
+- 72 hours: DPA breach notification
+- 3 years: Log retention minimum
+
+**FedRAMP Requirements:**
+- Level 2 (Moderate) for PII
+- Monthly continuous monitoring
+- 110+ baseline controls
+
+**Encryption Standards:**
+- At-rest: AES-256
+- In-transit: TLS 1.3
+- Key management: Azure Key Vault with HSM
+
+**Security Principles:**
+- Defense-in-depth: Multiple layers
+- Least privilege: Minimum permissions
+- Zero-trust: Verify everything
+- Network segmentation: Limit blast radius
+
+---
+
+**Quiz Version:** 1.0  
+**Last Updated:** October 2025  
+**Questions:** 15  
+**Passing Score:** 70% (11 of 15 correct)
+
+---
+
+**[← Back to Compliance & Security Patterns](compliance-security-patterns)**
