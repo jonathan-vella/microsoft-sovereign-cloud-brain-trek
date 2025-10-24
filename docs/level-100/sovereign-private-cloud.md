@@ -110,7 +110,7 @@ Azure Local supports two operating modes that provide different levels of sovere
 - Acceptable to have dependency on Azure connectivity
 - Want latest Azure innovations immediately
 
-**[Learn More: Connected deployment](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)**
+**[Learn More: Connected deployment](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)**
 
 ---
 

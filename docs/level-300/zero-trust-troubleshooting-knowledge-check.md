@@ -1124,7 +1124,7 @@ After completing this assessment:
 
 ### 4. 🌐 External Resources
 - [Zero Trust Security Model](https://learn.microsoft.com/en-us/security/zero-trust/)
-- [Azure Local Troubleshooting](https://learn.microsoft.com/en-us/azure/azure-local/troubleshoot/troubleshoot-overview?view=azloc-2509)
+- [Azure Local Troubleshooting](https://learn.microsoft.com/en-us/azure/azure-local/manage/support-tools?view=azloc-2509)
 - [Conditional Access Policies](https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview)
 - [Incident Response Guide](https://learn.microsoft.com/en-us/security/operations/incident-response-overview)
 

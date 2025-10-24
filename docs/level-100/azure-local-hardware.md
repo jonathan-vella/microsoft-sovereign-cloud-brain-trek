@@ -953,7 +953,7 @@ Resiliency Factors:
 - [Azure Local Quiz →](azure-local-quiz)
 
 **External Resources:**
-- [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure/azure-local/system-requirements?view=azloc-2509)
+- [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-requirements-23h2?view=azloc-2509)
 - [Hardware Sizing Calculator](https://azurestackhcisolutions.azure.microsoft.com/)
 - [Validated Hardware Catalog](https://azurestackhcisolutions.azure.microsoft.com/)
 

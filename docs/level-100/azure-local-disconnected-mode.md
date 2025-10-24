@@ -898,9 +898,9 @@ Critical for disconnected environments:
 - [Azure Local Overview →](azure-local-overview)
 
 **External Resources:**
-- [Azure Local Disconnected Deployment](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-disconnected?view=azloc-2509)
+- [Azure Local Disconnected Deployment](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2509)
 - [Windows Admin Center](https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview)
-- [Security Hardening Guide](https://learn.microsoft.com/en-us/azure/azure-local/security/?view=azloc-2509)
+- [Security Hardening Guide](https://learn.microsoft.com/en-us/azure/azure-local/concepts/security-features?view=azloc-2509)
 
 ---
 

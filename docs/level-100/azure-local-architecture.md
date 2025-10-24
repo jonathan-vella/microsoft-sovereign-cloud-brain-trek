@@ -229,7 +229,7 @@ Azure Local has four primary network traffic types:
 > **📊 Visual Reference Needed**  
 > *Network Topology Diagrams*  
 > Three diagrams showing converged, storage-isolated, and fully-separated network topologies  
-> **Source:** [Azure Local Network Planning](https://learn.microsoft.com/en-us/azure/azure-local/plan/network?view=azloc-2509)
+> **Source:** [Azure Local Network Planning](https://learn.microsoft.com/en-us/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2509)
 
 ### RDMA (Remote Direct Memory Access)
 
@@ -437,7 +437,7 @@ The **control plane** manages configuration, monitoring, and updates:
 > **📊 Visual Reference Needed**  
 > *Control Plane and Data Plane Diagram*  
 > Shows separation between local data plane and Azure/local control plane in both modes  
-> **Source:** [Azure Local Architecture](https://learn.microsoft.com/en-us/azure/azure-local/concepts/architecture?view=azloc-2509)
+> **Source:** [Azure Local Architecture](https://learn.microsoft.com/en-us/azure/azure-local/overview?view=azloc-2509)
 
 ### Why This Matters for Sovereignty
 
@@ -904,9 +904,9 @@ For scenarios beyond 16 nodes:
 - [Azure Local Quiz →](azure-local-quiz)
 
 **External Resources:**
-- [Azure Local Architecture Docs](https://learn.microsoft.com/en-us/azure/azure-local/concepts/architecture?view=azloc-2509)
-- [Network Planning Guide](https://learn.microsoft.com/en-us/azure/azure-local/plan/network?view=azloc-2509)
-- [Security Best Practices](https://learn.microsoft.com/en-us/azure/azure-local/security/?view=azloc-2509)
+- [Azure Local Architecture Docs](https://learn.microsoft.com/en-us/azure/azure-local/overview?view=azloc-2509)
+- [Network Planning Guide](https://learn.microsoft.com/en-us/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2509)
+- [Security Best Practices](https://learn.microsoft.com/en-us/azure/azure-local/concepts/security-features?view=azloc-2509)
 
 ---
 

@@ -41,7 +41,7 @@ Deploy Azure Local clusters across multiple physical sites with synchronized ope
 > *Multi-Site Deployment Topologies (Asset 46)*  
 > Diagram showing three topology patterns with network flows, redundancy levels, failover behavior, and governance model for each.  
 > **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 46  
-> **Source to adapt:** [Multi-site Azure Local deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/plan/multi-site-considerations?view=azloc-2509)
+> **Source to adapt:** [Multi-site Azure Local deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2509)
 
 ---
 

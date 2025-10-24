@@ -143,7 +143,7 @@ description: "Additional resources, references, and support for Microsoft Sovere
 ### PowerShell Modules
 
 - **[Az PowerShell Module](https://learn.microsoft.com/en-us/powershell/azure/)** - Azure management
-- **[Azure Local PowerShell](https://learn.microsoft.com/en-us/azure/azure-local/manage/powershell?view=azloc-2509)** - Specific cmdlets
+- **[Azure Local PowerShell](https://learn.microsoft.com/en-us/azure/azure-local/overview?view=azloc-2509)** - Specific cmdlets
 
 ---
 
@@ -175,7 +175,7 @@ description: "Additional resources, references, and support for Microsoft Sovere
 ### Sovereign Cloud Specific
 
 - **[Sovereign Landing Zone](https://learn.microsoft.com/en-us/industry/sovereign-cloud/sovereign-public-cloud/sovereign-landing-zone/overview-slz)** - SLZ architecture
-- **[Azure Local Network Patterns](https://learn.microsoft.com/en-us/azure/azure-local/plan/network-patterns?view=azloc-2509)** - Networking guidance
+- **[Azure Local Network Patterns](https://learn.microsoft.com/en-us/azure/azure-local/plan/choose-network-pattern?view=azloc-2509)** - Networking guidance
 
 ---
 

@@ -19,7 +19,7 @@ Manage certificates manually in air-gapped environments without cloud certificat
 > *Certificate Lifecycle Management (Asset 51)*  
 > Timeline showing certificate issue, validity periods, renewal windows, key procedures, and decision points for manual management.  
 > **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 51  
-> **Source to adapt:** [Certificate lifecycle in Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/certificate-management?view=azloc-2509)
+> **Source to adapt:** [Certificate lifecycle in Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/manage-secrets-rotation?view=azloc-2509)
 
 ---
 

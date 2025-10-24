@@ -58,7 +58,7 @@ docs/assets/images/
 - Color coding: Green (public) → Yellow (enhanced) → Orange (dedicated) → Red (isolated/air-gapped)
 
 **Recommended Source:**
-- Adapt from: [Azure Local deployment models](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
+- Adapt from: [Azure Local deployment models](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)
 - Reference: [Microsoft Cloud for Sovereignty](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)
 
 **Used In:**
@@ -220,7 +220,7 @@ docs/assets/images/
 - Feature matrix at bottom
 
 **Recommended Source:**
-- Adapt from: [Azure Local deployment options](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
+- Adapt from: [Azure Local deployment options](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)
 - Reference: [Disconnected deployment](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2509)
 
 **Used In:**
@@ -481,7 +481,7 @@ Until assets are created, use placeholders:
 > **📊 Visual Reference Needed**  
 > *Sovereignty Spectrum Diagram*  
 > This section will include a visual diagram showing the 5 levels of digital sovereignty from standard cloud to air-gapped systems.  
-> **Source to adapt:** [Azure Local deployment models](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
+> **Source to adapt:** [Azure Local deployment models](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)
 ```
 
 ---
@@ -624,7 +624,7 @@ If you create or adapt visual assets for this project:
 
 **Size:** 1400x1000px
 
-**Source:** [Azure Local Architecture](https://learn.microsoft.com/en-us/azure/azure-local/concepts/architecture?view=azloc-2509)
+**Source:** [Azure Local Architecture](https://learn.microsoft.com/en-us/azure/azure-local/overview?view=azloc-2509)
 
 **Used In:**
 - `docs/level-100/azure-local-overview.html`
@@ -686,7 +686,7 @@ If you create or adapt visual assets for this project:
 
 **Size:** 1400x1000px
 
-**Source:** [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure/azure-local/system-requirements?view=azloc-2509)
+**Source:** [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-requirements-23h2?view=azloc-2509)
 
 **Used In:**
 - `docs/level-100/azure-local-hardware.html`
@@ -954,7 +954,7 @@ If you create or adapt visual assets for this project:
 - `docs/level-200/azure-local-advanced-networking.md`
 - `docs/level-200/azure-local-architecture-deep-dive.md`
 
-**Source Refs:** [SET Documentation](https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-architecture?view=azloc-2509), [RDMA Configuration](https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-requirements#network-requirements)
+**Source Refs:** [SET Documentation](https://learn.microsoft.com/en-us/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2509), [RDMA Configuration](https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-requirements#network-requirements)
 
 ---
 
@@ -1020,7 +1020,7 @@ If you create or adapt visual assets for this project:
 **Used In:**
 - `docs/level-200/azure-local-hardware-planning.md`
 
-**Source Refs:** [Validated Hardware](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-checklist?view=azloc-2509)
+**Source Refs:** [Validated Hardware](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-prerequisites?view=azloc-2509)
 
 ---
 
@@ -1844,7 +1844,7 @@ If you create or adapt visual assets for this project:
 **Description:** Timeline showing certificate issuance, validity periods, renewal windows, and key procedures for disconnected environments.
 
 **Used In:** `docs/level-300/azure-local-certificate-management.md`  
-**Source Refs:** [Certificate lifecycle](https://learn.microsoft.com/en-us/azure/azure-local/manage/certificate-management?view=azloc-2509)
+**Source Refs:** [Certificate lifecycle](https://learn.microsoft.com/en-us/azure/azure-local/manage/manage-secrets-rotation?view=azloc-2509)
 
 ---
 
