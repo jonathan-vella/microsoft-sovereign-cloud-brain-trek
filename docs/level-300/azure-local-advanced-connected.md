@@ -51,7 +51,7 @@ Scale Azure Local deployments across multiple sites while maintaining cloud conn
 > *Multi-Site Azure Local Architectures (Asset 46)*  
 > Three side-by-side deployment patterns: Hub-and-Spoke, Full Mesh, and Hybrid, showing topology, connections, and key metrics.  
 > **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 46  
-> **Source to adapt:** [Azure Local deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
+> **Source to adapt:** [Azure Local deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)
 
 ---
 

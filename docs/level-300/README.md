@@ -108,7 +108,7 @@ Before starting Level 300, ensure you have:
 2. **[Design for high availability](https://learn.microsoft.com/en-us/training/modules/design-for-high-availability/)**
    - Resilient architecture patterns
 
-3. **[Azure Local networking deep dive](https://learn.microsoft.com/en-us/azure/azure-local/plan/network-patterns?view=azloc-2509)**
+3. **[Azure Local networking deep dive](https://learn.microsoft.com/en-us/azure/azure-local/plan/choose-network-pattern?view=azloc-2509)**
    - Advanced networking architectures
 
 ### Recommended Reading

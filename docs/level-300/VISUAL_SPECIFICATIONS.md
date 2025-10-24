@@ -429,8 +429,8 @@ Three deployment patterns displayed side-by-side:
 8. ✓ File size < 400KB
 
 **Microsoft Learn Adaptation:**
-- Source: [Azure Local deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
-- Reference: [Multi-site Azure Local deployments](https://learn.microsoft.com/en-us/azure/azure-local/manage/azure-arc-vm-management?view=azloc-2509)
+- Source: [Azure Local deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)
+- Reference: [Multi-site Azure Local deployments](https://learn.microsoft.com/en-us/azure/azure-local/manage/create-arc-virtual-machines?view=azloc-2509)
 - Adapt: Sovereign-specific bandwidth and latency considerations
 
 ---
@@ -589,7 +589,7 @@ Multi-site network topology with:
 8. ✓ File size < 350KB
 
 **Microsoft Learn Adaptation:**
-- Source: [Azure Local networking](https://learn.microsoft.com/en-us/azure/azure-local/plan/network-patterns?view=azloc-2509)
+- Source: [Azure Local networking](https://learn.microsoft.com/en-us/azure/azure-local/plan/choose-network-pattern?view=azloc-2509)
 - Reference: [Security controls for Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/concepts/security?view=azloc-2509)
 - Adapt: Sovereign network security requirements
 
@@ -676,7 +676,7 @@ Complete air-gapped system showing:
 
 **Microsoft Learn Adaptation:**
 - Source: [Disconnected operations for Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)
-- Reference: [Air-gapped deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
+- Reference: [Air-gapped deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)
 - Adapt: Sovereign compliance for air-gapped systems
 
 ---
@@ -752,7 +752,7 @@ Three-phase update process:
 
 **Microsoft Learn Adaptation:**
 - Source: [Manual update procedures for disconnected Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509-disconnected)
-- Reference: [Certificate and update management](https://learn.microsoft.com/en-us/azure/azure-local/manage/certificate-management?view=azloc-2509)
+- Reference: [Certificate and update management](https://learn.microsoft.com/en-us/azure/azure-local/manage/manage-secrets-rotation?view=azloc-2509)
 - Adapt: Sovereign compliance for update transfers
 
 ---
@@ -826,7 +826,7 @@ Timeline spanning 3-year period showing:
 8. ✓ File size < 200KB
 
 **Microsoft Learn Adaptation:**
-- Source: [Certificate lifecycle in Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/certificate-management?view=azloc-2509)
+- Source: [Certificate lifecycle in Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/manage-secrets-rotation?view=azloc-2509)
 - Adapt: Sovereign compliance requirements for certificates
 
 ---
@@ -1425,7 +1425,7 @@ Matrix with columns:
 
 **Microsoft Learn Adaptation:**
 - Source: [Troubleshooting Azure resources](https://learn.microsoft.com/en-us/troubleshoot/)
-- Reference: [Azure Local diagnostics](https://learn.microsoft.com/en-us/azure/azure-local/troubleshoot/troubleshoot-overview?view=azloc-2509)
+- Reference: [Azure Local diagnostics](https://learn.microsoft.com/en-us/azure/azure-local/manage/support-tools?view=azloc-2509)
 - Adapt: Edge RAG and disconnected environment diagnostics
 
 ---

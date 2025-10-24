@@ -57,7 +57,7 @@ Acceptance Criteria:
 - [ ] Alt text describes progression and color meaning
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509
 - Reference: https://learn.microsoft.com/en-us/industry/sovereign-cloud/
 - Adapt Azure Local and sovereignty documentation concepts
 
@@ -367,7 +367,7 @@ Acceptance Criteria:
 - [ ] Deployment architecture differences evident
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509
 - Reference: https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2509
 - Based on official deployment documentation
 
@@ -594,8 +594,8 @@ Acceptance Criteria:
 - [ ] Connectivity flows unambiguous
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-architecture?view=azloc-2509
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/system-requirements?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/overview?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-requirements-23h2?view=azloc-2509
 - Use official architecture documentation as basis
 
 ---
@@ -648,7 +648,7 @@ Acceptance Criteria:
 - [ ] Operational accuracy verified
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509
 - Reference: https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2509
 - Create custom based on operational documentation
 
@@ -708,7 +708,7 @@ Acceptance Criteria:
 
 Microsoft Learn Adaptation:
 - Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-requirements-23h2?view=azloc-2509
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-architecture?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2509
 - Based on validated hardware configurations
 
 ---

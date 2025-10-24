@@ -110,7 +110,7 @@ Azure Local supports two operating modes that provide different levels of sovere
 - Acceptable to have dependency on Azure connectivity
 - Want latest Azure innovations immediately
 
-**[Learn More: Connected deployment](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)**
+**[Learn More: Connected deployment](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)**
 
 ---
 
@@ -808,7 +808,7 @@ Dell PowerEdge R750
 
 1. **[Azure Local deployment quickstart](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/deployment-quickstart)**
 2. **[Azure Local on-premises deployment](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/deployment-introduction)**
-3. **[Windows Admin Center guide](https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/overviewoverview)**
+3. **[Windows Admin Center guide](https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview)**
 
 ### Additional Resources
 

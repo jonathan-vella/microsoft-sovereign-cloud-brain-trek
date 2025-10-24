@@ -41,7 +41,7 @@ Master complex networking scenarios for multi-site Azure Local deployments with 
 > *Networking Architecture - Connected Mode (Asset 47)*  
 > Complete network diagram showing Azure connectivity, multi-site communication, edge networking, redundancy, and traffic flows.  
 > **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 47  
-> **Source to adapt:** [Azure networking for Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-architecture?view=azloc-2509)
+> **Source to adapt:** [Azure networking for Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2509)
 
 ---
 

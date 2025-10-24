@@ -55,7 +55,7 @@ Acceptance Criteria:
 - [ ] Alt text provided in final SVG
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-architecture?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2509
 - Adapt SET examples and include RDMA notes from system requirements
 
 ---
@@ -131,7 +131,7 @@ Acceptance Criteria:
 - [ ] All endpoints have brief cost guidance
 
 Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-checklist?view=azloc-2509
+- Reference: https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-prerequisites?view=azloc-2509
 
 ---
 
