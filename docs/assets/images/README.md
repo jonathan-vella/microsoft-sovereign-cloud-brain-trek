@@ -1445,7 +1445,7 @@ If you create or adapt visual assets for this project:
 **Used In:**
 - `docs/level-200/fedramp-compliance.md`
 
-**Source Refs:** [FedRAMP Requirements](https://www.fedramp.gov/documents-repository/), [Azure Government](https://learn.microsoft.com/en-us/azure/azure-government/compliance/azure-services-by-fedramp-msa)
+**Source Refs:** [FedRAMP Requirements](https://www.fedramp.gov/documents-repository/), [Azure Government FedRAMP Services](https://learn.microsoft.com/en-us/azure/azure-government/compliance/azure-services-in-fedramp-auditscope)
 
 ---
 

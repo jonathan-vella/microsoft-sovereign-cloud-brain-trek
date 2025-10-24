@@ -808,7 +808,7 @@ Dell PowerEdge R750
 
 1. **[Azure Local deployment quickstart](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/deployment-quickstart)**
 2. **[Azure Local on-premises deployment](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/deployment-introduction)**
-3. **[Windows Admin Center guide](https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/overviewoverview)**
+3. **[Windows Admin Center guide](https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview)**
 
 ### Additional Resources
 

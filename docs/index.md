@@ -131,6 +131,6 @@ Ready to begin your learning journey?
 
 ---
 
-<div class="note">
-  <strong>Note:</strong> This content is based on Microsoft's official documentation and is current as of October 2025. Always refer to <a href="https://learn.microsoft.com">Microsoft Learn</a> for the latest updates.
+<div class="note" markdown="1">
+**Note:** This content is based on Microsoft's official documentation and is current as of October 2025. Always refer to [Microsoft Learn](https://learn.microsoft.com) for the latest updates.
 </div>
