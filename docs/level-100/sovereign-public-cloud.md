@@ -423,7 +423,7 @@ Before implementing Sovereign Public Cloud, understand what data you have:
 - Where is data processed?
 - Where is data archived or deleted?
 
-**Tool:** [Microsoft Purview Data Map](https://learn.microsoft.com/en-us/azure/purview/concept-data-map) for automated data discovery
+**Tool:** [Microsoft Purview Data Map](https://learn.microsoft.com/en-us/purview/concept-elastic-data-map) for automated data discovery
 
 ---
 
@@ -476,7 +476,7 @@ Root Management Group
 - ExpressRoute for hybrid connectivity
 - Network Security Groups (NSGs) for micro-segmentation
 
-**Reference:** [Microsoft Cloud for Sovereignty landing zone](https://learn.microsoft.com/en-us/industry/sovereign-cloud/landing-zone)
+**Reference:** [Microsoft Cloud for Sovereignty landing zone](https://learn.microsoft.com/en-us/industry/sovereign-cloud/sovereign-public-cloud/sovereign-landing-zone/overview-slz)
 
 ---
 
@@ -777,7 +777,7 @@ Follow a phased migration approach:
 
 ### Hands-On Learning
 
-1. **[Microsoft Cloud for Sovereignty quickstart](https://learn.microsoft.com/en-us/industry/sovereign-cloud/sovereignty-landing-zone-quickstart)**
+1. **[Microsoft Cloud for Sovereignty quickstart](https://learn.microsoft.com/en-us/industry/sovereign-cloud/sovereign-public-cloud/sovereign-landing-zone/overview-slz)**
 2. **[Deploy Azure Policy for compliance](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/create-and-manage)**
 3. **[Configure Customer Lockbox](https://learn.microsoft.com/en-us/azure/security/fundamentals/customer-lockbox-overview)**
 4. **[Set up Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/quick-create-portal)**

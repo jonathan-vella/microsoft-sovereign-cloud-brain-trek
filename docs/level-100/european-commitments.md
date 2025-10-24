@@ -375,7 +375,7 @@ A commitment to store and process customer data within the European Union, with 
 ### Official Documentation
 
 - **[EU Data Boundary](https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn)** - Complete technical documentation
-- **[Data Residency](https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-eu-data-boundary)** - Azure data residency information
+- **[Data Residency](https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn)** - Azure data residency information
 - **[Sovereign Landing Zone](https://learn.microsoft.com/en-us/industry/sovereign-cloud/sovereign-public-cloud/sovereign-landing-zone/overview-slz)** - SLZ architecture
 
 ### Microsoft Learn

@@ -310,7 +310,7 @@ Specialized database optimized for storing and querying high-dimensional vectors
 > *RAG Components and Data Flow Diagram (Asset 20)*  
 > Detailed step-by-step data flow showing 8-10 sequential steps: (1) Document upload/ingestion; (2) Document parsing and splitting; (3) Embedding generation; (4) Vector storage in database; (5) User query; (6) Query embedding; (7) Similarity search; (8) Retrieved context; (9) LLM processing with context; (10) Answer generation. Use numbered circles for each step. Arrows show data flow with different colors (orange=documents, blue=query, green=retrieval, purple=processing). Show components at each step (parser, embedding model, vector DB, LLM). Icons for each component type. Wireframe layout shows left side (ingestion pipeline) and right side (query pipeline) merging at LLM.  
 > **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 20  
-> **Source to adapt:** [Retrieval-Augmented Generation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/retrieval-augmented-generation)
+> **Source to adapt:** [Retrieval-Augmented Generation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data)
 
 ---
 

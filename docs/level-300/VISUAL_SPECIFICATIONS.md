@@ -77,7 +77,7 @@ Each pillar should include:
 
 **Microsoft Learn Adaptation:**
 - Source: [Zero Trust security model](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)
-- Reference: [Zero Trust implementation in Azure](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-implementation)
+- Reference: [Zero Trust implementation in Azure](https://learn.microsoft.com/en-us/security/zero-trust/deploy/overview)
 - Adapt: Sovereign cloud requirements from Microsoft Cloud for Sovereignty documentation
 
 ---
@@ -222,7 +222,7 @@ End-to-end Zero Trust flow showing:
 9. ✓ File size < 300KB
 
 **Microsoft Learn Adaptation:**
-- Source: [Zero Trust implementation Azure](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-implementation)
+- Source: [Zero Trust implementation Azure](https://learn.microsoft.com/en-us/security/zero-trust/deploy/overview)
 - Reference: [Conditional Access architecture](https://learn.microsoft.com/en-us/entra/identity/conditional-access/)
 - Adapt: Sovereign cloud-specific components (data residency controls, compliance enforcement)
 
@@ -354,7 +354,7 @@ Example mappings:
 - FedRAMP: [FedRAMP on Azure](https://learn.microsoft.com/en-us/compliance/regulatory/offering-fedramp)
 - GDPR: [GDPR on Azure](https://learn.microsoft.com/en-us/compliance/regulatory/gdpr)
 - HIPAA: [HIPAA on Azure](https://learn.microsoft.com/en-us/compliance/regulatory/offering-hipaa-hitech)
-- ITAR: [ITAR compliance](https://learn.microsoft.com/en-us/compliance/regulatory/offering-us-itar)
+- ITAR: [ITAR compliance](https://learn.microsoft.com/en-us/compliance/regulatory/offering-itar)
 
 ---
 
@@ -429,8 +429,8 @@ Three deployment patterns displayed side-by-side:
 8. ✓ File size < 400KB
 
 **Microsoft Learn Adaptation:**
-- Source: [Azure Local deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-options)
-- Reference: [Multi-site Azure Local deployments](https://learn.microsoft.com/en-us/azure/azure-local/manage/multi-site-management)
+- Source: [Azure Local deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
+- Reference: [Multi-site Azure Local deployments](https://learn.microsoft.com/en-us/azure/azure-local/manage/azure-arc-vm-management?view=azloc-2509)
 - Adapt: Sovereign-specific bandwidth and latency considerations
 
 ---
@@ -511,8 +511,8 @@ Update pipeline with stages:
 8. ✓ File size < 250KB
 
 **Microsoft Learn Adaptation:**
-- Source: [Azure Local update management](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-24h2)
-- Reference: [Update strategies for connected environments](https://learn.microsoft.com/en-us/azure/azure-local/manage/update-management)
+- Source: [Azure Local update management](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509)
+- Reference: [Update strategies for connected environments](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509)
 - Adapt: Sovereign-specific update windows and compliance
 
 ---
@@ -589,8 +589,8 @@ Multi-site network topology with:
 8. ✓ File size < 350KB
 
 **Microsoft Learn Adaptation:**
-- Source: [Azure Local networking](https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-patterns-overview)
-- Reference: [Security controls for Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/concepts/security-overview)
+- Source: [Azure Local networking](https://learn.microsoft.com/en-us/azure/azure-local/plan/network-patterns?view=azloc-2509)
+- Reference: [Security controls for Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/concepts/security?view=azloc-2509)
 - Adapt: Sovereign network security requirements
 
 ---
@@ -676,7 +676,7 @@ Complete air-gapped system showing:
 
 **Microsoft Learn Adaptation:**
 - Source: [Disconnected operations for Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)
-- Reference: [Air-gapped deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-options)
+- Reference: [Air-gapped deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
 - Adapt: Sovereign compliance for air-gapped systems
 
 ---
@@ -751,8 +751,8 @@ Three-phase update process:
 8. ✓ File size < 300KB
 
 **Microsoft Learn Adaptation:**
-- Source: [Manual update procedures for disconnected Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/update-management-disconnected)
-- Reference: [Certificate and update management](https://learn.microsoft.com/en-us/azure/azure-local/manage/certificate-lifecycle)
+- Source: [Manual update procedures for disconnected Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509-disconnected)
+- Reference: [Certificate and update management](https://learn.microsoft.com/en-us/azure/azure-local/manage/certificate-management?view=azloc-2509)
 - Adapt: Sovereign compliance for update transfers
 
 ---
@@ -826,7 +826,7 @@ Timeline spanning 3-year period showing:
 8. ✓ File size < 200KB
 
 **Microsoft Learn Adaptation:**
-- Source: [Certificate lifecycle in Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/certificate-lifecycle)
+- Source: [Certificate lifecycle in Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/certificate-management?view=azloc-2509)
 - Adapt: Sovereign compliance requirements for certificates
 
 ---
@@ -912,8 +912,8 @@ Production-scale RAG showing:
 8. ✓ File size < 450KB
 
 **Microsoft Learn Adaptation:**
-- Source: [Production RAG deployment patterns](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/retrieval-augmented-generation)
-- Reference: [High-availability patterns on Azure](https://learn.microsoft.com/en-us/azure/architecture/concepts/reliability-patterns)
+- Source: [Production RAG deployment patterns](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data)
+- Reference: [High-availability patterns on Azure](https://learn.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns)
 - Adapt: Edge-specific availability patterns
 
 ---
@@ -1000,7 +1000,7 @@ Optimization pipeline stages:
 8. ✓ File size < 300KB
 
 **Microsoft Learn Adaptation:**
-- Source: [Model optimization techniques](https://learn.microsoft.com/en-us/azure/ai-services/language-service/custom-named-entity-recognition/concepts/model-composition)
+- Source: [Model optimization techniques](https://learn.microsoft.com/en-us/azure/ai-services/language-service/custom-named-entity-recognition/overview)
 - Reference: [Edge AI model optimization](https://learn.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-custom-vision)
 - Adapt: Edge RAG-specific optimizations
 
@@ -1095,7 +1095,7 @@ MLOps cycle with stages:
 
 **Microsoft Learn Adaptation:**
 - Source: [MLOps and ML lifecycle](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment)
-- Reference: [Continuous integration and deployment for ML](https://learn.microsoft.com/en-us/azure/machine-learning/concept-ci-cd)
+- Reference: [Continuous integration and deployment for ML](https://learn.microsoft.com/en-us/azure/machine-learning/concept-environments)
 - Adapt: Edge and disconnected environment considerations
 
 ---
@@ -1425,7 +1425,7 @@ Matrix with columns:
 
 **Microsoft Learn Adaptation:**
 - Source: [Troubleshooting Azure resources](https://learn.microsoft.com/en-us/troubleshoot/)
-- Reference: [Azure Local diagnostics](https://learn.microsoft.com/en-us/azure/azure-local/manage/troubleshoot)
+- Reference: [Azure Local diagnostics](https://learn.microsoft.com/en-us/azure/azure-local/troubleshoot/troubleshoot-overview?view=azloc-2509)
 - Adapt: Edge RAG and disconnected environment diagnostics
 
 ---

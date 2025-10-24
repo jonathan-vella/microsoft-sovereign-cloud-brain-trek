@@ -201,7 +201,7 @@ The control plane is the management layer that orchestrates infrastructure opera
 > *Azure Local Connected vs. Disconnected Mode Comparison (Asset 7)*  
 > Side-by-side comparison diagram of Connected Mode (hybrid with Azure) versus Disconnected Mode (air-gapped/independent). Left panel shows Connected Mode architecture with cloud connection. Right panel shows Disconnected Mode with local autonomy. Bottom: Feature availability matrix showing supported features for each mode (✓, ✗, Limited indicators). Use cases provided for each mode. Color-coded: Blue (connected), Gray (disconnected).  
 > **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 7  
-> **Source to adapt:** [Azure Local deployment options](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-options)
+> **Source to adapt:** [Azure Local deployment options](https://learn.microsoft.com/en-us/azure/azure-local/concepts/deployment-overview?view=azloc-2509)
 
 ---
 

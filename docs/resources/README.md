@@ -42,7 +42,7 @@ description: "Additional resources, references, and support for Microsoft Sovere
 
 - **[Edge RAG Documentation](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/)** - Main documentation
 - **[Prerequisites](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/complete-prerequisites)** - Deployment requirements
-- **[Deployment Guide](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/deploy-edge-rag)** - Step-by-step deployment
+- **[Deployment Guide](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/overview)** - Step-by-step deployment
 
 ### Azure Arc
 
@@ -68,11 +68,11 @@ description: "Additional resources, references, and support for Microsoft Sovere
 
 - **[Introduction to Azure Arc](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-arc/)** - ~30 minutes
 - **[Manage hybrid workloads with Azure Arc](https://learn.microsoft.com/en-us/training/paths/manage-hybrid-infrastructure-with-azure-arc/)** - Complete learning path
-- **[Configure Azure Arc-enabled Kubernetes](https://learn.microsoft.com/en-us/training/modules/configure-azure-arc-enabled-kubernetes/)** - Essential for Azure Local
+- **[Configure Azure Arc-enabled Kubernetes](https://learn.microsoft.com/en-us/training/modules/intro-to-arc-enabled-kubernetes/)** - Essential for Azure Local
 
 ### Security & Identity
 
-- **[Design identity and access management solutions](https://learn.microsoft.com/en-us/training/modules/design-identity-access-management-solutions/)** - Advanced identity
+- **[Design identity and access management solutions](https://learn.microsoft.com/en-us/training/modules/design-authentication-authorization-solutions/)** - Advanced identity
 - **[Zero Trust security](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)** - Comprehensive framework
 
 ---
@@ -143,7 +143,7 @@ description: "Additional resources, references, and support for Microsoft Sovere
 ### PowerShell Modules
 
 - **[Az PowerShell Module](https://learn.microsoft.com/en-us/powershell/azure/)** - Azure management
-- **[Azure Local PowerShell](https://learn.microsoft.com/en-us/azure/azure-local/manage/powershell-overview)** - Specific cmdlets
+- **[Azure Local PowerShell](https://learn.microsoft.com/en-us/azure/azure-local/manage/powershell?view=azloc-2509)** - Specific cmdlets
 
 ---
 
@@ -175,7 +175,7 @@ description: "Additional resources, references, and support for Microsoft Sovere
 ### Sovereign Cloud Specific
 
 - **[Sovereign Landing Zone](https://learn.microsoft.com/en-us/industry/sovereign-cloud/sovereign-public-cloud/sovereign-landing-zone/overview-slz)** - SLZ architecture
-- **[Azure Local Network Patterns](https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-patterns-overview)** - Networking guidance
+- **[Azure Local Network Patterns](https://learn.microsoft.com/en-us/azure/azure-local/plan/network-patterns?view=azloc-2509)** - Networking guidance
 
 ---
 

@@ -162,7 +162,7 @@ Five progressive hands-on labs reinforcing Modules 1-5 through practical impleme
 1. **[Implement Azure Landing Zones](https://learn.microsoft.com/en-us/training/modules/enterprise-scale-introduction/)**
    - Foundation for sovereign landing zones
 
-2. **[Configure Azure Arc-enabled Kubernetes](https://learn.microsoft.com/en-us/training/modules/configure-azure-arc-enabled-kubernetes/)**
+2. **[Configure Azure Arc-enabled Kubernetes](https://learn.microsoft.com/en-us/training/modules/intro-to-arc-enabled-kubernetes/)**
    - Essential for Azure Local management
 
 3. **[Manage hybrid workloads with Azure Arc](https://learn.microsoft.com/en-us/training/paths/manage-hybrid-infrastructure-with-azure-arc/)**

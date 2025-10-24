@@ -1015,8 +1015,8 @@ After completing this assessment:
 ### 4. 🌐 External Resources
 - [Azure Local Documentation](https://learn.microsoft.com/en-us/azure/azure-local/)
 - [Disconnected Operations Guide](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)
-- [Network Patterns Overview](https://learn.microsoft.com/en-us/azure/azure-local/concepts/network-patterns-overview)
-- [Update Management](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-24h2)
+- [Network Patterns Overview](https://learn.microsoft.com/en-us/azure/azure-local/plan/network-patterns?view=azloc-2509)
+- [Update Management](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509)
 
 ### 5. ✋ Need Help?
 - Review [CONTRIBUTING.md](../../CONTRIBUTING.md)

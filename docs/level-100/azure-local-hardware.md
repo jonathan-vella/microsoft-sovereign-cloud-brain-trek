@@ -82,7 +82,7 @@ Selecting the right hardware is critical for Azure Local success. This page prov
 > *Azure Local Hardware Topology Diagram (Asset 13)*  
 > Physical hardware configuration showing typical 2-3 node cluster setup. Top section: Nodes with per-node components (CPU, memory, storage, network adapters) labeled with specifications. Middle section: Network topology with ToR switches, management network, storage network, cluster heartbeat network. Bottom section: External connections (WAN, storage array if applicable). Redundancy indicators for dual power, dual switches. Component specifications in callouts. Typical production configuration shown with scalability notes.  
 > **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 13  
-> **Source to adapt:** [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure/azure-local/system-requirements)
+> **Source to adapt:** [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure/azure-local/concepts/system-requirements-23h2?view=azloc-2509)
 
 ---
 
@@ -953,7 +953,7 @@ Resiliency Factors:
 - [Azure Local Quiz →](azure-local-quiz)
 
 **External Resources:**
-- [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure-local/system-requirements)
+- [Azure Local System Requirements](https://learn.microsoft.com/en-us/azure/azure-local/system-requirements?view=azloc-2509)
 - [Hardware Sizing Calculator](https://azurestackhcisolutions.azure.microsoft.com/)
 - [Validated Hardware Catalog](https://azurestackhcisolutions.azure.microsoft.com/)
 
