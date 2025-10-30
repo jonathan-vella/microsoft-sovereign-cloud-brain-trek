@@ -7,11 +7,9 @@ description: "Foundational concepts for Microsoft Sovereign Cloud & AI at the Ed
 ---
 
 # Level 100: Foundational Concepts
-{: .no_toc }
+
 
 ## Overview
-{: .no_toc .text-delta }
-
 Build a solid understanding of the core concepts, terminology, and value propositions for Microsoft Sovereign Cloud, Azure Local, and Edge RAG.
 
 ---
