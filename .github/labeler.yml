@@ -1,0 +1,113 @@
+# Labeler configuration for automatic PR labeling based on changed paths
+# Documentation: https://github.com/actions/labeler
+
+# Learning Levels
+level-100:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/level-100/**/*'
+
+level-200:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/level-200/**/*'
+
+level-300:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/level-300/**/*'
+
+# Content Types
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: ['*.md', '!.github/**/*.md']
+    - any-glob-to-any-file: 'docs/**/*.md'
+
+labs:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/**/lab-*.md'
+
+quizzes:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/**/*knowledge-check.md'
+
+visual-assets:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/assets/**/*'
+    - any-glob-to-any-file: 'docs/**/VISUAL_SPECIFICATIONS.md'
+
+# Technology/Module Areas
+azure-local:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/**/azure-local*.md'
+    - any-glob-to-any-file: 'docs/**/module-*-azure-local.md'
+
+azure-arc:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/**/azure-arc*.md'
+    - any-glob-to-any-file: 'docs/**/arc-*.md'
+    - any-glob-to-any-file: 'docs/**/module-*-arc.md'
+
+edge-rag:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/**/edge-rag*.md'
+    - any-glob-to-any-file: 'docs/**/rag-*.md'
+
+sovereignty:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/**/digital-sovereignty*.md'
+    - any-glob-to-any-file: 'docs/**/sovereign*.md'
+    - any-glob-to-any-file: 'docs/**/cloud-models*.md'
+    - any-glob-to-any-file: 'docs/**/regulatory*.md'
+    - any-glob-to-any-file: 'docs/**/compliance*.md'
+    - any-glob-to-any-file: 'docs/**/gdpr*.md'
+
+security:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/**/security*.md'
+    - any-glob-to-any-file: 'docs/**/*-security-*.md'
+
+cost-optimization:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/**/cost*.md'
+
+# Infrastructure & Configuration
+github-actions:
+  - changed-files:
+    - any-glob-to-any-file: '.github/workflows/**/*'
+    - any-glob-to-any-file: '.github/labeler.yml'
+
+jekyll-config:
+  - changed-files:
+    - any-glob-to-any-file: ['_config.yml', 'Gemfile', 'Gemfile.lock']
+    - any-glob-to-any-file: 'docs/_includes/**/*'
+    - any-glob-to-any-file: 'docs/_layouts/**/*'
+
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file: ['Gemfile', 'Gemfile.lock', 'package.json', 'package-lock.json']
+    - any-glob-to-any-file: '.github/dependabot.yml'
+
+# Project Management & Process
+contributing-guides:
+  - changed-files:
+    - any-glob-to-any-file: ['CONTRIBUTING.md', 'README.md', 'CHANGELOG.md']
+    - any-glob-to-any-file: '.github/CODEOWNERS'
+    - any-glob-to-any-file: '.github/ISSUE_TEMPLATE/**/*'
+
+automation:
+  - changed-files:
+    - any-glob-to-any-file: 'scripts/**/*'
+    - any-glob-to-any-file: 'AUTOMATION.md'
+
+designer-assets:
+  - changed-files:
+    - any-glob-to-any-file: '.github/*DESIGNER*.md'
+    - any-glob-to-any-file: '.github/VISUAL_ASSET_PROCESS.md'
+
+# Resources & References
+resources:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/resources/**/*'
+
+# Root Documentation
+root-docs:
+  - changed-files:
+    - any-glob-to-any-file: ['HANDOFF.md', 'JEKYLL_PREP.md', 'GITHUB_PAGES_SETUP.md']
