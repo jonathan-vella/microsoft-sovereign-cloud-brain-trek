@@ -40,6 +40,36 @@ In an increasingly digital world, data has become a strategic asset. Organizatio
 
 ## Core Principles of Digital Sovereignty
 
+```mermaid
+graph TD
+    A[Digital Sovereignty] --> B[Data Residency]
+    A --> C[Operational Sovereignty]
+    A --> D[Data Control & Access]
+    A --> E[Compliance & Regulatory Alignment]
+    
+    B --> B1[Geographic Boundaries]
+    B --> B2[Data Storage Location]
+    B --> B3[Cross-Border Controls]
+    
+    C --> C1[Infrastructure Control]
+    C --> C2[Operational Independence]
+    C --> C3[Disconnected Operations]
+    
+    D --> D1[Identity & Access Management]
+    D --> D2[Encryption & Keys]
+    D --> D3[Audit Logging]
+    
+    E --> E1[Regulatory Frameworks]
+    E --> E2[Compliance Monitoring]
+    E --> E3[Certifications]
+    
+    style A fill:#0078D4,stroke:#004578,stroke-width:3px,color:#fff
+    style B fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style C fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style D fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style E fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+```
+
 ### 1. Data Residency
 
 **Definition:** Data residency ensures that data is stored and remains within specific geographic boundaries.

@@ -145,21 +145,44 @@ Azure Arc and Azure Local work together to provide comprehensive sovereignty:
 - Delivers observability and monitoring
 
 **Together They Provide:**
-```
-┌─────────────────────────────────────────────┐
-│         Azure Portal (Management)            │
-│              Azure Arc                       │
-└─────────────────┬───────────────────────────┘
-                  │ (Connected Mode)
-                  │
-┌─────────────────▼───────────────────────────┐
-│         Azure Local Cluster                  │
-│    (On-Premises Infrastructure)              │
-│  • VMs and Containers                        │
-│  • Storage Spaces Direct                     │
-│  • Networking                                │
-│  • Data stays local (sovereignty)            │
-└──────────────────────────────────────────────┘
+
+```mermaid
+graph TB
+    subgraph Cloud[Azure Cloud]
+        Portal[Azure Portal]
+        ARM[Azure Resource Manager]
+        Policy[Azure Policy]
+        Monitor[Azure Monitor]
+    end
+    
+    subgraph Arc[Azure Arc Layer]
+        ArcAgent[Arc Agents]
+        Metadata[Metadata Sync]
+        Governance[Governance Engine]
+    end
+    
+    subgraph OnPrem[On-Premises/Edge]
+        AzLocal[Azure Local Cluster]
+        Storage[Storage Spaces Direct]
+        Workloads[VMs & Containers]
+        Data[Customer Data - Local]
+    end
+    
+    Portal --> ARM
+    ARM --> Arc
+    Policy --> Arc
+    Monitor --> Arc
+    
+    Arc -.->|Connected Mode<br/>Metadata Only| OnPrem
+    
+    AzLocal --> Storage
+    AzLocal --> Workloads
+    Workloads --> Data
+    
+    style Cloud fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Arc fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style OnPrem fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+    style Data fill:#FFE6E6,stroke:#D13438,stroke-width:2px,color:#000
 ```
 
 **Sovereignty Advantages:**
@@ -193,6 +216,34 @@ Azure Arc and Azure Local work together to provide comprehensive sovereignty:
 
 ## Three Pillars of Azure Arc
 
+```mermaid
+graph TB
+    Arc[Azure Arc Platform]
+    
+    Arc --> Servers[Arc-Enabled Servers]
+    Arc --> K8s[Arc-Enabled Kubernetes]
+    Arc --> Data[Arc-Enabled Data Services]
+    
+    Servers --> S1[Windows & Linux Servers]
+    Servers --> S2[Policy & Governance]
+    Servers --> S3[Azure Monitor]
+    Servers --> S4[Update Management]
+    
+    K8s --> K1[Any CNCF K8s Cluster]
+    K8s --> K2[GitOps Configuration]
+    K8s --> K3[Multi-Cluster Management]
+    K8s --> K4[Azure Services on K8s]
+    
+    Data --> D1[SQL Managed Instance]
+    Data --> D2[PostgreSQL Hyperscale]
+    Data --> D3[Managed DB Experience]
+    Data --> D4[Cloud Billing Model]
+    
+    style Arc fill:#0078D4,stroke:#004578,stroke-width:3px,color:#fff
+    style Servers fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style K8s fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Data fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+```
 
 ### Arc-Enabled Resources Comparison
 

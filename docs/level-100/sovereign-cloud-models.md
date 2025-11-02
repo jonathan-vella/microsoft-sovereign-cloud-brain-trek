@@ -115,6 +115,38 @@ Different organizations have different sovereignty needs:
 
 ## Model Comparison Matrix
 
+```mermaid
+graph LR
+    subgraph SPC[Sovereign Public Cloud]
+        SPC1[Shared Infrastructure]
+        SPC2[Azure Regions]
+        SPC3[Microsoft Managed]
+        SPC4[Cloud for Sovereignty]
+    end
+    
+    subgraph PRIV[Sovereign Private Cloud]
+        PRIV1[Dedicated Infrastructure]
+        PRIV2[Customer Datacenter]
+        PRIV3[Customer Managed]
+        PRIV4[Azure Local]
+    end
+    
+    subgraph NPC[National Partner Clouds]
+        NPC1[Partner Infrastructure]
+        NPC2[National Boundaries]
+        NPC3[Partner Managed]
+        NPC4[Local Compliance]
+    end
+    
+    A[Organization Needs] --> SPC
+    A --> PRIV
+    A --> NPC
+    
+    style SPC fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style PRIV fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style NPC fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style A fill:#D4E9D7,stroke:#107C10,stroke-width:3px,color:#000
+```
 
 | Feature / Attribute | Sovereign Public Cloud | Sovereign Private Cloud | National Partner Clouds |
 |---------------------|------------------------|-------------------------|-------------------------|
@@ -140,6 +172,42 @@ Different organizations have different sovereignty needs:
 
 Choosing the right sovereign cloud model depends on multiple factors. Use this framework to guide your decision:
 
+```mermaid
+flowchart TD
+    Start([Start: Cloud Model Selection]) --> Q1{Data must stay<br/>in specific location?}
+    Q1 -->|No| SPC1[Consider Sovereign<br/>Public Cloud]
+    Q1 -->|Yes| Q2{Physical isolation<br/>required?}
+    
+    Q2 -->|No| Q3{National operator<br/>mandate?}
+    Q2 -->|Yes| PRIV[Sovereign Private Cloud]
+    
+    Q3 -->|Yes| NPC[National Partner Clouds]
+    Q3 -->|No| Q4{Internet connectivity<br/>available?}
+    
+    Q4 -->|Yes| SPC2[Sovereign Public Cloud]
+    Q4 -->|No| PRIV2[Sovereign Private Cloud<br/>Disconnected Mode]
+    
+    SPC1 --> Validate{Validate against<br/>requirements}
+    SPC2 --> Validate
+    NPC --> Validate
+    PRIV --> Validate
+    PRIV2 --> Validate
+    
+    Validate --> End([Selected Model])
+    
+    style Start fill:#D4E9D7,stroke:#107C10,stroke-width:3px,color:#000
+    style End fill:#D4E9D7,stroke:#107C10,stroke-width:3px,color:#000
+    style SPC1 fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style SPC2 fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style PRIV fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style PRIV2 fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style NPC fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Q1 fill:#FFF,stroke:#666,stroke-width:2px,color:#000
+    style Q2 fill:#FFF,stroke:#666,stroke-width:2px,color:#000
+    style Q3 fill:#FFF,stroke:#666,stroke-width:2px,color:#000
+    style Q4 fill:#FFF,stroke:#666,stroke-width:2px,color:#000
+    style Validate fill:#FFF,stroke:#666,stroke-width:2px,color:#000
+```
 
 ---
 

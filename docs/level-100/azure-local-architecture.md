@@ -117,17 +117,46 @@ Microsoft maintains a catalog of validated Azure Local solutions from partners:
 
 **Typical 4-Node Cluster Layout:**
 
-```
-[Top of Rack Switch 1] [Top of Rack Switch 2]
-         |                       |
-    [Node 1] --------------- [Node 1 Redundant]
-    [Node 2] --------------- [Node 2 Redundant]
-    [Node 3] --------------- [Node 3 Redundant]
-    [Node 4] --------------- [Node 4 Redundant]
-         |                       |
-    [Management Switch]     [Storage Network]
-         |
-    [UPS / PDU]
+```mermaid
+graph TB
+    subgraph ToR[Network Layer]
+        Switch1[Top of Rack Switch 1]
+        Switch2[Top of Rack Switch 2]
+    end
+    
+    subgraph Compute[Compute Nodes]
+        Node1[Node 1<br/>CPU/RAM/Storage]
+        Node2[Node 2<br/>CPU/RAM/Storage]
+        Node3[Node 3<br/>CPU/RAM/Storage]
+        Node4[Node 4<br/>CPU/RAM/Storage]
+    end
+    
+    subgraph Infrastructure[Infrastructure]
+        Mgmt[Management Switch]
+        Power[UPS / PDU]
+    end
+    
+    Switch1 -.->|Redundant| Node1
+    Switch1 -.->|Redundant| Node2
+    Switch1 -.->|Redundant| Node3
+    Switch1 -.->|Redundant| Node4
+    
+    Switch2 -.->|Redundant| Node1
+    Switch2 -.->|Redundant| Node2
+    Switch2 -.->|Redundant| Node3
+    Switch2 -.->|Redundant| Node4
+    
+    Node1 --> Mgmt
+    Node2 --> Mgmt
+    Node3 --> Mgmt
+    Node4 --> Mgmt
+    
+    Mgmt --> Power
+    Compute --> Power
+    
+    style ToR fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Compute fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Infrastructure fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
 ```
 
 **Key Design Principles:**
