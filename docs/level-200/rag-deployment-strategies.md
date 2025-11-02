@@ -148,7 +148,7 @@ graph TB
     style Ingress fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
     style ServiceMesh fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
     style LLM1 fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
-    style LLM2 fill:#FFF,stroke:#666,stroke-width:2px,stroke-dasharray: 5 5,color:#000
+    style LLM2 fill:#FFFACD,stroke:#FF8C00,stroke-width:2px,stroke-dasharray: 5 5,color:#000
 ```
 
 **Benefits:**

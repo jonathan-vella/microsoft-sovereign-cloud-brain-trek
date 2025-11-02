@@ -22,7 +22,7 @@ nav_order: 3.3
 
 ```mermaid
 graph TB
-    subgraph AirGap[Air-Gapped Environment]
+    subgraph AirGap[🔒 Air-Gapped Environment - No External Connectivity]
         subgraph Local[On-Premises Infrastructure]
             Cluster[Azure Local Cluster<br/>Fully Autonomous]
             WAC[Windows Admin Center<br/>Local Management]
@@ -43,12 +43,9 @@ graph TB
     Azure[Azure Cloud<br/>❌ No Connection]
     Internet[Internet<br/>❌ No Access]
     
-    Azure -.->|Isolated| AirGap
-    Internet -.->|Isolated| AirGap
-    
     style AirGap fill:#F8F8F8,stroke:#D13438,stroke-width:3px,stroke-dasharray: 5 5,color:#000
-    style Azure fill:#E8F4FD,stroke:#666,stroke-width:1px,stroke-dasharray: 3 3,color:#666
-    style Internet fill:#F3E8FF,stroke:#666,stroke-width:1px,stroke-dasharray: 3 3,color:#666
+    style Azure fill:#E8F4FD,stroke:#999,stroke-width:1px,stroke-dasharray: 3 3,color:#999
+    style Internet fill:#F3E8FF,stroke:#999,stroke-width:1px,stroke-dasharray: 3 3,color:#999
     style Storage fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
 ```
 
