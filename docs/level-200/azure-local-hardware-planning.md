@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Hardware Planning and Sizing
+title: Hardware Planning & Sizing
 parent: Azure Local Architecture Deep Dive
-grand_parent: Level 200 - Intermediate
 nav_order: 2
 ---
 

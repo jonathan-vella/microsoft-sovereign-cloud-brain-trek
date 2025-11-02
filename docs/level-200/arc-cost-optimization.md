@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Arc Cost Optimization
+title: Cost Optimization
 parent: Arc Advanced Management
-grand_parent: Level 200 - Intermediate
 nav_order: 3
 ---
 

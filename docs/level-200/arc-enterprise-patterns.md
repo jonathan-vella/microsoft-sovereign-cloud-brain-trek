@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Arc Enterprise Patterns
+title: Enterprise Patterns
 parent: Arc Advanced Management
-grand_parent: Level 200 - Intermediate
 nav_order: 4
 ---
 

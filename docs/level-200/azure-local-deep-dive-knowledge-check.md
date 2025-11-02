@@ -2,7 +2,6 @@
 layout: default
 title: Knowledge Check - Azure Local Deep Dive
 parent: Azure Local Architecture Deep Dive
-grand_parent: Level 200 - Intermediate
 nav_order: 5
 ---
 

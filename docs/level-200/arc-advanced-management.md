@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Arc Advanced Management
-parent: Level 200 - Intermediate
-nav_order: 2
+parent: Module 2 - Arc Management
+grand_parent: Level 200 - Intermediate
+nav_order: 1
 has_children: true
 ---
 

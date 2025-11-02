@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Arc Policy and Governance
+title: Policy & Governance
 parent: Arc Advanced Management
-grand_parent: Level 200 - Intermediate
 nav_order: 2
 ---
 
