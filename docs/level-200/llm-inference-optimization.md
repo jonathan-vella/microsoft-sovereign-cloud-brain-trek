@@ -7,10 +7,6 @@ nav_order: 3
 
 # LLM Inference Optimization
 
-> **📊 Visual Reference: Asset 28 - LLM Inference Optimization**  
-> *Placeholder - See docs/assets/images/README.md#asset-28*  
-> Optimization strategies showing model optimization pipeline (FP32 → INT8/INT4 quantization), inference optimization techniques (batching, KV cache), hardware acceleration paths (CPU/GPU/TPU/NPU), and performance tradeoffs (latency vs. accuracy vs. throughput).
-
 ## Overview
 
 LLM inference optimization is critical for edge RAG systems where hardware is constrained and latency requirements are strict. This page covers quantization techniques, prompt engineering, batch processing, and hardware-aware optimization strategies to maximize throughput and minimize latency.

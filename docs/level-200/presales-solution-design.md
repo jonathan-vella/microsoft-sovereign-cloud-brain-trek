@@ -7,13 +7,6 @@ nav_order: 4
 
 # Pre-Sales Solution Design
 
-> **📊 Visual References:**
-> - **Asset 32** - Customer Discovery Framework (discovery process)
-> - **Asset 33** - Solution Sizing Framework (architecture sizing)
-> - **Asset 34** - TCO and ROI Analysis Model (financial modeling)
->
-> See docs/assets/images/README.md for complete asset specifications.
-
 ## Overview
 
 Pre-sales and solution design is critical for successfully positioning, sizing, and implementing Microsoft Sovereign Cloud and Edge AI solutions. This module covers the complete pre-sales process from customer discovery through proposal development, including workload assessment, sizing calculators, cost modeling, proof of concept planning, and common objection handling.

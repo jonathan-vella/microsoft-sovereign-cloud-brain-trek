@@ -2,15 +2,11 @@
 layout: default
 title: Arc Policy and Governance
 parent: Arc Advanced Management
-grand_parent: Arc Advanced Management
-nav_order: 1
+grand_parent: Level 200 - Intermediate
+nav_order: 2
 ---
 
 # Azure Policy and Governance for Arc
-
-> **📊 Visual Reference: Asset 24 - Arc Governance at Scale Architecture**  
-> *Placeholder - See docs/assets/images/README.md#asset-24*  
-> Diagram showing multi-site Arc-managed infrastructure with policy enforcement flows, compliance monitoring, and centralized governance across on-premises, cloud, and edge locations.
 
 ## Overview
 

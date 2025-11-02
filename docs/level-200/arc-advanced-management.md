@@ -1,18 +1,12 @@
 ---
 layout: default
-title: Overview
-parent: Arc Advanced Management
-nav_order: 1
+title: Arc Advanced Management
+parent: Level 200 - Intermediate
+nav_order: 2
+has_children: true
 ---
 
 # Azure Arc Advanced Management
-
-> **📊 Visual References:**
-> - **Asset 24** - Arc Governance at Scale Architecture (policy enforcement, compliance)
-> - **Asset 25** - Arc Cost Analysis and Optimization Model (cost structure breakdown)
-> - **Asset 26** - Enterprise Arc Deployment at Scale (multi-site management)
->
-> See docs/assets/images/README.md for complete asset specifications.
 
 ## Overview
 

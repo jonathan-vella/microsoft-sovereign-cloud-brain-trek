@@ -2,15 +2,11 @@
 layout: default
 title: Advanced Networking
 parent: Azure Local Architecture Deep Dive
-grand_parent: Azure Local Architecture Deep Dive
-nav_order: 3
+grand_parent: Level 200 - Intermediate
+nav_order: 4
 ---
 
 # Advanced Networking
-
-> **📊 Visual Reference: Asset 21 - Advanced Networking Architecture**  
-> *Placeholder - See docs/assets/images/README.md#asset-21*  
-> Diagram showing server NICs, virtual switch, VLAN segmentation (management, storage, cluster, customer), RDMA paths, dual ToR switches, and failover connectivity.
 
 Network design significantly impacts Azure Local performance and reliability. This section covers advanced networking patterns used in enterprise deployments.
 

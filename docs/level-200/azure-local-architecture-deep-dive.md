@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Overview
-parent: Azure Local Architecture Deep Dive
+title: Azure Local Architecture Deep Dive
+parent: Level 200 - Intermediate
 nav_order: 1
+has_children: true
 ---
 
 # Azure Local Architecture Deep Dive
@@ -23,10 +24,6 @@ This module covers:
 ---
 
 ## Complete System Architecture
-
-> **📊 Visual Reference: Asset 21 - Advanced Networking Architecture**  
-> *Placeholder - See docs/assets/images/README.md#asset-21*  
-> Diagram showing physical server NICs, virtual switch configuration, VLAN segmentation, RDMA paths, and dual ToR switches with failover connectivity.
 
 Azure Local's architecture can be understood through four interconnected layers, each designed to work together seamlessly.
 
@@ -363,10 +360,6 @@ Available for VMs: ~1.8 TB (accounting for OS and system)
 ---
 
 ## High Availability & Disaster Recovery
-
-> **📊 Visual Reference: Asset 22 - High-Availability Architecture**  
-> *Placeholder - See docs/assets/images/README.md#asset-22*  
-> Diagram showing 3-node and 4-node cluster topologies, quorum options (disk, file share, cloud witness), storage replication modes, and failover scenarios with RTO/RPO annotations.
 
 ### Failure Domains
 

@@ -7,10 +7,6 @@ nav_order: 6
 
 # FedRAMP Compliance & Authorization
 
-> **📊 Visual Reference: Asset 36 - FedRAMP Compliance Architecture**  
-> *Placeholder - See docs/assets/images/README.md#asset-36*  
-> FedRAMP compliance architecture showing 14 security control families, Azure Local configuration for compliance, C-I-A (Confidentiality-Integrity-Availability) across layers, encryption implementations, access controls, audit logging, system security plans, and ATO (Authority to Operate) roadmap.
-
 ## Overview
 
 FedRAMP (Federal Risk and Authorization Management Program) is the U.S. government's program for authorizing cloud services. This page covers FedRAMP compliance requirements, the authorization process, control families, and continuous monitoring, with focus on how Microsoft Sovereign Cloud supports FedRAMP compliance for government and critical infrastructure workloads.

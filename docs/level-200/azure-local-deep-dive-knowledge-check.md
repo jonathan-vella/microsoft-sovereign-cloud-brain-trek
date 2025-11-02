@@ -2,19 +2,12 @@
 layout: default
 title: Knowledge Check - Azure Local Deep Dive
 parent: Azure Local Architecture Deep Dive
-grand_parent: Azure Local Architecture Deep Dive
-nav_order: 4
+grand_parent: Level 200 - Intermediate
+nav_order: 5
 ---
 
 # Knowledge Check - Azure Local Architecture Deep Dive
 {: .no_toc }
-
-> **📊 Visual References:**
-> - **Asset 21** - Advanced Networking Architecture (referenced in networking questions)
-> - **Asset 22** - High-Availability Architecture (referenced in HA/failover questions)
-> - **Asset 23** - Hardware Planning Decision Tree (referenced in hardware selection questions)
-> 
-> See docs/assets/images/README.md for complete asset specifications.
 
 Test your understanding of advanced Azure Local architecture concepts. These scenario-based questions help verify your readiness for production deployments.
 

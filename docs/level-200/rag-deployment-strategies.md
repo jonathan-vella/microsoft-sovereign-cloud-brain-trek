@@ -7,10 +7,6 @@ nav_order: 3
 
 # RAG Deployment Strategies
 
-> **📊 Visual Reference: Asset 30 - RAG Deployment Topology Options**  
-> *Placeholder - See docs/assets/images/README.md#asset-30*  
-> Four deployment topology options (single-node edge, HA cluster, multi-site federation, hybrid cloud+edge) showing architecture diagrams, latency/throughput characteristics, failover capabilities, and cost analysis for each option.
-
 ## Overview
 
 Deploying RAG systems at scale requires careful consideration of containerization strategies, orchestration patterns, versioning approaches, and CI/CD integration. This page explores production-ready deployment patterns for enterprise RAG implementations on Azure Arc.

@@ -25,12 +25,6 @@ nav_order: 5
 > **Expected Release:** Q1 2026  
 > You can review the lab steps and prepare your environment in advance.
 
-> **📊 Visual References:**
-> - **Asset 39** - Lab Architecture Progression (Lab 5 as observability layer across all infrastructure)
-> - **Asset 40** - Lab Environment Cost and Time Matrix (complete deployment cost and timeline)
->
-> Shows Lab 5 adding observability layer - comprehensive monitoring, logging, and alerting across complete Labs 1-4 deployment.
-
 ## Objective
 
 Configure comprehensive monitoring and observability across all previous labs (Azure Local, Arc, Edge RAG, Policy Governance). Implement metrics collection, logging aggregation, alerting, and dashboards for proactive incident management.
