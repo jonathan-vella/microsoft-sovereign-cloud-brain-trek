@@ -24,6 +24,27 @@ Data residency is a foundational concept in digital sovereignty, referring to th
 
 ## Key Definitions
 
+```mermaid
+graph TB
+    Data[Data Management Concepts]
+    
+    Data --> Residency[Data Residency<br/>Physical storage location<br/>Example: Store in Germany]
+    Data --> Sovereignty[Data Sovereignty<br/>Control + Residency<br/>Example: Store in Germany<br/>No non-EU access]
+    Data --> Localization[Data Localization<br/>Legal requirements<br/>Example: Russia Law 242-FZ<br/>Must store locally]
+    Data --> Transfer[Data Transfer<br/>Cross-border movement<br/>Example: EU to US<br/>Requires SCCs]
+    
+    Residency --> Where[Where is data?]
+    Sovereignty --> Who[Who controls it?]
+    Localization --> Law[What law requires?]
+    Transfer --> How[How to move it?]
+    
+    style Data fill:#0078D4,stroke:#004578,stroke-width:3px,color:#fff
+    style Residency fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Sovereignty fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Localization fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Transfer fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+```
+
 ### Data Residency
 
 **Definition:** The physical location (country or region) where data is stored at rest.
