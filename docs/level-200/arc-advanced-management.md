@@ -6,8 +6,6 @@ nav_order: 2
 has_children: true
 ---
 
-# Azure Arc Advanced Management
-
 ## Overview
 
 Azure Arc advanced management enables organizations to scale their hybrid and multi-cloud operations through centralized governance, policy enforcement, cost optimization, and security hardening. This module explores enterprise-grade techniques for managing hundreds or thousands of Arc-managed resources across diverse environments while maintaining compliance, security, and cost efficiency.

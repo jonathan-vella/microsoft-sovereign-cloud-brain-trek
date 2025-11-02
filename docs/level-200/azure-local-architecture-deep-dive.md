@@ -6,8 +6,6 @@ nav_order: 1
 has_children: true
 ---
 
-# Azure Local Architecture Deep Dive
-
 ## Overview
 
 Building on the foundational knowledge from Level 100 Module 3 (Azure Local Overview), this module explores the advanced technical architecture of Azure Local systems. This deep dive is designed for technical professionals and solutions architects who need to plan, deploy, and optimize production Azure Local environments.
