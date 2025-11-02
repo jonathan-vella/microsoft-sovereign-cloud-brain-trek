@@ -194,7 +194,45 @@ Azure Local excels at running AI/ML workloads on-premises:
 
 **[Explore Edge RAG Concepts →](edge-rag-concepts)**
 
-### 7. Security and Encryption at Rest
+### 7. Microsoft 365 Local: Productivity at the Edge
+
+**Announcing Microsoft 365 Local**
+
+**Microsoft 365 Local** brings Microsoft's trusted productivity server software into an Azure Local environment that can run entirely in a customer's own datacenter, providing additional deployment choice for organizations requiring maximum control and sovereignty.
+
+**Key Characteristics:**
+- **Simplified Deployment:** Validated reference architecture powered by Azure Local
+- **Complete Control:** Run Exchange Server and SharePoint Server in environments you fully control
+- **Full Sovereignty:** Maintain complete control over security, compliance, and governance
+- **Disconnected Capability:** Operate productivity workloads in air-gapped or disconnected environments
+- **Integrated Management:** Unified deployment and management framework with Azure Local
+
+**Supported Workloads:**
+- **Exchange Server** - Email and calendaring on-premises
+- **SharePoint Server** - Document management and collaboration
+- Additional Microsoft server workloads (roadmap)
+
+**Designed For:**
+- **Governments:** Federal, state, and local agencies requiring maximum data sovereignty
+- **Critical Industries:** Defense contractors, intelligence agencies, critical infrastructure
+- **Regulated Sectors:** Financial services, healthcare organizations with strict compliance requirements
+- **Sovereign Cloud:** Organizations needing the highest standards of data residency and operational autonomy
+- **Disconnected Access:** Environments requiring productivity services without continuous cloud connectivity
+
+**Benefits:**
+- ✅ Run Microsoft productivity servers on validated Azure Local infrastructure
+- ✅ Maintain complete control over data location and operations
+- ✅ Meet stringent data residency and sovereignty requirements
+- ✅ Support for both Connected and Disconnected Azure Local modes
+- ✅ Simplified deployment compared to traditional separate server installations
+- ✅ Consistent management experience with Azure Local platform
+
+**Use Case Example:**
+> A government agency runs Microsoft 365 Local on Azure Local in Disconnected Mode to provide email and collaboration services to classified networks. All productivity data remains within the air-gapped environment while maintaining full functionality.
+
+**Reference:** [Microsoft 365 Local Overview](https://learn.microsoft.com/en-us/microsoft-365/local/)
+
+### 8. Security and Encryption at Rest
 
 Azure Local implements defense-in-depth security:
 

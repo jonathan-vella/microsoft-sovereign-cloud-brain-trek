@@ -630,6 +630,106 @@ Dell PowerEdge R750
 
 ---
 
+## Microsoft 365 Local: Productivity in Sovereign Environments
+
+### What is Microsoft 365 Local?
+
+**Microsoft 365 Local** provides customers with additional deployment choice by bringing together Microsoft's productivity server software into an Azure Local environment that can run entirely in a customer's own datacenter.
+
+This provides a **simplified deployment and management framework** for organizations to run Microsoft's trusted productivity servers in environments they fully control. Built on our validated reference architecture and powered by Azure Local, Microsoft 365 Local enables customers to deploy Microsoft productivity workloads like **Exchange Server** and **SharePoint Server** in their own datacenters or sovereign cloud environments — with full control on security, compliance and governance.
+
+**Private Sovereign Cloud is designed for:**
+- **Governments** requiring the highest standards of data residency and operational autonomy
+- **Critical industries** such as defense contractors and intelligence agencies  
+- **Regulated sectors** with strict compliance and sovereignty requirements
+- **Disconnected environments** needing productivity services without cloud connectivity
+
+### Key Benefits of Microsoft 365 Local
+
+**1. Complete Sovereignty**
+- Physical control over all productivity data (email, documents, collaboration)
+- Data never leaves your datacenter
+- No external dependencies for core productivity functions
+- Meets stringent government and regulatory requirements
+
+**2. Simplified Deployment**
+- Validated reference architecture on Azure Local platform
+- Unified deployment and management framework
+- Reduced complexity vs. traditional separate server deployments
+- Hyperconverged infrastructure benefits (reduced hardware footprint)
+
+**3. Full Control**
+- Customer controls all security, compliance, and governance policies
+- Local administrator access and management
+- Complete audit trail of all activities
+- Integration with customer identity systems (Active Directory)
+
+**4. Disconnected Operations Support**
+- Works in both Connected and Disconnected Azure Local modes
+- Enables productivity services in air-gapped networks
+- Periodic synchronization when connectivity available (Connected mode)
+- Complete autonomy when required (Disconnected mode)
+
+### Supported Workloads
+
+**Currently Available:**
+- **Exchange Server** - Email, calendaring, contacts, and tasks
+- **SharePoint Server** - Document management, collaboration, intranet sites, and search
+
+**Future Roadmap:**
+- Additional Microsoft productivity server workloads
+- Enhanced integration with Azure Local management
+
+### Example Deployment Scenario
+
+**Federal Agency Classified Email and Collaboration**
+
+**Requirements:**
+- Provide email and collaboration services on classified networks (SIPRNET, JWICS)
+- Complete air-gap (no internet connectivity allowed)
+- Support 10,000+ government employees across multiple facilities
+- NIST 800-53 High compliance for classified information
+- Zero cloud dependencies
+
+**Solution:**
+- Deploy Azure Local in Disconnected Mode at each classified facility
+- Install Microsoft 365 Local (Exchange Server + SharePoint Server)
+- Local Active Directory for identity management
+- Local certificate authority for encryption and signing
+- Windows Admin Center for management
+
+**Outcomes:**
+- ✅ Full email and collaboration in air-gapped environment
+- ✅ 100% data sovereignty (no data leaves facility)
+- ✅ Meets all classification and compliance requirements
+- ✅ Reduced infrastructure footprint by 50% vs. traditional deployment
+- ✅ Unified management across multiple locations
+- ✅ Modern productivity tools without cloud dependency
+
+### Discovery Questions for Microsoft 365 Local
+
+**Sovereignty and Compliance:**
+1. Do you need email and collaboration services in air-gapped or classified environments?
+2. What are your data residency requirements for productivity data?
+3. Do you have compliance mandates preventing productivity data in public cloud?
+4. Are you required to maintain complete operational control over communication systems?
+
+**Current State:**
+5. Are you currently running Exchange Server or SharePoint Server on separate physical infrastructure?
+6. What version of Exchange/SharePoint are you running today?
+7. How many mailboxes and SharePoint users do you support?
+8. What challenges do you face with your current productivity infrastructure?
+
+**Requirements:**
+9. Do you need to operate productivity services without continuous internet connectivity?
+10. What high availability and disaster recovery requirements do you have?
+11. How do you handle updates and patching in disconnected environments?
+12. What integration requirements do you have with other systems?
+
+**Reference:** [Microsoft 365 Local Documentation](https://learn.microsoft.com/en-us/microsoft-365/local/)
+
+---
+
 ## Sales Talking Points
 
 ### Value Propositions
