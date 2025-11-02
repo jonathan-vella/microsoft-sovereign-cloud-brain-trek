@@ -53,11 +53,6 @@ User Question → Retrieve Relevant Docs → LLM + Context → Enhanced Answer
 
 ## Edge RAG System Architecture
 
-> **📊 Visual Reference Needed**  
-> *Edge RAG System Architecture (Asset 17)*  
-> Complete system architecture showing all components and data flow. Left: Document sources and ingestion pipeline. Center-left: Vector database and embedding generation. Center: Query processing with numbered sequence (1-10 steps). Right: LLM and response generation. Top-right: Optional cloud connection (dashed lines). Color-coded: Blue (input/output), Green (processing), Purple (AI/LLM), Orange (storage). Shows local processing emphasizing edge-centric design, with cloud as optional/secondary.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 17  
-> **Source to adapt:** [Retrieval-Augmented Generation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data)
 
 ---
 
@@ -65,11 +60,6 @@ User Question → Retrieve Relevant Docs → LLM + Context → Enhanced Answer
 
 ### Limitations of Traditional LLMs
 
-> **📊 Visual Reference Needed**  
-> *Traditional LLM vs. RAG Comparison (Asset 18)*  
-> Side-by-side comparison showing Traditional LLM flow versus RAG-augmented flow. Left panel: Direct LLM processing (Query → LLM → Answer). Right panel: RAG workflow (Query → Retrieval → Context + LLM → Answer with sources). Comparison matrix at bottom showing: Accuracy, Hallucinations, Recency, Citations, Training data dependency. Icons for each step. Color-coded: Blue (input), Green (retrieval), Purple (LLM), Orange (output). Clear visual distinction between approaches.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 18  
-> **Source to adapt:** [Retrieval-Augmented Generation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data)
 
 **1. Knowledge Cutoff:**
 - Training data has a cutoff date
@@ -184,11 +174,6 @@ User Question → Retrieve Relevant Docs → LLM + Context → Enhanced Answer
 
 ## Edge RAG Deployment Topology Options
 
-> **📊 Visual Reference Needed**  
-> *Edge RAG Deployment Topology Options (Asset 19)*  
-> Three deployment models side-by-side: (1) Local-Only: Single building/site with all RAG components local; (2) Edge-with-Cloud: Multiple edge sites with hub-and-spoke cloud connection for knowledge updates; (3) Multi-Edge Mesh: Distributed edge sites with peer-to-peer sync and cloud orchestration. Each shows: data sources, vector DB, LLM placement, and connectivity. Network flows illustrated with line types (solid=local, dashed=cloud, dotted=sync). Icons for documents, servers, cloud. Color-coded regions (blue=local, green=edge, purple=cloud). Callouts showing latency, data residency, and scalability for each option.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 19  
-> **Source to adapt:** [Retrieval-Augmented Generation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data)
 
 ---
 

@@ -79,21 +79,11 @@ The transition to Azure Local reflects Microsoft's commitment to:
 
 ### System Architecture
 
-> **📊 Visual Reference Needed**  
-> *Azure Local System Architecture (Asset 11)*  
-> Comprehensive system architecture showing Azure Local's hardware, software layers, and connectivity to Azure cloud. Three-section layout: Left (on-premises Azure Local stack), Center (data/control plane separation), Right (Azure cloud control plane). Includes hardware layer, virtualization layer, system software, and management layer. Shows connected mode (bidirectional arrows) and disconnected mode (dashed lines). Color-coded by layer: Blue (on-prem), Light blue (Azure), Green (data), Orange (control).  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 11  
-> **Source to adapt:** [Azure Local Architecture](https://learn.microsoft.com/en-us/azure/azure-local/overview?view=azloc-2509)
 
 ---
 
 ### Deployment Modes Comparison
 
-> **📊 Visual Reference Needed**  
-> *Connected vs. Disconnected Mode Feature Matrix (Asset 12)*  
-> Detailed feature comparison showing capabilities available in Connected Mode versus Disconnected Mode. Table/matrix format with category headers and rows for: Connectivity & Management, Monitoring & Diagnostics, Policy & Governance, Updates & Patches, Disaster Recovery, Scaling & Operations, Support & Assistance. Cells show ✓ (supported), ✗ (not supported), or ◐ (limited). Notes column with explanations. Color-coded for accessibility: green checkmarks, red X marks, yellow limited indicators.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 12  
-> **Source to adapt:** [Azure Local deployment options](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)
 
 ---
 
@@ -370,10 +360,6 @@ Azure Local physical architecture includes:
 - Azure Policy enforcement
 - Update management
 
-> **📊 Visual Reference Needed**  
-> *Azure Local Architecture Diagram*  
-> Shows physical hardware layer, logical components, and Azure cloud integration for both Connected and Disconnected modes  
-> **Source:** [Azure Local Architecture Documentation](https://learn.microsoft.com/en-us/azure/azure-local/overview?view=azloc-2509)
 
 ### Integration Points with Azure
 
@@ -879,10 +865,6 @@ Can you have continuous/regular internet connectivity?
                       └─ No → Re-evaluate connectivity assumption
 ```
 
-> **📊 Visual Reference Needed**  
-> *Azure Local Decision Tree*  
-> Flowchart showing when to choose Azure Local vs. public cloud, and Connected vs. Disconnected mode  
-> **Source:** [Azure Local Planning Guide](https://learn.microsoft.com/en-us/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2509)
 
 ### Comparison with Alternatives
 

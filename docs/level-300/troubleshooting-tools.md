@@ -15,11 +15,6 @@ Master the tools and systematic approaches for diagnosing issues across sovereig
 
 ## Diagnostic Tools Reference
 
-> **📊 Visual Reference Needed**  
-> *Diagnostic Tools & Capabilities (Asset 58)*  
-> Matrix showing tools, capabilities, use cases, and output examples for each diagnostic approach (logs, metrics, traces).  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 58  
-> **Source to adapt:** [Azure Monitor diagnostic tools](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 
 ---
 

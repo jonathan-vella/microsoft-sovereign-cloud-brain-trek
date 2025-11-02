@@ -478,14 +478,6 @@ docs/assets/images/
 Until assets are created, use placeholders:
 
 ```markdown
-> **📊 Visual Reference Needed**  
-> *Sovereignty Spectrum Diagram*  
-> This section will include a visual diagram showing the 5 levels of digital sovereignty from standard cloud to air-gapped systems.  
-> **Source to adapt:** [Azure Local deployment models](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)
-```
-
----
-
 ## 📋 Next Steps
 
 ### Immediate Actions (Level 100 Priority)

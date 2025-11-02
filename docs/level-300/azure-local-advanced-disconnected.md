@@ -47,31 +47,16 @@ Master air-gapped Azure Local deployments with manual updates, certificate manag
 
 ## Air-Gapped Architecture
 
-> **📊 Visual Reference Needed**  
-> *Air-Gapped Architecture Pattern (Asset 49)*  
-> Complete air-gapped Azure Local deployment showing isolated network zones, air-gap boundaries, secure transfer mechanisms, and component interactions.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 49  
-> **Source to adapt:** [Disconnected operations for Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)
 
 ---
 
 ## Manual Update Process
 
-> **📊 Visual Reference Needed**  
-> *Manual Update Flow - Disconnected (Asset 50)*  
-> Step-by-step process showing export from cloud, secure transfer, and import to air-gapped system with validation checkpoints.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 50  
-> **Source to adapt:** [Manual update procedures for disconnected Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509-disconnected)
 
 ---
 
 ## Certificate Lifecycle
 
-> **📊 Visual Reference Needed**  
-> *Certificate Lifecycle Management (Asset 51)*  
-> Timeline showing certificate issue date, validity periods, renewal windows, and key procedures with decision points.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 51  
-> **Source to adapt:** [Certificate lifecycle in Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/manage/manage-secrets-rotation?view=azloc-2509)
 
 ---
 

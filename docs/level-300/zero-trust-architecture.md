@@ -16,11 +16,6 @@ This page provides a detailed technical architecture for implementing Zero Trust
 
 ## Complete Zero Trust Architecture
 
-> **📊 Visual Reference Needed**  
-> *Zero Trust Implementation Architecture (Asset 43)*  
-> Comprehensive technical architecture showing Identity Provider → Conditional Access → Device → Network → Application → Data protection with decision points and monitoring feedback loop.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 43  
-> **Source to adapt:** [Zero Trust implementation Azure](https://learn.microsoft.com/en-us/security/zero-trust/deploy/overview)
 
 ---
 
@@ -226,11 +221,6 @@ This page provides a detailed technical architecture for implementing Zero Trust
 
 ## Defense-in-Depth Layering
 
-> **📊 Visual Reference Needed**  
-> *Defense-in-Depth Layering (Asset 44)*  
-> Concentric circles showing security layers from perimeter (network) through access, application, data, infrastructure to core protected resources.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 44  
-> **Source to adapt:** [Security layering strategy](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)
 
 **Layered Defense Example:**
 
@@ -252,11 +242,6 @@ If any layer is breached, others still provide protection.
 
 ## Compliance Mapping
 
-> **📊 Visual Reference Needed**  
-> *Compliance Control Mapping (Asset 45)*  
-> Matrix showing how Zero Trust controls map to FedRAMP, GDPR, HIPAA, ITAR compliance requirements.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 45  
-> **Source to adapt:** [Compliance frameworks on Microsoft Learn](https://learn.microsoft.com/en-us/compliance/)
 
 ---
 

@@ -47,31 +47,16 @@ Master advanced troubleshooting techniques, diagnostic tools, and system optimiz
 
 ## Troubleshooting Decision Tree
 
-> **📊 Visual Reference Needed**  
-> *Troubleshooting Decision Tree (Asset 57)*  
-> Interactive flowchart showing symptom → investigation path → diagnosis → resolution with decision points and tool recommendations.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 57  
-> **Source to adapt:** [Azure troubleshooting guide](https://learn.microsoft.com/en-us/troubleshoot/azure/)
 
 ---
 
 ## Diagnostic Tools
 
-> **📊 Visual Reference Needed**  
-> *Diagnostic Tools Reference (Asset 58)*  
-> Matrix/matrix showing tools, capabilities, use cases, and output examples for each diagnostic approach (logs, metrics, traces, etc.).  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 58  
-> **Source to adapt:** [Azure Monitor diagnostic capabilities](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 
 ---
 
 ## Escalation Procedures
 
-> **📊 Visual Reference Needed**  
-> *Escalation Workflow & Procedures (Asset 59)*  
-> Process flowchart showing escalation paths, ticket routing, information requirements, and SLA expectations at each level.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 59  
-> **Source to adapt:** [Support and troubleshooting resources](https://learn.microsoft.com/en-us/support/azure/)
 
 ---
 

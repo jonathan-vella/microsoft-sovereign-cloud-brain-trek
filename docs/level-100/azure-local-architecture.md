@@ -226,10 +226,6 @@ Azure Local has four primary network traffic types:
 - Best performance and isolation
 - Higher cost (more NICs, more switches)
 
-> **📊 Visual Reference Needed**  
-> *Network Topology Diagrams*  
-> Three diagrams showing converged, storage-isolated, and fully-separated network topologies  
-> **Source:** [Azure Local Network Planning](https://learn.microsoft.com/en-us/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2509)
 
 ### RDMA (Remote Direct Memory Access)
 
@@ -434,10 +430,6 @@ The **control plane** manages configuration, monitoring, and updates:
 - No Azure dependency
 - Manual update deployment
 
-> **📊 Visual Reference Needed**  
-> *Control Plane and Data Plane Diagram*  
-> Shows separation between local data plane and Azure/local control plane in both modes  
-> **Source:** [Azure Local Architecture](https://learn.microsoft.com/en-us/azure/azure-local/overview?view=azloc-2509)
 
 ### Why This Matters for Sovereignty
 

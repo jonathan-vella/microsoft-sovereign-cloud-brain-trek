@@ -31,11 +31,6 @@ Design and implement completely isolated Azure Local deployments with zero cloud
 
 ## Air-Gapped Architecture Pattern
 
-> **📊 Visual Reference Needed**  
-> *Air-Gapped Architecture Pattern (Asset 49)*  
-> Complete network diagram showing isolated zones, air-gap boundaries, secure transfer mechanisms, and component interactions within isolated environment.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 49  
-> **Source to adapt:** [Air-gapped Azure Local deployment](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)
 
 ---
 

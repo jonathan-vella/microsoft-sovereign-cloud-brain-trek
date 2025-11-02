@@ -26,11 +26,6 @@ This overview provides a high-level introduction to the major regulatory framewo
 
 ## Regulatory Comparison
 
-> **📊 Visual Reference Needed**  
-> *Regulatory Compliance Comparison Matrix (Asset 5)*  
-> This section includes a comprehensive comparison matrix/table showing GDPR, FedRAMP, HIPAA, PCI DSS, and ITAR regulations side-by-side. Rows include: Jurisdiction, Key Requirements, Data Location Mandates, Access Control Mandates, and Azure Compliance Status. Color-coded cells for quick scanning, flag icons for jurisdictions, checkmarks for compliance status.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 5  
-> **Source to adapt:** [Microsoft Trust Center Compliance Offerings](https://learn.microsoft.com/en-us/compliance/regulatory/offering-home)
 
 ---
 

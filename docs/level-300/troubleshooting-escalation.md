@@ -15,11 +15,6 @@ Understand when and how to escalate issues to specialized support channels.
 
 ## Escalation Decision Tree
 
-> **📊 Visual Reference Needed** *(Optional)*  
-> *Escalation Workflow & Procedures (Asset 59)*  
-> Process flowchart showing escalation paths, ticket routing, information requirements, SLA expectations at each level.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 59  
-> **Source to adapt:** [Azure support options](https://learn.microsoft.com/en-us/support/azure/)
 
 ---
 
