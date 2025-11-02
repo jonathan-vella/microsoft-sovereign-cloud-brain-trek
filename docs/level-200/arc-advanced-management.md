@@ -30,34 +30,41 @@ By completing this module, you will:
 
 ### Four-Layer Enterprise Governance Model
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  Policy & Compliance Layer (Governance)                 │
-│  - Azure Policy Definitions & Initiatives               │
-│  - Compliance & Audit Tracking                          │
-│  - Remediation & Enforcement                            │
-└─────────────────────────────────────────────────────────┘
-                         ↓
-┌─────────────────────────────────────────────────────────┐
-│  Resource Organization Layer                            │
-│  - Management Groups & Subscriptions                    │
-│  - Resource Groups & Tagging Strategy                   │
-│  - Identity & Access Management (RBAC)                 │
-└─────────────────────────────────────────────────────────┘
-                         ↓
-┌─────────────────────────────────────────────────────────┐
-│  Arc Resource Layer (Multi-Environment)                 │
-│  - Arc Servers (On-Premises, Edge)                      │
-│  - Arc Kubernetes Clusters                              │
-│  - Arc Data Services (SQL, PostgreSQL)                  │
-└─────────────────────────────────────────────────────────┘
-                         ↓
-┌─────────────────────────────────────────────────────────┐
-│  Operational Layer (Monitoring & Cost)                  │
-│  - Monitoring & Alerting                                │
-│  - Cost Analysis & Optimization                         │
-│  - Incident Response & Automation                       │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph Policy[Policy & Compliance Layer]
+        P1[Azure Policy Definitions]
+        P2[Compliance & Audit]
+        P3[Remediation & Enforcement]
+    end
+    
+    subgraph Org[Resource Organization Layer]
+        O1[Management Groups]
+        O2[Subscriptions]
+        O3[Resource Groups]
+        O4[RBAC & Tagging]
+    end
+    
+    subgraph Arc[Arc Resource Layer]
+        A1[Arc Servers]
+        A2[Arc Kubernetes]
+        A3[Arc Data Services]
+    end
+    
+    subgraph Ops[Operational Layer]
+        Op1[Monitoring & Alerting]
+        Op2[Cost Analysis]
+        Op3[Incident Response]
+    end
+    
+    Policy --> Org
+    Org --> Arc
+    Arc --> Ops
+    
+    style Policy fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Org fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Arc fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Ops fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
 ```
 
 ### Governance Pillars

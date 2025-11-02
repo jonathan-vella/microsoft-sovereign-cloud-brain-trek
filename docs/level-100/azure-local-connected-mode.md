@@ -20,6 +20,44 @@ nav_order: 3.2
 
 **Connected Mode** is the default and recommended deployment mode for Azure Local. In this mode, the cluster maintains regular connectivity to Microsoft Azure services, enabling hybrid cloud capabilities, centralized management, and cloud-based monitoring and backup services.
 
+```mermaid
+graph TB
+    subgraph Azure[Microsoft Azure Cloud]
+        Portal[Azure Portal]
+        Arc[Azure Arc]
+        Monitor[Azure Monitor]
+        Backup[Azure Backup]
+        Security[Security Center]
+    end
+    
+    subgraph OnPrem[On-Premises Datacenter]
+        Cluster[Azure Local Cluster]
+        WAC[Windows Admin Center]
+        VMs[Virtual Machines]
+        Storage[Storage Spaces Direct]
+    end
+    
+    Internet[Internet/ExpressRoute]
+    
+    Portal --> Internet
+    Arc --> Internet
+    Monitor --> Internet
+    Backup --> Internet
+    Security --> Internet
+    
+    Internet -.->|Outbound HTTPS<br/>Metadata & Telemetry| Cluster
+    Cluster --> VMs
+    Cluster --> Storage
+    WAC --> Cluster
+    
+    VMs -.->|Data stays local| Storage
+    
+    style Azure fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style OnPrem fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Internet fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Storage fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+```
+
 ### Key Characteristics
 
 **Connectivity:**
