@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Overview
-parent: Azure Local Overview
+parent: Module 3 - Azure Local Overview
 nav_order: 1
 ---
 

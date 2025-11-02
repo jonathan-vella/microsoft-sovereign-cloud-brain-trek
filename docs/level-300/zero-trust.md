@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Zero Trust Security for Sovereign Clouds
+title: Module 1 - Zero Trust Security
 parent: Level 300 - Advanced
 nav_order: 1
 has_children: true

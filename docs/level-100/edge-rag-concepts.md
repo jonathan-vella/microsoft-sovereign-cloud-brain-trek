@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Overview
-parent: Edge RAG Concepts
+parent: Module 5 - Edge RAG Concepts
 nav_order: 1
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Azure Arc Introduction
+title: Module 4 - Azure Arc Introduction
 parent: Level 100 - Foundation
 nav_order: 4
 has_children: true

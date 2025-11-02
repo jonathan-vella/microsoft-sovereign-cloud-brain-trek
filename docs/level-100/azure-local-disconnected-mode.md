@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Azure Local Disconnected Mode
-parent: Azure Local Overview
+parent: Module 3 - Azure Local Overview
 nav_order: 3.3
 ---
 

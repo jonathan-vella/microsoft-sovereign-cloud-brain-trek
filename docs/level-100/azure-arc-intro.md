@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Overview
-parent: Azure Arc Introduction
+parent: Module 4 - Azure Arc Introduction
 nav_order: 1
 ---
 

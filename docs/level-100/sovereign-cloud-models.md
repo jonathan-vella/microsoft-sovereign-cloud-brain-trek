@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Overview
-parent: Microsoft Sovereign Cloud Models
+parent: Module 2 - Sovereign Cloud Models
 nav_order: 1
 ---
 

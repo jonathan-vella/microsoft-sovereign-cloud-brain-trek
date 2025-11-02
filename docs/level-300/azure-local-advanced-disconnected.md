@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Azure Local at Scale - Disconnected Mode
+title: Module 3 - Azure Local Disconnected
 parent: Level 300 - Advanced
 nav_order: 3
 has_children: true

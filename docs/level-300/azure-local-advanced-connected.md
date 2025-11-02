@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Azure Local at Scale - Connected Mode
+title: Module 2 - Azure Local Connected
 parent: Level 300 - Advanced
 nav_order: 2
 has_children: true

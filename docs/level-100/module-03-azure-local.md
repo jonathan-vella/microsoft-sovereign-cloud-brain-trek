@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Azure Local Overview
+title: Module 3 - Azure Local Overview
 parent: Level 100 - Foundation
 nav_order: 3
 has_children: true

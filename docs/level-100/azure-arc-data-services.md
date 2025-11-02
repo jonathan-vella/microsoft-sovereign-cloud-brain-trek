@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Azure Arc Data Services
-parent: Azure Arc Introduction
+parent: Module 4 - Azure Arc Introduction
 nav_order: 4.3
 ---
 

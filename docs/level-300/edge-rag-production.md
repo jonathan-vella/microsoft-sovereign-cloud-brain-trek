@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Production Edge RAG at Scale
+title: Module 4 - Production Edge RAG
 parent: Level 300 - Advanced
 nav_order: 4
 has_children: true

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Overview
-parent: Digital Sovereignty
+parent: Module 1 - Digital Sovereignty
 nav_order: 1
 ---
 

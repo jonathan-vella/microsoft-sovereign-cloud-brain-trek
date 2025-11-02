@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Azure Local Architecture
-parent: Azure Local Overview
+parent: Module 3 - Azure Local Overview
 nav_order: 3.1
 ---
 

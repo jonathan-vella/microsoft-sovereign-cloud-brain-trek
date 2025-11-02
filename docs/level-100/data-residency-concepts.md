@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Residency Concepts
-parent: Digital Sovereignty
+parent: Module 1 - Digital Sovereignty
 nav_order: 4
 ---
 

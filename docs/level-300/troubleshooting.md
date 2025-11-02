@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Advanced Troubleshooting & Optimization
+title: Module 5 - Advanced Troubleshooting
 parent: Level 300 - Advanced
 nav_order: 5
 has_children: true
