@@ -200,6 +200,28 @@ Specialized database optimized for storing and querying high-dimensional vectors
 
 ## Fine-Tuning vs. RAG Trade-Offs
 
+```mermaid
+graph TB
+    Decision{Knowledge Update<br/>Approach?}
+    
+    Decision -->|Style/Behavior| FT[Fine-Tuning]
+    Decision -->|Factual Knowledge| RAG[RAG System]
+    Decision -->|Both| Hybrid[Hybrid Approach]
+    
+    FT --> FTPros[Pros:<br/>• Deep domain learning<br/>• No retrieval latency<br/>• Behavior changes]
+    FT --> FTCons[Cons:<br/>• Expensive<br/>• Stale knowledge<br/>• Large data needed]
+    
+    RAG --> RAGPros[Pros:<br/>• No retraining<br/>• Easy updates<br/>• Citations<br/>• Cost-effective]
+    RAG --> RAGCons[Cons:<br/>• Retrieval latency<br/>• Context limits<br/>• Quality critical]
+    
+    Hybrid --> HybridDesc[Combine:<br/>1. Fine-tune for style<br/>2. RAG for facts<br/>Best of both worlds]
+    
+    style Decision fill:#0078D4,stroke:#004578,stroke-width:3px,color:#fff
+    style FT fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style RAG fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Hybrid fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+```
+
 ### Fine-Tuning
 
 **What It Is:** Further training an LLM on domain-specific data.

@@ -48,41 +48,25 @@ Master the tools and systematic approaches for diagnosing issues across sovereig
 
 ## Systematic Troubleshooting Process
 
-1. **Gather Information**
-   - Symptom description
-   - Timeline of failure
-   - Recent changes
-   - System state
-
-2. **Establish Baseline**
-   - Normal performance
-   - Baseline metrics
-   - Typical behavior
-   - Expected patterns
-
-3. **Collect Diagnostics**
-   - Enable logging
-   - Capture metrics
-   - Gather traces
-   - Record evidence
-
-4. **Analyze Data**
-   - Pattern recognition
-   - Trend analysis
-   - Correlation analysis
-   - Root cause identification
-
-5. **Formulate Hypothesis**
-   - Possible causes
-   - Test conditions
-   - Expected outcomes
-   - Validation criteria
-
-6. **Test & Verify**
-   - Execute tests
-   - Measure results
-   - Validate hypothesis
-   - Document findings
+```mermaid
+graph LR
+    A[1. Gather Information<br/>Symptoms<br/>Timeline<br/>Changes] --> B[2. Establish Baseline<br/>Normal perf<br/>Metrics<br/>Patterns]
+    
+    B --> C[3. Collect Diagnostics<br/>Logs<br/>Metrics<br/>Traces]
+    
+    C --> D[4. Analyze Data<br/>Patterns<br/>Trends<br/>Correlation]
+    
+    D --> E[5. Formulate Hypothesis<br/>Causes<br/>Tests<br/>Outcomes]
+    
+    E --> F[6. Test & Verify<br/>Execute<br/>Measure<br/>Document]
+    
+    style A fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style B fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style C fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style D fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style E fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style F fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+```
 
 ---
 

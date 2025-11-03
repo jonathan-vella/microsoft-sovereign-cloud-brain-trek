@@ -33,22 +33,25 @@ By completing this module, you will:
 
 ### Sales Cycle Overview
 
-```
-Customer Awareness
-        ↓
-Initial Inquiry
-        ↓
-Discovery & Assessment ← [4-6 weeks]
-        ↓
-Solution Design & Sizing ← [2-4 weeks]
-        ↓
-Proposal & Pricing ← [1-2 weeks]
-        ↓
-Proof of Concept (Optional) ← [4-8 weeks]
-        ↓
-Contract & Negotiation ← [2-6 weeks]
-        ↓
-Implementation
+```mermaid
+graph TD
+    Start([Customer Awareness]) --> Inquiry[Initial Inquiry]
+    Inquiry --> Discovery[Discovery & Assessment<br/>4-6 weeks]
+    Discovery --> Design[Solution Design & Sizing<br/>2-4 weeks]
+    Design --> Proposal[Proposal & Pricing<br/>1-2 weeks]
+    Proposal --> Decision{POC Needed?}
+    Decision -->|Yes| POC[Proof of Concept<br/>4-8 weeks]
+    Decision -->|No| Contract[Contract & Negotiation<br/>2-6 weeks]
+    POC --> Contract
+    Contract --> Implement[Implementation]
+    
+    style Start fill:#D4E9D7,stroke:#107C10,stroke-width:3px,color:#000
+    style Discovery fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Design fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Proposal fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style POC fill:#FFF,stroke:#666,stroke-width:2px,color:#000
+    style Contract fill:#FFE6E6,stroke:#D13438,stroke-width:2px,color:#000
+    style Implement fill:#D4E9D7,stroke:#107C10,stroke-width:3px,color:#000
 ```
 
 **Critical Success Factors:**
@@ -64,39 +67,28 @@ Implementation
 
 ### Discovery Process Flow
 
-```
-1. PREPARATION (1 hour)
-   ├─ Review customer background
-   ├─ Identify stakeholders
-   └─ Prepare discovery questions
-
-2. OPENING (15 min)
-   ├─ Establish rapport
-   ├─ Outline agenda
-   └─ Confirm objectives
-
-3. STRATEGIC LEVEL (30-45 min)
-   ├─ Business drivers
-   ├─ Strategic initiatives
-   ├─ Success metrics
-   └─ Budget/timeline
-
-4. OPERATIONAL LEVEL (45-60 min)
-   ├─ Current environment
-   ├─ Technical constraints
-   ├─ Team capabilities
-   └─ Integration requirements
-
-5. TACTICAL LEVEL (30-45 min)
-   ├─ Specific workloads
-   ├─ Performance requirements
-   ├─ Data flows
-   └─ Dependencies
-
-6. NEXT STEPS (15 min)
-   ├─ Summarize findings
-   ├─ Propose assessment
-   └─ Schedule follow-up
+```mermaid
+graph LR
+    Prep[1. PREPARATION<br/>1 hour<br/>• Review background<br/>• ID stakeholders<br/>• Prepare questions]
+    
+    Open[2. OPENING<br/>15 min<br/>• Establish rapport<br/>• Outline agenda<br/>• Confirm objectives]
+    
+    Strat[3. STRATEGIC<br/>30-45 min<br/>• Business drivers<br/>• Initiatives<br/>• Success metrics]
+    
+    Ops[4. OPERATIONAL<br/>45-60 min<br/>• Current env<br/>• Constraints<br/>• Team capabilities]
+    
+    Tact[5. TACTICAL<br/>30-45 min<br/>• Workloads<br/>• Performance<br/>• Dependencies]
+    
+    Next[6. NEXT STEPS<br/>15 min<br/>• Summarize<br/>• Propose assessment<br/>• Follow-up]
+    
+    Prep --> Open --> Strat --> Ops --> Tact --> Next
+    
+    style Prep fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Open fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Strat fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Ops fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Tact fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Next fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
 ```
 
 **Ideal Timeline:** 2.5-3 hours total (can be split into multiple sessions)
