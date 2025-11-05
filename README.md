@@ -31,8 +31,8 @@ Welcome to the **Microsoft Sovereign Cloud Brain Trek** – your comprehensive s
 
 ## Target Audience
 
-- **Sales & Pre-Sales:** Account Executives, Solution Specialists, and Technical Sales Professionals
-- **Technical Professionals:** Cloud Architects, Field Engineers, and AI Developers
+- **Sales & Pre-Sales:** Account Executives, Solution Specialists, and Technical Sales Professionals - (L100 knowledge path)
+- **Technical Professionals:** Cloud Architects, Field Engineers, and AI Developers - (up to L300)
 
 ## Learning Path Structure
 
