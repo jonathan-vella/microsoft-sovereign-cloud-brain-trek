@@ -16,8 +16,8 @@ A comprehensive learning journey for architects and solutions professionals
 {: .fs-6 .fw-300 }
 
 {: .warning }
-> **📢 Public Preview Notice**  
-> This content is currently in **public preview**. All learning modules and assessments are complete and ready for use.  
+> **📢 Public Preview Notice**
+> This content is currently in **public preview**. All learning modules and assessments are complete and ready for use.
 > **Hands-on labs** are currently in development and will be released in Q1 2026.
 
 [Get Started]({{ site.baseurl }}{% link introduction.md %}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
@@ -32,21 +32,28 @@ This skilling plan provides a comprehensive, structured approach to mastering Mi
 ### 📚 Learning Levels
 
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-3">
+    <h4>📋 Level 50: Prerequisites</h4>
+    <p>Essential cloud computing, security, and Azure fundamentals</p>
+    <p><strong>Duration:</strong> 1-2 weeks</p>
+    <a href="{{ site.baseurl }}{% link level-50/README.md %}" class="btn btn-outline">Start Level 50</a>
+  </div>
+
+  <div class="col-md-3">
     <h4>🎯 Level 100: Foundation</h4>
     <p>Build core understanding of concepts, terminology, and value propositions</p>
     <p><strong>Duration:</strong> 2-4 weeks</p>
     <a href="{{ site.baseurl }}{% link level-100/README.md %}" class="btn btn-outline">Start Level 100</a>
   </div>
-  
-  <div class="col-md-4">
+
+  <div class="col-md-3">
     <h4>🏗️ Level 200: Intermediate</h4>
     <p>Design solutions, plan deployments, and address customer requirements</p>
     <p><strong>Duration:</strong> 4-6 weeks</p>
     <a href="{{ site.baseurl }}{% link level-200/README.md %}" class="btn btn-outline">Start Level 200</a>
   </div>
-  
-  <div class="col-md-4">
+
+  <div class="col-md-3">
     <h4>🚀 Level 300: Advanced</h4>
     <p>Lead complex deployments and provide expert guidance</p>
     <p><strong>Duration:</strong> 8-12 weeks</p>
@@ -92,9 +99,9 @@ This skilling plan is designed for two distinct professional tracks:
 
 ## Program Duration
 
-**Total Program:** 14-22 weeks (approximately 3.5-5.5 months)
+**Total Program:** 15-24 weeks (approximately 3.5-6 months)
 
-- **Part-time commitment:** 2-10 hours per week depending on level
+- **Part-time commitment:** 1-10 hours per week depending on level
 - **Self-paced learning:** Progress at your own speed
 - **Hands-on labs:** Practical experience with real technologies
 
@@ -115,8 +122,8 @@ Track your progress through each level with clear completion criteria:
 Ready to begin your learning journey?
 
 1. **Read the [Introduction]({{ site.baseurl }}{% link introduction.md %})** to understand the full program
-2. **Review Prerequisites** for Level 100
-3. **Start with [Level 100 - Foundational Concepts]({{ site.baseurl }}{% link level-100/README.md %})**
+2. **Start with [Level 50 - Prerequisites]({{ site.baseurl }}{% link level-50/README.md %})** for essential foundation knowledge
+3. **Continue to [Level 100 - Foundational Concepts]({{ site.baseurl }}{% link level-100/README.md %})** for sovereign cloud basics
 4. **Track your progress** using the checklists in each module
 
 ---
@@ -124,6 +131,7 @@ Ready to begin your learning journey?
 ## Quick Links
 
 - [Learning Path Overview]({{ site.baseurl }}{% link introduction.md %})
+- [Level 50: Prerequisites]({{ site.baseurl }}{% link level-50/README.md %})
 - [Level 100: Foundation]({{ site.baseurl }}{% link level-100/README.md %})
 - [Level 200: Intermediate]({{ site.baseurl }}{% link level-200/README.md %})
 - [Level 300: Advanced]({{ site.baseurl }}{% link level-300/README.md %})

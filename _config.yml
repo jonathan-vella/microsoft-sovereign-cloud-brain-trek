@@ -8,14 +8,14 @@ description: >-
   Master Sovereign Cloud, Azure Local, and Edge AI Technologies.
   A comprehensive learning journey for architects and solutions professionals.
 tagline: Master Sovereign Cloud, Azure Local, and Edge AI Technologies
-url: https://jonathan-vella.github.io
+url: https://sohamda.github.io
 baseurl: /microsoft-sovereign-cloud-brain-trek
-repository: jonathan-vella/microsoft-sovereign-cloud-brain-trek
+repository: sohamda/microsoft-sovereign-cloud-brain-trek
 
 # Author Information
 author:
-  name: Jonathan Vella
-  email: jonathan@microsoft.com
+  name: Soham
+  email: iam.soham@gmail.com
 
 # Build Settings
 source: docs
@@ -25,7 +25,7 @@ kramdown:
   syntax_highlighter: rouge
   hard_wrap: false
   auto_ids: true
-  
+
 # Theme Configuration
 remote_theme: just-the-docs/just-the-docs@v0.10.0
 color_scheme: light
@@ -33,12 +33,12 @@ color_scheme: light
 # Just the Docs Theme Configuration
 # Navigation
 aux_links:
-  "View on GitHub": "https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek"
+  "View on GitHub": "https://github.com/sohamda/microsoft-sovereign-cloud-brain-trek"
   "Microsoft Sovereign Cloud": "https://www.microsoft.com/en-us/industry/sovereignty/cloud"
 
 # Footer
 footer_content: >-
-  &copy; 2025 Jonathan Vella. Licensed under the MIT License. 
+  &copy; 2025 Soham. Licensed under the MIT License.
   Built with <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://just-the-docs.com/">Just the Docs</a>.
 
 # Search
@@ -86,6 +86,9 @@ callouts:
 
 # Collections (for organizing content)
 collections:
+  level-50:
+    output: true
+    permalink: /level-50/:name
   level-100:
     output: true
     permalink: /level-100/:name
@@ -103,6 +106,12 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      path: "docs/level-50"
+    values:
+      layout: "default"
+      parent: "Level 50"
+      grand_parent: "Learning Paths"
   - scope:
       path: "docs/level-100"
     values:

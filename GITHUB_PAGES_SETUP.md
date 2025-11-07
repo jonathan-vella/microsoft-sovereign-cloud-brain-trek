@@ -1,8 +1,8 @@
 # GitHub Pages Deployment - Quick Start Guide
 
-**Status:** Configuration Complete ✅  
-**Theme:** Just the Docs v0.10.0  
-**Target URL:** `https://jonathan-vella.github.io/microsoft-sovereign-cloud-brain-trek/`  
+**Status:** Configuration Complete ✅
+**Theme:** Just the Docs v0.10.0
+**Target URL:** `https://jonathan-vella.github.io/microsoft-sovereign-cloud-brain-trek/`
 **Estimated Time:** 15-20 minutes
 
 ---
@@ -139,6 +139,7 @@ git push origin main
 ### Navigation
 
 **Automatic sidebar** generated from:
+- `docs/level-50/` folder → "Level 50" section
 - `docs/level-100/` folder → "Level 100" section
 - `docs/level-200/` folder → "Level 200" section
 - `docs/level-300/` folder → "Level 300" section
@@ -384,5 +385,5 @@ bundle exec jekyll serve --port 4001
 
 **Questions?** Check JEKYLL_PREP.md for detailed technical documentation.
 
-**Created:** October 22, 2025  
+**Created:** October 22, 2025
 **Status:** Ready for Deployment ✅

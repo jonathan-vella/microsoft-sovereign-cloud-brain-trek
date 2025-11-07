@@ -171,15 +171,36 @@ Edge RAG enables generative AI solutions on on-premises data without moving data
 
 ## Learning Path Overview
 
-The skilling plan is divided into three progressive levels, each building upon the previous one.
+The skilling plan is divided into four progressive levels, each building upon the previous one.
 
 ### 📊 Level Comparison
 
 | Level | Objective | Sales Focus | Technical Focus | Duration |
 |-------|-----------|-------------|-----------------|----------|
+| **50** | **Prerequisites:** Essential cloud computing and Azure fundamentals | Basic cloud concepts and terminology for customer conversations | Cloud service models, security principles, and Azure basics | 1-2 weeks (2-4 hours) |
 | **100** | **Foundational:** Understand the "what" and "why" | Articulate value propositions and identify customer scenarios | Grasp core architectural concepts and technology components | 2-4 weeks (4-12 hours) |
 | **200** | **Intermediate:** Design solutions and handle objections | Develop proposals, conduct TCO/ROI analysis, position against competitors | Plan deployments, understand prerequisites, design solution architectures | 4-6 weeks (16-36 hours) |
 | **300** | **Advanced:** Lead deployments and provide expert guidance | Structure complex deals and navigate deep compliance discussions | Execute end-to-end deployments, troubleshoot, and optimize for production | 8-12 weeks (48-120 hours) |
+
+### 📋 Level 50: Prerequisites
+
+**[Start Level 50 →]({{ site.baseurl }}{% link level-50/README.md %})**
+
+**Goal:** Build essential foundational knowledge in cloud computing, security, and Azure fundamentals.
+
+**What You'll Learn:**
+- Cloud computing concepts (IaaS, PaaS, SaaS)
+- Security and compliance basics
+- Microsoft Azure overview
+- Data protection principles
+- Identity and access management fundamentals
+
+**Prerequisites:**
+- Basic computer literacy
+- Internet access for online learning
+- Microsoft Learn account (free)
+
+**Time Commitment:** 1-2 hours per week
 
 ### 🎯 Level 100: Foundational Concepts
 
@@ -195,6 +216,7 @@ The skilling plan is divided into three progressive levels, each building upon t
 - Edge RAG concepts
 
 **Prerequisites:**
+- Completion of Level 50 (or equivalent knowledge)
 - Basic cloud computing knowledge
 - Familiarity with virtualization
 - Microsoft Learn account (free)
@@ -248,9 +270,10 @@ The skilling plan is divided into three progressive levels, each building upon t
 
 ### Program Duration
 
-**Total Program:** 14-22 weeks (approximately 3.5-5.5 months)
+**Total Program:** 15-24 weeks (approximately 3.5-6 months)
 
 ```
+Level 50:  ██ (1-2 weeks)
 Level 100: ████ (2-4 weeks)
 Level 200: ████████ (4-6 weeks)
 Level 300: ████████████████ (8-12 weeks)
@@ -258,12 +281,14 @@ Level 300: ████████████████ (8-12 weeks)
 
 ### Weekly Time Commitment
 
+- **Level 50:** 1-2 hours per week
 - **Level 100:** 2-3 hours per week
 - **Level 200:** 4-6 hours per week
 - **Level 300:** 6-10 hours per week
 
 ### Total Learning Hours
 
+- **Level 50:** 2-4 hours total
 - **Level 100:** 4-12 hours total
 - **Level 200:** 16-36 hours total
 - **Level 300:** 48-120 hours total
@@ -375,8 +400,8 @@ Each level has clear success metrics to validate learning outcomes:
 
 Ready to begin? Start your learning journey:
 
-1. **[Review Level 100 Prerequisites](level-100/prerequisites)**
-2. **[Begin Level 100: Foundational Concepts](level-100/)**
+1. **[Start with Level 50: Prerequisites]({{ site.baseurl }}{% link level-50/README.md %})**
+2. **[Continue to Level 100: Foundational Concepts]({{ site.baseurl }}{% link level-100/README.md %})**
 3. **[Explore Additional Resources](resources/)**
 
 ---

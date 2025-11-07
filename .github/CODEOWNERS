@@ -1,7 +1,7 @@
 # CODEOWNERS file for Microsoft Sovereign Cloud Brain Trek
-# 
+#
 # This file defines individuals or teams that are responsible for code in this repository.
-# When someone opens a pull request that modifies code owned by these owners, 
+# When someone opens a pull request that modifies code owned by these owners,
 # they will automatically be requested as reviewers.
 #
 # Syntax: path/to/files @username @team
@@ -17,6 +17,7 @@
 /docs/ @jonathan-vella @OliCSADoerr @sohamda
 
 # Specific documentation folders
+/docs/level-50/ @jonathan-vella @OliCSADoerr @sohamda
 /docs/level-100/ @jonathan-vella @OliCSADoerr @sohamda
 /docs/level-200/ @jonathan-vella @OliCSADoerr @sohamda
 /docs/level-300/ @jonathan-vella @OliCSADoerr @sohamda
