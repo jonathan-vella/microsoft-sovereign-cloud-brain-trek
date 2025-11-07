@@ -16,11 +16,45 @@ This page provides a detailed technical architecture for implementing Zero Trust
 
 ## Complete Zero Trust Architecture
 
-> **📊 Visual Reference Needed**  
-> *Zero Trust Implementation Architecture (Asset 43)*  
-> Comprehensive technical architecture showing Identity Provider → Conditional Access → Device → Network → Application → Data protection with decision points and monitoring feedback loop.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 43  
-> **Source to adapt:** [Zero Trust implementation Azure](https://learn.microsoft.com/en-us/security/zero-trust/deploy/overview)
+```mermaid
+graph TB
+    User[User/Device Entry] --> Identity[Identity Verification<br/>Entra ID / AD]
+    Identity --> Device[Device Compliance Check]
+    Device --> Network[Network Security]
+    Network --> App[Application Access]
+    App --> Data[Data Access]
+    
+    Identity -.-> IAM[• MFA<br/>• Conditional Access<br/>• Risk Assessment]
+    Device -.-> Compliance[• OS Version<br/>• Encryption<br/>• Antimalware<br/>• Firewall]
+    Network -.-> NetSec[• Microsegmentation<br/>• VPN/SD-WAN<br/>• Private Endpoints<br/>• Monitoring]
+    App -.-> AppSec[• RBAC/ABAC<br/>• API Auth<br/>• Rate Limiting<br/>• WAF]
+    Data -.-> DataSec[• Classification<br/>• Encryption<br/>• DLP<br/>• Audit Logging]
+    
+    Data --> Infrastructure[Infrastructure Security]
+    Infrastructure -.-> InfraSec[• VM Hardening<br/>• NSG<br/>• Container Security<br/>• PAM]
+    
+    subgraph Monitor[Continuous Monitoring]
+        SIEM[SIEM/SOAR]
+        Threat[Threat Detection]
+        Audit[Audit Logging]
+    end
+    
+    Identity -.-> Monitor
+    Device -.-> Monitor
+    Network -.-> Monitor
+    App -.-> Monitor
+    Data -.-> Monitor
+    Infrastructure -.-> Monitor
+    
+    style User fill:#D4E9D7,stroke:#107C10,stroke-width:3px,color:#000
+    style Identity fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Device fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Network fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style App fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Data fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Infrastructure fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Monitor fill:#FFE6E6,stroke:#D13438,stroke-width:2px,color:#000
+```
 
 ---
 
@@ -226,11 +260,6 @@ This page provides a detailed technical architecture for implementing Zero Trust
 
 ## Defense-in-Depth Layering
 
-> **📊 Visual Reference Needed**  
-> *Defense-in-Depth Layering (Asset 44)*  
-> Concentric circles showing security layers from perimeter (network) through access, application, data, infrastructure to core protected resources.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 44  
-> **Source to adapt:** [Security layering strategy](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)
 
 **Layered Defense Example:**
 
@@ -252,11 +281,6 @@ If any layer is breached, others still provide protection.
 
 ## Compliance Mapping
 
-> **📊 Visual Reference Needed**  
-> *Compliance Control Mapping (Asset 45)*  
-> Matrix showing how Zero Trust controls map to FedRAMP, GDPR, HIPAA, ITAR compliance requirements.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 45  
-> **Source to adapt:** [Compliance frameworks on Microsoft Learn](https://learn.microsoft.com/en-us/compliance/)
 
 ---
 

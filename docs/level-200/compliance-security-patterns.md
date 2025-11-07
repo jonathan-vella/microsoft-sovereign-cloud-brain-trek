@@ -7,10 +7,6 @@ nav_order: 1
 
 # Compliance & Security Patterns
 
-> **📊 Visual Reference: Asset 38 - Zero-Trust Security Architecture**  
-> *Placeholder - See docs/assets/images/README.md#asset-38*  
-> Zero-Trust security model implementation showing core "never trust, always verify" principle, five pillar rings (Identity & Access, Endpoints, Networks, Data, Applications), specific Azure service controls, detection and response loops, and least-privilege access indicators across all layers.
-
 ## Overview
 
 Security and compliance are foundational requirements for enterprise deployments of sovereign cloud solutions. This module covers compliance frameworks, security hardening patterns, encryption strategies, and security architecture for Microsoft Sovereign Cloud, Azure Local, and Edge AI deployments.
@@ -37,50 +33,30 @@ By completing this module, you will:
 
 ### The Compliance Landscape
 
-```
-Regulatory Framework Landscape
-═══════════════════════════════════════════════════════════
-
-GEOGRAPHY-BASED REGULATIONS
-├─ EU: GDPR (General Data Protection Regulation)
-│  ├─ Scope: Any data of EU citizens
-│  ├─ Fines: Up to 4% of global revenue (€20M max)
-│  ├─ Key requirement: Data residency in EU
-│  └─ Audit: Annual external audits required
-│
-├─ US: FedRAMP (Federal Risk & Authorization Management)
-│  ├─ Scope: U.S. government data
-│  ├─ Levels: Low, Moderate, High (security levels)
-│  ├─ Key requirement: U.S. data residency + vetting
-│  └─ Audit: Continuous monitoring
-│
-├─ UK: GDPR UK (adapted GDPR post-Brexit)
-│  ├─ Scope: UK data protection
-│  ├─ Key requirement: UK data residency alternative
-│  └─ Similar to EU GDPR
-
-INDUSTRY-BASED REGULATIONS
-├─ Healthcare: HIPAA (Health Insurance Portability)
-│  ├─ Scope: Protected health information (PHI)
-│  ├─ Fines: Up to $1.5M per year per type of violation
-│  ├─ Key requirement: Encryption, access controls, audit logs
-│  └─ Audit: Regular compliance assessments
-│
-├─ Finance: PCI-DSS (Payment Card Industry Data Security)
-│  ├─ Scope: Credit card data
-│  ├─ Key requirement: Network segmentation, encryption
-│  └─ Audit: Annual penetration testing
-│
-├─ Government: ITAR (International Traffic in Arms Regulations)
-│  ├─ Scope: Defense/weapons technology data
-│  ├─ Key requirement: U.S. person only access, facility security
-│  └─ Audit: Facility inspections
-
-STANDARDS-BASED COMPLIANCE
-├─ ISO 27001: Information Security Management System
-├─ SOC 2 Type II: Security, availability, processing integrity
-├─ CIS Controls: Critical Security Controls
-└─ NIST Cybersecurity Framework: Risk management
+```mermaid
+graph TB
+    Compliance[Compliance Framework Landscape]
+    
+    Compliance --> Geo[Geography-Based]
+    Compliance --> Industry[Industry-Based]
+    Compliance --> Standards[Standards-Based]
+    
+    Geo --> GDPR[EU GDPR<br/>• EU citizen data<br/>• 4% revenue fines<br/>• Data residency]
+    Geo --> FedRAMP[US FedRAMP<br/>• Gov data<br/>• Low/Mod/High<br/>• Continuous monitor]
+    Geo --> UKGDPR[UK GDPR<br/>• UK protection<br/>• Post-Brexit<br/>• Similar to EU]
+    
+    Industry --> HIPAA[Healthcare HIPAA<br/>• PHI data<br/>• $1.5M fines<br/>• Encryption required]
+    Industry --> PCI[Finance PCI-DSS<br/>• Card data<br/>• Network seg<br/>• Annual testing]
+    Industry --> ITAR[Government ITAR<br/>• Defense tech<br/>• US persons only<br/>• Facility security]
+    
+    Standards --> ISO[ISO 27001<br/>Info Security]
+    Standards --> SOC[SOC 2 Type II<br/>Security & Availability]
+    Standards --> NIST[NIST Framework<br/>Risk Management]
+    
+    style Compliance fill:#0078D4,stroke:#004578,stroke-width:3px,color:#fff
+    style Geo fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Industry fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Standards fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
 ```
 
 ### Security Pillars

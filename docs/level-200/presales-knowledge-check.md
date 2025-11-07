@@ -8,13 +8,6 @@ nav_order: 4.3
 # Pre-Sales & Solution Design Quiz
 {: .no_toc }
 
-> **📊 Visual References:**
-> - **Asset 32** - Customer Discovery Framework (discovery questions)
-> - **Asset 33** - Solution Sizing Framework (sizing scenarios)
-> - **Asset 34** - TCO and ROI Analysis Model (financial questions)
->
-> See docs/assets/images/README.md for complete asset specifications.
-
 Master pre-sales skills for sovereign cloud and edge AI solutions with scenario-based questions covering discovery, sizing, TCO analysis, and proposal development.
 
 ---

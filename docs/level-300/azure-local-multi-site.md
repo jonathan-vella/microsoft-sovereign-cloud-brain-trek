@@ -15,6 +15,46 @@ Deploy Azure Local clusters across multiple physical sites with synchronized ope
 
 ## Multi-Site Topology Patterns
 
+```mermaid
+graph TB
+    subgraph Pattern1[Hub-and-Spoke]
+        Hub[Central Hub Site<br/>Control Plane]
+        Spoke1[Spoke Site 1<br/>Workloads]
+        Spoke2[Spoke Site 2<br/>Workloads]
+        Spoke3[Spoke Site 3<br/>Workloads]
+        
+        Hub --> Spoke1
+        Hub --> Spoke2
+        Hub --> Spoke3
+    end
+    
+    subgraph Pattern2[Peer-to-Peer]
+        Site1[Site 1]
+        Site2[Site 2]
+        Site3[Site 3]
+        
+        Site1 <--> Site2
+        Site2 <--> Site3
+        Site3 <--> Site1
+    end
+    
+    subgraph Pattern3[Tiered]
+        Primary[Primary Site<br/>Control & Data]
+        Secondary1[Secondary Site 1<br/>Replicas]
+        Secondary2[Secondary Site 2<br/>Replicas]
+        Tertiary[Tertiary Site<br/>DR & Archive]
+        
+        Primary --> Secondary1
+        Primary --> Secondary2
+        Secondary1 --> Tertiary
+        Secondary2 --> Tertiary
+    end
+    
+    style Pattern1 fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Pattern2 fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Pattern3 fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+```
+
 ### Distributed Hub-and-Spoke
 - Central hub site (primary control plane)
 - Spoke sites (application workloads)
@@ -37,11 +77,6 @@ Deploy Azure Local clusters across multiple physical sites with synchronized ope
 
 ## Multi-Site Architecture Comparison
 
-> **📊 Visual Reference Needed**  
-> *Multi-Site Deployment Topologies (Asset 46)*  
-> Diagram showing three topology patterns with network flows, redundancy levels, failover behavior, and governance model for each.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 46  
-> **Source to adapt:** [Multi-site Azure Local deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2509)
 
 ---
 

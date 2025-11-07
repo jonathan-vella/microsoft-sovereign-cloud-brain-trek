@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Compliance & Security Patterns
+title: Module 5 - Compliance & Security
 parent: Level 200 - Intermediate
 nav_order: 5
 has_children: true

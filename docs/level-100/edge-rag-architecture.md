@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Edge RAG Architecture
-parent: Edge RAG Concepts
+parent: Module 5 - Edge RAG Concepts
 nav_order: 5.2
 ---
 
@@ -20,40 +20,31 @@ nav_order: 5.2
 
 ### High-Level Components
 
-```
-┌────────────────────────────────────────────────┐
-│          Edge RAG System                        │
-│                                                 │
-│  ┌──────────────┐     ┌──────────────┐         │
-│  │   Query API   │────►│  Embedding   │         │
-│  │   (REST/gRPC) │     │    Model     │         │
-│  └──────────────┘     └──────────────┘         │
-│         │                     │                 │
-│         │                     ▼                 │
-│         │            ┌──────────────┐           │
-│         │            │    Vector    │           │
-│         │            │   Database   │           │
-│         │            └──────────────┘           │
-│         │                     │                 │
-│         ▼                     ▼                 │
-│  ┌──────────────────────────────┐              │
-│  │   LLM (Local Deployment)     │              │
-│  │   • 7B - 70B parameters      │              │
-│  │   • GPU accelerated          │              │
-│  └──────────────────────────────┘              │
-│         │                                       │
-│         ▼                                       │
-│  ┌──────────────┐                              │
-│  │   Response   │                              │
-│  │  with Sources│                              │
-│  └──────────────┘                              │
-│                                                 │
-│  ┌────────────────────────────────┐            │
-│  │   Document Ingestion Pipeline  │            │
-│  │   • PDF, DOCX, TXT, HTML       │            │
-│  │   • Chunking & Embedding       │            │
-│  └────────────────────────────────┘            │
-└─────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph EdgeRAG[Edge RAG System]
+        Query[Query API<br/>REST/gRPC] --> Embed[Embedding Model]
+        Embed --> VectorDB[Vector Database]
+        
+        VectorDB --> LLM[LLM Local Deployment<br/>7B-70B Parameters<br/>GPU Accelerated]
+        Query --> LLM
+        
+        LLM --> Response[Response with Sources]
+        
+        Ingest[Document Ingestion<br/>PDF, DOCX, TXT, HTML] --> Chunk[Chunking & Processing]
+        Chunk --> Embed2[Embedding Generation]
+        Embed2 --> VectorDB
+    end
+    
+    User[User Query] --> Query
+    Response --> User
+    Docs[Documents] --> Ingest
+    
+    style EdgeRAG fill:#F8F8F8,stroke:#666,stroke-width:2px,color:#000
+    style Query fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style LLM fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style VectorDB fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Response fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
 ```
 
 ### Component Descriptions

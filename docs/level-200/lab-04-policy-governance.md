@@ -25,10 +25,6 @@ nav_order: 4
 > **Expected Release:** Q1 2026  
 > You can review the lab steps and prepare your environment in advance.
 
-> **📊 Visual Reference: Asset 39 - Lab Architecture Progression**  
-> *Placeholder - See docs/assets/images/README.md#asset-39*  
-> Shows Lab 4 adding control layer - Azure Policy enforcement across Labs 1-3 infrastructure, applying compliance and security controls.
-
 ## Objective
 
 Configure Azure Policy and governance controls across hybrid resources deployed in previous labs (Azure Local, Arc, Edge RAG). Implement compliance requirements and enforce organizational standards at scale.

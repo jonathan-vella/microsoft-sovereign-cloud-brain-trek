@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Regulatory Overview
-parent: Digital Sovereignty
+parent: Module 1 - Digital Sovereignty
 nav_order: 3
 ---
 
@@ -26,11 +26,30 @@ This overview provides a high-level introduction to the major regulatory framewo
 
 ## Regulatory Comparison
 
-> **📊 Visual Reference Needed**  
-> *Regulatory Compliance Comparison Matrix (Asset 5)*  
-> This section includes a comprehensive comparison matrix/table showing GDPR, FedRAMP, HIPAA, PCI DSS, and ITAR regulations side-by-side. Rows include: Jurisdiction, Key Requirements, Data Location Mandates, Access Control Mandates, and Azure Compliance Status. Color-coded cells for quick scanning, flag icons for jurisdictions, checkmarks for compliance status.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 5  
-> **Source to adapt:** [Microsoft Trust Center Compliance Offerings](https://learn.microsoft.com/en-us/compliance/regulatory/offering-home)
+```mermaid
+graph TB
+    Regs[Regulatory Frameworks]
+    
+    Regs --> Global[Global Regulations]
+    Regs --> Industry[Industry-Specific]
+    Regs --> National[National Standards]
+    
+    Global --> GDPR[GDPR<br/>EU Data Protection<br/>€20M or 4% revenue]
+    Global --> FedRAMP[FedRAMP<br/>US Federal<br/>Low/Mod/High]
+    
+    Industry --> HIPAA[HIPAA<br/>Healthcare PHI<br/>$1.5M per year]
+    Industry --> PCI[PCI-DSS<br/>Payment Cards<br/>4 Levels]
+    Industry --> ITAR[ITAR<br/>Defense Tech<br/>US Persons Only]
+    
+    National --> ISO[ISO 27001<br/>Info Security<br/>Management]
+    National --> SOC[SOC 2<br/>Trust Services<br/>Type II]
+    National --> NIST[NIST CSF<br/>Risk Framework<br/>5 Functions]
+    
+    style Regs fill:#0078D4,stroke:#004578,stroke-width:3px,color:#fff
+    style Global fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Industry fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style National fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+```
 
 ---
 

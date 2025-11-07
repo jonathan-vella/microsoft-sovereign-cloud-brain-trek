@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Azure Local Knowledge Check
-parent: Azure Local Overview
+parent: Module 3 - Azure Local Overview
 nav_order: 3.5
 ---
 

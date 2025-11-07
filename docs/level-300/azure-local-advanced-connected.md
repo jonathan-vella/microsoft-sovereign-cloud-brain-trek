@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Azure Local at Scale - Connected Mode
+title: Module 2 - Azure Local Connected
 parent: Level 300 - Advanced
 nav_order: 2
 has_children: true
@@ -47,11 +47,6 @@ Scale Azure Local deployments across multiple sites while maintaining cloud conn
 
 ## Architecture Decision Tree
 
-> **📊 Visual Reference Needed**  
-> *Multi-Site Azure Local Architectures (Asset 46)*  
-> Three side-by-side deployment patterns: Hub-and-Spoke, Full Mesh, and Hybrid, showing topology, connections, and key metrics.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 46  
-> **Source to adapt:** [Azure Local deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)
 
 ---
 

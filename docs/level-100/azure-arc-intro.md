@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Overview
-parent: Azure Arc Introduction
+parent: Module 4 - Azure Arc Introduction
 nav_order: 1
 ---
 
@@ -145,21 +145,44 @@ Azure Arc and Azure Local work together to provide comprehensive sovereignty:
 - Delivers observability and monitoring
 
 **Together They Provide:**
-```
-┌─────────────────────────────────────────────┐
-│         Azure Portal (Management)            │
-│              Azure Arc                       │
-└─────────────────┬───────────────────────────┘
-                  │ (Connected Mode)
-                  │
-┌─────────────────▼───────────────────────────┐
-│         Azure Local Cluster                  │
-│    (On-Premises Infrastructure)              │
-│  • VMs and Containers                        │
-│  • Storage Spaces Direct                     │
-│  • Networking                                │
-│  • Data stays local (sovereignty)            │
-└──────────────────────────────────────────────┘
+
+```mermaid
+graph TB
+    subgraph Cloud[Azure Cloud]
+        Portal[Azure Portal]
+        ARM[Azure Resource Manager]
+        Policy[Azure Policy]
+        Monitor[Azure Monitor]
+    end
+    
+    subgraph Arc[Azure Arc Layer]
+        ArcAgent[Arc Agents]
+        Metadata[Metadata Sync]
+        Governance[Governance Engine]
+    end
+    
+    subgraph OnPrem[On-Premises/Edge]
+        AzLocal[Azure Local Cluster]
+        Storage[Storage Spaces Direct]
+        Workloads[VMs & Containers]
+        Data[Customer Data - Local]
+    end
+    
+    Portal --> ARM
+    ARM --> Arc
+    Policy --> Arc
+    Monitor --> Arc
+    
+    Arc -.->|Connected Mode<br/>Metadata Only| OnPrem
+    
+    AzLocal --> Storage
+    AzLocal --> Workloads
+    Workloads --> Data
+    
+    style Cloud fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Arc fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style OnPrem fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+    style Data fill:#FFE6E6,stroke:#D13438,stroke-width:2px,color:#000
 ```
 
 **Sovereignty Advantages:**
@@ -193,29 +216,42 @@ Azure Arc and Azure Local work together to provide comprehensive sovereignty:
 
 ## Three Pillars of Azure Arc
 
-> **📊 Visual Reference Needed**  
-> *Azure Arc Architecture Diagram (Asset 14)*  
-> Unified view showing how Azure Arc connects on-premises resources to Azure management plane. Three-section layout: Left (on-premises resources - servers, Kubernetes, databases with icons), Center (Azure Arc control plane with three services highlighted), Right (Azure cloud services for management - Portal, Monitor, Policy, Security Center). Shows bidirectional arrows (management commands out, telemetry in). Arc services color-coded: Green (Servers), Blue (Kubernetes), Purple (Data Services).  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 14  
-> **Source to adapt:** [Azure Arc Overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
+```mermaid
+graph TB
+    Arc[Azure Arc Platform]
+    
+    Arc --> Servers[Arc-Enabled Servers]
+    Arc --> K8s[Arc-Enabled Kubernetes]
+    Arc --> Data[Arc-Enabled Data Services]
+    
+    Servers --> S1[Windows & Linux Servers]
+    Servers --> S2[Policy & Governance]
+    Servers --> S3[Azure Monitor]
+    Servers --> S4[Update Management]
+    
+    K8s --> K1[Any CNCF K8s Cluster]
+    K8s --> K2[GitOps Configuration]
+    K8s --> K3[Multi-Cluster Management]
+    K8s --> K4[Azure Services on K8s]
+    
+    Data --> D1[SQL Managed Instance]
+    Data --> D2[PostgreSQL Hyperscale]
+    Data --> D3[Managed DB Experience]
+    Data --> D4[Cloud Billing Model]
+    
+    style Arc fill:#0078D4,stroke:#004578,stroke-width:3px,color:#fff
+    style Servers fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style K8s fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Data fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+```
 
 ### Arc-Enabled Resources Comparison
 
-> **📊 Visual Reference Needed**  
-> *Arc-Enabled Resources Comparison Matrix (Asset 15)*  
-> Comparison table showing capabilities of Arc Servers, Kubernetes, and Data Services. Three columns with service-specific information. Rows include: Target Resources, Primary Use Cases, Management Capabilities, Compliance & Governance, Monitoring & Observability, Patching & Updates, Licensing, Best Suited For. Color-coded headers: Green (Servers), Blue (Kubernetes), Purple (Data). Concise cell content with icons for features.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 15  
-> **Source to adapt:** [Arc Servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview), [Arc Kubernetes](https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/overview), [Arc Data Services](https://learn.microsoft.com/en-us/azure/azure-arc/data/overview)
 
 ---
 
 ### Multi-Site Deployment Topology
 
-> **📊 Visual Reference Needed**  
-> *Arc Deployment Topology (Asset 16)*  
-> Multi-site deployment showing Arc managing resources across locations. Center: Azure management plane with Arc services. Around edges: Multiple sites (data center, branch office, edge location, remote office) with Arc-enabled resources. Connectivity lines show managed resources at each site unified through Arc. Site-specific callouts. Distributed operations concept demonstrated. Scale indicators showing multiple sites.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 16  
-> **Source to adapt:** [Arc Servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview)
 
 ---
 

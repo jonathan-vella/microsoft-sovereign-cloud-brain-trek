@@ -1,7 +1,7 @@
 ---
 layout: default
 title: RAG Fundamentals
-parent: Edge RAG Concepts
+parent: Module 5 - Edge RAG Concepts
 nav_order: 5.1
 ---
 
@@ -200,6 +200,28 @@ Specialized database optimized for storing and querying high-dimensional vectors
 
 ## Fine-Tuning vs. RAG Trade-Offs
 
+```mermaid
+graph TB
+    Decision{Knowledge Update<br/>Approach?}
+    
+    Decision -->|Style/Behavior| FT[Fine-Tuning]
+    Decision -->|Factual Knowledge| RAG[RAG System]
+    Decision -->|Both| Hybrid[Hybrid Approach]
+    
+    FT --> FTPros[Pros:<br/>• Deep domain learning<br/>• No retrieval latency<br/>• Behavior changes]
+    FT --> FTCons[Cons:<br/>• Expensive<br/>• Stale knowledge<br/>• Large data needed]
+    
+    RAG --> RAGPros[Pros:<br/>• No retraining<br/>• Easy updates<br/>• Citations<br/>• Cost-effective]
+    RAG --> RAGCons[Cons:<br/>• Retrieval latency<br/>• Context limits<br/>• Quality critical]
+    
+    Hybrid --> HybridDesc[Combine:<br/>1. Fine-tune for style<br/>2. RAG for facts<br/>Best of both worlds]
+    
+    style Decision fill:#0078D4,stroke:#004578,stroke-width:3px,color:#fff
+    style FT fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style RAG fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Hybrid fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+```
+
 ### Fine-Tuning
 
 **What It Is:** Further training an LLM on domain-specific data.
@@ -306,11 +328,6 @@ Specialized database optimized for storing and querying high-dimensional vectors
 
 ## RAG Components and Data Flow
 
-> **📊 Visual Reference Needed**  
-> *RAG Components and Data Flow Diagram (Asset 20)*  
-> Detailed step-by-step data flow showing 8-10 sequential steps: (1) Document upload/ingestion; (2) Document parsing and splitting; (3) Embedding generation; (4) Vector storage in database; (5) User query; (6) Query embedding; (7) Similarity search; (8) Retrieved context; (9) LLM processing with context; (10) Answer generation. Use numbered circles for each step. Arrows show data flow with different colors (orange=documents, blue=query, green=retrieval, purple=processing). Show components at each step (parser, embedding model, vector DB, LLM). Icons for each component type. Wireframe layout shows left side (ingestion pipeline) and right side (query pipeline) merging at LLM.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 20  
-> **Source to adapt:** [Retrieval-Augmented Generation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data)
 
 ---
 

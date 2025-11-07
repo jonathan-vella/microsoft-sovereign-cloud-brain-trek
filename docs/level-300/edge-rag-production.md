@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Production Edge RAG at Scale
+title: Module 4 - Production Edge RAG
 parent: Level 300 - Advanced
 nav_order: 4
 has_children: true
@@ -48,31 +48,16 @@ Deploy and operate Retrieval-Augmented Generation (RAG) systems at production sc
 
 ## Production Architecture
 
-> **📊 Visual Reference Needed**  
-> *Production RAG Architecture (Asset 52)*  
-> Enterprise RAG system showing ingestion pipeline, vector database, retrieval layer, inference engines, monitoring, and scaling components.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 52  
-> **Source to adapt:** [Build RAG solutions with Azure AI Search](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)
 
 ---
 
 ## Performance Optimization
 
-> **📊 Visual Reference Needed**  
-> *Optimization Strategies & Trade-offs (Asset 53)*  
-> Decision matrix showing optimization approaches (batch processing, caching, quantization, pruning) with performance/resource trade-offs.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 53  
-> **Source to adapt:** [Optimize inference performance on edge](https://learn.microsoft.com/en-us/azure/azure-local/manage/azure-benefits?view=azloc-2509)
 
 ---
 
 ## MLOps Workflow
 
-> **📊 Visual Reference Needed**  
-> *MLOps Pipeline for Edge RAG (Asset 54)*  
-> End-to-end workflow showing model training, validation, edge deployment, monitoring, retraining triggers, and rollback procedures.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 54  
-> **Source to adapt:** [MLOps for edge AI workloads](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment)
 
 ---
 

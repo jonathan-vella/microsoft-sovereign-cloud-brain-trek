@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Residency Concepts
-parent: Digital Sovereignty
+parent: Module 1 - Digital Sovereignty
 nav_order: 4
 ---
 
@@ -23,6 +23,27 @@ Data residency is a foundational concept in digital sovereignty, referring to th
 ---
 
 ## Key Definitions
+
+```mermaid
+graph TB
+    Data[Data Management Concepts]
+    
+    Data --> Residency[Data Residency<br/>Physical storage location<br/>Example: Store in Germany]
+    Data --> Sovereignty[Data Sovereignty<br/>Control + Residency<br/>Example: Store in Germany<br/>No non-EU access]
+    Data --> Localization[Data Localization<br/>Legal requirements<br/>Example: Russia Law 242-FZ<br/>Must store locally]
+    Data --> Transfer[Data Transfer<br/>Cross-border movement<br/>Example: EU to US<br/>Requires SCCs]
+    
+    Residency --> Where[Where is data?]
+    Sovereignty --> Who[Who controls it?]
+    Localization --> Law[What law requires?]
+    Transfer --> How[How to move it?]
+    
+    style Data fill:#0078D4,stroke:#004578,stroke-width:3px,color:#fff
+    style Residency fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Sovereignty fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Localization fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Transfer fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+```
 
 ### Data Residency
 
@@ -229,19 +250,9 @@ For customers requiring EU data residency:
 
 ---
 
-> **📊 Visual Reference Needed**  
-> *Azure Global Infrastructure Map (Asset 2)*  
-> This section includes a world map showing Azure regions, availability zones, and data center locations. Special highlighting shows the EU Data Boundary and key regions (US Gov, China 21Vianet). Legend explains symbols and regional classifications.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 2  
-> **Source to adapt:** [Azure global infrastructure](https://azure.microsoft.com/en-us/explore/global-infrastructure/)
 
 ---
 
-> **📊 Visual Reference Needed**  
-> *Data Residency vs. Sovereignty Comparison (Asset 4)*  
-> Side-by-side comparison showing the fundamental difference between Data Residency (location focus) and Data Sovereignty (location + control). Uses split-panel or Venn diagram layout with icons for location, control, and jurisdiction. Comparison matrix at bottom.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 4  
-> **Source to adapt:** [Digital sovereignty overview](https://learn.microsoft.com/en-us/industry/sovereign-cloud/overview/digital-sovereignty)
 
 ---
 

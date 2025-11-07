@@ -14,10 +14,6 @@ nav_order: 4
 
 # Cost Estimation and ROI Analysis
 
-> **📊 Visual Reference: Asset 34 - TCO and ROI Analysis Model**  
-> *Placeholder - See docs/assets/images/README.md#asset-34*  
-> TCO and ROI comparison framework showing cost categories (hardware, licensing, operations, personnel), TCO timelines (3-year/5-year models), ROI drivers (agility, compliance enablement, data value, risk reduction), break-even analysis, and sensitivity analysis for what-if scenarios.
-
 ## Overview
 
 Accurate cost estimation is critical for securing customer investment and demonstrating ROI. This page covers cost modeling methodologies, TCO analysis frameworks, cost optimization opportunities, and financial comparisons against cloud alternatives.
@@ -125,6 +121,28 @@ TOTAL OPEX: $452K-281K/year
 ---
 
 ## 5-Year Total Cost of Ownership
+
+```mermaid
+graph TB
+    TCO[5-Year TCO Breakdown]
+    
+    TCO --> CAPEX[CAPEX Year 0<br/>$365,000]
+    TCO --> OPEX[OPEX Years 1-5<br/>$2,932,000]
+    
+    CAPEX --> Hardware[Hardware $250K]
+    CAPEX --> Software[Software $15K]
+    CAPEX --> Services[Prof Services $100K]
+    
+    OPEX --> Personnel[Personnel 45%<br/>$1,565K over 5yr]
+    OPEX --> Operations[Operations 20%<br/>$500K over 5yr]
+    OPEX --> Licensing[Licensing 15%<br/>$200K over 5yr]
+    OPEX --> Other[Maintenance & DR 20%<br/>$667K over 5yr]
+    
+    style TCO fill:#0078D4,stroke:#004578,stroke-width:3px,color:#fff
+    style CAPEX fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style OPEX fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Personnel fill:#FFE6E6,stroke:#D13438,stroke-width:2px,color:#000
+```
 
 ### TCO Calculation Example
 

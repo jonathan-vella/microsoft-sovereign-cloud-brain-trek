@@ -7,10 +7,6 @@ nav_order: 5
 
 # GDPR Implementation Guide
 
-> **📊 Visual Reference: Asset 35 - GDPR Compliance Mapping**  
-> *Placeholder - See docs/assets/images/README.md#asset-35*  
-> Detailed mapping of GDPR requirements to Azure Local, Arc, and Edge RAG technical controls, showing principles (lawfulness, fairness, transparency), key requirements (processing, consent, right to access/erasure), and compliance evidence collection flows.
-
 ## Overview
 
 The General Data Protection Regulation (GDPR) is the most comprehensive data protection law globally. This page covers practical implementation of GDPR requirements in Microsoft Sovereign Cloud deployments, focusing on data residency, data subject rights, compliance automation, and audit capabilities.

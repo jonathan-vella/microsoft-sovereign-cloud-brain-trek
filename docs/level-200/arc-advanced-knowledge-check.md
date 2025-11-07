@@ -2,19 +2,11 @@
 layout: default
 title: Arc Advanced Knowledge Check
 parent: Arc Advanced Management
-grand_parent: Arc Advanced Management
-nav_order: 4
+nav_order: 5
 ---
 
 # Arc Advanced Management Assessment
 {: .no_toc }
-
-> **📊 Visual References:**
-> - **Asset 24** - Arc Governance at Scale Architecture (policy evaluation scenarios)
-> - **Asset 25** - Arc Cost Analysis and Optimization Model (cost optimization questions)
-> - **Asset 26** - Enterprise Arc Deployment at Scale (multi-site scenarios)
->
-> See docs/assets/images/README.md for complete asset specifications.
 
 Validate your understanding of Azure Arc advanced management with scenario-based questions covering policy governance, cost optimization, and enterprise-scale deployments.
 

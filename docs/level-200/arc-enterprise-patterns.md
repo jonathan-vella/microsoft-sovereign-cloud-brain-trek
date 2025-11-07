@@ -1,16 +1,11 @@
 ---
 layout: default
-title: Arc Enterprise Patterns
+title: Enterprise Patterns
 parent: Arc Advanced Management
-grand_parent: Arc Advanced Management
-nav_order: 3
+nav_order: 4
 ---
 
 # Enterprise Governance and Deployment Patterns
-
-> **📊 Visual Reference: Asset 26 - Enterprise Arc Deployment at Scale**  
-> *Placeholder - See docs/assets/images/README.md#asset-26*  
-> Diagram showing multi-site Arc-managed infrastructure with network connectivity (direct, hybrid, satellite), agent communication patterns, resilience indicators, and distributed management structure.
 
 ## Overview
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pre-Sales & Solution Design
+title: Module 4 - Pre-Sales & Solution Design
 parent: Level 200 - Intermediate
 nav_order: 4
 has_children: true

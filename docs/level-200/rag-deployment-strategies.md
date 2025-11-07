@@ -7,10 +7,6 @@ nav_order: 3
 
 # RAG Deployment Strategies
 
-> **📊 Visual Reference: Asset 30 - RAG Deployment Topology Options**  
-> *Placeholder - See docs/assets/images/README.md#asset-30*  
-> Four deployment topology options (single-node edge, HA cluster, multi-site federation, hybrid cloud+edge) showing architecture diagrams, latency/throughput characteristics, failover capabilities, and cost analysis for each option.
-
 ## Overview
 
 Deploying RAG systems at scale requires careful consideration of containerization strategies, orchestration patterns, versioning approaches, and CI/CD integration. This page explores production-ready deployment patterns for enterprise RAG implementations on Azure Arc.
@@ -23,30 +19,30 @@ Deploying RAG systems at scale requires careful consideration of containerizatio
 
 A production RAG system consists of multiple containerized services:
 
-```
-Application Layer:
-  ┌──────────────────┐
-  │  Chat Interface  │ (React/Vue frontend)
-  └────────┬─────────┘
-           │
-Orchestration Layer:
-  ┌────────▼──────────────────────────┐
-  │  RAG Orchestration Service         │
-  │  - Query routing                   │
-  │  - Context assembly                │
-  │  - Response formatting             │
-  └─┬───────────────────┬──────────────┘
-    │                   │
-Core Services:
-  ┌─▼─────────────┐  ┌─▼──────────────┐  ┌─────────────┐
-  │ LLM Service   │  │ Vector Search  │  │ Data Layer  │
-  │ (Inference)   │  │ Service        │  │ Connectors  │
-  │               │  │                │  │             │
-  │ - Ollama/     │  │ - Weaviate/    │  │ - Postgres  │
-  │   VLLM        │  │   Qdrant       │  │ - MongoDB   │
-  │ - Quantized   │  │ - Milvus       │  │ - Elastic   │
-  │   Models      │  │                │  │             │
-  └───────────────┘  └────────────────┘  └─────────────┘
+```mermaid
+graph TB
+    subgraph App[Application Layer]
+        UI[Chat Interface<br/>React/Vue]
+    end
+    
+    subgraph Orch[Orchestration Layer]
+        Orchestrator[RAG Orchestration Service<br/>Query routing<br/>Context assembly<br/>Response formatting]
+    end
+    
+    subgraph Core[Core Services]
+        LLM[LLM Service<br/>Ollama/VLLM<br/>Quantized Models]
+        Vector[Vector Search<br/>Weaviate/Qdrant/Milvus]
+        Data[Data Layer<br/>Postgres<br/>MongoDB<br/>Elastic]
+    end
+    
+    UI --> Orchestrator
+    Orchestrator --> LLM
+    Orchestrator --> Vector
+    Orchestrator --> Data
+    
+    style App fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Orch fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Core fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
 ```
 
 ### Kubernetes Deployment Manifest
@@ -130,19 +126,29 @@ spec:
 
 For large deployments, use service mesh for advanced traffic management:
 
-```
-Ingress (LoadBalancer)
-    │
-    ▼
-┌─────────────────────────┐
-│  Istio/Linkerd Service  │
-│  Mesh Control Plane     │
-└─────────────────────────┘
-    │
-    ├─► LLM Service (v1.0) - 80% traffic
-    ├─► LLM Service (v1.1) - 20% traffic (canary)
-    ├─► Vector DB Service
-    └─► Data Connector Service
+```mermaid
+graph TB
+    Ingress[Ingress LoadBalancer]
+    
+    subgraph ServiceMesh[Istio/Linkerd Service Mesh]
+        Control[Control Plane]
+    end
+    
+    LLM1[LLM Service v1.0<br/>80% Traffic]
+    LLM2[LLM Service v1.1<br/>20% Traffic - Canary]
+    Vector[Vector DB Service]
+    DataConn[Data Connector Service]
+    
+    Ingress --> Control
+    Control --> LLM1
+    Control --> LLM2
+    Control --> Vector
+    Control --> DataConn
+    
+    style Ingress fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style ServiceMesh fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style LLM1 fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+    style LLM2 fill:#FFFACD,stroke:#FF8C00,stroke-width:2px,stroke-dasharray: 5 5,color:#000
 ```
 
 **Benefits:**

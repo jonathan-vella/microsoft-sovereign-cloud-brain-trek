@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Overview
-parent: Microsoft Sovereign Cloud Models
+parent: Module 2 - Sovereign Cloud Models
 nav_order: 1
 ---
 
@@ -115,11 +115,38 @@ Different organizations have different sovereignty needs:
 
 ## Model Comparison Matrix
 
-> **📊 Visual Reference Needed**  
-> *Sovereign Cloud Models Comparison (Asset 8)*  
-> Side-by-side comparison diagram showing the three sovereign cloud models with key characteristics. Three-column layout with distinct colors: Blue (Public), Green (Private), Purple (Partner). Rows include: Infrastructure, Control Level, Compliance, Use Cases, Cost Model. Visual indicators for sovereignty level (Low/Medium/High). Icons for each model type. Comparison table with checkmarks.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 8  
-> **Source to adapt:** [Microsoft Cloud for Sovereignty](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)
+```mermaid
+graph LR
+    subgraph SPC[Sovereign Public Cloud]
+        SPC1[Shared Infrastructure]
+        SPC2[Azure Regions]
+        SPC3[Microsoft Managed]
+        SPC4[Cloud for Sovereignty]
+    end
+    
+    subgraph PRIV[Sovereign Private Cloud]
+        PRIV1[Dedicated Infrastructure]
+        PRIV2[Customer Datacenter]
+        PRIV3[Customer Managed]
+        PRIV4[Azure Local]
+    end
+    
+    subgraph NPC[National Partner Clouds]
+        NPC1[Partner Infrastructure]
+        NPC2[National Boundaries]
+        NPC3[Partner Managed]
+        NPC4[Local Compliance]
+    end
+    
+    A[Organization Needs] --> SPC
+    A --> PRIV
+    A --> NPC
+    
+    style SPC fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style PRIV fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style NPC fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style A fill:#D4E9D7,stroke:#107C10,stroke-width:3px,color:#000
+```
 
 | Feature / Attribute | Sovereign Public Cloud | Sovereign Private Cloud | National Partner Clouds |
 |---------------------|------------------------|-------------------------|-------------------------|
@@ -145,11 +172,42 @@ Different organizations have different sovereignty needs:
 
 Choosing the right sovereign cloud model depends on multiple factors. Use this framework to guide your decision:
 
-> **📊 Visual Reference Needed**  
-> *Sovereign Cloud Model Decision Tree (Asset 9)*  
-> Interactive decision flowchart to help customers select appropriate model based on requirements. Starts with "What are your sovereignty requirements?" with diamond decision nodes flowing downward. Yes/No branches at each node. Endpoints show recommended model with example scenarios. Diamond-shaped decision nodes, rectangular outcome boxes. Color-coded paths matching model colors. Icons for decision types.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 9  
-> **Source to adapt:** [Azure decision guides](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/)
+```mermaid
+flowchart TD
+    Start([Start: Cloud Model Selection]) --> Q1{Data must stay<br/>in specific location?}
+    Q1 -->|No| SPC1[Consider Sovereign<br/>Public Cloud]
+    Q1 -->|Yes| Q2{Physical isolation<br/>required?}
+    
+    Q2 -->|No| Q3{National operator<br/>mandate?}
+    Q2 -->|Yes| PRIV[Sovereign Private Cloud]
+    
+    Q3 -->|Yes| NPC[National Partner Clouds]
+    Q3 -->|No| Q4{Internet connectivity<br/>available?}
+    
+    Q4 -->|Yes| SPC2[Sovereign Public Cloud]
+    Q4 -->|No| PRIV2[Sovereign Private Cloud<br/>Disconnected Mode]
+    
+    SPC1 --> Validate{Validate against<br/>requirements}
+    SPC2 --> Validate
+    NPC --> Validate
+    PRIV --> Validate
+    PRIV2 --> Validate
+    
+    Validate --> End([Selected Model])
+    
+    style Start fill:#D4E9D7,stroke:#107C10,stroke-width:3px,color:#000
+    style End fill:#D4E9D7,stroke:#107C10,stroke-width:3px,color:#000
+    style SPC1 fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style SPC2 fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style PRIV fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style PRIV2 fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style NPC fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Q1 fill:#FFF,stroke:#666,stroke-width:2px,color:#000
+    style Q2 fill:#FFF,stroke:#666,stroke-width:2px,color:#000
+    style Q3 fill:#FFF,stroke:#666,stroke-width:2px,color:#000
+    style Q4 fill:#FFF,stroke:#666,stroke-width:2px,color:#000
+    style Validate fill:#FFF,stroke:#666,stroke-width:2px,color:#000
+```
 
 ---
 
@@ -902,24 +960,12 @@ Real-world examples illustrating when and why organizations choose each sovereig
 
 ## Visual Asset Placeholder
 
-> **📊 Visual Reference Needed**  
-> *Sovereign Cloud Models Comparison*  
-> This section will include a comprehensive diagram showing the three sovereign cloud models side-by-side with key characteristics, use cases, and decision criteria. The diagram will use a three-column layout with icons, color coding (Blue for Public, Green for Private, Purple for Partner), and a comparison table showing features like infrastructure type, deployment location, connectivity, control plane, and typical use cases.  
-> **Source:** Custom diagram based on [Microsoft Cloud for Sovereignty](https://learn.microsoft.com/en-us/industry/sovereign-cloud/) and [Azure deployment options](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
 
 ---
 
-> **📊 Visual Reference Needed**  
-> *Model Decision Tree*  
-> This section will include a decision flowchart to help customers select the appropriate sovereign cloud model. The flowchart will start with "What are your sovereignty requirements?" and include decision nodes for data residency, operational control, national regulations, and disconnected operations, with recommended models at each endpoint.  
-> **Source:** Custom decision tree based on [Azure decision guides](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/)
 
 ---
 
-> **📊 Visual Reference Needed**  
-> *National Partner Clouds Map*  
-> This section will include a world map showing the geographic distribution of national partner clouds. The map will highlight Azure Government regions (US), Azure China (21Vianet operated), and other sovereign cloud regions, with a legend showing sovereignty levels and local operator details.  
-> **Source:** Adapted from [Azure global infrastructure](https://azure.microsoft.com/en-us/explore/global-infrastructure/) and [National clouds documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-national-cloud)
 
 ---
 

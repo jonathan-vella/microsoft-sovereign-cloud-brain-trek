@@ -7,11 +7,8 @@ description: "Intermediate architecture and pre-sales skills for Microsoft Sover
 ---
 
 # Level 200: Intermediate - Architecture & Pre-Sales
-{: .no_toc }
 
 ## Overview
-{: .no_toc .text-delta }
-
 Develop the ability to design solutions, plan deployments, and address customer-specific requirements for sovereign cloud architectures.
 
 ---
@@ -63,11 +60,11 @@ Before starting Level 200, ensure you have:
 Explore advanced Azure Local deployment patterns, hardware planning, high-availability architectures, and advanced networking scenarios for enterprise edge deployments.
 
 **Core Topics:**
-- [Main Page: Azure Local Architecture Deep Dive]({{ site.baseurl }}{% link level-200/azure-local-architecture-deep-dive.md %})
-- [Hardware Planning & Sizing]({{ site.baseurl }}{% link level-200/azure-local-hardware-planning.md %})
-- [High-Availability Patterns]({{ site.baseurl }}{% link level-200/azure-local-ha-patterns.md %})
-- [Advanced Networking Configurations]({{ site.baseurl }}{% link level-200/azure-local-advanced-networking.md %})
-- [Knowledge Check]({{ site.baseurl }}{% link level-200/azure-local-deep-dive-knowledge-check.md %})
+- [Main Page: Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive.md)
+- [Hardware Planning & Sizing](azure-local-hardware-planning.md)
+- [High-Availability Patterns](azure-local-ha-patterns.md)
+- [Advanced Networking Configurations](azure-local-advanced-networking.md)
+- [Knowledge Check](azure-local-deep-dive-knowledge-check.md)
 
 ---
 
@@ -78,11 +75,11 @@ Explore advanced Azure Local deployment patterns, hardware planning, high-availa
 Master enterprise-scale governance, cost optimization, and security hardening for Azure Arc across hybrid and multi-cloud environments.
 
 **Core Topics:**
-- [Main Page: Arc Advanced Management]({{ site.baseurl }}{% link level-200/arc-advanced-management.md %})
-- [Policy & Governance at Scale]({{ site.baseurl }}{% link level-200/arc-policy-and-governance.md %})
-- [Cost Optimization Strategies]({{ site.baseurl }}{% link level-200/arc-cost-optimization.md %})
-- [Enterprise Deployment Patterns]({{ site.baseurl }}{% link level-200/arc-enterprise-patterns.md %})
-- [Knowledge Check]({{ site.baseurl }}{% link level-200/arc-advanced-knowledge-check.md %})
+- [Main Page: Arc Advanced Management](arc-advanced-management.md)
+- [Policy & Governance at Scale](arc-policy-and-governance.md)
+- [Cost Optimization Strategies](arc-cost-optimization.md)
+- [Enterprise Deployment Patterns](arc-enterprise-patterns.md)
+- [Knowledge Check](arc-advanced-knowledge-check.md)
 
 ---
 
@@ -93,12 +90,12 @@ Master enterprise-scale governance, cost optimization, and security hardening fo
 Master production-ready Retrieval-Augmented Generation deployment patterns, LLM optimization, vector database tuning, and operational excellence for enterprise edge deployments.
 
 **Core Topics:**
-- [Main Page: Edge RAG Implementation]({{ site.baseurl }}{% link level-200/edge-rag-implementation.md %})
-- [LLM Inference Optimization]({{ site.baseurl }}{% link level-200/llm-inference-optimization.md %})
-- [Vector Databases for Edge]({{ site.baseurl }}{% link level-200/vector-databases-edge.md %})
-- [RAG Deployment Strategies]({{ site.baseurl }}{% link level-200/rag-deployment-strategies.md %})
-- [RAG Operations & Monitoring]({{ site.baseurl }}{% link level-200/rag-operations-monitoring.md %})
-- [Knowledge Check]({{ site.baseurl }}{% link level-200/rag-implementation-knowledge-check.md %})
+- [Main Page: Edge RAG Implementation](edge-rag-implementation.md)
+- [LLM Inference Optimization](llm-inference-optimization.md)
+- [Vector Databases for Edge](vector-databases-edge.md)
+- [RAG Deployment Strategies](rag-deployment-strategies.md)
+- [RAG Operations & Monitoring](rag-operations-monitoring.md)
+- [Knowledge Check](rag-implementation-knowledge-check.md)
 
 ---
 
@@ -109,11 +106,11 @@ Master production-ready Retrieval-Augmented Generation deployment patterns, LLM 
 Master customer discovery, solution architecture, sizing methodologies, and business case development for sovereign cloud implementations.
 
 **Core Topics:**
-- [Main Page: Pre-Sales Solution Design]({{ site.baseurl }}{% link level-200/presales-solution-design.md %})
-- [Customer Discovery Framework]({{ site.baseurl }}{% link level-200/customer-discovery.md %})
-- [Solution Sizing Methodologies]({{ site.baseurl }}{% link level-200/solution-sizing.md %})
-- [TCO & Cost Estimation]({{ site.baseurl }}{% link level-200/cost-estimation.md %})
-- [Knowledge Check]({{ site.baseurl }}{% link level-200/presales-knowledge-check.md %})
+- [Main Page: Pre-Sales Solution Design](presales-solution-design.md)
+- [Customer Discovery Framework](customer-discovery.md)
+- [Solution Sizing Methodologies](solution-sizing.md)
+- [TCO & Cost Estimation](cost-estimation.md)
+- [Knowledge Check](presales-knowledge-check.md)
 
 ---
 
@@ -124,12 +121,12 @@ Master customer discovery, solution architecture, sizing methodologies, and busi
 Master regulatory compliance frameworks (GDPR, FedRAMP), encryption strategies, key management, security hardening, and incident response for sovereign cloud deployments.
 
 **Core Topics:**
-- [Main Page: Compliance & Security Patterns]({{ site.baseurl }}{% link level-200/compliance-security-patterns.md %})
-- [GDPR Implementation Guide]({{ site.baseurl }}{% link level-200/gdpr-implementation.md %})
-- [FedRAMP Compliance]({{ site.baseurl }}{% link level-200/fedramp-compliance.md %})
-- [Encryption & Key Management]({{ site.baseurl }}{% link level-200/encryption-key-management.md %})
-- [Security Hardening Practices]({{ site.baseurl }}{% link level-200/security-hardening.md %})
-- [Knowledge Check]({{ site.baseurl }}{% link level-200/compliance-knowledge-check.md %})
+- [Main Page: Compliance & Security Patterns](compliance-security-patterns.md)
+- [GDPR Implementation Guide](gdpr-implementation.md)
+- [FedRAMP Compliance](fedramp-compliance.md)
+- [Encryption & Key Management](encryption-key-management.md)
+- [Security Hardening Practices](security-hardening.md)
+- [Knowledge Check](compliance-knowledge-check.md)
 
 ---
 
@@ -140,15 +137,15 @@ Master regulatory compliance frameworks (GDPR, FedRAMP), encryption strategies, 
 Five progressive hands-on labs reinforcing Modules 1-5 through practical implementation of Azure Local, Azure Arc, Edge RAG, policy governance, and monitoring in a complete sovereign cloud environment.
 
 **Lab Overview:**
-1. [Lab 1: Azure Local Deployment]({{ site.baseurl }}{% link level-200/lab-01-azure-local-deployment.md %}) (2-3h)
+1. [Lab 1: Azure Local Deployment](lab-01-azure-local-deployment.md) (2-3h)
    - Deploy Azure Local in connected mode with sample applications
-2. [Lab 2: Azure Arc Onboarding]({{ site.baseurl }}{% link level-200/lab-02-azure-arc-onboarding.md %}) (2-3h)
+2. [Lab 2: Azure Arc Onboarding](lab-02-azure-arc-onboarding.md) (2-3h)
    - Register and manage resources with Arc, GitOps, extensions
-3. [Lab 3: Edge RAG Setup]({{ site.baseurl }}{% link level-200/lab-03-edge-rag-setup.md %}) (3-4h)
+3. [Lab 3: Edge RAG Setup](lab-03-edge-rag-setup.md) (3-4h)
    - Complete RAG system with Weaviate, Ollama, and FastAPI
-4. [Lab 4: Policy & Governance]({{ site.baseurl }}{% link level-200/lab-04-policy-governance.md %}) (2-3h)
+4. [Lab 4: Policy & Governance](lab-04-policy-governance.md) (2-3h)
    - Custom policies, Kubernetes enforcement, compliance monitoring
-5. [Lab 5: Monitoring & Observability]({{ site.baseurl }}{% link level-200/lab-05-monitoring-observability.md %}) (2-3h)
+5. [Lab 5: Monitoring & Observability](lab-05-monitoring-observability.md) (2-3h)
    - End-to-end monitoring with Log Analytics, alerts, and dashboards
 
 **[Module 6 Overview & Navigation](../level-200/README)**

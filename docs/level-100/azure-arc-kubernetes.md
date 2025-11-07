@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Azure Arc-Enabled Kubernetes
-parent: Azure Arc Introduction
+parent: Module 4 - Azure Arc Introduction
 nav_order: 4.2
 ---
 
@@ -129,16 +129,24 @@ az k8s-configuration flux create   --name my-app-config   --cluster-name myClust
 
 ### Application Deployment Workflow
 
-```
-1. Developer pushes code to Git
-   ↓
-2. Flux detects changes
-   ↓
-3. Flux pulls manifests from Git
-   ↓
-4. Flux applies manifests to cluster
-   ↓
-5. Application updates automatically
+```mermaid
+graph LR
+    Dev[1. Developer<br/>Pushes to Git] --> Detect[2. Flux Detects<br/>Changes]
+    Detect --> Pull[3. Flux Pulls<br/>Manifests]
+    Pull --> Apply[4. Flux Applies<br/>to Cluster]
+    Apply --> Update[5. Application<br/>Updates]
+    
+    Git[(Git Repository<br/>Source of Truth)]
+    
+    Dev --> Git
+    Git --> Detect
+    
+    style Dev fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Git fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+    style Detect fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Pull fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
+    style Apply fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+    style Update fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
 ```
 
 ---

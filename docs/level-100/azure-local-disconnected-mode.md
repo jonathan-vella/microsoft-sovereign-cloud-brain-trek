@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Azure Local Disconnected Mode
-parent: Azure Local Overview
+parent: Module 3 - Azure Local Overview
 nav_order: 3.3
 ---
 
@@ -19,6 +19,35 @@ nav_order: 3.3
 ## What is Disconnected Mode?
 
 **Disconnected Mode** enables Azure Local clusters to operate completely independently without continuous connectivity to Microsoft Azure or the internet. This mode is designed for air-gapped environments, classified networks, and scenarios where data must remain completely isolated.
+
+```mermaid
+graph TB
+    subgraph AirGap[🔒 Air-Gapped Environment - No External Connectivity]
+        subgraph Local[On-Premises Infrastructure]
+            Cluster[Azure Local Cluster<br/>Fully Autonomous]
+            WAC[Windows Admin Center<br/>Local Management]
+            VMs[Virtual Machines]
+            Storage[Storage Spaces Direct]
+            Backup[Local Backup]
+        end
+        
+        Admin[Administrator] --> WAC
+        WAC --> Cluster
+        Cluster --> VMs
+        Cluster --> Storage
+        VMs --> Backup
+        
+        style Local fill:#FFF4E6,stroke:#FF8C00,stroke-width:3px,color:#000
+    end
+    
+    Azure[Azure Cloud<br/>❌ No Connection]
+    Internet[Internet<br/>❌ No Access]
+    
+    style AirGap fill:#F8F8F8,stroke:#D13438,stroke-width:3px,stroke-dasharray: 5 5,color:#000
+    style Azure fill:#E8F4FD,stroke:#999,stroke-width:1px,stroke-dasharray: 3 3,color:#999
+    style Internet fill:#F3E8FF,stroke:#999,stroke-width:1px,stroke-dasharray: 3 3,color:#999
+    style Storage fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+```
 
 ### Key Characteristics
 

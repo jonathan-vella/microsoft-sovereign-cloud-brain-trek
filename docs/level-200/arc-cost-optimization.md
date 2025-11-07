@@ -1,16 +1,11 @@
 ---
 layout: default
-title: Arc Cost Optimization
+title: Cost Optimization
 parent: Arc Advanced Management
-grand_parent: Arc Advanced Management
-nav_order: 2
+nav_order: 3
 ---
 
 # Arc Cost Optimization Strategies
-
-> **📊 Visual Reference: Asset 25 - Arc Cost Analysis and Optimization Model**  
-> *Placeholder - See docs/assets/images/README.md#asset-25*  
-> Diagram showing cost structure breakdown (licensing, extensions, Azure services), optimization opportunities, cost modeling calculations, and savings scenarios.
 
 ## Overview
 

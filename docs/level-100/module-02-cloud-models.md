@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Microsoft Sovereign Cloud Models
+title: Module 2 - Sovereign Cloud Models
 parent: Level 100 - Foundation
 nav_order: 2
 has_children: true

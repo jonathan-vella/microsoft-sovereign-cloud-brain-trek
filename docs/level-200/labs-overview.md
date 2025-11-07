@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hands-On Labs Overview
+title: Module 6 - Hands-On Labs
 parent: Level 200 - Intermediate
 nav_order: 10
 has_children: true
@@ -13,12 +13,6 @@ has_children: true
 > All lab content is complete but hands-on exercises are currently being validated and refined.  
 > **Expected Release:** Q1 2026  
 > You can review the lab steps and prepare your environment in advance.
-
-> **📊 Visual References:**
-> - **Asset 39** - Lab Architecture Progression (shows how each lab builds on previous, creating integrated infrastructure)
-> - **Asset 40** - Lab Environment Cost and Time Matrix (estimated costs and duration for each lab)
->
-> See docs/assets/images/README.md for complete asset specifications.
 
 ## Overview
 

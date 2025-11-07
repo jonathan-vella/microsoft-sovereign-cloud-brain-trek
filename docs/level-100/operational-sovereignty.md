@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Operational Sovereignty
-parent: Digital Sovereignty
+parent: Module 1 - Digital Sovereignty
 nav_order: 5
 ---
 
@@ -98,11 +98,6 @@ For many organizations—particularly those in government, defense, and critical
 
 Different scenarios require different levels of operational sovereignty:
 
-> **📊 Visual Reference Needed**  
-> *Operational Sovereignty Levels (Asset 6)*  
-> Detailed breakdown of the 5 operational sovereignty levels with control characteristics at each level. Stacked vertical or pyramid layout showing: control plane location, connectivity type, personnel access rules, typical use cases. Progressive color gradient (green to red) showing increasing operational control. Includes icons for control plane, network, personnel, and use cases.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 6  
-> **Source to adapt:** [Azure Local overview](https://learn.microsoft.com/en-us/azure/azure-local/overview)
 
 ---
 
@@ -197,11 +192,6 @@ Different scenarios require different levels of operational sovereignty:
 
 The control plane is the management layer that orchestrates infrastructure operations. The location and connectivity of the control plane is a key aspect of operational sovereignty.
 
-> **📊 Visual Reference Needed**  
-> *Azure Local Connected vs. Disconnected Mode Comparison (Asset 7)*  
-> Side-by-side comparison diagram of Connected Mode (hybrid with Azure) versus Disconnected Mode (air-gapped/independent). Left panel shows Connected Mode architecture with cloud connection. Right panel shows Disconnected Mode with local autonomy. Bottom: Feature availability matrix showing supported features for each mode (✓, ✗, Limited indicators). Use cases provided for each mode. Color-coded: Blue (connected), Gray (disconnected).  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 7  
-> **Source to adapt:** [Azure Local deployment options](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction?view=azloc-2509)
 
 ---
 

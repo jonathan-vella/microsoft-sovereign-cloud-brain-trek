@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Edge RAG Implementation
+title: Module 3 - Edge RAG Implementation
 parent: Level 200 - Intermediate
 nav_order: 3
 has_children: true

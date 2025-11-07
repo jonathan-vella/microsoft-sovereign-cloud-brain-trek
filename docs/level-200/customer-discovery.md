@@ -14,10 +14,6 @@ nav_order: 4
 
 # Customer Discovery Framework
 
-> **📊 Visual Reference: Asset 32 - Customer Discovery Framework**  
-> *Placeholder - See docs/assets/images/README.md#asset-32*  
-> Structured discovery process showing phases (business objectives, technical requirements, compliance, budget, success criteria), key questions, pain point mapping, and decision tree for solution recommendations.
-
 ## Overview
 
 Effective customer discovery is the foundation of successful solution design. This page covers discovery interview techniques, questionnaire frameworks, stakeholder mapping, and requirements documentation for Microsoft Sovereign Cloud and Edge AI solutions.

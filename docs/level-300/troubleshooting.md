@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Advanced Troubleshooting & Optimization
+title: Module 5 - Advanced Troubleshooting
 parent: Level 300 - Advanced
 nav_order: 5
 has_children: true
@@ -47,31 +47,54 @@ Master advanced troubleshooting techniques, diagnostic tools, and system optimiz
 
 ## Troubleshooting Decision Tree
 
-> **📊 Visual Reference Needed**  
-> *Troubleshooting Decision Tree (Asset 57)*  
-> Interactive flowchart showing symptom → investigation path → diagnosis → resolution with decision points and tool recommendations.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 57  
-> **Source to adapt:** [Azure troubleshooting guide](https://learn.microsoft.com/en-us/troubleshoot/azure/)
+```mermaid
+flowchart TD
+    Start([Issue Reported]) --> Gather[Gather Symptoms<br/>& Timeline]
+    Gather --> Type{Issue Type?}
+    
+    Type -->|Performance| Perf[Check Resource Usage<br/>CPU/Memory/Disk/Network]
+    Type -->|Connectivity| Conn[Network Diagnostics<br/>Ping/Traceroute/DNS]
+    Type -->|Service Down| Service[Check Service Status<br/>Event Logs/Health]
+    Type -->|Data Issue| DataCheck[Validate Data<br/>Check Replication]
+    
+    Perf --> PerfFix{Fix Identified?}
+    Conn --> ConnFix{Fix Identified?}
+    Service --> SvcFix{Fix Identified?}
+    DataCheck --> DataFix{Fix Identified?}
+    
+    PerfFix -->|Yes| Implement[Implement Solution]
+    ConnFix -->|Yes| Implement
+    SvcFix -->|Yes| Implement
+    DataFix -->|Yes| Implement
+    
+    PerfFix -->|No| Escalate[Escalate to<br/>Engineering]
+    ConnFix -->|No| Escalate
+    SvcFix -->|No| Escalate
+    DataFix -->|No| Escalate
+    
+    Implement --> Verify{Issue Resolved?}
+    Verify -->|Yes| Document[Document Solution]
+    Verify -->|No| Escalate
+    
+    Document --> End([Close Ticket])
+    Escalate --> End
+    
+    style Start fill:#D4E9D7,stroke:#107C10,stroke-width:3px,color:#000
+    style End fill:#D4E9D7,stroke:#107C10,stroke-width:3px,color:#000
+    style Type fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
+    style Escalate fill:#FFE6E6,stroke:#D13438,stroke-width:2px,color:#000
+    style Implement fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
+```
 
 ---
 
 ## Diagnostic Tools
 
-> **📊 Visual Reference Needed**  
-> *Diagnostic Tools Reference (Asset 58)*  
-> Matrix/matrix showing tools, capabilities, use cases, and output examples for each diagnostic approach (logs, metrics, traces, etc.).  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 58  
-> **Source to adapt:** [Azure Monitor diagnostic capabilities](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 
 ---
 
 ## Escalation Procedures
 
-> **📊 Visual Reference Needed**  
-> *Escalation Workflow & Procedures (Asset 59)*  
-> Process flowchart showing escalation paths, ticket routing, information requirements, and SLA expectations at each level.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 59  
-> **Source to adapt:** [Support and troubleshooting resources](https://learn.microsoft.com/en-us/support/azure/)
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: European Digital Commitments
-parent: Digital Sovereignty
+parent: Module 1 - Digital Sovereignty
 nav_order: 2
 ---
 
@@ -77,11 +77,6 @@ On April 30, 2025, Microsoft announced five comprehensive commitments to support
 - Expanded coverage: 2023-2024
 - Ongoing enhancements: 2025+
 
-> **📊 Visual Reference Needed**  
-> *EU Data Boundary Diagram (Asset 3)*  
-> This section includes a detailed diagram showing Microsoft's EU Data Boundary commitment. Shows EU/EEA geographic boundary, data types stored/processed within the boundary, data flow arrows, Customer Lockbox workflow, exception scenarios with approval gates, and control mechanisms. Includes process flow for lockbox approval.  
-> **Specification Reference:** See `docs/level-100/VISUAL_SPECIFICATIONS.md` → Asset 3  
-> **Source to adapt:** [EU Data Boundary documentation](https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn)
 
 ---
 

@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Hardware Planning and Sizing
+title: Hardware Planning & Sizing
 parent: Azure Local Architecture Deep Dive
-grand_parent: Azure Local Architecture Deep Dive
-nav_order: 1
+nav_order: 2
 ---
 
 # Hardware Planning and Sizing
@@ -11,10 +10,6 @@ nav_order: 1
 Selecting and sizing the correct hardware is fundamental to Azure Local success. This guide helps you make informed decisions about processor selection, memory configuration, storage architecture, and network capabilities.
 
 ## CPU Selection and Performance
-
-> **📊 Visual Reference: Asset 23 - Hardware Planning Decision Tree**  
-> *Placeholder - See docs/assets/images/README.md#asset-23*  
-> Decision flowchart for selecting hardware based on workload class, capacity requirements, redundancy needs, and budget constraints.
 
 ### Processor Families
 

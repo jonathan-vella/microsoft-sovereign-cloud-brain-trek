@@ -15,11 +15,6 @@ Complete end-to-end architecture for Retrieval-Augmented Generation systems at p
 
 ## Architecture Components
 
-> **📊 Visual Reference Needed**  
-> *Production RAG Architecture (Asset 52)*  
-> Enterprise system showing ingestion pipeline, vector database, retrieval layer, inference engines, monitoring, and scaling components.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 52  
-> **Source to adapt:** [RAG architecture on Azure](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)
 
 ---
 

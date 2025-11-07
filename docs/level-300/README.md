@@ -7,11 +7,8 @@ description: "Advanced implementation and expert-level guidance for Microsoft So
 ---
 
 # Level 300: Advanced - Expert Implementation & Strategy
-{: .no_toc }
 
 ## Overview
-{: .no_toc .text-delta }
-
 Achieve expert-level proficiency to lead complex deployments, manage production environments, and drive strategic customer engagements.
 
 ---
@@ -60,7 +57,7 @@ Before starting Level 300, ensure you have:
 
 **Duration:** 6-8 hours
 
-- [Zero Trust Principles]({{ site.baseurl }}{% link level-300/zero-trust.md %})
+- [Zero Trust Principles](zero-trust.md)
 - [Implementation Patterns](zero-trust#implementation)
 - [Monitoring and Compliance](zero-trust#monitoring)
 
@@ -68,7 +65,7 @@ Before starting Level 300, ensure you have:
 
 **Duration:** 8-10 hours
 
-- [Advanced Networking]({{ site.baseurl }}{% link level-300/azure-local-advanced-connected.md %})
+- [Advanced Networking](azure-local-advanced-connected.md)
 - [Multi-Site Deployments](azure-local-advanced-connected#multi-site)
 - [Cloud-Integrated Updates](azure-local-advanced-connected#updates)
 
@@ -76,7 +73,7 @@ Before starting Level 300, ensure you have:
 
 **Duration:** 8-10 hours
 
-- [Air-Gapped Operations]({{ site.baseurl }}{% link level-300/azure-local-advanced-disconnected.md %})
+- [Air-Gapped Operations](azure-local-advanced-disconnected.md)
 - [Manual Update Procedures](azure-local-advanced-disconnected#updates)
 - [Certificate Lifecycle Management](azure-local-advanced-disconnected#certificates)
 
@@ -84,7 +81,7 @@ Before starting Level 300, ensure you have:
 
 **Duration:** 10-12 hours
 
-- [Production Architecture]({{ site.baseurl }}{% link level-300/edge-rag-production.md %})
+- [Production Architecture](edge-rag-production.md)
 - [Performance Optimization](edge-rag-production#optimization)
 - [MLOps at the Edge](edge-rag-production#mlops)
 
@@ -92,7 +89,7 @@ Before starting Level 300, ensure you have:
 
 **Duration:** 6-8 hours
 
-- [Diagnostic Tools and Techniques]({{ site.baseurl }}{% link level-300/troubleshooting.md %})
+- [Diagnostic Tools and Techniques](troubleshooting.md)
 - [Common Issues and Resolutions](troubleshooting#common-issues)
 - [Support Escalation Paths](troubleshooting#escalation)
 
@@ -137,7 +134,7 @@ Before starting Level 300, ensure you have:
 
 **Estimated Time:** 4-6 hours
 
-**[Lab Instructions →]({{ site.baseurl }}{% link level-300/zero-trust-lab.md %})**
+**[Lab Instructions →](zero-trust-lab.md)**
 
 ### Lab 2: Air-Gapped Azure Local Deployment
 
@@ -154,7 +151,7 @@ Before starting Level 300, ensure you have:
 
 **Estimated Time:** 8-10 hours
 
-**[Lab Instructions →]({{ site.baseurl }}{% link level-300/azure-local-disconnected-lab.md %})**
+**[Lab Instructions →](azure-local-disconnected-lab.md)**
 
 ### Lab 3: Production Edge RAG with Custom Models
 
@@ -171,7 +168,7 @@ Before starting Level 300, ensure you have:
 
 **Estimated Time:** 10-12 hours
 
-**[Lab Instructions →]({{ site.baseurl }}{% link level-300/edge-rag-production-lab.md %})**
+**[Lab Instructions →](edge-rag-production-lab.md)**
 
 ---
 

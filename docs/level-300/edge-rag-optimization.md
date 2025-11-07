@@ -15,11 +15,6 @@ Optimize retrieval and inference performance for production RAG systems on edge 
 
 ## Optimization Strategies
 
-> **📊 Visual Reference Needed** *(Optional)*  
-> *Optimization Strategies & Trade-offs (Asset 53)*  
-> Decision matrix showing optimization approaches with performance/resource trade-offs: batch processing, caching, quantization, pruning.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 53  
-> **Source to adapt:** [Optimize inference performance](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-online-endpoints)
 
 ---
 

@@ -128,6 +128,25 @@ Azure Arc enables management of resources across hybrid and multi-cloud environm
 - Azure services anywhere
 - Unified governance and compliance
 
+### Microsoft 365 Local
+
+**[Learn More →](https://learn.microsoft.com/en-us/microsoft-365/local/)**
+
+Microsoft 365 Local brings Microsoft productivity server software into an Azure Local environment that can run entirely in a customer's own datacenter.
+
+**Key Capabilities:**
+- Exchange Server and SharePoint Server on Azure Local
+- Full control over security, compliance, and governance
+- Support for both Connected and Disconnected Azure Local modes
+- Simplified deployment with validated reference architecture
+- Complete data sovereignty for productivity workloads
+
+**Designed For:**
+- Governments requiring highest standards of data residency
+- Critical industries (defense, intelligence)
+- Regulated sectors with strict compliance requirements
+- Organizations needing productivity services in air-gapped environments
+
 ### Retrieval-Augmented Generation (RAG) on Azure Arc for Edge
 
 **[Learn More →](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/)**

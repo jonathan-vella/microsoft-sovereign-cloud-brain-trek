@@ -2,15 +2,10 @@
 layout: default
 title: High Availability Patterns
 parent: Azure Local Architecture Deep Dive
-grand_parent: Azure Local Architecture Deep Dive
-nav_order: 2
+nav_order: 3
 ---
 
 # High Availability Patterns
-
-> **📊 Visual Reference: Asset 22 - High-Availability Architecture**  
-> *Placeholder - See docs/assets/images/README.md#asset-22*  
-> Diagrams showing 3-node and 4-node cluster topologies, quorum options, storage redundancy types, and failover paths with RTO/RPO annotations.
 
 This section covers advanced strategies for building highly available and resilient Azure Local deployments. Understanding these patterns is essential for designing mission-critical systems.
 

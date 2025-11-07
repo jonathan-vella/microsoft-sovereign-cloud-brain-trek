@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Zero Trust Security for Sovereign Clouds
+title: Module 1 - Zero Trust Security
 parent: Level 300 - Advanced
 nav_order: 1
 has_children: true
@@ -101,11 +101,6 @@ Every Access Request → Identity Verification
 
 ## The Six Zero Trust Pillars
 
-> **📊 Visual Reference Needed**  
-> *Zero Trust Pillars & Framework (Asset 41)*  
-> Infographic showing six pillars (Identity, Device, Network, Application, Data, Infrastructure) with icons, descriptions, and key controls for each pillar.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 41  
-> **Source to adapt:** [Zero Trust security model](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)
 
 ### Pillar 1: Identity
 Verify every user's identity before access. Not based on network location or past authentication.
@@ -165,11 +160,6 @@ Secure cloud infrastructure, container orchestration, and compute resources.
 
 ## Sovereign Cloud-Specific Requirements
 
-> **📊 Visual Reference Needed**  
-> *Sovereign Cloud Security Model Comparison (Asset 42)*  
-> Side-by-side comparison showing Standard Cloud vs. Sovereign Cloud Zero Trust requirements, differentiating additional sovereignty controls.  
-> **Specification Reference:** See `docs/level-300/VISUAL_SPECIFICATIONS.md` → Asset 42  
-> **Source to adapt:** [Microsoft Cloud for Sovereignty](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)
 
 ### Additional Sovereign Requirements
 

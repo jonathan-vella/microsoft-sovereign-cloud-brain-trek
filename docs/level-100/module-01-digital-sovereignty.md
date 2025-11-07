@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Digital Sovereignty
+title: Module 1 - Digital Sovereignty
 parent: Level 100 - Foundation
 nav_order: 1
 has_children: true
