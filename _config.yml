@@ -84,21 +84,6 @@ callouts:
     title: Warning
     color: red
 
-# Collections (for organizing content)
-collections:
-  level-50:
-    output: true
-    permalink: /level-50/:name
-  level-100:
-    output: true
-    permalink: /level-100/:name
-  level-200:
-    output: true
-    permalink: /level-200/:name
-  level-300:
-    output: true
-    permalink: /level-300/:name
-
 # Defaults
 defaults:
   - scope:
@@ -106,30 +91,6 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-  - scope:
-      path: "docs/level-50"
-    values:
-      layout: "default"
-      parent: "Level 50"
-      grand_parent: "Learning Paths"
-  - scope:
-      path: "docs/level-100"
-    values:
-      layout: "default"
-      parent: "Level 100"
-      grand_parent: "Learning Paths"
-  - scope:
-      path: "docs/level-200"
-    values:
-      layout: "default"
-      parent: "Level 200"
-      grand_parent: "Learning Paths"
-  - scope:
-      path: "docs/level-300"
-    values:
-      layout: "default"
-      parent: "Level 300"
-      grand_parent: "Learning Paths"
 
 # Plugins
 plugins:
