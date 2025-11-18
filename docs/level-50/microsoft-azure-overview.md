@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Microsoft Azure Overview
-parent: Level 50 - Prerequisites
-nav_order: 10
+parent: Module 3 - Microsoft Azure Introduction
+grand_parent: Level 50 - Prerequisites
+nav_order: 1
 description: "Introduction to Microsoft Azure platform and core services"
 ---
 

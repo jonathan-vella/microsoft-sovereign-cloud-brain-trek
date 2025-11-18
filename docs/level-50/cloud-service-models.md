@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Cloud Service Models
-parent: Level 50 - Prerequisites
+parent: Module 1 - Cloud Computing Fundamentals
+grand_parent: Level 50 - Prerequisites
 nav_order: 2
 description: "Understanding IaaS, PaaS, and SaaS with practical examples"
 ---

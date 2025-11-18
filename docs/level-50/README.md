@@ -53,74 +53,20 @@ Before starting Level 50, you should have:
 
 ## Learning Modules
 
-### 1. Cloud Computing Fundamentals
-
+### [Module 1: Cloud Computing Fundamentals]({{ site.baseurl }}{% link level-50/module-01-cloud-computing.md %})
 **Duration:** 45-60 minutes
 
-📚 **Main Content:**
-- [Cloud Computing Primer]({{ site.baseurl }}{% link level-50/cloud-computing-primer.md %}) - Service models, deployment models, and key benefits
+Learn essential cloud computing concepts including service models (IaaS, PaaS, SaaS), deployment models (public, private, hybrid), and business benefits. Understand the shift from CapEx to OpEx and how cloud enables scalability and innovation.
 
-**Deep Dive Topics:**
-- [Cloud Service Models]({{ site.baseurl }}{% link level-50/cloud-service-models.md %}) - IaaS, PaaS, SaaS explained with examples
-- [Cloud Deployment Models]({{ site.baseurl }}{% link level-50/cloud-deployment-models.md %}) - Public, private, hybrid, and multi-cloud
-- [Cloud Benefits and Considerations]({{ site.baseurl }}{% link level-50/cloud-benefits.md %}) - Scalability, cost optimization, and challenges
-
-✅ **Assessment:**
-- [Cloud Computing Knowledge Check]({{ site.baseurl }}{% link level-50/cloud-computing-knowledge-check.md %}) - 10 questions on cloud fundamentals
-
-**Key Concepts:**
-- Infrastructure as a Service (IaaS)
-- Platform as a Service (PaaS)
-- Software as a Service (SaaS)
-- Public, private, and hybrid cloud
-- Scalability and elasticity
-- OpEx vs CapEx models
-
-### 2. Security & Compliance Fundamentals
-
+### [Module 2: Security & Compliance Fundamentals]({{ site.baseurl }}{% link level-50/module-02-security-compliance.md %})
 **Duration:** 45-60 minutes
 
-📚 **Main Content:**
-- [Security & Compliance Basics]({{ site.baseurl }}{% link level-50/security-compliance-basics.md %}) - Core security principles and compliance frameworks
+Build foundational knowledge of security principles (CIA triad), data protection, identity and access management, and key compliance frameworks (GDPR, HIPAA, SOC 2, ISO 27001).
 
-**Deep Dive Topics:**
-- [Data Protection Principles]({{ site.baseurl }}{% link level-50/data-protection-principles.md %}) - Confidentiality, integrity, availability (CIA triad)
-- [Compliance Frameworks Overview]({{ site.baseurl }}{% link level-50/compliance-frameworks.md %}) - GDPR, HIPAA, SOC 2, ISO 27001 basics
-- [Identity and Access Management]({{ site.baseurl }}{% link level-50/identity-access-basics.md %}) - Authentication, authorization, and role-based access
-
-✅ **Assessment:**
-- [Security & Compliance Knowledge Check]({{ site.baseurl }}{% link level-50/security-compliance-knowledge-check.md %}) - 10 questions on security fundamentals
-
-**Key Concepts:**
-- Confidentiality, Integrity, Availability (CIA)
-- Authentication vs. Authorization
-- Encryption basics
-- Compliance vs. Governance
-- Data classification
-- Risk management principles
-
-### 3. Microsoft Azure Introduction
-
+### [Module 3: Microsoft Azure Introduction]({{ site.baseurl }}{% link level-50/module-03-azure-intro.md %})
 **Duration:** 60-90 minutes
 
-📚 **Main Content:**
-- [Microsoft Azure Overview]({{ site.baseurl }}{% link level-50/microsoft-azure-overview.md %}) - Core services, regions, and management tools
-
-**Deep Dive Topics:**
-- [Azure Service Categories]({{ site.baseurl }}{% link level-50/azure-service-categories.md %}) - Compute, storage, networking, databases, AI/ML
-- [Azure Global Infrastructure]({{ site.baseurl }}{% link level-50/azure-global-infrastructure.md %}) - Regions, availability zones, and edge locations
-- [Azure Management Tools]({{ site.baseurl }}{% link level-50/azure-management-tools.md %}) - Portal, CLI, PowerShell, ARM templates
-
-✅ **Assessment:**
-- [Azure Fundamentals Knowledge Check]({{ site.baseurl }}{% link level-50/azure-fundamentals-knowledge-check.md %}) - 15 questions on Azure basics
-
-**Key Concepts:**
-- Azure regions and availability zones
-- Virtual machines and app services
-- Azure Storage types
-- Virtual networks and security groups
-- Azure Active Directory basics
-- Resource groups and subscriptions
+Explore Microsoft Azure's platform, global infrastructure, service categories, and management tools. Understand regions, availability zones, and key Azure services.
 
 ---
 

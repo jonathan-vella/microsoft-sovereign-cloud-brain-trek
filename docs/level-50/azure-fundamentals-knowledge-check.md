@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Azure Fundamentals Knowledge Check
-parent: Level 50 - Prerequisites
-nav_order: 15
+parent: Module 3 - Microsoft Azure Introduction
+grand_parent: Level 50 - Prerequisites
+nav_order: 5
 description: "Test your understanding of Azure fundamentals"
 ---
 

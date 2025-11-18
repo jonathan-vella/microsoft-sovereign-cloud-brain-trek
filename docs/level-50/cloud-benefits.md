@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Cloud Benefits and Considerations
-parent: Level 50 - Prerequisites
+parent: Module 1 - Cloud Computing Fundamentals
+grand_parent: Level 50 - Prerequisites
 nav_order: 4
 description: "Comprehensive analysis of cloud adoption benefits and key considerations"
 ---

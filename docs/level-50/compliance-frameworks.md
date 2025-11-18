@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Compliance Frameworks
-parent: Level 50 - Prerequisites
-nav_order: 8
+parent: Module 2 - Security & Compliance Fundamentals
+grand_parent: Level 50 - Prerequisites
+nav_order: 3
 description: "Overview of major compliance frameworks and regulations"
 ---
 

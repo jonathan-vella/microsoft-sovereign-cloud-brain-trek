@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Cloud Computing Primer
-parent: Level 50 - Prerequisites
+parent: Module 1 - Cloud Computing Fundamentals
+grand_parent: Level 50 - Prerequisites
 nav_order: 1
 description: "Essential cloud computing concepts and terminology"
 ---

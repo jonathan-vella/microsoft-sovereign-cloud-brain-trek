@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Cloud Computing Knowledge Check
-parent: Level 50 - Prerequisites
+parent: Module 1 - Cloud Computing Fundamentals
+grand_parent: Level 50 - Prerequisites
 nav_order: 5
 description: "Test your understanding of cloud computing fundamentals"
 ---

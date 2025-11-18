@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Azure Management Tools
-parent: Level 50 - Prerequisites
-nav_order: 14
+parent: Module 3 - Microsoft Azure Introduction
+grand_parent: Level 50 - Prerequisites
+nav_order: 4
 description: "Overview of Azure management interfaces and tools"
 ---
 

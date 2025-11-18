@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Security & Compliance Basics
-parent: Level 50 - Prerequisites
-nav_order: 6
+parent: Module 2 - Security & Compliance Fundamentals
+grand_parent: Level 50 - Prerequisites
+nav_order: 1
 description: "Essential security principles and compliance frameworks for cloud computing"
 ---
 

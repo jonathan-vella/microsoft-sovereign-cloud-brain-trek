@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Cloud Deployment Models
-parent: Level 50 - Prerequisites
+parent: Module 1 - Cloud Computing Fundamentals
+grand_parent: Level 50 - Prerequisites
 nav_order: 3
 description: "Understanding public, private, hybrid, and multi-cloud deployment strategies"
 ---
