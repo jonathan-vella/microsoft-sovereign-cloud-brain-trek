@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Identity and Access Basics
-parent: Level 50 - Prerequisites
-nav_order: 9
+parent: Module 2 - Security & Compliance Fundamentals
+grand_parent: Level 50 - Prerequisites
+nav_order: 4
 description: "Fundamentals of identity and access management"
 ---
 

@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Azure Global Infrastructure
-parent: Level 50 - Prerequisites
-nav_order: 13
+parent: Module 3 - Microsoft Azure Introduction
+grand_parent: Level 50 - Prerequisites
+nav_order: 3
 description: "Azure regions, availability zones, and global infrastructure overview"
 ---
 

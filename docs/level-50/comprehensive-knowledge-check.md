@@ -2,7 +2,7 @@
 layout: default
 title: Level 50 Comprehensive Knowledge Check
 parent: Level 50 - Prerequisites
-nav_order: 15
+nav_order: 4
 description: "Final assessment covering all Level 50 prerequisite topics"
 ---
 

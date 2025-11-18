@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Security & Compliance Knowledge Check
-parent: Level 50 - Prerequisites
-nav_order: 11
+parent: Module 2 - Security & Compliance Fundamentals
+grand_parent: Level 50 - Prerequisites
+nav_order: 5
 description: "Test your understanding of security and compliance fundamentals"
 ---
 

@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Azure Service Categories
-parent: Level 50 - Prerequisites
-nav_order: 12
+parent: Module 3 - Microsoft Azure Introduction
+grand_parent: Level 50 - Prerequisites
+nav_order: 2
 description: "Overview of Azure service categories with links to official documentation"
 ---
 

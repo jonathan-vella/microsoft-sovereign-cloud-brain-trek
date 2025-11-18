@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Data Protection Principles
-parent: Level 50 - Prerequisites
-nav_order: 7
+parent: Module 2 - Security & Compliance Fundamentals
+grand_parent: Level 50 - Prerequisites
+nav_order: 2
 description: "Core principles for protecting data in cloud environments"
 ---
 
