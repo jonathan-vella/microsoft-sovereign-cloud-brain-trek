@@ -10,12 +10,12 @@ description: >-
 tagline: Master Sovereign Cloud, Azure Local, and Edge AI Technologies
 url: https://sohamda.github.io
 baseurl: /microsoft-sovereign-cloud-brain-trek
-repository: sohamda/microsoft-sovereign-cloud-brain-trek
+repository: jonathan-vella/microsoft-sovereign-cloud-brain-trek
 
 # Author Information
 author:
-  name: Soham
-  email: iam.soham@gmail.com
+  name: Jonathan Vella
+  email: jonathan@microsoft.com
 
 # Build Settings
 source: docs
