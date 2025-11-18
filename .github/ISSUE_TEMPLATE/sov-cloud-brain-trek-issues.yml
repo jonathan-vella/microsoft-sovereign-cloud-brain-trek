@@ -26,6 +26,7 @@ body:
     attributes:
       label: Learning Level
       options:
+        - Level 50 - Essentials
         - Level 100 - Foundational
         - Level 200 - Intermediate
         - Level 300 - Advanced
