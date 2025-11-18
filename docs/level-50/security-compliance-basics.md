@@ -43,415 +43,111 @@ The foundation of information security rests on three core principles:
 - Implemented through redundancy, backup systems, and disaster recovery
 
 ### Defense in Depth
-
-**Layered Security Approach**
-Multiple layers of security controls provide better protection than any single control:
-
-```text
-Defense in Depth Layers:
-├── Physical Security (Data centers, access controls)
-├── Network Security (Firewalls, VPNs, segmentation)
-├── Endpoint Security (Antivirus, device management)
-├── Application Security (Secure coding, testing)
-├── Data Security (Encryption, classification)
-├── Identity Security (Authentication, authorization)
-└── Administrative Security (Policies, procedures, training)
-```
+Multiple layers of security controls (physical, network, endpoint, application, data, identity, administrative) provide comprehensive protection.
 
 ### Principle of Least Privilege
-
-**Minimum Required Access**
-- Users receive only the minimum permissions necessary for their role
-- Reduces risk of unauthorized access or accidental damage
-- Regular review and adjustment of permissions
-- Time-bound access for temporary requirements
+Users receive only minimum permissions necessary for their role. Regular review and time-bound access reduce risk.
 
 ### Zero Trust Security Model
-
-**Never Trust, Always Verify**
-- Assumes no user or device is inherently trustworthy
-- Continuous verification of identity and device state
-- Micro-segmentation of network resources
-- Conditional access based on risk assessment
+Never trust, always verify. Continuous verification of identity and device state with conditional access based on risk.
 
 ## Identity and Access Management (IAM)
 
 ### Authentication vs. Authorization
-
-**Authentication (Who are you?)**
-- Verifies the identity of a user, device, or system
-- Methods include passwords, multi-factor authentication, biometrics
-- Ensures only legitimate users can access systems
-
-**Authorization (What can you do?)**
-- Determines what authenticated users are allowed to access
-- Based on roles, permissions, and policies
-- Controls actions users can perform on resources
+**Authentication (Who are you?):** Verifies identity through passwords, MFA, biometrics
+**Authorization (What can you do?):** Determines access permissions based on roles and policies
 
 ### Multi-Factor Authentication (MFA)
-
-**Something You Know + Something You Have + Something You Are**
-
-**Knowledge Factors (Something You Know):**
-- Passwords
-- PINs
-- Security questions
-
-**Possession Factors (Something You Have):**
-- Mobile phones
-- Hardware tokens
-- Smart cards
-
-**Inherence Factors (Something You Are):**
-- Fingerprints
-- Facial recognition
-- Voice patterns
+Combines multiple verification factors:
+- **Knowledge:** Passwords, PINs
+- **Possession:** Mobile phones, hardware tokens
+- **Inherence:** Biometrics (fingerprint, facial recognition)
 
 ### Role-Based Access Control (RBAC)
-
-**Permissions Based on Job Function**
-- Users assigned to roles based on responsibilities
-- Roles have predefined permissions
-- Simplifies access management at scale
-- Easier compliance and audit processes
-
-**Example RBAC Structure:**
-
-```text
-Healthcare Organization:
-├── Doctor Role
-│   ├── Read patient records
-│   ├── Update patient records
-│   └── Prescribe medications
-├── Nurse Role
-│   ├── Read patient records
-│   ├── Update vitals
-│   └── View medication schedules
-└── Administrator Role
-    ├── Manage user accounts
-    ├── System configuration
-    └── Audit log access
-```
+Users assigned to roles based on job responsibilities. Roles have predefined permissions, simplifying management and compliance.
 
 ## Data Protection Fundamentals
 
 ### Data Classification
-
-**Organizing Data by Sensitivity Level**
-
-**Public Data**
-- No harm if disclosed
-- Marketing materials, published reports
-- No special protection required
-
-**Internal Data**
-- Meant for internal use only
-- Business processes, internal communications
-- Basic access controls required
-
-**Confidential Data**
-- Could cause harm if disclosed
-- Financial information, strategic plans
-- Enhanced protection and access controls
-
-**Restricted Data**
-- Severe damage if disclosed
-- Personal information, trade secrets
-- Highest level of protection required
+**Public:** No harm if disclosed
+**Internal:** Internal use only, basic controls
+**Confidential:** Could cause harm, enhanced protection
+**Restricted:** Severe damage potential, highest protection
 
 ### Data Encryption
-
-**Encryption In Transit**
-- Protects data while moving between systems
-- Uses protocols like TLS/SSL, IPsec
-- Prevents interception during transmission
-
-**Encryption At Rest**
-- Protects stored data
-- Encrypts files, databases, backups
-- Protects against physical theft or unauthorized access
-
-**Key Management**
-- Secure generation, storage, and rotation of encryption keys
-- Separation of keys from encrypted data
-- Hardware security modules (HSMs) for high-value keys
+**In Transit:** Protects data moving between systems (TLS/SSL, IPsec)
+**At Rest:** Protects stored data (files, databases, backups)
+**Key Management:** Secure key generation, storage, rotation; HSMs for high-value keys
 
 ### Data Loss Prevention (DLP)
-
-**Preventing Unauthorized Data Disclosure**
-- Monitors data movement and usage
-- Identifies sensitive data patterns
-- Blocks or alerts on policy violations
-- Protects against accidental or malicious data leaks
+Monitors data movement, identifies sensitive patterns, blocks/alerts on policy violations
 
 ## Network Security Basics
 
-### Firewalls
-
-**Network Traffic Control**
-- Controls traffic based on security rules
-- Can be hardware-based or software-based
-- Monitors incoming and outgoing connections
-- First line of defense against network attacks
-
-### Virtual Private Networks (VPNs)
-
-**Secure Remote Access**
-- Creates encrypted tunnel over public networks
-- Enables secure remote work capabilities
-- Protects data transmission from remote locations
-- Site-to-site or client-to-site configurations
-
-### Network Segmentation
-
-**Isolating Network Resources**
-- Divides network into smaller, isolated segments
-- Limits lateral movement in case of breach
-- Provides better control and monitoring
-- Reduces blast radius of security incidents
+### Core Controls
+**Firewalls:** Control traffic based on security rules, first line of defense
+**VPNs:** Encrypted tunnels for secure remote access
+**Network Segmentation:** Isolate resources to limit breach impact
 
 ## Common Security Threats
 
-### Cyber Attack Categories
+**Malware:** Viruses, ransomware; mitigate with antivirus, patching, training
+**Phishing:** Fraudulent communications; mitigate with training, filtering, MFA
+**Social Engineering:** Psychological manipulation; mitigate with awareness training
+**Insider Threats:** Internal risks; mitigate with access controls, monitoring
 
-**Malware**
-- Viruses, worms, trojans, ransomware
-- Designed to damage or gain unauthorized access
-- Delivered through email, websites, or removable media
-- Mitigation: Antivirus, patching, user education
-
-**Phishing**
-- Fraudulent attempts to obtain sensitive information
-- Often disguised as trustworthy communications
-- Email, SMS, or voice-based attacks
-- Mitigation: User training, email filtering, MFA
-
-**Social Engineering**
-- Manipulating people to divulge information or perform actions
-- Exploits human psychology rather than technical vulnerabilities
-- Can be in-person, over phone, or through digital channels
-- Mitigation: Security awareness training, verification procedures
-
-**Insider Threats**
-- Security risks from people within the organization
-- Can be malicious or accidental
-- Access to systems and data makes detection difficult
-- Mitigation: Background checks, access controls, monitoring
-
-### Cloud-Specific Security Considerations
-
-**Shared Responsibility Model**
-- Clear understanding of who secures what
-- Provider secures infrastructure, customer secures their data and applications
-- Responsibilities vary by service model (IaaS, PaaS, SaaS)
-
-**Data Location and Movement**
-- Understanding where data is stored and processed
-- Compliance with data residency requirements
-- Control over data movement between regions
-
-**Account and Access Management**
-- Securing cloud service accounts
-- Managing multiple user identities and permissions
-- Integration with existing identity systems
+### Cloud-Specific Considerations
+**Shared Responsibility:** Provider secures infrastructure, customer secures data/apps
+**Data Location:** Understand storage locations and residency requirements
+**Account Management:** Secure cloud accounts and integrate with identity systems
 
 ## Compliance Frameworks Overview
 
 ### What is Compliance?
+Meeting legal, regulatory, and industry requirements; following standards; demonstrating due diligence.
 
-**Adherence to Rules and Regulations**
-- Meeting legal, regulatory, and industry requirements
-- Following established standards and best practices
-- Demonstrating due diligence in risk management
-- Avoiding penalties and maintaining business reputation
+### Major Frameworks
+**SOC 2:** Service provider security, availability, confidentiality, privacy
+**ISO 27001:** International information security management standard
+**GDPR:** EU data protection and privacy regulation
+**HIPAA:** US healthcare data protection (PHI)
+**PCI DSS:** Credit card data security requirements
 
-### Major Compliance Frameworks
-
-**SOC 2 (Service Organization Control 2)**
-- Focuses on security, availability, processing integrity, confidentiality, privacy
-- Relevant for service providers handling customer data
-- Annual audit process with detailed reporting
-- Trust Services Criteria framework
-
-**ISO 27001**
-- International standard for information security management
-- Risk-based approach to security management
-- Continuous improvement methodology
-- Global recognition and acceptance
-
-**GDPR (General Data Protection Regulation)**
-- European regulation for data protection and privacy
-- Applies to organizations handling EU personal data
-- Significant penalties for non-compliance
-- Focus on individual rights and consent
-
-**HIPAA (Health Insurance Portability and Accountability Act)**
-- US regulation for healthcare data protection
-- Protects patient health information (PHI)
-- Administrative, physical, and technical safeguards
-- Applicable to healthcare providers, payers, clearinghouses
-
-**PCI DSS (Payment Card Industry Data Security Standard)**
-- Requirements for organizations handling credit card data
-- Twelve core requirements across six categories
-- Regular assessment and compliance validation
-- Reduces risk of data breaches in payment processing
-
-### Compliance in Cloud Computing
-
-**Shared Compliance Responsibility**
-- Cloud providers often achieve compliance certifications
-- Customers responsible for compliance of their specific use
-- Understanding inherited vs. customer-managed controls
-- Regular assessment and validation required
-
-**Compliance Benefits of Cloud**
-- Professional-grade security controls
-- Regular third-party audits and certifications
-- Automated compliance monitoring and reporting
-- Cost-effective access to compliant infrastructure
+### Cloud Compliance
+**Shared Responsibility:** Providers achieve certifications, customers ensure compliant use
+**Benefits:** Professional controls, third-party audits, automated monitoring, cost-effective access
 
 ## Risk Management Principles
 
-### Risk Assessment Process
+### Risk Process
+**Identification:** Identify threats, vulnerabilities, and asset value
+**Analysis:** Assess impact and probability, prioritize by severity
+**Treatment:** Accept, avoid, mitigate, or transfer risks
 
-**Risk Identification**
-- Identifying potential threats and vulnerabilities
-- Understanding assets and their value
-- Considering likelihood and impact of risks
-- Documenting risk scenarios and dependencies
-
-**Risk Analysis**
-- Quantitative and qualitative risk assessment
-- Calculating potential impact and probability
-- Prioritizing risks based on severity
-- Understanding risk interdependencies
-
-**Risk Treatment Options**
-- **Accept**: Acknowledge and monitor low-impact risks
-- **Avoid**: Eliminate activities that create unacceptable risks
-- **Mitigate**: Implement controls to reduce risk
-- **Transfer**: Use insurance or third-party services
-
-### Business Continuity and Disaster Recovery
-
-**Business Impact Analysis**
-- Identifying critical business processes
-- Understanding recovery time objectives (RTO)
-- Defining recovery point objectives (RPO)
-- Calculating costs of downtime
-
-**Disaster Recovery Planning**
-- Backup and recovery procedures
-- Alternative processing sites
-- Communication plans and procedures
-- Regular testing and plan updates
-
-**High Availability Design**
-- Redundant systems and components
-- Load balancing and failover mechanisms
-- Geographic distribution of resources
-- Monitoring and automated response
+### Business Continuity
+**Impact Analysis:** Define RTO/RPO for critical processes
+**Disaster Recovery:** Backup procedures, alternative sites, regular testing
+**High Availability:** Redundancy, failover, geographic distribution
 
 ## Security Governance
 
-### Policies and Procedures
-
-**Security Policies**
-- High-level statements of management intent
-- Define acceptable use and behavior
-- Establish accountability and responsibilities
-- Regular review and updates required
-
-**Procedures and Standards**
-- Detailed step-by-step instructions
-- Technical implementation guidelines
-- Specific requirements and configurations
-- Support consistent implementation
-
-### Security Awareness and Training
-
-**User Education Programs**
-- Regular security awareness training
-- Phishing simulation exercises
-- Incident reporting procedures
-- Role-specific security training
-
-**Continuous Improvement**
-- Regular assessment of security posture
-- Lessons learned from incidents
-- Updates based on threat landscape changes
-- Feedback from audits and assessments
+**Policies:** High-level management intent, acceptable use, accountability
+**Procedures:** Detailed implementation guidelines and standards
+**Training:** Regular awareness training, phishing simulations, role-specific training
+**Continuous Improvement:** Regular assessments, lessons learned, threat updates
 
 ## Cloud Security Best Practices
 
-### Account Security
+**Account Security:** MFA enabled, regular password updates, access reviews, admin/user separation
+**Data Protection:** Encryption at rest and in transit, key management, automated backups, recovery testing
+**Monitoring:** Continuous security monitoring, automated alerts, log analysis, regular assessments
+**Incident Response:** Defined procedures, clear roles, communication plans, post-incident reviews
 
-**Strong Authentication**
-- Complex passwords or passphrases
-- Multi-factor authentication enabled
-- Regular password updates
-- Secure password storage
+## Industry-Specific Considerations
 
-**Access Management**
-- Regular review of user accounts and permissions
-- Prompt removal of access for departed employees
-- Time-bound access for temporary requirements
-- Separation of administrative and user accounts
-
-### Data Protection
-
-**Encryption Strategy**
-- Encrypt sensitive data at rest and in transit
-- Proper key management and rotation
-- Use of customer-managed keys where required
-- Regular testing of decryption procedures
-
-**Backup and Recovery**
-- Regular automated backups
-- Geographically distributed backup storage
-- Regular testing of recovery procedures
-- Documentation of backup and recovery processes
-
-### Monitoring and Incident Response
-
-**Security Monitoring**
-- Continuous monitoring of security events
-- Automated alerting for suspicious activities
-- Log collection and analysis
-- Regular security assessments and penetration testing
-
-**Incident Response Planning**
-- Defined incident response procedures
-- Clear roles and responsibilities
-- Communication plans and escalation procedures
-- Post-incident review and improvement processes
-
-## Industry-Specific Security Considerations
-
-### Healthcare
-
-**HIPAA Compliance Requirements:**
-- Administrative safeguards (policies, training)
-- Physical safeguards (facility access, workstation use)
-- Technical safeguards (access control, audit controls, integrity)
-- Business associate agreements for third parties
-
-### Financial Services
-
-**Regulatory Requirements:**
-- SOX compliance for public companies
-- PCI DSS for payment processing
-- GLBA for financial privacy
-- Basel III for risk management
-
-### Government
-
-**Security Clearance Levels:**
-- FedRAMP compliance for cloud services
-- FISMA requirements for federal systems
-- ITAR compliance for defense-related data
-- State and local government requirements
+**Healthcare:** HIPAA compliance (administrative, physical, technical safeguards)
+**Financial:** SOX, PCI DSS, GLBA, Basel III requirements
+**Government:** FedRAMP, FISMA, ITAR compliance
 
 ## Summary
 
