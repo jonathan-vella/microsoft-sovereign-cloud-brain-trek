@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Jekyll
-gem "jekyll", "~> 4.3.0"
+gem "jekyll", "~> 4.4.1"
 
 # Theme
 gem "just-the-docs", "~> 0.10"
