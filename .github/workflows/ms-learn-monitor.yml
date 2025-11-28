@@ -2,7 +2,7 @@ name: Microsoft Learn Link Monitor
 
 on:
   schedule:
-    - cron: '0 9 * * 1' # Weekly on Monday at 9:00 AM UTC
+    - cron: "0 9 * * 1" # Weekly on Monday at 9:00 AM UTC
   workflow_dispatch: # Manual trigger
 
 permissions:
@@ -56,21 +56,99 @@ jobs:
             echo "## ✅ All Microsoft Learn links working!" >> link-report.md
           fi
 
-      - name: Create issue if broken links found
+      - name: Create issue and assign to Copilot
         if: env.BROKEN_COUNT != '0'
         uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
             const report = fs.readFileSync('link-report.md', 'utf8');
-            github.rest.issues.create({
+
+            // Create the issue first
+            const issue = await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: '🔗 Microsoft Learn Links Need Update',
               body: `${report}\n\n---\n\n**Action Required:**\n1. Search for each broken URL in the \`docs/\` folder\n2. Find the updated URL on Microsoft Learn\n3. Update the markdown files\n4. Test the new links\n\n**Note:** Microsoft Learn URLs may have been redirected, moved, or retired.\n\n**Workflow Run:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
-              labels: ['maintenance', 'microsoft-learn', 'broken-links'],
-              assignees: ['copilot']
-            })
+              labels: ['maintenance', 'microsoft-learn', 'broken-links']
+            });
+
+            console.log(`Created issue #${issue.data.number}`);
+
+            // Try to assign to Copilot using GraphQL API
+            try {
+              // First, get the Copilot bot ID from suggested actors
+              const suggestedActorsQuery = `
+                query($owner: String!, $name: String!) {
+                  repository(owner: $owner, name: $name) {
+                    suggestedActors(capabilities: [CAN_BE_ASSIGNED], first: 100) {
+                      nodes {
+                        login
+                        ... on Bot {
+                          id
+                        }
+                      }
+                    }
+                  }
+                }
+              `;
+
+              const actorsResult = await github.graphql(suggestedActorsQuery, {
+                owner: context.repo.owner,
+                name: context.repo.repo
+              });
+
+              const copilotBot = actorsResult.repository.suggestedActors.nodes.find(
+                actor => actor.login === 'copilot-swe-agent'
+              );
+
+              if (copilotBot && copilotBot.id) {
+                // Get the issue's GraphQL ID
+                const issueQuery = `
+                  query($owner: String!, $name: String!, $number: Int!) {
+                    repository(owner: $owner, name: $name) {
+                      issue(number: $number) {
+                        id
+                      }
+                    }
+                  }
+                `;
+
+                const issueResult = await github.graphql(issueQuery, {
+                  owner: context.repo.owner,
+                  name: context.repo.repo,
+                  number: issue.data.number
+                });
+
+                // Assign Copilot to the issue
+                const assignMutation = `
+                  mutation($issueId: ID!, $actorIds: [ID!]!) {
+                    replaceActorsForAssignable(input: {assignableId: $issueId, actorIds: $actorIds}) {
+                      assignable {
+                        ... on Issue {
+                          assignees(first: 10) {
+                            nodes {
+                              login
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                `;
+
+                await github.graphql(assignMutation, {
+                  issueId: issueResult.repository.issue.id,
+                  actorIds: [copilotBot.id]
+                });
+
+                console.log(`Assigned issue #${issue.data.number} to Copilot coding agent`);
+              } else {
+                console.log('Copilot coding agent not available for this repository. Issue created without assignment.');
+              }
+            } catch (error) {
+              console.log(`Could not assign to Copilot: ${error.message}. Issue created without assignment.`);
+            }
 
       - name: Report success
         if: env.BROKEN_COUNT == '0'
