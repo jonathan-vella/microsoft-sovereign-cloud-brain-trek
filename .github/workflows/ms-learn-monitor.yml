@@ -6,8 +6,10 @@ on:
   workflow_dispatch: # Manual trigger
 
 permissions:
-  contents: read
+  contents: write
   issues: write
+  pull-requests: write
+  actions: read
 
 jobs:
   check-ms-learn:
