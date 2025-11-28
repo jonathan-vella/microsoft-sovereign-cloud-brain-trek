@@ -393,7 +393,7 @@ After completing all labs, you should be able to:
 **Issue: "Command not found (Azure CLI)"**
 
 - Solution: Azure CLI not installed or not in PATH
-- Action: Reinstall Azure CLI from <https://docs.microsoft.com/cli/azure/install-azure-cli>
+- Action: Reinstall Azure CLI from <https://learn.microsoft.com/cli/azure/install-azure-cli>
 
 **Issue: "Authentication failed"**
 
@@ -409,8 +409,8 @@ After completing all labs, you should be able to:
 
 **Documentation:**
 
-- Azure Documentation: <https://docs.microsoft.com/azure>
-- Azure CLI Reference: <https://docs.microsoft.com/cli/azure>
+- Azure Documentation: <https://learn.microsoft.com/azure>
+- Azure CLI Reference: <https://learn.microsoft.com/cli/azure>
 - kubectl Documentation: <https://kubernetes.io/docs>
 
 **Support Options:**
