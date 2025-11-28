@@ -34,6 +34,9 @@ B) Azure EU Data Boundary (West Europe or North Europe)
 C) Azure Local deployed on-premises in Germany  
 D) Both B and C are compliant  
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer: D**
 
 **Explanation:**
@@ -46,6 +49,9 @@ Both satisfy GDPR's data residency requirement through different operational mod
 
 **Business Context:** Healthcare organizations often face the choice between operational simplicity (cloud) and maximum data sovereignty (on-premises). Azure Local addresses concerns about data leaving the country while maintaining Microsoft's managed services.
 
+</details>
+
+
 ---
 
 ### Question 2: Data Subject Rights
@@ -56,6 +62,9 @@ A) 7 days
 B) 14 days  
 C) 30 days  
 D) 90 days  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
 
@@ -74,6 +83,9 @@ GDPR Article 12 specifies a **30-day deadline** for responding to data subject a
 
 **Non-Compliance Risk:** Failing to meet the 30-day deadline can result in fines up to €10 million or 2% of global annual revenue.
 
+</details>
+
+
 ---
 
 ### Question 3: FedRAMP Authorization Levels
@@ -84,6 +96,9 @@ A) Level 1 (Low Impact)
 B) Level 2 (Moderate Impact)  
 C) Level 3 (High Impact)  
 D) Government Secret only  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
 
@@ -105,6 +120,9 @@ PII is classified as **Moderate Impact** data under NIST 800-53. FedRAMP Level 2
 
 **Business Impact:** Choosing the correct FedRAMP level affects authorization timeline, cost, and operational requirements. Overestimating (Level 3) wastes budget; underestimating (Level 1) creates compliance risk.
 
+</details>
+
+
 ---
 
 ### Question 4: FedRAMP Continuous Monitoring
@@ -115,6 +133,9 @@ A) Annual
 B) Quarterly  
 C) Monthly  
 D) Real-time/Daily  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
 
@@ -146,6 +167,9 @@ FedRAMP Moderate authorization requires **monthly continuous monitoring** at min
 
 **Compliance Monitoring Failure Impact:** Failure to maintain continuous monitoring monitoring can result in loss of FedRAMP authorization, which would immediately disqualify the system from government use.
 
+</details>
+
+
 ---
 
 ### Question 5: GDPR Encryption Requirements
@@ -156,6 +180,9 @@ A) Notification to authorities is still required (encryption doesn't eliminate n
 B) No notification required (encryption provides absolute protection)  
 C) Notification only required if encryption keys were compromised  
 D) Notification timeline extends to 90 days  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: A**
 
@@ -179,6 +206,9 @@ Under GDPR Article 32, encryption is a **recommended technical measure** for dat
 
 **Real Example:** EU regulators have noted that encryption alone doesn't guarantee exemption from breach notification, especially if combined with other attacks or if the breach indicates systematic security failures.
 
+</details>
+
+
 ---
 
 ### Question 6: Encryption at Rest vs. in Transit
@@ -189,6 +219,9 @@ A) At-rest encryption (protects storage)
 B) In-transit encryption (TLS 1.3)  
 C) Key Vault management  
 D) RBAC permissions  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
 
@@ -230,6 +263,9 @@ Scenario: Database Replication
 
 **Network Interception Scenario:** Without TLS 1.3 in-transit encryption, hacker intercepts the replication data stream (encrypted at-rest key is useless for transmitted data).
 
+</details>
+
+
 ---
 
 ### Question 7: Azure Key Vault Disaster Recovery
@@ -240,6 +276,9 @@ A) 24 hours
 B) 4 hours  
 C) < 5 minutes  
 D) Varies; depends on backup strategy  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
 
@@ -269,6 +308,9 @@ With **proper geo-replication of Azure Key Vault**, recovery is nearly instantan
 
 **Cost Trade-off:** Geo-replication adds ~50% to Key Vault costs but provides near-zero downtime for keys.
 
+</details>
+
+
 ---
 
 ### Question 8: Least Privilege Access Control
@@ -279,6 +321,9 @@ A) Permanent Contributor role (convenient, not revoked)
 B) Temporary elevated access via PIM (Privileged Identity Management) with time limit  
 C) Owner role for the duration of event  
 D) Shared admin account (multiple admins use same credentials)  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
 
@@ -318,6 +363,9 @@ Automatic Cleanup:
 
 **Compliance Impact:** Temporary, approved, audited access demonstrates GDPR and FedRAMP compliance for access control.
 
+</details>
+
+
 ---
 
 ### Question 9: Network Segmentation
@@ -328,6 +376,9 @@ A) Prevents web server from accessing databases (firewall between tiers)
 B) Prevents internet traffic from reaching internal servers  
 C) Requires additional authentication for each tier  
 D) All of the above  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: D**
 
@@ -376,6 +427,9 @@ Data Tier (Highly Protected)
 
 **Compliance Benefit:** Network segmentation demonstrates defense-in-depth, reducing penalty severity if breach occurs.
 
+</details>
+
+
 ---
 
 ### Question 10: Patch Management Timeline
@@ -386,6 +440,9 @@ A) 24 hours
 B) 48 hours  
 C) 7 days  
 D) 30 days  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
 
@@ -430,6 +487,9 @@ Day 2: Completion
 
 **Compliance Evidence:** Organizations must maintain patch deployment logs showing all critical patches applied within 48-hour window.
 
+</details>
+
+
 ---
 
 ### Question 11: Encryption Algorithm Selection
@@ -440,6 +500,9 @@ A) AES-128
 B) AES-256  
 C) MD5  
 D) SHA-256  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
 
@@ -496,6 +559,9 @@ D) SHA-256
 └─────────────────────────────────────┘
 ```
 
+</details>
+
+
 ---
 
 ### Question 12: Incident Response Timeline
@@ -506,6 +572,9 @@ A) Immediately (within 1 hour)
 B) Within 24 hours  
 C) Within 72 hours  
 D) Within 30 days  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
 
@@ -551,6 +620,9 @@ Hour 72+: Affected parties notification
 - Reputational damage
 - Regulatory scrutiny
 
+</details>
+
+
 ---
 
 ### Question 13: Defense-in-Depth Security
@@ -561,6 +633,9 @@ A) Physical security (guards)
 B) Network segmentation & firewall rules  
 C) Application-level access control  
 D) Data encryption  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
 
@@ -604,6 +679,9 @@ If network segmentation failed (misconfigured rule), then:
 
 **Compliance Benefit:** Demonstrating network segmentation shows risk management aligned with defense-in-depth principles, reducing FedRAMP/GDPR compliance risks.
 
+</details>
+
+
 ---
 
 ### Question 14: Key Rotation Compliance
@@ -614,6 +692,9 @@ A) Compliant (within policy)
 B) Non-compliant (overdue by 2 days)  
 C) Compliant (just within deadline)  
 D) Non-compliant (severely overdue)  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
 
@@ -662,6 +743,9 @@ COMPLIANCE EVIDENCE NEEDED:
 - Prevents compliance violation from scheduling delays
 - Demonstrates proactive management
 
+</details>
+
+
 ---
 
 ### Question 15: Zero-Trust Security Model
@@ -672,6 +756,9 @@ A) Trust all users on internal network
 B) Verify every access request, assume breach  
 C) Trust users after initial login  
 D) Security at network perimeter is sufficient  
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
 
@@ -736,6 +823,9 @@ Zero-trust is essential for sovereign cloud deployments:
 - FedRAMP: Meets IA (identification & authentication) controls
 - HIPAA: Meets minimum necessary access principle
 - PCI-DSS: Enforces least privilege principle
+
+</details>
+
 
 ---
 

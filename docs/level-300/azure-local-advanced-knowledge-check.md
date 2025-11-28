@@ -39,7 +39,7 @@ B) Full mesh topology across all 8 sites
 C) Hybrid architecture: regional mesh clusters + hub for compliance  
 D) Independent sites with no inter-site connectivity
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -74,7 +74,7 @@ B) Generate CSRs on-premises → Manual transfer → External CA → Import new 
 C) Use Azure CLI offline mode to generate and install certificates  
 D) Extend existing certificate validity using PowerShell
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -116,7 +116,7 @@ B) Separate Azure Local clusters at each site with Azure Site Recovery for VM re
 C) Single large cluster spanning both sites with shared storage  
 D) Active-passive cluster pair with manual failover scripts only
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -157,7 +157,7 @@ B) File corruption during transfer → Re-transfer using checksums/integrity ver
 C) Incompatible update version → Check version compatibility matrix  
 D) Certificate expiration → Renew certificates before updating
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -202,7 +202,7 @@ B) VLANs: Management, Storage, Compute, Live Migration
 C) Physical network separation for each traffic type  
 D) Software-defined microsegmentation with Calico/Cilium
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -245,7 +245,7 @@ B) Replica cluster at secondary site with manual failover
 C) Tape backups with off-site storage  
 D) Wait for site recovery; rebuild from scratch
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -288,7 +288,7 @@ B) Check Storage QoS policies and IOPS limits
 C) Increase cache size configuration  
 D) Disable storage tiering
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -330,7 +330,7 @@ B) Intermediate CA certificates not imported to trusted store
 C) Wrong certificate format (PEM vs PFX)  
 D) Private key not included with certificate
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -378,7 +378,7 @@ B) Update one cluster at a time, validate, then proceed
 C) Update clusters in pairs with validation between pairs  
 D) Let Azure automatically orchestrate all cluster updates
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -422,7 +422,7 @@ B) Application whitelisting, USB device control, integrity monitoring, audit log
 C) Standard Windows Defender with default settings  
 D) No additional controls needed; air-gap eliminates threats
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -477,7 +477,7 @@ B) < 5ms latency; 10 Gbps minimum for synchronous replication
 C) < 50ms latency; bandwidth = (change rate × 2) for asynchronous  
 D) < 10ms latency; 1 Gbps minimum for asynchronous
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -523,7 +523,7 @@ B) 2 fault domains (two-way mirroring)
 C) 3 fault domains (three-way mirroring)  
 D) 4 fault domains (optimal resiliency)
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -570,7 +570,7 @@ B) Switch Embedded Teaming (SET) with RDMA for storage
 C) Traditional NIC Teaming (LBFO) across all adapters  
 D) No teaming; rely on switch-level redundancy
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -619,7 +619,7 @@ B) Canary (1-2 clusters) → Pilot (20%) → Production (remaining)
 C) Update all test clusters first, then all production simultaneously  
 D) No rings; update based on cluster importance
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -676,7 +676,7 @@ B) On-premises monitoring: Windows Admin Center + System Center Operations Manag
 C) No monitoring; manual health checks only  
 D) Third-party cloud-based monitoring with VPN
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -731,7 +731,7 @@ B) Cloud witness in Azure Storage
 C) Disk witness on cluster shared volume  
 D) No witness; rely on node majority
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: A**
@@ -780,7 +780,7 @@ B) Roll back updated nodes to previous version
 C) Complete update on remaining nodes, then validate cluster  
 D) Rebuild entire cluster from scratch
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -838,7 +838,7 @@ B) Three Network Controller VMs in cluster
 C) Five Network Controller VMs across fault domains  
 D) Network Controller not supported in Azure Local
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -891,7 +891,7 @@ B) 100 TB (2x for mirroring)
 C) 150 TB (3x for three-way mirror)  
 D) 225 TB (3x mirror + 50% overhead for operations)
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: D**
@@ -947,7 +947,7 @@ B) Multi-factor authentication (MFA) for all admin access
 C) VPN requirement for management connections  
 D) Time-based access restrictions
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**

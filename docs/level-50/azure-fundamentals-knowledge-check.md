@@ -29,7 +29,14 @@ What is an Azure region?
 **C)** A network security boundary
 **D)** A billing unit in Azure
 
-**Answer: B** - An Azure region is a geographic area containing one or more data centers.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:** An Azure region is a geographic area containing one or more data centers.
+
+</details>
 
 ### Question 2
 
@@ -40,7 +47,14 @@ Which Azure service provides identity and access management?
 **C)** Azure Key Vault
 **D)** Azure Policy
 
-**Answer: B** - Azure Active Directory provides identity and access management services.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:** Azure Active Directory provides identity and access management services.
+
+</details>
 
 ### Question 3
 
@@ -51,7 +65,14 @@ What is the primary benefit of Azure availability zones?
 **C)** Improved performance
 **D)** Simplified management
 
-**Answer: B** - Availability zones provide high availability and fault tolerance within a region.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:** Availability zones provide high availability and fault tolerance within a region.
+
+</details>
 
 ### Question 4
 
@@ -62,7 +83,14 @@ Which Azure storage service is best for unstructured data like images and videos
 **C)** Azure Blob Storage
 **D)** Azure Table Storage
 
-**Answer: C** - Azure Blob Storage is designed for unstructured data like images, videos, and documents.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:** Azure Blob Storage is designed for unstructured data like images, videos, and documents.
+
+</details>
 
 ### Question 5
 
@@ -73,7 +101,14 @@ What is the Azure Portal?
 **C)** A PowerShell module
 **D)** An API gateway
 
-**Answer: B** - The Azure Portal is a web-based graphical interface for managing Azure resources.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:** The Azure Portal is a web-based graphical interface for managing Azure resources.
+
+</details>
 
 ### Question 6
 
@@ -84,7 +119,14 @@ Which tool would you use for cross-platform Azure automation scripts?
 **C)** Azure CLI
 **D)** Azure Resource Manager only
 
-**Answer: C** - Azure CLI is the cross-platform command-line tool for Azure automation.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:** Azure CLI is the cross-platform command-line tool for Azure automation.
+
+</details>
 
 ### Question 7
 
@@ -95,7 +137,14 @@ What is Infrastructure as Code (IaC) in Azure?
 **C)** Writing applications for Azure
 **D)** Managing code repositories
 
-**Answer: B** - IaC uses templates (like ARM templates) to define and deploy infrastructure declaratively.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:** IaC uses templates (like ARM templates) to define and deploy infrastructure declaratively.
+
+</details>
 
 ### Question 8
 
@@ -106,7 +155,14 @@ Which Azure service model provides the most control over the operating system?
 **C)** IaaS (Infrastructure as a Service)
 **D)** FaaS (Functions as a Service)
 
-**Answer: C** - IaaS provides virtual machines where customers control the operating system.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:** IaaS provides virtual machines where customers control the operating system.
+
+</details>
 
 ### Question 9
 
@@ -117,7 +173,14 @@ What is an Azure resource group?
 **C)** A security boundary
 **D)** A geographic region
 
-**Answer: B** - A resource group is a logical container for organizing and managing Azure resources.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:** A resource group is a logical container for organizing and managing Azure resources.
+
+</details>
 
 ### Question 10
 
@@ -128,7 +191,14 @@ Which Azure service is used for serverless computing?
 **C)** Azure Functions
 **D)** Azure Container Instances
 
-**Answer: C** - Azure Functions provides serverless computing capabilities.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:** Azure Functions provides serverless computing capabilities.
+
+</details>
 
 ---
 

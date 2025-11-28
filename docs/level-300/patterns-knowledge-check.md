@@ -39,7 +39,7 @@ B) Regional gateway instances with geography-aware routing
 C) Single gateway with encryption for all requests  
 D) No gateway — direct service-to-service communication
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -82,7 +82,7 @@ B) Multiple parallel consumers for throughput
 C) Random distribution across partitions  
 D) Batching all messages into single partition
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: A**
@@ -125,7 +125,7 @@ B) Domain team that produces the data
 C) Consumers of the data  
 D) External auditors
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -168,7 +168,7 @@ B) Per-IP rate limiting
 C) Per-API-key rate limiting with agency quotas  
 D) No rate limiting — trust all government users
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -211,7 +211,7 @@ B) Compensating transactions to rollback Inventory
 C) Ignore the failure and continue  
 D) Manual intervention required
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -256,7 +256,7 @@ B) Data contracts with sovereignty metadata, federated access
 C) No cross-domain sharing allowed  
 D) Only aggregated data can cross domains
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -301,7 +301,7 @@ B) For all service-to-service communication within sovereign boundary
 C) Only when username/password is not available  
 D) mTLS is deprecated and should not be used
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -345,7 +345,7 @@ B) Forward dead letters to central global queue for analysis
 C) Keep dead letters in regional queue with alerting and manual review  
 D) Automatically retry dead letters indefinitely
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -390,7 +390,7 @@ B) Provide common infrastructure for domains to build data products
 C) Centralize all data processing  
 D) Eliminate the need for data governance
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -435,7 +435,7 @@ B) Authorization code flow with scopes
 C) Implicit flow  
 D) API keys without OAuth
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -480,7 +480,7 @@ B) Use crypto-shredding: encrypt PII with per-user keys, delete key on erasure
 C) Delete all events containing user data  
 D) GDPR doesn't apply to event logs
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -524,7 +524,7 @@ B) Central team manually reviews all data products
 C) Federated governance: central standards, automated enforcement, domain implementation  
 D) No classification needed in data mesh
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -567,7 +567,7 @@ B) URI versioning (/v1/, /v2/) with sunset policies
 C) Header versioning only  
 D) Query parameter versioning (?version=1)
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -612,7 +612,7 @@ B) Add as optional field first, make required after all consumers updated
 C) Create entirely new event type  
 D) Send both old and new event formats simultaneously
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -654,7 +654,7 @@ B) Availability, freshness, quality, and data residency guarantees
 C) Only data quality metrics  
 D) SLAs are not applicable to data products
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**

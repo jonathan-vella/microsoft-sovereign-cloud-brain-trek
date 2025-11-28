@@ -39,7 +39,7 @@ B) Perimeter firewall with IPS/IDS
 C) Strong identity verification with conditional access  
 D) Encryption at rest and in transit
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -84,7 +84,7 @@ B) Require MFA + managed device + IP allowlist
 C) Require MFA + compliant device + risk-based evaluation  
 D) Block access from all locations except corporate network
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -141,7 +141,7 @@ B) Isolation of high-privilege credentials from general computing
 C) Centralized logging of administrative actions  
 D) Simplified user experience for administrators
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -194,7 +194,7 @@ B) Admin requests access → Auto-approved → 8-hour session
 C) Admin requests access → Approval workflow → Time-limited session → Automatic revocation  
 D) Disable all access; require approval for every single command
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -256,7 +256,7 @@ B) Software-defined microsegmentation with per-VM policies
 C) Physical network separation  
 D) No segmentation; rely on host firewalls only
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -314,7 +314,7 @@ B) Check node status and cluster health; attempt remote management connection
 C) Pause the node and begin VM evacuation  
 D) Open support ticket and wait for guidance
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -371,7 +371,7 @@ B) All storage drives failing simultaneously
 C) VM CPU contention  
 D) Insufficient memory on cluster nodes
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: A**
@@ -423,7 +423,7 @@ B) Root CA certificate not trusted on client machines
 C) Intermediate certificates missing from server  
 D) Web server HTTPS not configured
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -476,7 +476,7 @@ B) Review cluster logs and event viewer for specific failure reason
 C) Delete and recreate the VM  
 D) Manually start VM from Hyper-V Manager (bypassing cluster)
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -536,7 +536,7 @@ B) Wait for failed nodes to recover
 C) Assess situation: Why quorum lost? How many nodes down? Is data safe?  
 D) Rebuild cluster from scratch
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -594,7 +594,7 @@ B) Tune alert thresholds; implement tiered alerting; automate common responses
 C) Disable monitoring to reduce noise  
 D) Increase team size to handle alert volume
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -662,7 +662,7 @@ B) Just proceed with update anyway; validation is optional
 C) Reboot all nodes and retry validation  
 D) Open support ticket before proceeding
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: A**
@@ -732,7 +732,7 @@ B) Isolate host (network), collect forensics, initiate incident response
 C) Delete PowerShell history and continue monitoring  
 D) Change all admin passwords immediately
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -791,7 +791,7 @@ B) Azure Monitor logs, SCOM alerts, and exported compliance reports
 C) Verbal assurances from IT team  
 D) Third-party penetration test reports only
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -854,7 +854,7 @@ B) CPU bottleneck preventing network processing
 C) Storage saturation limiting network use  
 D) Windows Updates downloading in background
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: A**
@@ -915,7 +915,7 @@ B) Backup agents not installed on VMs
 C) VM snapshots not application-consistent (VSS failures)  
 D) Restore testing procedure incorrect
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -991,7 +991,7 @@ B) Identify systemic issues and implement preventive measures
 C) Document timeline for legal purposes  
 D) Generate report for management review
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -1061,7 +1061,7 @@ B) Immediately for any production issue
 C) Based on impact/urgency matrix; Severity A immediately, others after initial triage  
 D) Never; handle everything internally
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**

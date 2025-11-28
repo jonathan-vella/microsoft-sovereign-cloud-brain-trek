@@ -40,7 +40,7 @@ B) Azure Local provides physical control and can operate without continuous clou
 C) Azure Local is less expensive for all scenarios  
 D) Azure Local does not support virtual machines
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -62,7 +62,7 @@ B) A defense agency processing classified information in an air-gapped environme
 C) A healthcare provider needing Azure Backup for disaster recovery  
 D) A financial services company wanting to use Azure Machine Learning
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -84,7 +84,7 @@ B) Only metadata, metrics, logs, and configuration - not workload data
 C) Only user credentials and passwords  
 D) All data including backups is automatically sent to Azure
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -106,7 +106,7 @@ B) 2 nodes with 16+ cores and 384+ GB RAM each, RDMA-capable networking
 C) 4 nodes with 32 cores and 1 TB RAM each  
 D) 8 nodes with dedicated storage array
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -128,7 +128,7 @@ B) Always locally on Azure Local hardware, even in Connected Mode
 C) Split between on-premises and Azure  
 D) In Azure during backups, local otherwise
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -150,7 +150,7 @@ B) It reduces CPU utilization and achieves sub-millisecond latency for storage t
 C) It's required for VM networking  
 D) It encrypts data in transit
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -172,7 +172,7 @@ B) Intermittent outbound HTTPS connectivity to Azure services (resilient to temp
 C) Inbound connections from the internet  
 D) A dedicated Azure ExpressRoute circuit
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -194,7 +194,7 @@ B) Azure Local in Disconnected Mode
 C) Azure Local in Connected Mode  
 D) On-premises infrastructure without Azure
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -216,7 +216,7 @@ B) Two-way mirror (50% efficiency)
 C) Erasure coding/Parity (50-80% efficiency)  
 D) Single disk (100% efficiency, no redundancy)
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -238,7 +238,7 @@ B) Nodes are updated one at a time with VM migration, validation after each node
 C) Updates require complete cluster downtime  
 D) Updates can only be applied monthly
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -260,7 +260,7 @@ B) BitLocker drive encryption
 C) Network encryption with IPsec  
 D) Azure Policy enforcement
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -282,7 +282,7 @@ B) Sporadic batch processing (few hours per month)
 C) 24/7 production workloads running continuously for years  
 D) Unpredictable bursting workloads
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -304,7 +304,7 @@ B) Azure Arc
 C) Windows Admin Center (local)  
 D) Azure Monitor
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -326,7 +326,7 @@ B) 75% (25% overhead)
 C) 50% (two copies of data)  
 D) 33% (three copies of data)
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -348,7 +348,7 @@ B) VMs automatically restart on the remaining 2 healthy nodes
 C) The entire cluster shuts down  
 D) VMs remain offline until the failed node is replaced
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**

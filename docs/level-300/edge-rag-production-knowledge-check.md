@@ -39,7 +39,7 @@ B) Hybrid: Edge inference + cloud knowledge base
 C) Full edge deployment: Local inference + local vector database  
 D) Edge inference with on-demand cloud retrieval
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -99,7 +99,7 @@ B) INT8 quantized 13B parameter model
 C) INT4 quantized 7B parameter model  
 D) Cloud API calls (no local model)
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -165,7 +165,7 @@ B) Balance of retrieval accuracy, latency, and memory footprint
 C) Lowest cost per query  
 D) Easiest to configure
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -239,7 +239,7 @@ B) Implement hybrid retrieval: Dense vectors + keyword search
 C) Switch to larger embedding model  
 D) Add reranking model after initial retrieval
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: D**
@@ -302,7 +302,7 @@ B) Semantic chunking based on document structure (sections, tables)
 C) Sentence-level chunks (one sentence per chunk)  
 D) Full document as single chunk
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -374,7 +374,7 @@ B) Blue-green deployment with instant cutover
 C) Canary deployment: 5% → 25% → 100% with validation gates  
 D) A/B testing with random 50/50 split
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -443,7 +443,7 @@ B) User query distribution shifting significantly from training data
 C) Memory usage increasing  
 D) Error logs growing
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -514,7 +514,7 @@ B) Incremental update: Re-embed and re-index only changed documents
 C) Create separate index for new docs; query both  
 D) Manual merge of vectors
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -579,7 +579,7 @@ B) 1-3% degradation in task performance
 C) 10-15% degradation  
 D) Model becomes unusable
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -647,7 +647,7 @@ B) Batch retrieval + batch inference with dynamic batching
 C) Scale up to larger GPU for each query  
 D) Use multiple separate model instances
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -712,7 +712,7 @@ B) Cache vector retrieval results
 C) Cache embedding computation  
 D) All three layers with different TTLs
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: D**
@@ -784,7 +784,7 @@ B) Uptime + average latency
 C) Uptime + P99 latency + quality score + error rate  
 D) Uptime + cost per query
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -858,7 +858,7 @@ B) Local autonomy: Model + knowledge base + monitoring all edge-local
 C) Queue queries until connectivity restored  
 D) Shut down gracefully
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -931,7 +931,7 @@ B) Implement model quantization + caching (40% cost reduction, 2% quality loss)
 C) Reduce knowledge base size by 50%  
 D) Increase query latency limits
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -1003,7 +1003,7 @@ B) Data drift > 0.3 + quality score < 85% + user complaints
 C) New hardware available  
 D) Monthly schedule reached
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -1071,7 +1071,7 @@ B) Semantic versioning with controlled rollout and rollback capability
 C) Each site maintains its own version independently  
 D) No versioning; continuous updates
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -1152,7 +1152,7 @@ B) Review monitoring dashboards for component-level latency breakdown
 C) Scale up edge hardware immediately  
 D) Switch to smaller model
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -1222,7 +1222,7 @@ B) Physical isolation: Separate model instance + vector DB per tenant
 C) Shared model + separate vector DB per tenant  
 D) Separate models + shared vector DB with encryption
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**

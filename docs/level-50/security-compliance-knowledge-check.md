@@ -28,7 +28,14 @@ What does the CIA triad in information security represent?
 **C)** Cloud Infrastructure Architecture
 **D)** Compliance, Identity, Access
 
-**Answer: B** - The CIA triad represents the three fundamental principles of information security.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:** The CIA triad represents the three fundamental principles of information security.
+
+</details>
 
 ### Question 2
 
@@ -39,7 +46,14 @@ Which authentication factor includes passwords and PINs?
 **C)** Something you know
 **D)** Somewhere you are
 
-**Answer: C** - Knowledge factors include passwords, PINs, and security questions.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:** Knowledge factors include passwords, PINs, and security questions.
+
+</details>
 
 ### Question 3
 
@@ -50,7 +64,14 @@ What is the principle of least privilege?
 **C)** Allowing equal access for all users
 **D)** Restricting access only to sensitive data
 
-**Answer: B** - Least privilege means providing only the minimum permissions necessary.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:** Least privilege means providing only the minimum permissions necessary.
+
+</details>
 
 ### Question 4
 
@@ -61,7 +82,14 @@ Which compliance framework is specifically for healthcare data in the US?
 **C)** HIPAA
 **D)** PCI DSS
 
-**Answer: C** - HIPAA specifically protects healthcare data in the United States.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:** HIPAA specifically protects healthcare data in the United States.
+
+</details>
 
 ### Question 5
 
@@ -72,7 +100,14 @@ What does "defense in depth" mean?
 **C)** Focusing on the most critical vulnerabilities
 **D)** Implementing security only at network level
 
-**Answer: B** - Defense in depth uses multiple security layers for comprehensive protection.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:** Defense in depth uses multiple security layers for comprehensive protection.
+
+</details>
 
 ### Question 6
 
@@ -83,7 +118,14 @@ What is the primary purpose of data classification?
 **C)** To improve search capabilities
 **D)** To reduce storage costs
 
-**Answer: B** - Data classification determines what protection measures are needed.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:** Data classification determines what protection measures are needed.
+
+</details>
 
 ### Question 7
 
@@ -94,7 +136,14 @@ Which type of encryption protects data during transmission?
 **C)** Encryption in transit
 **D)** Encryption in storage
 
-**Answer: C** - Encryption in transit protects data moving between systems.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:** Encryption in transit protects data moving between systems.
+
+</details>
 
 ### Question 8
 
@@ -105,7 +154,14 @@ What is multi-factor authentication designed to provide?
 **C)** Enhanced security through multiple verification methods
 **D)** Simplified password management
 
-**Answer: C** - MFA enhances security by requiring multiple forms of verification.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:** MFA enhances security by requiring multiple forms of verification.
+
+</details>
 
 ### Question 9
 
@@ -116,7 +172,14 @@ In RBAC, what are permissions typically assigned to?
 **C)** Applications and systems
 **D)** Network segments
 
-**Answer: B** - In RBAC, permissions are assigned to roles, and users are assigned to roles.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: B**
+
+**Explanation:** In RBAC, permissions are assigned to roles, and users are assigned to roles.
+
+</details>
 
 ### Question 10
 
@@ -127,7 +190,14 @@ What is the shared responsibility model in cloud security?
 **C)** Clear division of security responsibilities between provider and customer
 **D)** Security responsibilities are shared equally
 
-**Answer: C** - The shared responsibility model clearly divides security responsibilities.
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
+**Correct Answer: C**
+
+**Explanation:** The shared responsibility model clearly divides security responsibilities.
+
+</details>
 
 ---
 

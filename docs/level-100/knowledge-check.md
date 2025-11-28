@@ -34,7 +34,7 @@ B) The ability to control and govern digital assets within jurisdictional bounda
 C) A type of cloud security certification  
 D) A regulation specific to the European Union
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -56,7 +56,7 @@ B) Sovereign Private Cloud
 C) Sovereign Regional Cloud  
 D) National Partner Clouds
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -78,7 +78,7 @@ B) Data residency is where data is stored; data sovereignty includes residency p
 C) Data sovereignty is only about location; data residency includes access controls  
 D) Data residency applies to public cloud; data sovereignty applies to private cloud
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -100,7 +100,7 @@ B) GDPR prohibits any data transfers outside the EU
 C) GDPR requires data minimization and allows international transfers with appropriate safeguards  
 D) GDPR only applies to government organizations
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -122,7 +122,7 @@ B) Customer data is stored and processed within the EU with documented, limited 
 C) All Microsoft employees must be based in the EU  
 D) Only applies to Azure, not Microsoft 365
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -144,7 +144,7 @@ B) Moderate is for internal government data; High is for national security infor
 C) There is no difference in security requirements  
 D) High requires more documentation but same security controls
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -170,7 +170,7 @@ B) 40+
 C) 60+  
 D) 80+
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -192,7 +192,7 @@ B) The cost of cloud operations
 C) Who can access and manage infrastructure and under what conditions  
 D) The speed of data processing
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -214,7 +214,7 @@ B) Connected mode uses cloud control plane; Disconnected mode uses local control
 C) Disconnected mode is cheaper  
 D) Connected mode doesn't support virtualization
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -239,7 +239,7 @@ B) To require customer approval before Microsoft support can access customer dat
 C) To lock customer resources from accidental deletion  
 D) To store encryption keys securely
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -261,7 +261,7 @@ B) Legally compliant data transfers from the EU to countries without adequacy de
 C) Defining service level agreements  
 D) Contract templates for employee agreements
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -283,7 +283,7 @@ B) A Business Associate Agreement (BAA) with Microsoft
 C) ITAR compliance  
 D) PCI DSS certification
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -305,7 +305,7 @@ B) To enable management of on-premises and multi-cloud resources from Azure cont
 C) To encrypt data in transit  
 D) To replace traditional VPNs
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -327,7 +327,7 @@ B) Internal business applications
 C) Regulated healthcare data  
 D) Air-gapped classified defense systems
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: D**
@@ -349,7 +349,7 @@ B) It invalidated the EU-US Privacy Shield and increased scrutiny on data transf
 C) It prohibited all data transfers from the EU  
 D) It eliminated the need for Standard Contractual Clauses
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**

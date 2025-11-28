@@ -40,7 +40,7 @@ B) To extend Azure management and services to any infrastructure
 C) To replace existing infrastructure management tools  
 D) To provide backup services for on-premises servers
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -62,7 +62,7 @@ B) Arc-enabled Kubernetes
 C) Arc-enabled Data Services  
 D) Arc-enabled Virtual Networks
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: A, B, C**
@@ -84,7 +84,7 @@ B) Only metadata, metrics, logs, and configuration - not workload data
 C) Only credentials and passwords  
 D) All data is kept 100% local with no Azure sync
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -106,7 +106,7 @@ B) Install the Connected Machine agent and provide Azure authentication
 C) The server must be domain-joined  
 D) Purchase special Arc licenses
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -128,7 +128,7 @@ B) Git repository becomes the source of truth for cluster configuration with aut
 C) Eliminates the need for kubectl  
 D) Reduces Kubernetes licensing costs
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -150,7 +150,7 @@ B) Audit compliance and optionally remediate configuration drift
 C) Replace the server operating system  
 D) Increase server hardware resources
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -172,7 +172,7 @@ B) Only on-premises
 C) Azure, AWS, GCP, and any infrastructure  
 D) Only Microsoft technologies
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -194,7 +194,7 @@ B) Arc-enabled Kubernetes
 C) Arc-enabled Data Services  
 D) Azure Migrate
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -216,7 +216,7 @@ B) Only bring-your-own-license (BYOL)
 C) Both pay-as-you-go and BYOL with Azure Hybrid Benefit  
 D) Free (no licensing cost)
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -238,7 +238,7 @@ B) Using Always-On Availability Groups with automatic failover
 C) By creating manual backups every hour  
 D) High availability is not supported on Arc
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -263,7 +263,7 @@ B) Only Directly Connected mode is supported; Indirect mode was retired in Septe
 C) Indirectly Connected mode offers better performance  
 D) Both modes are fully supported with identical features
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -287,7 +287,7 @@ B) Azure Arc has no additional charge - you pay only for Azure services consumed
 C) Requires Enterprise Agreement  
 D) Monthly subscription per cluster
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**

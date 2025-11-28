@@ -39,7 +39,7 @@ B) Regional Log Analytics workspaces per geography
 C) Only on-premises log storage  
 D) Logs don't contain personal data, no restrictions
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -81,7 +81,7 @@ B) At build time, before images are pushed to registry
 C) Only during annual security audits  
 D) After deployment to staging
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -126,7 +126,7 @@ B) Asynchronous replication with hot standby
 C) Synchronous replication with automatic failover  
 D) Weekly full backups with daily incrementals
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -170,7 +170,7 @@ B) Use Azure Monitor with multi-workspace queries
 C) Aggregate only on-premises, no cloud visibility  
 D) Create separate dashboards per cluster
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -219,7 +219,7 @@ B) In CI/CD pipeline variables (unencrypted)
 C) Azure Key Vault with pipeline integration  
 D) Environment variables in deployment manifests
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -264,7 +264,7 @@ B) Annually
 C) Quarterly at minimum, with tabletop exercises monthly  
 D) Never — testing is too risky for production
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -309,7 +309,7 @@ B) Use distributed tracing with correlation IDs
 C) Restart all services  
 D) Wait for user complaints to identify pattern
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -357,7 +357,7 @@ B) Static analysis for security misconfigurations before deployment
 C) Only review in production  
 D) Manual review of all templates
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -407,7 +407,7 @@ B) Compare checksums/hashes of critical datasets
 C) User acceptance testing only  
 D) Consistency isn't important in DR scenarios
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -452,7 +452,7 @@ B) Implement alert tiering, aggregation, and intelligent suppression
 C) Hire more operations staff  
 D) Only alert on complete system outages
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -495,7 +495,7 @@ B) Automated policy checks with Azure Policy and OPA
 C) Annual compliance audits only  
 D) Trust developers to follow guidelines
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -549,7 +549,7 @@ B) Incident commander activates defined communication tree
 C) No communication until issue is fully resolved  
 D) Post on social media immediately
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -595,7 +595,7 @@ B) Proactively detect issues before users are affected
 C) Replace all other monitoring  
 D) Synthetic monitoring is not applicable to sovereign environments
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -639,7 +639,7 @@ B) Enables vulnerability tracking, license compliance, and supply chain transpar
 C) Replaces all other security scanning  
 D) SBOMs are only for marketing purposes
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -682,7 +682,7 @@ B) Systems based on defined recovery tiers aligned with business impact
 C) Alphabetically by system name  
 D) Newest systems first
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**

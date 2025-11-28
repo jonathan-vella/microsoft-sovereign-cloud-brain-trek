@@ -39,7 +39,7 @@ B) Azure Local with HIPAA BAA and encryption
 C) Any location with strong passwords  
 D) Third-party SaaS with HIPAA compliance badge
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -77,7 +77,7 @@ B) Only the vector database is in scope
 C) The entire RAG system (inference, vector DB, knowledge base) is in scope  
 D) Only network connections to payment systems are in scope
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -114,7 +114,7 @@ B) FedRAMP Moderate authorization
 C) FedRAMP High authorization  
 D) FedRAMP does not apply to classified data
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: D**
@@ -153,7 +153,7 @@ B) CIP-004 (Personnel & Training)
 C) CIP-005 (Electronic Security Perimeters)  
 D) CIP-007 (System Security Management)
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -196,7 +196,7 @@ B) Notify HHS within 60 days, individuals within 60 days, media immediately
 C) Notify HHS within 60 days, individuals within 60 days, media within 60 days  
 D) No notification required if data was encrypted
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -236,7 +236,7 @@ B) Standard Contractual Clauses (SCCs) or Binding Corporate Rules (BCRs)
 C) Data can be transferred if encrypted  
 D) Only aggregated data can be transferred
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -279,7 +279,7 @@ B) ITAR export control — data must not be accessible to foreign nationals
 C) HIPAA for employee health data  
 D) PCI DSS for payment processing
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -322,7 +322,7 @@ B) VPN tunnel from SCADA network to Azure
 C) Unidirectional data diode from OT to IT, then to Azure  
 D) Bidirectional API gateway in DMZ
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -366,7 +366,7 @@ B) Use local RAG with de-identified clinical guidelines only
 C) Use local RAG with PHI but no logging  
 D) Store all RAG queries in cloud analytics
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -410,7 +410,7 @@ B) Minimizing cloud costs
 C) Maximizing algorithm speed  
 D) Using the latest GPU models
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: A**
@@ -452,7 +452,7 @@ B) Quarterly vulnerability scans
 C) Monthly vulnerability scans, annual penetration test, continuous logging  
 D) Real-time monitoring only during business hours
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -491,7 +491,7 @@ B) CISA (Cybersecurity and Infrastructure Security Agency)
 C) Local law enforcement only  
 D) No external notification required
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -533,7 +533,7 @@ B) Video streams must be encrypted and not traverse foreign networks
 C) Patients must provide verbal consent  
 D) Consultations must be limited to 30 minutes
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -575,7 +575,7 @@ B) Another EU region (e.g., Netherlands) maintaining data residency
 C) On-premises tape backup only  
 D) Cloud-based backup in any region with encryption
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -620,7 +620,7 @@ B) Physical access controls, personnel clearances, and air-gapped architecture
 C) Only biometric authentication is required  
 D) Encryption is not required on classified networks
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**

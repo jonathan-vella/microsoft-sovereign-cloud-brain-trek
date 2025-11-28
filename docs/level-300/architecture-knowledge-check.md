@@ -39,7 +39,7 @@ B) Separate management groups per regulation (GDPR MG, FedRAMP MG, HIPAA MG)
 C) Geographic management groups (EU Landing Zones, US Landing Zones) with compliance policies applied per subscription  
 D) Flat structure with all subscriptions under root
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -74,7 +74,7 @@ B) Hub-and-spoke with Azure Firewall and ExpressRoute
 C) Virtual WAN with secured hubs  
 D) Full mesh between all workload VNets
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -109,7 +109,7 @@ B) Scan all data sources and create the data map
 C) Define the classification taxonomy based on regulatory requirements  
 D) Deploy Azure RMS encryption
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -144,7 +144,7 @@ B) Confidential - Financial (highest classification wins)
 C) Unclassified (attachments don't affect email classification)  
 D) Requires manual re-classification
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -179,7 +179,7 @@ B) P3 (Medium) — 4-hour response
 C) P2 (High) — 1-hour response  
 D) P1 (Critical) — Immediate response
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: D**
@@ -222,7 +222,7 @@ B) Ensure all evidence remains within the data sovereignty boundary
 C) Immediately copy evidence to a central global SOC  
 D) Encrypt evidence with organization's master key
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -258,7 +258,7 @@ B) GDPR: 30 days to supervisory authority; HIPAA: 72 hours to HHS
 C) Both: 72 hours to all authorities  
 D) Notification only required if > 500 records affected
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: A**
@@ -293,7 +293,7 @@ B) Key Vault per subscription with RBAC
 C) Premium Key Vault with HSM-backed keys in each data sovereignty region  
 D) Managed HSM with BYOK for all workloads
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -332,7 +332,7 @@ B) Tune the sensitive information types and trainable classifiers
 C) Allow users to override all classifications without approval  
 D) Increase classification confidence threshold to 100%
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -368,7 +368,7 @@ B) Immediately resume normal operations
 C) Conduct lessons learned and update playbooks  
 D) Blame the responsible team
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -408,7 +408,7 @@ B) Only resources containing regulated data
 C) All data sources regardless of location  
 D) Only production environments
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -450,7 +450,7 @@ B) Create an exemption at the subscription level
 C) Create a new management group with different policies  
 D) Apply a "deny" policy that overrides the inherited policy
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -496,7 +496,7 @@ B) Systems by data classification (most sensitive first)
 C) Systems by infection progression (most affected first)  
 D) All systems simultaneously
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -539,7 +539,7 @@ B) Use Azure paired regions within EU (e.g., North Europe ↔ West Europe)
 C) Keep single region with backup to on-premises  
 D) Use Azure Traffic Manager for global load balancing
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -582,7 +582,7 @@ B) Only encryption
 C) Only access restrictions  
 D) No automatic actions — all protection is manual
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: A**

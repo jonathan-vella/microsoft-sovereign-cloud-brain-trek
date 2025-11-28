@@ -40,7 +40,7 @@ B) RAG grounds responses in retrieved documents, reducing hallucinations and ena
 C) RAG doesn't require any LLM  
 D) RAG uses smaller models
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -62,7 +62,7 @@ B) By retrieving current documents from a knowledge base that can be updated wit
 C) By using a larger model  
 D) It doesn't address this problem
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -84,7 +84,7 @@ B) To maintain data sovereignty, reduce latency, and enable offline operation
 C) Edge hardware is more powerful  
 D) Cloud deployment is not technically possible
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -106,7 +106,7 @@ B) Dense numerical vector representations of text that capture semantic meaning
 C) Hyperlinks between documents  
 D) Document metadata
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -128,7 +128,7 @@ B) To store document embeddings and enable fast similarity search
 C) To generate text responses  
 D) To parse documents
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -150,7 +150,7 @@ B) Documents, embeddings, queries, and generated responses - all data
 C) Only the LLM model  
 D) Nothing - all data is sent to cloud
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -172,7 +172,7 @@ B) To fit within LLM context window limits and improve retrieval precision
 C) To make documents load faster  
 D) Chunking is not necessary
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -194,7 +194,7 @@ B) Larger models provide better quality but require more memory and are slower
 C) Smaller models are always preferred  
 D) Model size doesn't matter
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -216,7 +216,7 @@ B) Healthcare facility needing to query patient records and clinical guidelines 
 C) Simple keyword search of public documents  
 D) Real-time stock trading algorithms
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -238,7 +238,7 @@ B) When you have frequently changing factual information that needs to be update
 C) When you want to teach the model new vocabulary  
 D) When you have unlimited budget and time
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -260,7 +260,7 @@ B) The speed of the vector database
 C) The quality and relevance of retrieved documents (retrieval quality)  
 D) The user interface design
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -282,7 +282,7 @@ B) By providing relevant factual context from retrieved documents that the LLM m
 C) By training the model more  
 D) RAG doesn't reduce hallucinations
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -304,7 +304,7 @@ B) Fast CPU
 C) GPU with sufficient VRAM for the LLM  
 D) Network card
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -326,7 +326,7 @@ B) Combining local Edge RAG for sensitive data with cloud services for general q
 C) Using multiple LLMs  
 D) Mixing different document types
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -348,7 +348,7 @@ B) Reduced cloud API costs
 C) Time savings from faster access to information and improved productivity  
 D) Reduced training costs
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**

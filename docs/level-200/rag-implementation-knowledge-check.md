@@ -42,6 +42,9 @@ B) Mistral 7B quantized to INT8
 C) Phi-3 14B quantized to INT4
 D) GPT-4 via cloud API
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** B
 
 **Explanation:**
@@ -52,6 +55,9 @@ D) GPT-4 via cloud API
 - Supports 84 languages
 - Phi-3 14B INT4 (~5GB) would also work but Mistral has better quality/latency trade-off
 - Cloud API violates edge/sovereignty requirement
+
+</details>
+
 
 ---
 
@@ -72,6 +78,9 @@ B) Qdrant with collection-based multi-tenancy
 C) Separate Milvus instances per tenant (containerized)
 D) Chroma in-memory database per tenant
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** C
 
 **Explanation:**
@@ -83,6 +92,9 @@ D) Chroma in-memory database per tenant
 - Chroma in-memory would exceed RAM with 1M vectors
 - Cost-efficient when shared across multiple containers
 - Meets <50ms latency with proper indexing (HNSW)
+
+</details>
+
 
 ---
 
@@ -99,6 +111,9 @@ B) Switch to INT8 and keep batch size at 4
 C) Use dynamic quantization only during peak load
 D) Implement model splitting across CPU/GPU
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** A
 
 **Explanation:**
@@ -110,6 +125,9 @@ D) Implement model splitting across CPU/GPU
 - Dynamic quantization adds overhead during transitions
 - Model splitting increases latency (CPU communication)
 - Result: 450ms → 250-280ms latency, 4x throughput improvement
+
+</details>
+
 
 ---
 
@@ -131,6 +149,9 @@ B) Increase HNSW efSearch from 200 to 400
 C) Switch from HNSW to IVF with 256 clusters
 D) Increase embedding dimension to 768
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** B
 
 **Explanation:**
@@ -142,6 +163,9 @@ D) Increase embedding dimension to 768
 - IVF with 256 clusters would actually decrease recall to 87%
 - Higher dimensions increase memory and latency (incorrect)
 - efSearch is the tuning knob for recall/latency trade-off
+
+</details>
+
 
 ---
 
@@ -161,6 +185,9 @@ B) multilingual-e5-base (768-dim, 110M params, 15ms)
 C) bge-base-en (768-dim, 109M params, 12ms)
 D) OpenAI text-embedding-3-small via API
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** A
 
 **Explanation:**
@@ -172,6 +199,9 @@ D) OpenAI text-embedding-3-small via API
 - bge-base-en is English-only (incorrect for multilingual)
 - API violates edge/sovereignty requirements
 - Total flow: query→embedding (5ms) + search (40ms) + reserve (5ms) = 50ms
+
+</details>
+
 
 ---
 
@@ -192,6 +222,9 @@ B) Active-active deployment in all 3 locations with async replication
 C) Active in 2 locations, standby in 1 with multi-master replication
 D) Active-passive with all 3 locations syncing to cloud backup
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** B
 
 **Explanation:**
@@ -205,6 +238,9 @@ D) Active-passive with all 3 locations syncing to cloud backup
 - Network latency <50ms allows eventual consistency
 - Standby model would require failover orchestration (longer RTO)
 - Cloud backup violates sovereignty requirement
+
+</details>
+
 
 ---
 
@@ -226,6 +262,9 @@ B) Blue-green deployment with traffic switch after validation
 C) Canary: 10% traffic to Mistral, monitor, increment to 100%
 D) Shadow deployment: run Mistral in parallel for 24 hours
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** C
 
 **Explanation:**
@@ -238,6 +277,9 @@ D) Shadow deployment: run Mistral in parallel for 24 hours
 - Reduces blast radius and validates quality before full deployment
 - Shadow deployment adds cost without catching customer impact
 - Final approach: kubectl traffic split 10% to new, monitor 30min, increment
+
+</details>
+
 
 ---
 
@@ -265,6 +307,9 @@ B) Batch embeddings (256), sequential LLM (1), search in parallel
 C) Move to CPU-only mode with batch size 32
 D) Switch to streaming API with async processing
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** B
 
 **Explanation:**
@@ -281,6 +326,9 @@ D) Switch to streaming API with async processing
 - Pure CPU (C) would take 8+ hours
 - Batch 256 LLM would use 256 × 7GB = not enough memory
 - API streaming adds cost and latency
+
+</details>
+
 
 ---
 
@@ -304,6 +352,9 @@ B) Vector recall 94%
 C) Data freshness 3h
 D) Error rate trending toward 2%
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** A
 
 **Explanation:**
@@ -318,6 +369,9 @@ D) Error rate trending toward 2%
   - Data freshness is optimal
 - Alert strategy: focus on resource constraints and SLA risks
 - GPU 92% → next spike could exceed latency SLA
+
+</details>
+
 
 ---
 
@@ -341,6 +395,9 @@ B) New LLM model is slower/larger than previous
 C) Network congestion between services
 D) Vector search parameters need tuning
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** B
 
 **Explanation:**
@@ -354,6 +411,9 @@ D) Vector search parameters need tuning
 - Root cause: new model either larger (INT8 instead of INT4) or less optimized
 - Mitigation: rollback to previous model or check model quantization
 - Network/vector DB would show different symptoms
+
+</details>
+
 
 ---
 
@@ -373,6 +433,9 @@ B) Language detection → language-specific embedding models
 C) Translate all documents to English → single English model
 D) Deploy 5 separate RAG systems (one per language)
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** A
 
 **Explanation:**
@@ -387,6 +450,9 @@ D) Deploy 5 separate RAG systems (one per language)
 - 5 separate systems (D) multiplies storage/compute (wasteful)
 - Multilingual models designed for cross-lingual retrieval
 - LLM handles response translation naturally via context
+
+</details>
+
 
 ---
 
@@ -413,6 +479,9 @@ B) 5-year outlook: Edge TCO lower despite upfront cost
 C) Only if compliance/sovereignty requirements exist
 D) When latency <100ms is required
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** B
 
 **Explanation:**
@@ -430,6 +499,9 @@ D) When latency <100ms is required
 - Sovereignty requirement strengthens case but ROI justifies alone
 - Latency (D) is benefit but doesn't affect cost calculation
 - Edge wins on 3-year and 5-year TCO
+
+</details>
+
 
 ---
 
@@ -452,6 +524,9 @@ B) LLM temperature too high, generating creatively
 C) Need larger model (Mistral 13B)
 D) Embedding model not capturing nuance
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** B
 
 **Explanation:**
@@ -467,6 +542,9 @@ D) Embedding model not capturing nuance
   2. Add constraint: "If not in context, say 'Not found'"
   3. Extend context to 5 documents
   4. Result: hallucination rate drops to <2%
+
+</details>
+
 
 ---
 
@@ -485,6 +563,9 @@ B) Partial failure: 60% of Region 1 users hit error, others succeed
 C) LLM service auto-scales to 2 replicas in Region 2
 D) Kubernetes rescheduling finds capacity in Region 2 (2-5 min)
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** D
 
 **Explanation:**
@@ -502,6 +583,9 @@ D) Kubernetes rescheduling finds capacity in Region 2 (2-5 min)
 - Immediate reroute (A) would only happen with explicit failover
 - Partial errors (B) depends on which pod crashed
 - Option C assumes reserved capacity (incorrect)
+
+</details>
+
 
 ---
 
@@ -531,6 +615,9 @@ B) Network packet loss causing timeout/retry
 C) CPU thermal throttling during high utilization
 D) Query complexity variation (some queries require deeper index search)
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** D
 
 **Explanation:**
@@ -546,6 +633,9 @@ D) Query complexity variation (some queries require deeper index search)
 - Memory pressure (A) would show in all metrics
 - Network loss (B) would show in all service calls
 - Thermal throttling (C) would affect all components equally
+
+</details>
+
 
 ---
 
@@ -564,6 +654,9 @@ A) Network isolation + API authentication + rate limiting
 B) API authentication + prompt validation + data classification + audit logging
 C) Encryption at rest + network isolation + RBAC
 D) All of the above
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** D
 
@@ -584,6 +677,9 @@ D) All of the above
   - Compliance → audit logging (B component)
 - Comprehensive security requires all layers
 
+</details>
+
+
 ---
 
 ### Question 17: Scalability Planning
@@ -601,6 +697,9 @@ A) 50M vectors or 500 QPS (approximately 6 months)
 B) 100M vectors or 1000 QPS (approximately 8 months)
 C) 200M vectors or 2000 QPS (approximately 10 months)
 D) Sharding not needed for edge deployments
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** A
 
@@ -623,6 +722,9 @@ D) Sharding not needed for edge deployments
 - Alert: when p95 > 250ms or resource > 80%
 - Option B too late (1000 QPS would exceed infrastructure)
 
+</details>
+
+
 ---
 
 ### Question 18: Technology Selection for RAG Evolution
@@ -643,6 +745,9 @@ B) Query expansion (best ROI)
 C) Reranking (strong recall improvement)
 D) Skip improvements, maintain current performance
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** B
 
 **Explanation:**
@@ -661,6 +766,9 @@ D) Skip improvements, maintain current performance
   2. Test reranking (Month 2, if latency budget available)
   3. Evaluate others for future versions
 - Best practice: incremental improvements validated for edge constraints
+
+</details>
+
 
 ---
 

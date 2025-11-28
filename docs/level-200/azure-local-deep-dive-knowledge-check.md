@@ -37,9 +37,15 @@ C) The management layer is most critical, followed by software layer, then virtu
 
 D) All layers are integrated into a single unified system with no distinct separation between hardware, virtualization, software, and management.
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer: B**
 
 **Explanation:** Azure Local uses a layered architecture where each layer provides specific functions. The hardware layer provides CPU, memory, storage, and network. The virtualization layer (Hyper-V) runs on hardware and provides VM isolation. The software layer (Azure Local system services) orchestrates storage and compute. The management layer provides operational tools. While all layers need to work together for optimal function, they can fail independently - for example, Azure Local services can be restarted without requiring hardware replacement.
+
+</details>
+
 
 ---
 
@@ -55,9 +61,15 @@ C) VLANs provide automatic redundancy, so if one physical adapter fails, all net
 
 D) VLANs guarantee that storage traffic always has higher performance than customer workload traffic without additional configuration.
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer: B**
 
 **Explanation:** Converged networking uses VLANs to separate multiple logical networks over fewer physical adapters. This reduces hardware costs, rack space, and cable complexity. However, VLAN isolation is logical, not physical - QoS policies must be configured to ensure storage traffic priority. A single physical adapter failure can affect all networks if not properly teamed.
+
+</details>
+
 
 ---
 
@@ -73,9 +85,15 @@ C) Data redundancy is completely lost because one drive failed - you must restor
 
 D) Data redundancy cycles between 3-way and 2-way during rebuild, so you cannot determine the true resilience until rebuild completes.
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer: B**
 
 **Explanation:** With 3-way mirroring and one drive failed, data exists on exactly 2 copies (the rebuild is happening in real-time, but the third copy is not yet complete). This means the cluster can only tolerate one more failure before data loss. This is a degraded mode and requires monitoring. You should avoid performing maintenance on other nodes during this period, but normal operations can continue.
+
+</details>
+
 
 ---
 
@@ -91,9 +109,15 @@ C) Use a mix of DDR4 and DDR5 memory to provide redundancy - if one type fails, 
 
 D) Maximize memory size by using the largest capacity DIMMs available, even if they don't fill all slots symmetrically.
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer: B**
 
 **Explanation:** Symmetric memory population ensures optimal NUMA performance (local memory access is faster than remote). DDR4 and DDR5 shouldn't be mixed (different speeds and timing). Larger capacity DIMMs are fine, but they must be populated symmetrically. For 2-node clusters, this also simplifies witness configuration and management.
+
+</details>
+
 
 ---
 
@@ -109,9 +133,15 @@ C) One large 6-node cluster distributed across both locations (3 nodes each) wit
 
 D) Single-node clusters at each location, each operating independently with nightly backups to the other location.
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer: B**
 
 **Explanation:** With limited 1 Gbps bandwidth, synchronous replication (Option C) would be problematic - storage rebuild alone can saturate the link. Two 2-node clusters with asynchronous replication provides good resilience while respecting bandwidth constraints. Each site has its own quorum (via file share witness), so they can operate independently. This provides geographic redundancy without excessive WAN utilization.
+
+</details>
+
 
 ---
 
@@ -127,9 +157,15 @@ C) The node with more VMs continues; the other stops. This balances workload dis
 
 D) Random node selection decides which continues - Azure Local automatically picks one to prevent ties.
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer: B**
 
 **Explanation:** In a 2-node cluster, neither node has quorum by itself (needs 2/2). The file share witness acts as tiebreaker - whichever node can reach the witness achieves quorum and continues. The isolated node stops to prevent split-brain. This is why witness placement is critical for 2-node deployments.
+
+</details>
+
 
 ---
 
@@ -145,9 +181,15 @@ C) 15-30 minutes - requires manual intervention to isolate the failed node and d
 
 D) 1-2 hours - the storage rebuild must complete before VMs can resume.
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer: B**
 
 **Explanation:** Failure detection takes 5-30 seconds, cluster decision/orchestration adds 5 seconds, VM restart/OS boot takes 2-3 minutes. The process is largely automatic. Storage rebuild happens in parallel and is not blocking for VM operation, though performance will be degraded.
+
+</details>
+
 
 ---
 
@@ -163,9 +205,15 @@ C) The plan doesn't account for rebuild overheads - during a node failure, rebui
 
 D) Three tiers are too many for one storage pool - use multiple pools instead.
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer: C**
 
 **Explanation:** With 3-way mirroring at full capacity (2 TB), a node failure requires rebuild but there's no extra capacity to write the rebuilding data. This creates risk. Best practice is to allocate only 70-80% of capacity and reserve 20-30% for rebuild overhead and spike capacity needs.
+
+</details>
+
 
 ---
 
@@ -181,9 +229,15 @@ C) RDMA is too much overhead - disable it to get faster TCP/IP performance.
 
 D) The physical switch doesn't support RDMA speeds - replace the switch with a higher-speed model.
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer: B**
 
 **Explanation:** With converged networking, storage (RDMA) and workload traffic share the same adapters. If storage is getting only 60% of expected performance, it's likely being congested by lower-priority traffic. Verify QoS policies are applied (sometimes requires verification after updates) and that priority values are correctly configured.
+
+</details>
+
 
 ---
 
@@ -199,9 +253,15 @@ C) Single 3-node cluster at primary site only, with nightly backups.
 
 D) One 6-node cluster split across two sites using active-active configuration.
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer: B**
 
 **Explanation:** RPO=0 requires synchronous replication (Option A uses asynchronous). RTO=30 minutes requires automated failover (Option C is manual). Options B and D both work, but B is simpler and more standard. D adds complexity with active-active coordination.
+
+</details>
+
 
 ---
 

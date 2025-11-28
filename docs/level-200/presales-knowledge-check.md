@@ -36,6 +36,9 @@ B) "What specific data residency requirements do you have? And what regulations 
 C) "Is data residency in the US sufficient, or do you need EU or other regions?"
 D) "Have you looked at Azure government clouds?"
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** B
 
 **Explanation:**
@@ -46,6 +49,9 @@ D) "Have you looked at Azure government clouds?"
 - Option C makes assumptions before understanding the driver
 - Option D jumps to solutions before understanding requirements
 - Best practice: Ask open-ended question that uncovers root cause and business driver
+
+</details>
+
 
 ---
 
@@ -60,6 +66,9 @@ B) You may miss the key decision makers and end up with misaligned solution
 C) Operations teams are always unprepared for technology
 D) Manufacturing doesn't typically have CISO involvement
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** B
 
 **Explanation:**
@@ -73,6 +82,9 @@ D) Manufacturing doesn't typically have CISO involvement
 - Without discovering full stakeholder map, solution may not address real concerns
 - Even if technically excellent, proposal may fail due to misaligned decision criteria
 
+</details>
+
+
 ---
 
 ### Question 3: Workload Characterization
@@ -85,6 +97,9 @@ A) "How many servers do you have today?"
 B) "How many queries per second will you run, and what's your latency target?"
 C) "What's your budget?"
 D) "When do you need this operational?"
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** B
 
@@ -100,6 +115,9 @@ D) "When do you need this operational?"
   - 10,000 QPS @ 100ms latency → 16+ GPUs needed
 - This single question drives $50K-500K hardware decision
 
+</details>
+
+
 ---
 
 ### Question 4: Hardware Sizing for LLM Inference
@@ -112,6 +130,9 @@ A) Use CPU inference with 8 nodes, optimize with quantization
 B) Recommend procuring 2x T4 GPUs (16GB VRAM each)
 C) Recommend procuring 4x T4 GPUs for adequate headroom and HA
 D) Recommend cloud APIs instead since edge isn't viable
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** C
 
@@ -127,6 +148,9 @@ D) Recommend cloud APIs instead since edge isn't viable
 - Option D: premature - haven't tried edge solution yet
 - Best practice: Size for peak + redundancy (2x minimum)
 
+</details>
+
+
 ---
 
 ### Question 5: Vector Database Sizing for Multi-Tenant
@@ -139,6 +163,9 @@ A) Single Weaviate cluster with namespace isolation
 B) Single Qdrant with 10 collections (one per tenant)
 C) Separate Milvus instance per tenant (containerized on same cluster)
 D) 10 separate cloud databases (one per tenant)
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** C
 
@@ -153,6 +180,9 @@ D) 10 separate cloud databases (one per tenant)
 - Option D: Cloud databases = sovereignty violation + costs >$50K/year
 - Best practice: Containerized isolation when strict SLA + data residency needed
 
+</details>
+
+
 ---
 
 ### Question 6: Cost Model Comparison
@@ -165,6 +195,9 @@ A) 50M queries/year
 B) 75M queries/year
 C) 100M queries/year
 D) 150M queries/year
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** C
 
@@ -189,6 +222,9 @@ D) 150M queries/year
   - Edge: $2.865M over 5 years
   - Edge wins (15% cheaper)
 
+</details>
+
+
 ---
 
 ### Question 7: Phased Deployment for Budget Constraint
@@ -199,6 +235,9 @@ A) Postpone until they have full budget
 B) Deploy to cloud temporarily until budget available
 C) Deploy 3-node cluster ($100K) in Year 1, add nodes in Year 2
 D) Scale down to 2 GPUs only, accept performance compromise
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** C
 
@@ -218,6 +257,9 @@ D) Scale down to 2 GPUs only, accept performance compromise
   - Organizational readiness
   - Proof of value
 
+</details>
+
+
 ---
 
 ### Question 8: TCO Analysis - Intangible Benefits
@@ -230,6 +272,9 @@ A) Lower hardware cost than competitors
 B) Compliance capability enables new business, data sovereignty competitive advantage
 C) Faster deployment than cloud
 D) Support from Microsoft is better
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** B
 
@@ -248,6 +293,9 @@ D) Support from Microsoft is better
 - Option C: True but not strategically significant for this scenario
 - Option D: Support quality exists in cloud too
 - Best practice: Quantify intangible benefits (even conservatively) in proposals
+
+</details>
+
 
 ---
 
@@ -268,6 +316,9 @@ B) Contingency buffer and phased capacity expansion plan
 C) Cloud fallback plan
 D) Alternative pricing from competitors
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** B
 
 **Explanation:**
@@ -286,6 +337,9 @@ D) Alternative pricing from competitors
 - Option C: Not relevant if they want sovereign solution
 - Option D: Out of scope for Microsoft proposal
 
+</details>
+
+
 ---
 
 ### Question 10: Objection Handling - Security Concerns
@@ -298,6 +352,9 @@ A) "Microsoft ensures all hardware partners meet security standards"
 B) "We have other customers using this exact hardware with no issues"
 C) "I understand your concern. Here's Microsoft's supply chain vetting process, partner security certifications, and hardware component transparency. We can add supply chain audit as a gate before deployment. What specific concerns do you want to validate?"
 D) "Hardware security is already built-in, no need for additional vetting"
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** C
 
@@ -314,6 +371,9 @@ D) "Hardware security is already built-in, no need for additional vetting"
 - Response D: Minimizes their legitimate concern
 - Best practice: Objection = opportunity to strengthen relationship, not to overcome
 
+</details>
+
+
 ---
 
 ### Question 11: Discovery Depth - When to Stop Questioning
@@ -326,6 +386,9 @@ A) Push through and ask DR questions (complete the template)
 B) Wrap up the meeting, send summary, schedule follow-up for technical deep-dive
 C) Ask quick one-liner about DR, then close
 D) Skip DR (assume standard HA is sufficient)
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** B
 
@@ -343,6 +406,9 @@ D) Skip DR (assume standard HA is sufficient)
 - Option A: Risks boring decision makers, may lose deal momentum
 - Option C: Quick question incomplete (deserves proper discussion)
 - Option D: Risk missing critical requirement
+
+</details>
+
 
 ---
 
@@ -363,6 +429,9 @@ B) Defend your sizing calculation
 C) Acknowledge their concern and explore the gap
 D) Compromise: recommend 2 GPUs as middle ground
 
+<details markdown="1">
+<summary>Click to reveal answer</summary>
+
 **Correct Answer:** C
 
 **Explanation:**
@@ -379,6 +448,9 @@ D) Compromise: recommend 2 GPUs as middle ground
 - Option B: Defensive (misses opportunity to learn)
 - Option C: Collaborative (finds real requirement)
 - Option D: Compromise without understanding = waste of $50K hardware
+
+</details>
+
 
 ---
 
@@ -397,6 +469,9 @@ A) The cost is too high
 B) You didn't align the solution to their strategic priorities
 C) They need more technical details
 D) The timeline is too aggressive
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** B
 
@@ -417,6 +492,9 @@ D) The timeline is too aggressive
   - One-page ROI summary (ROI speaks universally)
   - Reach out: "Checking in, any questions I can clarify?"
 
+</details>
+
+
 ---
 
 ### Question 14: Competitive Positioning
@@ -429,6 +507,9 @@ A) "Azure is better supported and has more features"
 B) "Microsoft Sovereign Cloud integrates with your existing Azure investments, providing consistent governance and easier operations"
 C) "Azure is cheaper"
 D) "The competitors' solution doesn't support your compliance requirements"
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** B
 
@@ -444,6 +525,9 @@ D) "The competitors' solution doesn't support your compliance requirements"
   - Better: "Azure is the only platform that meets your compliance AND sovereignty requirements"
 - Best practice: Position on VALUE (integrated, simpler, better operations) not on feature parity
 
+</details>
+
+
 ---
 
 ### Question 15: Post-Sale Value Delivery
@@ -454,6 +538,9 @@ A) Let the implementation team handle everything until go-live
 B) Stay engaged: establish success metrics, weekly check-ins, early adoption incentives
 C) Focus on managing costs during implementation to keep customer happy
 D) Plan the reference call for 6 months post-go-live
+
+<details markdown="1">
+<summary>Click to reveal answer</summary>
 
 **Correct Answer:** B
 
@@ -473,6 +560,9 @@ D) Plan the reference call for 6 months post-go-live
 - Option C: Cost management important but not primary success driver
 - Option D: Too late to course-correct (reference call should be 3 months post-go-live)
 - Result: Engaged post-sale = 80%+ customer satisfaction vs. 40% hands-off approach
+
+</details>
+
 
 ---
 

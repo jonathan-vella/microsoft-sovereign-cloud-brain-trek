@@ -30,7 +30,7 @@ What are the three primary cloud service models?
 **C)** Small, Medium, Large
 **D)** Basic, Standard, Premium
 
-<details>
+<details markdown="1">
 <summary>Click for Answer & Explanation</summary>
 
 **Correct Answer: B) IaaS, PaaS, SaaS**
@@ -56,7 +56,7 @@ In the IaaS service model, which of the following is the customer responsible fo
 **C)** Operating system and applications
 **D)** Data center facilities and power
 
-<details>
+<details markdown="1">
 <summary>Click for Answer & Explanation</summary>
 
 **Correct Answer: C) Operating system and applications**
@@ -85,7 +85,7 @@ What is the primary difference between public cloud and private cloud?
 **C)** Public cloud is less secure than private cloud
 **D)** Public cloud is only for small businesses, private cloud is for enterprises
 
-<details>
+<details markdown="1">
 <summary>Click for Answer & Explanation</summary>
 
 **Correct Answer: B) Public cloud uses shared infrastructure, private cloud uses dedicated infrastructure**
@@ -110,7 +110,7 @@ Which cloud deployment model combines both public and private cloud environments
 **C)** Community cloud
 **D)** Federated cloud
 
-<details>
+<details markdown="1">
 <summary>Click for Answer & Explanation</summary>
 
 **Correct Answer: B) Hybrid cloud**
@@ -136,7 +136,7 @@ What does "elasticity" mean in cloud computing?
 **C)** The ability to access resources from anywhere
 **D)** The ability to choose from multiple service providers
 
-<details>
+<details markdown="1">
 <summary>Click for Answer & Explanation</summary>
 
 **Correct Answer: B) The ability to automatically scale resources up and down based on demand**
@@ -163,7 +163,7 @@ Which of the following is an example of SaaS (Software as a Service)?
 **C)** Microsoft 365 (Office applications)
 **D)** Azure Virtual Networks
 
-<details>
+<details markdown="1">
 <summary>Click for Answer & Explanation</summary>
 
 **Correct Answer: C) Microsoft 365 (Office applications)**
@@ -188,7 +188,7 @@ What is the primary cost model difference between traditional IT and cloud compu
 **C)** Traditional IT uses CapEx, cloud computing uses OpEx
 **D)** There is no cost model difference
 
-<details>
+<details markdown="1">
 <summary>Click for Answer & Explanation</summary>
 
 **Correct Answer: C) Traditional IT uses CapEx, cloud computing uses OpEx**
@@ -218,7 +218,7 @@ Which cloud characteristic enables users to provision computing resources automa
 **C)** On-demand self-service
 **D)** Measured service
 
-<details>
+<details markdown="1">
 <summary>Click for Answer & Explanation</summary>
 
 **Correct Answer: C) On-demand self-service**
@@ -245,7 +245,7 @@ What is a key advantage of using multiple cloud providers (multi-cloud strategy)
 **C)** Avoiding vendor lock-in
 **D)** Simplified security management
 
-<details>
+<details markdown="1">
 <summary>Click for Answer & Explanation</summary>
 
 **Correct Answer: C) Avoiding vendor lock-in**
@@ -272,7 +272,7 @@ Which factor is most important when deciding between public, private, or hybrid 
 **C)** Geographic location of the company headquarters
 **D)** Age of the existing IT infrastructure
 
-<details>
+<details markdown="1">
 <summary>Click for Answer & Explanation</summary>
 
 **Correct Answer: B) Data sensitivity and compliance requirements**

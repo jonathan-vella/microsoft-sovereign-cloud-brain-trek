@@ -40,7 +40,7 @@ B) Sovereign Private Cloud
 C) Sovereign Multi-Cloud  
 D) Sovereign Edge Cloud
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -68,7 +68,7 @@ B) Sovereign Private Cloud (Azure Local Disconnected)
 C) National Partner Clouds (Azure Government)  
 D) Traditional on-premises infrastructure
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: A**
@@ -97,7 +97,7 @@ B) To enforce sovereignty requirements through policy-driven controls in Azure p
 C) To replace Azure with a new sovereign-only cloud platform  
 D) To eliminate the need for compliance certifications
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -119,7 +119,7 @@ B) Azure Firewall
 C) Customer Lockbox  
 D) Azure Key Vault
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -148,7 +148,7 @@ B) Connected mode requires internet connectivity and uses cloud control plane; D
 C) Disconnected mode has better performance  
 D) Connected mode supports more VMs
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -174,7 +174,7 @@ B) Sovereign Public Cloud with Azure Policy
 C) Azure Local Connected Mode  
 D) Azure Local Disconnected Mode
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: D**
@@ -203,7 +203,7 @@ B) It is physically and logically separated from commercial Azure
 C) It has fewer compliance certifications than commercial Azure  
 D) It is available to any organization worldwide
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -232,7 +232,7 @@ B) To meet Chinese regulatory requirements for local cloud operators
 C) Because Microsoft is not authorized to operate in China  
 D) To improve performance
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -254,7 +254,7 @@ B) Data in transit only
 C) Data in use (during processing)  
 D) Data after deletion
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -282,7 +282,7 @@ B) Sovereign Private Cloud (Azure Local)
 C) National Partner Clouds  
 D) All three models provide dedicated infrastructure
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -310,7 +310,7 @@ B) Network Security Groups (NSGs)
 C) Azure Policy with deny effect for non-EU regions  
 D) Customer Lockbox
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -336,7 +336,7 @@ B) Azure Government
 C) Azure China  
 D) Any Azure region with Policy enforcement
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -365,7 +365,7 @@ B) A startup building a mobile app
 C) An aerospace company with classified defense data requiring air-gap  
 D) A SaaS provider serving global customers
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
@@ -394,7 +394,7 @@ B) Azure Arc to manage hybrid resources from Azure control plane
 C) Azure ExpressRoute only  
 D) Two separate clouds with no integration
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
@@ -423,7 +423,7 @@ B) Short-term projects (3-6 months)
 C) Steady-state workloads with consistent resource utilization  
 D) Development and testing environments
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: C**
