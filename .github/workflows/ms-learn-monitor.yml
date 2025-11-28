@@ -1,7 +1,9 @@
 name: Microsoft Learn Link Monitor
 
 on:
-  workflow_dispatch: # Manual trigger only
+  schedule:
+    - cron: '0 9 * * 1' # Weekly on Monday at 9:00 AM UTC
+  workflow_dispatch: # Manual trigger
 
 permissions:
   contents: read
@@ -66,7 +68,8 @@ jobs:
               repo: context.repo.repo,
               title: '🔗 Microsoft Learn Links Need Update',
               body: `${report}\n\n---\n\n**Action Required:**\n1. Search for each broken URL in the \`docs/\` folder\n2. Find the updated URL on Microsoft Learn\n3. Update the markdown files\n4. Test the new links\n\n**Note:** Microsoft Learn URLs may have been redirected, moved, or retired.\n\n**Workflow Run:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
-              labels: ['maintenance', 'microsoft-learn', 'broken-links']
+              labels: ['maintenance', 'microsoft-learn', 'broken-links'],
+              assignees: ['copilot']
             })
 
       - name: Report success
