@@ -205,29 +205,36 @@ az login --use-device-code
 
 ## Knowledge Check Format
 
-Use this standard format for assessment questions:
+Use this standard format for assessment questions. **All knowledge checks must use collapsible answer sections** for consistency across the training platform.
 
 ```markdown
 ### Question N: Topic Name
 
 Question text here?
 
-A) Option A  
-B) Option B  
-C) Option C  
+A) Option A
+B) Option B
+C) Option C
 D) Option D
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Correct Answer: B**
 
-**Explanation:**
-Detailed explanation of why this answer is correct and why other options are incorrect.
+**Explanation:** Detailed explanation of why this answer is correct and why other options are incorrect.
 
 **Reference:** [Topic Documentation](relative-link-to-content.md)
+
 </details>
 ```
+
+**Critical Requirements:**
+
+- **Always use `<details markdown="1">`** — The `markdown="1"` attribute is required for kramdown to parse markdown inside HTML elements
+- **Blank line after `</summary>`** — Required for proper markdown rendering
+- **Blank line before `</details>`** — Ensures clean closing of the collapsible section
+- **Never use separate answer keys** — All answers must be inline with their questions using collapsible sections
 
 Guidelines:
 
