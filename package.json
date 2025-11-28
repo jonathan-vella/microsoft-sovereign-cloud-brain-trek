@@ -18,5 +18,8 @@
     "url": "https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek.git"
   },
   "author": "Jonathan Vella",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "markdownlint-cli2": "^0.19.1"
+  }
 }
