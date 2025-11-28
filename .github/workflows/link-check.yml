@@ -1,0 +1,34 @@
+name: Link Validation
+
+on:
+  workflow_dispatch: # Manual trigger only
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Check all links in documentation
+        uses: lycheeverse/lychee-action@v2.7.0
+        with:
+          args: --verbose --no-progress 'docs/**/*.md' 'README.md' 'CONTRIBUTING.md' 'JEKYLL_PREP.md' 'HANDOFF.md' 'AUTOMATION.md'
+          fail: false # Don't fail build, just report
+
+      - name: Create issue if links broken
+        if: env.lychee_exit_code != 0
+        uses: actions/github-script@v8
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🔗 Broken Links Detected',
+              body: `Automated link validation found broken links.\n\n**Workflow Run:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n\nPlease review the workflow logs for details and update the affected files.`,
+              labels: ['maintenance', 'broken-links']
+            })

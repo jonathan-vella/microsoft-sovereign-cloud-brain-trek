@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/jonathan-vella/sov-cloud-brain-trek/discussions
+    about: Ask questions, share ideas, or discuss the learning program
+  - name: 📖 Microsoft Learn
+    url: https://learn.microsoft.com/en-us/industry/sovereign-cloud/
+    about: Official Microsoft Sovereign Cloud documentation
+  - name: 🔒 Security Issue
+    url: https://github.com/jonathan-vella/sov-cloud-brain-trek/security/advisories/new
+    about: Report security vulnerabilities privately

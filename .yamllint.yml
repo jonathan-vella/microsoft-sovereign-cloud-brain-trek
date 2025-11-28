@@ -1,0 +1,38 @@
+# YAML linting configuration
+# https://yamllint.readthedocs.io/
+
+extends: default
+
+rules:
+  # Allow longer lines for readability
+  line-length:
+    max: 200
+    level: warning
+
+  # Require document start marker for Jekyll files
+  document-start: disable
+
+  # Allow inline mappings
+  braces:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+
+  # Allow inline sequences
+  brackets:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+
+  # Indentation
+  indentation:
+    spaces: 2
+    indent-sequences: true
+
+  # Comments
+  comments:
+    require-starting-space: true
+    min-spaces-from-content: 1
+
+  # Truthy values
+  truthy:
+    allowed-values: ["true", "false", "yes", "no"]
+    check-keys: false

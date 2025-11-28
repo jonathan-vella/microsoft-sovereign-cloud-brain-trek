@@ -1,0 +1,22 @@
+{
+  "name": "microsoft-sovereign-cloud-brain-trek",
+  "version": "1.0.0",
+  "description": "Microsoft Sovereign Cloud & AI at the Edge documentation",
+  "scripts": {
+    "diagrams": "python scripts/regenerate-diagrams.py",
+    "diagrams:level50": "python scripts/regenerate-diagrams.py --level 50",
+    "diagrams:level100": "python scripts/regenerate-diagrams.py --level 100",
+    "diagrams:level200": "python scripts/regenerate-diagrams.py --level 200",
+    "diagrams:level300": "python scripts/regenerate-diagrams.py --level 300",
+    "diagrams:dry-run": "python scripts/regenerate-diagrams.py --dry-run",
+    "lint": "markdownlint-cli2 '**/*.md'",
+    "serve": "bundle exec jekyll serve --host 0.0.0.0 --port 4000",
+    "build": "bundle exec jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek.git"
+  },
+  "author": "Jonathan Vella",
+  "license": "MIT"
+}

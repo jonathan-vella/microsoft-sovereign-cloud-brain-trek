@@ -1,0 +1,566 @@
+// Custom styles for Microsoft Sovereign Cloud Brain Trek
+
+// =============================================================================
+// TYPOGRAPHY IMPROVEMENTS
+// =============================================================================
+
+// Better line height for readability
+.main-content {
+  line-height: 1.7;
+
+  p {
+    margin-bottom: 1.25em;
+  }
+}
+
+// =============================================================================
+// TABLE OF CONTENTS - COMPACT STYLING
+// =============================================================================
+
+// Make TOC more compact and visually distinct
+#markdown-toc {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+
+  &::before {
+    content: "On this page";
+    display: block;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  li {
+    margin: 0.25rem 0;
+
+    a {
+      color: #0078d4;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Nested lists more compact
+  ul {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+// =============================================================================
+// NAVIGATION IMPROVEMENTS
+// =============================================================================
+
+// Better visual hierarchy in sidebar
+.nav-list {
+  .nav-list-item {
+    .nav-list-link {
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.15s ease;
+
+      &:hover {
+        background-color: rgba(0, 120, 212, 0.08);
+      }
+
+      &.active {
+        background-color: rgba(0, 120, 212, 0.12);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// =============================================================================
+// CALLOUTS / ADMONITIONS STYLING
+// =============================================================================
+
+// Enhanced callout styling
+blockquote {
+  border-left: 4px solid #0078d4;
+  background-color: #f0f6ff;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Warning callout
+.warning > blockquote {
+  border-left-color: #ffb900;
+  background-color: #fff8e6;
+}
+
+// Note callout
+.note > blockquote {
+  border-left-color: #0078d4;
+  background-color: #f0f6ff;
+}
+
+// Important callout
+.important > blockquote {
+  border-left-color: #107c10;
+  background-color: #f0fff0;
+}
+
+// =============================================================================
+// CONTENT CARDS & SECTIONS
+// =============================================================================
+
+// Visual section dividers
+.main-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #dee2e6, transparent);
+  margin: 2.5rem 0;
+}
+
+// Code example boxes
+.code-example {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background-color: #fafbfc;
+}
+
+// =============================================================================
+// LEARNING PATH CARDS
+// =============================================================================
+
+// Card grid for learning levels
+.level-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.level-card {
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: #fff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  h4 {
+    margin-top: 0;
+    color: #0078d4;
+  }
+
+  .duration {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+}
+
+// =============================================================================
+// BUTTONS
+// =============================================================================
+
+// Primary button styling (Azure blue)
+.btn-primary {
+  background-color: #0078d4;
+  border-color: #0078d4;
+
+  &:hover {
+    background-color: #106ebe;
+    border-color: #106ebe;
+  }
+}
+
+// Outline button
+.btn-outline {
+  border: 2px solid #0078d4;
+  color: #0078d4;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background-color: #0078d4;
+    color: #fff;
+  }
+}
+
+// =============================================================================
+// TABLES
+// =============================================================================
+
+// Better table styling
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+
+  th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid #dee2e6;
+  }
+
+  td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  tr:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+// =============================================================================
+// CHECKLISTS & PROGRESS
+// =============================================================================
+
+// Styled checklists
+ul.task-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.5rem;
+
+    &::before {
+      content: "☐";
+      position: absolute;
+      left: 0;
+      color: #6c757d;
+    }
+
+    &.checked::before {
+      content: "✅";
+    }
+  }
+}
+
+// =============================================================================
+// COLLAPSIBLE SECTIONS - BASE STYLING
+// =============================================================================
+
+// Base details/summary styling
+details {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  margin: 1rem 0;
+
+  summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    font-weight: 500;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      background-color: #e9ecef;
+    }
+
+    // Arrow indicator
+    &::before {
+      content: "▶";
+      font-size: 0.7em;
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &[open] summary {
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #e9ecef;
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  > *:not(summary) {
+    padding: 1rem;
+  }
+}
+
+// =============================================================================
+// DIAGRAM CONTAINERS
+// =============================================================================
+
+details.diagram-container {
+  border-color: #0078d4;
+  background: linear-gradient(to bottom, #f0f6ff, #fff);
+
+  summary {
+    background: linear-gradient(to right, #e6f2ff, #f0f6ff);
+    color: #0078d4;
+    font-weight: 600;
+
+    &::before {
+      content: "📊";
+      font-size: 1em;
+    }
+
+    &:hover {
+      background: linear-gradient(to right, #d9ebff, #e6f2ff);
+    }
+  }
+
+  &[open] summary {
+    background: #0078d4;
+    color: #fff;
+  }
+
+  .diagram-content {
+    text-align: center;
+    padding: 1.5rem;
+
+    img, svg {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .diagram-caption {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #6c757d;
+      font-style: italic;
+    }
+  }
+}
+
+// =============================================================================
+// CODE BLOCK CONTAINERS
+// =============================================================================
+
+details.code-container {
+  border-color: #6c757d;
+
+  summary {
+    background-color: #2d2d2d;
+    color: #e9ecef;
+
+    &::before {
+      content: "💻";
+      font-size: 1em;
+    }
+
+    &:hover {
+      background-color: #3d3d3d;
+    }
+  }
+
+  &[open] summary {
+    border-radius: 8px 8px 0 0;
+  }
+
+  pre {
+    margin: 0;
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+// =============================================================================
+// DEEP DIVE / LEARN MORE SECTIONS
+// =============================================================================
+
+details.deep-dive {
+  border-color: #107c10;
+  background: linear-gradient(to bottom, #f0fff0, #fff);
+
+  summary {
+    background: linear-gradient(to right, #e6ffe6, #f0fff0);
+    color: #107c10;
+
+    &::before {
+      content: "🔍";
+      font-size: 1em;
+    }
+
+    &:hover {
+      background: linear-gradient(to right, #d9ffd9, #e6ffe6);
+    }
+  }
+
+  &[open] summary {
+    background: #107c10;
+    color: #fff;
+  }
+}
+
+// =============================================================================
+// QUIZ / KNOWLEDGE CHECK SECTIONS
+// =============================================================================
+
+details.quiz-section {
+  border-color: #8661c5;
+  background: linear-gradient(to bottom, #f5f0ff, #fff);
+
+  summary {
+    background: linear-gradient(to right, #efe6ff, #f5f0ff);
+    color: #8661c5;
+    font-weight: 600;
+
+    &::before {
+      content: "🎯";
+      font-size: 1em;
+    }
+
+    &:hover {
+      background: linear-gradient(to right, #e6d9ff, #efe6ff);
+    }
+  }
+
+  &[open] summary {
+    background: #8661c5;
+    color: #fff;
+  }
+}
+
+// Answer reveal styling (nested details)
+details.quiz-section details {
+  border-color: #dee2e6;
+  margin: 0.5rem 0;
+
+  summary {
+    background: #f8f9fa;
+    color: #495057;
+    font-weight: 500;
+
+    &::before {
+      content: "▶";
+      font-size: 0.7em;
+    }
+  }
+}
+
+// =============================================================================
+// REFERENCE / RESOURCES SECTIONS
+// =============================================================================
+
+details.reference-section {
+  border-color: #ffb900;
+  background: linear-gradient(to bottom, #fffbf0, #fff);
+
+  summary {
+    background: linear-gradient(to right, #fff5d9, #fffbf0);
+    color: #996600;
+
+    &::before {
+      content: "📚";
+      font-size: 1em;
+    }
+
+    &:hover {
+      background: linear-gradient(to right, #fff0c4, #fff5d9);
+    }
+  }
+
+  &[open] summary {
+    background: #ffb900;
+    color: #000;
+  }
+}
+
+// =============================================================================
+// MERMAID DIAGRAM STYLING
+// =============================================================================
+
+.mermaid {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #fafbfc;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+// Mermaid in collapsible container
+details .mermaid {
+  margin: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+// =============================================================================
+// BREADCRUMBS (if enabled)
+// =============================================================================
+
+.breadcrumb-nav {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+
+  a {
+    color: #0078d4;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .separator {
+    margin: 0 0.5rem;
+  }
+}
+
+// =============================================================================
+// MOBILE RESPONSIVENESS
+// =============================================================================
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  #markdown-toc {
+    padding: 0.75rem 1rem;
+  }
+
+  .level-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// =============================================================================
+// PRINT STYLES
+// =============================================================================
+
+@media print {
+  .site-nav,
+  .site-header,
+  .site-footer,
+  .back-to-top {
+    display: none !important;
+  }
+
+  .main-content {
+    max-width: 100%;
+    padding: 0;
+  }
+}

@@ -1,0 +1,15 @@
+# Python dependencies for diagram generation
+# Used by scripts in docs/assets/diagrams/src/
+
+# Diagram generation libraries
+matplotlib>=3.8.0
+pillow>=10.0.0
+diagrams>=0.23.0
+
+# Geographic mapping for Azure regions diagram
+cartopy>=0.22.0
+pyproj>=3.6.0
+shapely>=2.0.0
+
+# Pre-commit hooks (already in devcontainer, but documenting here)
+pre-commit>=3.0.0

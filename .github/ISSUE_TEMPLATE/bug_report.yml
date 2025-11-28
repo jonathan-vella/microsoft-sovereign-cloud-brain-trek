@@ -1,0 +1,106 @@
+name: Bug Report
+description: Report broken links, display issues, or technical problems with the site
+labels: ["bug", "triage"]
+title: "[Bug] "
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the information below to help us fix the issue quickly.
+
+  - type: dropdown
+    id: bug_type
+    attributes:
+      label: Bug Type
+      options:
+        - Broken link (internal)
+        - Broken link (external)
+        - Display/rendering issue
+        - Navigation problem
+        - Search not working
+        - Mobile responsiveness
+        - Build failure
+        - Other
+      description: What type of bug are you reporting?
+    validations:
+      required: true
+
+  - type: input
+    id: page_url
+    attributes:
+      label: Page URL
+      description: The URL of the page where you encountered the bug
+      placeholder: https://jonathan-vella.github.io/sov-cloud-brain-trek/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear description of what the bug is
+      placeholder: Describe what went wrong...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: I expected...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this bug?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other
+      description: Which browser are you using?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Desktop
+        - Tablet
+        - Mobile
+      description: What device are you using?
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain the problem
+      placeholder: Drag and drop images here...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information that might help us fix this bug

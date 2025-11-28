@@ -1,0 +1,43 @@
+{
+    "name": "Sovereign Cloud Brain Trek",
+    "image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm",
+
+    // Features to add - Node.js for markdownlint-cli2, Python for diagram generation
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts"
+        },
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.12"
+        }
+    },
+
+    // Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "shopify.ruby-lsp",
+                "sissel.shopify-liquid",
+                "DavidAnson.vscode-markdownlint",
+                "yzhang.markdown-all-in-one",
+                "bierner.markdown-mermaid",
+                "redhat.vscode-yaml",
+                "EditorConfig.EditorConfig",
+                "esbenp.prettier-vscode"
+            ],
+            "settings": {
+                "markdownlint.config": {
+                    "extends": "${workspaceFolder}/.markdownlint.json"
+                },
+                "markdownlint.run": "onSave"
+            }
+        }
+    },
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [4000],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // Install graphviz for diagrams, cartopy dependencies for geographic maps
+    "postCreateCommand": "sh /usr/local/post-create.sh && sudo apt-get update && sudo apt-get install -y graphviz libgeos-dev libproj-dev proj-data proj-bin && pip install -r requirements.txt && npm install -g markdownlint-cli2 && pre-commit install"
+}

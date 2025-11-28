@@ -1,0 +1,80 @@
+name: Sovereign Cloud Brain Trek Issue
+description: Report content issues, suggest improvements, or contribute to the Sovereign Cloud learning program
+labels: ["triage"]
+title: "[Issue] "
+assignees: []
+body:
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue Type
+      options:
+        - Content Error/Correction
+        - Documentation Improvement
+        - Lab/Exercise Issue
+        - Quiz Question Issue
+        - New Content Suggestion
+        - Visual Asset Specification
+        - Technical Question
+        - Other
+      description: What type of issue are you reporting?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: learning_level
+    attributes:
+      label: Learning Level
+      options:
+        - Level 50 - Essentials
+        - Level 100 - Foundational
+        - Level 200 - Intermediate
+        - Level 300 - Advanced
+        - All Levels
+      description: Which learning level does this affect?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: modules
+    attributes:
+      label: Module(s) Involved
+      options:
+        - label: Digital Sovereignty & Sovereignty Models
+        - label: Cloud Models Overview
+        - label: Azure Local
+        - label: Azure Arc
+        - label: Edge RAG (Retrieval-Augmented Generation)
+        - label: Security & Compliance
+        - label: Cost Optimization
+        - label: Multiple/Other
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Clearly describe the issue, suggestion, or question. Include specific details, page numbers/section names, and steps to reproduce if applicable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: content_context
+    attributes:
+      label: Relevant Content Context
+      description: |
+        - Which file/module is affected? (e.g., docs/level-100/azure-local-overview.md)
+        - What's the specific section or quiz question number?
+        - Any error messages, broken links, or incorrect information?
+        - Relevant screenshots or examples?
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Suggested Solution (if applicable)
+      description: If you have a proposed fix, correction, or new content idea, describe it here.
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add any other context, references, external resources, or Microsoft Learn links that may help.

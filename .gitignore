@@ -1,0 +1,38 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ignore Ruby/Bundler files
+vendor/
+Gemfile.lock
+.bundle/
+
+# Ignore node modules if using any npm packages
+node_modules/
+package-lock.json
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.log
+
+# Ignore backup files created by scripts
+*.backup.*
+
+# Ignore personal notes
+notes/
+scratch/
+docs/level-50/plan.md

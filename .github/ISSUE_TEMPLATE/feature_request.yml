@@ -1,0 +1,97 @@
+name: Feature Request
+description: Suggest a new feature, module, or improvement to the learning program
+labels: ["enhancement", "triage"]
+title: "[Feature] "
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement! Your ideas help make this learning program better.
+
+  - type: dropdown
+    id: feature_type
+    attributes:
+      label: Feature Type
+      options:
+        - New learning module
+        - New hands-on lab
+        - New knowledge check questions
+        - Visual asset/diagram
+        - Navigation improvement
+        - Search enhancement
+        - Accessibility improvement
+        - Documentation improvement
+        - Tool/workflow improvement
+        - Other
+      description: What type of feature are you requesting?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: learning_level
+    attributes:
+      label: Target Learning Level
+      options:
+        - Level 50 - Essentials
+        - Level 100 - Foundational
+        - Level 200 - Intermediate
+        - Level 300 - Advanced
+        - All Levels
+        - N/A
+      description: Which learning level would this feature support?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Target Audience
+      options:
+        - Sales & Pre-Sales
+        - Technical Professionals
+        - Both audiences
+        - All users
+      description: Who would benefit most from this feature?
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What gap does it fill?
+      placeholder: Describe the problem or need...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your proposed feature or improvement
+      placeholder: I would like...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or features?
+      placeholder: I also considered...
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Any Microsoft Learn links, examples, or documentation that could inform this feature?
+      placeholder: |
+        - https://learn.microsoft.com/...
+        - https://...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context, mockups, or examples about the feature request
