@@ -443,7 +443,7 @@ The largest ROI typically comes from time savings - employees finding informatio
    - [LangChain Documentation](https://python.langchain.com/)
    - [LlamaIndex Documentation](https://gpt-index.readthedocs.io/)
    - [Hugging Face](https://huggingface.co/)
-   - [Azure AI Documentation](https://learn.microsoft.com/azure/ai-services/)
+   - [Azure AI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/)
 
 5. **💡 Consider hands-on practice:**
    - Build a simple RAG system locally
