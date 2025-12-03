@@ -921,7 +921,7 @@ D) Skip improvements, maintain current performance
    - [LlamaIndex Documentation](https://docs.llamaindex.ai/)
    - [Hugging Face Transformers](https://huggingface.co/docs/transformers/)
    - [Vector Database Benchmarks](https://github.com/erikbern/ann-benchmarks)
-   - [Azure AI Documentation](https://learn.microsoft.com/azure/ai-services/)
+   - [Azure AI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/)
 
 5. **💡 Consider hands-on practice:**
    - Build end-to-end RAG system

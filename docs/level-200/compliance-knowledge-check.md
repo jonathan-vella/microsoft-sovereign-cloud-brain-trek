@@ -951,8 +951,8 @@ Zero-trust is essential for sovereign cloud deployments:
    - [GDPR Official Text](https://gdpr-info.eu/)
    - [FedRAMP Documentation](https://www.fedramp.gov/)
    - [NIST 800-53 Controls](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
-   - [Azure Security Documentation](https://learn.microsoft.com/azure/security/)
-   - [Azure Compliance Documentation](https://learn.microsoft.com/azure/compliance/)
+   - [Azure Security Documentation](https://learn.microsoft.com/en-us/azure/security/)
+   - [Azure Compliance Documentation](https://learn.microsoft.com/en-us/azure/compliance/)
 
 5. **💡 Consider hands-on practice:**
    - Implement GDPR-compliant data processing

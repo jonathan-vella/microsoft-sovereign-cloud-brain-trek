@@ -376,7 +376,7 @@ Azure Arc itself is free - there's no charge to connect servers, Kubernetes clus
    - [Digital Sovereignty Fundamentals](digital-sovereignty)
 
 4. **🌐 Explore external resources:**
-   - [Azure Arc Documentation](https://learn.microsoft.com/azure/azure-arc/)
+   - [Azure Arc Documentation](https://learn.microsoft.com/en-us/azure/azure-arc/)
    - [Azure Arc Jumpstart](https://azurearcjumpstart.io/)
    - [Azure Arc Tech Community](https://techcommunity.microsoft.com/t5/azure-arc/bd-p/AzureArc)
 
