@@ -32,10 +32,10 @@ This skilling plan provides a comprehensive, structured approach to mastering Mi
 
 | Level | Focus | Duration | Start |
 |:------|:------|:---------|:------|
-| 📋 **Level 50** | Prerequisites — Cloud, security & Azure fundamentals | 1-2 weeks | [Begin →]({% link level-50/README.md %}) |
-| 🎯 **Level 100** | Foundation — Core concepts & value propositions | 2-4 weeks | [Begin →]({% link level-100/README.md %}) |
-| 🏗️ **Level 200** | Intermediate — Solution design & deployment planning | 4-6 weeks | [Begin →]({% link level-200/README.md %}) |
-| 🚀 **Level 300** | Advanced — Expert implementation & customer leadership | 8-12 weeks | [Begin →]({% link level-300/README.md %}) |
+| 📋 **Level 50** | Prerequisites — Cloud, security & Azure fundamentals | 1 week | [Begin →]({% link level-50/README.md %}) |
+| 🎯 **Level 100** | Foundation — Core concepts & value propositions | 1-2 weeks | [Begin →]({% link level-100/README.md %}) |
+| 🏗️ **Level 200** | Intermediate — Solution design & deployment planning | 2-3 weeks | [Begin →]({% link level-200/README.md %}) |
+| 🚀 **Level 300** | Advanced — Expert implementation & customer leadership | 4-6 weeks | [Begin →]({% link level-300/README.md %}) |
 
 ---
 
@@ -65,8 +65,8 @@ This skilling plan provides a comprehensive, structured approach to mastering Mi
 
 | Aspect | Details |
 |:-------|:--------|
-| **Total Duration** | 15-24 weeks (3.5-6 months) |
-| **Weekly Commitment** | 1-10 hours depending on level |
+| **Total Duration** | 8-12 weeks (2-3 months) |
+| **Weekly Commitment** | 1-3 hours depending on level |
 | **Format** | Self-paced with hands-on labs |
 | **Certification Path** | Aligned with Microsoft certifications |
 

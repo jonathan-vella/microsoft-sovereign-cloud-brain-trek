@@ -16,7 +16,7 @@ has_children: true
 
 ## Overview
 
-This module provides practical, hands-on labs to reinforce the concepts covered in Modules 1-5. Each lab is designed to be completed in 2-4 hours and builds progressively toward a complete sovereign cloud deployment with compliance and security controls.
+This module provides practical, hands-on labs to reinforce the concepts covered in Modules 1-5. Each lab builds progressively toward a complete sovereign cloud deployment with compliance and security controls. Completion time varies based on environment setup and individual experience.
 
 ### Prerequisites
 
