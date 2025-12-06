@@ -12,7 +12,7 @@ has_children: true
 
 Explore advanced Azure Local deployment patterns, hardware planning, high-availability architectures, and advanced networking scenarios for enterprise edge deployments.
 
-**Duration:** 3-4 hours
+**Duration:** 1.5-2 hours
 
 ## Module Content
 

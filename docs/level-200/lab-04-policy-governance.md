@@ -50,7 +50,7 @@ Optional but Recommended:
 ☐ Compliance framework knowledge (GDPR, FedRAMP)
 ☐ Audit logging concepts
 
-Estimated Time: 2-3 hours
+
 Difficulty: Intermediate
 Cost: $0-10 Azure credits (Policy is free)
 ```

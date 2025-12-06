@@ -51,7 +51,7 @@ Optional but Recommended:
 ☐ Prometheus/Grafana knowledge
 ☐ Alert rule configuration experience
 
-Estimated Time: 2-3 hours
+
 Difficulty: Intermediate
 Cost: $20-50 Azure credits (monitoring ingestion)
 ```

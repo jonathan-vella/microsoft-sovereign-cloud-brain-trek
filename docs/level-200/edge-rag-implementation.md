@@ -529,7 +529,7 @@ The following diagrams support this module:
 4. **Apply** production patterns to your organization
 5. **Advance** to hands-on lab exercises
 
-**Estimated Time:** 8-10 hours to complete this module
+**Estimated Time:** 2-2.5 hours to complete this module
 
 ---
 

@@ -45,10 +45,9 @@ Before starting Level 200, ensure you have:
 - [ ] Access to an Azure subscription (for technical track)
 - [ ] Access to lab environment or Azure Local hardware for hands-on exercises
 
-**Estimated Time Commitment:** 3-5 hours per week  
-**Total Program Duration:** 4-6 weeks (to complete all 3 modules)  
-**Completed to Date:** 2 of 6 planned modules (~234 KB of content)  
-**Total Planned Hours:** 11-14 hours core content + hands-on labs
+**Estimated Time Commitment:** 2-3 hours per week  
+**Total Program Duration:** 2-3 weeks (to complete all modules)  
+**Total Planned Hours:** 6-10 hours core content
 
 ---
 
@@ -56,7 +55,7 @@ Before starting Level 200, ensure you have:
 
 ### Module 1: Azure Local Architecture Deep Dive
 
-**Duration:** 3-4 hours | **Status:** ✅ Complete
+**Duration:** 1.5-2 hours | **Status:** ✅ Complete
 
 Explore advanced Azure Local deployment patterns, hardware planning, high-availability architectures, and advanced networking scenarios for enterprise edge deployments.
 
@@ -72,7 +71,7 @@ Explore advanced Azure Local deployment patterns, hardware planning, high-availa
 
 ### Module 2: Arc Advanced Management
 
-**Duration:** 3.5-4.5 hours | **Status:** ✅ Complete
+**Duration:** 2-2.5 hours | **Status:** ✅ Complete
 
 Master enterprise-scale governance, cost optimization, and security hardening for Azure Arc across hybrid and multi-cloud environments.
 
@@ -88,7 +87,7 @@ Master enterprise-scale governance, cost optimization, and security hardening fo
 
 ### Module 3: Edge RAG Implementation
 
-**Duration:** 4-5 hours | **Status:** ✅ Complete
+**Duration:** 2-2.5 hours | **Status:** ✅ Complete
 
 Master production-ready Retrieval-Augmented Generation deployment patterns, LLM optimization, vector database tuning, and operational excellence for enterprise edge deployments.
 
@@ -105,7 +104,7 @@ Master production-ready Retrieval-Augmented Generation deployment patterns, LLM 
 
 ### Module 4: Pre-Sales & Solution Design
 
-**Duration:** 2.5-3.5 hours | **Status:** ✅ Complete
+**Duration:** 1.5-2 hours | **Status:** ✅ Complete
 
 Master customer discovery, solution architecture, sizing methodologies, and business case development for sovereign cloud implementations.
 
@@ -121,7 +120,7 @@ Master customer discovery, solution architecture, sizing methodologies, and busi
 
 ### Module 5: Compliance & Security Patterns
 
-**Duration:** 3-4 hours | **Status:** ✅ Complete
+**Duration:** 1.5-2 hours | **Status:** ✅ Complete
 
 Master regulatory compliance frameworks (GDPR, FedRAMP), encryption strategies, key management, security hardening, and incident response for sovereign cloud deployments.
 
@@ -138,21 +137,24 @@ Master regulatory compliance frameworks (GDPR, FedRAMP), encryption strategies, 
 
 ### Module 6: Hands-On Labs
 
-**Duration:** 6-8 hours | **Status:** ✅ Complete
+**Status:** ✅ Complete
 
 Five progressive hands-on labs reinforcing Modules 1-5 through practical implementation of Azure Local, Azure Arc, Edge RAG, policy governance, and monitoring in a complete sovereign cloud environment.
 
+{: .note }
+> **💡 Note:** Lab exercises are provided for hands-on practice. Time to complete labs varies based on environment setup and individual experience.
+
 **Lab Overview:**
 
-1. [Lab 1: Azure Local Deployment](lab-01-azure-local-deployment.md) (2-3h)
+1. [Lab 1: Azure Local Deployment](lab-01-azure-local-deployment.md)
    - Deploy Azure Local in connected mode with sample applications
-2. [Lab 2: Azure Arc Onboarding](lab-02-azure-arc-onboarding.md) (2-3h)
+2. [Lab 2: Azure Arc Onboarding](lab-02-azure-arc-onboarding.md)
    - Register and manage resources with Arc, GitOps, extensions
-3. [Lab 3: Edge RAG Setup](lab-03-edge-rag-setup.md) (3-4h)
+3. [Lab 3: Edge RAG Setup](lab-03-edge-rag-setup.md)
    - Complete RAG system with Weaviate, Ollama, and FastAPI
-4. [Lab 4: Policy & Governance](lab-04-policy-governance.md) (2-3h)
+4. [Lab 4: Policy & Governance](lab-04-policy-governance.md)
    - Custom policies, Kubernetes enforcement, compliance monitoring
-5. [Lab 5: Monitoring & Observability](lab-05-monitoring-observability.md) (2-3h)
+5. [Lab 5: Monitoring & Observability](lab-05-monitoring-observability.md)
    - End-to-end monitoring with Log Analytics, alerts, and dashboards
 
 **[Module 6 Overview & Navigation](../level-200/README)**
@@ -194,8 +196,6 @@ Five progressive hands-on labs reinforcing Modules 1-5 through practical impleme
 - Access to Azure Local sizing tool
 - Understanding of customer requirements
 
-**Estimated Time:** 2-3 hours
-
 **Topics Covered:**
 
 - Hardware planning and capacity calculations
@@ -215,8 +215,6 @@ Five progressive hands-on labs reinforcing Modules 1-5 through practical impleme
 - Access to an Azure subscription
 - Understanding of Azure Policy
 
-**Estimated Time:** 2-3 hours
-
 **Topics Covered:**
 
 - Azure Policy implementation at scale
@@ -235,8 +233,6 @@ Five progressive hands-on labs reinforcing Modules 1-5 through practical impleme
 - Completion of Module 3: Edge RAG Implementation
 - AKS Arc cluster or ability to create one
 - Linux VM or container environment
-
-**Estimated Time:** 3-4 hours
 
 **Topics Covered:**
 
@@ -286,7 +282,7 @@ You have successfully completed Module 3 when you can:
 ### Current Progress
 
 **✅ Completed:** Modules 1, 2, 3, 4, 5, and 6 (All Level 200 modules!)  
-**Duration:** 33-48 hours of comprehensive intermediate content  
+**Duration:** 10-11 hours of comprehensive intermediate content  
 **Status:** Level 200 is 100% complete with all hands-on labs
 
 ---
@@ -295,13 +291,13 @@ You have successfully completed Module 3 when you can:
 
 | Module | Status | Topics | Duration | Files |
 |--------|--------|--------|----------|-------|
-| **Module 1** | ✅ Complete | Azure Local Architecture, Hardware Planning, HA Patterns, Advanced Networking | 6-8 hrs | 5 |
-| **Module 2** | ✅ Complete | Arc Governance, Cost Optimization, Enterprise Patterns | 7-9 hrs | 5 |
-| **Module 3** | ✅ Complete | RAG Deployment, LLM Optimization, Vector Databases, Operations | 8-10 hrs | 6 |
-| **Module 4** | ✅ Complete | Pre-Sales, Discovery, Sizing, Cost Estimation | 5-7 hrs | 5 |
-| **Module 5** | ✅ Complete | Compliance, GDPR, FedRAMP, Encryption, Security Hardening | 6-8 hrs | 6 |
-| **Module 6** | ✅ Complete | Hands-On Labs (5 progressive labs with Azure Local, Arc, RAG, Policy, Monitoring) | 11-16 hrs | 6 |
-| **Level 200 Total** | ✅ Complete | **All intermediate topics with practical labs** | **43-58 hrs** | **33 files** |
+| **Module 1** | ✅ Complete | Azure Local Architecture, Hardware Planning, HA Patterns, Advanced Networking | 1.5-2 hrs | 5 |
+| **Module 2** | ✅ Complete | Arc Governance, Cost Optimization, Enterprise Patterns | 2-2.5 hrs | 5 |
+| **Module 3** | ✅ Complete | RAG Deployment, LLM Optimization, Vector Databases, Operations | 2-2.5 hrs | 6 |
+| **Module 4** | ✅ Complete | Pre-Sales, Discovery, Sizing, Cost Estimation | 1.5-2 hrs | 5 |
+| **Module 5** | ✅ Complete | Compliance, GDPR, FedRAMP, Encryption, Security Hardening | 1.5-2 hrs | 6 |
+| **Module 6** | ✅ Complete | Hands-On Labs (5 progressive labs with Azure Local, Arc, RAG, Policy, Monitoring) | Varies by experience | 6 |
+| **Level 200 Total** | ✅ Complete | **All intermediate topics with practical labs** | **10-11 hrs** | **33 files** |
 
 ---
 
@@ -339,6 +335,5 @@ You have successfully completed Module 6 when you can:
 - ✓ Enforce governance policies across hybrid infrastructure (Lab 4)
 - ✓ Configure comprehensive monitoring and alerting (Lab 5)
 - ✓ All validation steps passing on 5 labs
-- ✓ Total hands-on experience: 11-16 hours across 5 labs
 
 **Last Updated:** October 2025

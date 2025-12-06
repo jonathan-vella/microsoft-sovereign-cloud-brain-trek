@@ -50,7 +50,7 @@ Optional but Recommended:
 ☐ Kubernetes onboarding knowledge
 ☐ Hybrid management concepts
 
-Estimated Time: 2-3 hours
+
 Difficulty: Intermediate
 Cost: $0-10 Azure credits (Arc is free)
 ```

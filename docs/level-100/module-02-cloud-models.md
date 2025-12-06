@@ -43,4 +43,4 @@ Understand the three Microsoft Sovereign Cloud models and learn how to select th
 - Azure Government and Azure China
 - Use case mapping and decision criteria
 
-**Duration:** 1-1.5 hours
+**Duration:** 30-45 minutes

@@ -12,7 +12,7 @@ has_children: true
 
 Master regulatory compliance frameworks (GDPR, FedRAMP), encryption strategies, key management, and security hardening for sovereign cloud deployments.
 
-**Duration:** 3-4 hours
+**Duration:** 1.5-2 hours
 
 ## Module Content
 

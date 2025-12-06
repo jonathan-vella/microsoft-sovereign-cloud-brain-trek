@@ -190,10 +190,10 @@ The skilling plan is divided into four progressive levels, each building upon th
 
 | Level | Objective | Sales Focus | Technical Focus | Duration |
 |-------|-----------|-------------|-----------------|----------|
-| **50** | **Prerequisites:** Essential cloud computing and Azure fundamentals | Basic cloud concepts and terminology for customer conversations | Cloud service models, security principles, and Azure basics | 1-2 weeks (2-4 hours) |
-| **100** | **Foundational:** Understand the "what" and "why" | Articulate value propositions and identify customer scenarios | Grasp core architectural concepts and technology components | 2-4 weeks (4-12 hours) |
-| **200** | **Intermediate:** Design solutions and handle objections | Develop proposals, conduct TCO/ROI analysis, position against competitors | Plan deployments, understand prerequisites, design solution architectures | 4-6 weeks (16-36 hours) |
-| **300** | **Advanced:** Lead deployments and provide expert guidance | Structure complex deals and navigate deep compliance discussions | Execute end-to-end deployments, troubleshoot, and optimize for production | 8-12 weeks (48-120 hours) |
+| **50** | **Prerequisites:** Essential cloud computing and Azure fundamentals | Basic cloud concepts and terminology for customer conversations | Cloud service models, security principles, and Azure basics | 1 week (0.5-1 hour) |
+| **100** | **Foundational:** Understand the "what" and "why" | Articulate value propositions and identify customer scenarios | Grasp core architectural concepts and technology components | 1-2 weeks (1-3 hours) |
+| **200** | **Intermediate:** Design solutions and handle objections | Develop proposals, conduct TCO/ROI analysis, position against competitors | Plan deployments, understand prerequisites, design solution architectures | 2-3 weeks (6-10 hours) |
+| **300** | **Advanced:** Lead deployments and provide expert guidance | Structure complex deals and navigate deep compliance discussions | Execute end-to-end deployments, troubleshoot, and optimize for production | 4-6 weeks (10-16 hours) |
 
 ### 📋 Level 50: Prerequisites
 
@@ -215,7 +215,7 @@ The skilling plan is divided into four progressive levels, each building upon th
 - Internet access for online learning
 - Microsoft Learn account (free)
 
-**Time Commitment:** 1-2 hours per week
+**Time Commitment:** 30 minutes per week
 
 ### 🎯 Level 100: Foundational Concepts
 
@@ -238,7 +238,7 @@ The skilling plan is divided into four progressive levels, each building upon th
 - Familiarity with virtualization
 - Microsoft Learn account (free)
 
-**Time Commitment:** 2-3 hours per week
+**Time Commitment:** 1 hour per week
 
 ### 🏗️ Level 200: Intermediate Skills
 
@@ -260,7 +260,7 @@ The skilling plan is divided into four progressive levels, each building upon th
 - Recommended: AZ-900 certification or equivalent
 - Access to Azure subscription (technical track)
 
-**Time Commitment:** 4-6 hours per week
+**Time Commitment:** 2-3 hours per week
 
 ### 🚀 Level 300: Advanced Expertise
 
@@ -283,7 +283,7 @@ The skilling plan is divided into four progressive levels, each building upon th
 - Production or lab environment access
 - PowerShell and IaC experience
 
-**Time Commitment:** 6-10 hours per week
+**Time Commitment:** 2-3 hours per week
 
 ---
 
@@ -291,29 +291,29 @@ The skilling plan is divided into four progressive levels, each building upon th
 
 ### Program Duration
 
-**Total Program:** 15-24 weeks (approximately 3.5-6 months)
+**Total Program:** 8-12 weeks (approximately 2-3 months)
 
 ```text
-Level 50:  ██ (1-2 weeks)
-Level 100: ████ (2-4 weeks)
-Level 200: ████████ (4-6 weeks)
-Level 300: ████████████████ (8-12 weeks)
+Level 50:  ██ (1 week)
+Level 100: ████ (1-2 weeks)
+Level 200: ████████ (2-3 weeks)
+Level 300: ████████████████ (4-6 weeks)
 ```
 
 ### Weekly Time Commitment
 
-- **Level 50:** 1-2 hours per week
-- **Level 100:** 2-3 hours per week
-- **Level 200:** 4-6 hours per week
-- **Level 300:** 6-10 hours per week
+- **Level 50:** 30 minutes per week
+- **Level 100:** 1 hour per week
+- **Level 200:** 2-3 hours per week
+- **Level 300:** 2-3 hours per week
 
 ### Total Learning Hours
 
-- **Level 50:** 2-4 hours total
-- **Level 100:** 4-12 hours total
-- **Level 200:** 16-36 hours total
-- **Level 300:** 48-120 hours total
-- **Complete Program:** 68-168 hours total
+- **Level 50:** 0.5-1 hour total
+- **Level 100:** 1-3 hours total
+- **Level 200:** 6-10 hours total
+- **Level 300:** 10-16 hours total
+- **Complete Program:** 18-30 hours total
 
 ---
 

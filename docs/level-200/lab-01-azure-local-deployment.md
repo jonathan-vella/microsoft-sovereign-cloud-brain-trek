@@ -38,7 +38,7 @@ Optional but Recommended:
 ☐ Docker Desktop (for container images)
 ☐ VS Code with Azure extensions
 
-Estimated Time: 2-3 hours
+
 Difficulty: Intermediate
 Cost: $5-20 Azure credits
 ```

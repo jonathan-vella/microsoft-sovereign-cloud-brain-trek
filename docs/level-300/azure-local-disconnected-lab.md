@@ -18,7 +18,7 @@ nav_order: 3
 **Company:** SecureGov Systems  
 **Objective:** Deploy Azure Local in complete air-gap isolation  
 **Compliance:** FedRAMP High, ITAR  
-**Duration:** 3-4 hours  
+
 
 ---
 

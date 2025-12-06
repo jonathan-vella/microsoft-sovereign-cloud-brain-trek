@@ -43,4 +43,4 @@ Learn how Azure Arc enables unified hybrid and multi-cloud management across any
 - Data services with managed experience anywhere
 - Multi-cloud governance and compliance
 
-**Duration:** 45-60 minutes
+**Duration:** 25-30 minutes
