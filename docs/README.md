@@ -55,52 +55,52 @@ docs/
 
 ## 🎯 Learning Paths
 
-### Level 100 - Foundational (2-4 weeks, 20 hours)
+### Level 100 - Foundational (1-2 weeks, 1-3 hours)
 
 **Goal:** Understand the "what" and "why" of sovereign cloud technologies
 
 | Module | Files | Quiz | Duration | Topics |
 |--------|-------|------|----------|--------|
-| **1. Digital Sovereignty** | 6 | 15q | 4-5 hrs | EU commitments, regulatory, data residency, operational sovereignty |
-| **2. Sovereign Cloud Models** | 5 | 15q | 3-4 hrs | Public, Private, National Partner models & decision framework |
-| **3. Azure Local Overview** | 3 | 10q | 3-4 hrs | Architecture, connected/disconnected modes, hardware |
-| **4. Azure Arc Intro** | 3 | 10q | 2-3 hrs | Arc services, multi-site management, deployment |
-| **5. Edge RAG Concepts** | 4 | 10q | 3-4 hrs | RAG fundamentals, edge deployment, use cases |
+| **1. Digital Sovereignty** | 6 | 15q | 15-30 min | EU commitments, regulatory, data residency, operational sovereignty |
+| **2. Sovereign Cloud Models** | 5 | 15q | 30-45 min | Public, Private, National Partner models & decision framework |
+| **3. Azure Local Overview** | 3 | 10q | 30-45 min | Architecture, connected/disconnected modes, hardware |
+| **4. Azure Arc Intro** | 3 | 10q | 25-30 min | Arc services, multi-site management, deployment |
+| **5. Edge RAG Concepts** | 4 | 10q | 30-40 min | RAG fundamentals, edge deployment, use cases |
 
-**Total:** 20 files, 50 quiz questions, 15-20 hours learning
+**Total:** 20 files, 50 quiz questions, 2-3 hours learning
 
 ---
 
-### Level 200 - Intermediate (4-6 weeks, 40 hours)
+### Level 200 - Intermediate (2-3 weeks, 6-10 hours)
 
 **Goal:** Design solutions, handle objections, implement deployments
 
 | Module | Files | Labs | Duration | Topics |
 |--------|-------|------|----------|--------|
-| **1. Azure Local Deep Dive** | 6 | 1 | 8 hrs | Advanced networking, HA patterns, hardware planning |
-| **2. Arc Advanced Management** | 4 | 1 | 8 hrs | Governance, cost optimization, enterprise patterns |
-| **3. Edge RAG Implementation** | 5 | 1 | 8 hrs | Production architecture, optimization, MLOps, vector DB |
-| **4. Pre-Sales & Solution Design** | 4 | 1 | 8 hrs | Discovery, sizing, TCO/ROI analysis |
-| **5. Compliance & Security** | 3 | 1 | 6 hrs | GDPR, FedRAMP, zero-trust, encryption, key mgmt |
-| **6. Hands-On Labs** | 7 | 5 | 2 hrs | Lab overview, environment setup, troubleshooting |
+| **1. Azure Local Deep Dive** | 6 | 1 | 1.5-2 hrs | Advanced networking, HA patterns, hardware planning |
+| **2. Arc Advanced Management** | 4 | 1 | 2-2.5 hrs | Governance, cost optimization, enterprise patterns |
+| **3. Edge RAG Implementation** | 5 | 1 | 2-2.5 hrs | Production architecture, optimization, MLOps, vector DB |
+| **4. Pre-Sales & Solution Design** | 4 | 1 | 1.5-2 hrs | Discovery, sizing, TCO/ROI analysis |
+| **5. Compliance & Security** | 3 | 1 | 1.5-2 hrs | GDPR, FedRAMP, zero-trust, encryption, key mgmt |
+| **6. Hands-On Labs** | 7 | 5 | Varies | Lab overview, environment setup, troubleshooting |
 
-**Total:** 34 files, 5 hands-on labs (20+ exercises), 40 hours learning
+**Total:** 34 files, 5 hands-on labs (20+ exercises), 10-11 hours core learning
 
 ---
 
-### Level 300 - Advanced (8-12 weeks, 60 hours)
+### Level 300 - Advanced (4-6 weeks, 10-16 hours)
 
 **Goal:** Expert guidance, architecture leadership, troubleshooting mastery
 
 | Module | Files | Labs | Duration | Topics |
 |--------|-------|------|----------|--------|
-| **1. Zero Trust Security** | 4 | 1 | 12 hrs | Architecture, monitoring, compliance, implementation |
-| **2. Connected Azure Local** | 4 | 1 | 8 hrs | Multi-site topologies, advanced networking, federation |
-| **3. Disconnected Azure Local** | 4 | 1 | 10 hrs | Air-gapped design, certificate management, operations |
-| **4. Production Edge RAG** | 5 | 1 | 12 hrs | Production architecture, MLOps, performance tuning |
-| **5. Advanced Troubleshooting** | 3 | - | 8 hrs | Diagnostic tools, decision trees, escalation procedures |
+| **1. Zero Trust Security** | 4 | 1 | 1.5-2 hrs | Architecture, monitoring, compliance, implementation |
+| **2. Connected Azure Local** | 4 | 1 | 2-2.5 hrs | Multi-site topologies, advanced networking, federation |
+| **3. Disconnected Azure Local** | 4 | 1 | 2-2.5 hrs | Air-gapped design, certificate management, operations |
+| **4. Production Edge RAG** | 5 | 1 | 2.5-3 hrs | Production architecture, MLOps, performance tuning |
+| **5. Advanced Troubleshooting** | 3 | - | 1.5-2 hrs | Diagnostic tools, decision trees, escalation procedures |
 
-**Total:** 23 files, 4 hands-on labs (18+ exercises), 50 hours learning
+**Total:** 23 files, 4 hands-on labs (18+ exercises), 10-12 hours core learning
 
 ---
 
@@ -114,7 +114,7 @@ docs/
 | **Quizzes** | 75+ questions across all levels |
 | **Hands-On Labs** | 10 complete labs (58+ exercises) |
 | **Visual Assets** | 59 specified (0 created, in designer phase) |
-| **Estimated Learning Time** | 115-150 hours total |
+| **Estimated Learning Time** | 18-30 hours core content |
 
 ---
 

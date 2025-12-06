@@ -52,7 +52,7 @@ Optional but Recommended:
 ☐ Vector database knowledge (Weaviate/Qdrant)
 ☐ REST API debugging tools
 
-Estimated Time: 3-4 hours
+
 Difficulty: Advanced
 Cost: $50-100 Azure credits (GPU usage)
 ```

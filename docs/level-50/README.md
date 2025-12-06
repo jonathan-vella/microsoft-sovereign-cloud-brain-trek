@@ -45,9 +45,9 @@ Before starting Level 50, you should have:
 - [ ] Access to a web browser for online learning resources
 - [ ] (Optional) Microsoft Learn account - [Sign up here](https://learn.microsoft.com)
 
-**Estimated Time Commitment:** 30-60 minutes per week
-**Total Duration:** 1-2 weeks
-**Total Hours:** 1-2 hours
+**Estimated Time Commitment:** 15-30 minutes per week
+**Total Duration:** 1 week
+**Total Hours:** 0.5-1 hour
 
 ---
 
@@ -55,19 +55,19 @@ Before starting Level 50, you should have:
 
 ### [Module 1: Cloud Computing Fundamentals]({% link level-50/module-01-cloud-computing.md %})
 
-**Duration:** 20-30 minutes
+**Duration:** 10-15 minutes
 
 Learn essential cloud computing concepts including service models (IaaS, PaaS, SaaS), deployment models (public, private, hybrid), and business benefits. Understand the shift from CapEx to OpEx and how cloud enables scalability and innovation.
 
 ### [Module 2: Security & Compliance Fundamentals]({% link level-50/module-02-security-compliance.md %})
 
-**Duration:** 20-30 minutes
+**Duration:** 10-15 minutes
 
 Build foundational knowledge of security principles (CIA triad), data protection, identity and access management, and key compliance frameworks (GDPR, HIPAA, SOC 2, ISO 27001).
 
 ### [Module 3: Microsoft Azure Introduction]({% link level-50/module-03-azure-intro.md %})
 
-**Duration:** 30-45 minutes
+**Duration:** 15-25 minutes
 
 Explore Microsoft Azure's platform, global infrastructure, service categories, and management tools. Understand regions, availability zones, and key Azure services.
 
@@ -122,7 +122,7 @@ Complete these Microsoft Learn paths and modules:
 3. Complete Module 3 (Azure Introduction) for platform awareness
 4. Skip deep technical details, focus on business value
 
-**Time Investment:** 2-3 hours
+**Time Investment:** 1-1.5 hours
 
 ### For Technical Professionals
 
@@ -140,7 +140,7 @@ Complete these Microsoft Learn paths and modules:
 3. Review additional technical documentation
 4. Consider creating a free Azure account for hands-on practice
 
-**Time Investment:** 4-6 hours
+**Time Investment:** 2-3 hours
 
 ### For New Microsoft Partners
 
@@ -158,7 +158,7 @@ Complete these Microsoft Learn paths and modules:
 3. Practice customer discovery questions
 4. Understand Microsoft's cloud portfolio positioning
 
-**Time Investment:** 3-4 hours
+**Time Investment:** 1.5-2 hours
 
 ---
 

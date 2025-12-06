@@ -17,7 +17,7 @@ nav_order: 4
 
 **Company:** IntelliData Systems  
 **Objective:** Deploy production RAG system on edge  
-**Duration:** 4 hours  
+
 
 ---
 

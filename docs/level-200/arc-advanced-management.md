@@ -717,7 +717,7 @@ The following diagrams support this module:
 4. **Apply** enterprise governance patterns to your organization
 5. **Advance** to Level 200 Module 3 (Edge RAG Implementation) for additional advanced topics
 
-**Estimated Time:** 8-10 hours to complete this module
+**Estimated Time:** 2-2.5 hours to complete this module
 
 ---
 

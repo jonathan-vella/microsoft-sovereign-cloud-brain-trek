@@ -108,7 +108,7 @@ FINAL ARCHITECTURE:
 | 3 | Edge RAG Setup | 3-4 hours | Advanced |
 | 4 | Policy & Governance | 2-3 hours | Intermediate |
 | 5 | Monitoring & Alerts | 2-3 hours | Intermediate |
-| **Total** | **All Labs** | **11-16 hours** | **Mixed** |
+| **Total** | **All Labs** | **Varies by experience** | **Mixed** |
 
 ---
 

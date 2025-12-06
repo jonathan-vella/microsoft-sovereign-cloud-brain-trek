@@ -19,7 +19,7 @@ nav_order: 3
 
 In this hands-on lab, you will implement Zero Trust security controls in a sovereign cloud environment. You will configure identity-based access controls, device compliance policies, conditional access rules, and set up monitoring for a production-like deployment.
 
-**Duration:** 2-3 hours  
+
 **Difficulty:** Intermediate-Advanced  
 **Prerequisites:** Level 200 completion, Azure subscription access
 

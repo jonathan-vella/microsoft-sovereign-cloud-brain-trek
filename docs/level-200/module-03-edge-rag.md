@@ -12,7 +12,7 @@ has_children: true
 
 Master production-ready Retrieval-Augmented Generation deployment patterns, LLM optimization, vector database tuning, and operational excellence.
 
-**Duration:** 4-5 hours
+**Duration:** 2-2.5 hours
 
 ## Module Content
 

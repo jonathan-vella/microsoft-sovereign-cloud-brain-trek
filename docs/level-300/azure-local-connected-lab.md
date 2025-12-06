@@ -12,7 +12,7 @@ nav_order: 3
 **Company:** GlobalTech Expansion  
 **Objective:** Deploy Azure Local in connected mode across two geographic sites  
 **Compliance:** GDPR, data residency requirements  
-**Duration:** 2-3 hours  
+  
 **Resources:** 2 Azure Local clusters, Azure connectivity services
 
 ---
