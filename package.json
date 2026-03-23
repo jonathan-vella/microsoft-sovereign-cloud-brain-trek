@@ -20,6 +20,6 @@
   "author": "Jonathan Vella",
   "license": "MIT",
   "devDependencies": {
-    "markdownlint-cli2": "^0.21.0"
+    "markdownlint-cli2": "^0.22.0"
   }
 }
