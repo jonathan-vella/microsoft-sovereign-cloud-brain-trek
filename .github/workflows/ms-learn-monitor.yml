@@ -116,7 +116,7 @@ jobs:
       - name: Check for existing open issue
         if: env.BROKEN_COUNT != '0'
         id: check-existing
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const issues = await github.rest.issues.listForRepo({
@@ -140,7 +140,7 @@ jobs:
 
       - name: Update existing issue
         if: env.BROKEN_COUNT != '0' && steps.check-existing.outputs.exists == 'true'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const fs = require('fs');
@@ -158,7 +158,7 @@ jobs:
 
       - name: Create issue
         if: env.BROKEN_COUNT != '0' && steps.check-existing.outputs.exists == 'false'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const fs = require('fs');
