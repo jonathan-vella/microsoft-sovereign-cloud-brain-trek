@@ -6,10 +6,10 @@ This is the **Microsoft Sovereign Cloud Brain Trek** — a Jekyll-based technica
 
 ### Target Audience
 
-| Track | Roles | Focus |
-|-------|-------|-------|
-| **Sales & Pre-Sales** | Account Executives, Solution Specialists, Pre-Sales Consultants | Business value, opportunity qualification, deal structuring (L50-L100) |
-| **Technical** | Cloud Architects, Field Engineers, AI Developers, Solution Engineers | Architecture design, deployment, implementation, troubleshooting (L50-L300) |
+| Track                 | Roles                                                                | Focus                                                                       |
+| --------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| **Sales & Pre-Sales** | Account Executives, Solution Specialists, Pre-Sales Consultants      | Business value, opportunity qualification, deal structuring (L50-L100)      |
+| **Technical**         | Cloud Architects, Field Engineers, AI Developers, Solution Engineers | Architecture design, deployment, implementation, troubleshooting (L50-L300) |
 
 ### Core Technologies
 
@@ -55,14 +55,14 @@ Each module follows this standard structure:
 - Use **lowercase with hyphens**: `topic-name.md`
 - Be descriptive and content-focused
 
-| Type | Pattern | Example |
-|------|---------|---------|
-| Module overview | `module-0N-topic.md` | `module-01-digital-sovereignty.md` |
-| Topic page | `topic-name.md` | `azure-arc-kubernetes.md` |
-| Knowledge check | `topic-knowledge-check.md` | `azure-arc-knowledge-check.md` |
-| Lab exercise | `lab-0N-name.md` | `lab-01-azure-local-deployment.md` |
-| Specifications | `VISUAL_SPECIFICATIONS.md` | Internal design reference |
-| Level overview | `README.md` | Level index and navigation |
+| Type            | Pattern                    | Example                            |
+| --------------- | -------------------------- | ---------------------------------- |
+| Module overview | `module-0N-topic.md`       | `module-01-digital-sovereignty.md` |
+| Topic page      | `topic-name.md`            | `azure-arc-kubernetes.md`          |
+| Knowledge check | `topic-knowledge-check.md` | `azure-arc-knowledge-check.md`     |
+| Lab exercise    | `lab-0N-name.md`           | `lab-01-azure-local-deployment.md` |
+| Specifications  | `VISUAL_SPECIFICATIONS.md` | Internal design reference          |
+| Level overview  | `README.md`                | Level index and navigation         |
 
 ### Folders
 
@@ -81,10 +81,10 @@ All content pages must include YAML front matter:
 layout: default
 title: Page Title
 nav_order: 1
-parent: Parent Section Name    # For child pages
-has_children: true             # For parent pages with sub-pages
+parent: Parent Section Name # For child pages
+has_children: true # For parent pages with sub-pages
 description: "Brief description for SEO and navigation"
-nav_exclude: true              # For internal/specification files
+nav_exclude: true # For internal/specification files
 ---
 ```
 
@@ -102,15 +102,17 @@ nav_exclude: true              # For internal/specification files
 
 ```markdown
 # Page Title
+
 {: .no_toc }
 
 Brief introduction paragraph explaining the topic.
 
 ## Table of Contents
+
 {: .no_toc .text-delta }
 
 1. TOC
-{:toc}
+   {:toc}
 
 ---
 
@@ -155,13 +157,16 @@ Content here...
 
 ```markdown
 {: .warning }
+
 > **⚠️ Warning Title**
 > Warning content describing a potential issue.
 
 {: .note }
+
 > **💡 Note:** Additional helpful information.
 
 {: .important }
+
 > **Important:** Critical information the reader must know.
 ```
 
@@ -197,9 +202,19 @@ az login --use-device-code
 
 ### Links
 
-- **Internal links**: Use relative paths — `[Link Text](../level-100/topic.md)`
-- **External links**: Use full URLs — `[Microsoft Learn](https://learn.microsoft.com/)`
-- **Section anchors**: `[Section](#section-heading-lowercase-with-hyphens)`
+Both Jekyll `{% link %}` tags and relative `.md` paths are valid project styles
+(the `jekyll-relative-links` plugin resolves the latter at build time). Choose one
+style per file consistently; do not mix within a single page. New content should
+prefer the form already used by sibling pages.
+
+- **Internal links (relative path style):** `[Link Text](../level-100/topic.md)`
+- **Internal links (Jekyll link tag):** `[Link Text]({% link level-100/topic.md %})` — path is
+  relative to the Jekyll source root (`docs/`), and validates at build time
+- **External links:** Use full URLs — `[Microsoft Learn](https://learn.microsoft.com/)`
+- **Section anchors:** `[Section](#section-heading-lowercase-with-hyphens)`
+
+When the docs review pipeline (see `scripts/review/`) flags a broken link, repair
+the link in place; do not mass-convert between the two styles.
 
 ---
 
@@ -253,7 +268,7 @@ When visual assets are pending design, use this placeholder:
 
 ```markdown
 > **📊 Visual Asset Placeholder**
-> *Asset Name: [Asset N: Asset Title]*
+> _Asset Name: [Asset N: Asset Title]_
 > Description of what the diagram will show...
 > **Source:** Adapted from Microsoft Learn documentation
 ```
@@ -264,7 +279,7 @@ When SVG/PNG assets are available:
 
 ```markdown
 ![Descriptive alt text](../../assets/images/level-100/asset-name.svg)
-*Figure N: Caption describing the visual*
+_Figure N: Caption describing the visual_
 ```
 
 ### Mermaid Diagrams
@@ -301,14 +316,14 @@ For detailed visual specifications, refer to `VISUAL_SPECIFICATIONS.md` files in
 
 Use these standard terms throughout:
 
-| Correct Term | Avoid |
-|--------------|-------|
-| Azure Local | Azure Stack HCI (legacy) |
-| Sovereign Landing Zone (SLZ) | sovereign landing zone |
-| Edge RAG | edge-rag, EdgeRAG |
-| Microsoft Entra ID | Azure Active Directory (legacy) |
-| Customer Lockbox | customer lockbox |
-| Air-gapped | air gapped, airgapped |
+| Correct Term                 | Avoid                           |
+| ---------------------------- | ------------------------------- |
+| Azure Local                  | Azure Stack HCI (legacy)        |
+| Sovereign Landing Zone (SLZ) | sovereign landing zone          |
+| Edge RAG                     | edge-rag, EdgeRAG               |
+| Microsoft Entra ID           | Azure Active Directory (legacy) |
+| Customer Lockbox             | customer lockbox                |
+| Air-gapped                   | air gapped, airgapped           |
 
 ### Voice and Tone
 
@@ -323,12 +338,12 @@ Use these standard terms throughout:
 
 **Required verification sources:**
 
-| Topic | Authoritative URL |
-|-------|-------------------|
-| Azure Local | `https://learn.microsoft.com/en-us/azure/azure-local/` |
-| Azure Arc | `https://learn.microsoft.com/en-us/azure/azure-arc/` |
-| Sovereign Cloud | `https://learn.microsoft.com/en-us/industry/sovereignty/` |
-| Edge RAG | `https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/` |
+| Topic            | Authoritative URL                                                                             |
+| ---------------- | --------------------------------------------------------------------------------------------- |
+| Azure Local      | `https://learn.microsoft.com/en-us/azure/azure-local/`                                        |
+| Azure Arc        | `https://learn.microsoft.com/en-us/azure/azure-arc/`                                          |
+| Sovereign Cloud  | `https://learn.microsoft.com/en-us/industry/sovereignty/`                                     |
+| Edge RAG         | `https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/`                                 |
 | Disconnected Ops | `https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview` |
 
 **Verification requirements:**
@@ -343,6 +358,7 @@ Use these standard terms throughout:
 
 ```markdown
 {: .note }
+
 > **📝 Source:** [Article Title](https://learn.microsoft.com/...) — Microsoft Learn (Month YYYY)
 ```
 
@@ -360,6 +376,7 @@ When content differs by audience:
 
 ```markdown
 {: .note }
+
 > **For Sales Professionals:** Focus on business value and ROI metrics.
 > **For Technical Professionals:** See the [architecture deep-dive](link.md) for implementation details.
 ```
@@ -415,7 +432,7 @@ When creating or editing content:
 - [ ] Table of contents included for pages with multiple sections
 - [ ] Learning objectives use ✅ checkmarks
 - [ ] Heading hierarchy is sequential (no skipped levels)
-- [ ] Internal links use relative paths
+- [ ] Internal links use a single style per file (either relative `.md` paths or `{% link %}` tags)
 - [ ] Code blocks specify language
 - [ ] Images have descriptive alt text
 - [ ] Knowledge check questions use expandable answer format

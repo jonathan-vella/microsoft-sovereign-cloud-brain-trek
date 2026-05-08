@@ -9,11 +9,9 @@ description: "Event processing with data residency compliance"
 
 # Event-Driven Architecture for Sovereignty
 
-
 {: .no_toc }
 
 Asynchronous event processing patterns with data residency compliance and regional event routing.
-
 
 ## Table of Contents
 
@@ -39,9 +37,7 @@ After completing this section, you will be able to:
 
 ---
 
-
 ## Event-Driven Architecture
-
 
 | Component | Purpose | Sovereignty Role |
 |-----------|---------|-----------------|

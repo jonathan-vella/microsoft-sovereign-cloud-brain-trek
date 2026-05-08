@@ -4,6 +4,7 @@ title: Module 1 - Azure Local Architecture
 parent: Level 200 - Intermediate
 nav_order: 1
 has_children: true
+description: "Module 1: Azure Local deep-dive — architecture-deep-dive, advanced networking, hardware planning, and HA patterns for production deployments."
 ---
 
 # Module 1: Azure Local Architecture Deep Dive

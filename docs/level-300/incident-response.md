@@ -9,11 +9,9 @@ description: "Security incident response for sovereign cloud environments"
 
 # Incident Response Workflow
 
-
 {: .no_toc }
 
 Security incident response procedures for sovereign cloud environments with compliance-aware escalation and remediation processes.
-
 
 ## Table of Contents
 

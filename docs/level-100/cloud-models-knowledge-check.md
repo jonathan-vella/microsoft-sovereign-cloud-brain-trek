@@ -3,6 +3,7 @@ layout: default
 title: Cloud Models Knowledge Check
 parent: Module 2 - Sovereign Cloud Models
 nav_order: 2.4
+description: "Knowledge check covering Microsoft Sovereign Cloud delivery models — sovereign public cloud, sovereign private cloud (Azure Local), and national partner clouds."
 ---
 
 # Cloud Models Knowledge Check
@@ -35,9 +36,9 @@ Test your understanding of Microsoft's three sovereign cloud models with this co
 
 Which of the following is one of Microsoft's three sovereign cloud models?
 
-A) Sovereign Hybrid Cloud  
-B) Sovereign Private Cloud  
-C) Sovereign Multi-Cloud  
+A) Sovereign Hybrid Cloud
+B) Sovereign Private Cloud
+C) Sovereign Multi-Cloud
 D) Sovereign Edge Cloud
 
 <details markdown="1">
@@ -54,7 +55,7 @@ Microsoft's three sovereign cloud models are:
 
 Sovereign Hybrid Cloud, Multi-Cloud, and Edge Cloud are not official Microsoft sovereign cloud model names.
 
-**Reference:** [Microsoft Sovereign Cloud Models Overview](sovereign-cloud-models#the-three-sovereign-cloud-models)
+**Reference:** [Microsoft Sovereign Cloud Models Overview](sovereign-cloud-models.md#the-three-sovereign-cloud-models)
 </details>
 
 ---
@@ -63,9 +64,9 @@ Sovereign Hybrid Cloud, Multi-Cloud, and Edge Cloud are not official Microsoft s
 
 A European financial services company requires GDPR compliance, elastic scalability, and access to the latest Azure AI services. Which model is MOST appropriate?
 
-A) Sovereign Public Cloud (Microsoft Cloud for Sovereignty)  
-B) Sovereign Private Cloud (Azure Local Disconnected)  
-C) National Partner Clouds (Azure Government)  
+A) Sovereign Public Cloud (Microsoft Cloud for Sovereignty)
+B) Sovereign Private Cloud (Azure Local Disconnected)
+C) National Partner Clouds (Azure Government)
 D) Traditional on-premises infrastructure
 
 <details markdown="1">
@@ -83,7 +84,7 @@ For GDPR compliance with needs for elastic scalability and latest Azure services
 
 Sovereign Private Cloud (Azure Local Disconnected) would be overkill and lack elasticity. Azure Government is for US government customers, not European financial services.
 
-**Reference:** [Sovereign Public Cloud Use Cases](sovereign-public-cloud#use-cases-and-customer-scenarios)
+**Reference:** [Sovereign Public Cloud Use Cases](sovereign-public-cloud.md#use-cases-and-customer-scenarios)
 </details>
 
 ---
@@ -92,9 +93,9 @@ Sovereign Private Cloud (Azure Local Disconnected) would be overkill and lack el
 
 What is the primary purpose of Microsoft Cloud for Sovereignty?
 
-A) To provide physically isolated data centers in each country  
-B) To enforce sovereignty requirements through policy-driven controls in Azure public cloud  
-C) To replace Azure with a new sovereign-only cloud platform  
+A) To provide physically isolated data centers in each country
+B) To enforce sovereignty requirements through policy-driven controls in Azure public cloud
+C) To replace Azure with a new sovereign-only cloud platform
 D) To eliminate the need for compliance certifications
 
 <details markdown="1">
@@ -105,7 +106,7 @@ D) To eliminate the need for compliance certifications
 **Explanation:**
 Microsoft Cloud for Sovereignty is NOT a separate cloud platform. It's a set of capabilities, policies, and configurations that run on top of Azure public cloud to enforce sovereignty requirements automatically through Azure Policy and other controls. This allows customers to get all Azure benefits while meeting sovereignty needs.
 
-**Reference:** [Microsoft Cloud for Sovereignty](sovereign-public-cloud#microsoft-cloud-for-sovereignty)
+**Reference:** [Microsoft Cloud for Sovereignty](sovereign-public-cloud.md#microsoft-cloud-for-sovereignty)
 </details>
 
 ---
@@ -114,9 +115,9 @@ Microsoft Cloud for Sovereignty is NOT a separate cloud platform. It's a set of 
 
 A healthcare organization wants to ensure that no Microsoft support engineer can access their patient data without explicit approval. Which feature should they enable?
 
-A) Azure Policy  
-B) Azure Firewall  
-C) Customer Lockbox  
+A) Azure Policy
+B) Azure Firewall
+C) Customer Lockbox
 D) Azure Key Vault
 
 <details markdown="1">
@@ -134,7 +135,7 @@ Customer Lockbox requires customer approval before Microsoft support engineers c
 
 Azure Policy enforces compliance, Azure Firewall controls network traffic, and Azure Key Vault stores encryption keys - none provide support access approval.
 
-**Reference:** [Customer Lockbox](sovereign-public-cloud#2-customer-lockbox)
+**Reference:** [Customer Lockbox](sovereign-public-cloud.md#2-customer-lockbox)
 </details>
 
 ---
@@ -143,9 +144,9 @@ Azure Policy enforces compliance, Azure Firewall controls network traffic, and A
 
 What is the PRIMARY difference between Azure Local Connected Mode and Disconnected Mode?
 
-A) Connected mode costs more  
-B) Connected mode requires internet connectivity and uses cloud control plane; Disconnected mode operates independently  
-C) Disconnected mode has better performance  
+A) Connected mode costs more
+B) Connected mode requires internet connectivity and uses cloud control plane; Disconnected mode operates independently
+C) Disconnected mode has better performance
 D) Connected mode supports more VMs
 
 <details markdown="1">
@@ -160,7 +161,7 @@ D) Connected mode supports more VMs
 
 The key difference is the dependency on Azure connectivity and where the control plane resides (cloud vs. local).
 
-**Reference:** [Operating Modes Comparison](sovereign-private-cloud#operating-modes-connected-vs-disconnected)
+**Reference:** [Operating Modes Comparison](sovereign-private-cloud.md#operating-modes-connected-vs-disconnected)
 </details>
 
 ---
@@ -169,9 +170,9 @@ The key difference is the dependency on Azure connectivity and where the control
 
 A defense contractor needs to run Azure services in a completely air-gapped environment with no internet connectivity. Which solution should they use?
 
-A) Azure Government with ExpressRoute  
-B) Sovereign Public Cloud with Azure Policy  
-C) Azure Local Connected Mode  
+A) Azure Government with ExpressRoute
+B) Sovereign Public Cloud with Azure Policy
+C) Azure Local Connected Mode
 D) Azure Local Disconnected Mode
 
 <details markdown="1">
@@ -189,7 +190,7 @@ For completely air-gapped environments (no internet connectivity), Azure Local D
 
 Azure Government and Sovereign Public Cloud both require internet connectivity. Connected Mode also requires internet.
 
-**Reference:** [Azure Local Disconnected Mode](sovereign-private-cloud#disconnected-mode-complete-isolation)
+**Reference:** [Azure Local Disconnected Mode](sovereign-private-cloud.md#disconnected-mode-complete-isolation)
 </details>
 
 ---
@@ -198,9 +199,9 @@ Azure Government and Sovereign Public Cloud both require internet connectivity. 
 
 Which of the following is TRUE about Azure Government?
 
-A) It is operated by a third-party partner, not Microsoft  
-B) It is physically and logically separated from commercial Azure  
-C) It has fewer compliance certifications than commercial Azure  
+A) It is operated by a third-party partner, not Microsoft
+B) It is physically and logically separated from commercial Azure
+C) It has fewer compliance certifications than commercial Azure
 D) It is available to any organization worldwide
 
 <details markdown="1">
@@ -218,7 +219,7 @@ Azure Government is:
 
 The physical and logical separation ensures isolation for US government workloads.
 
-**Reference:** [Azure Government Overview](national-partner-clouds#azure-government-us)
+**Reference:** [Azure Government Overview](national-partner-clouds.md#azure-government-us)
 </details>
 
 ---
@@ -227,9 +228,9 @@ The physical and logical separation ensures isolation for US government workload
 
 Why is Azure China operated by 21Vianet instead of Microsoft directly?
 
-A) To reduce costs  
-B) To meet Chinese regulatory requirements for local cloud operators  
-C) Because Microsoft is not authorized to operate in China  
+A) To reduce costs
+B) To meet Chinese regulatory requirements for local cloud operators
+C) Because Microsoft is not authorized to operate in China
 D) To improve performance
 
 <details markdown="1">
@@ -240,7 +241,7 @@ D) To improve performance
 **Explanation:**
 Chinese regulations require that cloud services be operated by companies incorporated and operated in China. 21Vianet operates Azure China to meet these legal requirements, while Microsoft provides the technology and platform. This is a regulatory compliance requirement, not a performance or cost consideration.
 
-**Reference:** [Azure China (21Vianet)](national-partner-clouds#azure-china-21vianet)
+**Reference:** [Azure China (21Vianet)](national-partner-clouds.md#azure-china-21vianet)
 </details>
 
 ---
@@ -249,9 +250,9 @@ Chinese regulations require that cloud services be operated by companies incorpo
 
 What does Azure Confidential Computing protect?
 
-A) Data at rest only  
-B) Data in transit only  
-C) Data in use (during processing)  
+A) Data at rest only
+B) Data in transit only
+C) Data in use (during processing)
 D) Data after deletion
 
 <details markdown="1">
@@ -268,7 +269,7 @@ Azure Confidential Computing protects data **in use** (during processing) using 
 
 This is critical for processing sensitive data like medical records, financial transactions, or classified information.
 
-**Reference:** [Confidential Computing](sovereign-public-cloud#4-confidential-computing)
+**Reference:** [Confidential Computing](sovereign-public-cloud.md#4-confidential-computing)
 </details>
 
 ---
@@ -277,9 +278,9 @@ This is critical for processing sensitive data like medical records, financial t
 
 Which model provides dedicated, single-tenant physical infrastructure?
 
-A) Sovereign Public Cloud  
-B) Sovereign Private Cloud (Azure Local)  
-C) National Partner Clouds  
+A) Sovereign Public Cloud
+B) Sovereign Private Cloud (Azure Local)
+C) National Partner Clouds
 D) All three models provide dedicated infrastructure
 
 <details markdown="1">
@@ -296,7 +297,7 @@ Only **Sovereign Private Cloud (Azure Local)** provides dedicated, single-tenant
 
 Sovereign Public Cloud and National Partner Clouds use shared multi-tenant infrastructure (even with logical isolation).
 
-**Reference:** [Sovereign Private Cloud Architecture](sovereign-private-cloud#dedicated-single-tenant-infrastructure)
+**Reference:** [Sovereign Private Cloud Architecture](sovereign-private-cloud.md#dedicated-single-tenant-infrastructure)
 </details>
 
 ---
@@ -305,9 +306,9 @@ Sovereign Public Cloud and National Partner Clouds use shared multi-tenant infra
 
 A company wants to automatically prevent any resources from being created outside the EU. What should they implement?
 
-A) Azure Firewall rules  
-B) Network Security Groups (NSGs)  
-C) Azure Policy with deny effect for non-EU regions  
+A) Azure Firewall rules
+B) Network Security Groups (NSGs)
+C) Azure Policy with deny effect for non-EU regions
 D) Customer Lockbox
 
 <details markdown="1">
@@ -322,7 +323,7 @@ Azure Policy with a **deny effect** can automatically prevent resource creation 
 - NSGs control network access (not geographic restrictions)
 - Customer Lockbox controls support access (not resource placement)
 
-**Reference:** [Azure Policy for Sovereignty](sovereign-public-cloud#1-eu-data-boundary)
+**Reference:** [Azure Policy for Sovereignty](sovereign-public-cloud.md#1-eu-data-boundary)
 </details>
 
 ---
@@ -331,9 +332,9 @@ Azure Policy with a **deny effect** can automatically prevent resource creation 
 
 A US federal agency requires FedRAMP High authorization for their cloud infrastructure. Which option is appropriate?
 
-A) Azure commercial cloud (global)  
-B) Azure Government  
-C) Azure China  
+A) Azure commercial cloud (global)
+B) Azure Government
+C) Azure China
 D) Any Azure region with Policy enforcement
 
 <details markdown="1">
@@ -351,7 +352,7 @@ D) Any Azure region with Policy enforcement
 
 Azure commercial cloud does not meet FedRAMP High requirements. Azure China is for Chinese customers. Policy enforcement alone doesn't provide FedRAMP authorization.
 
-**Reference:** [Azure Government FedRAMP](national-partner-clouds#fedramp-high-and-dod-impact-levels)
+**Reference:** [Azure Government FedRAMP](national-partner-clouds.md#fedramp-high-and-dod-impact-levels)
 </details>
 
 ---
@@ -360,9 +361,9 @@ Azure commercial cloud does not meet FedRAMP High requirements. Azure China is f
 
 Which scenario is BEST suited for Sovereign Private Cloud (Azure Local Disconnected Mode)?
 
-A) A retail company needing elastic scalability for seasonal traffic  
-B) A startup building a mobile app  
-C) An aerospace company with classified defense data requiring air-gap  
+A) A retail company needing elastic scalability for seasonal traffic
+B) A startup building a mobile app
+C) An aerospace company with classified defense data requiring air-gap
 D) A SaaS provider serving global customers
 
 <details markdown="1">
@@ -380,7 +381,7 @@ An aerospace company with classified defense data requiring air-gap is the perfe
 
 Other scenarios need elastic scalability (A, B) or global reach (D), making public cloud more appropriate.
 
-**Reference:** [Disconnected Mode Use Cases](sovereign-private-cloud#ideal-use-cases-for-disconnected-mode)
+**Reference:** [Disconnected Mode Use Cases](sovereign-private-cloud.md#ideal-use-cases-for-disconnected-mode)
 </details>
 
 ---
@@ -389,9 +390,9 @@ Other scenarios need elastic scalability (A, B) or global reach (D), making publ
 
 A manufacturing company wants some workloads in Azure public cloud and others on-premises with unified management. What should they use?
 
-A) Separate management tools for each environment  
-B) Azure Arc to manage hybrid resources from Azure control plane  
-C) Azure ExpressRoute only  
+A) Separate management tools for each environment
+B) Azure Arc to manage hybrid resources from Azure control plane
+C) Azure ExpressRoute only
 D) Two separate clouds with no integration
 
 <details markdown="1">
@@ -409,7 +410,7 @@ D) Two separate clouds with no integration
 
 ExpressRoute provides connectivity but not unified management. Separate tools create management silos.
 
-**Reference:** [Azure Arc for Hybrid Management](azure-arc-intro#unified-control-plane)
+**Reference:** [Azure Arc for Hybrid Management](azure-arc-intro.md#unified-control-plane)
 </details>
 
 ---
@@ -418,9 +419,9 @@ ExpressRoute provides connectivity but not unified management. Separate tools cr
 
 For which workload pattern is Sovereign Private Cloud (Azure Local) typically MOST cost-effective compared to public cloud?
 
-A) Highly variable, unpredictable workloads  
-B) Short-term projects (3-6 months)  
-C) Steady-state workloads with consistent resource utilization  
+A) Highly variable, unpredictable workloads
+B) Short-term projects (3-6 months)
+C) Steady-state workloads with consistent resource utilization
 D) Development and testing environments
 
 <details markdown="1">
@@ -438,7 +439,7 @@ Sovereign Private Cloud (Azure Local) is most cost-effective for **steady-state 
 
 Variable workloads (A) and short-term projects (B) benefit from public cloud's pay-as-you-go model. Dev/test (D) environments are typically underutilized, making public cloud more efficient.
 
-**Reference:** [TCO Analysis](sovereign-private-cloud#total-cost-of-ownership-tco-analysis)
+**Reference:** [TCO Analysis](sovereign-private-cloud.md#total-cost-of-ownership-tco-analysis)
 </details>
 
 ---
@@ -479,7 +480,7 @@ Variable workloads (A) and short-term projects (B) benefit from public cloud's p
 
 **Focus Areas:**
 
-- Review [Sovereign Cloud Models Overview](sovereign-cloud-models)
+- Review [Sovereign Cloud Models Overview](sovereign-cloud-models.md)
 - Study the three model definitions and characteristics
 - Understand decision criteria for model selection
 - Practice identifying appropriate models for different scenarios
@@ -488,7 +489,7 @@ Variable workloads (A) and short-term projects (B) benefit from public cloud's p
 
 **Focus Areas:**
 
-- Review [Sovereign Public Cloud](sovereign-public-cloud)
+- Review [Sovereign Public Cloud](sovereign-public-cloud.md)
 - Study Microsoft Cloud for Sovereignty capabilities
 - Understand Customer Lockbox, EU Data Boundary, and Azure Policy
 - Learn about Confidential Computing and data protection
@@ -497,7 +498,7 @@ Variable workloads (A) and short-term projects (B) benefit from public cloud's p
 
 **Focus Areas:**
 
-- Review [Sovereign Private Cloud](sovereign-private-cloud)
+- Review [Sovereign Private Cloud](sovereign-private-cloud.md)
 - Study Connected vs. Disconnected deployment modes
 - Understand air-gapped scenarios and requirements
 - Learn TCO considerations for steady-state workloads
@@ -506,7 +507,7 @@ Variable workloads (A) and short-term projects (B) benefit from public cloud's p
 
 **Focus Areas:**
 
-- Review [National Partner Clouds](national-partner-clouds)
+- Review [National Partner Clouds](national-partner-clouds.md)
 - Study Azure Government (FedRAMP High, DoD IL5)
 - Understand Azure China's regulatory requirements
 - Learn compliance certifications and onboarding
@@ -515,7 +516,7 @@ Variable workloads (A) and short-term projects (B) benefit from public cloud's p
 
 **Focus Areas:**
 
-- Review [Azure Arc Introduction](azure-arc-intro)
+- Review [Azure Arc Introduction](azure-arc-intro.md)
 - Study unified management across hybrid environments
 - Understand Azure Policy for geographic restrictions
 - Learn hybrid sovereignty patterns
@@ -534,15 +535,15 @@ After completing this assessment:
 
 ### 2. 📚 Continue Learning
 
-- **Next Module:** [Module 3: Azure Local Overview](module-03-azure-local)
-- **Deep Dive:** [Azure Local Architecture](azure-local-architecture)
+- **Next Module:** [Module 3: Azure Local Overview](module-03-azure-local.md)
+- **Deep Dive:** [Azure Local Architecture](azure-local-architecture.md)
 - **Hands-On:** Prepare for Level 200 labs
 
 ### 3. 🔗 Related Content
 
-- [Digital Sovereignty Foundations](module-01-digital-sovereignty)
-- [Azure Arc Overview](module-04-azure-arc)
-- [Level 100 Knowledge Check](knowledge-check)
+- [Digital Sovereignty Foundations](module-01-digital-sovereignty.md)
+- [Azure Arc Overview](module-04-azure-arc.md)
+- [Level 100 Knowledge Check](knowledge-check.md)
 
 ### 4. 🌐 External Resources
 
@@ -554,7 +555,7 @@ After completing this assessment:
 ### 5. ✋ Need Help?
 
 - Review [CONTRIBUTING.md](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/blob/main/CONTRIBUTING.md) for questions
-- Check [README.md](README) for module navigation
+- Check [README.md](README.md) for module navigation
 - Revisit missed topics before proceeding
 
 ---
@@ -572,15 +573,15 @@ This is a Level 100 foundational assessment. You may retake this assessment as m
 
 ---
 
-**Quiz Version:** 1.0  
-**Last Updated:** November 2025  
-**Total Questions:** 15  
+**Quiz Version:** 1.0
+**Last Updated:** November 2025
+**Total Questions:** 15
 **Passing Score:** 12/15 (80%)
 **Correct:** To enforce sovereignty requirements through policy-driven controls in Azure public cloud
 
 **Explanation:** Microsoft Cloud for Sovereignty is NOT a separate cloud platform. It's a set of capabilities, policies, and configurations that run on top of Azure public cloud to enforce sovereignty requirements automatically through Azure Policy and other controls. This allows customers to get all Azure benefits while meeting sovereignty needs.
 
-**Review:** [Microsoft Cloud for Sovereignty](sovereign-public-cloud#microsoft-cloud-for-sovereignty)
+**Review:** [Microsoft Cloud for Sovereignty](sovereign-public-cloud.md#microsoft-cloud-for-sovereignty)
 
 ---
 
@@ -597,7 +598,7 @@ This is a Level 100 foundational assessment. You may retake this assessment as m
 
 Azure Policy enforces compliance, Azure Firewall controls network traffic, and Azure Key Vault stores encryption keys - none provide support access approval.
 
-**Review:** [Customer Lockbox](sovereign-public-cloud#2-customer-lockbox)
+**Review:** [Customer Lockbox](sovereign-public-cloud.md#2-customer-lockbox)
 
 ---
 
@@ -612,7 +613,7 @@ Azure Policy enforces compliance, Azure Firewall controls network traffic, and A
 
 The key difference is the dependency on Azure connectivity and where the control plane resides (cloud vs. local).
 
-**Review:** [Operating Modes Comparison](sovereign-private-cloud#operating-modes-connected-vs-disconnected)
+**Review:** [Operating Modes Comparison](sovereign-private-cloud.md#operating-modes-connected-vs-disconnected)
 
 ---
 
@@ -629,7 +630,7 @@ The key difference is the dependency on Azure connectivity and where the control
 
 Azure Government still requires internet connectivity. Connected Mode by definition needs connectivity. Sovereign Public Cloud requires cloud connection.
 
-**Review:** [Azure Local Disconnected Mode](sovereign-private-cloud#disconnected-mode-air-gapped)
+**Review:** [Azure Local Disconnected Mode](sovereign-private-cloud.md#disconnected-mode-air-gapped)
 
 ---
 
@@ -645,7 +646,7 @@ Azure Government still requires internet connectivity. Connected Mode by definit
 - ✅ Has MORE compliance certifications than commercial (FedRAMP High, DoD IL6)
 - ✅ Available only to US government entities and partners (not worldwide)
 
-**Review:** [Azure Government Overview](national-partner-clouds#1-azure-government-united-states)
+**Review:** [Azure Government Overview](national-partner-clouds.md#1-azure-government-united-states)
 
 ---
 
@@ -655,7 +656,7 @@ Azure Government still requires internet connectivity. Connected Mode by definit
 
 **Explanation:** China's Cybersecurity Law requires that cloud services in China be operated by Chinese companies with local data storage. 21Vianet is a licensed Chinese telecommunications provider that operates Azure China to comply with these regulations. Microsoft provides the technology and support to 21Vianet, but 21Vianet handles operations, billing, and customer support.
 
-**Review:** [Azure China (21Vianet)](national-partner-clouds#2-azure-china-21vianet-operated)
+**Review:** [Azure China (21Vianet)](national-partner-clouds.md#2-azure-china-21vianet-operated)
 
 ---
 
@@ -671,7 +672,7 @@ Azure Government still requires internet connectivity. Connected Mode by definit
 
 This protects against cloud provider access, privileged admins, and hardware attacks.
 
-**Review:** [Confidential Computing](sovereign-public-cloud#4-confidential-computing)
+**Review:** [Confidential Computing](sovereign-public-cloud.md#4-confidential-computing)
 
 ---
 
@@ -687,7 +688,7 @@ This protects against cloud provider access, privileged admins, and hardware att
 
 Only Sovereign Private Cloud provides dedicated physical hardware exclusively for one customer.
 
-**Review:** [Model Comparison Matrix](sovereign-cloud-models#model-comparison-matrix)
+**Review:** [Model Comparison Matrix](sovereign-cloud-models.md#model-comparison-matrix)
 
 ---
 
@@ -715,7 +716,7 @@ Example policy:
 
 Azure Firewall controls network traffic, NSGs control subnet traffic, and Customer Lockbox controls support access - none prevent resource creation in specific regions.
 
-**Review:** [Azure Policy for Compliance](sovereign-public-cloud#3-azure-policy-for-compliance-automation)
+**Review:** [Azure Policy for Compliance](sovereign-public-cloud.md#3-azure-policy-for-compliance-automation)
 
 ---
 
@@ -732,7 +733,7 @@ Azure Firewall controls network traffic, NSGs control subnet traffic, and Custom
 
 Azure commercial cloud (global) has FedRAMP Moderate only. Azure China is for Chinese operations. Policy enforcement alone doesn't provide FedRAMP authorization.
 
-**Review:** [Azure Government Compliance](national-partner-clouds#1-azure-government-united-states)
+**Review:** [Azure Government Compliance](national-partner-clouds.md#1-azure-government-united-states)
 
 ---
 
@@ -754,7 +755,7 @@ Scenario analysis:
 - Aerospace with classified data: Sovereign Private Cloud Disconnected (air-gap required)
 - SaaS provider: Sovereign Public Cloud (global reach and scalability)
 
-**Review:** [Use Cases - Defense Contractor](sovereign-private-cloud#scenario-1-defense-contractor---classified-workloads)
+**Review:** [Use Cases - Defense Contractor](sovereign-private-cloud.md#scenario-1-defense-contractor---classified-workloads)
 
 ---
 
@@ -771,7 +772,7 @@ Scenario analysis:
 
 This provides a single control plane for managing resources across cloud and on-premises, which is essential for hybrid sovereignty scenarios.
 
-**Review:** [Hybrid Architecture Scenarios](sovereign-private-cloud#scenario-3-healthcare---rural-hospital-network)
+**Review:** [Hybrid Architecture Scenarios](sovereign-private-cloud.md#scenario-3-healthcare---rural-hospital-network)
 
 ---
 
@@ -794,7 +795,7 @@ This provides a single control plane for managing resources across cloud and on-
 - ❌ Short-term projects (can't amortize CapEx over short period)
 - ❌ Dev/test environments (cloud pay-as-you-go better)
 
-**Review:** [Total Cost of Ownership](sovereign-private-cloud#total-cost-of-ownership-tco)
+**Review:** [Total Cost of Ownership](sovereign-private-cloud.md#total-cost-of-ownership-tco)
 
 ---
 
@@ -811,7 +812,7 @@ This provides a single control plane for managing resources across cloud and on-
 
 ### If you missed questions 1-3 (Overview and Model Selection)
 
-**Review:** [Microsoft Sovereign Cloud Models Overview](sovereign-cloud-models)
+**Review:** [Microsoft Sovereign Cloud Models Overview](sovereign-cloud-models.md)
 
 - Focus on the three model definitions
 - Study the decision framework
@@ -819,7 +820,7 @@ This provides a single control plane for managing resources across cloud and on-
 
 ### If you missed questions 4-9 (Sovereign Public Cloud)
 
-**Review:** [Sovereign Public Cloud](sovereign-public-cloud)
+**Review:** [Sovereign Public Cloud](sovereign-public-cloud.md)
 
 - Focus on Microsoft Cloud for Sovereignty
 - Study Customer Lockbox, Azure Policy, Confidential Computing
@@ -827,7 +828,7 @@ This provides a single control plane for managing resources across cloud and on-
 
 ### If you missed questions 10-13 (Sovereign Private Cloud)
 
-**Review:** [Sovereign Private Cloud](sovereign-private-cloud)
+**Review:** [Sovereign Private Cloud](sovereign-private-cloud.md)
 
 - Focus on Azure Local architecture
 - Study Connected vs. Disconnected modes
@@ -835,7 +836,7 @@ This provides a single control plane for managing resources across cloud and on-
 
 ### If you missed questions 12-15 (National Partner Clouds)
 
-**Review:** [National Partner Clouds](national-partner-clouds)
+**Review:** [National Partner Clouds](national-partner-clouds.md)
 
 - Focus on Azure Government and Azure China
 - Study compliance certifications
@@ -849,8 +850,8 @@ After achieving mastery (80%+):
 
 1. ✅ **Review any missed questions** - Understand why the correct answer is right
 2. ✅ **Explore deep dive content** - Read the detailed pages for each model
-3. 🎯 **[Proceed to Module 3: Azure Local Overview →](azure-local-overview)**
-4. 🎯 **[Return to Level 100 Overview →](README)**
+3. 🎯 **[Proceed to Module 3: Azure Local Overview →](azure-local-overview.md)**
+4. 🎯 **[Return to Level 100 Overview →](README.md)**
 
 ---
 

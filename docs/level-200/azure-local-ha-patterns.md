@@ -3,6 +3,7 @@ layout: default
 title: High Availability Patterns
 parent: Azure Local Architecture Deep Dive
 nav_order: 3
+description: "Azure Local high-availability patterns — fault domains, witness configurations, stretched clusters, and disaster-recovery options including Azure Site Recovery."
 ---
 
 # High Availability Patterns

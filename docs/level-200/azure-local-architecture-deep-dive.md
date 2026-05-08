@@ -5,6 +5,7 @@ parent: Module 1 - Azure Local Architecture
 grand_parent: Level 200 - Intermediate
 nav_order: 1
 has_children: true
+description: "Azure Local architecture deep dive — Cluster Aware Updating, Storage Spaces Direct internals, RDMA networking, and Hyper-V virtualization details for production planning."
 ---
 
 ## Overview

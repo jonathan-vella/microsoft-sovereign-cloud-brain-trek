@@ -3,6 +3,7 @@ layout: default
 title: Knowledge Check - Azure Local Deep Dive
 parent: Azure Local Architecture Deep Dive
 nav_order: 5
+description: "Knowledge check covering Azure Local deep-dive concepts — architecture internals, HA patterns, hardware planning, and advanced networking."
 ---
 
 # Knowledge Check - Azure Local Architecture Deep Dive
@@ -44,8 +45,8 @@ D) All layers are integrated into a single unified system with no distinct separ
 
 **Explanation:** Azure Local uses a layered architecture where each layer provides specific functions. The hardware layer provides CPU, memory, storage, and network. The virtualization layer (Hyper-V) runs on hardware and provides VM isolation. The software layer (Azure Local system services) orchestrates storage and compute. The management layer provides operational tools. While all layers need to work together for optimal function, they can fail independently - for example, Azure Local services can be restarted without requiring hardware replacement.
 
+**Reference:** [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive.md)
 </details>
-
 
 ---
 
@@ -68,8 +69,8 @@ D) VLANs guarantee that storage traffic always has higher performance than custo
 
 **Explanation:** Converged networking uses VLANs to separate multiple logical networks over fewer physical adapters. This reduces hardware costs, rack space, and cable complexity. However, VLAN isolation is logical, not physical - QoS policies must be configured to ensure storage traffic priority. A single physical adapter failure can affect all networks if not properly teamed.
 
+**Reference:** [Azure Local HA Patterns](azure-local-ha-patterns.md)
 </details>
-
 
 ---
 
@@ -92,8 +93,8 @@ D) Data redundancy cycles between 3-way and 2-way during rebuild, so you cannot 
 
 **Explanation:** With 3-way mirroring and one drive failed, data exists on exactly 2 copies (the rebuild is happening in real-time, but the third copy is not yet complete). This means the cluster can only tolerate one more failure before data loss. This is a degraded mode and requires monitoring. You should avoid performing maintenance on other nodes during this period, but normal operations can continue.
 
+**Reference:** [Azure Local Hardware Planning](azure-local-hardware-planning.md)
 </details>
-
 
 ---
 
@@ -116,8 +117,8 @@ D) Maximize memory size by using the largest capacity DIMMs available, even if t
 
 **Explanation:** Symmetric memory population ensures optimal NUMA performance (local memory access is faster than remote). DDR4 and DDR5 shouldn't be mixed (different speeds and timing). Larger capacity DIMMs are fine, but they must be populated symmetrically. For 2-node clusters, this also simplifies witness configuration and management.
 
+**Reference:** [Azure Local Advanced Networking](azure-local-advanced-networking.md)
 </details>
-
 
 ---
 
@@ -140,8 +141,8 @@ D) Single-node clusters at each location, each operating independently with nigh
 
 **Explanation:** With limited 1 Gbps bandwidth, synchronous replication (Option C) would be problematic - storage rebuild alone can saturate the link. Two 2-node clusters with asynchronous replication provides good resilience while respecting bandwidth constraints. Each site has its own quorum (via file share witness), so they can operate independently. This provides geographic redundancy without excessive WAN utilization.
 
+**Reference:** [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive.md)
 </details>
-
 
 ---
 
@@ -164,8 +165,8 @@ D) Random node selection decides which continues - Azure Local automatically pic
 
 **Explanation:** In a 2-node cluster, neither node has quorum by itself (needs 2/2). The file share witness acts as tiebreaker - whichever node can reach the witness achieves quorum and continues. The isolated node stops to prevent split-brain. This is why witness placement is critical for 2-node deployments.
 
+**Reference:** [Azure Local HA Patterns](azure-local-ha-patterns.md)
 </details>
-
 
 ---
 
@@ -188,8 +189,8 @@ D) 1-2 hours - the storage rebuild must complete before VMs can resume.
 
 **Explanation:** Failure detection takes 5-30 seconds, cluster decision/orchestration adds 5 seconds, VM restart/OS boot takes 2-3 minutes. The process is largely automatic. Storage rebuild happens in parallel and is not blocking for VM operation, though performance will be degraded.
 
+**Reference:** [Azure Local Hardware Planning](azure-local-hardware-planning.md)
 </details>
-
 
 ---
 
@@ -212,8 +213,8 @@ D) Three tiers are too many for one storage pool - use multiple pools instead.
 
 **Explanation:** With 3-way mirroring at full capacity (2 TB), a node failure requires rebuild but there's no extra capacity to write the rebuilding data. This creates risk. Best practice is to allocate only 70-80% of capacity and reserve 20-30% for rebuild overhead and spike capacity needs.
 
+**Reference:** [Azure Local Advanced Networking](azure-local-advanced-networking.md)
 </details>
-
 
 ---
 
@@ -236,8 +237,8 @@ D) The physical switch doesn't support RDMA speeds - replace the switch with a h
 
 **Explanation:** With converged networking, storage (RDMA) and workload traffic share the same adapters. If storage is getting only 60% of expected performance, it's likely being congested by lower-priority traffic. Verify QoS policies are applied (sometimes requires verification after updates) and that priority values are correctly configured.
 
+**Reference:** [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive.md)
 </details>
-
 
 ---
 
@@ -260,8 +261,8 @@ D) One 6-node cluster split across two sites using active-active configuration.
 
 **Explanation:** RPO=0 requires synchronous replication (Option A uses asynchronous). RTO=30 minutes requires automated failover (Option C is manual). Options B and D both work, but B is simpler and more standard. D adds complexity with active-active coordination.
 
+**Reference:** [Azure Local HA Patterns](azure-local-ha-patterns.md)
 </details>
-
 
 ---
 
@@ -310,39 +311,39 @@ D) One 6-node cluster split across two sites using active-active configuration.
 
 **If you missed questions on Architecture (Q1):**
 
-- Review [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive)
+- Review [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive.md)
 - Focus on the four architecture layers and their relationships
 - Study how layer independence affects failure scenarios
 
 **If you missed questions on Networking (Q2, Q9):**
 
-- Review [Azure Local Advanced Networking](azure-local-advanced-networking)
+- Review [Azure Local Advanced Networking](azure-local-advanced-networking.md)
 - Study VLAN configuration and QoS policies
 - Focus on converged networking design patterns
 - Review RDMA configuration and troubleshooting
 
 **If you missed questions on Storage (Q3, Q8):**
 
-- Review [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive)
+- Review [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive.md)
 - Study storage resiliency options (2-way, 3-way mirror)
 - Focus on rebuild processes during failures
 - Review capacity planning with redundancy overhead
 
 **If you missed questions on Hardware Planning (Q4):**
 
-- Review [Azure Local Hardware Planning](azure-local-hardware-planning)
+- Review [Azure Local Hardware Planning](azure-local-hardware-planning.md)
 - Study memory configuration and NUMA optimization
 - Focus on symmetric hardware configurations
 
 **If you missed questions on Deployment Patterns (Q5):**
 
-- Review [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive)
+- Review [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive.md)
 - Study multi-site deployment patterns
 - Focus on bandwidth requirements for different patterns
 
 **If you missed questions on High Availability (Q6, Q7, Q10):**
 
-- Review [Azure Local HA Patterns](azure-local-ha-patterns)
+- Review [Azure Local HA Patterns](azure-local-ha-patterns.md)
 - Study quorum mechanisms for 2-node clusters
 - Focus on automatic failure recovery timelines
 - Review RTO/RPO requirements and DR patterns
@@ -356,14 +357,14 @@ D) One 6-node cluster split across two sites using active-active configuration.
 1. **✅ Celebrate your achievement!** You've mastered Azure Local advanced architecture.
 
 2. **📚 Continue learning:**
-   - [Module 2: Arc Advanced Management →](../arc-advanced-management)
-   - [Module 3: Edge RAG Implementation →](../edge-rag-implementation)
+   - [Module 2: Arc Advanced Management →](arc-advanced-management.md)
+   - [Module 3: Edge RAG Implementation →](edge-rag-implementation.md)
 
 3. **🔗 Review related content:**
-   - [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive)
-   - [Azure Local Hardware Planning](azure-local-hardware-planning)
-   - [Azure Local HA Patterns](azure-local-ha-patterns)
-   - [Azure Local Advanced Networking](azure-local-advanced-networking)
+   - [Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive.md)
+   - [Azure Local Hardware Planning](azure-local-hardware-planning.md)
+   - [Azure Local HA Patterns](azure-local-ha-patterns.md)
+   - [Azure Local Advanced Networking](azure-local-advanced-networking.md)
 
 4. **🌐 Explore external resources:**
    - [Azure Local Documentation](https://learn.microsoft.com/en-us/azure/azure-local/)
@@ -378,11 +379,11 @@ D) One 6-node cluster split across two sites using active-active configuration.
 
 ---
 
-**Quiz Version:** 1.0  
-**Last Updated:** October 2025  
-**Questions:** 10  
+**Quiz Version:** 1.0
+**Last Updated:** October 2025
+**Questions:** 10
 **Passing Score:** 70% (7 of 10 correct)
 
 ---
 
-**[← Back to Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive)**
+**[← Back to Azure Local Architecture Deep Dive](azure-local-architecture-deep-dive.md)**

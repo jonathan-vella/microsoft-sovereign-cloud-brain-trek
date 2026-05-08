@@ -1,0 +1,48 @@
+# Lychee link checker configuration
+# Plan reference: Phase 0.1 + Phase 5 link gate
+
+# Cache settings
+cache = true
+max_cache_age = "24h"
+
+# Accepted HTTP status codes (200 OK, 206 Partial, 429 Rate-limited)
+accept = ["200", "206", "429"]
+
+# Concurrency / timeout
+max_concurrency = 8
+timeout = 20
+max_retries = 2
+
+# Skip schemes
+exclude_path = [
+  "node_modules",
+  "vendor",
+  ".git",
+  ".vale",
+  "scripts/review/cache",
+  "scripts/review/reports",
+]
+
+# Don't fail on rate-limited Microsoft Learn pages — they retry with 429s
+exclude = [
+  '^mailto:',
+  '^tel:',
+  # learn.microsoft.com aggressively rate-limits CI checks; treat as informational
+  '^https?://learn\.microsoft\.com',
+  # Localhost test URLs in lab examples
+  '^https?://localhost',
+  '^https?://127\.0\.0\.1',
+  '^https?://0\.0\.0\.0',
+  # Example domains
+  '^https?://([\w.-]+\.)?example\.(com|org|net)',
+  '^https?://([\w.-]+\.)?contoso\.com',
+  '^https?://([\w.-]+\.)?fabrikam\.com',
+]
+
+# Internal link resolution (relative .md and {% link %} are both valid per §D)
+include_fragments = true
+require_https = false
+
+# Verbosity — concise output for CI
+no_progress = true
+verbose = "info"

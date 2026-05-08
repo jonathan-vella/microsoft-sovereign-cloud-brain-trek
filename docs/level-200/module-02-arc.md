@@ -4,6 +4,7 @@ title: Module 2 - Arc Management
 parent: Level 200 - Intermediate
 nav_order: 2
 has_children: true
+description: "Module 2: Azure Arc advanced management — multi-cluster patterns, GitOps at scale, policy and governance, cost optimization, and enterprise deployment patterns."
 ---
 
 # Module 2: Arc Advanced Management

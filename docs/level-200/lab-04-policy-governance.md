@@ -3,6 +3,7 @@ layout: default
 title: "Lab 4: Policy & Governance"
 parent: Hands-On Labs Overview
 nav_order: 4
+description: "Lab 4: Policy and governance — authoring custom Azure Policy definitions, applying initiatives across Arc-enabled scope, and validating compliance reporting."
 ---
 
 # Lab 4: Policy & Governance

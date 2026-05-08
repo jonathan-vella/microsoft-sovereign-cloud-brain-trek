@@ -2,7 +2,8 @@
 layout: default
 title: RAG Operations & Monitoring
 parent: Edge RAG Implementation
-nav_order: 3
+nav_order: 5
+description: "Edge RAG operations and monitoring — health metrics, retrieval quality, drift detection, and SLO patterns for production RAG systems on Azure Arc-enabled Kubernetes."
 ---
 
 # RAG Operations & Monitoring

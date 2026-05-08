@@ -43,6 +43,8 @@ The three primary cloud service models are:
 - **SaaS (Software as a Service)**: Provides complete software applications
 
 Option A refers to deployment models, not service models.
+
+**Reference:** [Cloud Computing Primer](cloud-computing-primer.md)
 </details>
 
 ---
@@ -72,6 +74,8 @@ In IaaS, the cloud provider manages the physical infrastructure, hypervisor, and
 - Security configurations
 
 This follows the shared responsibility model where infrastructure management is handled by the provider, but the customer manages everything from the OS layer up.
+
+**Reference:** [Cloud Service Models](cloud-service-models.md)
 </details>
 
 ---
@@ -97,6 +101,8 @@ The key difference is resource sharing:
 - **Private cloud**: Dedicated infrastructure for a single organization
 
 While security and cost differ between models, these are outcomes of the fundamental infrastructure sharing difference, not the primary distinction itself.
+
+**Reference:** [Cloud Deployment Models](cloud-deployment-models.md)
 </details>
 
 ---
@@ -123,6 +129,8 @@ Which cloud deployment model combines both public and private cloud environments
 - Move workloads between environments as needed
 
 Multi-cloud refers to using multiple different cloud providers, not necessarily combining public and private deployments.
+
+**Reference:** [Cloud Computing Primer](cloud-computing-primer.md)
 </details>
 
 ---
@@ -150,6 +158,8 @@ What does "elasticity" mean in cloud computing?
 - Pay only for resources actually used
 
 This is different from basic scalability, which might require manual intervention.
+
+**Reference:** [Cloud Service Models](cloud-service-models.md)
 </details>
 
 ---
@@ -175,6 +185,7 @@ Which of the following is an example of SaaS (Software as a Service)?
 - Azure App Service = PaaS (application hosting platform)
 - Azure Virtual Networks = IaaS (networking infrastructure)
 
+**Reference:** [Cloud Deployment Models](cloud-deployment-models.md)
 </details>
 
 ---
@@ -205,6 +216,7 @@ This shift from CapEx to OpEx provides:
 - Variable costs based on actual usage
 - Improved budget predictability
 
+**Reference:** [Cloud Computing Primer](cloud-computing-primer.md)
 </details>
 
 ---
@@ -232,6 +244,8 @@ Which cloud characteristic enables users to provision computing resources automa
 - Self-service portals and APIs for resource management
 
 This enables the agility and speed benefits that cloud computing provides.
+
+**Reference:** [Cloud Service Models](cloud-service-models.md)
 </details>
 
 ---
@@ -259,6 +273,8 @@ The primary advantage of multi-cloud is **avoiding vendor lock-in** by:
 - Reduced risk of being dependent on one vendor's roadmap
 
 Multi-cloud typically increases complexity and costs, but provides strategic flexibility and risk mitigation.
+
+**Reference:** [Cloud Deployment Models](cloud-deployment-models.md)
 </details>
 
 ---
@@ -286,6 +302,8 @@ Which factor is most important when deciding between public, private, or hybrid 
 - Regulatory compliance obligations
 
 Organizations with highly sensitive data or strict compliance requirements often need private or hybrid clouds, while those with standard requirements can leverage public cloud benefits.
+
+**Reference:** [Cloud Computing Primer](cloud-computing-primer.md)
 </details>
 
 ---

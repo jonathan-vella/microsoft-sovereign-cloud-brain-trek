@@ -3,6 +3,7 @@ layout: default
 title: "Lab 1: Azure Local Deployment"
 parent: Hands-On Labs Overview
 nav_order: 1
+description: "Lab 1: Azure Local connected-mode deployment — networking, storage, sample workload, and validating the cluster against Azure Arc."
 ---
 
 # Lab 1: Azure Local Deployment

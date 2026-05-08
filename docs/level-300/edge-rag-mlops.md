@@ -3,6 +3,7 @@ layout: default
 title: MLOps for Edge RAG Systems
 parent: Module 4 - Production Edge RAG
 nav_order: 3
+description: "Edge RAG (preview) MLOps — model lifecycle on Arc-enabled Kubernetes, CI/CD for prompts and embeddings, evaluation harnesses, and rollback patterns."
 ---
 
 # MLOps for Edge RAG Systems
@@ -103,4 +104,4 @@ graph LR
 
 ---
 
-**See also:** [Architecture](edge-rag-architecture-production) | [Lab](edge-rag-production-lab)
+**See also:** [Architecture](edge-rag-architecture-production.md) | [Lab](edge-rag-production-lab.md)

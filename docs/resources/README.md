@@ -198,7 +198,7 @@ description: "Additional resources, references, and support for Microsoft Sovere
 - **[Microsoft Customer Stories](https://customers.microsoft.com/)** - Real-world implementations
 - Filter by:
   - Industry (Government, Financial Services, Healthcare)
-  - Product (Azure, Azure Stack HCI)
+  - Product (Azure, Azure Local)
   - Region (Europe, Americas, Asia Pacific)
 
 ---
@@ -254,9 +254,9 @@ description: "Additional resources, references, and support for Microsoft Sovere
 
 ## Next Steps
 
-- **[Return to Home](../index)**
+- **[Return to Home](../index.md)**
 - **[Start Level 50](../level-50/)**
-- **[Review Introduction](../introduction)**
+- **[Review Introduction](../introduction.md)**
 
 ---
 

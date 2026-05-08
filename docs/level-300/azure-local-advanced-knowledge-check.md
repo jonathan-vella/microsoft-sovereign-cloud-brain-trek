@@ -3,6 +3,7 @@ layout: default
 title: Azure Local Advanced - Knowledge Check
 parent: Level 300 - Advanced
 nav_order: 10
+description: "Knowledge check covering advanced Azure Local — multi-site deployments, networking deep-dive, certificate management, and disconnected operations."
 ---
 
 # Azure Local Advanced - Knowledge Check
@@ -15,9 +16,9 @@ Test your expertise in advanced Azure Local deployments, multi-site architecture
 
 ## Quiz Instructions
 
-**Total Questions:** 20  
-**Passing Score:** 16/20 (80%)  
-**Time Estimate:** 35-45 minutes  
+**Total Questions:** 20
+**Passing Score:** 16/20 (80%)
+**Time Estimate:** 35-45 minutes
 **Format:** Expert-level scenario-based questions
 
 This assessment covers:
@@ -34,9 +35,9 @@ This assessment covers:
 
 A financial services company needs to deploy Azure Local across 8 regional offices with centralized compliance monitoring. Regional offices have varying bandwidth (100 Mbps - 1 Gbps). They need < 10ms latency between any two sites and 99.99% availability. Which architecture is MOST appropriate?
 
-A) Pure hub-and-spoke with central compliance hub  
-B) Full mesh topology across all 8 sites  
-C) Hybrid architecture: regional mesh clusters + hub for compliance  
+A) Pure hub-and-spoke with central compliance hub
+B) Full mesh topology across all 8 sites
+C) Hybrid architecture: regional mesh clusters + hub for compliance
 D) Independent sites with no inter-site connectivity
 
 <details markdown="1">
@@ -60,7 +61,7 @@ For 8 sites with mixed requirements, a **hybrid architecture** is optimal:
 - **B (Full Mesh):** 8 sites = 28 connections (n(n-1)/2); operational nightmare, bandwidth waste
 - **D (Independent):** Doesn't meet availability requirements; no failover capability
 
-**Reference:** [Multi-Site Patterns](azure-local-multi-site#hybrid-architecture)
+**Reference:** [Multi-Site Patterns](azure-local-multi-site.md#hybrid-architecture)
 </details>
 
 ---
@@ -69,9 +70,9 @@ For 8 sites with mixed requirements, a **hybrid architecture** is optimal:
 
 In a completely air-gapped Azure Local deployment, certificates are expiring in 45 days. What is the CORRECT renewal procedure?
 
-A) Temporarily connect to internet, auto-renew via Azure, disconnect  
-B) Generate CSRs on-premises → Manual transfer → External CA → Import new certs  
-C) Use Azure CLI offline mode to generate and install certificates  
+A) Temporarily connect to internet, auto-renew via Azure, disconnect
+B) Generate CSRs on-premises → Manual transfer → External CA → Import new certs
+C) Use Azure CLI offline mode to generate and install certificates
 D) Extend existing certificate validity using PowerShell
 
 <details markdown="1">
@@ -99,7 +100,7 @@ Air-gapped environments require **manual certificate renewal process**:
 
 **Critical:** Plan certificate renewals 60-90 days before expiration to allow for manual process delays.
 
-**Reference:** [Certificate Management](azure-local-certificate-management#renewal-procedures)
+**Reference:** [Certificate Management](azure-local-certificate-management.md#renewal-procedures)
 </details>
 
 ---
@@ -111,9 +112,9 @@ Air-gapped environments require **manual certificate renewal process**:
 
 A government agency needs high availability across two data centers 50km apart. Which Azure Local architecture pattern should they implement?
 
-A) Stretch cluster with synchronous replication between sites  
-B) Separate Azure Local clusters at each site with Azure Site Recovery for VM replication  
-C) Single large cluster spanning both sites with shared storage  
+A) Stretch cluster with synchronous replication between sites
+B) Separate Azure Local clusters at each site with Azure Site Recovery for VM replication
+C) Single large cluster spanning both sites with shared storage
 D) Active-passive cluster pair with manual failover scripts only
 
 <details markdown="1">
@@ -143,7 +144,7 @@ D) Active-passive cluster pair with manual failover scripts only
 - **C:** Azure Local doesn't support shared storage across sites
 - **D:** While valid, ASR provides better automation and management
 
-**Reference:** [Multi-Site Patterns](azure-local-multi-site) | [Azure Site Recovery](https://learn.microsoft.com/en-us/azure/site-recovery/)
+**Reference:** [Multi-Site Patterns](azure-local-multi-site.md) | [Azure Site Recovery](https://learn.microsoft.com/en-us/azure/site-recovery/)
 </details>
 
 ---
@@ -152,9 +153,9 @@ D) Active-passive cluster pair with manual failover scripts only
 
 During a manual update in disconnected mode, the update package validation fails with "Hash mismatch detected." What is the MOST LIKELY cause and solution?
 
-A) Corrupted download → Re-download update package from Microsoft  
-B) File corruption during transfer → Re-transfer using checksums/integrity verification  
-C) Incompatible update version → Check version compatibility matrix  
+A) Corrupted download → Re-download update package from Microsoft
+B) File corruption during transfer → Re-transfer using checksums/integrity verification
+C) Incompatible update version → Check version compatibility matrix
 D) Certificate expiration → Renew certificates before updating
 
 <details markdown="1">
@@ -176,7 +177,7 @@ Hash mismatch indicates **file integrity issue during manual transfer**:
 
 1. ✅ Verify SHA-256 hash of original download matches published Microsoft hash
 2. ✅ Re-transfer file using verified copy process
-3. ✅ Use checksums/integrity tools (e.g., `Get-FileHash` in PowerShell)
+3. ✅ Use checksums/integrity tools (for example, `Get-FileHash` in PowerShell)
 4. ✅ Verify hash after transfer matches source
 5. ✅ Use reliable transfer media (quality USB drives, tested network paths)
 
@@ -188,7 +189,7 @@ Hash mismatch indicates **file integrity issue during manual transfer**:
 
 **Best Practice:** Always verify file hashes at each transfer point in disconnected environments.
 
-**Reference:** [Disconnected Updates](azure-local-advanced-disconnected#update-troubleshooting)
+**Reference:** [Disconnected Updates](azure-local-advanced-disconnected.md#update-troubleshooting)
 </details>
 
 ---
@@ -197,9 +198,9 @@ Hash mismatch indicates **file integrity issue during manual transfer**:
 
 An enterprise with sovereign cloud requirements needs to segment Azure Local traffic. Which segmentation approach provides BEST security while maintaining operational efficiency?
 
-A) Single flat network for simplicity  
-B) VLANs: Management, Storage, Compute, Live Migration  
-C) Physical network separation for each traffic type  
+A) Single flat network for simplicity
+B) VLANs: Management, Storage, Compute, Live Migration
+C) Physical network separation for each traffic type
 D) Software-defined microsegmentation with Calico/Cilium
 
 <details markdown="1">
@@ -231,7 +232,7 @@ D) Software-defined microsegmentation with Calico/Cilium
 - **C:** Prohibitively expensive; operational complexity; not necessary for most requirements
 - **D:** Overkill for infrastructure layer; adds complexity; use for workload-level segmentation
 
-**Reference:** [Advanced Networking](azure-local-networking-advanced#vlan-segmentation)
+**Reference:** [Advanced Networking](azure-local-networking-advanced.md#vlan-segmentation)
 </details>
 
 ---
@@ -240,9 +241,9 @@ D) Software-defined microsegmentation with Calico/Cilium
 
 An air-gapped Azure Local cluster experiences complete site failure. What is the PRIMARY DR strategy?
 
-A) Cloud-based Azure Site Recovery (ASR)  
-B) Replica cluster at secondary site with manual failover  
-C) Tape backups with off-site storage  
+A) Cloud-based Azure Site Recovery (ASR)
+B) Replica cluster at secondary site with manual failover
+C) Tape backups with off-site storage
 D) Wait for site recovery; rebuild from scratch
 
 <details markdown="1">
@@ -274,7 +275,7 @@ For air-gapped environments, **replica cluster with manual failover** is the onl
 - Lower RPO than cloud-connected scenarios
 - Meets air-gap requirement
 
-**Reference:** [Disaster Recovery](azure-local-air-gapped#disaster-recovery)
+**Reference:** [Disaster Recovery](azure-local-air-gapped.md#disaster-recovery)
 </details>
 
 ---
@@ -283,9 +284,9 @@ For air-gapped environments, **replica cluster with manual failover** is the onl
 
 A production Azure Local cluster with all-flash storage experiences inconsistent latency (1-15ms). What is the FIRST troubleshooting step?
 
-A) Replace all SSDs with newer models  
-B) Check Storage QoS policies and IOPS limits  
-C) Increase cache size configuration  
+A) Replace all SSDs with newer models
+B) Check Storage QoS policies and IOPS limits
+C) Increase cache size configuration
 D) Disable storage tiering
 
 <details markdown="1">
@@ -316,7 +317,7 @@ D) Disable storage tiering
 - **C:** Cache size changes require careful planning; not first step
 - **D:** Tiering helps performance; disabling would likely worsen issues
 
-**Reference:** [Performance Optimization](azure-local-advanced-connected#storage-optimization)
+**Reference:** [Performance Optimization](azure-local-advanced-connected.md#storage-optimization)
 </details>
 
 ---
@@ -325,9 +326,9 @@ D) Disable storage tiering
 
 In a disconnected environment, certificate validation fails with "unable to get local issuer certificate." What is the issue?
 
-A) Certificates have expired  
-B) Intermediate CA certificates not imported to trusted store  
-C) Wrong certificate format (PEM vs PFX)  
+A) Certificates have expired
+B) Intermediate CA certificates not imported to trusted store
+C) Wrong certificate format (PEM vs PFX)
 D) Private key not included with certificate
 
 <details markdown="1">
@@ -352,7 +353,7 @@ Server Certificate (imported with private key)
 
 1. ✅ Obtain complete certificate chain from CA
 2. ✅ Import Root CA to Trusted Root Certification Authorities store
-3. ✅ Import Intermediate CA(s) to Intermediate Certification Authorities store
+3. ✅ Import Intermediate CAs to Intermediate Certification Authorities store
 4. ✅ Import server certificate with private key to Personal store
 5. ✅ Verify chain validation with: `certutil -verify -urlfetch certificate.cer`
 
@@ -364,7 +365,7 @@ Server Certificate (imported with private key)
 
 **Best Practice:** In disconnected environments, always import complete certificate chain including all intermediates.
 
-**Reference:** [Certificate Management](azure-local-certificate-management#chain-validation)
+**Reference:** [Certificate Management](azure-local-certificate-management.md#chain-validation)
 </details>
 
 ---
@@ -373,9 +374,9 @@ Server Certificate (imported with private key)
 
 Managing updates across 6 Azure Local clusters in connected mode. What is the BEST orchestration strategy?
 
-A) Update all clusters simultaneously for consistency  
-B) Update one cluster at a time, validate, then proceed  
-C) Update clusters in pairs with validation between pairs  
+A) Update all clusters simultaneously for consistency
+B) Update one cluster at a time, validate, then proceed
+C) Update clusters in pairs with validation between pairs
 D) Let Azure automatically orchestrate all cluster updates
 
 <details markdown="1">
@@ -408,7 +409,7 @@ D) Let Azure automatically orchestrate all cluster updates
 - **B:** Too slow for 6 clusters; extends maintenance window excessively
 - **D:** No automatic cross-cluster orchestration in Azure Local
 
-**Reference:** [Update Management](azure-local-advanced-connected#multi-site-updates)
+**Reference:** [Update Management](azure-local-advanced-connected.md#multi-site-updates)
 </details>
 
 ---
@@ -417,9 +418,9 @@ D) Let Azure automatically orchestrate all cluster updates
 
 Beyond physical isolation, what additional security controls are CRITICAL for air-gapped Azure Local?
 
-A) Antivirus only; physical air-gap provides complete security  
-B) Application whitelisting, USB device control, integrity monitoring, audit logging  
-C) Standard Windows Defender with default settings  
+A) Antivirus only; physical air-gap provides complete security
+B) Application whitelisting, USB device control, integrity monitoring, audit logging
+C) Standard Windows Defender with default settings
 D) No additional controls needed; air-gap eliminates threats
 
 <details markdown="1">
@@ -463,7 +464,7 @@ Air-gapped environments require **defense-in-depth** security controls:
 - **A/C:** Antivirus alone insufficient; signature updates difficult in air-gap
 - **D:** Air-gap doesn't eliminate insider threats, USB-borne malware, or supply chain risks
 
-**Reference:** [Air-Gapped Security](azure-local-air-gapped#security-hardening)
+**Reference:** [Air-Gapped Security](azure-local-air-gapped.md#security-hardening)
 </details>
 
 ---
@@ -472,9 +473,9 @@ Air-gapped environments require **defense-in-depth** security controls:
 
 Configuring Storage Replica between two Azure Local clusters 200km apart. What are the bandwidth and latency requirements?
 
-A) No minimum requirements; any connection works  
-B) < 5ms latency; 10 Gbps minimum for synchronous replication  
-C) < 50ms latency; bandwidth = (change rate × 2) for asynchronous  
+A) No minimum requirements; any connection works
+B) < 5ms latency; 10 Gbps minimum for synchronous replication
+C) < 50ms latency; bandwidth = (change rate × 2) for asynchronous
 D) < 10ms latency; 1 Gbps minimum for asynchronous
 
 <details markdown="1">
@@ -509,7 +510,7 @@ D) < 10ms latency; 1 Gbps minimum for asynchronous
 - Add network device latency (2-3ms) = 6-7ms typical
 - Therefore: Asynchronous mode required
 
-**Reference:** [Storage Replica](azure-local-advanced-connected#storage-replica)
+**Reference:** [Storage Replica](azure-local-advanced-connected.md#storage-replica)
 </details>
 
 ---
@@ -518,9 +519,9 @@ D) < 10ms latency; 1 Gbps minimum for asynchronous
 
 Planning a 16-node Azure Local cluster. What is the MINIMUM number of fault domains required for production?
 
-A) 1 fault domain (all nodes in same rack)  
-B) 2 fault domains (two-way mirroring)  
-C) 3 fault domains (three-way mirroring)  
+A) 1 fault domain (all nodes in same rack)
+B) 2 fault domains (two-way mirroring)
+C) 3 fault domains (three-way mirroring)
 D) 4 fault domains (optimal resiliency)
 
 <details markdown="1">
@@ -556,7 +557,7 @@ D) 4 fault domains (optimal resiliency)
 - **B:** Minimal; survives 1 failure but no maintenance buffer
 - **D:** Better but not minimum requirement; more expensive
 
-**Reference:** [Capacity Planning](azure-local-advanced-connected#fault-domains)
+**Reference:** [Capacity Planning](azure-local-advanced-connected.md#fault-domains)
 </details>
 
 ---
@@ -565,9 +566,9 @@ D) 4 fault domains (optimal resiliency)
 
 Configuring network adapters for Azure Local. Which teaming configuration is RECOMMENDED for production?
 
-A) Single NIC per traffic type (simplicity)  
-B) Switch Embedded Teaming (SET) with RDMA for storage  
-C) Traditional NIC Teaming (LBFO) across all adapters  
+A) Single NIC per traffic type (simplicity)
+B) Switch Embedded Teaming (SET) with RDMA for storage
+C) Traditional NIC Teaming (LBFO) across all adapters
 D) No teaming; rely on switch-level redundancy
 
 <details markdown="1">
@@ -605,7 +606,7 @@ D) No teaming; rely on switch-level redundancy
 - **C:** LBFO (Load Balancing Failover) deprecated; doesn't support RDMA
 - **D:** Application-level redundancy preferred over switch-only
 
-**Reference:** [Network Design](azure-local-networking-advanced#nic-teaming)
+**Reference:** [Network Design](azure-local-networking-advanced.md#nic-teaming)
 </details>
 
 ---
@@ -614,9 +615,9 @@ D) No teaming; rely on switch-level redundancy
 
 Deploying updates across enterprise Azure Local environment. Which update ring strategy minimizes risk?
 
-A) All clusters in Production ring for fastest updates  
-B) Canary (1-2 clusters) → Pilot (20%) → Production (remaining)  
-C) Update all test clusters first, then all production simultaneously  
+A) All clusters in Production ring for fastest updates
+B) Canary (1-2 clusters) → Pilot (20%) → Production (remaining)
+C) Update all test clusters first, then all production simultaneously
 D) No rings; update based on cluster importance
 
 <details markdown="1">
@@ -662,7 +663,7 @@ D) No rings; update based on cluster importance
 - **C:** No validation period between phases
 - **D:** Uncontrolled; no systematic validation
 
-**Reference:** [Update Strategy](azure-local-advanced-connected#ring-deployment)
+**Reference:** [Update Strategy](azure-local-advanced-connected.md#ring-deployment)
 </details>
 
 ---
@@ -671,9 +672,9 @@ D) No rings; update based on cluster importance
 
 What is the PRIMARY monitoring approach for air-gapped Azure Local clusters?
 
-A) Azure Monitor with limited connectivity windows  
-B) On-premises monitoring: Windows Admin Center + System Center Operations Manager  
-C) No monitoring; manual health checks only  
+A) Azure Monitor with limited connectivity windows
+B) On-premises monitoring: Windows Admin Center + System Center Operations Manager
+C) No monitoring; manual health checks only
 D) Third-party cloud-based monitoring with VPN
 
 <details markdown="1">
@@ -717,7 +718,7 @@ Air-gapped environments require **complete on-premises monitoring stack**:
 
 **Data Export:** Use offline data export for compliance reporting (periodic, manual process).
 
-**Reference:** [Air-Gapped Monitoring](azure-local-air-gapped#monitoring)
+**Reference:** [Air-Gapped Monitoring](azure-local-air-gapped.md#monitoring)
 </details>
 
 ---
@@ -726,9 +727,9 @@ Air-gapped environments require **complete on-premises monitoring stack**:
 
 A 6-node Azure Local cluster needs quorum configuration. What is the BEST approach?
 
-A) File share witness on external file server  
-B) Cloud witness in Azure Storage  
-C) Disk witness on cluster shared volume  
+A) File share witness on external file server
+B) Cloud witness in Azure Storage
+C) Disk witness on cluster shared volume
 D) No witness; rely on node majority
 
 <details markdown="1">
@@ -766,7 +767,7 @@ D) No witness; rely on node majority
 - **C:** Disk witness on CSV has split-brain risks; deprecated for new deployments
 - **D:** Even-node clusters need witness for tie-breaking (3-3 split)
 
-**Reference:** [Quorum Configuration](azure-local-advanced-connected#cluster-quorum)
+**Reference:** [Quorum Configuration](azure-local-advanced-connected.md#cluster-quorum)
 </details>
 
 ---
@@ -775,9 +776,9 @@ D) No witness; rely on node majority
 
 An Azure Local update fails mid-installation with nodes in mixed states (2 updated, 2 not updated). What is the recovery procedure?
 
-A) Reboot all nodes and retry update  
-B) Roll back updated nodes to previous version  
-C) Complete update on remaining nodes, then validate cluster  
+A) Reboot all nodes and retry update
+B) Roll back updated nodes to previous version
+C) Complete update on remaining nodes, then validate cluster
 D) Rebuild entire cluster from scratch
 
 <details markdown="1">
@@ -824,7 +825,7 @@ D) Rebuild entire cluster from scratch
 - **B:** Rollback not supported mid-update; creates version mismatch
 - **D:** Nuclear option; unnecessary; lose production availability
 
-**Reference:** [Update Troubleshooting](azure-local-advanced-connected#update-recovery)
+**Reference:** [Update Troubleshooting](azure-local-advanced-connected.md#update-recovery)
 </details>
 
 ---
@@ -833,9 +834,9 @@ D) Rebuild entire cluster from scratch
 
 Implementing Network Controller for Azure Local. What is the MINIMUM deployment topology for production?
 
-A) Single Network Controller VM  
-B) Three Network Controller VMs in cluster  
-C) Five Network Controller VMs across fault domains  
+A) Single Network Controller VM
+B) Three Network Controller VMs in cluster
+C) Five Network Controller VMs across fault domains
 D) Network Controller not supported in Azure Local
 
 <details markdown="1">
@@ -877,7 +878,7 @@ D) Network Controller not supported in Azure Local
 - **C:** 5 VMs better but not minimum; more resource intensive
 - **D:** Network Controller fully supported in Azure Local
 
-**Reference:** [SDN Deployment](azure-local-networking-advanced#network-controller)
+**Reference:** [SDN Deployment](azure-local-networking-advanced.md#network-controller)
 </details>
 
 ---
@@ -886,9 +887,9 @@ D) Network Controller not supported in Azure Local
 
 An Azure Local cluster will host 100 VMs (average 500 GB each). With three-way mirroring, what is the MINIMUM raw storage capacity required?
 
-A) 50 TB (100 VMs × 500 GB)  
-B) 100 TB (2x for mirroring)  
-C) 150 TB (3x for three-way mirror)  
+A) 50 TB (100 VMs × 500 GB)
+B) 100 TB (2x for mirroring)
+C) 150 TB (3x for three-way mirror)
 D) 225 TB (3x mirror + 50% overhead for operations)
 
 <details markdown="1">
@@ -933,7 +934,7 @@ Storage capacity planning must account for **mirroring + operational overhead**:
 - Storage rebuild performance degrades > 80% utilization
 - Plan expansion before reaching 70%
 
-**Reference:** [Storage Capacity Planning](azure-local-advanced-connected#capacity-planning)
+**Reference:** [Storage Capacity Planning](azure-local-advanced-connected.md#capacity-planning)
 </details>
 
 ---
@@ -942,9 +943,9 @@ Storage capacity planning must account for **mirroring + operational overhead**:
 
 Implementing Zero Trust principles for Azure Local management access. What is the MOST important control?
 
-A) Network-based access control (firewall rules)  
-B) Multi-factor authentication (MFA) for all admin access  
-C) VPN requirement for management connections  
+A) Network-based access control (firewall rules)
+B) Multi-factor authentication (MFA) for all admin access
+C) VPN requirement for management connections
 D) Time-based access restrictions
 
 <details markdown="1">
@@ -993,7 +994,7 @@ D) Time-based access restrictions
 - **C:** VPN is supplementary; doesn't verify user identity
 - **D:** Time restrictions help but don't prevent credential theft
 
-**Reference:** [Zero Trust Security](zero-trust#privileged-access)
+**Reference:** [Zero Trust Security](zero-trust.md#privileged-access)
 </details>
 
 ---
@@ -1036,7 +1037,7 @@ D) Time-based access restrictions
 
 **Focus Areas:**
 
-- Review [Multi-Site Deployment Patterns](azure-local-multi-site)
+- Review [Multi-Site Deployment Patterns](azure-local-multi-site.md)
 - Study hub-and-spoke vs mesh vs hybrid architectures
 - Understand Azure Site Recovery and Storage Replica for cross-site HA
 - Practice capacity planning and fault domain design
@@ -1048,8 +1049,8 @@ D) Time-based access restrictions
 
 **Focus Areas:**
 
-- Review [Air-Gapped Architecture](azure-local-air-gapped)
-- Study [Certificate Management](azure-local-certificate-management)
+- Review [Air-Gapped Architecture](azure-local-air-gapped.md)
+- Study [Certificate Management](azure-local-certificate-management.md)
 - Understand manual update procedures and troubleshooting
 - Learn DR strategies for disconnected environments
 
@@ -1057,7 +1058,7 @@ D) Time-based access restrictions
 
 **Focus Areas:**
 
-- Review [Advanced Networking](azure-local-networking-advanced)
+- Review [Advanced Networking](azure-local-networking-advanced.md)
 - Study VLAN segmentation and traffic isolation
 - Understand SET vs LBFO and RDMA requirements
 - Learn Network Controller deployment patterns
@@ -1066,8 +1067,8 @@ D) Time-based access restrictions
 
 **Focus Areas:**
 
-- Review [Update Management](azure-local-advanced-connected)
-- Study [Troubleshooting](troubleshooting)
+- Review [Update Management](azure-local-advanced-connected.md)
+- Study [Troubleshooting](troubleshooting.md)
 - Practice with Windows Admin Center
 - Understand cluster quorum and update ring strategies
 
@@ -1075,7 +1076,7 @@ D) Time-based access restrictions
 
 **Focus Areas:**
 
-- Review [Zero Trust Security](zero-trust)
+- Review [Zero Trust Security](zero-trust.md)
 - Study defense-in-depth for air-gapped environments
 - Understand privileged access management
 - Learn security hardening best practices
@@ -1088,23 +1089,23 @@ After completing this assessment:
 
 ### 1. 🎯 Continue Learning
 
-- **Next Quiz:** [Zero Trust & Arc Advanced Quiz](zero-trust-arc-quiz) _(Coming soon)_
-- **Next Quiz:** [Edge RAG Production Quiz](edge-rag-production-quiz) _(Coming soon)_
-- **Hands-On:** Complete [Air-Gapped Lab](azure-local-disconnected-lab)
-- **Hands-On:** Complete [Connected Lab](azure-local-connected-lab)
+- **Next Quiz:** Zero Trust & Arc Advanced Quiz _(coming soon)_
+- **Next Quiz:** Edge RAG Production Quiz _(coming soon)_
+- **Hands-On:** Complete [Air-Gapped Lab](azure-local-disconnected-lab.md)
+- **Hands-On:** Complete [Connected Lab](azure-local-connected-lab.md)
 
 ### 2. 📚 Deep Dive Content
 
-- [Multi-Site Architectures](azure-local-multi-site)
-- [Air-Gapped Operations](azure-local-air-gapped)
-- [Certificate Management](azure-local-certificate-management)
-- [Advanced Troubleshooting](troubleshooting)
+- [Multi-Site Architectures](azure-local-multi-site.md)
+- [Air-Gapped Operations](azure-local-air-gapped.md)
+- [Certificate Management](azure-local-certificate-management.md)
+- [Advanced Troubleshooting](troubleshooting.md)
 
 ### 3. 🔗 Related Content
 
-- [Zero Trust Module](zero-trust)
-- [Edge RAG Production](edge-rag-production)
-- [Level 300 Overview](README)
+- [Zero Trust Module](zero-trust.md)
+- [Edge RAG Production](edge-rag-production.md)
+- [Level 300 Overview](README.md)
 
 ### 4. 🌐 External Resources
 
@@ -1116,13 +1117,13 @@ After completing this assessment:
 ### 5. ✋ Need Help?
 
 - Review [CONTRIBUTING.md](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/blob/main/CONTRIBUTING.md)
-- Check [README](README) for module navigation
+- Check [README](README.md) for module navigation
 - Practice with hands-on labs before retaking
 
 ---
 
-**Quiz Version:** 1.0  
-**Last Updated:** November 2025  
-**Total Questions:** 20  
-**Passing Score:** 16/20 (80%)  
+**Quiz Version:** 1.0
+**Last Updated:** November 2025
+**Total Questions:** 20
+**Passing Score:** 16/20 (80%)
 **Level:** 300 - Advanced/Expert

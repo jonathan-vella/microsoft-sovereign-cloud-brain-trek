@@ -3,8 +3,7 @@ layout: default
 title: Sovereign Landing Zone
 nav_order: 20
 parent: Level 300 - Advanced
-nav_exclude: true
-description: "Complete enterprise reference architecture for sovereign cloud infrastructure"
+description: "Complete enterprise reference architecture for sovereign cloud infrastructure — SLZ design principles, identity, network, governance, and compliance landing pads."
 ---
 
 # Sovereign Landing Zone Architecture
@@ -30,7 +29,7 @@ A Sovereign Landing Zone provides a standardized, secure foundation for deployin
 
 After completing this section, you will be able to:
 
-- ✅ Design a complete sovereign landing zone architecture
+- ✅ Design a complete Sovereign Landing Zone architecture
 - ✅ Implement management group hierarchy for governance
 - ✅ Configure network topology for sovereignty requirements
 - ✅ Apply policy-as-code for compliance enforcement
@@ -50,14 +49,14 @@ After completing this section, you will be able to:
 <div class="diagram-content" markdown="1">
 _
 _[Sovereign Landing Zone Architecture](../assets/images/level-300/sovereign-landing-zone.svg)_
-_Figure 1: Complete sovereign landing zone with management group hierarchy, network topology, and security controls_
+_Figure 1: Complete Sovereign Landing Zone with management group hierarchy, network topology, and security controls_
 
 </div>
 </details>
 
 ### Management Group Hierarchy
 
-The sovereign landing zone uses a hierarchical management group structure:
+The Sovereign Landing Zone uses a hierarchical management group structure:
 
 | Level | Purpose | Example |
 |-------|---------|---------|

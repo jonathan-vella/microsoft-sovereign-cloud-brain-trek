@@ -3,6 +3,7 @@ layout: default
 title: Azure Local Disconnected Mode
 parent: Module 3 - Azure Local Overview
 nav_order: 3.3
+description: "Azure Local disconnected operations (preview) — fully air-gapped operation with a local control plane, periodic sync model, and the constraints and capabilities supported in disconnected deployments."
 ---
 
 # Azure Local Disconnected Mode Operations
@@ -80,7 +81,7 @@ graph TB
 - Manual update deployment
 - Complete operational sovereignty
 
-**[← Back to Azure Local Overview](azure-local-overview)**
+**[← Back to Azure Local Overview](azure-local-overview.md)**
 
 ---
 
@@ -247,7 +248,7 @@ Even in Disconnected Mode, periodic synchronization can be beneficial when secur
 
 **Option 1: Periodic Network Connection**
 
-- Connect to internet/Azure on schedule (e.g., monthly)
+- Connect to internet/Azure on schedule (for example, monthly)
 - Download updates and telemetry
 - Sync configuration changes
 - Disconnect after sync complete
@@ -1024,13 +1025,13 @@ Critical for disconnected environments:
 
 **Continue Learning:**
 
-- [Hardware Requirements & Planning →](azure-local-hardware)
-- [Connected Mode Operations →](azure-local-connected-mode)
-- [Azure Local Quiz →](azure-local-quiz)
+- [Hardware Requirements & Planning →](azure-local-hardware.md)
+- [Connected Mode Operations →](azure-local-connected-mode.md)
+- [Azure Local Quiz →](azure-local-knowledge-check.md)
 
 **Back to:**
 
-- [Azure Local Overview →](azure-local-overview)
+- [Azure Local Overview →](azure-local-overview.md)
 
 **External Resources:**
 

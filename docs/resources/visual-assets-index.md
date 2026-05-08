@@ -107,10 +107,10 @@ python scripts/regenerate-diagrams.py --level 100 --name azure-local-architectur
 | Diagram | Description | Used In |
 |---------|-------------|---------|
 | [azure-infrastructure-hierarchy.svg](../assets/images/level-50/azure-infrastructure-hierarchy.svg) | Regions, zones, datacenters hierarchy | `azure-global-infrastructure.md` |
-| [azure-service-categories.svg](../assets/images/level-50/azure-service-categories.svg) | Azure service taxonomy | `azure-core-services.md` |
-| [azure-compute-options.svg](../assets/images/level-50/azure-compute-options.svg) | VMs, containers, serverless comparison | `azure-core-services.md` |
-| [azure-storage-tiers.svg](../assets/images/level-50/azure-storage-tiers.svg) | Hot, cool, archive storage tiers | `azure-core-services.md` |
-| [azure-networking-fundamentals.svg](../assets/images/level-50/azure-networking-fundamentals.svg) | VNet, subnet, NSG basics | `azure-core-services.md` |
+| [azure-service-categories.svg](../assets/images/level-50/azure-service-categories.svg) | Azure service taxonomy | `azure-service-categories.md` |
+| [azure-compute-options.svg](../assets/images/level-50/azure-compute-options.svg) | VMs, containers, serverless comparison | `azure-service-categories.md` |
+| [azure-storage-tiers.svg](../assets/images/level-50/azure-storage-tiers.svg) | Hot, cool, archive storage tiers | `azure-service-categories.md` |
+| [azure-networking-fundamentals.svg](../assets/images/level-50/azure-networking-fundamentals.svg) | VNet, subnet, NSG basics | `azure-service-categories.md` |
 
 ---
 

@@ -3,6 +3,7 @@ layout: default
 title: Hardware Planning & Sizing
 parent: Azure Local Architecture Deep Dive
 nav_order: 2
+description: "Azure Local hardware planning — workload-driven sizing, validated hardware tiers, network and storage minimums, and worked examples for common deployment sizes."
 ---
 
 # Hardware Planning and Sizing

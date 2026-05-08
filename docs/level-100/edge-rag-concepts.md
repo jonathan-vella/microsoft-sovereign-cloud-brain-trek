@@ -3,6 +3,7 @@ layout: default
 title: Overview
 parent: Module 5 - Edge RAG Concepts
 nav_order: 1
+description: "Edge RAG (preview) overview — retrieval-augmented generation on Azure Arc-enabled Kubernetes for searching on-premises data with generative AI while keeping content within customer boundaries."
 ---
 
 # Edge RAG Concepts
@@ -145,7 +146,6 @@ _Figure 1: Edge RAG system architecture showing the four main layers_
 
 ### Limitations of Traditional LLMs
 
-
 **1. Knowledge Cutoff:**
 
 - Training data has a cutoff date
@@ -277,7 +277,6 @@ _Figure 1: Edge RAG system architecture showing the four main layers_
 
 ## Edge RAG Deployment Topology Options
 
-
 ---
 
 ### Benefits of Edge Deployment
@@ -336,7 +335,7 @@ _Figure 1: Edge RAG system architecture showing the four main layers_
 - Local control over AI capabilities
 - No external dependencies
 
-**[Review Digital Sovereignty Concepts →](digital-sovereignty)**
+**[Review Digital Sovereignty Concepts →](digital-sovereignty.md)**
 
 ### Integration with Azure Local
 
@@ -363,7 +362,7 @@ _Figure 1: Edge RAG system architecture showing the four main layers_
 └──────────────────────────────────────┘
 ```
 
-**[Learn About Azure Local →](azure-local-overview)**
+**[Learn About Azure Local →](azure-local-overview.md)**
 
 ---
 
@@ -395,8 +394,8 @@ _Figure 1: Edge RAG system architecture showing the four main layers_
 
 ### Scenario 1: Healthcare Documentation Assistant (Disconnected Edge)
 
-**Industry:** Healthcare  
-**Organization:** Regional hospital network (5 facilities)  
+**Industry:** Healthcare
+**Organization:** Regional hospital network (5 facilities)
 **Challenge:** Access patient records and clinical guidelines quickly while maintaining HIPAA compliance
 
 **Problem:**
@@ -444,8 +443,8 @@ _Figure 1: Edge RAG system architecture showing the four main layers_
 
 ### Scenario 2: Manufacturing Knowledge Worker Support (Connected Edge)
 
-**Industry:** Manufacturing  
-**Company:** Automotive parts manufacturer  
+**Industry:** Manufacturing
+**Company:** Automotive parts manufacturer
 **Challenge:** 5,000+ equipment manuals need to be searchable for factory floor workers
 
 **Problem:**
@@ -491,8 +490,8 @@ _Figure 1: Edge RAG system architecture showing the four main layers_
 
 ### Scenario 3: Financial Advisor AI Assistant (Connected Edge)
 
-**Industry:** Financial Services  
-**Company:** Regional investment bank  
+**Industry:** Financial Services
+**Company:** Regional investment bank
 **Challenge:** Provide advisors with instant access to financial research and compliance documents
 
 **Problem:**
@@ -538,8 +537,8 @@ _Figure 1: Edge RAG system architecture showing the four main layers_
 
 ### Scenario 4: Research Lab Data Analysis (Hybrid)
 
-**Industry:** Pharmaceutical Research  
-**Organization:** Drug discovery lab  
+**Industry:** Pharmaceutical Research
+**Organization:** Drug discovery lab
 **Challenge:** Analyze sensitive research data and scientific literature
 
 **Problem:**
@@ -585,8 +584,8 @@ _Figure 1: Edge RAG system architecture showing the four main layers_
 
 ### Scenario 5: Government Agency Internal Portal (Disconnected Edge)
 
-**Industry:** Government  
-**Organization:** National security agency  
+**Industry:** Government
+**Organization:** National security agency
 **Challenge:** Search classified documents and intelligence reports
 
 **Problem:**
@@ -634,7 +633,7 @@ _Figure 1: Edge RAG system architecture showing the four main layers_
 
 Continue your learning journey:
 
-### [RAG Fundamentals Deep Dive →](rag-fundamentals)
+### [RAG Fundamentals Deep Dive →](rag-fundamentals.md)
 
 Explore the technical foundations of RAG, including embedding models, vector databases, and retrieval algorithms.
 
@@ -642,7 +641,7 @@ Explore the technical foundations of RAG, including embedding models, vector dat
 
 ---
 
-### [Edge RAG Architecture →](edge-rag-architecture)
+### [Edge RAG Architecture →](edge-rag-architecture.md)
 
 Learn the reference architecture for deploying RAG systems at the edge, including hardware requirements and component selection.
 
@@ -650,7 +649,7 @@ Learn the reference architecture for deploying RAG systems at the edge, includin
 
 ---
 
-### [RAG Use Cases and Implementation →](edge-rag-use-cases)
+### [RAG Use Cases and Implementation →](edge-rag-use-cases.md)
 
 Discover industry-specific use cases and practical implementation guidance for Edge RAG systems.
 
@@ -658,7 +657,7 @@ Discover industry-specific use cases and practical implementation guidance for E
 
 ---
 
-### [Edge RAG Knowledge Check Quiz →](edge-rag-quiz)
+### [Edge RAG Knowledge Check Quiz →](edge-rag-knowledge-check.md)
 
 Test your understanding with 15 questions covering RAG concepts, architecture, and use cases.
 

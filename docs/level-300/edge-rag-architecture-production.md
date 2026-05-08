@@ -3,6 +3,7 @@ layout: default
 title: Production RAG Architecture Deep Dive
 parent: Module 4 - Production Edge RAG
 nav_order: 1
+description: "Production Edge RAG (preview) architecture — multi-model serving, high-availability vector stores, ingestion at scale, and integration with enterprise data governance."
 ---
 
 # Production RAG Architecture Deep Dive
@@ -14,7 +15,6 @@ Complete end-to-end architecture for Retrieval-Augmented Generation systems at p
 ---
 
 ## Architecture Components
-
 
 ---
 
@@ -48,4 +48,4 @@ Complete end-to-end architecture for Retrieval-Augmented Generation systems at p
 
 ---
 
-**See also:** [Optimization Strategies](edge-rag-optimization) | [MLOps Pipeline](edge-rag-mlops)
+**See also:** [Optimization Strategies](edge-rag-optimization.md) | [MLOps Pipeline](edge-rag-mlops.md)

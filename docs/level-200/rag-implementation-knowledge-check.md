@@ -3,6 +3,7 @@ layout: default
 title: RAG Implementation Knowledge Check
 parent: Edge RAG Implementation
 nav_order: 3.4
+description: "Knowledge check covering Edge RAG (preview) implementation — deployment strategies, vector databases, LLM inference optimization, and operations / monitoring."
 ---
 
 # RAG Implementation Quiz
@@ -56,8 +57,8 @@ D) GPT-4 via cloud API
 - Phi-3 14B INT4 (~5GB) would also work but Mistral has better quality/latency trade-off
 - Cloud API violates edge/sovereignty requirement
 
+**Reference:** [Edge RAG Implementation](edge-rag-implementation.md)
 </details>
-
 
 ---
 
@@ -93,8 +94,8 @@ D) Chroma in-memory database per tenant
 - Cost-efficient when shared across multiple containers
 - Meets <50ms latency with proper indexing (HNSW)
 
+**Reference:** [RAG Deployment Strategies](rag-deployment-strategies.md)
 </details>
-
 
 ---
 
@@ -126,8 +127,8 @@ D) Implement model splitting across CPU/GPU
 - Model splitting increases latency (CPU communication)
 - Result: 450ms → 250-280ms latency, 4x throughput improvement
 
+**Reference:** [LLM Inference Optimization](llm-inference-optimization.md)
 </details>
-
 
 ---
 
@@ -164,8 +165,8 @@ D) Increase embedding dimension to 768
 - Higher dimensions increase memory and latency (incorrect)
 - efSearch is the tuning knob for recall/latency trade-off
 
+**Reference:** [Vector Databases on the Edge](vector-databases-edge.md)
 </details>
-
 
 ---
 
@@ -200,8 +201,8 @@ D) OpenAI text-embedding-3-small via API
 - API violates edge/sovereignty requirements
 - Total flow: query→embedding (5ms) + search (40ms) + reserve (5ms) = 50ms
 
+**Reference:** [RAG Operations & Monitoring](rag-operations-monitoring.md)
 </details>
-
 
 ---
 
@@ -239,8 +240,8 @@ D) Active-passive with all 3 locations syncing to cloud backup
 - Standby model would require failover orchestration (longer RTO)
 - Cloud backup violates sovereignty requirement
 
+**Reference:** [Edge RAG Implementation](edge-rag-implementation.md)
 </details>
-
 
 ---
 
@@ -278,8 +279,8 @@ D) Shadow deployment: run Mistral in parallel for 24 hours
 - Shadow deployment adds cost without catching customer impact
 - Final approach: kubectl traffic split 10% to new, monitor 30min, increment
 
+**Reference:** [RAG Deployment Strategies](rag-deployment-strategies.md)
 </details>
-
 
 ---
 
@@ -327,8 +328,8 @@ D) Switch to streaming API with async processing
 - Batch 256 LLM would use 256 × 7GB = not enough memory
 - API streaming adds cost and latency
 
+**Reference:** [LLM Inference Optimization](llm-inference-optimization.md)
 </details>
-
 
 ---
 
@@ -370,8 +371,8 @@ D) Error rate trending toward 2%
 - Alert strategy: focus on resource constraints and SLA risks
 - GPU 92% → next spike could exceed latency SLA
 
+**Reference:** [Vector Databases on the Edge](vector-databases-edge.md)
 </details>
-
 
 ---
 
@@ -412,8 +413,8 @@ D) Vector search parameters need tuning
 - Mitigation: rollback to previous model or check model quantization
 - Network/vector DB would show different symptoms
 
+**Reference:** [RAG Operations & Monitoring](rag-operations-monitoring.md)
 </details>
-
 
 ---
 
@@ -440,7 +441,7 @@ D) Deploy 5 separate RAG systems (one per language)
 
 **Explanation:**
 
-- Single multilingual embedding model (e.g., multilingual-e5-base):
+- Single multilingual embedding model (for example, multilingual-e5-base):
   - All 5 languages in same vector space
   - Query in German matches documents in German or other languages
   - LLM generates response in same language as query
@@ -451,8 +452,8 @@ D) Deploy 5 separate RAG systems (one per language)
 - Multilingual models designed for cross-lingual retrieval
 - LLM handles response translation naturally via context
 
+**Reference:** [Edge RAG Implementation](edge-rag-implementation.md)
 </details>
-
 
 ---
 
@@ -500,8 +501,8 @@ D) When latency <100ms is required
 - Latency (D) is benefit but doesn't affect cost calculation
 - Edge wins on 3-year and 5-year TCO
 
+**Reference:** [RAG Deployment Strategies](rag-deployment-strategies.md)
 </details>
-
 
 ---
 
@@ -543,8 +544,8 @@ D) Embedding model not capturing nuance
   3. Extend context to 5 documents
   4. Result: hallucination rate drops to <2%
 
+**Reference:** [LLM Inference Optimization](llm-inference-optimization.md)
 </details>
-
 
 ---
 
@@ -584,8 +585,8 @@ D) Kubernetes rescheduling finds capacity in Region 2 (2-5 min)
 - Partial errors (B) depends on which pod crashed
 - Option C assumes reserved capacity (incorrect)
 
+**Reference:** [Vector Databases on the Edge](vector-databases-edge.md)
 </details>
-
 
 ---
 
@@ -634,8 +635,8 @@ D) Query complexity variation (some queries require deeper index search)
 - Network loss (B) would show in all service calls
 - Thermal throttling (C) would affect all components equally
 
+**Reference:** [RAG Operations & Monitoring](rag-operations-monitoring.md)
 </details>
-
 
 ---
 
@@ -677,8 +678,8 @@ D) All of the above
   - Compliance → audit logging (B component)
 - Comprehensive security requires all layers
 
+**Reference:** [Edge RAG Implementation](edge-rag-implementation.md)
 </details>
-
 
 ---
 
@@ -722,8 +723,8 @@ D) Sharding not needed for edge deployments
 - Alert: when p95 > 250ms or resource > 80%
 - Option B too late (1000 QPS would exceed infrastructure)
 
+**Reference:** [RAG Deployment Strategies](rag-deployment-strategies.md)
 </details>
-
 
 ---
 
@@ -767,8 +768,8 @@ D) Skip improvements, maintain current performance
   3. Evaluate others for future versions
 - Best practice: incremental improvements validated for edge constraints
 
+**Reference:** [LLM Inference Optimization](llm-inference-optimization.md)
 </details>
-
 
 ---
 
@@ -857,14 +858,14 @@ D) Skip improvements, maintain current performance
 
 **If you missed questions on LLM Optimization (Q1, Q3, Q8, Q13):**
 
-- Review [LLM Inference Optimization](llm-inference-optimization)
+- Review [LLM Inference Optimization](llm-inference-optimization.md)
 - Study quantization techniques (INT4, INT8)
 - Focus on batch optimization strategies
 - Review hallucination mitigation techniques
 
 **If you missed questions on Vector Databases (Q2, Q4, Q15):**
 
-- Review [Edge RAG Implementation](edge-rag-implementation)
+- Review [Edge RAG Implementation](edge-rag-implementation.md)
 - Study vector database architectures and indexing
 - Focus on HNSW parameter tuning (m, efSearch)
 - Review performance bottleneck analysis
@@ -877,14 +878,14 @@ D) Skip improvements, maintain current performance
 
 **If you missed questions on Deployment (Q6, Q7, Q14):**
 
-- Review [RAG Deployment Strategies](rag-deployment-strategies)
+- Review [RAG Deployment Strategies](rag-deployment-strategies.md)
 - Study blue-green vs canary deployment patterns
 - Focus on CI/CD pipelines for ML models
 - Review disaster recovery strategies
 
 **If you missed questions on Operations (Q9, Q10, Q12, Q16, Q17):**
 
-- Review [RAG Operations & Monitoring](rag-operations-monitoring)
+- Review [RAG Operations & Monitoring](rag-operations-monitoring.md)
 - Study monitoring and alerting strategies
 - Focus on root cause analysis techniques
 - Review cost optimization and scalability planning
@@ -911,10 +912,10 @@ D) Skip improvements, maintain current performance
    - Build CI/CD pipelines for ML models
 
 3. **🔗 Review related content:**
-   - [Edge RAG Implementation](edge-rag-implementation)
-   - [LLM Inference Optimization](llm-inference-optimization)
-   - [RAG Deployment Strategies](rag-deployment-strategies)
-   - [RAG Operations & Monitoring](rag-operations-monitoring)
+   - [Edge RAG Implementation](edge-rag-implementation.md)
+   - [LLM Inference Optimization](llm-inference-optimization.md)
+   - [RAG Deployment Strategies](rag-deployment-strategies.md)
+   - [RAG Operations & Monitoring](rag-operations-monitoring.md)
 
 4. **🌐 Explore external resources:**
    - [LangChain Documentation](https://python.langchain.com/)
@@ -973,4 +974,4 @@ D) Skip improvements, maintain current performance
 
 ---
 
-**[← Back to Edge RAG Implementation](edge-rag-implementation)**
+**[← Back to Edge RAG Implementation](edge-rag-implementation.md)**

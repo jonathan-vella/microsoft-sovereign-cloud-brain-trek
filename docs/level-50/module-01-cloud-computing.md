@@ -4,6 +4,7 @@ title: Module 1 - Cloud Computing Fundamentals
 parent: Level 50 - Prerequisites
 nav_order: 1
 has_children: true
+description: "Cloud computing fundamentals — IaaS / PaaS / SaaS service models, public / private / hybrid / multi-cloud deployment models, and the business and operational benefits of cloud adoption."
 ---
 
 # Module 1: Cloud Computing Fundamentals

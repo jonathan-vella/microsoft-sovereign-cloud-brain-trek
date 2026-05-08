@@ -4,6 +4,7 @@ title: Module 5 - Advanced Troubleshooting
 parent: Level 300 - Advanced
 nav_order: 5
 has_children: true
+description: "Module 5: Troubleshooting sovereign cloud deployments — diagnostic tools, common issues, and escalation patterns for Azure Local, Arc, and Edge RAG."
 ---
 
 # Module 5: Advanced Troubleshooting & Optimization
@@ -42,9 +43,9 @@ Master advanced troubleshooting techniques, diagnostic tools, and system optimiz
 
 ## Core Topics
 
-1. **Diagnostic Tools & Procedures** → [troubleshooting-tools.md](troubleshooting-tools)
-2. **Common Issues & Resolution** → [troubleshooting-common-issues.md](troubleshooting-common-issues)
-3. **Escalation & Advanced Support** → [troubleshooting-escalation.md](troubleshooting-escalation)
+1. **Diagnostic Tools & Procedures** → [troubleshooting-tools.md](troubleshooting-tools.md)
+2. **Common Issues & Resolution** → [troubleshooting-common-issues.md](troubleshooting-common-issues.md)
+3. **Escalation & Advanced Support** → [troubleshooting-escalation.md](troubleshooting-escalation.md)
 
 ---
 
@@ -93,11 +94,9 @@ flowchart TD
 
 ## Diagnostic Tools
 
-
 ---
 
 ## Escalation Procedures
-
 
 ---
 
@@ -132,10 +131,10 @@ flowchart TD
 
 ## Recommended Learning Path
 
-1. Start: [Tools & Procedures](troubleshooting-tools)
-2. Cases: [Common Issues](troubleshooting-common-issues)
-3. Support: [Escalation Procedures](troubleshooting-escalation)
-4. Reference: [Decision Tree](troubleshooting-tools#decision-tree)
+1. Start: [Tools & Procedures](troubleshooting-tools.md)
+2. Cases: [Common Issues](troubleshooting-common-issues.md)
+3. Support: [Escalation Procedures](troubleshooting-escalation.md)
+4. Reference: [Decision Tree](troubleshooting-tools.md#decision-tree)
 
 ---
 

@@ -1,7 +1,14 @@
+---
+layout: default
+title: Documentation Status
+nav_exclude: true
+description: "Internal documentation status page (excluded from Jekyll build via `_config.yml`)."
+---
+
 # Microsoft Sovereign Cloud Brain Trek - Documentation
 
-**Status:** ✅ 100% Content Complete | Ready for Jekyll Deployment  
-**Last Updated:** October 21, 2025  
+**Status:** ✅ 100% Content Complete | Ready for Jekyll Deployment
+**Last Updated:** October 21, 2025
 **Total Content:** 79 markdown files, ~10,000 lines, 16 modules
 
 ---
@@ -171,9 +178,9 @@ parent: Level 100 - Foundational
 Assets are integrated using **placeholder callouts** during development:
 
 ```markdown
-> **📊 Visual Asset Placeholder**  
-> *Asset Name: [Asset 41: Zero Trust Pillars]*  
-> Description of what diagram will show...  
+> **📊 Visual Asset Placeholder**
+> *Asset Name: [Asset 41: Zero Trust Pillars]*
+> Description of what diagram will show...
 > **Source:** Adapted from Microsoft Learn documentation
 ```
 
@@ -321,16 +328,16 @@ When new SVG files arrive from designer:
 
 ### Common Issues
 
-**Q: Links returning 404 errors**  
+**Q: Links returning 404 errors**
 A: Check relative path format. Internal links should use `[text](../path/to/file.md)` format.
 
-**Q: Images not displaying**  
+**Q: Images not displaying**
 A: Verify path is correct: `![alt](../../assets/images/level-X/filename.svg)`
 
-**Q: YAML frontmatter causing rendering issues**  
+**Q: YAML frontmatter causing rendering issues**
 A: Ensure consistent indentation (2 spaces), no tabs, and proper YAML syntax.
 
-**Q: Navigation not working**  
+**Q: Navigation not working**
 A: Check README.md in parent level has link with correct relative path.
 
 ---
@@ -347,6 +354,6 @@ A: Check README.md in parent level has link with correct relative path.
 
 ---
 
-**Created:** October 21, 2025  
-**Status:** ✅ 100% Complete & Ready for Jekyll  
+**Created:** October 21, 2025
+**Status:** ✅ 100% Complete & Ready for Jekyll
 **Next:** Designer asset creation (3-4 weeks) → Jekyll deployment (November 2025)

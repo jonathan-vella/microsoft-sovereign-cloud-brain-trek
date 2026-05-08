@@ -3,6 +3,7 @@ layout: default
 title: FedRAMP Compliance
 parent: Compliance & Security Patterns
 nav_order: 6
+description: "FedRAMP compliance patterns for sovereign cloud — Azure Government boundaries, FedRAMP Moderate vs High, and how Azure Local fits into FedRAMP authorization scope."
 ---
 
 # FedRAMP Compliance & Authorization

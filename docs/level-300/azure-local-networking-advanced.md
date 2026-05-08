@@ -3,6 +3,7 @@ layout: default
 title: Advanced Networking for Connected Mode
 parent: Module 2 - Azure Local Connected
 nav_order: 2
+description: "Azure Local advanced networking — SDN deep-dive, Network Controller, multi-path RDMA, segmentation patterns, and troubleshooting connectivity at scale."
 ---
 
 # Advanced Networking for Connected Mode
@@ -39,7 +40,6 @@ Master complex networking scenarios for multi-site Azure Local deployments with 
 ---
 
 ## Bandwidth and Latency Optimization
-
 
 ---
 
@@ -97,4 +97,4 @@ Master complex networking scenarios for multi-site Azure Local deployments with 
 
 ---
 
-**See also:** [Multi-Site Architectures](azure-local-multi-site) | [Connected Mode Overview](azure-local-advanced-connected) | [Lab Exercise](azure-local-connected-lab)
+**See also:** [Multi-Site Architectures](azure-local-multi-site.md) | [Connected Mode Overview](azure-local-advanced-connected.md) | [Lab Exercise](azure-local-connected-lab.md)

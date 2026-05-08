@@ -35,6 +35,7 @@ What does the CIA triad in information security represent?
 
 **Explanation:** The CIA triad represents the three fundamental principles of information security.
 
+**Reference:** [Security & Compliance Basics](security-compliance-basics.md)
 </details>
 
 ### Question 2
@@ -53,6 +54,7 @@ Which authentication factor includes passwords and PINs?
 
 **Explanation:** Knowledge factors include passwords, PINs, and security questions.
 
+**Reference:** [Data Protection Principles](data-protection-principles.md)
 </details>
 
 ### Question 3
@@ -71,6 +73,7 @@ What is the principle of least privilege?
 
 **Explanation:** Least privilege means providing only the minimum permissions necessary.
 
+**Reference:** [Compliance Frameworks](compliance-frameworks.md)
 </details>
 
 ### Question 4
@@ -89,6 +92,7 @@ Which compliance framework is specifically for healthcare data in the US?
 
 **Explanation:** HIPAA specifically protects healthcare data in the United States.
 
+**Reference:** [Security & Compliance Basics](security-compliance-basics.md)
 </details>
 
 ### Question 5
@@ -107,6 +111,7 @@ What does "defense in depth" mean?
 
 **Explanation:** Defense in depth uses multiple security layers for comprehensive protection.
 
+**Reference:** [Data Protection Principles](data-protection-principles.md)
 </details>
 
 ### Question 6
@@ -125,6 +130,7 @@ What is the primary purpose of data classification?
 
 **Explanation:** Data classification determines what protection measures are needed.
 
+**Reference:** [Compliance Frameworks](compliance-frameworks.md)
 </details>
 
 ### Question 7
@@ -143,6 +149,7 @@ Which type of encryption protects data during transmission?
 
 **Explanation:** Encryption in transit protects data moving between systems.
 
+**Reference:** [Security & Compliance Basics](security-compliance-basics.md)
 </details>
 
 ### Question 8
@@ -161,6 +168,7 @@ What is multi-factor authentication designed to provide?
 
 **Explanation:** MFA enhances security by requiring multiple forms of verification.
 
+**Reference:** [Data Protection Principles](data-protection-principles.md)
 </details>
 
 ### Question 9
@@ -179,6 +187,7 @@ In RBAC, what are permissions typically assigned to?
 
 **Explanation:** In RBAC, permissions are assigned to roles, and users are assigned to roles.
 
+**Reference:** [Compliance Frameworks](compliance-frameworks.md)
 </details>
 
 ### Question 10
@@ -197,6 +206,7 @@ What is the shared responsibility model in cloud security?
 
 **Explanation:** The shared responsibility model clearly divides security responsibilities.
 
+**Reference:** [Security & Compliance Basics](security-compliance-basics.md)
 </details>
 
 ---

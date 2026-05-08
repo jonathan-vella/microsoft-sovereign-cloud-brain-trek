@@ -3,6 +3,7 @@ layout: default
 title: Certificate Management in Disconnected Environments
 parent: Module 3 - Azure Local Disconnected
 nav_order: 2
+description: "Azure Local certificate management — PKI integration, automated rotation, and certificate strategies for control-plane and data-plane communications."
 ---
 
 # Certificate Management in Disconnected Environments
@@ -60,7 +61,6 @@ Manage certificates manually in air-gapped environments without cloud certificat
 
 ## Manual Certificate Lifecycle
 
-
 ---
 
 ## Key Management
@@ -92,4 +92,4 @@ Manage certificates manually in air-gapped environments without cloud certificat
 
 ---
 
-**See also:** [Air-Gapped Architecture](azure-local-air-gapped) | [Disconnected Lab](azure-local-disconnected-lab)
+**See also:** [Air-Gapped Architecture](azure-local-air-gapped.md) | [Disconnected Lab](azure-local-disconnected-lab.md)

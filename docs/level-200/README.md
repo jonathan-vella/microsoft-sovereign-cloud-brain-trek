@@ -157,7 +157,7 @@ Five progressive hands-on labs reinforcing Modules 1-5 through practical impleme
 5. [Lab 5: Monitoring & Observability](lab-05-monitoring-observability.md)
    - End-to-end monitoring with Log Analytics, alerts, and dashboards
 
-**[Module 6 Overview & Navigation](../level-200/README)**
+**[Module 6 Overview & Navigation](../level-200/README.md)**
 
 ---
 

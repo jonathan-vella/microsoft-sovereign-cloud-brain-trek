@@ -4,6 +4,7 @@ title: Module 3 - Azure Local Overview
 parent: Level 100 - Foundation
 nav_order: 3
 has_children: true
+description: "Azure Local foundations — architecture overview, hardware planning, and the connected vs disconnected operational modes that enable sovereign on-premises Azure services."
 ---
 
 # Module 3: Azure Local Overview

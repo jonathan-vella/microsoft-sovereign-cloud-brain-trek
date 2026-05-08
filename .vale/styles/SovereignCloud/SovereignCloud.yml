@@ -1,0 +1,20 @@
+# Project-specific vocabulary for Vale's spell/term checks
+# Plan reference: §E + §D terminology decisions
+extends: existence
+message: "Project term usage check: '%s'"
+level: suggestion
+ignorecase: false
+tokens:
+  - Azure Local
+  - Azure Arc
+  - Azure Stack HCI
+  - Microsoft Entra ID
+  - Sovereign Landing Zone
+  - SLZ
+  - Edge RAG
+  - Azure Stack Hub
+  - Azure Local instance
+  - Hyperconverged
+  - Air-gapped
+  - Customer Lockbox
+  - Confidential Computing

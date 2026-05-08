@@ -4,6 +4,7 @@ title: Module 3 - Edge RAG Implementation
 parent: Level 200 - Intermediate
 nav_order: 3
 has_children: true
+description: "Module 3: Edge RAG (preview) implementation — vector databases on the edge, deployment strategies, LLM inference optimization, and operations / monitoring."
 ---
 
 # Module 3: Edge RAG Implementation

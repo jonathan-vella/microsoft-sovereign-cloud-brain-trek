@@ -571,7 +571,7 @@ Video streams contain patient images and audio discussing health conditions — 
 A bank's primary Azure Local deployment is in Frankfurt. For disaster recovery, where should the secondary site be located?
 
 A) US East region for maximum geographic separation  
-B) Another EU region (e.g., Netherlands) maintaining data residency  
+B) Another EU region (for example, Netherlands) maintaining data residency  
 C) On-premises tape backup only  
 D) Cloud-based backup in any region with encryption
 

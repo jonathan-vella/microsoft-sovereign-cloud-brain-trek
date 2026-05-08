@@ -3,6 +3,7 @@ layout: default
 title: Sovereign Public Cloud
 parent: Module 2 - Sovereign Cloud Models
 nav_order: 2.1
+description: "Sovereign public cloud (Microsoft Cloud for Sovereignty) — sovereign landing zone, sovereign controls, transparency logs, and how public Azure regions are used for sovereign workloads."
 ---
 
 # Sovereign Public Cloud
@@ -86,7 +87,7 @@ Azure Policy → Audit compliance continuously
 Customer Lockbox → Control exceptions to data boundary
 ```
 
-**[Learn More: EU Data Boundary](european-commitments#eu-data-boundary)**
+**[Learn More: EU Data Boundary](european-commitments.md#eu-data-boundary)**
 
 ---
 
@@ -845,9 +846,9 @@ Follow a phased migration approach:
 
 ### Continue Learning
 
-- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models)**
-- **[→ Next: Sovereign Private Cloud](sovereign-private-cloud)**
-- **[Explore: National Partner Clouds](national-partner-clouds)**
+- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models.md)**
+- **[→ Next: Sovereign Private Cloud](sovereign-private-cloud.md)**
+- **[Explore: National Partner Clouds](national-partner-clouds.md)**
 
 ### Hands-On Learning
 

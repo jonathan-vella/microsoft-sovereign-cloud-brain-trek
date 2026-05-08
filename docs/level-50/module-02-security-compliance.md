@@ -4,6 +4,7 @@ title: Module 2 - Security & Compliance Fundamentals
 parent: Level 50 - Prerequisites
 nav_order: 2
 has_children: true
+description: "Foundational security and compliance — CIA triad, data protection principles, identity and access fundamentals, and an overview of GDPR, HIPAA, SOC 2, and ISO 27001 frameworks."
 ---
 
 # Module 2: Security & Compliance Fundamentals

@@ -3,6 +3,7 @@ layout: default
 title: Enterprise Patterns
 parent: Arc Advanced Management
 nav_order: 4
+description: "Enterprise Arc deployment patterns — landing-zone alignment, multi-subscription topology, identity integration, and rollout patterns for thousands of Arc-enabled resources."
 ---
 
 # Enterprise Governance and Deployment Patterns

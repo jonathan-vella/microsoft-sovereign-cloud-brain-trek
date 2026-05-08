@@ -3,6 +3,7 @@ layout: default
 title: Data Residency Concepts
 parent: Module 1 - Digital Sovereignty
 nav_order: 4
+description: "Data residency concepts — the difference between residency, sovereignty, and localization; Azure regions, geographies, EU Data Boundary, and how Azure customer data is bound to specific jurisdictions."
 ---
 
 # Data Residency and Localization Concepts
@@ -89,7 +90,7 @@ graph TB
 
 **Key Characteristics:**
 
-- Subject to legal requirements (e.g., GDPR)
+- Subject to legal requirements (for example, GDPR)
 - May require additional safeguards
 - Can include electronic transmission or physical media
 
@@ -120,7 +121,7 @@ Many regulations mandate or encourage data to be stored in specific locations:
 
 Data stored in foreign jurisdictions may be subject to:
 
-- **Foreign government access** (e.g., US CLOUD Act, Chinese National Intelligence Law)
+- **Foreign government access** (for example, US CLOUD Act, Chinese National Intelligence Law)
 - **Legal conflicts** between home and host country laws
 - **Difficulty in legal recourse** if data is mishandled
 
@@ -272,9 +273,7 @@ For customers requiring EU data residency:
 
 ---
 
-
 ---
-
 
 ---
 
@@ -404,7 +403,7 @@ For customers requiring EU data residency:
 **Common Scenarios:**
 
 - Support scenarios (with Customer Lockbox)
-- Global service features (e.g., Azure Front Door, CDN)
+- Global service features (for example, Azure Front Door, CDN)
 - Backup and disaster recovery
 - Service telemetry (if enabled)
 
@@ -626,10 +625,10 @@ _Note: Images should be sourced from official Microsoft documentation or created
 
 ## Next Steps
 
-- **[Learn about Operational Sovereignty →](operational-sovereignty)**
-- **[Review European Digital Commitments →](european-commitments)**
-- **[Explore Regulatory Requirements →](regulatory-overview)**
-- **[Return to Digital Sovereignty Overview →](digital-sovereignty)**
+- **[Learn about Operational Sovereignty →](operational-sovereignty.md)**
+- **[Review European Digital Commitments →](european-commitments.md)**
+- **[Explore Regulatory Requirements →](regulatory-overview.md)**
+- **[Return to Digital Sovereignty Overview →](digital-sovereignty.md)**
 
 ---
 

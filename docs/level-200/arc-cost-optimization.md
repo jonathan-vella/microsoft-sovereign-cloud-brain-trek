@@ -3,6 +3,7 @@ layout: default
 title: Cost Optimization
 parent: Arc Advanced Management
 nav_order: 3
+description: "Arc cost optimization — RBAC and tagging strategies, billing patterns for Arc-enabled services, and reducing operational overhead at scale."
 ---
 
 # Arc Cost Optimization Strategies

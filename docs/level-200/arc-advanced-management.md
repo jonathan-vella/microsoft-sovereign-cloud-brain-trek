@@ -5,6 +5,7 @@ parent: Module 2 - Arc Management
 grand_parent: Level 200 - Intermediate
 nav_order: 1
 has_children: true
+description: "Arc advanced management — multi-cluster operations, custom locations, Arc Resource Bridge, and integrating Arc with VMware vSphere / SCVMM / Azure Local."
 ---
 
 ## Overview
@@ -138,7 +139,7 @@ Enterprise
 3. **Cost Policies**
    - Allowed regions for new Arc resources
    - Resource type restrictions
-   - Size enforcement (e.g., minimum CPU cores)
+   - Size enforcement (for example, minimum CPU cores)
    - Deprovisioning of idle resources
 
 4. **Security Policies**
@@ -629,12 +630,12 @@ Incorporate Arc governance into CI/CD:
 2. **Cost Management:**
    - How do you currently track and allocate cloud costs?
    - Do you have visibility into per-environment and per-region costs?
-   - What cost optimization goals do you have (e.g., 20% reduction)?
+   - What cost optimization goals do you have (for example, 20% reduction)?
    - How do you manage budgets and spending controls?
 
 3. **Security & Compliance:**
-   - What security frameworks must you comply with (e.g., zero-trust)?
-   - Are you subject to data residency regulations (e.g., GDPR)?
+   - What security frameworks must you comply with (for example, zero-trust)?
+   - Are you subject to data residency regulations (for example, GDPR)?
    - How do you currently manage patches and security updates?
    - What's your incident response process?
 

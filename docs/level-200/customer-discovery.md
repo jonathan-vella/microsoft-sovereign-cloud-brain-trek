@@ -2,7 +2,8 @@
 layout: default
 title: Customer Discovery
 parent: Pre-Sales & Solution Design
-nav_order: 4
+nav_order: 1
+description: "Customer discovery techniques for sovereign cloud opportunities — stakeholder mapping, regulatory questionnaires, technical assessments, and qualifying use cases for Azure Local, Arc, and Edge RAG."
 ---
 
 # Customer Discovery Framework
@@ -532,7 +533,7 @@ POST-INTERVIEW FOLLOW-UP
 - **Main Page:** [Pre-Sales & Solution Design](./presales-solution-design.md)
 - **Solution Sizing:** [Solution Sizing & Planning](./solution-sizing.md)
 - **Cost Analysis:** [Cost Estimation & TCO](./cost-estimation.md)
-- **Proposal Writing:** [Proposal Development](./proposal-development.md)
+- **Proposal Writing:** see [Customer Discovery](./customer-discovery.md) and [Solution Sizing](./solution-sizing.md) for proposal inputs (dedicated proposal template forthcoming).
 - **Assessment:** [Pre-Sales & Solution Design Knowledge Check](./presales-knowledge-check.md)
 
 ---

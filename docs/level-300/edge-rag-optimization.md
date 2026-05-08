@@ -3,6 +3,7 @@ layout: default
 title: Performance Optimization for Edge RAG
 parent: Module 4 - Production Edge RAG
 nav_order: 2
+description: "Edge RAG (preview) optimization — retrieval quality tuning, model quantization, hardware acceleration, and latency / throughput trade-offs."
 ---
 
 # Performance Optimization for Edge RAG
@@ -14,7 +15,6 @@ Optimize retrieval and inference performance for production RAG systems on edge 
 ---
 
 ## Optimization Strategies
-
 
 ---
 
@@ -43,4 +43,4 @@ Optimize retrieval and inference performance for production RAG systems on edge 
 
 ---
 
-**See also:** [Architecture](edge-rag-architecture-production) | [MLOps Pipeline](edge-rag-mlops)
+**See also:** [Architecture](edge-rag-architecture-production.md) | [MLOps Pipeline](edge-rag-mlops.md)

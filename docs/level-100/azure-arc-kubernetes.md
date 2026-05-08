@@ -3,6 +3,7 @@ layout: default
 title: Azure Arc-Enabled Kubernetes
 parent: Module 4 - Azure Arc Introduction
 nav_order: 4.2
+description: "Azure Arc-enabled Kubernetes — attach any CNCF-certified Kubernetes cluster to Azure for unified inventory, GitOps configuration, monitoring, and policy enforcement."
 ---
 
 # Azure Arc-Enabled Kubernetes
@@ -78,7 +79,7 @@ Azure Arc-enabled Kubernetes allows you to attach and configure Kubernetes clust
 - Deploy Azure services to clusters (App Services, Event Grid, etc.)
 - Implement security best practices at scale
 
-**[← Back to Azure Arc Introduction](azure-arc-intro)**
+**[← Back to Azure Arc Introduction](azure-arc-intro.md)**
 
 ---
 
@@ -255,8 +256,8 @@ az policy assignment create   --name 'enforce-https-ingress'   --policy <policy-
 
 ### Pod Security Standards
 
-**Baseline:** Minimize privilege escalation  
-**Restricted:** Hardened security (production workloads)  
+**Baseline:** Minimize privilege escalation
+**Restricted:** Hardened security (production workloads)
 **Privileged:** Unrestricted (dev/test only)
 
 ---
@@ -458,10 +459,10 @@ All clusters auto-sync from Git, ensuring consistent deployment patterns.
 
 ## Next Steps
 
-- [Arc Data Services →](azure-arc-data-services)
-- [Arc Servers →](azure-arc-servers)
-- [Azure Arc Quiz →](azure-arc-quiz)
-- [Back to Arc Overview →](azure-arc-intro)
+- [Arc Data Services →](azure-arc-data-services.md)
+- [Arc Servers →](azure-arc-servers.md)
+- [Azure Arc Quiz →](azure-arc-knowledge-check.md)
+- [Back to Arc Overview →](azure-arc-intro.md)
 
 **External Resources:**
 

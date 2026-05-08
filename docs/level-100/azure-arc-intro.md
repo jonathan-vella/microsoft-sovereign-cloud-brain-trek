@@ -3,6 +3,7 @@ layout: default
 title: Overview
 parent: Module 4 - Azure Arc Introduction
 nav_order: 1
+description: "Azure Arc overview — unified hybrid and multi-cloud control plane that projects on-premises, edge, and multi-cloud resources into Azure Resource Manager for consistent governance."
 ---
 
 # Azure Arc Introduction
@@ -19,7 +20,7 @@ nav_order: 1
 ---
 
 {: .note }
-> ⏱️ **Reading Time:** 15-20 min | 🎯 **Key Topics:** Hybrid management, multi-cloud governance, Arc-enabled services | 📋 **Prerequisites:** [Azure Core Services](../level-50/azure-core-services.md)
+> ⏱️ **Reading Time:** 15-20 min | 🎯 **Key Topics:** Hybrid management, multi-cloud governance, Arc-enabled services | 📋 **Prerequisites:** [Azure Service Categories](../level-50/azure-service-categories.md)
 
 ---
 
@@ -141,9 +142,9 @@ Azure Arc plays a critical role in sovereignty by enabling organizations to:
 
 **Connection to Sovereignty Concepts:**
 
-- [Review Digital Sovereignty →](digital-sovereignty)
-- [Review Operational Sovereignty →](operational-sovereignty)
-- [Review Azure Local (Sovereign Private Cloud) →](azure-local-overview)
+- [Review Digital Sovereignty →](digital-sovereignty.md)
+- [Review Operational Sovereignty →](operational-sovereignty.md)
+- [Review Azure Local (Sovereign Private Cloud) →](azure-local-overview.md)
 
 ---
 
@@ -239,7 +240,7 @@ graph TB
         Governance[Governance Engine]
     end
 
-    subgraph OnPrem[On-Premises/Edge]
+    subgraph OnPremEdge[On-Premises/Edge]
         AzLocal[Azure Local Cluster]
         Storage[Storage Spaces Direct]
         Workloads[VMs & Containers]
@@ -251,7 +252,7 @@ graph TB
     Policy --> Arc
     Monitor --> Arc
 
-    Arc -.->|Connected Mode<br/>Metadata Only| OnPrem
+    Arc -.->|Connected Mode<br/>Metadata Only| OnPremEdge
 
     AzLocal --> Storage
     AzLocal --> Workloads
@@ -259,7 +260,7 @@ graph TB
 
     style Cloud fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
     style Arc fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
-    style OnPrem fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+    style OnPremEdge fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
     style Data fill:#FFE6E6,stroke:#D13438,stroke-width:2px,color:#000
 ```
 
@@ -331,11 +332,9 @@ graph TB
 
 ### Arc-Enabled Resources Comparison
 
-
 ---
 
 ### Multi-Site Deployment Topology
-
 
 ---
 
@@ -370,7 +369,7 @@ Azure Arc consists of three main service categories:
 - Centralized compliance reporting
 - Reduced operational complexity
 
-**[Learn More →](azure-arc-servers)**
+**[Learn More →](azure-arc-servers.md)**
 
 ---
 
@@ -403,7 +402,7 @@ Azure Arc consists of three main service categories:
 - Cloud-native GitOps workflows
 - Unified security and compliance
 
-**[Learn More →](azure-arc-kubernetes)**
+**[Learn More →](azure-arc-kubernetes.md)**
 
 ---
 
@@ -432,7 +431,7 @@ Azure Arc consists of three main service categories:
 - Reduced database administration overhead
 - Data stays on-premises (sovereignty)
 
-**[Learn More →](azure-arc-data-services)**
+**[Learn More →](azure-arc-data-services.md)**
 
 ---
 
@@ -463,11 +462,14 @@ Edge RAG (Preview) is particularly relevant for sovereign cloud scenarios:
 - Enables generative AI insights from sensitive local data
 - Supports government, healthcare, and financial services use cases
 
-**[Learn More about Edge RAG →](edge-rag-concepts)**
+**[Learn More about Edge RAG →](edge-rag-concepts.md)**
 
 ---
 
-## Comparison Table: Three Arc Services
+## Comparison Table: Core Arc-enabled Services
+
+{: .note }
+> **📝 Source:** [Azure Arc overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview) — Microsoft Learn (May 2026). Microsoft documents four Arc resource types: Servers, Kubernetes clusters, Azure data services, and [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview). The table below covers the three pillars commonly compared in introductory material; Arc-enabled SQL Server is layered onto Arc-enabled Servers and is covered in Level 200.
 
 | Feature | Arc Servers | Arc Kubernetes | Arc Data Services |
 |---------|-------------|----------------|-------------------|
@@ -704,7 +706,7 @@ When deployed, Arc Resource Bridge unlocks:
 - Strategic governance from Azure
 - Best of both worlds
 
-**[Review Operational Sovereignty Concepts →](operational-sovereignty)**
+**[Review Operational Sovereignty Concepts →](operational-sovereignty.md)**
 
 ---
 
@@ -712,8 +714,8 @@ When deployed, Arc Resource Bridge unlocks:
 
 ### Scenario 1: Manufacturing Multi-Site Network (Arc Servers)
 
-**Industry:** Manufacturing  
-**Company:** Global automotive parts manufacturer  
+**Industry:** Manufacturing
+**Company:** Global automotive parts manufacturer
 **Locations:** 25 factories worldwide
 
 **Challenge:**
@@ -763,8 +765,8 @@ When deployed, Arc Resource Bridge unlocks:
 
 ### Scenario 2: Hybrid Kubernetes Deployment (Arc Kubernetes)
 
-**Industry:** Retail  
-**Company:** E-commerce platform  
+**Industry:** Retail
+**Company:** E-commerce platform
 **Scale:** 200+ microservices
 
 **Challenge:**
@@ -814,8 +816,8 @@ When deployed, Arc Resource Bridge unlocks:
 
 ### Scenario 3: Database Migration with Sovereignty (Arc Data Services)
 
-**Industry:** Financial Services  
-**Company:** Regional bank  
+**Industry:** Financial Services
+**Company:** Regional bank
 **Database Count:** 150+ SQL Server databases
 
 **Challenge:**
@@ -865,8 +867,8 @@ When deployed, Arc Resource Bridge unlocks:
 
 ### Scenario 4: Financial Institution Multi-Cloud Governance (Arc Servers + Policies)
 
-**Industry:** Financial Services  
-**Company:** International investment bank  
+**Industry:** Financial Services
+**Company:** International investment bank
 **Environment:** Azure, AWS, on-premises
 
 **Challenge:**
@@ -1132,7 +1134,7 @@ When deployed, Arc Resource Bridge unlocks:
 
 Ready to explore Azure Arc in depth? Continue with these topics:
 
-### [Arc-Enabled Servers Deep Dive →](azure-arc-servers)
+### [Arc-Enabled Servers Deep Dive →](azure-arc-servers.md)
 
 Learn how to manage Windows and Linux servers with Azure Arc, including onboarding, policy application, and monitoring.
 
@@ -1140,7 +1142,7 @@ Learn how to manage Windows and Linux servers with Azure Arc, including onboardi
 
 ---
 
-### [Arc-Enabled Kubernetes Deep Dive →](azure-arc-kubernetes)
+### [Arc-Enabled Kubernetes Deep Dive →](azure-arc-kubernetes.md)
 
 Explore how to connect Kubernetes clusters to Azure Arc and implement GitOps-based application deployment.
 
@@ -1148,7 +1150,7 @@ Explore how to connect Kubernetes clusters to Azure Arc and implement GitOps-bas
 
 ---
 
-### [Arc Data Services Overview →](azure-arc-data-services)
+### [Arc Data Services Overview →](azure-arc-data-services.md)
 
 Understand how to deploy Azure SQL Managed Instance and PostgreSQL on any infrastructure with Arc Data Services.
 
@@ -1156,7 +1158,7 @@ Understand how to deploy Azure SQL Managed Instance and PostgreSQL on any infras
 
 ---
 
-### [Azure Arc Knowledge Check Quiz →](azure-arc-quiz)
+### [Azure Arc Knowledge Check Quiz →](azure-arc-knowledge-check.md)
 
 Test your understanding with 12 questions covering all aspects of Azure Arc.
 

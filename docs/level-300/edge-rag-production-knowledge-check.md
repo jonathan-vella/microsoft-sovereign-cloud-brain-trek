@@ -3,6 +3,7 @@ layout: default
 title: Edge RAG Production - Knowledge Check
 parent: Level 300 - Advanced
 nav_order: 12
+description: "Knowledge check covering production Edge RAG (preview) — architecture, optimization, MLOps, and operational patterns."
 ---
 
 # Edge RAG Production - Knowledge Check
@@ -15,9 +16,9 @@ Test your expertise in production Edge RAG deployment, MLOps workflows, performa
 
 ## Quiz Instructions
 
-**Total Questions:** 18  
-**Passing Score:** 14/18 (78%)  
-**Time Estimate:** 30-40 minutes  
+**Total Questions:** 18
+**Passing Score:** 14/18 (78%)
+**Time Estimate:** 30-40 minutes
 **Format:** Expert-level scenario-based questions
 
 This assessment covers:
@@ -34,9 +35,9 @@ This assessment covers:
 
 Designing production RAG for financial services with strict latency requirements (< 500ms). What architecture provides BEST balance of performance and cost?
 
-A) Cloud-only RAG with GPU instances  
-B) Hybrid: Edge inference + cloud knowledge base  
-C) Full edge deployment: Local inference + local vector database  
+A) Cloud-only RAG with GPU instances
+B) Hybrid: Edge inference + cloud knowledge base
+C) Full edge deployment: Local inference + local vector database
 D) Edge inference with on-demand cloud retrieval
 
 <details markdown="1">
@@ -85,7 +86,7 @@ Total: 130-200ms ✅ (well under 500ms target)
 - **B:** Retrieval latency adds 50-150ms; sovereignty risk
 - **D:** On-demand cloud calls add unpredictable latency
 
-**Reference:** [Production Architecture](edge-rag-architecture-production)
+**Reference:** [Production Architecture](edge-rag-architecture-production.md)
 </details>
 
 ---
@@ -94,9 +95,9 @@ Total: 130-200ms ✅ (well under 500ms target)
 
 Choosing LLM for edge RAG with 64GB RAM constraint. Which model type is MOST appropriate?
 
-A) Full-precision 70B parameter model  
-B) INT8 quantized 13B parameter model  
-C) INT4 quantized 7B parameter model  
+A) Full-precision 70B parameter model
+B) INT8 quantized 13B parameter model
+C) INT4 quantized 7B parameter model
 D) Cloud API calls (no local model)
 
 <details markdown="1">
@@ -151,7 +152,7 @@ Buffer: 28GB
 Total: 64GB ✅
 ```
 
-**Reference:** [Performance Optimization](edge-rag-optimization#model-selection)
+**Reference:** [Performance Optimization](edge-rag-optimization.md#model-selection)
 </details>
 
 ---
@@ -160,9 +161,9 @@ Total: 64GB ✅
 
 Selecting vector database for 10M document enterprise knowledge base. What is the PRIMARY consideration?
 
-A) Maximum query throughput  
-B) Balance of retrieval accuracy, latency, and memory footprint  
-C) Lowest cost per query  
+A) Maximum query throughput
+B) Balance of retrieval accuracy, latency, and memory footprint
+C) Lowest cost per query
 D) Easiest to configure
 
 <details markdown="1">
@@ -225,7 +226,7 @@ D) Easiest to configure
 - **C:** Cost secondary to performance/accuracy in production
 - **D:** Configuration ease tertiary concern
 
-**Reference:** [Production Architecture](edge-rag-architecture-production#vector-database)
+**Reference:** [Production Architecture](edge-rag-architecture-production.md#vector-database)
 </details>
 
 ---
@@ -234,9 +235,9 @@ D) Easiest to configure
 
 Production RAG returns irrelevant results 15% of the time. What is the FIRST optimization to try?
 
-A) Increase number of retrieved chunks (k) from 5 to 20  
-B) Implement hybrid retrieval: Dense vectors + keyword search  
-C) Switch to larger embedding model  
+A) Increase number of retrieved chunks (k) from 5 to 20
+B) Implement hybrid retrieval: Dense vectors + keyword search
+C) Switch to larger embedding model
 D) Add reranking model after initial retrieval
 
 <details markdown="1">
@@ -288,7 +289,7 @@ D) Add reranking model after initial retrieval
 - **B:** Hybrid helps but reranking more impactful as first step
 - **C:** Larger embedding expensive; marginal gain
 
-**Reference:** [Performance Optimization](edge-rag-optimization#retrieval-optimization)
+**Reference:** [Performance Optimization](edge-rag-optimization.md#retrieval-optimization)
 </details>
 
 ---
@@ -297,9 +298,9 @@ D) Add reranking model after initial retrieval
 
 Ingesting technical documentation with complex tables and diagrams. What chunking strategy is BEST?
 
-A) Fixed 512-token chunks with 50-token overlap  
-B) Semantic chunking based on document structure (sections, tables)  
-C) Sentence-level chunks (one sentence per chunk)  
+A) Fixed 512-token chunks with 50-token overlap
+B) Semantic chunking based on document structure (sections, tables)
+C) Sentence-level chunks (one sentence per chunk)
 D) Full document as single chunk
 
 <details markdown="1">
@@ -360,7 +361,7 @@ Chunk 2: Section "Component Details" + Table
 - Easier to cite sources
 - Better LLM reasoning
 
-**Reference:** [Knowledge Base Management](edge-rag-architecture-production#knowledge-base)
+**Reference:** [Knowledge Base Management](edge-rag-architecture-production.md#knowledge-base)
 </details>
 
 ---
@@ -369,9 +370,9 @@ Chunk 2: Section "Component Details" + Table
 
 Deploying new RAG model version. What deployment pattern minimizes risk?
 
-A) Replace all edge instances simultaneously  
-B) Blue-green deployment with instant cutover  
-C) Canary deployment: 5% → 25% → 100% with validation gates  
+A) Replace all edge instances simultaneously
+B) Blue-green deployment with instant cutover
+C) Canary deployment: 5% → 25% → 100% with validation gates
 D) A/B testing with random 50/50 split
 
 <details markdown="1">
@@ -429,7 +430,7 @@ Gate Criteria:
 - **B:** Blue-green good but canary provides more gradual validation
 - **D:** A/B testing for experimentation, not deployment
 
-**Reference:** [MLOps Workflows](edge-rag-mlops#deployment)
+**Reference:** [MLOps Workflows](edge-rag-mlops.md#deployment)
 </details>
 
 ---
@@ -438,9 +439,9 @@ Gate Criteria:
 
 Detecting when RAG model needs retraining. Which metric is the PRIMARY indicator of data drift?
 
-A) Inference latency increasing  
-B) User query distribution shifting significantly from training data  
-C) Memory usage increasing  
+A) Inference latency increasing
+B) User query distribution shifting significantly from training data
+C) Memory usage increasing
 D) Error logs growing
 
 <details markdown="1">
@@ -500,7 +501,7 @@ if drift_score > 0.3:
 - **C:** Memory usage not related to data distribution
 - **D:** Errors indicate bugs, not drift
 
-**Reference:** [MLOps Workflows](edge-rag-mlops#monitoring)
+**Reference:** [MLOps Workflows](edge-rag-mlops.md#monitoring)
 </details>
 
 ---
@@ -509,9 +510,9 @@ if drift_score > 0.3:
 
 Knowledge base has 10M documents. 50K documents updated monthly. What is the MOST efficient update approach?
 
-A) Full reindex of entire 10M documents  
-B) Incremental update: Re-embed and re-index only changed documents  
-C) Create separate index for new docs; query both  
+A) Full reindex of entire 10M documents
+B) Incremental update: Re-embed and re-index only changed documents
+C) Create separate index for new docs; query both
 D) Manual merge of vectors
 
 <details markdown="1">
@@ -565,7 +566,7 @@ D) Manual merge of vectors
 - ✅ Resource efficient
 - ✅ Scalable approach
 
-**Reference:** [Knowledge Base Management](edge-rag-architecture-production#knowledge-base)
+**Reference:** [Knowledge Base Management](edge-rag-architecture-production.md#knowledge-base)
 </details>
 
 ---
@@ -574,9 +575,9 @@ D) Manual merge of vectors
 
 Model quantization from FP16 to INT8 reduces memory by 50%. What is the expected quality impact?
 
-A) No quality degradation  
-B) 1-3% degradation in task performance  
-C) 10-15% degradation  
+A) No quality degradation
+B) 1-3% degradation in task performance
+C) 10-15% degradation
 D) Model becomes unusable
 
 <details markdown="1">
@@ -633,7 +634,7 @@ D) Model becomes unusable
 - **A:** Some degradation inevitable but minimal
 - **C/D:** Only with poor quantization or INT4/lower
 
-**Reference:** [Performance Optimization](edge-rag-optimization#quantization)
+**Reference:** [Performance Optimization](edge-rag-optimization.md#quantization)
 </details>
 
 ---
@@ -642,9 +643,9 @@ D) Model becomes unusable
 
 RAG system needs to process 10K user queries in batch overnight. What optimization provides BEST throughput?
 
-A) Process queries sequentially with full model  
-B) Batch retrieval + batch inference with dynamic batching  
-C) Scale up to larger GPU for each query  
+A) Process queries sequentially with full model
+B) Batch retrieval + batch inference with dynamic batching
+C) Scale up to larger GPU for each query
 D) Use multiple separate model instances
 
 <details markdown="1">
@@ -698,7 +699,7 @@ for batch in batches:
 - **C:** Larger GPU helps but batching more impactful
 - **D:** Multiple instances adds overhead without batching benefit
 
-**Reference:** [Performance Optimization](edge-rag-optimization#batch-processing)
+**Reference:** [Performance Optimization](edge-rag-optimization.md#batch-processing)
 </details>
 
 ---
@@ -707,9 +708,9 @@ for batch in batches:
 
 Implementing caching for RAG to reduce latency. What caching layer provides BEST performance gain?
 
-A) Cache final LLM responses (semantic cache)  
-B) Cache vector retrieval results  
-C) Cache embedding computation  
+A) Cache final LLM responses (semantic cache)
+B) Cache vector retrieval results
+C) Cache embedding computation
 D) All three layers with different TTLs
 
 <details markdown="1">
@@ -770,7 +771,7 @@ With caching: 60-100ms average (50% reduction)
 - **A/B/C:** Single-layer caching misses optimization opportunities
 - **D:** Multi-layer captures benefits at each stage
 
-**Reference:** [Performance Optimization](edge-rag-optimization#caching)
+**Reference:** [Performance Optimization](edge-rag-optimization.md#caching)
 </details>
 
 ---
@@ -779,9 +780,9 @@ With caching: 60-100ms average (50% reduction)
 
 Defining SLA for customer-facing RAG chatbot. What metrics should be included?
 
-A) Uptime only  
-B) Uptime + average latency  
-C) Uptime + P99 latency + quality score + error rate  
+A) Uptime only
+B) Uptime + average latency
+C) Uptime + P99 latency + quality score + error rate
 D) Uptime + cost per query
 
 <details markdown="1">
@@ -844,7 +845,7 @@ Credits: Downtime > 0.1% = 10% service credit
 - **B:** Average latency misleading (hides tail latencies)
 - **D:** Cost not customer-facing SLA metric
 
-**Reference:** [Enterprise Operations](edge-rag-production#sla-management)
+**Reference:** [Enterprise Operations](edge-rag-production.md#sla-management)
 </details>
 
 ---
@@ -853,9 +854,9 @@ Credits: Downtime > 0.1% = 10% service credit
 
 Production edge RAG system loses connectivity to management plane. What ensures continued operation?
 
-A) Automatic failover to cloud RAG  
-B) Local autonomy: Model + knowledge base + monitoring all edge-local  
-C) Queue queries until connectivity restored  
+A) Automatic failover to cloud RAG
+B) Local autonomy: Model + knowledge base + monitoring all edge-local
+C) Queue queries until connectivity restored
 D) Shut down gracefully
 
 <details markdown="1">
@@ -917,7 +918,7 @@ Cloud Disconnected:
 
 **Edge First Principle:** Design for disconnected operation as default.
 
-**Reference:** [Production Architecture](edge-rag-architecture-production#resilience)
+**Reference:** [Production Architecture](edge-rag-architecture-production.md#resilience)
 </details>
 
 ---
@@ -926,9 +927,9 @@ Cloud Disconnected:
 
 Edge RAG deployment costs $10K/month. What provides BEST cost reduction without sacrificing quality?
 
-A) Use smaller model (70% cost reduction, 20% quality loss)  
-B) Implement model quantization + caching (40% cost reduction, 2% quality loss)  
-C) Reduce knowledge base size by 50%  
+A) Use smaller model (70% cost reduction, 20% quality loss)
+B) Implement model quantization + caching (40% cost reduction, 2% quality loss)
+C) Reduce knowledge base size by 50%
 D) Increase query latency limits
 
 <details markdown="1">
@@ -989,7 +990,7 @@ Total: $6K/month (40% reduction)
 - **C:** Reducing knowledge base impacts usefulness
 - **D:** Latency increases hurt user experience
 
-**Reference:** [Cost Optimization](edge-rag-production#cost-management)
+**Reference:** [Cost Optimization](edge-rag-production.md#cost-management)
 </details>
 
 ---
@@ -998,9 +999,9 @@ Total: $6K/month (40% reduction)
 
 RAG model should be retrained. Which combination of signals indicates retraining is needed?
 
-A) Query volume increased 20%  
-B) Data drift > 0.3 + quality score < 85% + user complaints  
-C) New hardware available  
+A) Query volume increased 20%
+B) Data drift > 0.3 + quality score < 85% + user complaints
+C) New hardware available
 D) Monthly schedule reached
 
 <details markdown="1">
@@ -1057,7 +1058,7 @@ if (data_drift > 0.3 AND quality_score < 85%) OR user_complaints > threshold:
 - Only retrain when clear benefit
 - Typical frequency: Quarterly or trigger-based
 
-**Reference:** [MLOps Workflows](edge-rag-mlops#retraining)
+**Reference:** [MLOps Workflows](edge-rag-mlops.md#retraining)
 </details>
 
 ---
@@ -1066,9 +1067,9 @@ if (data_drift > 0.3 AND quality_score < 85%) OR user_complaints > threshold:
 
 Managing multiple knowledge base versions across edge sites. What versioning strategy is BEST?
 
-A) Single latest version deployed everywhere  
-B) Semantic versioning with controlled rollout and rollback capability  
-C) Each site maintains its own version independently  
+A) Single latest version deployed everywhere
+B) Semantic versioning with controlled rollout and rollback capability
+C) Each site maintains its own version independently
 D) No versioning; continuous updates
 
 <details markdown="1">
@@ -1138,7 +1139,7 @@ PATCH (1): Corrections/updates (fixes, small updates)
 - **C:** Version fragmentation; inconsistent experience
 - **D:** Continuous updates lack validation gates
 
-**Reference:** [Knowledge Base Management](edge-rag-architecture-production#versioning)
+**Reference:** [Knowledge Base Management](edge-rag-architecture-production.md#versioning)
 </details>
 
 ---
@@ -1147,9 +1148,9 @@ PATCH (1): Corrections/updates (fixes, small updates)
 
 Production RAG P99 latency increased from 800ms to 2500ms. What is the FIRST diagnostic step?
 
-A) Restart all edge services  
-B) Review monitoring dashboards for component-level latency breakdown  
-C) Scale up edge hardware immediately  
+A) Restart all edge services
+B) Review monitoring dashboards for component-level latency breakdown
+C) Scale up edge hardware immediately
 D) Switch to smaller model
 
 <details markdown="1">
@@ -1208,7 +1209,7 @@ Total: 2400ms
 
 **Monitoring Best Practice:** Always instrument each pipeline stage separately.
 
-**Reference:** [Performance Monitoring](edge-rag-production#monitoring)
+**Reference:** [Performance Monitoring](edge-rag-production.md#monitoring)
 </details>
 
 ---
@@ -1217,9 +1218,9 @@ Total: 2400ms
 
 Multi-tenant RAG system must ensure data isolation. What architecture enforces STRONGEST isolation?
 
-A) Logical isolation: Single model + vector DB, filter by tenant ID  
-B) Physical isolation: Separate model instance + vector DB per tenant  
-C) Shared model + separate vector DB per tenant  
+A) Logical isolation: Single model + vector DB, filter by tenant ID
+B) Physical isolation: Separate model instance + vector DB per tenant
+C) Shared model + separate vector DB per tenant
 D) Separate models + shared vector DB with encryption
 
 <details markdown="1">
@@ -1300,7 +1301,7 @@ Cons:
 - Schedule model unloading for inactive tenants
 - Optimize vector DB storage
 
-**Reference:** [Enterprise Governance](edge-rag-production#multi-tenancy)
+**Reference:** [Enterprise Governance](edge-rag-production.md#multi-tenancy)
 </details>
 
 ---
@@ -1342,7 +1343,7 @@ Cons:
 
 **Focus Areas:**
 
-- Review [Production Architecture](edge-rag-architecture-production)
+- Review [Production Architecture](edge-rag-architecture-production.md)
 - Study model selection criteria
 - Understand vector database trade-offs
 - Practice architecture design exercises
@@ -1351,7 +1352,7 @@ Cons:
 
 **Focus Areas:**
 
-- Review [Performance Optimization](edge-rag-optimization)
+- Review [Performance Optimization](edge-rag-optimization.md)
 - Study reranking techniques
 - Learn chunking strategies
 - Understand caching patterns
@@ -1360,7 +1361,7 @@ Cons:
 
 **Focus Areas:**
 
-- Review [MLOps Workflows](edge-rag-mlops)
+- Review [MLOps Workflows](edge-rag-mlops.md)
 - Study deployment patterns
 - Understand monitoring strategies
 - Learn versioning best practices
@@ -1369,7 +1370,7 @@ Cons:
 
 **Focus Areas:**
 
-- Review [Enterprise Operations](edge-rag-production)
+- Review [Enterprise Operations](edge-rag-production.md)
 - Study SLA definitions
 - Learn cost optimization
 - Practice performance tuning
@@ -1392,21 +1393,21 @@ After completing this assessment:
 ### 1. 🎯 Course Completion
 
 - **Congratulations!** You've completed all Level 300 assessments
-- **Previous Quiz:** [Zero Trust & Troubleshooting Quiz](zero-trust-troubleshooting-quiz)
-- **Back to Start:** [Level 300 Overview](README)
+- **Previous Quiz:** Zero Trust & Troubleshooting Quiz _(coming soon)_
+- **Back to Start:** [Level 300 Overview](README.md)
 
 ### 2. 📚 Deep Dive Content
 
-- [Production Architecture](edge-rag-architecture-production)
-- [Performance Optimization](edge-rag-optimization)
-- [MLOps Workflows](edge-rag-mlops)
-- [Production Lab](edge-rag-production-lab)
+- [Production Architecture](edge-rag-architecture-production.md)
+- [Performance Optimization](edge-rag-optimization.md)
+- [MLOps Workflows](edge-rag-mlops.md)
+- [Production Lab](edge-rag-production-lab.md)
 
 ### 3. 🔗 Related Content
 
-- [Level 200 RAG Implementation](../level-200/edge-rag-implementation)
-- [Troubleshooting](troubleshooting)
-- [Zero Trust Architecture](zero-trust-architecture)
+- [Level 200 RAG Implementation](../level-200/edge-rag-implementation.md)
+- [Troubleshooting](troubleshooting.md)
+- [Zero Trust Architecture](zero-trust-architecture.md)
 
 ### 4. 🌐 External Resources
 
@@ -1418,13 +1419,13 @@ After completing this assessment:
 ### 5. ✋ Need Help?
 
 - Review [CONTRIBUTING.md](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/blob/main/CONTRIBUTING.md)
-- Check [README](../../README) for overall program
+- Check the project [README](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek) for overall program
 - Share feedback on course content
 
 ---
 
-**Quiz Version:** 1.0  
-**Last Updated:** November 2025  
-**Total Questions:** 18  
-**Passing Score:** 14/18 (78%)  
+**Quiz Version:** 1.0
+**Last Updated:** November 2025
+**Total Questions:** 18
+**Passing Score:** 14/18 (78%)
 **Level:** 300 - Advanced/Expert

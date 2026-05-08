@@ -3,6 +3,7 @@ layout: default
 title: Overview
 parent: Module 3 - Azure Local Overview
 nav_order: 1
+description: "Azure Local introduction — the hyperconverged sovereign infrastructure platform (formerly Azure Stack HCI) for running Azure services on customer premises with consistent management through Azure Arc."
 ---
 
 # Azure Local Overview
@@ -80,7 +81,7 @@ Azure Local serves as the **Sovereign Private Cloud** option in Microsoft's thre
 - Data processing that never leaves their premises
 - Compliance with strict regulatory requirements
 
-**[Review Digital Sovereignty Concepts →](digital-sovereignty)**
+**[Review Digital Sovereignty Concepts →](digital-sovereignty.md)**
 
 ---
 
@@ -199,11 +200,9 @@ Enterprise-scale deployments for large data center environments:
 
 ### System Architecture
 
-
 ---
 
 ### Deployment Modes Comparison
-
 
 ---
 
@@ -254,7 +253,7 @@ Azure Local ensures data sovereignty through:
 - **Encryption at rest**: All storage volumes encrypted by default
 - **Compliance alignment**: Meet GDPR, HIPAA, FedRAMP requirements
 
-**[Learn More About Data Residency →](data-residency-concepts)**
+**[Learn More About Data Residency →](data-residency-concepts.md)**
 
 ### 4. Customization and Control
 
@@ -311,7 +310,7 @@ Azure Local excels at running AI/ML workloads on-premises:
 - Maintain privacy for confidential information
 - Reduce latency for real-time AI responses
 
-**[Explore Edge RAG Concepts →](edge-rag-concepts)**
+**[Explore Edge RAG Concepts →](edge-rag-concepts.md)**
 
 ### 7. Microsoft 365 Local: Productivity at the Edge
 
@@ -482,7 +481,7 @@ Azure Local physical architecture includes:
 - Optional external connectivity
 - Software-defined networking (SDN) support
 
-**[Deep Dive: Hardware Requirements →](azure-local-hardware)**
+**[Deep Dive: Hardware Requirements →](azure-local-hardware.md)**
 
 ### Logical Components
 
@@ -509,7 +508,6 @@ Azure Local physical architecture includes:
 - PowerShell scripting
 - Azure Policy enforcement
 - Update management
-
 
 ### Integration Points with Azure
 
@@ -557,7 +555,7 @@ When in Connected Mode:
 - Specific URLs for Azure Arc, monitoring, updates
 - No inbound connections from internet required
 
-**[Deep Dive: Network Architecture →](azure-local-architecture)**
+**[Deep Dive: Network Architecture →](azure-local-architecture.md)**
 
 ### Scalability Patterns
 
@@ -613,8 +611,8 @@ Azure Local provides multiple HA mechanisms:
 
 ### Scenario 1: Manufacturing Plant Quality Control (Disconnected Mode)
 
-**Industry:** Manufacturing  
-**Company Size:** Large multinational manufacturer  
+**Industry:** Manufacturing
+**Company Size:** Large multinational manufacturer
 **Location:** Multiple plants worldwide
 
 **Challenge:**
@@ -665,8 +663,8 @@ Azure Local provides multiple HA mechanisms:
 
 ### Scenario 2: Hospital Network with HIPAA Compliance (Connected Mode)
 
-**Industry:** Healthcare  
-**Company Size:** Regional hospital network (5 facilities)  
+**Industry:** Healthcare
+**Company Size:** Regional hospital network (5 facilities)
 **Location:** United States (single state)
 
 **Challenge:**
@@ -719,8 +717,8 @@ Azure Local provides multiple HA mechanisms:
 
 ### Scenario 3: Financial Services Branch Network (Connected Mode)
 
-**Industry:** Financial Services (Regional Bank)  
-**Company Size:** 150 branch locations, 5000 employees  
+**Industry:** Financial Services (Regional Bank)
+**Company Size:** 150 branch locations, 5000 employees
 **Location:** European Union (multi-country)
 
 **Challenge:**
@@ -773,8 +771,8 @@ Azure Local provides multiple HA mechanisms:
 
 ### Scenario 4: Retail Distribution Center Inventory (Disconnected Mode)
 
-**Industry:** Retail  
-**Company Size:** Global retailer with 50 distribution centers  
+**Industry:** Retail
+**Company Size:** Global retailer with 50 distribution centers
 **Location:** Worldwide
 
 **Challenge:**
@@ -827,8 +825,8 @@ Azure Local provides multiple HA mechanisms:
 
 ### Scenario 5: Research Facility Machine Learning (Connected Mode)
 
-**Industry:** Scientific Research  
-**Company Size:** National research laboratory  
+**Industry:** Scientific Research
+**Company Size:** National research laboratory
 **Location:** Multiple global sites
 
 **Challenge:**
@@ -1065,7 +1063,6 @@ Can you have continuous/regular internet connectivity?
                       └─ No → Re-evaluate connectivity assumption
 ```
 
-
 ### Comparison with Alternatives
 
 | Criteria | Azure Local | Sovereign Public Cloud | Pure On-Premises |
@@ -1142,7 +1139,7 @@ Can you have continuous/regular internet connectivity?
 
 **Total: 10-12 weeks** for typical deployment
 
-**Expedited: 6-8 weeks** with pre-validated configurations  
+**Expedited: 6-8 weeks** with pre-validated configurations
 **Complex: 16-20 weeks** for large or highly customized deployments
 
 ---
@@ -1151,7 +1148,7 @@ Can you have continuous/regular internet connectivity?
 
 Ready to explore Azure Local in depth? Continue with these detailed topics:
 
-### [Azure Local Architecture Deep Dive](azure-local-architecture)
+### [Azure Local Architecture Deep Dive](azure-local-architecture.md)
 
 Explore the physical and logical architecture, including hardware topology, networking design, storage architecture, and high availability patterns.
 
@@ -1168,7 +1165,7 @@ Explore the physical and logical architecture, including hardware topology, netw
 
 ---
 
-### [Connected Mode Operations](azure-local-connected-mode)
+### [Connected Mode Operations](azure-local-connected-mode.md)
 
 Learn how Azure Local integrates with Azure services in Connected Mode, including management, monitoring, backup, and hybrid workloads.
 
@@ -1185,7 +1182,7 @@ Learn how Azure Local integrates with Azure services in Connected Mode, includin
 
 ---
 
-### [Disconnected Mode Operations](azure-local-disconnected-mode)
+### [Disconnected Mode Operations](azure-local-disconnected-mode.md)
 
 Understand how Azure Local operates in air-gapped and disconnected environments, including management strategies and feature limitations.
 
@@ -1202,7 +1199,7 @@ Understand how Azure Local operates in air-gapped and disconnected environments,
 
 ---
 
-### [Hardware Requirements & Planning](azure-local-hardware)
+### [Hardware Requirements & Planning](azure-local-hardware.md)
 
 Get detailed guidance on hardware requirements, validated partners, sizing, and deployment planning.
 
@@ -1223,7 +1220,7 @@ Get detailed guidance on hardware requirements, validated partners, sizing, and 
 
 Ready to test your understanding of Azure Local? Take the module quiz:
 
-### [Azure Local Knowledge Check Quiz →](azure-local-quiz)
+### [Azure Local Knowledge Check Quiz →](azure-local-knowledge-check.md)
 
 **Quiz Details:**
 
@@ -1257,12 +1254,12 @@ After completing this module:
    - Review explanations for missed questions
 
 3. **✅ Explore Related Modules**
-   - [Digital Sovereignty Fundamentals](digital-sovereignty) - Core concepts
-   - [Microsoft Sovereign Cloud Models](sovereign-cloud-models) - Model comparison
-   - [Azure Arc Introduction](azure-arc-intro) - Hybrid management
+   - [Digital Sovereignty Fundamentals](digital-sovereignty.md) - Core concepts
+   - [Microsoft Sovereign Cloud Models](sovereign-cloud-models.md) - Model comparison
+   - [Azure Arc Introduction](azure-arc-intro.md) - Hybrid management
 
 4. **🎯 Continue to Next Module**
-   - [Azure Arc Introduction →](azure-arc-intro) - Learn how Arc extends Azure management
+   - [Azure Arc Introduction →](azure-arc-intro.md) - Learn how Arc extends Azure management
 
 ---
 

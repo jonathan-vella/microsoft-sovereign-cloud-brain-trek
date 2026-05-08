@@ -3,6 +3,7 @@ layout: default
 title: Lab - Connected Mode Multi-Site
 parent: Module 2 - Azure Local Connected
 nav_order: 3
+description: "Lab: Azure Local connected-mode multi-site deployment — set up a stretched cluster, configure replication, and validate failover scenarios."
 ---
 
 # Lab: Connected Mode Multi-Site Deployment
@@ -12,7 +13,7 @@ nav_order: 3
 **Company:** GlobalTech Expansion  
 **Objective:** Deploy Azure Local in connected mode across two geographic sites  
 **Compliance:** GDPR, data residency requirements  
-  
+
 **Resources:** 2 Azure Local clusters, Azure connectivity services
 
 ---
@@ -192,4 +193,4 @@ After completing this lab, you will:
 
 ---
 
-**See also:** [Connected Mode Overview](azure-local-advanced-connected) | [Multi-Site Architectures](azure-local-multi-site) | [Networking Guide](azure-local-networking-advanced)
+**See also:** [Connected Mode Overview](azure-local-advanced-connected.md) | [Multi-Site Architectures](azure-local-multi-site.md) | [Networking Guide](azure-local-networking-advanced.md)

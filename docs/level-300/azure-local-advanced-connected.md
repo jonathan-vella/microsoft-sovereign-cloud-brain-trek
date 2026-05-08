@@ -4,6 +4,7 @@ title: Module 2 - Azure Local Connected
 parent: Level 300 - Advanced
 nav_order: 2
 has_children: true
+description: "Module 2: Azure Local at scale (connected mode) — multi-site topologies, advanced storage and network optimizations, update ring strategies, and capacity planning at enterprise scale."
 ---
 
 # Module 2: Azure Local at Scale - Connected Mode
@@ -44,15 +45,14 @@ Scale Azure Local deployments across multiple sites while maintaining cloud conn
 
 ## Core Topics
 
-1. **Multi-Site Deployment Patterns** → [azure-local-multi-site.md](azure-local-multi-site)
-2. **Advanced Networking** → [azure-local-networking-advanced.md](azure-local-networking-advanced)
-3. **Update Management** → [azure-local-advanced-connected.md](azure-local-advanced-connected)
-4. **Hands-On Lab** → [azure-local-connected-lab.md](azure-local-connected-lab)
+1. **Multi-Site Deployment Patterns** → [azure-local-multi-site.md](azure-local-multi-site.md)
+2. **Advanced Networking** → [azure-local-networking-advanced.md](azure-local-networking-advanced.md)
+3. **Update Management** → [azure-local-advanced-connected.md](azure-local-advanced-connected.md)
+4. **Hands-On Lab** → [azure-local-connected-lab.md](azure-local-connected-lab.md)
 
 ---
 
 ## Architecture Decision Tree
-
 
 ---
 
@@ -85,10 +85,10 @@ Scale Azure Local deployments across multiple sites while maintaining cloud conn
 
 ## Recommended Learning Path
 
-1. Start: [Multi-Site Patterns](azure-local-multi-site)
-2. Deep Dive: [Advanced Networking](azure-local-networking-advanced)
-3. Operations: [Connected Updates](azure-local-advanced-connected)
-4. Hands-On: [Lab](azure-local-connected-lab)
+1. Start: [Multi-Site Patterns](azure-local-multi-site.md)
+2. Deep Dive: [Advanced Networking](azure-local-networking-advanced.md)
+3. Operations: [Connected Updates](azure-local-advanced-connected.md)
+4. Hands-On: [Lab](azure-local-connected-lab.md)
 
 ---
 

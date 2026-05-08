@@ -3,6 +3,7 @@ layout: default
 title: Troubleshooting Tools & Procedures
 parent: Module 5 - Advanced Troubleshooting
 nav_order: 1
+description: "Troubleshooting tools and telemetry — log collection, Azure Monitor queries, Network Watcher, and partner support tooling for sovereign deployments."
 ---
 
 # Troubleshooting Tools & Procedures
@@ -14,7 +15,6 @@ Master the tools and systematic approaches for diagnosing issues across sovereig
 ---
 
 ## Diagnostic Tools Reference
-
 
 ---
 
@@ -74,4 +74,4 @@ graph LR
 
 ---
 
-**See also:** [Common Issues](troubleshooting-common-issues) | [Escalation Procedures](troubleshooting-escalation)
+**See also:** [Common Issues](troubleshooting-common-issues.md) | [Escalation Procedures](troubleshooting-escalation.md)

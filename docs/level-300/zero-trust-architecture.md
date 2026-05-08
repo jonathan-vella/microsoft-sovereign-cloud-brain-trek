@@ -3,6 +3,7 @@ layout: default
 title: Zero Trust Implementation Architecture
 parent: Module 1 - Zero Trust Security
 nav_order: 1
+description: "Zero Trust architecture for sovereign cloud — segmentation patterns, identity perimeters, conditional access, and verification mechanisms across Azure Arc-enabled resources."
 ---
 
 # Zero Trust Implementation Architecture
@@ -296,7 +297,6 @@ graph TB
 
 ## Defense-in-Depth Layering
 
-
 **Layered Defense Example:**
 
 **Layer 1 - Perimeter:** Network firewalls, DDoS protection, intrusion detection
@@ -316,7 +316,6 @@ If any layer is breached, others still provide protection.
 ---
 
 ## Compliance Mapping
-
 
 ---
 
@@ -423,8 +422,8 @@ If any layer is breached, others still provide protection.
 
 ## Next Steps
 
-1. Continue to [Monitoring & Compliance →](zero-trust-monitoring)
-2. Ready for hands-on work? [Lab: Implement Zero Trust →](zero-trust-lab)
+1. Continue to [Monitoring & Compliance →](zero-trust-monitoring.md)
+2. Ready for hands-on work? [Lab: Implement Zero Trust →](zero-trust-lab.md)
 
 ---
 

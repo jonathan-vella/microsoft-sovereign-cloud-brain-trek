@@ -4,6 +4,7 @@ title: Module 5 - Edge RAG Concepts
 parent: Level 100 - Foundation
 nav_order: 5
 has_children: true
+description: "Edge RAG (preview) foundations — retrieval-augmented generation on-premises with Azure Arc-enabled Kubernetes; concepts, reference architecture, and sovereign-cloud use cases."
 ---
 
 # Module 5: Edge RAG Concepts

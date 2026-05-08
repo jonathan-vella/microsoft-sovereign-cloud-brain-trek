@@ -9,11 +9,9 @@ description: "Domain-oriented data ownership with sovereignty"
 
 # Data Mesh for Sovereignty
 
-
 {: .no_toc }
 
 Domain-oriented data ownership with federated governance and sovereignty controls.
-
 
 ## Table of Contents
 
@@ -39,9 +37,7 @@ After completing this section, you will be able to:
 
 ---
 
-
 ## Data Mesh Architecture
-
 
 | Principle | Sovereignty Implementation |
 |-----------|---------------------------|

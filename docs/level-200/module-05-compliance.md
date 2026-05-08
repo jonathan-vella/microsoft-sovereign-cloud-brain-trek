@@ -4,6 +4,7 @@ title: Module 5 - Compliance & Security
 parent: Level 200 - Intermediate
 nav_order: 5
 has_children: true
+description: "Module 5: Compliance and security implementation — GDPR, FedRAMP, encryption key management, security hardening, and compliance / security patterns."
 ---
 
 # Module 5: Compliance & Security Patterns

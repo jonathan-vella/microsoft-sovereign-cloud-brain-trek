@@ -3,6 +3,7 @@ layout: default
 title: Zero Trust & Troubleshooting - Knowledge Check
 parent: Level 300 - Advanced
 nav_order: 11
+description: "Knowledge check covering Zero Trust troubleshooting — common Conditional Access issues, audit-log analysis, and incident response patterns."
 ---
 
 # Zero Trust & Troubleshooting - Knowledge Check
@@ -15,9 +16,9 @@ Test your expertise in Zero Trust security architecture, implementation patterns
 
 ## Quiz Instructions
 
-**Total Questions:** 18  
-**Passing Score:** 14/18 (78%)  
-**Time Estimate:** 30-40 minutes  
+**Total Questions:** 18
+**Passing Score:** 14/18 (78%)
+**Time Estimate:** 30-40 minutes
 **Format:** Expert-level scenario-based questions
 
 This assessment covers:
@@ -34,9 +35,9 @@ This assessment covers:
 
 A financial services company is implementing Zero Trust for their sovereign cloud. Which control is the MOST foundational for Zero Trust?
 
-A) Network segmentation with VLANs  
-B) Perimeter firewall with IPS/IDS  
-C) Strong identity verification with conditional access  
+A) Network segmentation with VLANs
+B) Perimeter firewall with IPS/IDS
+C) Strong identity verification with conditional access
 D) Encryption at rest and in transit
 
 <details markdown="1">
@@ -70,7 +71,7 @@ D) Encryption at rest and in transit
 - **B:** Perimeter security is legacy model; Zero Trust assumes breach
 - **D:** Encryption protects data but doesn't control access decisions
 
-**Reference:** [Zero Trust Principles](zero-trust#identity-as-foundation)
+**Reference:** [Zero Trust Principles](zero-trust.md#identity-as-foundation)
 </details>
 
 ---
@@ -79,9 +80,9 @@ D) Encryption at rest and in transit
 
 Designing conditional access for sovereign cloud administrators. Which policy provides BEST security without impacting operations?
 
-A) Require MFA from any location  
-B) Require MFA + managed device + IP allowlist  
-C) Require MFA + compliant device + risk-based evaluation  
+A) Require MFA from any location
+B) Require MFA + managed device + IP allowlist
+C) Require MFA + compliant device + risk-based evaluation
 D) Block access from all locations except corporate network
 
 <details markdown="1">
@@ -127,7 +128,7 @@ D) Block access from all locations except corporate network
 - **B:** IP allowlist too rigid; breaks remote admin, business continuity
 - **D:** Too restrictive; blocks legitimate remote access, emergency response
 
-**Reference:** [Zero Trust Architecture](zero-trust-architecture#conditional-access)
+**Reference:** [Zero Trust Architecture](zero-trust-architecture.md#conditional-access)
 </details>
 
 ---
@@ -136,9 +137,9 @@ D) Block access from all locations except corporate network
 
 Implementing PAWs for Azure Local management. What is the PRIMARY security control PAWs provide?
 
-A) Faster administrative performance  
-B) Isolation of high-privilege credentials from general computing  
-C) Centralized logging of administrative actions  
+A) Faster administrative performance
+B) Isolation of high-privilege credentials from general computing
+C) Centralized logging of administrative actions
 D) Simplified user experience for administrators
 
 <details markdown="1">
@@ -180,7 +181,7 @@ D) Simplified user experience for administrators
 - **C:** Logging is important but supplementary benefit
 - **D:** PAWs deliberately have restricted UX for security
 
-**Reference:** [Zero Trust Security](zero-trust#privileged-access-workstations)
+**Reference:** [Zero Trust Security](zero-trust.md#privileged-access-workstations)
 </details>
 
 ---
@@ -189,9 +190,9 @@ D) Simplified user experience for administrators
 
 Implementing JIT access for Azure Local management. What is the CORRECT implementation approach?
 
-A) Grant permanent permissions to all admins for convenience  
-B) Admin requests access → Auto-approved → 8-hour session  
-C) Admin requests access → Approval workflow → Time-limited session → Automatic revocation  
+A) Grant permanent permissions to all admins for convenience
+B) Admin requests access → Auto-approved → 8-hour session
+C) Admin requests access → Approval workflow → Time-limited session → Automatic revocation
 D) Disable all access; require approval for every single command
 
 <details markdown="1">
@@ -242,7 +243,7 @@ D) Disable all access; require approval for every single command
 - **B:** No approval violates separation of duties
 - **D:** Too restrictive; operationally infeasible
 
-**Reference:** [Zero Trust Architecture](zero-trust-architecture#jit-access)
+**Reference:** [Zero Trust Architecture](zero-trust-architecture.md#jit-access)
 </details>
 
 ---
@@ -251,9 +252,9 @@ D) Disable all access; require approval for every single command
 
 Implementing micro-segmentation for Azure Local workloads. Which approach provides BEST security?
 
-A) Traditional VLAN-based segmentation  
-B) Software-defined microsegmentation with per-VM policies  
-C) Physical network separation  
+A) Traditional VLAN-based segmentation
+B) Software-defined microsegmentation with per-VM policies
+C) Physical network separation
 D) No segmentation; rely on host firewalls only
 
 <details markdown="1">
@@ -300,7 +301,7 @@ DB-Tier VMs → Cannot initiate outbound connections
 - **C:** Physically infeasible and expensive; lacks flexibility
 - **D:** Host firewalls alone insufficient; need network-level enforcement
 
-**Reference:** [Zero Trust Architecture](zero-trust-architecture#micro-segmentation)
+**Reference:** [Zero Trust Architecture](zero-trust-architecture.md#micro-segmentation)
 </details>
 
 ---
@@ -309,9 +310,9 @@ DB-Tier VMs → Cannot initiate outbound connections
 
 An Azure Local cluster node becomes unresponsive during business hours. What is the FIRST troubleshooting step?
 
-A) Immediately power cycle the node  
-B) Check node status and cluster health; attempt remote management connection  
-C) Pause the node and begin VM evacuation  
+A) Immediately power cycle the node
+B) Check node status and cluster health; attempt remote management connection
+C) Pause the node and begin VM evacuation
 D) Open support ticket and wait for guidance
 
 <details markdown="1">
@@ -357,7 +358,7 @@ D) Open support ticket and wait for guidance
 - **C:** Premature; may not be necessary; causes VM downtime
 - **D:** Don't wait before gathering diagnostic data
 
-**Reference:** [Troubleshooting Methodology](troubleshooting#node-issues)
+**Reference:** [Troubleshooting Methodology](troubleshooting.md#node-issues)
 </details>
 
 ---
@@ -366,9 +367,9 @@ D) Open support ticket and wait for guidance
 
 Users report VM performance issues. You observe Storage Spaces Direct latency increased from 2ms to 50ms. What is the MOST LIKELY cause?
 
-A) Storage network saturation or misconfiguration  
-B) All storage drives failing simultaneously  
-C) VM CPU contention  
+A) Storage network saturation or misconfiguration
+B) All storage drives failing simultaneously
+C) VM CPU contention
 D) Insufficient memory on cluster nodes
 
 <details markdown="1">
@@ -409,7 +410,7 @@ Test-Cluster -Node Node01,Node02 -Include "Storage Spaces Direct"
 - **B:** Multiple drive failures would trigger alerts; 50ms is network-characteristic latency
 - **C/D:** CPU/memory issues affect compute, not storage layer latency
 
-**Reference:** [Troubleshooting Performance](troubleshooting-common-issues#storage-performance)
+**Reference:** [Troubleshooting Performance](troubleshooting-common-issues.md#storage-performance)
 </details>
 
 ---
@@ -418,9 +419,9 @@ Test-Cluster -Node Node01,Node02 -Include "Storage Spaces Direct"
 
 Users cannot access web applications on Azure Local VMs. Error: "unable to build certificate chain." What is the issue?
 
-A) Web server certificates expired  
-B) Root CA certificate not trusted on client machines  
-C) Intermediate certificates missing from server  
+A) Web server certificates expired
+B) Root CA certificate not trusted on client machines
+C) Intermediate certificates missing from server
 D) Web server HTTPS not configured
 
 <details markdown="1">
@@ -462,7 +463,7 @@ Server Must Present:
 - **B:** Root CA trust issue produces "untrusted certificate" error
 - **D:** Missing HTTPS produces connection refused or different error
 
-**Reference:** [Certificate Troubleshooting](troubleshooting-common-issues#certificate-issues)
+**Reference:** [Certificate Troubleshooting](troubleshooting-common-issues.md#certificate-issues)
 </details>
 
 ---
@@ -471,9 +472,9 @@ Server Must Present:
 
 A critical VM fails to start with error: "cluster resource failed." What is the FIRST diagnostic step?
 
-A) Restart the entire cluster  
-B) Review cluster logs and event viewer for specific failure reason  
-C) Delete and recreate the VM  
+A) Restart the entire cluster
+B) Review cluster logs and event viewer for specific failure reason
+C) Delete and recreate the VM
 D) Manually start VM from Hyper-V Manager (bypassing cluster)
 
 <details markdown="1">
@@ -522,7 +523,7 @@ Get-VM -Name "VM Name" | Get-VMHardDiskDrive
 - **C:** Lose VM configuration; premature
 - **D:** Bypassing cluster hides issue; breaks HA
 
-**Reference:** [Troubleshooting VMs](troubleshooting-common-issues#vm-failures)
+**Reference:** [Troubleshooting VMs](troubleshooting-common-issues.md#vm-failures)
 </details>
 
 ---
@@ -531,9 +532,9 @@ Get-VM -Name "VM Name" | Get-VMHardDiskDrive
 
 Cluster quorum is lost (majority of votes unavailable). What is the IMMEDIATE action to restore service?
 
-A) Force quorum on remaining node with ForceQuorum PowerShell  
-B) Wait for failed nodes to recover  
-C) Assess situation: Why quorum lost? How many nodes down? Is data safe?  
+A) Force quorum on remaining node with ForceQuorum PowerShell
+B) Wait for failed nodes to recover
+C) Assess situation: Why quorum lost? How many nodes down? Is data safe?
 D) Rebuild cluster from scratch
 
 <details markdown="1">
@@ -580,7 +581,7 @@ Start-ClusterNode -FixQuorum
 
 **⚠️ Warning:** Forcing quorum is dangerous if network partition exists (nodes isolated but running).
 
-**Reference:** [Cluster Quorum Issues](troubleshooting-common-issues#quorum-loss)
+**Reference:** [Cluster Quorum Issues](troubleshooting-common-issues.md#quorum-loss)
 </details>
 
 ---
@@ -589,9 +590,9 @@ Start-ClusterNode -FixQuorum
 
 Security monitoring generates 500+ alerts per day, mostly false positives. How should this be addressed?
 
-A) Ignore alerts; focus on critical incidents only  
-B) Tune alert thresholds; implement tiered alerting; automate common responses  
-C) Disable monitoring to reduce noise  
+A) Ignore alerts; focus on critical incidents only
+B) Tune alert thresholds; implement tiered alerting; automate common responses
+C) Disable monitoring to reduce noise
 D) Increase team size to handle alert volume
 
 <details markdown="1">
@@ -648,7 +649,7 @@ D) Increase team size to handle alert volume
 - **C:** Eliminates visibility; compliance risk
 - **D:** Doesn't solve root cause; unsustainable
 
-**Reference:** [Monitoring Best Practices](zero-trust-monitoring#alert-management)
+**Reference:** [Monitoring Best Practices](zero-trust-monitoring.md#alert-management)
 </details>
 
 ---
@@ -657,9 +658,9 @@ D) Increase team size to handle alert volume
 
 Pre-update validation fails with "cluster not ready for update." What should be checked?
 
-A) Cluster health, storage health, backup completion, node connectivity  
-B) Just proceed with update anyway; validation is optional  
-C) Reboot all nodes and retry validation  
+A) Cluster health, storage health, backup completion, node connectivity
+B) Just proceed with update anyway; validation is optional
+C) Reboot all nodes and retry validation
 D) Open support ticket before proceeding
 
 <details markdown="1">
@@ -718,7 +719,7 @@ Get-ClusterNode | Get-ClusterResource
 - **C:** Reboot doesn't address underlying issues
 - **D:** Validation designed to be resolved without support
 
-**Reference:** [Update Preparation](azure-local-advanced-connected#pre-update-validation)
+**Reference:** [Update Preparation](azure-local-advanced-connected.md#pre-update-validation)
 </details>
 
 ---
@@ -727,9 +728,9 @@ Get-ClusterNode | Get-ClusterResource
 
 Security monitoring detects suspicious PowerShell commands on Azure Local host. What is the FIRST response action?
 
-A) Immediately shut down the affected node  
-B) Isolate host (network), collect forensics, initiate incident response  
-C) Delete PowerShell history and continue monitoring  
+A) Immediately shut down the affected node
+B) Isolate host (network), collect forensics, initiate incident response
+C) Delete PowerShell history and continue monitoring
 D) Change all admin passwords immediately
 
 <details markdown="1">
@@ -777,7 +778,7 @@ D) Change all admin passwords immediately
 - **C:** Destroys evidence; illegal in many scenarios
 - **D:** Premature; may alert attacker; do after containment
 
-**Reference:** [Security Incident Response](troubleshooting-escalation#security-incidents)
+**Reference:** [Security Incident Response](troubleshooting-escalation.md#security-incidents)
 </details>
 
 ---
@@ -786,9 +787,9 @@ D) Change all admin passwords immediately
 
 Preparing for FedRAMP audit. What is the PRIMARY source for demonstrating continuous monitoring?
 
-A) Monthly manual security checklists  
-B) Azure Monitor logs, SCOM alerts, and exported compliance reports  
-C) Verbal assurances from IT team  
+A) Monthly manual security checklists
+B) Azure Monitor logs, SCOM alerts, and exported compliance reports
+C) Verbal assurances from IT team
 D) Third-party penetration test reports only
 
 <details markdown="1">
@@ -840,7 +841,7 @@ D) Third-party penetration test reports only
 - **C:** Verbal assurances have no evidentiary value
 - **D:** Pen tests are point-in-time; don't show continuous monitoring
 
-**Reference:** [Compliance Monitoring](zero-trust-monitoring#fedramp-compliance)
+**Reference:** [Compliance Monitoring](zero-trust-monitoring.md#fedramp-compliance)
 </details>
 
 ---
@@ -849,9 +850,9 @@ D) Third-party penetration test reports only
 
 Network throughput between Azure Local nodes is 10 Gbps instead of expected 25 Gbps. What is the MOST LIKELY cause?
 
-A) Network adapters negotiated to lower speed due to cable/transceiver mismatch  
-B) CPU bottleneck preventing network processing  
-C) Storage saturation limiting network use  
+A) Network adapters negotiated to lower speed due to cable/transceiver mismatch
+B) CPU bottleneck preventing network processing
+C) Storage saturation limiting network use
 D) Windows Updates downloading in background
 
 <details markdown="1">
@@ -870,7 +871,7 @@ D) Windows Updates downloading in background
 Get-NetAdapter | Select Name, Status, LinkSpeed, FullDuplex
 ```
 
-**Expected:** 25 Gbps, Full Duplex  
+**Expected:** 25 Gbps, Full Duplex
 **Seeing:** 10 Gbps = Negotiation fallback
 
 **2. Common Causes:**
@@ -901,7 +902,7 @@ Get-NetAdapter | Select Name, Status, LinkSpeed, FullDuplex
 - **C:** Storage saturation doesn't affect link negotiation speed
 - **D:** Windows Updates use minimal bandwidth, don't affect link speed
 
-**Reference:** [Network Troubleshooting](troubleshooting-common-issues#network-performance)
+**Reference:** [Network Troubleshooting](troubleshooting-common-issues.md#network-performance)
 </details>
 
 ---
@@ -910,9 +911,9 @@ Get-NetAdapter | Select Name, Status, LinkSpeed, FullDuplex
 
 Monthly backup testing of Azure Local VMs reveals 20% of backups cannot be restored. What is the PRIMARY issue to investigate?
 
-A) Backup storage capacity insufficient  
-B) Backup agents not installed on VMs  
-C) VM snapshots not application-consistent (VSS failures)  
+A) Backup storage capacity insufficient
+B) Backup agents not installed on VMs
+C) VM snapshots not application-consistent (VSS failures)
 D) Restore testing procedure incorrect
 
 <details markdown="1">
@@ -977,7 +978,7 @@ vssadmin list writers
 - **B:** Agent issues prevent backup entirely
 - **D:** 20% failure suggests systematic issue, not procedure
 
-**Reference:** [Backup Best Practices](azure-local-advanced-connected#backup-validation)
+**Reference:** [Backup Best Practices](azure-local-advanced-connected.md#backup-validation)
 </details>
 
 ---
@@ -986,9 +987,9 @@ vssadmin list writers
 
 After resolving a major incident, what is the PRIMARY goal of root cause analysis (RCA)?
 
-A) Assign blame to responsible parties  
-B) Identify systemic issues and implement preventive measures  
-C) Document timeline for legal purposes  
+A) Assign blame to responsible parties
+B) Identify systemic issues and implement preventive measures
+C) Document timeline for legal purposes
 D) Generate report for management review
 
 <details markdown="1">
@@ -1047,7 +1048,7 @@ Root Cause: Incomplete deployment procedure
 
 **Blameless RCA Culture:** Focus on what failed (system/process), not who failed.
 
-**Reference:** [Incident Management](troubleshooting-escalation#root-cause-analysis)
+**Reference:** [Incident Management](troubleshooting-escalation.md#root-cause-analysis)
 </details>
 
 ---
@@ -1056,9 +1057,9 @@ Root Cause: Incomplete deployment procedure
 
 When should an Azure Local production issue be escalated to Microsoft support?
 
-A) Only after all internal troubleshooting exhausted (4-8 hours)  
-B) Immediately for any production issue  
-C) Based on impact/urgency matrix; Severity A immediately, others after initial triage  
+A) Only after all internal troubleshooting exhausted (4-8 hours)
+B) Immediately for any production issue
+C) Based on impact/urgency matrix; Severity A immediately, others after initial triage
 D) Never; handle everything internally
 
 <details markdown="1">
@@ -1117,7 +1118,7 @@ D) Never; handle everything internally
 - **B:** Inefficient; wastes Microsoft and customer resources
 - **D:** Some issues require Microsoft engineering intervention
 
-**Reference:** [Support Escalation](troubleshooting-escalation#escalation-criteria)
+**Reference:** [Support Escalation](troubleshooting-escalation.md#escalation-criteria)
 </details>
 
 ---
@@ -1159,8 +1160,8 @@ D) Never; handle everything internally
 
 **Focus Areas:**
 
-- Review [Zero Trust Security](zero-trust)
-- Study [Zero Trust Architecture](zero-trust-architecture)
+- Review [Zero Trust Security](zero-trust.md)
+- Study [Zero Trust Architecture](zero-trust-architecture.md)
 - Understand conditional access policies
 - Learn PAW implementation patterns
 - Practice JIT access configuration
@@ -1169,8 +1170,8 @@ D) Never; handle everything internally
 
 **Focus Areas:**
 
-- Review [Troubleshooting](troubleshooting)
-- Study [Common Issues](troubleshooting-common-issues)
+- Review [Troubleshooting](troubleshooting.md)
+- Study [Common Issues](troubleshooting-common-issues.md)
 - Practice systematic diagnostic approach
 - Learn cluster log analysis
 - Understand validation procedures
@@ -1189,7 +1190,7 @@ D) Never; handle everything internally
 
 **Focus Areas:**
 
-- Review [Zero Trust Monitoring](zero-trust-monitoring)
+- Review [Zero Trust Monitoring](zero-trust-monitoring.md)
 - Study incident response procedures
 - Understand compliance requirements
 - Learn alert tuning strategies
@@ -1199,7 +1200,7 @@ D) Never; handle everything internally
 
 **Focus Areas:**
 
-- Review [Escalation Procedures](troubleshooting-escalation)
+- Review [Escalation Procedures](troubleshooting-escalation.md)
 - Study RCA methodologies
 - Understand severity classifications
 - Learn blameless post-mortem culture
@@ -1213,22 +1214,22 @@ After completing this assessment:
 
 ### 1. 🎯 Continue Learning
 
-- **Next Assessment:** [Edge RAG Production Knowledge Check](edge-rag-production-knowledge-check)
-- **Previous Quiz:** [Azure Local Advanced Quiz](azure-local-advanced-quiz)
-- **Hands-On:** Complete [Zero Trust Lab](zero-trust-lab)
+- **Next Assessment:** [Edge RAG Production Knowledge Check](edge-rag-production-knowledge-check.md)
+- **Previous Quiz:** [Azure Local Advanced Knowledge Check](azure-local-advanced-knowledge-check.md)
+- **Hands-On:** Complete [Zero Trust Lab](zero-trust-lab.md)
 
 ### 2. 📚 Deep Dive Content
 
-- [Zero Trust Architecture](zero-trust-architecture)
-- [Zero Trust Monitoring](zero-trust-monitoring)
-- [Troubleshooting Tools](troubleshooting-tools)
-- [Escalation Procedures](troubleshooting-escalation)
+- [Zero Trust Architecture](zero-trust-architecture.md)
+- [Zero Trust Monitoring](zero-trust-monitoring.md)
+- [Troubleshooting Tools](troubleshooting-tools.md)
+- [Escalation Procedures](troubleshooting-escalation.md)
 
 ### 3. 🔗 Related Content
 
-- [Azure Local Advanced](azure-local-advanced-connected)
-- [Air-Gapped Security](azure-local-air-gapped)
-- [Level 300 Overview](README)
+- [Azure Local Advanced](azure-local-advanced-connected.md)
+- [Air-Gapped Security](azure-local-air-gapped.md)
+- [Level 300 Overview](README.md)
 
 ### 4. 🌐 External Resources
 
@@ -1240,13 +1241,13 @@ After completing this assessment:
 ### 5. ✋ Need Help?
 
 - Review [CONTRIBUTING.md](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/blob/main/CONTRIBUTING.md)
-- Check [README](README) for module navigation
+- Check [README](README.md) for module navigation
 - Practice with hands-on labs before retaking
 
 ---
 
-**Quiz Version:** 1.0  
-**Last Updated:** November 2025  
-**Total Questions:** 18  
-**Passing Score:** 14/18 (78%)  
+**Quiz Version:** 1.0
+**Last Updated:** November 2025
+**Total Questions:** 18
+**Passing Score:** 14/18 (78%)
 **Level:** 300 - Advanced/Expert

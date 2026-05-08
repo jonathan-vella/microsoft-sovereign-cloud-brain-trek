@@ -3,6 +3,7 @@ layout: default
 title: Azure Local Hardware Requirements
 parent: Module 3 - Azure Local Overview
 nav_order: 3.4
+description: "Azure Local hardware planning — validated hardware categories, node sizing, network and storage requirements, and how to choose between Premier Solutions, Integrated Systems, and Validated Nodes."
 ---
 
 # Azure Local Hardware Requirements & Planning
@@ -35,7 +36,7 @@ Selecting the right hardware is critical for Azure Local success. This page prov
 - Network adapter and storage requirements
 - Deployment planning checklist
 
-**[← Back to Azure Local Overview](azure-local-overview)**
+**[← Back to Azure Local Overview](azure-local-overview.md)**
 
 ---
 
@@ -90,7 +91,6 @@ Selecting the right hardware is critical for Azure Local success. This page prov
 ## Physical Topology and Network Architecture
 
 ### Cluster Hardware Topology
-
 
 ---
 
@@ -225,8 +225,8 @@ Microsoft maintains a catalog of validated Azure Local solutions from OEM and sy
 
 ### Memory Requirements
 
-**Minimum:** 128 GB DDR4 ECC  
-**Recommended Production:** 384 GB - 1 TB  
+**Minimum:** 128 GB DDR4 ECC
+**Recommended Production:** 384 GB - 1 TB
 **Large Deployments:** 1 TB - 6 TB
 
 **Memory Sizing Formula:**
@@ -336,8 +336,8 @@ Resiliency Factors:
 
 ### Minimum Requirements
 
-**Adapter Count:** 2 adapters (for redundancy)  
-**Speed:** 10 GbE minimum  
+**Adapter Count:** 2 adapters (for redundancy)
+**Speed:** 10 GbE minimum
 **Features:** SR-IOV, RDMA (for storage traffic)
 
 ### Recommended Configuration
@@ -385,7 +385,7 @@ Resiliency Factors:
 **Mellanox/NVIDIA:**
 
 - ConnectX-5, ConnectX-6
-- 25/40/50/100 GbE
+- `25/40/50/100 GbE`
 - Excellent RDMA performance
 - Strong software support
 
@@ -1078,10 +1078,10 @@ Resiliency Factors:
 
 **Continue Learning:**
 
-- [Azure Local Overview →](azure-local-overview)
-- [Connected Mode Operations →](azure-local-connected-mode)
-- [Disconnected Mode Operations →](azure-local-disconnected-mode)
-- [Azure Local Quiz →](azure-local-quiz)
+- [Azure Local Overview →](azure-local-overview.md)
+- [Connected Mode Operations →](azure-local-connected-mode.md)
+- [Disconnected Mode Operations →](azure-local-disconnected-mode.md)
+- [Azure Local Quiz →](azure-local-knowledge-check.md)
 
 **External Resources:**
 

@@ -3,6 +3,7 @@ layout: default
 title: Multi-Site Azure Local Architectures
 parent: Module 2 - Azure Local Connected
 nav_order: 1
+description: "Azure Local multi-site deployments — stretched clusters, Site Recovery, fault domains across data centers, and quorum configurations for geo-resilient sovereign infrastructure."
 ---
 
 # Multi-Site Azure Local Architectures
@@ -120,7 +121,6 @@ graph TB
 
 ## Multi-Site Architecture Comparison
 
-
 ---
 
 ## Synchronization Mechanisms
@@ -173,4 +173,4 @@ graph TB
 
 ---
 
-**See also:** [Connected Mode Architecture](azure-local-advanced-connected) | [Networking Deep Dive](azure-local-networking-advanced) | [Lab Exercise](azure-local-connected-lab)
+**See also:** [Connected Mode Architecture](azure-local-advanced-connected.md) | [Networking Deep Dive](azure-local-networking-advanced.md) | [Lab Exercise](azure-local-connected-lab.md)

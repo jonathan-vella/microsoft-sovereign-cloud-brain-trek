@@ -1,0 +1,19 @@
+# Phase 1 audit reports — output directory
+#
+# This folder is produced by `scripts/review/run-audit.sh`.
+# Most outputs are reproducible from source and not committed; only the
+# narrative reports (AUDIT.md, BACKLOG.md, WONTFIX.md, FINAL.md, etc.)
+# are checked in to PR-2 / PR-5.
+*
+!.gitignore
+!README.md
+!AUDIT.md
+!AUDIT-SUMMARY.md
+!BACKLOG.md
+!WONTFIX.md
+!FINAL.md
+!nav-exclude-decisions.md
+!pilot-results.md
+!level-*-changes.md
+!baseline-build.log
+!inventory.csv

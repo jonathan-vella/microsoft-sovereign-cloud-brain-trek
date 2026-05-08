@@ -3,6 +3,7 @@ layout: default
 title: RAG Fundamentals
 parent: Module 5 - Edge RAG Concepts
 nav_order: 5.1
+description: "Retrieval-augmented generation fundamentals — embeddings, vector databases, retrieval and generation pipeline, and the limitations of stand-alone large language models that RAG addresses."
 ---
 
 # RAG Fundamentals Deep Dive
@@ -51,7 +52,7 @@ _Figure 1: How text is converted to vector embeddings for RAG retrieval_
 
 **1. Knowledge Cutoff:**
 
-- Training data has a cutoff date (e.g., September 2021)
+- Training data has a cutoff date (for example, September 2021)
 - No awareness of events after training
 - Cannot access proprietary organizational data
 
@@ -381,7 +382,6 @@ graph TB
 
 ## RAG Components and Data Flow
 
-
 ---
 
 ## Practical RAG Components and Tools
@@ -511,10 +511,10 @@ print(answer)
 
 ## Next Steps
 
-- [Edge RAG Architecture →](edge-rag-architecture)
-- [Edge RAG Use Cases →](edge-rag-use-cases)
-- [Edge RAG Quiz →](edge-rag-quiz)
-- [Back to Edge RAG Overview →](edge-rag-concepts)
+- [Edge RAG Architecture →](edge-rag-architecture.md)
+- [Edge RAG Use Cases →](edge-rag-use-cases.md)
+- [Edge RAG Quiz →](edge-rag-knowledge-check.md)
+- [Back to Edge RAG Overview →](edge-rag-concepts.md)
 
 ---
 

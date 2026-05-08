@@ -2,6 +2,7 @@
 layout: default
 title: Level 300 Visual Asset Specifications
 nav_exclude: true
+description: "Internal Level 300 visual asset specifications (excluded from nav)."
 ---
 
 # Level 300 Visual Asset Specifications

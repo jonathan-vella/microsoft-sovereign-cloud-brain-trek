@@ -2,6 +2,7 @@
 layout: default
 title: Level 100 Visual Asset Specifications
 nav_exclude: true
+description: "Internal Level 100 visual asset specifications (excluded from nav)."
 ---
 
 # Level 100 Visual Asset Specifications
@@ -1091,7 +1092,7 @@ Content Requirements:
   1. User query input
   2. Query embedding generation (local embeddings model)
   3. Vector similarity search in database
-  4. Document retrieval (top-K results, e.g., top-5)
+  4. Document retrieval (top-K results, for example, top-5)
   5. Retrieved documents/chunks displayed
   6. Context assembly (combine chunks)
   7. Prompt construction with context and query

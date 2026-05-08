@@ -4,6 +4,7 @@ title: Module 4 - Production Edge RAG
 parent: Level 300 - Advanced
 nav_order: 4
 has_children: true
+description: "Module 4: Production Edge RAG (preview) — moving from pilot to production, MLOps, optimization, and operations for on-premises RAG systems."
 ---
 
 # Module 4: Production Edge RAG at Scale
@@ -52,25 +53,22 @@ _Figure 1: Enterprise-grade Edge RAG architecture with load balancing, GPU infer
 
 ## Core Topics
 
-1. **Production Architecture** → [edge-rag-architecture-production.md](edge-rag-architecture-production)
-2. **Performance Optimization** → [edge-rag-optimization.md](edge-rag-optimization)
-3. **MLOps & Model Management** → [edge-rag-mlops.md](edge-rag-mlops)
-4. **Hands-On Lab** → [edge-rag-production-lab.md](edge-rag-production-lab)
+1. **Production Architecture** → [edge-rag-architecture-production.md](edge-rag-architecture-production.md)
+2. **Performance Optimization** → [edge-rag-optimization.md](edge-rag-optimization.md)
+3. **MLOps & Model Management** → [edge-rag-mlops.md](edge-rag-mlops.md)
+4. **Hands-On Lab** → [edge-rag-production-lab.md](edge-rag-production-lab.md)
 
 ---
 
 ## Production Architecture
 
-
 ---
 
 ## Performance Optimization
 
-
 ---
 
 ## MLOps Workflow
-
 
 ---
 
@@ -101,10 +99,10 @@ _Figure 1: Enterprise-grade Edge RAG architecture with load balancing, GPU infer
 
 ## Recommended Learning Path
 
-1. Start: [Production Architecture](edge-rag-architecture-production)
-2. Optimize: [Performance Tuning](edge-rag-optimization)
-3. Automate: [MLOps Pipeline](edge-rag-mlops)
-4. Hands-On: [Lab](edge-rag-production-lab)
+1. Start: [Production Architecture](edge-rag-architecture-production.md)
+2. Optimize: [Performance Tuning](edge-rag-optimization.md)
+3. Automate: [MLOps Pipeline](edge-rag-mlops.md)
+4. Hands-On: [Lab](edge-rag-production-lab.md)
 
 ---
 

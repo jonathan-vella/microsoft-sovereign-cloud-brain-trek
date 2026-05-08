@@ -4,6 +4,7 @@ title: Module 2 - Sovereign Cloud Models
 parent: Level 100 - Foundation
 nav_order: 2
 has_children: true
+description: "Microsoft Sovereign Cloud delivery models — sovereign public cloud, sovereign private cloud (Azure Local), and national partner clouds with regulatory and operational comparison."
 ---
 
 # Module 2: Microsoft Sovereign Cloud Models

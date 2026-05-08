@@ -3,6 +3,7 @@ layout: default
 title: Air-Gapped Architecture Design
 parent: Module 3 - Azure Local Disconnected
 nav_order: 1
+description: "Air-gapped Azure Local deployments — fully isolated environments, physical and logical air-gap patterns, and compliance with stringent sovereignty requirements."
 ---
 
 # Air-Gapped Architecture Design
@@ -42,7 +43,6 @@ Design and implement completely isolated Azure Local deployments with zero cloud
 ---
 
 ## Air-Gapped Architecture Pattern
-
 
 ---
 
@@ -104,4 +104,4 @@ Design and implement completely isolated Azure Local deployments with zero cloud
 
 ---
 
-**See also:** [Certificate Management](azure-local-certificate-management) | [Disconnected Lab](azure-local-disconnected-lab)
+**See also:** [Certificate Management](azure-local-certificate-management.md) | [Disconnected Lab](azure-local-disconnected-lab.md)

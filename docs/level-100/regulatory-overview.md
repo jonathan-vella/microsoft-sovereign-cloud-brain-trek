@@ -3,6 +3,7 @@ layout: default
 title: Regulatory Overview
 parent: Module 1 - Digital Sovereignty
 nav_order: 3
+description: "Regulatory overview — GDPR, Schrems II, Data Act, NIS2, DORA, and other EU and global regulations that drive sovereignty requirements for cloud workloads."
 ---
 
 # Regulatory Requirements Overview
@@ -59,8 +60,8 @@ graph TB
 
 ### GDPR (General Data Protection Regulation)
 
-**Jurisdiction:** European Union (EU) and European Economic Area (EEA)  
-**Effective Date:** May 25, 2018  
+**Jurisdiction:** European Union (EU) and European Economic Area (EEA)
+**Effective Date:** May 25, 2018
 **Scope:** All organizations processing personal data of EU residents
 
 #### Key Principles
@@ -119,8 +120,8 @@ graph TB
 
 ### FedRAMP (Federal Risk and Authorization Management Program)
 
-**Jurisdiction:** United States Federal Government  
-**Effective Date:** June 2011  
+**Jurisdiction:** United States Federal Government
+**Effective Date:** June 2011
 **Scope:** Cloud services used by US federal agencies
 
 #### Impact Levels
@@ -186,8 +187,8 @@ graph TB
 
 ### HIPAA (Health Insurance Portability and Accountability Act)
 
-**Jurisdiction:** United States Healthcare Industry  
-**Effective Date:** 1996 (Privacy Rule: 2003, Security Rule: 2005)  
+**Jurisdiction:** United States Healthcare Industry
+**Effective Date:** 1996 (Privacy Rule: 2003, Security Rule: 2005)
 **Scope:** Healthcare providers, payers, and their business associates
 
 #### Key Requirements
@@ -244,8 +245,8 @@ graph TB
 
 ### PCI DSS (Payment Card Industry Data Security Standard)
 
-**Jurisdiction:** Global (Payment Card Industry)  
-**Version:** 4.0 (March 2022)  
+**Jurisdiction:** Global (Payment Card Industry)
+**Version:** 4.0 (March 2022)
 **Scope:** Organizations that store, process, or transmit cardholder data
 
 #### 12 Requirements
@@ -295,8 +296,8 @@ graph TB
 
 ### ITAR (International Traffic in Arms Regulations)
 
-**Jurisdiction:** United States Defense Industry  
-**Authority:** US Department of State  
+**Jurisdiction:** United States Defense Industry
+**Authority:** US Department of State
 **Scope:** Export-controlled defense articles and services
 
 #### Key Requirements
@@ -367,35 +368,35 @@ graph TB
 
 **Requirement:** Data must be stored in specific geographic regions
 
-**Regulations:** GDPR (implicit), FedRAMP, ITAR  
+**Regulations:** GDPR (implicit), FedRAMP, ITAR
 **Azure Solution:** Regional deployment, EU Data Boundary, Azure Government regions
 
 ### Access Controls
 
 **Requirement:** Restrict who can access data and systems
 
-**Regulations:** All  
+**Regulations:** All
 **Azure Solution:** Azure AD/Entra ID, RBAC, Customer Lockbox, Privileged Identity Management
 
 ### Encryption
 
 **Requirement:** Protect data at rest and in transit
 
-**Regulations:** All  
+**Regulations:** All
 **Azure Solution:** Encryption by default, customer-managed keys, confidential computing
 
 ### Audit Logging
 
 **Requirement:** Comprehensive logs of access and changes
 
-**Regulations:** All  
+**Regulations:** All
 **Azure Solution:** Azure Monitor, Log Analytics, audit logs, immutable storage
 
 ### Personnel Screening
 
 **Requirement:** Background checks for personnel with access
 
-**Regulations:** FedRAMP, ITAR, HIPAA (BAA terms)  
+**Regulations:** FedRAMP, ITAR, HIPAA (BAA terms)
 **Azure Solution:** Screened personnel for Azure Government, documented processes
 
 ---
@@ -404,18 +405,18 @@ graph TB
 
 ### By Industry
 
-**Healthcare:** HIPAA (US), GDPR (EU)  
-**Financial Services:** PCI DSS, GDPR, local banking regulations  
-**Government:** FedRAMP (US), GDPR (EU), national security frameworks  
-**Defense:** ITAR (US), GDPR (EU), export controls  
+**Healthcare:** HIPAA (US), GDPR (EU)
+**Financial Services:** PCI DSS, GDPR, local banking regulations
+**Government:** FedRAMP (US), GDPR (EU), national security frameworks
+**Defense:** ITAR (US), GDPR (EU), export controls
 **Retail:** PCI DSS, GDPR, consumer protection laws
 
 ### By Geography
 
-**European Union:** GDPR mandatory  
-**United States Federal:** FedRAMP for government work  
-**United States Healthcare:** HIPAA if handling PHI  
-**Global Payments:** PCI DSS if processing payments  
+**European Union:** GDPR mandatory
+**United States Federal:** FedRAMP for government work
+**United States Healthcare:** HIPAA if handling PHI
+**Global Payments:** PCI DSS if processing payments
 **US Defense:** ITAR for defense articles and services
 
 ### Assessment Questions
@@ -451,10 +452,10 @@ graph TB
 
 ## Next Steps
 
-- **[Explore Data Residency Concepts →](data-residency-concepts)**
-- **[Learn about Operational Sovereignty →](operational-sovereignty)**
-- **[Review European Digital Commitments →](european-commitments)**
-- **[Return to Digital Sovereignty Overview →](digital-sovereignty)**
+- **[Explore Data Residency Concepts →](data-residency-concepts.md)**
+- **[Learn about Operational Sovereignty →](operational-sovereignty.md)**
+- **[Review European Digital Commitments →](european-commitments.md)**
+- **[Return to Digital Sovereignty Overview →](digital-sovereignty.md)**
 
 ---
 

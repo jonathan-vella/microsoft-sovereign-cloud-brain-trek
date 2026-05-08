@@ -2,7 +2,8 @@
 layout: default
 title: LLM Inference Optimization
 parent: Edge RAG Implementation
-nav_order: 3
+nav_order: 4
+description: "LLM inference optimization for Edge RAG — quantization, batch sizing, GPU/NPU acceleration, and trade-offs for on-premises generative AI workloads."
 ---
 
 # LLM Inference Optimization

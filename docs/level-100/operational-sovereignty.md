@@ -3,6 +3,7 @@ layout: default
 title: Operational Sovereignty
 parent: Module 1 - Digital Sovereignty
 nav_order: 5
+description: "Operational sovereignty — personnel, infrastructure, and operations control mechanisms (Customer Lockbox, Confidential Computing, key management) that maintain customer authority over cloud workloads."
 ---
 
 # Operational Sovereignty
@@ -143,7 +144,6 @@ For many organizations—particularly those in government, defense, and critical
 
 Different scenarios require different levels of operational sovereignty:
 
-
 ---
 
 ### Level 1: Standard Public Cloud
@@ -246,7 +246,6 @@ Different scenarios require different levels of operational sovereignty:
 ## Control Plane: Connected vs. Disconnected
 
 The control plane is the management layer that orchestrates infrastructure operations. The location and connectivity of the control plane is a key aspect of operational sovereignty.
-
 
 ---
 
@@ -666,10 +665,10 @@ _Note: Images should be placed in `/docs/assets/images/` folder with descriptive
 
 ## Next Steps
 
-- **[Take the Knowledge Check Quiz →](knowledge-check)**
-- **[Review Data Residency Concepts →](data-residency-concepts)**
-- **[Explore Azure Local Overview →](azure-local-overview)**
-- **[Return to Digital Sovereignty Overview →](digital-sovereignty)**
+- **[Take the Knowledge Check Quiz →](knowledge-check.md)**
+- **[Review Data Residency Concepts →](data-residency-concepts.md)**
+- **[Explore Azure Local Overview →](azure-local-overview.md)**
+- **[Return to Digital Sovereignty Overview →](digital-sovereignty.md)**
 
 ---
 

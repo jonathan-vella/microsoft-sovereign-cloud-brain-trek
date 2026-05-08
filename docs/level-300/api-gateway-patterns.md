@@ -9,11 +9,9 @@ description: "Secure API management with sovereignty controls"
 
 # API Gateway Patterns for Sovereignty
 
-
 {: .no_toc }
 
 Secure API management patterns with data sovereignty and zero-trust controls.
-
 
 ## Table of Contents
 
@@ -39,9 +37,7 @@ After completing this section, you will be able to:
 
 ---
 
-
 ## API Gateway Architecture
-
 
 | Component | Purpose | Configuration |
 |-----------|---------|---------------|

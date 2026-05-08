@@ -9,11 +9,9 @@ description: "Security-integrated pipelines"
 
 # DevSecOps Pipeline for Sovereign Cloud
 
-
 {: .no_toc }
 
 Security-integrated development pipelines with sovereignty compliance gates and automated enforcement.
-
 
 ## Table of Contents
 

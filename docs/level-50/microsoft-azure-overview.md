@@ -86,7 +86,7 @@ Microsoft Azure is a comprehensive cloud computing platform that provides infras
 
 ### Built-in Security Features
 
-- **Azure Active Directory**: Identity and access management
+- **Microsoft Entra ID**: Identity and access management
 - **Security Center**: Unified security monitoring
 - **Key Vault**: Secrets and key management
 - **Network Security Groups**: Traffic filtering

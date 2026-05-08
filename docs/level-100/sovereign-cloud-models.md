@@ -3,6 +3,7 @@ layout: default
 title: Overview
 parent: Module 2 - Sovereign Cloud Models
 nav_order: 1
+description: "Microsoft Sovereign Cloud delivery models compared — sovereign public cloud, sovereign private cloud, and national partner clouds with feature, control, and compliance trade-offs."
 ---
 
 # Microsoft Sovereign Cloud Models
@@ -80,7 +81,7 @@ Different organizations have different sovereignty needs:
 - Workloads needing cloud scalability with data residency
 - Customers wanting balance between control and cloud benefits
 
-**[Learn More →](sovereign-public-cloud)**
+**[Learn More →](sovereign-public-cloud.md)**
 
 ---
 
@@ -105,7 +106,7 @@ Different organizations have different sovereignty needs:
 - Organizations with air-gap or disconnected requirements
 - Scenarios requiring complete operational independence
 
-**[Learn More →](sovereign-private-cloud)**
+**[Learn More →](sovereign-private-cloud.md)**
 
 ---
 
@@ -135,7 +136,7 @@ Different organizations have different sovereignty needs:
 - Organizations subject to national cloud requirements
 - Workloads requiring local operator model
 
-**[Learn More →](national-partner-clouds)**
+**[Learn More →](national-partner-clouds.md)**
 
 ---
 
@@ -1058,24 +1059,13 @@ Real-world examples illustrating when and why organizations choose each sovereig
 
 ---
 
-## Visual Asset Placeholder
-
-
----
-
-
----
-
-
----
-
 ## Deep Dive Topics
 
 For detailed exploration of each sovereign cloud model, continue to these pages:
 
 ### 📘 Sovereign Public Cloud
 
-**[Read Full Article →](sovereign-public-cloud)**
+**[Read Full Article →](sovereign-public-cloud.md)**
 
 Deep dive into Azure with enhanced sovereignty controls:
 
@@ -1088,7 +1078,7 @@ Deep dive into Azure with enhanced sovereignty controls:
 
 ### 📘 Sovereign Private Cloud
 
-**[Read Full Article →](sovereign-private-cloud)**
+**[Read Full Article →](sovereign-private-cloud.md)**
 
 Comprehensive guide to Azure Local:
 
@@ -1101,7 +1091,7 @@ Comprehensive guide to Azure Local:
 
 ### 📘 National Partner Clouds
 
-**[Read Full Article →](national-partner-clouds)**
+**[Read Full Article →](national-partner-clouds.md)**
 
 Understanding partner-operated sovereign clouds:
 
@@ -1114,7 +1104,7 @@ Understanding partner-operated sovereign clouds:
 
 ### ✅ Test Your Knowledge
 
-**[Take the Cloud Models Quiz →](cloud-models-quiz)**
+**[Take the Cloud Models Quiz →](cloud-models-knowledge-check.md)**
 
 12-15 questions covering all three sovereign cloud models, decision criteria, and use case selection.
 
@@ -1129,7 +1119,7 @@ After completing this module:
 3. ✅ **Read the customer scenarios** to see real-world applications
 4. ✅ **Explore deep dive pages** for detailed technical information
 5. 🎯 **Take the quiz** to validate your understanding
-6. 🎯 **[Proceed to Azure Local Overview →](azure-local-overview)** (Module 3)
+6. 🎯 **[Proceed to Azure Local Overview →](azure-local-overview.md)** (Module 3)
 
 ---
 

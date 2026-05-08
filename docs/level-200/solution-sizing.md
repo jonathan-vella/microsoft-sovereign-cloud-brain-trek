@@ -3,6 +3,7 @@ layout: default
 title: Solution Sizing & Planning
 parent: Module 4 - Pre-Sales & Solution Design
 nav_order: 4
+description: "Solution sizing for sovereign cloud opportunities — workload intake, capacity calculators for Azure Local, and translation from customer requirements to validated hardware SKUs."
 ---
 
 # Solution Sizing & Planning
@@ -584,7 +585,7 @@ Confidence Level: [%]
 - **Main Page:** [Pre-Sales & Solution Design](./presales-solution-design.md)
 - **Discovery:** [Customer Discovery](./customer-discovery.md)
 - **Cost Analysis:** [Cost Estimation & TCO](./cost-estimation.md)
-- **Proposals:** [Proposal Development](./proposal-development.md)
+- **Proposals:** combine [Customer Discovery](./customer-discovery.md) findings with [Cost Estimation](./cost-estimation.md) outputs (dedicated proposal template forthcoming).
 - **Assessment:** [Pre-Sales & Solution Design Knowledge Check](./presales-knowledge-check.md)
 
 ---

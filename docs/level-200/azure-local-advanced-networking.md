@@ -3,6 +3,7 @@ layout: default
 title: Advanced Networking
 parent: Azure Local Architecture Deep Dive
 nav_order: 4
+description: "Azure Local advanced networking — SDN, Network Controller, Software Load Balancer, multi-site topologies, and integration with Azure ExpressRoute and Network Adapters."
 ---
 
 # Advanced Networking

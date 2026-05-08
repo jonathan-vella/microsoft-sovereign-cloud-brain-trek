@@ -95,6 +95,15 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-relative-links
+  - jekyll-include-cache
+
+# Whitelist plugins for `jekyll build --safe` (used by GitHub Pages and CI).
+whitelist:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+  - jekyll-include-cache
 
 # Relative links configuration
 relative_links:
@@ -117,6 +126,13 @@ exclude:
 #   labs:
 #     output: true
 #     permalink: /labs/:path/
+
+# Drafts collection — pages that fail §H publish criteria but should be retained
+# in the repo for future development. Not built into _site.
+collections:
+  drafts:
+    output: false
+    permalink: /_drafts/:path/
 
 # Defaults
 defaults:

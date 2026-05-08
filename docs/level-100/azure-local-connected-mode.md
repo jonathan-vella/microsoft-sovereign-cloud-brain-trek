@@ -3,6 +3,7 @@ layout: default
 title: Azure Local Connected Mode
 parent: Module 3 - Azure Local Overview
 nav_order: 3.2
+description: "Azure Local connected mode — continuous connectivity to Azure for management, updates, billing, and monitoring while customer data and workloads remain on-premises."
 ---
 
 # Azure Local Connected Mode Operations
@@ -89,7 +90,7 @@ graph TB
 - Azure Security Center for threat protection
 - Azure Update Manager for patch management
 
-**[← Back to Azure Local Overview](azure-local-overview)**
+**[← Back to Azure Local Overview](azure-local-overview.md)**
 
 ---
 
@@ -206,7 +207,7 @@ https://*.servicebus.windows.net (Event Hubs)
 
 ### Identity and Authentication
 
-**Azure Active Directory:**
+**Microsoft Entra ID:**
 
 - Azure AD tenant required
 - Service principal for Arc registration
@@ -290,7 +291,7 @@ Connected Mode maintains near real-time synchronization of metadata and telemetr
 - Configurable log filtering available
 - Data encrypted in transit (TLS 1.2+)
 
-**[Review Data Residency Concepts →](data-residency-concepts)**
+**[Review Data Residency Concepts →](data-residency-concepts.md)**
 
 ---
 
@@ -411,7 +412,7 @@ Connected Mode maintains near real-time synchronization of metadata and telemetr
 - ✅ Drift detection
 - ✅ Auto-remediation
 - ✅ Custom policy definitions
-- ✅ Initiative bundles (e.g., PCI-DSS, HIPAA)
+- ✅ Initiative bundles (for example, PCI-DSS, HIPAA)
 
 **Microsoft Defender for Cloud:**
 
@@ -1113,13 +1114,13 @@ Set-CauClusterRole -DaysOfWeek Saturday `
 
 **Continue Learning:**
 
-- [Disconnected Mode Operations →](azure-local-disconnected-mode)
-- [Hardware Requirements & Planning →](azure-local-hardware)
-- [Azure Local Quiz →](azure-local-quiz)
+- [Disconnected Mode Operations →](azure-local-disconnected-mode.md)
+- [Hardware Requirements & Planning →](azure-local-hardware.md)
+- [Azure Local Quiz →](azure-local-knowledge-check.md)
 
 **Back to:**
 
-- [Azure Local Overview →](azure-local-overview)
+- [Azure Local Overview →](azure-local-overview.md)
 
 **External Resources:**
 

@@ -3,6 +3,7 @@ layout: default
 title: Compliance & Security Knowledge Check
 parent: Compliance & Security Patterns
 nav_order: 5.3
+description: "Knowledge check covering compliance and security implementation — GDPR, FedRAMP, encryption / key management, and security hardening."
 ---
 
 # Compliance & Security Patterns - Assessment Quiz
@@ -29,10 +30,10 @@ Test your understanding of compliance frameworks, security patterns, encryption,
 
 **Scenario:** A German healthcare organization processes patient medical records under GDPR. Where must their data be stored to comply with the EU data boundary requirement?
 
-A) Azure Public Cloud (US East region)  
-B) Azure EU Data Boundary (West Europe or North Europe)  
-C) Azure Local deployed on-premises in Germany  
-D) Both B and C are compliant  
+A) Azure Public Cloud (US East region)
+B) Azure EU Data Boundary (West Europe or North Europe)
+C) Azure Local deployed on-premises in Germany
+D) Both B and C are compliant
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -49,8 +50,8 @@ Both satisfy GDPR's data residency requirement through different operational mod
 
 **Business Context:** Healthcare organizations often face the choice between operational simplicity (cloud) and maximum data sovereignty (on-premises). Azure Local addresses concerns about data leaving the country while maintaining Microsoft's managed services.
 
+**Reference:** [Compliance & Security Patterns](compliance-security-patterns.md)
 </details>
-
 
 ---
 
@@ -58,10 +59,10 @@ Both satisfy GDPR's data residency requirement through different operational mod
 
 **Scenario:** A customer requests their personal data under the GDPR "right to access." Your organization must provide this data within a specific timeframe. What is the legal deadline?
 
-A) 7 days  
-B) 14 days  
-C) 30 days  
-D) 90 days  
+A) 7 days
+B) 14 days
+C) 30 days
+D) 90 days
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -83,8 +84,8 @@ GDPR Article 12 specifies a **30-day deadline** for responding to data subject a
 
 **Non-Compliance Risk:** Failing to meet the 30-day deadline can result in fines up to €10 million or 2% of global annual revenue.
 
+**Reference:** [GDPR Implementation](gdpr-implementation.md)
 </details>
-
 
 ---
 
@@ -92,10 +93,10 @@ GDPR Article 12 specifies a **30-day deadline** for responding to data subject a
 
 **Scenario:** A U.S. federal agency needs to store PII (personally identifiable information) in Azure. Which FedRAMP authorization level is typically required?
 
-A) Level 1 (Low Impact)  
-B) Level 2 (Moderate Impact)  
-C) Level 3 (High Impact)  
-D) Government Secret only  
+A) Level 1 (Low Impact)
+B) Level 2 (Moderate Impact)
+C) Level 3 (High Impact)
+D) Government Secret only
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -120,8 +121,8 @@ PII is classified as **Moderate Impact** data under NIST 800-53. FedRAMP Level 2
 
 **Business Impact:** Choosing the correct FedRAMP level affects authorization timeline, cost, and operational requirements. Overestimating (Level 3) wastes budget; underestimating (Level 1) creates compliance risk.
 
+**Reference:** [FedRAMP Compliance](fedramp-compliance.md)
 </details>
-
 
 ---
 
@@ -129,10 +130,10 @@ PII is classified as **Moderate Impact** data under NIST 800-53. FedRAMP Level 2
 
 **Scenario:** Your organization maintains FedRAMP Moderate authorization. What is the minimum monitoring frequency required to maintain compliance?
 
-A) Annual  
-B) Quarterly  
-C) Monthly  
-D) Real-time/Daily  
+A) Annual
+B) Quarterly
+C) Monthly
+D) Real-time/Daily
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -165,10 +166,10 @@ FedRAMP Moderate authorization requires **monthly continuous monitoring** at min
 
 **Increased Monitoring for Level 3 (High):** Real-time/daily monitoring with automated alerts.
 
-**Compliance Monitoring Failure Impact:** Failure to maintain continuous monitoring monitoring can result in loss of FedRAMP authorization, which would immediately disqualify the system from government use.
+**Compliance Monitoring Failure Impact:** Failure to maintain continuous monitoring can result in loss of FedRAMP authorization, which would immediately disqualify the system from government use.
 
+**Reference:** [Encryption & Key Management](encryption-key-management.md)
 </details>
-
 
 ---
 
@@ -176,10 +177,10 @@ FedRAMP Moderate authorization requires **monthly continuous monitoring** at min
 
 **Scenario:** Under GDPR, if a data breach occurs but personal data was encrypted with AES-256, what is the likely outcome?
 
-A) Notification to authorities is still required (encryption doesn't eliminate notification)  
-B) No notification required (encryption provides absolute protection)  
-C) Notification only required if encryption keys were compromised  
-D) Notification timeline extends to 90 days  
+A) Notification to authorities is still required (encryption doesn't eliminate notification)
+B) No notification required (encryption provides absolute protection)
+C) Notification only required if encryption keys were compromised
+D) Notification timeline extends to 90 days
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -206,8 +207,8 @@ Under GDPR Article 32, encryption is a **recommended technical measure** for dat
 
 **Real Example:** EU regulators have noted that encryption alone doesn't guarantee exemption from breach notification, especially if combined with other attacks or if the breach indicates systematic security failures.
 
+**Reference:** [Security Hardening](security-hardening.md)
 </details>
-
 
 ---
 
@@ -215,10 +216,10 @@ Under GDPR Article 32, encryption is a **recommended technical measure** for dat
 
 **Scenario:** You have a database with AES-256 encryption at rest. A hacker intercepts database traffic during replication. What protection prevents the hacker from reading the replicated data?
 
-A) At-rest encryption (protects storage)  
-B) In-transit encryption (TLS 1.3)  
-C) Key Vault management  
-D) RBAC permissions  
+A) At-rest encryption (protects storage)
+B) In-transit encryption (TLS 1.3)
+C) Key Vault management
+D) RBAC permissions
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -263,8 +264,8 @@ Scenario: Database Replication
 
 **Network Interception Scenario:** Without TLS 1.3 in-transit encryption, hacker intercepts the replication data stream (encrypted at-rest key is useless for transmitted data).
 
+**Reference:** [Compliance & Security Patterns](compliance-security-patterns.md)
 </details>
-
 
 ---
 
@@ -272,10 +273,10 @@ Scenario: Database Replication
 
 **Scenario:** Your primary Azure Key Vault in West Europe becomes unavailable. You need to decrypt customer data urgently. What is the minimum RTO (Recovery Time Objective) with proper geo-replication setup?
 
-A) 24 hours  
-B) 4 hours  
-C) < 5 minutes  
-D) Varies; depends on backup strategy  
+A) 24 hours
+B) 4 hours
+C) < 5 minutes
+D) Varies; depends on backup strategy
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -308,8 +309,8 @@ With **proper geo-replication of Azure Key Vault**, recovery is nearly instantan
 
 **Cost Trade-off:** Geo-replication adds ~50% to Key Vault costs but provides near-zero downtime for keys.
 
+**Reference:** [GDPR Implementation](gdpr-implementation.md)
 </details>
-
 
 ---
 
@@ -317,10 +318,10 @@ With **proper geo-replication of Azure Key Vault**, recovery is nearly instantan
 
 **Scenario:** An IT administrator needs to temporarily manage VM scaling during a high-traffic event (1-day event). What is the best practice for granting access?
 
-A) Permanent Contributor role (convenient, not revoked)  
-B) Temporary elevated access via PIM (Privileged Identity Management) with time limit  
-C) Owner role for the duration of event  
-D) Shared admin account (multiple admins use same credentials)  
+A) Permanent Contributor role (convenient, not revoked)
+B) Temporary elevated access via PIM (Privileged Identity Management) with time limit
+C) Owner role for the duration of event
+D) Shared admin account (multiple admins use same credentials)
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -363,8 +364,8 @@ Automatic Cleanup:
 
 **Compliance Impact:** Temporary, approved, audited access demonstrates GDPR and FedRAMP compliance for access control.
 
+**Reference:** [FedRAMP Compliance](fedramp-compliance.md)
 </details>
-
 
 ---
 
@@ -372,10 +373,10 @@ Automatic Cleanup:
 
 **Scenario:** You're designing network segmentation for a healthcare organization. A web server is compromised. How does segmentation minimize the blast radius?
 
-A) Prevents web server from accessing databases (firewall between tiers)  
-B) Prevents internet traffic from reaching internal servers  
-C) Requires additional authentication for each tier  
-D) All of the above  
+A) Prevents web server from accessing databases (firewall between tiers)
+B) Prevents internet traffic from reaching internal servers
+C) Requires additional authentication for each tier
+D) All of the above
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -427,8 +428,8 @@ Data Tier (Highly Protected)
 
 **Compliance Benefit:** Network segmentation demonstrates defense-in-depth, reducing penalty severity if breach occurs.
 
+**Reference:** [Encryption & Key Management](encryption-key-management.md)
 </details>
-
 
 ---
 
@@ -436,10 +437,10 @@ Data Tier (Highly Protected)
 
 **Scenario:** A critical zero-day security vulnerability is announced affecting your Azure SQL databases. Under FedRAMP requirements, what is the maximum allowed time to apply this patch?
 
-A) 24 hours  
-B) 48 hours  
-C) 7 days  
-D) 30 days  
+A) 24 hours
+B) 48 hours
+C) 7 days
+D) 30 days
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -487,8 +488,8 @@ Day 2: Completion
 
 **Compliance Evidence:** Organizations must maintain patch deployment logs showing all critical patches applied within 48-hour window.
 
+**Reference:** [Security Hardening](security-hardening.md)
 </details>
-
 
 ---
 
@@ -496,10 +497,10 @@ Day 2: Completion
 
 **Scenario:** You need to select an encryption algorithm for encrypting sensitive healthcare data at rest in Azure Storage. Azure supports multiple algorithms. Which is the correct choice for GDPR/FedRAMP compliance?
 
-A) AES-128  
-B) AES-256  
-C) MD5  
-D) SHA-256  
+A) AES-128
+B) AES-256
+C) MD5
+D) SHA-256
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -559,8 +560,8 @@ D) SHA-256
 └─────────────────────────────────────┘
 ```
 
+**Reference:** [Compliance & Security Patterns](compliance-security-patterns.md)
 </details>
-
 
 ---
 
@@ -568,10 +569,10 @@ D) SHA-256
 
 **Scenario:** Your organization detects a data breach affecting 5,000 customer records. Under GDPR, when must you notify the Data Protection Authority (DPA)?
 
-A) Immediately (within 1 hour)  
-B) Within 24 hours  
-C) Within 72 hours  
-D) Within 30 days  
+A) Immediately (within 1 hour)
+B) Within 24 hours
+C) Within 72 hours
+D) Within 30 days
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -620,8 +621,8 @@ Hour 72+: Affected parties notification
 - Reputational damage
 - Regulatory scrutiny
 
+**Reference:** [GDPR Implementation](gdpr-implementation.md)
 </details>
-
 
 ---
 
@@ -629,10 +630,10 @@ Hour 72+: Affected parties notification
 
 **Scenario:** A security incident occurs where a web server is compromised. The organization has implemented defense-in-depth architecture. Which layer would prevent the attacker from accessing the database?
 
-A) Physical security (guards)  
-B) Network segmentation & firewall rules  
-C) Application-level access control  
-D) Data encryption  
+A) Physical security (guards)
+B) Network segmentation & firewall rules
+C) Application-level access control
+D) Data encryption
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -679,8 +680,8 @@ If network segmentation failed (misconfigured rule), then:
 
 **Compliance Benefit:** Demonstrating network segmentation shows risk management aligned with defense-in-depth principles, reducing FedRAMP/GDPR compliance risks.
 
+**Reference:** [FedRAMP Compliance](fedramp-compliance.md)
 </details>
-
 
 ---
 
@@ -688,10 +689,10 @@ If network segmentation failed (misconfigured rule), then:
 
 **Scenario:** Your organization has an encryption key protecting customer data. The compliance policy requires key rotation every 90 days. The last rotation was on August 1. Today is November 1. What is your status?
 
-A) Compliant (within policy)  
-B) Non-compliant (overdue by 2 days)  
-C) Compliant (just within deadline)  
-D) Non-compliant (severely overdue)  
+A) Compliant (within policy)
+B) Non-compliant (overdue by 2 days)
+C) Compliant (just within deadline)
+D) Non-compliant (severely overdue)
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -743,8 +744,8 @@ COMPLIANCE EVIDENCE NEEDED:
 - Prevents compliance violation from scheduling delays
 - Demonstrates proactive management
 
+**Reference:** [Encryption & Key Management](encryption-key-management.md)
 </details>
-
 
 ---
 
@@ -752,10 +753,10 @@ COMPLIANCE EVIDENCE NEEDED:
 
 **Scenario:** Your organization is implementing a zero-trust security architecture for a sovereign cloud deployment. Which principle best describes zero-trust approach?
 
-A) Trust all users on internal network  
-B) Verify every access request, assume breach  
-C) Trust users after initial login  
-D) Security at network perimeter is sufficient  
+A) Trust all users on internal network
+B) Verify every access request, assume breach
+C) Trust users after initial login
+D) Security at network perimeter is sufficient
 
 <details markdown="1">
 <summary>Click to reveal answer</summary>
@@ -824,8 +825,8 @@ Zero-trust is essential for sovereign cloud deployments:
 - HIPAA: Meets minimum necessary access principle
 - PCI-DSS: Enforces least privilege principle
 
+**Reference:** [Security Hardening](security-hardening.md)
 </details>
-
 
 ---
 
@@ -897,28 +898,28 @@ Zero-trust is essential for sovereign cloud deployments:
 
 **If you missed questions on GDPR (Q1, Q2, Q5, Q12):**
 
-- Review [GDPR Implementation](gdpr-implementation)
+- Review [GDPR Implementation](gdpr-implementation.md)
 - Master key timelines: 30-day access, 72-hour breach notification
 - Study EU Data Boundary requirements
 - Focus on data subject rights and breach notification procedures
 
 **If you missed questions on FedRAMP (Q3, Q4):**
 
-- Review [FedRAMP Compliance](fedramp-compliance)
+- Review [FedRAMP Compliance](fedramp-compliance.md)
 - Study authorization levels (Low, Moderate, High)
 - Focus on continuous monitoring requirements
 - Review control baselines (NIST 800-53)
 
 **If you missed questions on Encryption (Q5, Q6, Q7, Q11):**
 
-- Review [Encryption & Key Management](encryption-key-management)
+- Review [Encryption & Key Management](encryption-key-management.md)
 - Study encryption standards: AES-256 (at-rest), TLS 1.3 (in-transit)
 - Focus on Azure Key Vault architecture and geo-replication
 - Review key rotation policies
 
 **If you missed questions on Security Patterns (Q8, Q9, Q13, Q15):**
 
-- Review [Compliance & Security Patterns](compliance-security-patterns)
+- Review [Compliance & Security Patterns](compliance-security-patterns.md)
 - Study defense-in-depth architecture
 - Focus on least privilege and zero-trust principles
 - Review network segmentation strategies
@@ -942,10 +943,10 @@ Zero-trust is essential for sovereign cloud deployments:
    - Explore Level 300 advanced content
 
 3. **🔗 Review related content:**
-   - [Compliance & Security Patterns](compliance-security-patterns)
-   - [GDPR Implementation](gdpr-implementation)
-   - [FedRAMP Compliance](fedramp-compliance)
-   - [Encryption & Key Management](encryption-key-management)
+   - [Compliance & Security Patterns](compliance-security-patterns.md)
+   - [GDPR Implementation](gdpr-implementation.md)
+   - [FedRAMP Compliance](fedramp-compliance.md)
+   - [Encryption & Key Management](encryption-key-management.md)
 
 4. **🌐 Explore external resources:**
    - [GDPR Official Text](https://gdpr-info.eu/)
@@ -991,11 +992,11 @@ Zero-trust is essential for sovereign cloud deployments:
 
 ---
 
-**Quiz Version:** 1.0  
-**Last Updated:** October 2025  
-**Questions:** 15  
+**Quiz Version:** 1.0
+**Last Updated:** October 2025
+**Questions:** 15
 **Passing Score:** 70% (11 of 15 correct)
 
 ---
 
-**[← Back to Compliance & Security Patterns](compliance-security-patterns)**
+**[← Back to Compliance & Security Patterns](compliance-security-patterns.md)**

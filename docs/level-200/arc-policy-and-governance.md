@@ -3,6 +3,7 @@ layout: default
 title: Policy & Governance
 parent: Arc Advanced Management
 nav_order: 2
+description: "Azure Policy and governance for Arc-enabled resources — policy authoring, Initiative scope, audit-then-enforce rollout patterns, and compliance reporting."
 ---
 
 # Azure Policy and Governance for Arc

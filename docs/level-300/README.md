@@ -46,8 +46,8 @@ Before starting Level 300, ensure you have:
 - [ ] Experience with at least one Azure Local deployment
 - [ ] Familiarity with PowerShell and infrastructure-as-code tools
 
-**Estimated Time Commitment:** 2-3 hours per week  
-**Total Duration:** 4-6 weeks  
+**Estimated Time Commitment:** 2-3 hours per week
+**Total Duration:** 4-6 weeks
 **Total Hours:** 10-16 hours
 
 ---
@@ -59,40 +59,40 @@ Before starting Level 300, ensure you have:
 **Duration:** 1.5-2 hours
 
 - [Zero Trust Principles](zero-trust.md)
-- [Implementation Patterns](zero-trust#implementation)
-- [Monitoring and Compliance](zero-trust#monitoring)
+- [Implementation Patterns](zero-trust.md#implementation)
+- [Monitoring and Compliance](zero-trust.md#monitoring)
 
 ### 2. Azure Local at Scale - Connected
 
 **Duration:** 2-2.5 hours
 
 - [Advanced Networking](azure-local-advanced-connected.md)
-- [Multi-Site Deployments](azure-local-advanced-connected#multi-site)
-- [Cloud-Integrated Updates](azure-local-advanced-connected#updates)
+- [Multi-Site Deployments](azure-local-advanced-connected.md#multi-site)
+- [Cloud-Integrated Updates](azure-local-advanced-connected.md#updates)
 
 ### 3. Azure Local at Scale - Disconnected
 
 **Duration:** 2-2.5 hours
 
 - [Air-Gapped Operations](azure-local-advanced-disconnected.md)
-- [Manual Update Procedures](azure-local-advanced-disconnected#updates)
-- [Certificate Lifecycle Management](azure-local-advanced-disconnected#certificates)
+- [Manual Update Procedures](azure-local-advanced-disconnected.md#updates)
+- [Certificate Lifecycle Management](azure-local-advanced-disconnected.md#certificates)
 
 ### 4. Production Edge RAG Deployment
 
 **Duration:** 2.5-3 hours
 
 - [Production Architecture](edge-rag-production.md)
-- [Performance Optimization](edge-rag-production#optimization)
-- [MLOps at the Edge](edge-rag-production#mlops)
+- [Performance Optimization](edge-rag-production.md#optimization)
+- [MLOps at the Edge](edge-rag-production.md#mlops)
 
 ### 5. Advanced Troubleshooting
 
 **Duration:** 1.5-2 hours
 
 - [Diagnostic Tools and Techniques](troubleshooting.md)
-- [Common Issues and Resolutions](troubleshooting#common-issues)
-- [Support Escalation Paths](troubleshooting#escalation)
+- [Common Issues and Resolutions](troubleshooting.md#common-issues)
+- [Support Escalation Paths](troubleshooting.md#escalation)
 
 ---
 
@@ -123,8 +123,8 @@ Before starting Level 300, ensure you have:
 ### Lab 1: Zero Trust Implementation
 
 {: .warning }
-> **🚧 Lab Under Development**  
-> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **🚧 Lab Under Development**
+> This lab content is complete but hands-on exercises are currently being validated and refined.
 > **Expected Release:** Q1 2026
 
 **Objective:** Implement Zero Trust security controls for a sovereign environment
@@ -139,8 +139,8 @@ Before starting Level 300, ensure you have:
 ### Lab 2: Air-Gapped Azure Local Deployment
 
 {: .warning }
-> **🚧 Lab Under Development**  
-> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **🚧 Lab Under Development**
+> This lab content is complete but hands-on exercises are currently being validated and refined.
 > **Expected Release:** Q1 2026
 
 **Objective:** Configure a complete air-gapped deployment with certificate management
@@ -155,8 +155,8 @@ Before starting Level 300, ensure you have:
 ### Lab 3: Production Edge RAG with Custom Models
 
 {: .warning }
-> **🚧 Lab Under Development**  
-> This lab content is complete but hands-on exercises are currently being validated and refined.  
+> **🚧 Lab Under Development**
+> This lab content is complete but hands-on exercises are currently being validated and refined.
 > **Expected Release:** Q1 2026
 
 **Objective:** Deploy and optimize Edge RAG with custom language models
@@ -214,7 +214,7 @@ Congratulations on completing the Microsoft Sovereign Cloud & AI at the Edge Ski
 - 📚 **[Explore Additional Resources](../resources/)**
 - 🤝 **[Join the Community](https://techcommunity.microsoft.com/)**
 - 🎯 **[Stay Updated with What's New](https://azure.microsoft.com/updates/)**
-- 💼 **[Apply Your Skills in Real Customer Engagements](../resources/case-studies)**
+- 💼 **Apply Your Skills in Real Customer Engagements** — reference real-world deployment patterns covered throughout this level
 
 ---
 

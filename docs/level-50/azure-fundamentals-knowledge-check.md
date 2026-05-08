@@ -36,6 +36,7 @@ What is an Azure region?
 
 **Explanation:** An Azure region is a geographic area containing one or more data centers.
 
+**Reference:** [Microsoft Azure Overview](microsoft-azure-overview.md)
 </details>
 
 ### Question 2
@@ -43,7 +44,7 @@ What is an Azure region?
 Which Azure service provides identity and access management?
 
 **A)** Azure Security Center
-**B)** Azure Active Directory
+**B)** Microsoft Entra ID
 **C)** Azure Key Vault
 **D)** Azure Policy
 
@@ -52,8 +53,9 @@ Which Azure service provides identity and access management?
 
 **Correct Answer: B**
 
-**Explanation:** Azure Active Directory provides identity and access management services.
+**Explanation:** Microsoft Entra ID provides identity and access management services.
 
+**Reference:** [Azure Service Categories](azure-service-categories.md)
 </details>
 
 ### Question 3
@@ -72,6 +74,7 @@ What is the primary benefit of Azure availability zones?
 
 **Explanation:** Availability zones provide high availability and fault tolerance within a region.
 
+**Reference:** [Azure Global Infrastructure](azure-global-infrastructure.md)
 </details>
 
 ### Question 4
@@ -90,6 +93,7 @@ Which Azure storage service is best for unstructured data like images and videos
 
 **Explanation:** Azure Blob Storage is designed for unstructured data like images, videos, and documents.
 
+**Reference:** [Microsoft Azure Overview](microsoft-azure-overview.md)
 </details>
 
 ### Question 5
@@ -108,6 +112,7 @@ What is the Azure Portal?
 
 **Explanation:** The Azure Portal is a web-based graphical interface for managing Azure resources.
 
+**Reference:** [Azure Service Categories](azure-service-categories.md)
 </details>
 
 ### Question 6
@@ -126,6 +131,7 @@ Which tool would you use for cross-platform Azure automation scripts?
 
 **Explanation:** Azure CLI is the cross-platform command-line tool for Azure automation.
 
+**Reference:** [Azure Global Infrastructure](azure-global-infrastructure.md)
 </details>
 
 ### Question 7
@@ -144,6 +150,7 @@ What is Infrastructure as Code (IaC) in Azure?
 
 **Explanation:** IaC uses templates (like ARM templates) to define and deploy infrastructure declaratively.
 
+**Reference:** [Microsoft Azure Overview](microsoft-azure-overview.md)
 </details>
 
 ### Question 8
@@ -162,6 +169,7 @@ Which Azure service model provides the most control over the operating system?
 
 **Explanation:** IaaS provides virtual machines where customers control the operating system.
 
+**Reference:** [Azure Service Categories](azure-service-categories.md)
 </details>
 
 ### Question 9
@@ -180,6 +188,7 @@ What is an Azure resource group?
 
 **Explanation:** A resource group is a logical container for organizing and managing Azure resources.
 
+**Reference:** [Azure Global Infrastructure](azure-global-infrastructure.md)
 </details>
 
 ### Question 10
@@ -198,6 +207,7 @@ Which Azure service is used for serverless computing?
 
 **Explanation:** Azure Functions provides serverless computing capabilities.
 
+**Reference:** [Microsoft Azure Overview](microsoft-azure-overview.md)
 </details>
 
 ---

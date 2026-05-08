@@ -2,6 +2,7 @@
 layout: default
 title: Visual Assets for Microsoft Sovereign Cloud Skilling Plan
 nav_exclude: true
+description: "Internal visual asset registry (excluded from nav)."
 ---
 
 # Visual Assets for Microsoft Sovereign Cloud Skilling Plan
@@ -535,8 +536,8 @@ docs/assets/images/
 ```markdown
 ![Azure Global Infrastructure Map](../assets/images/level-100/azure-regions-map.svg)
 
-**Figure 2: Azure Global Infrastructure**  
-*Azure operates 60+ regions worldwide with multiple availability zones for high availability and disaster recovery.*  
+**Figure 2: Azure Global Infrastructure**
+*Azure operates 60+ regions worldwide with multiple availability zones for high availability and disaster recovery.*
 *Source: Adapted from [Azure Global Infrastructure](https://azure.microsoft.com/en-us/explore/global-infrastructure/)*
 ```
 
@@ -653,8 +654,8 @@ If you create or adapt visual assets for this project:
 
 ---
 
-**Last Updated:** October 2025  
-**Maintained By:** Project Contributors  
+**Last Updated:** October 2025
+**Maintained By:** Project Contributors
 **Questions?** Open an issue in the GitHub repository
 
 ---
@@ -662,8 +663,8 @@ If you create or adapt visual assets for this project:
 ## Module 3: Azure Local Overview - Visual Assets
 
 ### Asset 11: Azure Local Architecture Diagram
-**File:** `level-100/azure-local-architecture.svg`  
-**Priority:** High  
+**File:** `level-100/azure-local-architecture.svg`
+**Priority:** High
 **Status:** Documented (Not Created)
 
 **Description:** Comprehensive system architecture showing Azure Local components, connectivity modes, and Azure integration.
@@ -692,8 +693,8 @@ If you create or adapt visual assets for this project:
 ---
 
 ### Asset 12: Connected vs. Disconnected Mode Comparison
-**File:** `level-100/azure-local-modes-comparison.svg`  
-**Priority:** High  
+**File:** `level-100/azure-local-modes-comparison.svg`
+**Priority:** High
 **Status:** Documented (Not Created)
 
 **Description:** Side-by-side comparison of Connected and Disconnected deployment modes with feature matrix.
@@ -723,8 +724,8 @@ If you create or adapt visual assets for this project:
 ---
 
 ### Asset 13: Hardware Topology Diagram
-**File:** `level-100/azure-local-hardware-topology.svg`  
-**Priority:** Medium  
+**File:** `level-100/azure-local-hardware-topology.svg`
+**Priority:** Medium
 **Status:** Documented (Not Created)
 
 **Description:** Physical hardware configuration showing typical 2-3 node cluster setup.
@@ -756,8 +757,8 @@ If you create or adapt visual assets for this project:
 ## Module 4: Azure Arc Introduction - Visual Assets
 
 ### Asset 14: Azure Arc Architecture
-**File:** `level-100/azure-arc-architecture.svg`  
-**Priority:** High  
+**File:** `level-100/azure-arc-architecture.svg`
+**Priority:** High
 **Status:** Documented (Not Created)
 
 **Description:** Unified view of Azure Arc connecting on-premises resources to Azure management plane.
@@ -785,8 +786,8 @@ If you create or adapt visual assets for this project:
 ---
 
 ### Asset 15: Arc Services Comparison Matrix
-**File:** `level-100/azure-arc-services-comparison.svg`  
-**Priority:** Medium  
+**File:** `level-100/azure-arc-services-comparison.svg`
+**Priority:** Medium
 **Status:** Documented (Not Created)
 
 **Description:** Comparison table showing capabilities of Arc Servers, Kubernetes, and Data Services.
@@ -811,8 +812,8 @@ If you create or adapt visual assets for this project:
 ---
 
 ### Asset 16: Arc Deployment Topology
-**File:** `level-100/azure-arc-deployment-topology.svg`  
-**Priority:** Low  
+**File:** `level-100/azure-arc-deployment-topology.svg`
+**Priority:** Low
 **Status:** Documented (Not Created)
 
 **Description:** Multi-site deployment showing Arc managing resources across locations.
@@ -840,8 +841,8 @@ If you create or adapt visual assets for this project:
 ## Module 5: Edge RAG Concepts - Visual Assets
 
 ### Asset 17: Edge RAG System Architecture
-**File:** `level-100/edge-rag-architecture.svg`  
-**Priority:** High  
+**File:** `level-100/edge-rag-architecture.svg`
+**Priority:** High
 **Status:** Documented (Not Created)
 
 **Description:** Complete Edge RAG system architecture showing all components and data flow.
@@ -872,8 +873,8 @@ If you create or adapt visual assets for this project:
 ---
 
 ### Asset 18: Traditional LLM vs. RAG Comparison
-**File:** `level-100/llm-vs-rag-comparison.svg`  
-**Priority:** High  
+**File:** `level-100/llm-vs-rag-comparison.svg`
+**Priority:** High
 **Status:** Documented (Not Created)
 
 **Description:** Side-by-side comparison showing Traditional LLM flow vs. RAG-augmented flow.
@@ -899,8 +900,8 @@ If you create or adapt visual assets for this project:
 ---
 
 ### Asset 19: Edge RAG Deployment Options
-**File:** `level-100/edge-rag-deployment-options.svg`  
-**Priority:** Medium  
+**File:** `level-100/edge-rag-deployment-options.svg`
+**Priority:** Medium
 **Status:** Documented (Not Created)
 
 **Description:** Three deployment topology options for Edge RAG systems.
@@ -927,8 +928,8 @@ If you create or adapt visual assets for this project:
 ---
 
 ### Asset 20: RAG Components and Data Flow
-**File:** `level-100/rag-components-flow.svg`  
-**Priority:** Medium  
+**File:** `level-100/rag-components-flow.svg`
+**Priority:** Medium
 **Status:** Documented (Not Created)
 
 **Description:** Detailed data flow showing how a query moves through RAG system components.
@@ -985,8 +986,8 @@ If you create or adapt visual assets for this project:
 ### Module 1: Azure Local Architecture Deep Dive
 
 #### Asset 21: Advanced Networking Architecture
-**File:** `level-200/azure-local-advanced-networking.svg`  
-**Priority:** High  
+**File:** `level-200/azure-local-advanced-networking.svg`
+**Priority:** High
 **Status:** 🔴 Needed
 
 **Description:** Detailed networking architecture showing SET configuration, VLAN organization, RDMA optimization, and network topology for enterprise Azure Local deployments.
@@ -1018,8 +1019,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 22: High-Availability Architecture
-**File:** `level-200/azure-local-ha-architecture.svg`  
-**Priority:** High  
+**File:** `level-200/azure-local-ha-architecture.svg`
+**Priority:** High
 **Status:** 🔴 Needed
 
 **Description:** Complete HA architecture showing multi-node cluster topology, quorum configuration, storage resilience, and failover mechanisms.
@@ -1051,8 +1052,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 23: Hardware Planning Decision Tree
-**File:** `level-200/azure-local-hardware-decision-tree.svg`  
-**Priority:** Medium  
+**File:** `level-200/azure-local-hardware-decision-tree.svg`
+**Priority:** Medium
 **Status:** 🔴 Needed
 
 **Description:** Interactive decision flowchart to guide hardware selection based on customer requirements (performance, capacity, redundancy, budget).
@@ -1086,8 +1087,8 @@ If you create or adapt visual assets for this project:
 ### Module 2: Arc Advanced Management
 
 #### Asset 24: Arc Governance Framework
-**File:** `level-200/arc-governance-framework.svg`  
-**Priority:** High  
+**File:** `level-200/arc-governance-framework.svg`
+**Priority:** High
 **Status:** 🔴 Needed
 
 **Description:** Multi-layer governance and compliance framework showing policy hierarchy, role-based access control (RBAC), and compliance monitoring across Arc-managed resources.
@@ -1119,8 +1120,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 25: Arc Cost Optimization Flows
-**File:** `level-200/arc-cost-optimization.svg`  
-**Priority:** Medium  
+**File:** `level-200/arc-cost-optimization.svg`
+**Priority:** Medium
 **Status:** 🔴 Needed
 
 **Description:** Cost flow diagram showing resource allocation, licensing models, and cost reduction strategies across Arc infrastructure.
@@ -1152,8 +1153,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 26: Enterprise Deployment Topology
-**File:** `level-200/arc-enterprise-deployment.svg`  
-**Priority:** High  
+**File:** `level-200/arc-enterprise-deployment.svg`
+**Priority:** High
 **Status:** 🔴 Needed
 
 **Description:** Multi-site enterprise deployment showing Arc managing diverse infrastructure across data centers, branch offices, and edge locations with centralized governance.
@@ -1187,8 +1188,8 @@ If you create or adapt visual assets for this project:
 ### Module 3: Edge RAG Implementation
 
 #### Asset 27: Production RAG Architecture (Detailed)
-**File:** `level-200/edge-rag-production-architecture.svg`  
-**Priority:** High  
+**File:** `level-200/edge-rag-production-architecture.svg`
+**Priority:** High
 **Status:** 🔴 Needed
 
 **Description:** Full production-grade Edge RAG architecture showing high-availability setup, load balancing, persistence, monitoring, and optional cloud sync.
@@ -1222,8 +1223,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 28: LLM Inference Optimization
-**File:** `level-200/llm-inference-optimization.svg`  
-**Priority:** High  
+**File:** `level-200/llm-inference-optimization.svg`
+**Priority:** High
 **Status:** 🔴 Needed
 
 **Description:** Optimization strategies for LLM inference showing quantization, batching, caching, and hardware acceleration techniques.
@@ -1256,8 +1257,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 29: Vector Database Architecture Comparison
-**File:** `level-200/vector-db-comparison.svg`  
-**Priority:** Medium  
+**File:** `level-200/vector-db-comparison.svg`
+**Priority:** Medium
 **Status:** 🔴 Needed
 
 **Description:** Comparison of vector database options for edge deployments showing architecture, performance characteristics, and deployment considerations.
@@ -1290,8 +1291,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 30: RAG Deployment Topology Options
-**File:** `level-200/rag-deployment-topologies.svg`  
-**Priority:** Medium  
+**File:** `level-200/rag-deployment-topologies.svg`
+**Priority:** Medium
 **Status:** 🔴 Needed
 
 **Description:** Multiple RAG deployment topology options for different customer scenarios and scale requirements.
@@ -1321,8 +1322,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 31: RAG Monitoring and Observability
-**File:** `level-200/rag-monitoring-observability.svg`  
-**Priority:** Medium  
+**File:** `level-200/rag-monitoring-observability.svg`
+**Priority:** Medium
 **Status:** 🔴 Needed
 
 **Description:** Comprehensive monitoring and observability architecture for production RAG systems showing metrics, logs, traces, and alerting flows.
@@ -1356,8 +1357,8 @@ If you create or adapt visual assets for this project:
 ### Module 4: Pre-Sales & Solution Design
 
 #### Asset 32: Customer Discovery Framework
-**File:** `level-200/customer-discovery-framework.svg`  
-**Priority:** Medium  
+**File:** `level-200/customer-discovery-framework.svg`
+**Priority:** Medium
 **Status:** 🔴 Needed
 
 **Description:** Structured customer discovery process showing key questions, evaluation criteria, and decision points for sovereign cloud solutions.
@@ -1388,8 +1389,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 33: Solution Sizing Framework
-**File:** `level-200/solution-sizing-framework.svg`  
-**Priority:** Medium  
+**File:** `level-200/solution-sizing-framework.svg`
+**Priority:** Medium
 **Status:** 🔴 Needed
 
 **Description:** Interactive sizing process showing how to translate customer requirements into infrastructure specifications and cost estimates.
@@ -1415,8 +1416,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 34: TCO and ROI Analysis Model
-**File:** `level-200/tco-roi-model.svg`  
-**Priority:** Medium  
+**File:** `level-200/tco-roi-model.svg`
+**Priority:** Medium
 **Status:** 🔴 Needed
 
 **Description:** Total Cost of Ownership and Return on Investment comparison framework for sovereign vs. standard cloud solutions.
@@ -1446,8 +1447,8 @@ If you create or adapt visual assets for this project:
 ### Module 5: Compliance & Security Patterns
 
 #### Asset 35: GDPR Compliance Mapping
-**File:** `level-200/gdpr-compliance-mapping.svg`  
-**Priority:** High  
+**File:** `level-200/gdpr-compliance-mapping.svg`
+**Priority:** High
 **Status:** 🔴 Needed
 
 **Description:** Detailed mapping of GDPR requirements to Azure Local, Arc, and Edge RAG technical controls.
@@ -1477,8 +1478,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 36: FedRAMP Compliance Architecture
-**File:** `level-200/fedramp-compliance-architecture.svg`  
-**Priority:** High  
+**File:** `level-200/fedramp-compliance-architecture.svg`
+**Priority:** High
 **Status:** 🔴 Needed
 
 **Description:** FedRAMP compliance architecture showing security control families, Azure Local configuration for FedRAMP compliance, and validation points.
@@ -1509,8 +1510,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 37: Encryption and Key Management Architecture
-**File:** `level-200/encryption-key-mgmt-architecture.svg`  
-**Priority:** High  
+**File:** `level-200/encryption-key-mgmt-architecture.svg`
+**Priority:** High
 **Status:** 🔴 Needed
 
 **Description:** Comprehensive encryption and key management architecture for sovereign cloud deployments showing key lifecycle, HSM integration, and customer-controlled keys.
@@ -1541,8 +1542,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 38: Zero-Trust Security Architecture
-**File:** `level-200/zero-trust-architecture.svg`  
-**Priority:** High  
+**File:** `level-200/zero-trust-architecture.svg`
+**Priority:** High
 **Status:** 🔴 Needed
 
 **Description:** Zero-Trust security model implementation for sovereign cloud showing "never trust, always verify" principles applied to identities, devices, networks, and applications.
@@ -1574,8 +1575,8 @@ If you create or adapt visual assets for this project:
 ### Module 6: Hands-On Labs
 
 #### Asset 39: Lab Architecture Progression
-**File:** `level-200/labs-architecture-progression.svg`  
-**Priority:** Medium  
+**File:** `level-200/labs-architecture-progression.svg`
+**Priority:** Medium
 **Status:** 🔴 Needed
 
 **Description:** Visual showing how each lab builds on previous, creating an integrated infrastructure by Lab 5.
@@ -1604,8 +1605,8 @@ If you create or adapt visual assets for this project:
 ---
 
 #### Asset 40: Lab Environment Cost and Time Matrix
-**File:** `level-200/labs-cost-time-matrix.svg`  
-**Priority:** Low  
+**File:** `level-200/labs-cost-time-matrix.svg`
+**Priority:** Low
 **Status:** 🔴 Needed
 
 **Description:** Matrix showing estimated costs and duration for each lab and cumulative totals.
@@ -1772,61 +1773,61 @@ If you create or adapt visual assets for this project:
 ### Module 1: Zero Trust Security for Sovereign Cloud
 
 #### Asset 41: Zero Trust Security Pillars
-**File:** `level-300/zero-trust-pillars.svg`  
-**Priority:** High  
+**File:** `level-300/zero-trust-pillars.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** The six pillars of Zero Trust security model applied to sovereign cloud environments with specific examples and implementation points.
 
-**Used In:** `docs/level-300/zero-trust.md`  
+**Used In:** `docs/level-300/zero-trust.md`
 **Source Refs:** [Zero Trust Architecture](https://learn.microsoft.com/en-us/security/zero-trust/)
 
 ---
 
 #### Asset 42: Sovereign Cloud Zero Trust Comparison
-**File:** `level-300/zero-trust-sovereign-comparison.svg`  
-**Priority:** High  
+**File:** `level-300/zero-trust-sovereign-comparison.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Side-by-side comparison showing how Zero Trust implementation differs across sovereign cloud deployment models.
 
-**Used In:** `docs/level-300/zero-trust.md`  
+**Used In:** `docs/level-300/zero-trust.md`
 **Source Refs:** [Cloud models comparison](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access)
 
 ---
 
 #### Asset 43: Zero Trust Implementation Architecture
-**File:** `level-300/zero-trust-implementation-architecture.svg`  
-**Priority:** High  
+**File:** `level-300/zero-trust-implementation-architecture.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Complete end-to-end architecture showing Zero Trust implementation components and interactions in sovereign environments.
 
-**Used In:** `docs/level-300/zero-trust-architecture.md`  
+**Used In:** `docs/level-300/zero-trust-architecture.md`
 **Source Refs:** [Azure Architecture Reference](https://learn.microsoft.com/en-us/azure/architecture/)
 
 ---
 
 #### Asset 44: Defense-in-Depth Strategy
-**File:** `level-300/defense-in-depth-layers.svg`  
-**Priority:** High  
+**File:** `level-300/defense-in-depth-layers.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Defense-in-depth security model showing multiple overlapping security layers and control points across infrastructure.
 
-**Used In:** `docs/level-300/zero-trust-architecture.md`  
+**Used In:** `docs/level-300/zero-trust-architecture.md`
 **Source Refs:** [Defense-in-depth strategy](https://learn.microsoft.com/en-us/security/zero-trust/)
 
 ---
 
 #### Asset 45: Compliance Mapping - Zero Trust to Frameworks
-**File:** `level-300/compliance-zero-trust-mapping.svg`  
-**Priority:** Medium  
+**File:** `level-300/compliance-zero-trust-mapping.svg`
+**Priority:** Medium
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Matrix showing how Zero Trust controls map to compliance frameworks (FedRAMP, GDPR, HIPAA, ITAR).
 
-**Used In:** `docs/level-300/zero-trust-architecture.md`  
+**Used In:** `docs/level-300/zero-trust-architecture.md`
 **Source Refs:** [Compliance in Azure](https://learn.microsoft.com/en-us/compliance/)
 
 ---
@@ -1834,37 +1835,37 @@ If you create or adapt visual assets for this project:
 ### Module 2: Azure Local - Connected Mode at Scale
 
 #### Asset 46: Multi-Site Azure Local Deployment Topologies
-**File:** `level-300/multi-site-topologies.svg`  
-**Priority:** High  
+**File:** `level-300/multi-site-topologies.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Three deployment topology patterns for multi-site Azure Local deployments with architecture, failover, and governance implications.
 
-**Used In:** `docs/level-300/azure-local-multi-site.md`  
+**Used In:** `docs/level-300/azure-local-multi-site.md`
 **Source Refs:** [Azure Local deployment patterns](https://learn.microsoft.com/en-us/azure/azure-local/)
 
 ---
 
 #### Asset 47: Connected Mode Networking Architecture
-**File:** `level-300/connected-mode-networking.svg`  
-**Priority:** Medium  
+**File:** `level-300/connected-mode-networking.svg`
+**Priority:** Medium
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Complete networking architecture for connected-mode Azure Local showing cloud connectivity, inter-site communication, and edge networking.
 
-**Used In:** `docs/level-300/azure-local-networking-advanced.md`  
+**Used In:** `docs/level-300/azure-local-networking-advanced.md`
 **Source Refs:** [Azure networking](https://learn.microsoft.com/en-us/azure/networking/)
 
 ---
 
 #### Asset 48: Multi-Site Failover & Recovery Procedures
-**File:** `level-300/multi-site-failover-procedures.svg`  
-**Priority:** Medium  
+**File:** `level-300/multi-site-failover-procedures.svg`
+**Priority:** Medium
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Flowchart showing failover detection, execution, and recovery procedures for multi-site deployments.
 
-**Used In:** `docs/level-300/azure-local-connected-lab.md`  
+**Used In:** `docs/level-300/azure-local-connected-lab.md`
 **Source Refs:** [Disaster recovery](https://learn.microsoft.com/en-us/azure/azure-local/)
 
 ---
@@ -1872,37 +1873,37 @@ If you create or adapt visual assets for this project:
 ### Module 3: Azure Local - Disconnected Mode
 
 #### Asset 49: Air-Gapped Architecture Pattern
-**File:** `level-300/air-gapped-architecture.svg`  
-**Priority:** High  
+**File:** `level-300/air-gapped-architecture.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Complete air-gapped Azure Local deployment showing isolated network zones, air-gap boundaries, and secure transfer mechanisms.
 
-**Used In:** `docs/level-300/azure-local-air-gapped.md`  
+**Used In:** `docs/level-300/azure-local-air-gapped.md`
 **Source Refs:** [Disconnected operations](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)
 
 ---
 
 #### Asset 50: Manual Update Flow - Disconnected
-**File:** `level-300/manual-update-flow.svg`  
-**Priority:** High  
+**File:** `level-300/manual-update-flow.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Step-by-step process showing export, secure transfer, validation, and import of updates in air-gapped systems.
 
-**Used In:** `docs/level-300/azure-local-disconnected-lab.md`  
+**Used In:** `docs/level-300/azure-local-disconnected-lab.md`
 **Source Refs:** [Manual update procedures](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509-disconnected)
 
 ---
 
 #### Asset 51: Certificate Lifecycle Management
-**File:** `level-300/certificate-lifecycle.svg`  
-**Priority:** Medium  
+**File:** `level-300/certificate-lifecycle.svg`
+**Priority:** Medium
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Timeline showing certificate issuance, validity periods, renewal windows, and key procedures for disconnected environments.
 
-**Used In:** `docs/level-300/azure-local-certificate-management.md`  
+**Used In:** `docs/level-300/azure-local-certificate-management.md`
 **Source Refs:** [Certificate lifecycle](https://learn.microsoft.com/en-us/azure/azure-local/manage/manage-secrets-rotation?view=azloc-2509)
 
 ---
@@ -1910,61 +1911,61 @@ If you create or adapt visual assets for this project:
 ### Module 4: Production Edge RAG at Scale
 
 #### Asset 52: Production RAG Architecture
-**File:** `level-300/production-rag-architecture.svg`  
-**Priority:** High  
+**File:** `level-300/production-rag-architecture.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Enterprise-scale Retrieval-Augmented Generation system showing ingestion, retrieval, inference, and monitoring components.
 
-**Used In:** `docs/level-300/edge-rag-architecture-production.md`  
+**Used In:** `docs/level-300/edge-rag-architecture-production.md`
 **Source Refs:** [RAG architecture](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)
 
 ---
 
 #### Asset 53: Performance Optimization Strategies & Trade-offs
-**File:** `level-300/rag-optimization-matrix.svg`  
-**Priority:** High  
+**File:** `level-300/rag-optimization-matrix.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Decision matrix showing optimization approaches with performance vs resource utilization trade-offs.
 
-**Used In:** `docs/level-300/edge-rag-optimization.md`  
+**Used In:** `docs/level-300/edge-rag-optimization.md`
 **Source Refs:** [ML optimization](https://learn.microsoft.com/en-us/azure/machine-learning/)
 
 ---
 
 #### Asset 54: MLOps Pipeline for Edge RAG
-**File:** `level-300/mlops-edge-pipeline.svg`  
-**Priority:** High  
+**File:** `level-300/mlops-edge-pipeline.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** End-to-end MLOps workflow showing model training, validation, deployment, monitoring, and retraining triggers.
 
-**Used In:** `docs/level-300/edge-rag-mlops.md`  
+**Used In:** `docs/level-300/edge-rag-mlops.md`
 **Source Refs:** [MLOps](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment)
 
 ---
 
 #### Asset 55: Vector Database Comparison - Edge Deployment
-**File:** `level-300/vector-database-comparison.svg`  
-**Priority:** Medium  
+**File:** `level-300/vector-database-comparison.svg`
+**Priority:** Medium
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Comparison matrix of vector database options for edge deployment showing capabilities, performance, and deployment requirements.
 
-**Used In:** `docs/level-300/edge-rag-production-lab.md`  
+**Used In:** `docs/level-300/edge-rag-production-lab.md`
 **Source Refs:** [Vector search](https://learn.microsoft.com/en-us/azure/search/vector-search-overview)
 
 ---
 
 #### Asset 56: RAG Quality Metrics & Observability
-**File:** `level-300/rag-quality-metrics.svg`  
-**Priority:** Medium  
+**File:** `level-300/rag-quality-metrics.svg`
+**Priority:** Medium
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Framework showing quality metrics, observability points, and monitoring dashboards for production RAG systems.
 
-**Used In:** `docs/level-300/edge-rag-production-lab.md`  
+**Used In:** `docs/level-300/edge-rag-production-lab.md`
 **Source Refs:** [Monitoring and diagnostics](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-monitor-model-performance)
 
 ---
@@ -1972,37 +1973,37 @@ If you create or adapt visual assets for this project:
 ### Module 5: Advanced Troubleshooting & Optimization
 
 #### Asset 57: Troubleshooting Decision Tree
-**File:** `level-300/troubleshooting-decision-tree.svg`  
-**Priority:** High  
+**File:** `level-300/troubleshooting-decision-tree.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Interactive flowchart showing symptom classification, investigation paths, and diagnostic procedures.
 
-**Used In:** `docs/level-300/troubleshooting-tools.md`  
+**Used In:** `docs/level-300/troubleshooting-tools.md`
 **Source Refs:** [Troubleshooting guide](https://learn.microsoft.com/en-us/troubleshoot/azure/)
 
 ---
 
 #### Asset 58: Diagnostic Tools Reference Matrix
-**File:** `level-300/diagnostic-tools-matrix.svg`  
-**Priority:** High  
+**File:** `level-300/diagnostic-tools-matrix.svg`
+**Priority:** High
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Matrix showing diagnostic tools, capabilities, use cases, and output examples for troubleshooting.
 
-**Used In:** `docs/level-300/troubleshooting-tools.md`  
+**Used In:** `docs/level-300/troubleshooting-tools.md`
 **Source Refs:** [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 
 ---
 
 #### Asset 59: Escalation Procedures & Support Workflow
-**File:** `level-300/escalation-procedures.svg`  
-**Priority:** Medium  
+**File:** `level-300/escalation-procedures.svg`
+**Priority:** Medium
 **Status:** 🟡 Specified (Ready for Creation)
 
 **Description:** Process flowchart showing escalation paths, ticket routing, information requirements, and SLA expectations at each level.
 
-**Used In:** `docs/level-300/troubleshooting-escalation.md`  
+**Used In:** `docs/level-300/troubleshooting-escalation.md`
 **Source Refs:** [Azure support options](https://learn.microsoft.com/en-us/support/azure/)
 
 ---

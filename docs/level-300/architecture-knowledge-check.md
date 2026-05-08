@@ -10,7 +10,7 @@ description: "Assessment covering sovereign landing zones, data classification, 
 
 {: .no_toc }
 
-Test your expertise in sovereign landing zone design, data classification workflows, and incident response procedures for compliant cloud environments.
+Test your expertise in Sovereign Landing Zone design, data classification workflows, and incident response procedures for compliant cloud environments.
 
 ---
 
@@ -32,7 +32,7 @@ This assessment covers:
 
 ### Question 1: Management Group Hierarchy
 
-A multinational organization is designing their sovereign landing zone. They have operations in EU (GDPR), US (FedRAMP), and healthcare (HIPAA). What is the OPTIMAL management group structure?
+A multinational organization is designing their Sovereign Landing Zone. They have operations in EU (GDPR), US (FedRAMP), and healthcare (HIPAA). What is the OPTIMAL management group structure?
 
 A) Single "Sovereign" management group with all workloads  
 B) Separate management groups per regulation (GDPR MG, FedRAMP MG, HIPAA MG)  
@@ -286,7 +286,7 @@ Different regulations have different timelines:
 
 ### Question 8: Sovereign Landing Zone — Key Vault Design
 
-How should Key Vault be designed in a sovereign landing zone for MAXIMUM protection of encryption keys?
+How should Key Vault be designed in a Sovereign Landing Zone for MAXIMUM protection of encryption keys?
 
 A) Single Key Vault in the hub VNet  
 B) Key Vault per subscription with RBAC  
@@ -535,7 +535,7 @@ Data classification drives containment priority:
 An organization needs disaster recovery for sovereign workloads but all data must remain in the EU. What is the CORRECT DR approach?
 
 A) Replicate to US Azure region with encryption  
-B) Use Azure paired regions within EU (e.g., North Europe ↔ West Europe)  
+B) Use Azure paired regions within EU (for example, North Europe ↔ West Europe)  
 C) Keep single region with backup to on-premises  
 D) Use Azure Traffic Manager for global load balancing
 

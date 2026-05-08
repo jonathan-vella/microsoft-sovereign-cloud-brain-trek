@@ -3,6 +3,7 @@ layout: default
 title: Common Issues & Resolution Patterns
 parent: Module 5 - Advanced Troubleshooting
 nav_order: 2
+description: "Common troubleshooting scenarios — agent connectivity, policy evaluation, certificate expiry, and storage performance issues in Azure Local + Arc deployments."
 ---
 
 # Common Issues & Resolution Patterns
@@ -53,4 +54,4 @@ Each issue type follows a diagnostic workflow leading to specific resolution pro
 
 ---
 
-**See also:** [Tools & Procedures](troubleshooting-tools) | [Escalation](troubleshooting-escalation)
+**See also:** [Tools & Procedures](troubleshooting-tools.md) | [Escalation](troubleshooting-escalation.md)

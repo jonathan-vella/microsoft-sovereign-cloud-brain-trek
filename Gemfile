@@ -11,6 +11,8 @@ gem "jekyll-feed", "~> 0.15"
 gem "jekyll-seo-tag", "~> 2.8"
 gem "jekyll-sitemap", "~> 1.4"
 gem "jekyll-relative-links", "~> 0.7"
+# Required by just-the-docs theme (head.html uses include_cached)
+gem "jekyll-include-cache", "~> 0.2"
 
 # Ruby 3.4+ compatibility (gems moving out of default)
 gem "csv"

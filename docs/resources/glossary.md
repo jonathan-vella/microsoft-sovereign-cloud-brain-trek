@@ -181,11 +181,11 @@ An AI model trained on vast amounts of text data that can understand and generat
 
 ### Managed Identity
 
-An Azure feature that provides an automatically managed identity for applications to use when connecting to resources that support Azure Active Directory authentication.
+An Azure feature that provides an automatically managed identity for applications to use when connecting to resources that support Microsoft Entra ID authentication.
 
 ### Microsoft Entra ID
 
-Microsoft's cloud-based identity and access management service (formerly Azure Active Directory).
+Microsoft's cloud-based identity and access management service (formerly Azure Active Directory). Provides authentication, authorization, and identity governance across Microsoft 365, Azure, and integrated SaaS applications.
 
 ---
 

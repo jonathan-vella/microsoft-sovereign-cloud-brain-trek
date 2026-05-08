@@ -3,26 +3,27 @@ layout: default
 title: "Lab 3: Edge RAG Setup"
 parent: Hands-On Labs Overview
 nav_order: 3
+description: "Lab 3: Edge RAG (preview) setup — deploying vector database, ingestion pipeline, and LLM inference components on Azure Arc-enabled Kubernetes."
 ---
 
 # Lab 3: Edge RAG Setup
 
 {: .warning }
-> **🚧 Lab Under Development**  
-> This lab content is complete but hands-on exercises are currently being validated and refined.  
-> **Expected Release:** Q1 2026  
+> **🚧 Lab Under Development**
+> This lab content is complete but hands-on exercises are currently being validated and refined.
+> **Expected Release:** Q1 2026
 > You can review the lab steps and prepare your environment in advance.
 
 {: .warning }
-> **🚧 Lab Under Development**  
-> This lab content is complete but hands-on exercises are currently being validated and refined.  
-> **Expected Release:** Q1 2026  
+> **🚧 Lab Under Development**
+> This lab content is complete but hands-on exercises are currently being validated and refined.
+> **Expected Release:** Q1 2026
 > You can review the lab steps and prepare your environment in advance.
 
 {: .warning }
-> **🚧 Lab Under Development**  
-> This lab content is complete but hands-on exercises are currently being validated and refined.  
-> **Expected Release:** Q1 2026  
+> **🚧 Lab Under Development**
+> This lab content is complete but hands-on exercises are currently being validated and refined.
+> **Expected Release:** Q1 2026
 > You can review the lab steps and prepare your environment in advance.
 
 ## Objective
@@ -127,7 +128,7 @@ kubectl label namespace edge-rag monitoring=enabled
 kubectl get namespace edge-rag
 ```
 
-**Expected Output:** Namespace "edge-rag" created
+**Expected Output:** Namespace `edge-rag` created
 
 **Step 1.2: Create Storage for Models and Data**
 

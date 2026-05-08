@@ -4,6 +4,7 @@ title: Module 3 - Microsoft Azure Introduction
 parent: Level 50 - Prerequisites
 nav_order: 3
 has_children: true
+description: "Microsoft Azure platform introduction — service categories, global infrastructure (regions and availability zones), and the management tools (portal, CLI, PowerShell, ARM, Bicep) used throughout the program."
 ---
 
 # Module 3: Microsoft Azure Introduction
@@ -40,7 +41,7 @@ Build foundational understanding of Microsoft Azure platform, services, global i
 - Virtual machines and app services
 - Azure Storage types
 - Virtual networks and security groups
-- Azure Active Directory basics
+- Microsoft Entra ID basics
 - Resource groups and subscriptions
 
 **Duration:** 15-25 minutes

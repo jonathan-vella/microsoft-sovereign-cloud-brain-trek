@@ -4,6 +4,7 @@ title: Module 4 - Pre-Sales & Solution Design
 parent: Level 200 - Intermediate
 nav_order: 4
 has_children: true
+description: "Module 4: Pre-sales and solution design — customer discovery, solution sizing, cost estimation / TCO, and presales solution design patterns for sovereign cloud opportunities."
 ---
 
 # Module 4: Pre-Sales & Solution Design

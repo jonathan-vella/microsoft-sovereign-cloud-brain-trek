@@ -3,6 +3,7 @@ layout: default
 title: Sovereign Private Cloud
 parent: Module 2 - Sovereign Cloud Models
 nav_order: 2.2
+description: "Sovereign private cloud delivered via Azure Local — hyperconverged infrastructure on customer premises with Azure-consistent management and support for connected and disconnected operations."
 ---
 
 # Sovereign Private Cloud
@@ -707,7 +708,7 @@ Designed for organizations needing productivity tools in a private cloud environ
 **Private Sovereign Cloud is designed for:**
 
 - **Governments** requiring the highest standards of data residency and operational autonomy
-- **Critical industries** such as defense contractors and intelligence agencies  
+- **Critical industries** such as defense contractors and intelligence agencies
 - **Regulated sectors** with strict compliance and sovereignty requirements
 - **Disconnected environments** needing productivity services without cloud connectivity
 
@@ -746,7 +747,7 @@ Designed for organizations needing productivity tools in a private cloud environ
 **Available with Microsoft 365 Local:**
 
 - **Exchange Server** — Enterprise email, calendaring, contacts, and unified communications
-- **SharePoint Server** — Document management, collaboration, intranet sites, and enterprise search  
+- **SharePoint Server** — Document management, collaboration, intranet sites, and enterprise search
 - **Skype for Business Server** — Unified communications, presence, and instant messaging
 
 **Key Capabilities:**
@@ -989,9 +990,9 @@ Designed for organizations needing productivity tools in a private cloud environ
 
 ### Continue Learning
 
-- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models)**
-- **[→ Next: National Partner Clouds](national-partner-clouds)**
-- **[Explore: Operational Sovereignty Concepts](operational-sovereignty)**
+- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models.md)**
+- **[→ Next: National Partner Clouds](national-partner-clouds.md)**
+- **[Explore: Operational Sovereignty Concepts](operational-sovereignty.md)**
 
 ### Hands-On Learning
 

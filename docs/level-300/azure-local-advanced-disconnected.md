@@ -4,6 +4,7 @@ title: Module 3 - Azure Local Disconnected
 parent: Level 300 - Advanced
 nav_order: 3
 has_children: true
+description: "Module 3: Azure Local in disconnected mode — offline registration, local control plane, periodic sync, and operational patterns for air-gapped sovereign deployments."
 ---
 
 # Module 3: Azure Local at Scale - Disconnected Mode
@@ -41,25 +42,22 @@ Master air-gapped Azure Local deployments with manual updates, certificate manag
 
 ## Core Topics
 
-1. **Air-Gapped Architecture** → [azure-local-air-gapped.md](azure-local-air-gapped)
-2. **Certificate Management** → [azure-local-certificate-management.md](azure-local-certificate-management)
-3. **Disconnected Operations** → [azure-local-advanced-disconnected.md](azure-local-advanced-disconnected)
-4. **Hands-On Lab** → [azure-local-disconnected-lab.md](azure-local-disconnected-lab)
+1. **Air-Gapped Architecture** → [azure-local-air-gapped.md](azure-local-air-gapped.md)
+2. **Certificate Management** → [azure-local-certificate-management.md](azure-local-certificate-management.md)
+3. **Disconnected Operations** → [azure-local-advanced-disconnected.md](azure-local-advanced-disconnected.md)
+4. **Hands-On Lab** → [azure-local-disconnected-lab.md](azure-local-disconnected-lab.md)
 
 ---
 
 ## Air-Gapped Architecture
 
-
 ---
 
 ## Manual Update Process
 
-
 ---
 
 ## Certificate Lifecycle
-
 
 ---
 
@@ -90,10 +88,10 @@ Master air-gapped Azure Local deployments with manual updates, certificate manag
 
 ## Recommended Learning Path
 
-1. Start: [Air-Gapped Architecture](azure-local-air-gapped)
-2. Deep Dive: [Certificate Management](azure-local-certificate-management)
-3. Operations: [Disconnected Procedures](azure-local-advanced-disconnected)
-4. Hands-On: [Lab](azure-local-disconnected-lab)
+1. Start: [Air-Gapped Architecture](azure-local-air-gapped.md)
+2. Deep Dive: [Certificate Management](azure-local-certificate-management.md)
+3. Operations: [Disconnected Procedures](azure-local-advanced-disconnected.md)
+4. Hands-On: [Lab](azure-local-disconnected-lab.md)
 
 ---
 

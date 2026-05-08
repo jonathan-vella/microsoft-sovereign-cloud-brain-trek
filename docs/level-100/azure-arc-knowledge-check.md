@@ -3,6 +3,7 @@ layout: default
 title: Azure Arc Knowledge Check
 parent: Module 4 - Azure Arc Introduction
 nav_order: 4.4
+description: "Knowledge check (12 questions) covering Azure Arc concepts, Arc-enabled service types, hybrid governance, data residency, and connectivity modes."
 ---
 
 # Azure Arc Knowledge Check
@@ -35,9 +36,9 @@ Test your understanding of Azure Arc concepts, services, and use cases.
 
 **What is the primary purpose of Azure Arc?**
 
-A) To migrate workloads from on-premises to Azure cloud  
-B) To extend Azure management and services to any infrastructure  
-C) To replace existing infrastructure management tools  
+A) To migrate workloads from on-premises to Azure cloud
+B) To extend Azure management and services to any infrastructure
+C) To replace existing infrastructure management tools
 D) To provide backup services for on-premises servers
 
 <details markdown="1">
@@ -48,7 +49,7 @@ D) To provide backup services for on-premises servers
 **Explanation:**
 Azure Arc's primary purpose is to extend Azure management, governance, and services to any infrastructure - on-premises, multi-cloud, or edge. It does not migrate workloads (that's Azure Migrate), doesn't replace tools (it complements them), and backup is just one of many capabilities.
 
-**Reference:** [Azure Arc Introduction](azure-arc-intro#what-is-azure-arc)
+**Reference:** [Azure Arc Introduction](azure-arc-intro.md#what-is-azure-arc)
 </details>
 
 ---
@@ -57,9 +58,9 @@ Azure Arc's primary purpose is to extend Azure management, governance, and servi
 
 **Which THREE services are part of Azure Arc? (Select all that apply)**
 
-A) Arc-enabled Servers  
-B) Arc-enabled Kubernetes  
-C) Arc-enabled Data Services  
+A) Arc-enabled Servers
+B) Arc-enabled Kubernetes
+C) Arc-enabled Data Services
 D) Arc-enabled Virtual Networks
 
 <details markdown="1">
@@ -68,9 +69,9 @@ D) Arc-enabled Virtual Networks
 **Correct Answer: A, B, C**
 
 **Explanation:**
-The three pillars of Azure Arc are Arc-enabled Servers (Windows/Linux machines), Arc-enabled Kubernetes (any CNCF-certified K8s), and Arc-enabled Data Services (SQL MI and PostgreSQL). Arc-enabled Virtual Networks is not an Arc service.
+The three pillars commonly introduced for Azure Arc are Arc-enabled Servers (Windows/Linux machines), Arc-enabled Kubernetes (any CNCF-certified K8s), and Arc-enabled Data Services (SQL MI and PostgreSQL). Arc-enabled Virtual Networks is not an Arc service. (Microsoft also documents [Arc-enabled SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview) as a fourth Arc resource type, layered onto Arc-enabled Servers — covered in Level 200.)
 
-**Reference:** [Three Pillars of Azure Arc](azure-arc-intro#three-pillars-of-azure-arc)
+**Reference:** [Core Arc-enabled Services](azure-arc-intro.md#comparison-table-core-arc-enabled-services)
 </details>
 
 ---
@@ -79,9 +80,9 @@ The three pillars of Azure Arc are Arc-enabled Servers (Windows/Linux machines),
 
 **In Azure Arc, what type of data is sent to Azure from Arc-enabled Servers?**
 
-A) All application data and databases  
-B) Only metadata, metrics, logs, and configuration - not workload data  
-C) Only credentials and passwords  
+A) All application data and databases
+B) Only metadata, metrics, logs, and configuration - not workload data
+C) Only credentials and passwords
 D) All data is kept 100% local with no Azure sync
 
 <details markdown="1">
@@ -92,7 +93,7 @@ D) All data is kept 100% local with no Azure sync
 **Explanation:**
 Arc synchronizes metadata (inventory, configuration), metrics, and logs to Azure for management purposes, but workload data (application data, databases, files) stays on-premises. This enables cloud-based management while maintaining data sovereignty.
 
-**Reference:** [Arc and Sovereignty](azure-arc-intro#arc-and-sovereignty)
+**Reference:** [Arc and Sovereignty](azure-arc-intro.md#arc-and-sovereignty)
 </details>
 
 ---
@@ -101,9 +102,9 @@ Arc synchronizes metadata (inventory, configuration), metrics, and logs to Azure
 
 **What is required to onboard a Windows or Linux server to Azure Arc?**
 
-A) The server must be migrated to Azure first  
-B) Install the Connected Machine agent and provide Azure authentication  
-C) The server must be domain-joined  
+A) The server must be migrated to Azure first
+B) Install the Connected Machine agent and provide Azure authentication
+C) The server must be domain-joined
 D) Purchase special Arc licenses
 
 <details markdown="1">
@@ -114,7 +115,7 @@ D) Purchase special Arc licenses
 **Explanation:**
 Onboarding requires installing the Connected Machine agent on the server and authenticating to Azure (via service principal or interactive login). Servers can be anywhere (not just Azure), domain-join is optional, and Arc itself has no additional license cost.
 
-**Reference:** [Arc Servers Onboarding](azure-arc-servers#onboarding-process-and-architecture)
+**Reference:** [Arc Servers Onboarding](azure-arc-servers.md#onboarding-process-and-architecture)
 </details>
 
 ---
@@ -123,9 +124,9 @@ Onboarding requires installing the Connected Machine agent on the server and aut
 
 **What is the primary benefit of using GitOps with Arc-enabled Kubernetes?**
 
-A) Faster Kubernetes cluster creation  
-B) Git repository becomes the source of truth for cluster configuration with automatic synchronization  
-C) Eliminates the need for kubectl  
+A) Faster Kubernetes cluster creation
+B) Git repository becomes the source of truth for cluster configuration with automatic synchronization
+C) Eliminates the need for kubectl
 D) Reduces Kubernetes licensing costs
 
 <details markdown="1">
@@ -136,7 +137,7 @@ D) Reduces Kubernetes licensing costs
 **Explanation:**
 GitOps uses Git as the source of truth for cluster configuration. Changes committed to Git automatically sync to clusters via Flux, providing version control, audit trail, and consistent deployments. It doesn't create clusters, doesn't eliminate kubectl (complements it), and Kubernetes is open source (no licensing).
 
-**Reference:** [GitOps Configuration Management](azure-arc-kubernetes#gitops-based-configuration-management)
+**Reference:** [GitOps Configuration Management](azure-arc-kubernetes.md#gitops-based-configuration-management)
 </details>
 
 ---
@@ -145,9 +146,9 @@ GitOps uses Git as the source of truth for cluster configuration. Changes commit
 
 **Which of the following can Azure Policy do for Arc-enabled Servers?**
 
-A) Automatically migrate servers to Azure  
-B) Audit compliance and optionally remediate configuration drift  
-C) Replace the server operating system  
+A) Automatically migrate servers to Azure
+B) Audit compliance and optionally remediate configuration drift
+C) Replace the server operating system
 D) Increase server hardware resources
 
 <details markdown="1">
@@ -158,7 +159,7 @@ D) Increase server hardware resources
 **Explanation:**
 Azure Policy can audit server configurations for compliance and optionally remediate drift (deploy missing extensions, configure settings, etc.). It doesn't migrate servers, change OS, or modify hardware - those require different tools/processes.
 
-**Reference:** [Applying Azure Policy](azure-arc-servers#applying-azure-policy)
+**Reference:** [Applying Azure Policy](azure-arc-servers.md#applying-azure-policy)
 </details>
 
 ---
@@ -167,9 +168,9 @@ Azure Policy can audit server configurations for compliance and optionally remed
 
 **Azure Arc supports managing resources in which of the following?**
 
-A) Only Microsoft Azure  
-B) Only on-premises  
-C) Azure, AWS, GCP, and any infrastructure  
+A) Only Microsoft Azure
+B) Only on-premises
+C) Azure, AWS, GCP, and any infrastructure
 D) Only Microsoft technologies
 
 <details markdown="1">
@@ -180,7 +181,7 @@ D) Only Microsoft technologies
 **Explanation:**
 Azure Arc supports any infrastructure - Microsoft Azure, AWS, Google Cloud, on-premises, edge, and any other cloud. It's designed for multi-cloud and hybrid scenarios and supports non-Microsoft technologies (Linux, any K8s distribution, PostgreSQL, etc.).
 
-**Reference:** [Multi-Cloud Governance](azure-arc-intro#multi-cloud-governance-capabilities)
+**Reference:** [Multi-Cloud Governance](azure-arc-intro.md#multi-cloud-governance-capabilities)
 </details>
 
 ---
@@ -189,9 +190,9 @@ Azure Arc supports any infrastructure - Microsoft Azure, AWS, Google Cloud, on-p
 
 **A retail company has 200 stores with local Kubernetes clusters running POS applications. They want consistent deployment and security policies. Which Arc service is best?**
 
-A) Arc-enabled Servers  
-B) Arc-enabled Kubernetes  
-C) Arc-enabled Data Services  
+A) Arc-enabled Servers
+B) Arc-enabled Kubernetes
+C) Arc-enabled Data Services
 D) Azure Migrate
 
 <details markdown="1">
@@ -202,7 +203,7 @@ D) Azure Migrate
 **Explanation:**
 Arc-enabled Kubernetes is designed for managing multiple Kubernetes clusters with consistent GitOps deployment and Azure Policy enforcement. Arc Servers is for individual machines, Data Services is for databases, and Azure Migrate is for migrations (not management).
 
-**Reference:** [Arc Kubernetes Scenarios](azure-arc-kubernetes#use-case-scenarios)
+**Reference:** [Arc Kubernetes Scenarios](azure-arc-kubernetes.md#use-case-scenarios)
 </details>
 
 ---
@@ -211,9 +212,9 @@ Arc-enabled Kubernetes is designed for managing multiple Kubernetes clusters wit
 
 **Which licensing models are available for Azure SQL Managed Instance on Arc?**
 
-A) Only pay-as-you-go  
-B) Only bring-your-own-license (BYOL)  
-C) Both pay-as-you-go and BYOL with Azure Hybrid Benefit  
+A) Only pay-as-you-go
+B) Only bring-your-own-license (BYOL)
+C) Both pay-as-you-go and BYOL with Azure Hybrid Benefit
 D) Free (no licensing cost)
 
 <details markdown="1">
@@ -224,7 +225,7 @@ D) Free (no licensing cost)
 **Explanation:**
 Arc SQL MI supports both pay-as-you-go (Azure consumption billing) and BYOL where you can bring existing SQL Server licenses and leverage Azure Hybrid Benefit for up to 55% savings. It's not free - either model incurs costs.
 
-**Reference:** [Data Services Billing](azure-arc-data-services#billing-model)
+**Reference:** [Data Services Billing](azure-arc-data-services.md#billing-model)
 </details>
 
 ---
@@ -233,9 +234,9 @@ Arc SQL MI supports both pay-as-you-go (Azure consumption billing) and BYOL wher
 
 **How does Azure SQL Managed Instance on Arc provide high availability?**
 
-A) By replicating to Azure SQL Database  
-B) Using Always-On Availability Groups with automatic failover  
-C) By creating manual backups every hour  
+A) By replicating to Azure SQL Database
+B) Using Always-On Availability Groups with automatic failover
+C) By creating manual backups every hour
 D) High availability is not supported on Arc
 
 <details markdown="1">
@@ -246,7 +247,7 @@ D) High availability is not supported on Arc
 **Explanation:**
 Arc SQL MI uses Always-On Availability Groups (AG) with synchronous replication and automatic failover, providing 99.95% SLA. It doesn't replicate to Azure SQL Database, hourly backups don't provide HA, and HA is a core feature.
 
-**Reference:** [Elastic Scale and HA](azure-arc-data-services#elastic-scale-and-high-availability)
+**Reference:** [Elastic Scale and HA](azure-arc-data-services.md#elastic-scale-and-high-availability)
 </details>
 
 ---
@@ -258,9 +259,9 @@ Arc SQL MI uses Always-On Availability Groups (AG) with synchronous replication 
 
 **Which statement about Azure Arc Data Services connectivity is correct as of November 2025?**
 
-A) Indirectly Connected mode is recommended for maximum security  
-B) Only Directly Connected mode is supported; Indirect mode was retired in September 2025  
-C) Indirectly Connected mode offers better performance  
+A) Indirectly Connected mode is recommended for maximum security
+B) Only Directly Connected mode is supported; Indirect mode was retired in September 2025
+C) Indirectly Connected mode offers better performance
 D) Both modes are fully supported with identical features
 
 <details markdown="1">
@@ -282,9 +283,9 @@ For disconnected/air-gapped scenarios, organizations should use **Azure Local wi
 
 **What is included in the cost of using Azure Arc itself?**
 
-A) High per-server licensing fees  
-B) Azure Arc has no additional charge - you pay only for Azure services consumed  
-C) Requires Enterprise Agreement  
+A) High per-server licensing fees
+B) Azure Arc has no additional charge - you pay only for Azure services consumed
+C) Requires Enterprise Agreement
 D) Monthly subscription per cluster
 
 <details markdown="1">
@@ -295,7 +296,7 @@ D) Monthly subscription per cluster
 **Explanation:**
 Azure Arc itself is free - there's no charge to connect servers, Kubernetes clusters, or deploy the data controller. You only pay for Azure services you consume (Azure Monitor, Defender, Update Management, etc.). No EA required, no per-server fees, no subscriptions for Arc itself.
 
-**Reference:** [Arc Servers Cost Model](azure-arc-servers#cost-model-and-licensing)
+**Reference:** [Arc Servers Cost Model](azure-arc-servers.md#cost-model-and-licensing)
 </details>
 
 ---
@@ -331,7 +332,7 @@ Azure Arc itself is free - there's no charge to connect servers, Kubernetes clus
 
 **0-5 correct (0-49%):** ❌ **Significant review needed**
 
-- Start from the beginning with [Azure Arc Introduction](azure-arc-intro)
+- Start from the beginning with [Azure Arc Introduction](azure-arc-intro.md)
 - Read each sub-page carefully
 - Take notes on key concepts
 - Review all use case scenarios
@@ -344,21 +345,21 @@ Azure Arc itself is free - there's no charge to connect servers, Kubernetes clus
 
 **If you missed questions on Arc fundamentals (Q1, Q3, Q7):**
 
-- Review [Azure Arc Introduction](azure-arc-intro)
+- Review [Azure Arc Introduction](azure-arc-intro.md)
 - Focus on what Arc does and doesn't do
 
 **If you missed questions on specific services (Q2, Q4, Q5, Q8):**
 
-- Review [Arc Servers](azure-arc-servers)
-- Review [Arc Kubernetes](azure-arc-kubernetes)
+- Review [Arc Servers](azure-arc-servers.md)
+- Review [Arc Kubernetes](azure-arc-kubernetes.md)
 
 **If you missed questions on Data Services (Q9, Q10, Q11):**
 
-- Review [Arc Data Services](azure-arc-data-services)
+- Review [Arc Data Services](azure-arc-data-services.md)
 
 **If you missed questions on policy and governance (Q6):**
 
-- Review [Azure Policy for Arc](azure-arc-servers#applying-azure-policy)
+- Review [Azure Policy for Arc](azure-arc-servers.md#applying-azure-policy)
 
 ---
 
@@ -369,11 +370,11 @@ Azure Arc itself is free - there's no charge to connect servers, Kubernetes clus
 1. **✅ Celebrate your achievement!** You've completed Azure Arc foundational concepts.
 
 2. **📚 Continue to next module:**
-   - [Edge RAG Concepts →](edge-rag-concepts)
+   - [Edge RAG Concepts →](edge-rag-concepts.md)
 
 3. **� Review related concepts:**
-   - [Azure Local Overview](azure-local-overview)
-   - [Digital Sovereignty Fundamentals](digital-sovereignty)
+   - [Azure Local Overview](azure-local-overview.md)
+   - [Digital Sovereignty Fundamentals](digital-sovereignty.md)
 
 4. **🌐 Explore external resources:**
    - [Azure Arc Documentation](https://learn.microsoft.com/en-us/azure/azure-arc/)
@@ -398,11 +399,11 @@ You may retake this assessment as many times as needed. We recommend:
 
 ---
 
-**Quiz Version:** 1.0  
-**Last Updated:** October 2025  
-**Questions:** 12  
+**Quiz Version:** 1.0
+**Last Updated:** October 2025
+**Questions:** 12
 **Passing Score:** 80%
 
 ---
 
-**[← Back to Azure Arc Introduction](azure-arc-intro)**
+**[← Back to Azure Arc Introduction](azure-arc-intro.md)**

@@ -4,6 +4,7 @@ title: Module 1 - Digital Sovereignty
 parent: Level 100 - Foundation
 nav_order: 1
 has_children: true
+description: "Digital sovereignty foundations — data residency, operational sovereignty, regulatory drivers, and the strategic role of Microsoft Cloud for Sovereignty."
 ---
 
 # Module 1: Digital Sovereignty Fundamentals

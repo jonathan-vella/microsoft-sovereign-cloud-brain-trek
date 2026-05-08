@@ -3,6 +3,7 @@ layout: default
 title: Security Hardening Patterns
 parent: Module 5 - Compliance & Security
 nav_order: 8
+description: "Security hardening for Azure Local and Arc-enabled resources — Defender for Cloud, Microsoft Sentinel integration, OS-level baselines, and reducing attack surface."
 ---
 
 # Security Hardening Patterns

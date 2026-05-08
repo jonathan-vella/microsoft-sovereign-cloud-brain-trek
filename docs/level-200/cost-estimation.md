@@ -2,10 +2,27 @@
 layout: default
 title: Cost Estimation & TCO
 parent: Pre-Sales & Solution Design
-nav_order: 4
+nav_order: 3
+description: "Cost estimation and TCO analysis for sovereign cloud deployments — hardware, licensing, operations, and how to compare Azure Local vs sovereign public cloud financial models."
 ---
 
 # Cost Estimation and ROI Analysis
+
+{: .important }
+> **💲 Pricing disclaimer**
+> All dollar figures, percentages, and ratios in this page are
+> **illustrative and for training purposes only**. They are based on typical
+> 2024–2025 list prices and partner quotes from a small sample of customer
+> engagements. Actual customer pricing varies materially by region, partner,
+> hardware vendor, contract terms, and Microsoft commercial offers.
+>
+> **Always validate against:**
+>
+> - The [Azure pricing calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
+>   for Azure consumption
+> - The [Azure Local hardware partner](https://azurestackhcisolutions.azure.microsoft.com/)
+>   directly for current hardware list prices
+> - Your Microsoft account team for licensing and EA pricing
 
 ## Overview
 
@@ -683,7 +700,7 @@ FINANCIAL JUSTIFICATION
 
 If customer captures just 50% of identified benefits:
   • Cloud API cost avoidance: $45K/year
-  • Compliance enablement: $100K/year  
+  • Compliance enablement: $100K/year
   • Operational efficiency: $25K/year
   • Data residency premium: $50K/year
   ────────────────────────────────
@@ -710,7 +727,7 @@ Strategic Value (Intangible):
 - **Main Page:** [Pre-Sales & Solution Design](./presales-solution-design.md)
 - **Discovery:** [Customer Discovery](./customer-discovery.md)
 - **Sizing:** [Solution Sizing & Planning](./solution-sizing.md)
-- **Proposals:** [Proposal Development](./proposal-development.md)
+- **Proposals:** combine [Customer Discovery](./customer-discovery.md) findings with this cost worksheet (dedicated proposal template forthcoming).
 - **Assessment:** [Pre-Sales & Solution Design Knowledge Check](./presales-knowledge-check.md)
 
 ---

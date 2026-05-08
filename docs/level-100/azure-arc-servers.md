@@ -3,6 +3,7 @@ layout: default
 title: Azure Arc-Enabled Servers
 parent: Module 4 - Azure Arc Introduction
 nav_order: 4.1
+description: "Azure Arc-enabled Servers — extend Azure governance, monitoring, security, and update management to Windows and Linux servers running outside Azure."
 ---
 
 # Azure Arc-Enabled Servers
@@ -64,7 +65,7 @@ graph LR
 - Manage updates with Azure Update Management
 - Automate with Azure Automation runbooks
 
-**[← Back to Azure Arc Introduction](azure-arc-intro)**
+**[← Back to Azure Arc Introduction](azure-arc-intro.md)**
 
 ---
 
@@ -385,10 +386,10 @@ azcmagent connect --resource-group "myResourceGroup"   --tenant-id "tenant-id"  
 
 ## Next Steps
 
-- [Arc-Enabled Kubernetes →](azure-arc-kubernetes)
-- [Arc Data Services →](azure-arc-data-services)
-- [Azure Arc Quiz →](azure-arc-quiz)
-- [Back to Arc Overview →](azure-arc-intro)
+- [Arc-Enabled Kubernetes →](azure-arc-kubernetes.md)
+- [Arc Data Services →](azure-arc-data-services.md)
+- [Azure Arc Quiz →](azure-arc-knowledge-check.md)
+- [Back to Arc Overview →](azure-arc-intro.md)
 
 **External Resources:**
 

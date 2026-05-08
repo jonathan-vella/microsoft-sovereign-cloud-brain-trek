@@ -3,6 +3,7 @@ layout: default
 title: National Partner Clouds
 parent: Module 2 - Sovereign Cloud Models
 nav_order: 2.3
+description: "National partner clouds — the partner-operated sovereign clouds (Bleu in France, Capgemini-Orange, Delos in Germany) and how they extend Microsoft cloud services under partner data trustees."
 ---
 
 # National Partner Clouds
@@ -30,7 +31,7 @@ Azure infrastructure operated by trusted national partners, providing sovereign 
 
 National Partner Clouds address scenarios where:
 
-- **National regulations require local cloud operators** (e.g., government-only clouds)
+- **National regulations require local cloud operators** (for example, government-only clouds)
 - **Data must be under local legal jurisdiction** with no foreign government access
 - **Operations and support must be provided by local entities**
 - **Compliance certifications must be issued by national authorities**
@@ -65,7 +66,7 @@ Many countries and sectors have regulations that require:
 
 | Aspect | Standard Azure | National Partner Clouds |
 |--------|----------------|-------------------------|
-| **Operated By** | Microsoft Corporation | National partner (e.g., 21Vianet, government contractors) |
+| **Operated By** | Microsoft Corporation | National partner (for example, 21Vianet, government contractors) |
 | **Legal Jurisdiction** | Multiple jurisdictions | Single national jurisdiction |
 | **Data Access** | Microsoft personnel (with controls) | Partner personnel only (national) |
 | **Compliance** | Global certifications | National-specific certifications |
@@ -78,14 +79,13 @@ Many countries and sectors have regulations that require:
 
 ## Major National Partner Clouds Overview
 
-
 ---
 
 ## Major National Partner Clouds
 
 ### 1. Azure Government (United States)
 
-**Operator:** Microsoft (with government-cleared personnel)  
+**Operator:** Microsoft (with government-cleared personnel)
 **Target Customers:** US federal, state, local, and tribal governments, and their partners
 
 **Key Characteristics:**
@@ -136,7 +136,7 @@ Many countries and sectors have regulations that require:
 
 ### 2. Azure China (21Vianet Operated)
 
-**Operator:** 21Vianet (Beijing Century Interconnect Data Center Co., Ltd.)  
+**Operator:** 21Vianet (Beijing Century Interconnect Data Center Co., Ltd.)
 **Target Customers:** Organizations operating in China requiring local data residency
 
 **Key Characteristics:**
@@ -196,7 +196,7 @@ Many countries and sectors have regulations that require:
 
 ### 3. Azure Germany (Discontinued - Lessons Learned)
 
-**Status:** Service discontinued in October 2021  
+**Status:** Service discontinued in October 2021
 **Historical Operator:** T-Systems International (Deutsche Telekom subsidiary)
 
 **Why It Existed:**
@@ -237,7 +237,7 @@ Microsoft has partnered with European telecommunications and technology companie
 
 #### Bleu (France)
 
-**Partners:** Orange and Capgemini  
+**Partners:** Orange and Capgemini
 **Target Certification:** SecNumCloud (ANSSI - French National Cybersecurity Agency)
 
 **Key Characteristics:**
@@ -260,7 +260,7 @@ Microsoft has partnered with European telecommunications and technology companie
 
 #### Delos Cloud (Germany)
 
-**Partners:** SAP and Arvato Systems (Bertelsmann)  
+**Partners:** SAP and Arvato Systems (Bertelsmann)
 **Target:** German cloud platform requirements for public sector
 
 **Key Characteristics:**
@@ -330,9 +330,9 @@ Microsoft has partnered with European telecommunications and technology companie
 
 **Identity Isolation:**
 
-- Separate Azure Active Directory instances
+- Separate Microsoft Entra ID instances
 - No federation with global Azure AD by default
-- National identity providers supported (e.g., US PIV cards for Azure Government)
+- National identity providers supported (for example, US PIV cards for Azure Government)
 
 ---
 
@@ -986,10 +986,10 @@ Is local operator legally required?
 
 ### Continue Learning
 
-- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models)**
-- **[← Previous: Sovereign Private Cloud](sovereign-private-cloud)**
-- **[← Previous: Sovereign Public Cloud](sovereign-public-cloud)**
-- **[✅ Take the Quiz →](cloud-models-quiz)**
+- **[← Back to Sovereign Cloud Models Overview](sovereign-cloud-models.md)**
+- **[← Previous: Sovereign Private Cloud](sovereign-private-cloud.md)**
+- **[← Previous: Sovereign Public Cloud](sovereign-public-cloud.md)**
+- **[✅ Take the Quiz →](cloud-models-knowledge-check.md)**
 
 ### Hands-On Learning
 

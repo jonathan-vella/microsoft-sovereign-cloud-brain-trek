@@ -3,6 +3,7 @@ layout: default
 title: European Digital Commitments
 parent: Module 1 - Digital Sovereignty
 nav_order: 2
+description: "Microsoft European commitments — EU Data Boundary scope, EU-based engineering teams, EU-Trustee model, and the legal and contractual structures that support sovereignty for European customers."
 ---
 
 # Microsoft's European Digital Commitments
@@ -93,7 +94,7 @@ The EU Data Boundary consists of **31 countries**:
 
 - Some support scenarios (customer can control via Customer Lockbox)
 - Certain metadata for service functionality
-- Features requiring global routing (e.g., Azure Front Door)
+- Features requiring global routing (for example, Azure Front Door)
 
 **Customer Control:**
 
@@ -113,7 +114,6 @@ The EU Data Boundary consists of **31 countries**:
 Microsoft operates or may use datacenters in: Austria, Belgium, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Netherlands, Norway, Poland, Spain, Sweden, and Switzerland.
 
 **Reference:** [EU Data Boundary Countries and Datacenter Locations](https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn#eu-data-boundary-countries-and-datacenter-locations)
-
 
 ---
 
@@ -288,7 +288,7 @@ A commitment to store and process customer data within the European Union, with 
 **Risk Reduction:**
 
 - Minimizes cross-border data transfers
-- Reduces exposure to foreign laws (e.g., CLOUD Act)
+- Reduces exposure to foreign laws (for example, CLOUD Act)
 - Clear audit trail for compliance
 - Transparent operations
 
@@ -453,9 +453,9 @@ A commitment to store and process customer data within the European Union, with 
 
 ## Next Steps
 
-- **[Learn about Regulatory Requirements →](regulatory-overview)**
-- **[Explore Data Residency Concepts →](data-residency-concepts)**
-- **[Return to Digital Sovereignty Overview →](digital-sovereignty)**
+- **[Learn about Regulatory Requirements →](regulatory-overview.md)**
+- **[Explore Data Residency Concepts →](data-residency-concepts.md)**
+- **[Return to Digital Sovereignty Overview →](digital-sovereignty.md)**
 
 ---
 

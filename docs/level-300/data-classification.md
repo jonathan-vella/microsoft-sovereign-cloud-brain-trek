@@ -9,11 +9,9 @@ description: "Data classification workflows for sovereign cloud environments"
 
 # Data Classification and Protection
 
-
 {: .no_toc }
 
 Implementing data classification workflows to identify, categorize, and protect sensitive information in sovereign cloud environments.
-
 
 ## Table of Contents
 

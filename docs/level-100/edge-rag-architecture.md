@@ -3,6 +3,7 @@ layout: default
 title: Edge RAG Architecture
 parent: Module 5 - Edge RAG Concepts
 nav_order: 5.2
+description: "Edge RAG (preview) reference architecture — ingestion, embedding, vector store, retrieval and inference components running as an Azure Arc-enabled Kubernetes extension on Azure Local."
 ---
 
 # Edge RAG Architecture
@@ -604,10 +605,10 @@ When deployed in Connected Mode on Azure Local:
 
 ## Next Steps
 
-- [Edge RAG Use Cases →](edge-rag-use-cases)
-- [RAG Fundamentals →](rag-fundamentals)
-- [Edge RAG Quiz →](edge-rag-quiz)
-- [Back to Edge RAG Overview →](edge-rag-concepts)
+- [Edge RAG Use Cases →](edge-rag-use-cases.md)
+- [RAG Fundamentals →](rag-fundamentals.md)
+- [Edge RAG Quiz →](edge-rag-knowledge-check.md)
+- [Back to Edge RAG Overview →](edge-rag-concepts.md)
 
 ---
 

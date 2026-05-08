@@ -9,11 +9,9 @@ description: "FedRAMP High compliant architecture"
 
 # Government Cloud Architecture
 
-
 {: .no_toc }
 
 FedRAMP High and Impact Level 4-5 compliant architecture for government workloads.
-
 
 ## Table of Contents
 
@@ -39,9 +37,7 @@ After completing this section, you will be able to:
 
 ---
 
-
 ## Government Cloud Architecture
-
 
 | Region | Location | IL Support | Services |
 |--------|----------|------------|----------|

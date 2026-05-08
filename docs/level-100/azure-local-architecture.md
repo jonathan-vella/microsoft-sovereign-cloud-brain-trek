@@ -3,6 +3,7 @@ layout: default
 title: Azure Local Architecture
 parent: Module 3 - Azure Local Overview
 nav_order: 3.1
+description: "Azure Local architecture — cluster topology, Storage Spaces Direct, Software Defined Networking, Hyper-V, and the Azure Arc control plane that bridges on-premises clusters to Azure."
 ---
 
 # Azure Local Architecture Deep Dive
@@ -40,7 +41,7 @@ This page provides an in-depth look at:
 - Security layers and encryption mechanisms
 - Integration with Azure cloud services
 
-**[← Back to Azure Local Overview](azure-local-overview)**
+**[← Back to Azure Local Overview](azure-local-overview.md)**
 
 ---
 
@@ -290,7 +291,6 @@ Azure Local has four primary network traffic types:
 - Best performance and isolation
 - Higher cost (more NICs, more switches)
 
-
 ### RDMA (Remote Direct Memory Access)
 
 RDMA is **essential** for production Storage Spaces Direct performance:
@@ -519,7 +519,6 @@ The **control plane** manages configuration, monitoring, and updates:
 - No Azure dependency
 - Manual update deployment
 
-
 ### Why This Matters for Sovereignty
 
 The control/data plane separation provides:
@@ -567,7 +566,7 @@ Azure Arc is the foundation for Azure Local's cloud integration:
 - Resource tagging and organization
 - Cost tracking and billing
 
-**Reference:** [Azure Arc Overview](azure-arc-intro)
+**Reference:** [Azure Arc Overview](azure-arc-intro.md)
 
 ### Azure Monitor Integration
 
@@ -1039,10 +1038,10 @@ For scenarios beyond 16 nodes:
 
 **Continue Learning:**
 
-- [Connected Mode Operations →](azure-local-connected-mode)
-- [Disconnected Mode Operations →](azure-local-disconnected-mode)
-- [Hardware Requirements & Planning →](azure-local-hardware)
-- [Azure Local Quiz →](azure-local-quiz)
+- [Connected Mode Operations →](azure-local-connected-mode.md)
+- [Disconnected Mode Operations →](azure-local-disconnected-mode.md)
+- [Hardware Requirements & Planning →](azure-local-hardware.md)
+- [Azure Local Quiz →](azure-local-knowledge-check.md)
 
 **External Resources:**
 

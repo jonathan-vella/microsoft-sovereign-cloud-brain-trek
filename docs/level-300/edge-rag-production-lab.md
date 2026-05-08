@@ -3,6 +3,7 @@ layout: default
 title: Lab - Production RAG Deployment
 parent: Module 4 - Production Edge RAG
 nav_order: 4
+description: "Lab: Production Edge RAG (preview) deployment — set up a multi-tenant RAG service with high availability, observability, and compliance controls."
 ---
 
 # Lab: Production Edge RAG Deployment
@@ -17,7 +18,6 @@ nav_order: 4
 
 **Company:** IntelliData Systems  
 **Objective:** Deploy production RAG system on edge  
-
 
 ---
 
@@ -73,4 +73,4 @@ nav_order: 4
 
 ---
 
-**See also:** [Architecture](edge-rag-architecture-production) | [Optimization](edge-rag-optimization) | [MLOps](edge-rag-mlops)
+**See also:** [Architecture](edge-rag-architecture-production.md) | [Optimization](edge-rag-optimization.md) | [MLOps](edge-rag-mlops.md)

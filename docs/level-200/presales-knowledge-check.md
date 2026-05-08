@@ -3,6 +3,7 @@ layout: default
 title: Pre-Sales & Solution Design Knowledge Check
 parent: Pre-Sales & Solution Design
 nav_order: 4.3
+description: "Knowledge check covering pre-sales and solution design — customer discovery, sizing, cost estimation, and proposal patterns for sovereign cloud opportunities."
 ---
 
 # Pre-Sales & Solution Design Quiz
@@ -50,8 +51,8 @@ D) "Have you looked at Azure government clouds?"
 - Option D jumps to solutions before understanding requirements
 - Best practice: Ask open-ended question that uncovers root cause and business driver
 
+**Reference:** [Customer Discovery](customer-discovery.md)
 </details>
-
 
 ---
 
@@ -82,8 +83,8 @@ D) Manufacturing doesn't typically have CISO involvement
 - Without discovering full stakeholder map, solution may not address real concerns
 - Even if technically excellent, proposal may fail due to misaligned decision criteria
 
+**Reference:** [Pre-Sales Solution Design](presales-solution-design.md)
 </details>
-
 
 ---
 
@@ -115,8 +116,8 @@ D) "When do you need this operational?"
   - 10,000 QPS @ 100ms latency → 16+ GPUs needed
 - This single question drives $50K-500K hardware decision
 
+**Reference:** [Solution Sizing](solution-sizing.md)
 </details>
-
 
 ---
 
@@ -148,8 +149,8 @@ D) Recommend cloud APIs instead since edge isn't viable
 - Option D: premature - haven't tried edge solution yet
 - Best practice: Size for peak + redundancy (2x minimum)
 
+**Reference:** [Cost Estimation & TCO](cost-estimation.md)
 </details>
-
 
 ---
 
@@ -180,8 +181,8 @@ D) 10 separate cloud databases (one per tenant)
 - Option D: Cloud databases = sovereignty violation + costs >$50K/year
 - Best practice: Containerized isolation when strict SLA + data residency needed
 
+**Reference:** [Customer Discovery](customer-discovery.md)
 </details>
-
 
 ---
 
@@ -222,8 +223,8 @@ D) 150M queries/year
   - Edge: $2.865M over 5 years
   - Edge wins (15% cheaper)
 
+**Reference:** [Pre-Sales Solution Design](presales-solution-design.md)
 </details>
-
 
 ---
 
@@ -257,8 +258,8 @@ D) Scale down to 2 GPUs only, accept performance compromise
   - Organizational readiness
   - Proof of value
 
+**Reference:** [Solution Sizing](solution-sizing.md)
 </details>
-
 
 ---
 
@@ -294,8 +295,8 @@ D) Support from Microsoft is better
 - Option D: Support quality exists in cloud too
 - Best practice: Quantify intangible benefits (even conservatively) in proposals
 
+**Reference:** [Cost Estimation & TCO](cost-estimation.md)
 </details>
-
 
 ---
 
@@ -328,7 +329,7 @@ D) Alternative pricing from competitors
   - Example: Implementation 10% buffer = $10K contingency
   - Clearly communicated ($100K ± $10K)
 - Capacity expansion plan:
-  - What triggers additional investment? (e.g., "when QPS reaches 75% of capacity")
+  - What triggers additional investment? (for example, "when QPS reaches 75% of capacity")
   - Cost of phase 2, phase 3 additions
   - Timeline for expansions
 - Shows customer you've thought through risks and growth
@@ -337,8 +338,8 @@ D) Alternative pricing from competitors
 - Option C: Not relevant if they want sovereign solution
 - Option D: Out of scope for Microsoft proposal
 
+**Reference:** [Customer Discovery](customer-discovery.md)
 </details>
-
 
 ---
 
@@ -371,8 +372,8 @@ D) "Hardware security is already built-in, no need for additional vetting"
 - Response D: Minimizes their legitimate concern
 - Best practice: Objection = opportunity to strengthen relationship, not to overcome
 
+**Reference:** [Pre-Sales Solution Design](presales-solution-design.md)
 </details>
-
 
 ---
 
@@ -407,8 +408,8 @@ D) Skip DR (assume standard HA is sufficient)
 - Option C: Quick question incomplete (deserves proper discussion)
 - Option D: Risk missing critical requirement
 
+**Reference:** [Solution Sizing](solution-sizing.md)
 </details>
-
 
 ---
 
@@ -449,8 +450,8 @@ D) Compromise: recommend 2 GPUs as middle ground
 - Option C: Collaborative (finds real requirement)
 - Option D: Compromise without understanding = waste of $50K hardware
 
+**Reference:** [Cost Estimation & TCO](cost-estimation.md)
 </details>
-
 
 ---
 
@@ -492,8 +493,8 @@ D) The timeline is too aggressive
   - One-page ROI summary (ROI speaks universally)
   - Reach out: "Checking in, any questions I can clarify?"
 
+**Reference:** [Customer Discovery](customer-discovery.md)
 </details>
-
 
 ---
 
@@ -525,8 +526,8 @@ D) "The competitors' solution doesn't support your compliance requirements"
   - Better: "Azure is the only platform that meets your compliance AND sovereignty requirements"
 - Best practice: Position on VALUE (integrated, simpler, better operations) not on feature parity
 
+**Reference:** [Pre-Sales Solution Design](presales-solution-design.md)
 </details>
-
 
 ---
 
@@ -561,8 +562,8 @@ D) Plan the reference call for 6 months post-go-live
 - Option D: Too late to course-correct (reference call should be 3 months post-go-live)
 - Result: Engaged post-sale = 80%+ customer satisfaction vs. 40% hands-off approach
 
+**Reference:** [Solution Sizing](solution-sizing.md)
 </details>
-
 
 ---
 
@@ -641,21 +642,21 @@ D) Plan the reference call for 6 months post-go-live
 
 **If you missed questions on Discovery (Q1, Q2, Q11):**
 
-- Review [Customer Discovery](customer-discovery)
+- Review [Customer Discovery](customer-discovery.md)
 - Study effective discovery questioning techniques
 - Focus on stakeholder mapping and identification
 - Practice uncovering root requirements vs stated needs
 
 **If you missed questions on Sizing (Q3, Q4, Q5, Q12):**
 
-- Review [Pre-Sales & Solution Design](presales-solution-design)
+- Review [Pre-Sales & Solution Design](presales-solution-design.md)
 - Study workload characterization methods
 - Focus on hardware and database sizing calculations
 - Review sizing validation techniques
 
 **If you missed questions on TCO/Financial (Q6, Q8):**
 
-- Review [Cost Estimation](cost-estimation)
+- Review [Cost Estimation](cost-estimation.md)
 - Study TCO break-even analysis
 - Focus on strategic value articulation
 - Review ROI calculation methods
@@ -689,9 +690,9 @@ D) Plan the reference call for 6 months post-go-live
    - Build TCO models
 
 3. **🔗 Review related content:**
-   - [Pre-Sales & Solution Design](presales-solution-design)
-   - [Customer Discovery](customer-discovery)
-   - [Cost Estimation](cost-estimation)
+   - [Pre-Sales & Solution Design](presales-solution-design.md)
+   - [Customer Discovery](customer-discovery.md)
+   - [Cost Estimation](cost-estimation.md)
 
 4. **🌐 Explore external resources:**
    - [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/)
@@ -746,4 +747,4 @@ D) Plan the reference call for 6 months post-go-live
 
 ---
 
-**[← Back to Pre-Sales & Solution Design](presales-solution-design)**
+**[← Back to Pre-Sales & Solution Design](presales-solution-design.md)**

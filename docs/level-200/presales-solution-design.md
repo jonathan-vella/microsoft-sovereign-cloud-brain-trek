@@ -2,7 +2,8 @@
 layout: default
 title: Pre-Sales Solution Design
 parent: Pre-Sales & Solution Design
-nav_order: 4
+nav_order: 2
+description: "Pre-sales solution design — reference architectures, decision flows, and how to translate sovereignty requirements into Azure Local + Arc + Edge RAG technical proposals."
 ---
 
 # Pre-Sales Solution Design
@@ -757,7 +758,7 @@ Would a hybrid approach work better for you?"
   - [Customer Discovery & Requirements](./customer-discovery.md)
   - [Solution Sizing & Planning](./solution-sizing.md)
   - [Cost Estimation & TCO](./cost-estimation.md)
-  - [Proposal Development](./proposal-development.md)
+  - Proposal Development (covered in [Customer Discovery](./customer-discovery.md) — see "Proposal writing" section)
   - [Knowledge Check](./presales-knowledge-check.md)
 
 - **Supporting Modules:**

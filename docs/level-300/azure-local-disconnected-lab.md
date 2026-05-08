@@ -3,6 +3,7 @@ layout: default
 title: Lab - Disconnected Mode Deployment
 parent: Module 3 - Azure Local Disconnected
 nav_order: 3
+description: "Lab: Azure Local disconnected-mode deployment — provision, register, and operate a cluster without continuous Azure connectivity."
 ---
 
 # Lab: Air-Gapped Azure Local Deployment
@@ -18,7 +19,6 @@ nav_order: 3
 **Company:** SecureGov Systems  
 **Objective:** Deploy Azure Local in complete air-gap isolation  
 **Compliance:** FedRAMP High, ITAR  
-
 
 ---
 
@@ -74,4 +74,4 @@ nav_order: 3
 
 ---
 
-**See also:** [Air-Gapped Architecture](azure-local-air-gapped) | [Certificate Management](azure-local-certificate-management)
+**See also:** [Air-Gapped Architecture](azure-local-air-gapped.md) | [Certificate Management](azure-local-certificate-management.md)

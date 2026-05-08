@@ -107,7 +107,7 @@ Dedicated infrastructure for a single organization, located on-premises or hoste
 
 Regulated industries (healthcare, finance), sensitive data, mission-critical applications
 
-**Examples:** Azure Stack HCI, Azure Local (disconnected), VMware Private Cloud
+**Examples:** Azure Local (connected and disconnected modes), VMware Private Cloud, on-premises Hyper-V
 
 ## Hybrid Cloud
 

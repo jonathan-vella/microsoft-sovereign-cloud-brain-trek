@@ -4,6 +4,7 @@ title: Module 1 - Zero Trust Security
 parent: Level 300 - Advanced
 nav_order: 1
 has_children: true
+description: "Module 1: Zero Trust security for sovereign cloud — Zero Trust principles applied to Azure Local, Arc, and Edge RAG; identity, device, network, and data pillars."
 ---
 
 # Module 1: Zero Trust Security for Sovereign Clouds
@@ -16,8 +17,8 @@ has_children: true
 
 Master the Zero Trust security model and its application to sovereign cloud environments. This module covers foundational principles, sovereign-specific requirements, implementation patterns, and compliance integration for advanced security architects.
 
-**Duration:** 3-4 hours  
-**Learning Tracks:** Sales & Technical  
+**Duration:** 3-4 hours
+**Learning Tracks:** Sales & Technical
 **Prerequisites:** Level 200 completion
 
 ---
@@ -45,10 +46,10 @@ Master the Zero Trust security model and its application to sovereign cloud envi
 
 ## Table of Contents
 
-1. **Zero Trust Principles** → [zero-trust.md](zero-trust)
-2. **Implementation Architecture** → [zero-trust-architecture.md](zero-trust-architecture)
-3. **Monitoring & Compliance** → [zero-trust-monitoring.md](zero-trust-monitoring)
-4. **Hands-On Lab** → [zero-trust-lab.md](zero-trust-lab)
+1. **Zero Trust Principles** → [zero-trust.md](zero-trust.md)
+2. **Implementation Architecture** → [zero-trust-architecture.md](zero-trust-architecture.md)
+3. **Monitoring & Compliance** → [zero-trust-monitoring.md](zero-trust-monitoring.md)
+4. **Hands-On Lab** → [zero-trust-lab.md](zero-trust-lab.md)
 
 ---
 
@@ -110,7 +111,6 @@ Every Access Request → Identity Verification
 ---
 
 ## The Six Zero Trust Pillars
-
 
 ### Pillar 1: Identity
 
@@ -182,7 +182,6 @@ Secure cloud infrastructure, container orchestration, and compute resources.
 
 ## Sovereign Cloud-Specific Requirements
 
-
 ### Additional Sovereign Requirements
 
 **Standard Cloud Zero Trust:**
@@ -234,19 +233,19 @@ Secure cloud infrastructure, container orchestration, and compute resources.
 
 ## Recommended Learning Path
 
-1. **Start:** [Zero Trust Principles Page](zero-trust) - Understand core concepts
-2. **Deep Dive:** [Implementation Architecture](zero-trust-architecture) - See how components work
-3. **Operations:** [Monitoring & Compliance](zero-trust-monitoring) - Learn operational procedures
-4. **Practice:** [Hands-On Lab](zero-trust-lab) - Implement Zero Trust controls
+1. **Start:** [Zero Trust Principles Page](zero-trust.md) - Understand core concepts
+2. **Deep Dive:** [Implementation Architecture](zero-trust-architecture.md) - See how components work
+3. **Operations:** [Monitoring & Compliance](zero-trust-monitoring.md) - Learn operational procedures
+4. **Practice:** [Hands-On Lab](zero-trust-lab.md) - Implement Zero Trust controls
 
 ---
 
 ## Next Steps
 
-Ready to begin? Start with [Zero Trust Principles →](zero-trust)
+Ready to begin? Start with [Zero Trust Principles →](zero-trust.md)
 
 ---
 
-**Module Duration:** 6-8 hours  
-**Completion Time:** ~1-1.5 weeks at 6 hours/week  
-**Recommended Prerequisites:** Complete before [Module 2: Azure Local at Scale - Connected](../azure-local-advanced-connected)
+**Module Duration:** 6-8 hours
+**Completion Time:** ~1-1.5 weeks at 6 hours/week
+**Recommended Prerequisites:** Complete before [Module 2: Azure Local at Scale - Connected](azure-local-advanced-connected.md)

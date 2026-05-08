@@ -9,11 +9,9 @@ description: "Multi-region disaster recovery patterns"
 
 # Disaster Recovery Topology
 
-
 {: .no_toc }
 
 Multi-region disaster recovery patterns with data sovereignty compliance.
-
 
 ## Table of Contents
 
@@ -39,9 +37,7 @@ After completing this section, you will be able to:
 
 ---
 
-
 ## Disaster Recovery Architecture
-
 
 | Strategy | RTO | RPO | Sovereignty Impact |
 |----------|-----|-----|-------------------|

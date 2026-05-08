@@ -3,6 +3,7 @@ layout: default
 title: RAG Deployment Strategies
 parent: Edge RAG Implementation
 nav_order: 3
+description: "Edge RAG (preview) deployment strategies — sizing, model selection, ingestion patterns, and rollout approaches for production sovereign deployments."
 ---
 
 # RAG Deployment Strategies

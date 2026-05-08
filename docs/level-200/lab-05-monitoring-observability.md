@@ -3,6 +3,7 @@ layout: default
 title: "Lab 5: Monitoring & Observability"
 parent: Hands-On Labs Overview
 nav_order: 5
+description: "Lab 5: Monitoring and observability — Azure Monitor for containers, Container Insights for Arc-enabled Kubernetes, and Defender for Cloud alerting."
 ---
 
 # Lab 5: Monitoring & Observability

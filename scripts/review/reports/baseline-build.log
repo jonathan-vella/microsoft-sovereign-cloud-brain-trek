@@ -1,0 +1,710 @@
+Configuration file: /workspaces/sov-cloud-brain-trek/_config.yml
+            Source: /workspaces/sov-cloud-brain-trek/docs
+       Destination: /workspaces/sov-cloud-brain-trek/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+       Jekyll Feed: Generating feed for posts
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+2 │ @import "./support/support";
+  │         ^^^^^^^^^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 2:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │ @import "./custom/setup";
+  │         ^^^^^^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 3:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+4 │ @import "./color_schemes/light";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 4:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+6 │ @import "./color_schemes/dark";
+  │         ^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 6:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+8 │ @import "./modules";
+  │         ^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 8:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+78 │ $sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 78:8           @import
+    support/support.scss 1:9                                                      @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 2:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+79 │ $sp-2: map-get($spacers, sp-2) !default; // 0.5  rem == 8px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 79:8           @import
+    support/support.scss 1:9                                                      @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 2:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+80 │ $sp-3: map-get($spacers, sp-3) !default; // 0.75 rem == 12px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 80:8           @import
+    support/support.scss 1:9                                                      @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 2:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+81 │ $sp-4: map-get($spacers, sp-4) !default; // 1    rem == 16px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 81:8           @import
+    support/support.scss 1:9                                                      @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 2:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+82 │ $sp-5: map-get($spacers, sp-5) !default; // 1.5  rem == 24px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 82:8           @import
+    support/support.scss 1:9                                                      @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 2:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -3.0909090909%)
+color.adjust($color, $lightness: -3%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+11 │ $feedback-color: darken($sidebar-color, 3%) !default;
+   │                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    color_schemes/light.scss 11:18                                                @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 4:9  root stylesheet
+DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 23.6111111111%)
+color.adjust($color, $lightness: 10%)
+
+More info: https://sass-lang.com/d/color-functions
+
+  ╷
+5 │ $link-color: lighten($blue-000, 10%);
+  │              ^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    color_schemes/dark.scss 5:14                                                  @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 6:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -18.8888888889%)
+color.adjust($color, $lightness: -3%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+12 │ $feedback-color: darken($sidebar-color, 3%);
+   │                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    color_schemes/dark.scss 12:18                                                 @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 6:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -7.3913043478%)
+color.adjust($color, $lightness: -5%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+61 │         color: darken($link-color, 5%);
+   │                ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/navigation.scss 61:16                  @import
+    modules.scss 8:9                                                              @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 8:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -2.9565217391%)
+color.adjust($color, $lightness: -2%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+38 │     color: darken($link-color, 2%);
+   │            ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/buttons.scss 38:12                     @import
+    modules.scss 11:9                                                             @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-dark.scss 8:9  root stylesheet
+WARNING: 93 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │ @import "./support/support";
+  │         ^^^^^^^^^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 3:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+4 │ @import "./custom/setup";
+  │         ^^^^^^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 4:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+5 │ @import "./color_schemes/light";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 5:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+7 │ @import "./modules";
+  │         ^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 7:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+303 │ @import "./custom/custom";
+    │         ^^^^^^^^^^^^^^^^^
+    ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 303:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+78 │ $sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 78:8              @import
+    support/support.scss 1:9                                                         @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 3:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+79 │ $sp-2: map-get($spacers, sp-2) !default; // 0.5  rem == 8px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 79:8              @import
+    support/support.scss 1:9                                                         @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 3:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+80 │ $sp-3: map-get($spacers, sp-3) !default; // 0.75 rem == 12px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 80:8              @import
+    support/support.scss 1:9                                                         @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 3:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+81 │ $sp-4: map-get($spacers, sp-4) !default; // 1    rem == 16px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 81:8              @import
+    support/support.scss 1:9                                                         @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 3:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+82 │ $sp-5: map-get($spacers, sp-5) !default; // 1.5  rem == 24px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 82:8              @import
+    support/support.scss 1:9                                                         @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 3:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -3.0909090909%)
+color.adjust($color, $lightness: -3%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+11 │ $feedback-color: darken($sidebar-color, 3%) !default;
+   │                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    color_schemes/light.scss 11:18                                                   @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 5:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -7.96875%)
+color.adjust($color, $lightness: -5%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+61 │         color: darken($link-color, 5%);
+   │                ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/navigation.scss 61:16                     @import
+    modules.scss 8:9                                                                 @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 7:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -3.1875%)
+color.adjust($color, $lightness: -2%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+38 │     color: darken($link-color, 2%);
+   │            ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/buttons.scss 38:12                        @import
+    modules.scss 11:9                                                                @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 7:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -1.032388664%)
+color.adjust($color, $lightness: -1%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+46 │     background-color: darken($base-button-color, 1%);
+   │                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/buttons.scss 46:23                        @import
+    modules.scss 11:9                                                                @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 7:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -3.0971659919%)
+color.adjust($color, $lightness: -3%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+52 │     background-color: darken($base-button-color, 3%);
+   │                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/buttons.scss 52:23                        @import
+    modules.scss 11:9                                                                @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-default.scss 7:9  root stylesheet
+WARNING: 87 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+2 │ @import "./support/support";
+  │         ^^^^^^^^^^^^^^^^^^^
+  ╵
+    - 2:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │ @import "./custom/setup";
+  │         ^^^^^^^^^^^^^^^^
+  ╵
+    - 3:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+4 │ @import "./color_schemes/light";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    - 4:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+6 │ @import "./modules";
+  │         ^^^^^^^^^^^
+  ╵
+    - 6:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+302 │ @import "./custom/custom";
+    │         ^^^^^^^^^^^^^^^^^
+    ╵
+    - 302:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+78 │ $sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 78:8  @import
+    support/support.scss 1:9                                             @import
+    - 2:9                                                                root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+79 │ $sp-2: map-get($spacers, sp-2) !default; // 0.5  rem == 8px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 79:8  @import
+    support/support.scss 1:9                                             @import
+    - 2:9                                                                root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+80 │ $sp-3: map-get($spacers, sp-3) !default; // 0.75 rem == 12px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 80:8  @import
+    support/support.scss 1:9                                             @import
+    - 2:9                                                                root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+81 │ $sp-4: map-get($spacers, sp-4) !default; // 1    rem == 16px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 81:8  @import
+    support/support.scss 1:9                                             @import
+    - 2:9                                                                root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+82 │ $sp-5: map-get($spacers, sp-5) !default; // 1.5  rem == 24px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 82:8  @import
+    support/support.scss 1:9                                             @import
+    - 2:9                                                                root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -3.0909090909%)
+color.adjust($color, $lightness: -3%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+11 │ $feedback-color: darken($sidebar-color, 3%) !default;
+   │                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    color_schemes/light.scss 11:18  @import
+    - 4:9                           root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -7.96875%)
+color.adjust($color, $lightness: -5%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+61 │         color: darken($link-color, 5%);
+   │                ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/navigation.scss 61:16  @import
+    modules.scss 8:9                                              @import
+    - 6:9                                                         root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -3.1875%)
+color.adjust($color, $lightness: -2%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+38 │     color: darken($link-color, 2%);
+   │            ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/buttons.scss 38:12  @import
+    modules.scss 11:9                                          @import
+    - 6:9                                                      root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -1.032388664%)
+color.adjust($color, $lightness: -1%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+46 │     background-color: darken($base-button-color, 1%);
+   │                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/buttons.scss 46:23  @import
+    modules.scss 11:9                                          @import
+    - 6:9                                                      root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -3.0971659919%)
+color.adjust($color, $lightness: -3%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+52 │     background-color: darken($base-button-color, 3%);
+   │                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/buttons.scss 52:23  @import
+    modules.scss 11:9                                          @import
+    - 6:9                                                      root stylesheet
+WARNING: 87 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+2 │ @import "./support/support";
+  │         ^^^^^^^^^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 2:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │ @import "./custom/setup";
+  │         ^^^^^^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 3:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+4 │ @import "./color_schemes/light";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 4:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+6 │ @import "./modules";
+  │         ^^^^^^^^^^^
+  ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 6:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+302 │ @import "./custom/custom";
+    │         ^^^^^^^^^^^^^^^^^
+    ╵
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 302:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+78 │ $sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 78:8            @import
+    support/support.scss 1:9                                                       @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 2:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+79 │ $sp-2: map-get($spacers, sp-2) !default; // 0.5  rem == 8px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 79:8            @import
+    support/support.scss 1:9                                                       @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 2:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+80 │ $sp-3: map-get($spacers, sp-3) !default; // 0.75 rem == 12px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 80:8            @import
+    support/support.scss 1:9                                                       @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 2:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+81 │ $sp-4: map-get($spacers, sp-4) !default; // 1    rem == 16px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 81:8            @import
+    support/support.scss 1:9                                                       @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 2:9  root stylesheet
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use map.get instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+82 │ $sp-5: map-get($spacers, sp-5) !default; // 1.5  rem == 24px
+   │        ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/support/_variables.scss 82:8            @import
+    support/support.scss 1:9                                                       @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 2:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -3.0909090909%)
+color.adjust($color, $lightness: -3%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+11 │ $feedback-color: darken($sidebar-color, 3%) !default;
+   │                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    color_schemes/light.scss 11:18                                                 @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 4:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -7.96875%)
+color.adjust($color, $lightness: -5%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+61 │         color: darken($link-color, 5%);
+   │                ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/navigation.scss 61:16                   @import
+    modules.scss 8:9                                                               @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 6:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -3.1875%)
+color.adjust($color, $lightness: -2%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+38 │     color: darken($link-color, 2%);
+   │            ^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/buttons.scss 38:12                      @import
+    modules.scss 11:9                                                              @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 6:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -1.032388664%)
+color.adjust($color, $lightness: -1%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+46 │     background-color: darken($base-button-color, 1%);
+   │                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/buttons.scss 46:23                      @import
+    modules.scss 11:9                                                              @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 6:9  root stylesheet
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -3.0971659919%)
+color.adjust($color, $lightness: -3%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+52 │     background-color: darken($base-button-color, 3%);
+   │                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    ../../../../just-the-docs-0.12.0/_sass/buttons.scss 52:23                      @import
+    modules.scss 11:9                                                              @import
+    /workspaces/sov-cloud-brain-trek/docs/assets/css/just-the-docs-light.scss 6:9  root stylesheet
+WARNING: 87 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+                    done in 6.012 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.

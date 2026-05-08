@@ -3,6 +3,7 @@ layout: default
 title: GDPR Implementation
 parent: Compliance & Security Patterns
 nav_order: 5
+description: "GDPR implementation patterns for sovereign cloud — controller / processor responsibilities, data subject rights workflows, and Azure features that support GDPR compliance."
 ---
 
 # GDPR Implementation Guide

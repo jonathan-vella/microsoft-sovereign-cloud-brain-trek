@@ -9,11 +9,9 @@ description: "OT/IT convergence for critical infrastructure"
 
 # Critical Infrastructure Architecture
 
-
 {: .no_toc }
 
 OT/IT convergence architecture for critical infrastructure protection with sovereign cloud integration.
-
 
 ## Table of Contents
 
@@ -39,9 +37,7 @@ After completing this section, you will be able to:
 
 ---
 
-
 ## Critical Infrastructure Architecture
-
 
 | Level | Name | Components | Azure Integration |
 |-------|------|------------|-------------------|

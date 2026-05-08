@@ -3,6 +3,7 @@ layout: default
 title: Vector Databases for Edge
 parent: Module 3 - Edge RAG Implementation
 nav_order: 3
+description: "Vector databases on the edge — Weaviate, Qdrant, and pgvector deployed on Azure Arc-enabled Kubernetes; sizing, persistence, and backup considerations for sovereign deployments."
 ---
 
 # Vector Databases for Edge

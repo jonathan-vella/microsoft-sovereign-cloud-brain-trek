@@ -3,6 +3,7 @@ layout: default
 title: Monitoring and Compliance
 parent: Module 1 - Zero Trust Security
 nav_order: 2
+description: "Zero Trust monitoring — telemetry collection, Microsoft Sentinel queries, GDPR-aware logging, and continuous verification across Arc-enabled estate."
 ---
 
 # Monitoring, Compliance & Operational Excellence
@@ -29,9 +30,9 @@ This page covers operational aspects of Zero Trust: monitoring, compliance autom
 
 ### Continuous Monitoring Requirements
 
-**FedRAMP:** Continuous, automated monitoring with monthly analysis  
-**GDPR:** Real-time monitoring of data access; yearly audits  
-**HIPAA:** Continuous monitoring with immediate alerting  
+**FedRAMP:** Continuous, automated monitoring with monthly analysis
+**GDPR:** Real-time monitoring of data access; yearly audits
+**HIPAA:** Continuous monitoring with immediate alerting
 **ITAR:** Daily review of controlled data access
 
 ### Key Metrics to Monitor
@@ -320,9 +321,9 @@ This page covers operational aspects of Zero Trust: monitoring, compliance autom
 
 ## Next Steps
 
-1. Ready for hands-on implementation? [Lab: Implement Zero Trust →](zero-trust-lab)
-2. Return to [Module Overview →](zero-trust)
-3. Continue to [Module 2: Azure Local at Scale - Connected](../azure-local-advanced-connected)
+1. Ready for hands-on implementation? [Lab: Implement Zero Trust →](zero-trust-lab.md)
+2. Return to [Module Overview →](zero-trust.md)
+3. Continue to [Module 2: Azure Local at Scale - Connected](azure-local-advanced-connected.md)
 
 ---
 

@@ -8,7 +8,6 @@ description: "Foundational concepts for Microsoft Sovereign Cloud & AI at the Ed
 
 # Level 100: Foundational Concepts
 
-
 ## Overview
 
 Build a solid understanding of the core concepts, terminology, and value propositions for Microsoft Sovereign Cloud, Azure Local, and Edge RAG.
@@ -46,8 +45,8 @@ Before starting Level 100, ensure you have:
 - [ ] Access to Microsoft Learn (free account) - [Sign up here](https://learn.microsoft.com)
 - [ ] (Optional) Azure free account for hands-on exploration - [Get started](https://azure.microsoft.com/free)
 
-**Estimated Time Commitment:** 1 hour per week  
-**Total Duration:** 1-2 weeks  
+**Estimated Time Commitment:** 1 hour per week
+**Total Duration:** 1-2 weeks
 **Total Hours:** 1-3 hours
 
 ---
@@ -177,8 +176,8 @@ Before starting Level 100, ensure you have:
 
 **Deep Dive Topics:**
 
-- [RAG Fundamentals](rag-fundamentals.md ) - Embeddings, vector databases, LLM limitations
-- [Edge RAG Architecture](edge-rag-architecture.md ) - Local LLM deployment, ingestion pipeline, query processing
+- [RAG Fundamentals](rag-fundamentals.md) - Embeddings, vector databases, LLM limitations
+- [Edge RAG Architecture](edge-rag-architecture.md) - Local LLM deployment, ingestion pipeline, query processing
 - [Edge RAG Use Cases and Implementation](edge-rag-use-cases.md) - Industry scenarios, best practices, ROI
 
 ✅ **Assessment:**
@@ -286,6 +285,5 @@ Once you've completed Level 100:
 ---
 
 **Last Updated:** October 2025
-
 
 [def]: edge-rag-concepts.md

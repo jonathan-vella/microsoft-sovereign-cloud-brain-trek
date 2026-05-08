@@ -3,6 +3,7 @@ layout: default
 title: Escalation & Advanced Support
 parent: Module 5 - Advanced Troubleshooting
 nav_order: 3
+description: "Escalation patterns and Microsoft support engagement — preparing support requests, Customer Lockbox workflow, and escalation paths for production sovereign incidents."
 ---
 
 # Escalation & Advanced Support
@@ -14,7 +15,6 @@ Understand when and how to escalate issues to specialized support channels.
 ---
 
 ## Escalation Decision Tree
-
 
 ---
 
@@ -77,4 +77,4 @@ Before escalating, gather:
 
 ---
 
-**See also:** [Troubleshooting Tools](troubleshooting-tools) | [Common Issues](troubleshooting-common-issues)
+**See also:** [Troubleshooting Tools](troubleshooting-tools.md) | [Common Issues](troubleshooting-common-issues.md)

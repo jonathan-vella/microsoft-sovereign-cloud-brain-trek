@@ -139,7 +139,7 @@ D) Balance of control and cloud benefits
 Which Azure service provides identity and access management capabilities?
 
 A) Azure Security Center
-B) Azure Active Directory
+B) Microsoft Entra ID
 C) Azure Key Vault
 D) Azure Policy
 
@@ -148,7 +148,7 @@ D) Azure Policy
 
 **Correct Answer: B**
 
-**Explanation:** Azure Active Directory (now Microsoft Entra ID) is Microsoft's cloud-based identity and access management service.
+**Explanation:** Microsoft Entra ID (now Microsoft Entra ID) is Microsoft's cloud-based identity and access management service.
 
 **Reference:** [Microsoft Azure Overview](microsoft-azure-overview.md)
 

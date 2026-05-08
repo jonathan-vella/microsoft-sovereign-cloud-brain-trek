@@ -3,6 +3,7 @@ layout: default
 title: Overview
 parent: Module 1 - Digital Sovereignty
 nav_order: 1
+description: "Digital sovereignty defined — the difference between data, operational, and software sovereignty, and how Microsoft Cloud for Sovereignty addresses each pillar for regulated organizations."
 ---
 
 # Digital Sovereignty Fundamentals
@@ -160,7 +161,7 @@ Microsoft's EU Data Boundary commitment ensures:
 
 #### GDPR (General Data Protection Regulation)
 
-**Jurisdiction:** European Union  
+**Jurisdiction:** European Union
 **Key Requirements:**
 
 - Data minimization and purpose limitation
@@ -173,7 +174,7 @@ Microsoft's EU Data Boundary commitment ensures:
 
 #### FedRAMP (Federal Risk and Authorization Management Program)
 
-**Jurisdiction:** United States (Federal Government)  
+**Jurisdiction:** United States (Federal Government)
 **Key Requirements:**
 
 - Standardized security assessment
@@ -191,7 +192,7 @@ Microsoft's EU Data Boundary commitment ensures:
 
 #### HIPAA (Health Insurance Portability and Accountability Act)
 
-**Sector:** Healthcare (United States)  
+**Sector:** Healthcare (United States)
 **Key Requirements:**
 
 - Protected Health Information (PHI) safeguards
@@ -201,7 +202,7 @@ Microsoft's EU Data Boundary commitment ensures:
 
 #### PCI DSS (Payment Card Industry Data Security Standard)
 
-**Sector:** Financial Services (Global)  
+**Sector:** Financial Services (Global)
 **Key Requirements:**
 
 - Cardholder data protection
@@ -211,7 +212,7 @@ Microsoft's EU Data Boundary commitment ensures:
 
 #### ITAR (International Traffic in Arms Regulations)
 
-**Sector:** Defense (United States)  
+**Sector:** Defense (United States)
 **Key Requirements:**
 
 - US persons only access
@@ -231,7 +232,6 @@ Organizations have different sovereignty requirements based on their:
 - **Operational needs** (connectivity requirements)
 
 ### Sovereignty Levels
-
 
 ```text
 ├── Standard Public Cloud
@@ -267,7 +267,7 @@ Understanding digital sovereignty through real-world scenarios helps illustrate 
 **Requirements:**
 
 - GDPR compliance for customer data
-- Local banking regulations (e.g., BaFin in Germany, ACPR in France)
+- Local banking regulations (for example, BaFin in Germany, ACPR in France)
 - Data residency within EU boundaries
 - Ability to demonstrate data sovereignty to regulators
 
@@ -621,10 +621,10 @@ Use this framework to assess your organization's sovereignty needs:
 
 ### Objection Handling
 
-**Objection:** "Cloud means we lose control of our data."  
+**Objection:** "Cloud means we lose control of our data."
 **Response:** "Microsoft's Sovereign Cloud solutions provide multiple models that give you control while benefiting from cloud capabilities. From enhanced sovereignty controls in public cloud to fully disconnected infrastructure, we can match your requirements."
 
-**Objection:** "Compliance requirements make cloud impossible for us."  
+**Objection:** "Compliance requirements make cloud impossible for us."
 **Response:** "Microsoft Azure holds more certifications than any other cloud provider. Our Sovereign Cloud offerings are specifically designed to meet the most stringent regulatory requirements, including FedRAMP High, ITAR, and sector-specific regulations."
 
 ---
@@ -658,7 +658,7 @@ This module provides a foundational overview of digital sovereignty. For detaile
 
 ### 📘 Microsoft's European Digital Commitments
 
-**[Read Full Article →](european-commitments)**
+**[Read Full Article →](european-commitments.md)**
 
 Learn about Microsoft's 5 commitments to European sovereignty including:
 
@@ -669,7 +669,7 @@ Learn about Microsoft's 5 commitments to European sovereignty including:
 
 ### 📘 Regulatory Requirements Overview
 
-**[Read Full Article →](regulatory-overview)**
+**[Read Full Article →](regulatory-overview.md)**
 
 Understand key regulations driving sovereignty requirements:
 
@@ -681,7 +681,7 @@ Understand key regulations driving sovereignty requirements:
 
 ### 📘 Data Residency vs. Sovereignty
 
-**[Read Full Article →](data-residency-concepts)**
+**[Read Full Article →](data-residency-concepts.md)**
 
 Deep dive into data location and control concepts:
 
@@ -692,7 +692,7 @@ Deep dive into data location and control concepts:
 
 ### 📘 Operational Sovereignty
 
-**[Read Full Article →](operational-sovereignty)**
+**[Read Full Article →](operational-sovereignty.md)**
 
 Explore control plane and operational independence:
 
@@ -703,7 +703,7 @@ Explore control plane and operational independence:
 
 ### ✅ Test Your Knowledge
 
-**[Take the Knowledge Check Quiz →](knowledge-check)**
+**[Take the Knowledge Check Quiz →](knowledge-check.md)**
 
 15 questions covering all digital sovereignty fundamentals.
 
@@ -711,8 +711,8 @@ Explore control plane and operational independence:
 
 ## Next Steps
 
-- **[Explore Microsoft Sovereign Cloud Models →](sovereign-cloud-models)**
-- **[Learn about Azure Local Overview →](azure-local-overview)**
+- **[Explore Microsoft Sovereign Cloud Models →](sovereign-cloud-models.md)**
+- **[Learn about Azure Local Overview →](azure-local-overview.md)**
 - **[Review Regulatory Compliance Resources →](../resources/)**
 
 ---

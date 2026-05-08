@@ -3,6 +3,7 @@ layout: default
 title: Encryption & Key Management
 parent: Compliance & Security Patterns
 nav_order: 7
+description: "Encryption and key management — customer-managed keys, Azure Key Vault Managed HSM, BYOK / HYOK patterns, and key-rotation automation for sovereign workloads."
 ---
 
 # Encryption & Key Management

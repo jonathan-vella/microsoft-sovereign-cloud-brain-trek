@@ -3,6 +3,7 @@ layout: default
 title: Overview
 parent: Compliance & Security Patterns
 nav_order: 1
+description: "Compliance and security architecture patterns — segmentation, audit logging, key management, and policy as code patterns applied across sovereign deployments."
 ---
 
 # Compliance & Security Patterns

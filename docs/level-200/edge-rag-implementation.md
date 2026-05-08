@@ -3,6 +3,7 @@ layout: default
 title: Overview
 parent: Edge RAG Implementation
 nav_order: 1
+description: "Edge RAG (preview) implementation overview — deployment topology, Azure Arc-enabled Kubernetes prerequisites, and end-to-end RAG pipeline configuration."
 ---
 
 # Edge RAG Implementation

@@ -3,6 +3,7 @@ layout: default
 title: Edge RAG Use Cases
 parent: Module 5 - Edge RAG Concepts
 nav_order: 5.3
+description: "Edge RAG (preview) use cases — manufacturing factory-floor assistants, regulated-industry knowledge bases, and other scenarios where RAG must run on private data inside the customer boundary."
 ---
 
 # Edge RAG Use Cases and Implementation
@@ -556,10 +557,10 @@ Customer Question
 
 ## Next Steps
 
-- [RAG Fundamentals →](rag-fundamentals)
-- [Edge RAG Architecture →](edge-rag-architecture)
-- [Edge RAG Quiz →](edge-rag-quiz)
-- [Back to Edge RAG Overview →](edge-rag-concepts)
+- [RAG Fundamentals →](rag-fundamentals.md)
+- [Edge RAG Architecture →](edge-rag-architecture.md)
+- [Edge RAG Quiz →](edge-rag-knowledge-check.md)
+- [Back to Edge RAG Overview →](edge-rag-concepts.md)
 
 ---
 

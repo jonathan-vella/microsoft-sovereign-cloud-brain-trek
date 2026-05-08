@@ -304,7 +304,7 @@ Understanding when cloud technologies apply through real-world scenarios:
 
 **Virtual Network:** Isolated network environment in Azure
 
-**Azure Active Directory:** Microsoft's cloud-based identity service
+**Microsoft Entra ID:** Microsoft's cloud-based identity service
 
 **ARM Template:** Infrastructure as Code template for Azure resources
 

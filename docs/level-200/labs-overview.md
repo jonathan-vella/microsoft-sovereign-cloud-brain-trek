@@ -4,6 +4,7 @@ title: Module 6 - Hands-On Labs
 parent: Level 200 - Intermediate
 nav_order: 10
 has_children: true
+description: "Module 6: Hands-on labs overview — five validated lab exercises covering Azure Local deployment, Arc onboarding, Edge RAG setup, policy governance, and monitoring."
 ---
 
 # Module 6: Hands-On Labs

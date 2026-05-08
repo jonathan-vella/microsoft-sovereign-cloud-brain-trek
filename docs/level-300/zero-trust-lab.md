@@ -3,6 +3,7 @@ layout: default
 title: "Lab 1: Implement Zero Trust Security Controls"
 parent: Module 1 - Zero Trust Security
 nav_order: 3
+description: "Lab: Zero Trust security controls — implement Conditional Access, device compliance, risk-based policies, and audit logging in a sovereign Azure environment."
 ---
 
 # Lab 1: Implement Zero Trust Security Controls
@@ -10,17 +11,16 @@ nav_order: 3
 {: .no_toc }
 
 {: .warning }
-> **🚧 Lab Under Development**  
-> This lab content is complete but hands-on exercises are currently being validated and refined.  
-> **Expected Release:** Q1 2026  
+> **🚧 Lab Under Development**
+> This lab content is complete but hands-on exercises are currently being validated and refined.
+> **Expected Release:** Q1 2026
 > You can review the lab steps and prepare your environment in advance.
 
 ## Overview
 
 In this hands-on lab, you will implement Zero Trust security controls in a sovereign cloud environment. You will configure identity-based access controls, device compliance policies, conditional access rules, and set up monitoring for a production-like deployment.
 
-
-**Difficulty:** Intermediate-Advanced  
+**Difficulty:** Intermediate-Advanced
 **Prerequisites:** Level 200 completion, Azure subscription access
 
 ---
@@ -59,9 +59,9 @@ Azure Monitor (Compliance & Anomaly Detection)
 
 ## Lab Scenario
 
-**Company:** TechCorp Defense Solutions  
-**Environment:** Sovereign Cloud deployment (connected mode)  
-**Requirement:** Implement Zero Trust for development team accessing classified data  
+**Company:** TechCorp Defense Solutions
+**Environment:** Sovereign Cloud deployment (connected mode)
+**Requirement:** Implement Zero Trust for development team accessing classified data
 **Compliance:** FedRAMP High
 
 **Users:**
@@ -245,7 +245,7 @@ Azure Monitor (Compliance & Anomaly Detection)
    - Name: "Business Hours Only Access"
    - Conditions:
      - Users: Contractors
-     - Time: Outside 8am-6pm Mon-Fri
+     - Time: Outside 8 AM to 6 PM Mon-Fri
    - Controls:
      - Block access
    - Enable policy
@@ -451,27 +451,27 @@ You have successfully completed this lab when:
 
 ## Troubleshooting
 
-**Issue:** User blocked by conditional access policy  
+**Issue:** User blocked by conditional access policy
 **Resolution:** Check policy conditions, device compliance, location, risk level
 
-**Issue:** MFA not working  
+**Issue:** MFA not working
 **Resolution:** Verify MFA method registered, app installed, backup methods configured
 
-**Issue:** Audit logs not showing activity  
+**Issue:** Audit logs not showing activity
 **Resolution:** Verify diagnostic settings, log retention, query syntax
 
-**Issue:** Alert not triggering  
+**Issue:** Alert not triggering
 **Resolution:** Check alert conditions, verify logs are being collected, test manually
 
 ---
 
 ## Next Steps
 
-1. Review [Module Summary →](zero-trust)
-2. Continue to [Module 2: Azure Local at Scale - Connected →](../azure-local-advanced-connected)
+1. Review [Module Summary →](zero-trust.md)
+2. Continue to [Module 2: Azure Local at Scale - Connected →](azure-local-advanced-connected.md)
 3. Complete all Level 300 modules before final assessment
 
 ---
 
-**Lab Created:** October 2025  
+**Lab Created:** October 2025
 **Last Updated:** October 2025

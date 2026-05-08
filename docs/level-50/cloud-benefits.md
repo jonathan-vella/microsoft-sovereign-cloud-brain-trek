@@ -81,7 +81,7 @@ _Figure 2: Cloud enables vertical, horizontal, and automatic scaling patterns_
 **Elastic Scaling**
 
 - Automatic resource adjustment based on demand
-- Handle traffic spikes (e.g., e-commerce during peak seasons)
+- Handle traffic spikes (for example, e-commerce during peak seasons)
 - Scale up or down as needed
 - Pay only for resources used
 

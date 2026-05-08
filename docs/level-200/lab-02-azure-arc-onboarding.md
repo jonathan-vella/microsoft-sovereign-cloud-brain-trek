@@ -3,6 +3,7 @@ layout: default
 title: "Lab 2: Azure Arc Onboarding"
 parent: Hands-On Labs Overview
 nav_order: 2
+description: "Lab 2: Azure Arc onboarding — connecting servers and Kubernetes clusters to Arc, applying Azure Policy, and validating the control plane."
 ---
 
 # Lab 2: Azure Arc Onboarding

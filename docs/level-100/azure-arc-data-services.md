@@ -3,6 +3,7 @@ layout: default
 title: Azure Arc Data Services
 parent: Module 4 - Azure Arc Introduction
 nav_order: 4.3
+description: "Azure Arc-enabled Data Services — run SQL Managed Instance and PostgreSQL on any Kubernetes infrastructure with Azure-consistent management while keeping data on-premises."
 ---
 
 # Azure Arc-Enabled Data Services
@@ -27,7 +28,7 @@ Azure Arc-enabled Data Services bring Azure database services to any infrastruct
 - **Azure SQL Managed Instance:** Fully compatible SQL Server with PaaS benefits
 - **PostgreSQL Hyperscale:** Scalable PostgreSQL with Citus extension
 
-**[← Back to Azure Arc Introduction](azure-arc-intro)**
+**[← Back to Azure Arc Introduction](azure-arc-intro.md)**
 
 ---
 
@@ -487,10 +488,10 @@ This mode previously supported air-gapped environments with manual data export/i
 
 ## Next Steps
 
-- [Arc Servers →](azure-arc-servers)
-- [Arc Kubernetes →](azure-arc-kubernetes)
-- [Azure Arc Quiz →](azure-arc-quiz)
-- [Back to Arc Overview →](azure-arc-intro)
+- [Arc Servers →](azure-arc-servers.md)
+- [Arc Kubernetes →](azure-arc-kubernetes.md)
+- [Azure Arc Quiz →](azure-arc-knowledge-check.md)
+- [Back to Arc Overview →](azure-arc-intro.md)
 
 **External Resources:**
 
