@@ -528,7 +528,6 @@ The following diagrams support this module:
 2. **Explore** sub-topics for deep dives into specific areas
 3. **Take** the assessment quiz to validate understanding
 4. **Apply** production patterns to your organization
-5. **Advance** to hands-on lab exercises
 
 **Estimated Time:** 2-2.5 hours to complete this module
 

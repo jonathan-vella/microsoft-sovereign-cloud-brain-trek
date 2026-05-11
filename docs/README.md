@@ -29,21 +29,20 @@ docs/
 │   ├── Module 4: Azure Arc Introduction (3 files)
 │   └── Module 5: Edge RAG Concepts (4 files)
 │
-├── level-200/                  # Intermediate Level (34 files)
+├── level-200/                  # Intermediate Level (28 files)
 │   ├── README.md              # Level 200 overview & module index
-│   ├── Module 1: Azure Local Architecture Deep Dive (6 files + lab)
-│   ├── Module 2: Arc Advanced Management (4 files + lab)
-│   ├── Module 3: Edge RAG Implementation (5 files + lab)
-│   ├── Module 4: Pre-Sales & Solution Design (4 files + lab)
-│   ├── Module 5: Compliance & Security Patterns (3 files + lab)
-│   └── Module 6: Hands-On Labs (7 lab files)
+│   ├── Module 1: Azure Local Architecture Deep Dive (6 files)
+│   ├── Module 2: Arc Advanced Management (4 files)
+│   ├── Module 3: Edge RAG Implementation (5 files)
+│   ├── Module 4: Pre-Sales & Solution Design (4 files)
+│   └── Module 5: Compliance & Security Patterns (3 files)
 │
-├── level-300/                  # Advanced Level (23 files)
+├── level-300/                  # Advanced Level (19 files)
 │   ├── README.md              # Level 300 overview & module index
-│   ├── Module 1: Zero Trust Security (4 files + lab)
-│   ├── Module 2: Connected Azure Local (4 files + lab)
-│   ├── Module 3: Disconnected Azure Local (4 files + lab)
-│   ├── Module 4: Production Edge RAG (5 files + lab)
+│   ├── Module 1: Zero Trust Security (4 files)
+│   ├── Module 2: Connected Azure Local (4 files)
+│   ├── Module 3: Disconnected Azure Local (4 files)
+│   ├── Module 4: Production Edge RAG (5 files)
 │   └── Module 5: Advanced Troubleshooting (3 files)
 │
 ├── assets/                     # Visual assets & media
@@ -82,16 +81,15 @@ docs/
 
 **Goal:** Design solutions, handle objections, implement deployments
 
-| Module | Files | Labs | Duration | Topics |
+| Module | Files | Quiz | Duration | Topics |
 |--------|-------|------|----------|--------|
 | **1. Azure Local Deep Dive** | 6 | 1 | 1.5-2 hrs | Advanced networking, HA patterns, hardware planning |
 | **2. Arc Advanced Management** | 4 | 1 | 2-2.5 hrs | Governance, cost optimization, enterprise patterns |
 | **3. Edge RAG Implementation** | 5 | 1 | 2-2.5 hrs | Production architecture, optimization, MLOps, vector DB |
 | **4. Pre-Sales & Solution Design** | 4 | 1 | 1.5-2 hrs | Discovery, sizing, TCO/ROI analysis |
 | **5. Compliance & Security** | 3 | 1 | 1.5-2 hrs | GDPR, FedRAMP, zero-trust, encryption, key mgmt |
-| **6. Hands-On Labs** | 7 | 5 | Varies | Lab overview, environment setup, troubleshooting |
 
-**Total:** 34 files, 5 hands-on labs (20+ exercises), 10-11 hours core learning
+**Total:** 28 files, ~9-11 hours core learning
 
 ---
 
@@ -99,7 +97,7 @@ docs/
 
 **Goal:** Expert guidance, architecture leadership, troubleshooting mastery
 
-| Module | Files | Labs | Duration | Topics |
+| Module | Files | Quiz | Duration | Topics |
 |--------|-------|------|----------|--------|
 | **1. Zero Trust Security** | 4 | 1 | 1.5-2 hrs | Architecture, monitoring, compliance, implementation |
 | **2. Connected Azure Local** | 4 | 1 | 2-2.5 hrs | Multi-site topologies, advanced networking, federation |
@@ -107,7 +105,7 @@ docs/
 | **4. Production Edge RAG** | 5 | 1 | 2.5-3 hrs | Production architecture, MLOps, performance tuning |
 | **5. Advanced Troubleshooting** | 3 | - | 1.5-2 hrs | Diagnostic tools, decision trees, escalation procedures |
 
-**Total:** 23 files, 4 hands-on labs (18+ exercises), 10-12 hours core learning
+**Total:** 19 files, ~10-12 hours core learning
 
 ---
 
@@ -115,11 +113,10 @@ docs/
 
 | Metric | Value |
 |--------|-------|
-| **Total Modules** | 16 modules (5+6+5) |
+| **Total Modules** | 15 modules (5+5+5) |
 | **Total Files** | 79 content files |
 | **Total Lines** | ~10,000 lines of content |
 | **Quizzes** | 75+ questions across all levels |
-| **Hands-On Labs** | 10 complete labs (58+ exercises) |
 | **Visual Assets** | 59 specified (0 created, in designer phase) |
 | **Estimated Learning Time** | 18-30 hours core content |
 

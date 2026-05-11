@@ -45,7 +45,6 @@ Master air-gapped Azure Local deployments with manual updates, certificate manag
 1. **Air-Gapped Architecture** → [azure-local-air-gapped.md](azure-local-air-gapped.md)
 2. **Certificate Management** → [azure-local-certificate-management.md](azure-local-certificate-management.md)
 3. **Disconnected Operations** → [azure-local-advanced-disconnected.md](azure-local-advanced-disconnected.md)
-4. **Hands-On Lab** → [azure-local-disconnected-lab.md](azure-local-disconnected-lab.md)
 
 ---
 
@@ -91,7 +90,6 @@ Master air-gapped Azure Local deployments with manual updates, certificate manag
 1. Start: [Air-Gapped Architecture](azure-local-air-gapped.md)
 2. Deep Dive: [Certificate Management](azure-local-certificate-management.md)
 3. Operations: [Disconnected Procedures](azure-local-advanced-disconnected.md)
-4. Hands-On: [Lab](azure-local-disconnected-lab.md)
 
 ---
 

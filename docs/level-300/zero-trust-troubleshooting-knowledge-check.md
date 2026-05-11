@@ -1149,7 +1149,7 @@ D) Never; handle everything internally
 ❌ **Below 12 correct (<67%):** Needs Improvement - Comprehensive review required
 
 - Revisit Zero Trust and troubleshooting modules
-- Complete all hands-on labs
+- Build practical experience in a representative test environment
 - Consider additional practical experience
 
 ---
@@ -1216,7 +1216,6 @@ After completing this assessment:
 
 - **Next Assessment:** [Edge RAG Production Knowledge Check](edge-rag-production-knowledge-check.md)
 - **Previous Quiz:** [Azure Local Advanced Knowledge Check](azure-local-advanced-knowledge-check.md)
-- **Hands-On:** Complete [Zero Trust Lab](zero-trust-lab.md)
 
 ### 2. 📚 Deep Dive Content
 
@@ -1242,7 +1241,7 @@ After completing this assessment:
 
 - Review [CONTRIBUTING.md](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/blob/main/CONTRIBUTING.md)
 - Check [README](README.md) for module navigation
-- Practice with hands-on labs before retaking
+- Build practical experience in a representative test environment before retaking
 
 ---
 

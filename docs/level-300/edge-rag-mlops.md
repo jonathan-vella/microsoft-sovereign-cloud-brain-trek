@@ -104,4 +104,4 @@ graph LR
 
 ---
 
-**See also:** [Architecture](edge-rag-architecture-production.md) | [Lab](edge-rag-production-lab.md)
+**See also:** [Architecture](edge-rag-architecture-production.md)

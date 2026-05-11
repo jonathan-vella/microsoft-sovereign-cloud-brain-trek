@@ -26,7 +26,7 @@ The skilling plan provides:
 
 - **Structured learning progression** from foundational to advanced concepts
 - **Role-specific tracks** for sales and technical professionals
-- **Hands-on lab experiences** for practical skill development
+- **Knowledge checks** at the end of each module to validate understanding
 - **Clear success metrics** and completion criteria at each level
 - **Curated Microsoft Learn resources** aligned with learning objectives
 
@@ -380,21 +380,14 @@ Each level has clear success metrics to validate learning outcomes:
 - Use the provided checklists to track progress
 - Allocate dedicated time each week
 
-### 3. Engage with Hands-On Labs
-
-- Technical track: Set up lab environments
-- Complete practical exercises
-- Document your learnings
-- Share experiences with peers
-
-### 4. Leverage Microsoft Resources
+### 3. Leverage Microsoft Resources
 
 - Complete recommended Microsoft Learn modules
 - Access official documentation
 - Join Microsoft Tech Community
 - Attend webinars and events
 
-### 5. Validate Your Learning
+### 4. Validate Your Learning
 
 - Complete knowledge checks
 - Meet success criteria for each level

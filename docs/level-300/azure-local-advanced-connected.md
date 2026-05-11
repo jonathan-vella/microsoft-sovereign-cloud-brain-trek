@@ -48,7 +48,6 @@ Scale Azure Local deployments across multiple sites while maintaining cloud conn
 1. **Multi-Site Deployment Patterns** → [azure-local-multi-site.md](azure-local-multi-site.md)
 2. **Advanced Networking** → [azure-local-networking-advanced.md](azure-local-networking-advanced.md)
 3. **Update Management** → [azure-local-advanced-connected.md](azure-local-advanced-connected.md)
-4. **Hands-On Lab** → [azure-local-connected-lab.md](azure-local-connected-lab.md)
 
 ---
 
@@ -88,7 +87,6 @@ Scale Azure Local deployments across multiple sites while maintaining cloud conn
 1. Start: [Multi-Site Patterns](azure-local-multi-site.md)
 2. Deep Dive: [Advanced Networking](azure-local-networking-advanced.md)
 3. Operations: [Connected Updates](azure-local-advanced-connected.md)
-4. Hands-On: [Lab](azure-local-connected-lab.md)
 
 ---
 

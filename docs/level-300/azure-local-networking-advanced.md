@@ -97,4 +97,4 @@ Master complex networking scenarios for multi-site Azure Local deployments with 
 
 ---
 
-**See also:** [Multi-Site Architectures](azure-local-multi-site.md) | [Connected Mode Overview](azure-local-advanced-connected.md) | [Lab Exercise](azure-local-connected-lab.md)
+**See also:** [Multi-Site Architectures](azure-local-multi-site.md) | [Connected Mode Overview](azure-local-advanced-connected.md)

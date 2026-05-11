@@ -7,7 +7,7 @@ description: "Internal Level 200 visual asset specifications (excluded from nav)
 
 # Level 200 Visual Asset Specifications
 
-Purpose: Detailed design briefs for all 20 Level 200 visual assets (Assets 21–40)
+Purpose: Detailed design briefs for all 18 Level 200 visual assets (Assets 21–38)
 Created: October 21, 2025
 Asset Registry: See `docs/assets/images/README.md` for short specs and usage
 
@@ -599,70 +599,9 @@ Microsoft Learn Adaptation:
 
 ---
 
-## Module 6: Hands-On Labs
-
-### Asset 39: Lab Architecture Progression
-
-Context:
-Shows how labs build on each other producing an integrated stack by Lab 5; useful for instructors and students to see progression.
-
-Design Constraints:
-- Canvas 1400x900 px
-- Stage-based layout
-
-Content Requirements:
-- Five lab stages with key components and dependencies
-- Cumulative architecture snapshots
-- Timing and cost indicators per stage
-
-Visual Elements:
-- Stacked stages with incremental complexity indicators
-- Arrows for dependencies
-
-Wireframe Guidance:
-Left-to-right stage progression with mini-diagrams per lab and cumulative view at right
-
-Acceptance Criteria:
-- [ ] Each lab stage is clearly labeled and shows added components
-- [ ] Dependencies and progression arrows present
-- [ ] Cost/time per stage shown
-
-Microsoft Learn Adaptation:
-- Map to labs: docs/level-200/lab-01-azure-local-deployment.md etc.
-
----
-
-### Asset 40: Lab Environment Cost and Time Matrix
-
-Context:
-Provides a matrix of estimated time and cost per lab and cumulative totals to help planning.
-
-Design Constraints:
-- Canvas 1200x800 px
-- Table with bar-chart visual overlays
-
-Content Requirements:
-- Lab durations, resource costs, hardware costs, cumulative totals, variables
-
-Visual Elements:
-- Matrix table, timeline bar chart, cost pie breakdowns
-
-Wireframe Guidance:
-Top: matrix table with small chart overlays; bottom: timeline bar chart with cumulative markers
-
-Acceptance Criteria:
-- [ ] Duration and cost fields for each lab present
-- [ ] Cumulative totals calculated and shown
-- [ ] Variables and assumptions listed
-
-Microsoft Learn Adaptation:
-- Relate to labs overview: docs/level-200/labs-overview.md
-
----
-
 ## Summary & Next Steps
 
-- Total assets specified: 20 (Assets 21–40)
+- Total assets specified: 18 (Assets 21–38)
 - Each asset includes context, constraints, content, visuals, wireframes, acceptance criteria, and Learn references
 - Next: integrate placeholders into `docs/level-200/*.md` (Phase 3)
 

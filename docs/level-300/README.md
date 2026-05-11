@@ -40,7 +40,7 @@ By the end of Level 300, you will be able to:
 
 Before starting Level 300, ensure you have:
 
-- [x] Completed Level 200 learning objectives and hands-on labs
+- [x] Completed Level 200 learning objectives and knowledge checks
 - [ ] Recommended: AZ-104 (Azure Administrator) or AZ-305 (Solutions Architect) certification
 - [ ] Access to a production or production-like lab environment
 - [ ] Experience with at least one Azure Local deployment
@@ -115,58 +115,6 @@ Before starting Level 300, ensure you have:
 - **[Disconnected operations detailed guide](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)** - Air-gapped operations best practices
 - **[Edge RAG production deployment](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/overview)** - Complete deployment walkthrough
 - **[Azure Local update management](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509)** - Update strategies
-
----
-
-## Hands-On Labs
-
-### Lab 1: Zero Trust Implementation
-
-{: .warning }
-> **🚧 Lab Under Development**
-> This lab content is complete but hands-on exercises are currently being validated and refined.
-> **Expected Release:** Q1 2026
-
-**Objective:** Implement Zero Trust security controls for a sovereign environment
-
-**Prerequisites:**
-
-- Azure subscription
-- Test workload environment
-
-**[Lab Instructions →](zero-trust-lab.md)**
-
-### Lab 2: Air-Gapped Azure Local Deployment
-
-{: .warning }
-> **🚧 Lab Under Development**
-> This lab content is complete but hands-on exercises are currently being validated and refined.
-> **Expected Release:** Q1 2026
-
-**Objective:** Configure a complete air-gapped deployment with certificate management
-
-**Prerequisites:**
-
-- Azure Local hardware or nested virtualization environment
-- Offline update packages
-
-**[Lab Instructions →](azure-local-disconnected-lab.md)**
-
-### Lab 3: Production Edge RAG with Custom Models
-
-{: .warning }
-> **🚧 Lab Under Development**
-> This lab content is complete but hands-on exercises are currently being validated and refined.
-> **Expected Release:** Q1 2026
-
-**Objective:** Deploy and optimize Edge RAG with custom language models
-
-**Prerequisites:**
-
-- Completion of Level 200 Edge RAG labs
-- AKS Arc cluster with adequate resources
-
-**[Lab Instructions →](edge-rag-production-lab.md)**
 
 ---
 

@@ -173,4 +173,4 @@ graph TB
 
 ---
 
-**See also:** [Connected Mode Architecture](azure-local-advanced-connected.md) | [Networking Deep Dive](azure-local-networking-advanced.md) | [Lab Exercise](azure-local-connected-lab.md)
+**See also:** [Connected Mode Architecture](azure-local-advanced-connected.md) | [Networking Deep Dive](azure-local-networking-advanced.md)

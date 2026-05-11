@@ -611,7 +611,6 @@ Until assets are created, use placeholders:
 - Create detailed architecture diagrams for Azure Local
 - Develop Azure Arc architecture visuals
 - Design Edge RAG solution architecture diagrams
-- Create hands-on lab screenshots and walkthroughs
 
 ---
 
@@ -1572,88 +1571,25 @@ If you create or adapt visual assets for this project:
 
 ---
 
-### Module 6: Hands-On Labs
-
-#### Asset 39: Lab Architecture Progression
-**File:** `level-200/labs-architecture-progression.svg`
-**Priority:** Medium
-**Status:** 🔴 Needed
-
-**Description:** Visual showing how each lab builds on previous, creating an integrated infrastructure by Lab 5.
-
-**Content:**
-- Lab 1: Azure Local cluster setup (foundation)
-- Lab 2: Arc integration on Lab 1 cluster (management plane)
-- Lab 3: Edge RAG deployment on Lab 1 cluster (application layer)
-- Lab 4: Governance policies applied to Labs 1-3 (control layer)
-- Lab 5: Monitoring across all Labs 1-4 (observability layer)
-- Cumulative architecture at each stage
-- Dependencies and data flow
-
-**Visual Elements:**
-- Five stages showing progressive architecture
-- Dependency arrows showing which labs depend on prior labs
-- Color coding: Infrastructure (Lab 1), Management (Lab 2), Application (Lab 3), Governance (Lab 4), Observability (Lab 5)
-- Cumulative resource growth visualization
-- Cost and time estimates at each stage
-
-**Size:** 1400x900px
-
-**Used In:**
-- `docs/level-200/labs-overview.md`
-
----
-
-#### Asset 40: Lab Environment Cost and Time Matrix
-**File:** `level-200/labs-cost-time-matrix.svg`
-**Priority:** Low
-**Status:** 🔴 Needed
-
-**Description:** Matrix showing estimated costs and duration for each lab and cumulative totals.
-
-**Content:**
-- Lab-by-lab breakdown:
-  - Estimated duration (hours)
-  - Azure resource costs (daily, total)
-  - Hardware/infrastructure costs
-  - Cumulative totals
-- Cost breakdown by resource type (compute, storage, networking)
-- Timeline visualization (gantt-style)
-- Variables affecting cost (region, resource sizing, duration)
-
-**Visual Elements:**
-- Data table with visual encodings (color for cost ranges, bar charts for duration)
-- Cumulative trend lines
-- Cost breakdown pie charts
-- Timeline bar chart
-
-**Size:** 1200x800px
-
-**Used In:**
-- `docs/level-200/labs-overview.md`
-
----
-
 ## Level 200 Visual Assets Summary
 
-### Total Level 200 Assets: 20 diagrams
+### Total Level 200 Assets: 18 diagrams
 - **Module 1 (Azure Local Advanced):** 3 assets
 - **Module 2 (Arc Advanced Management):** 3 assets
 - **Module 3 (Edge RAG Implementation):** 5 assets
 - **Module 4 (Pre-Sales & Solution Design):** 3 assets
 - **Module 5 (Compliance & Security Patterns):** 4 assets
-- **Module 6 (Hands-On Labs):** 2 assets
 
 ### Priority Distribution (Level 200)
 - **High Priority:** 9 assets (core architectures, compliance frameworks)
-- **Medium Priority:** 10 assets (supporting and reference materials)
+- **Medium Priority:** 8 assets (supporting and reference materials)
 - **Low Priority:** 1 asset (supplementary matrix)
 
 ### Total Project Assets (Levels 100 + 200)
 - **Level 100:** 20 diagrams (100% specified, 0% created)
-- **Level 200:** 20 diagrams (100% specified, 0% created)
+- **Level 200:** 18 diagrams (100% specified, 0% created)
 - **Level 300:** TBD (estimated 15-20 diagrams)
-- **TOTAL:** 40+ diagrams planned across current levels
+- **TOTAL:** 38+ diagrams planned across current levels
 
 ---
 
@@ -1865,7 +1801,7 @@ If you create or adapt visual assets for this project:
 
 **Description:** Flowchart showing failover detection, execution, and recovery procedures for multi-site deployments.
 
-**Used In:** `docs/level-300/azure-local-connected-lab.md`
+**Used In:** `docs/level-300/azure-local-advanced-connected.md`
 **Source Refs:** [Disaster recovery](https://learn.microsoft.com/en-us/azure/azure-local/)
 
 ---
@@ -1891,7 +1827,7 @@ If you create or adapt visual assets for this project:
 
 **Description:** Step-by-step process showing export, secure transfer, validation, and import of updates in air-gapped systems.
 
-**Used In:** `docs/level-300/azure-local-disconnected-lab.md`
+**Used In:** `docs/level-300/azure-local-advanced-disconnected.md`
 **Source Refs:** [Manual update procedures](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509-disconnected)
 
 ---
@@ -1953,7 +1889,7 @@ If you create or adapt visual assets for this project:
 
 **Description:** Comparison matrix of vector database options for edge deployment showing capabilities, performance, and deployment requirements.
 
-**Used In:** `docs/level-300/edge-rag-production-lab.md`
+**Used In:** `docs/level-300/edge-rag-production.md`
 **Source Refs:** [Vector search](https://learn.microsoft.com/en-us/azure/search/vector-search-overview)
 
 ---
@@ -1965,7 +1901,7 @@ If you create or adapt visual assets for this project:
 
 **Description:** Framework showing quality metrics, observability points, and monitoring dashboards for production RAG systems.
 
-**Used In:** `docs/level-300/edge-rag-production-lab.md`
+**Used In:** `docs/level-300/edge-rag-production.md`
 **Source Refs:** [Monitoring and diagnostics](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-monitor-model-performance)
 
 ---

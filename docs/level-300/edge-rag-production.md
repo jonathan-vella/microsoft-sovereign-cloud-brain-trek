@@ -56,7 +56,6 @@ _Figure 1: Enterprise-grade Edge RAG architecture with load balancing, GPU infer
 1. **Production Architecture** → [edge-rag-architecture-production.md](edge-rag-architecture-production.md)
 2. **Performance Optimization** → [edge-rag-optimization.md](edge-rag-optimization.md)
 3. **MLOps & Model Management** → [edge-rag-mlops.md](edge-rag-mlops.md)
-4. **Hands-On Lab** → [edge-rag-production-lab.md](edge-rag-production-lab.md)
 
 ---
 
@@ -102,7 +101,6 @@ _Figure 1: Enterprise-grade Edge RAG architecture with load balancing, GPU infer
 1. Start: [Production Architecture](edge-rag-architecture-production.md)
 2. Optimize: [Performance Tuning](edge-rag-optimization.md)
 3. Automate: [MLOps Pipeline](edge-rag-mlops.md)
-4. Hands-On: [Lab](edge-rag-production-lab.md)
 
 ---
 

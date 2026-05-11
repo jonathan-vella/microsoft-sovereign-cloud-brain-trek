@@ -92,4 +92,4 @@ Manage certificates manually in air-gapped environments without cloud certificat
 
 ---
 
-**See also:** [Air-Gapped Architecture](azure-local-air-gapped.md) | [Disconnected Lab](azure-local-disconnected-lab.md)
+**See also:** [Air-Gapped Architecture](azure-local-air-gapped.md)

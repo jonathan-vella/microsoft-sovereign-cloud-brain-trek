@@ -423,7 +423,6 @@ If any layer is breached, others still provide protection.
 ## Next Steps
 
 1. Continue to [Monitoring & Compliance →](zero-trust-monitoring.md)
-2. Ready for hands-on work? [Lab: Implement Zero Trust →](zero-trust-lab.md)
 
 ---
 

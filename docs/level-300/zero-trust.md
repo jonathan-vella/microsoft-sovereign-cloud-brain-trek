@@ -49,7 +49,6 @@ Master the Zero Trust security model and its application to sovereign cloud envi
 1. **Zero Trust Principles** → [zero-trust.md](zero-trust.md)
 2. **Implementation Architecture** → [zero-trust-architecture.md](zero-trust-architecture.md)
 3. **Monitoring & Compliance** → [zero-trust-monitoring.md](zero-trust-monitoring.md)
-4. **Hands-On Lab** → [zero-trust-lab.md](zero-trust-lab.md)
 
 ---
 
@@ -236,7 +235,6 @@ Secure cloud infrastructure, container orchestration, and compute resources.
 1. **Start:** [Zero Trust Principles Page](zero-trust.md) - Understand core concepts
 2. **Deep Dive:** [Implementation Architecture](zero-trust-architecture.md) - See how components work
 3. **Operations:** [Monitoring & Compliance](zero-trust-monitoring.md) - Learn operational procedures
-4. **Practice:** [Hands-On Lab](zero-trust-lab.md) - Implement Zero Trust controls
 
 ---
 

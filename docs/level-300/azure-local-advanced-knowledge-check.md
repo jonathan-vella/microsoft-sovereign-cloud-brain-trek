@@ -1020,12 +1020,12 @@ D) Time-based access restrictions
 
 - Solid foundation but gaps in advanced topics
 - Review specific areas where questions were missed
-- Practice with labs before leading production deployments
+- Practice with real-world deployments before leading production rollouts
 
 ❌ **Below 14 correct (<70%):** Needs Improvement - Comprehensive review required
 
 - Revisit Level 300 modules thoroughly
-- Complete all hands-on labs
+- Build practical experience in a representative test environment
 - Consider additional practical experience
 - Review Level 200 prerequisites
 
@@ -1091,8 +1091,6 @@ After completing this assessment:
 
 - **Next Quiz:** Zero Trust & Arc Advanced Quiz _(coming soon)_
 - **Next Quiz:** Edge RAG Production Quiz _(coming soon)_
-- **Hands-On:** Complete [Air-Gapped Lab](azure-local-disconnected-lab.md)
-- **Hands-On:** Complete [Connected Lab](azure-local-connected-lab.md)
 
 ### 2. 📚 Deep Dive Content
 
@@ -1118,7 +1116,7 @@ After completing this assessment:
 
 - Review [CONTRIBUTING.md](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/blob/main/CONTRIBUTING.md)
 - Check [README](README.md) for module navigation
-- Practice with hands-on labs before retaking
+- Build practical experience in a representative test environment before retaking
 
 ---
 

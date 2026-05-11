@@ -135,32 +135,6 @@ Master regulatory compliance frameworks (GDPR, FedRAMP), encryption strategies, 
 
 ---
 
-### Module 6: Hands-On Labs
-
-**Status:** ✅ Complete
-
-Five progressive hands-on labs reinforcing Modules 1-5 through practical implementation of Azure Local, Azure Arc, Edge RAG, policy governance, and monitoring in a complete sovereign cloud environment.
-
-{: .note }
-> **💡 Note:** Lab exercises are provided for hands-on practice. Time to complete labs varies based on environment setup and individual experience.
-
-**Lab Overview:**
-
-1. [Lab 1: Azure Local Deployment](lab-01-azure-local-deployment.md)
-   - Deploy Azure Local in connected mode with sample applications
-2. [Lab 2: Azure Arc Onboarding](lab-02-azure-arc-onboarding.md)
-   - Register and manage resources with Arc, GitOps, extensions
-3. [Lab 3: Edge RAG Setup](lab-03-edge-rag-setup.md)
-   - Complete RAG system with Weaviate, Ollama, and FastAPI
-4. [Lab 4: Policy & Governance](lab-04-policy-governance.md)
-   - Custom policies, Kubernetes enforcement, compliance monitoring
-5. [Lab 5: Monitoring & Observability](lab-05-monitoring-observability.md)
-   - End-to-end monitoring with Log Analytics, alerts, and dashboards
-
-**[Module 6 Overview & Navigation](../level-200/README.md)**
-
----
-
 ## Recommended Microsoft Learn Resources
 
 ### Essential Learning
@@ -180,65 +154,6 @@ Five progressive hands-on labs reinforcing Modules 1-5 through practical impleme
 - **[Azure Local deployment overview](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction)** - Deployment planning guide
 - **[Disconnected operations overview](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)** - Air-gapped deployment guidance
 - **[Edge RAG deployment prerequisites](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/complete-prerequisites)** - Complete prerequisites checklist
-
----
-
-## Hands-On Labs
-
-### Lab 1: Azure Local Architecture & Hardware Sizing
-
-**Objective:** Plan and document an advanced Azure Local deployment scenario with proper hardware sizing
-
-**Module:** Azure Local Architecture Deep Dive  
-**Prerequisites:**
-
-- Completion of Module 1: Azure Local Architecture Deep Dive
-- Access to Azure Local sizing tool
-- Understanding of customer requirements
-
-**Topics Covered:**
-
-- Hardware planning and capacity calculations
-- High-availability pattern design
-- Network configuration for edge scenarios
-
----
-
-### Lab 2: Arc Advanced Governance & Cost Analysis
-
-**Objective:** Design an enterprise Arc governance framework with policy enforcement and cost optimization strategies
-
-**Module:** Arc Advanced Management  
-**Prerequisites:**
-
-- Completion of Module 2: Arc Advanced Management
-- Access to an Azure subscription
-- Understanding of Azure Policy
-
-**Topics Covered:**
-
-- Azure Policy implementation at scale
-- Cost optimization strategies
-- Enterprise governance patterns
-
----
-
-### Lab 3: Edge RAG Infrastructure Preparation
-
-**Objective:** Set up and optimize infrastructure for Edge RAG production deployment
-
-**Module:** Edge RAG Implementation  
-**Prerequisites:**
-
-- Completion of Module 3: Edge RAG Implementation
-- AKS Arc cluster or ability to create one
-- Linux VM or container environment
-
-**Topics Covered:**
-
-- Vector database setup and indexing
-- LLM model deployment and optimization
-- RAG system monitoring and operations
 
 ---
 
@@ -281,9 +196,9 @@ You have successfully completed Module 3 when you can:
 
 ### Current Progress
 
-**✅ Completed:** Modules 1, 2, 3, 4, 5, and 6 (All Level 200 modules!)  
-**Duration:** 10-11 hours of comprehensive intermediate content  
-**Status:** Level 200 is 100% complete with all hands-on labs
+**✅ Completed:** Modules 1, 2, 3, 4, and 5 (All Level 200 modules)  
+**Duration:** 9-11 hours of comprehensive intermediate content  
+**Status:** Level 200 is 100% complete
 
 ---
 
@@ -296,8 +211,7 @@ You have successfully completed Module 3 when you can:
 | **Module 3** | ✅ Complete | RAG Deployment, LLM Optimization, Vector Databases, Operations | 2-2.5 hrs | 6 |
 | **Module 4** | ✅ Complete | Pre-Sales, Discovery, Sizing, Cost Estimation | 1.5-2 hrs | 5 |
 | **Module 5** | ✅ Complete | Compliance, GDPR, FedRAMP, Encryption, Security Hardening | 1.5-2 hrs | 6 |
-| **Module 6** | ✅ Complete | Hands-On Labs (5 progressive labs with Azure Local, Arc, RAG, Policy, Monitoring) | Varies by experience | 6 |
-| **Level 200 Total** | ✅ Complete | **All intermediate topics with practical labs** | **10-11 hrs** | **33 files** |
+| **Level 200 Total** | ✅ Complete | **All intermediate topics** | **9-11 hrs** | **27 files** |
 
 ---
 
@@ -324,16 +238,5 @@ You have successfully completed Module 5 when you can:
 - ✓ Implement zero-trust security architecture
 - ✓ Design incident response procedures
 - ✓ Successfully complete the compliance quiz
-
-### Module 6: Hands-On Labs ✅
-
-You have successfully completed Module 6 when you can:
-
-- ✓ Deploy and configure Azure Local in connected mode (Lab 1)
-- ✓ Register Kubernetes clusters with Azure Arc (Lab 2)
-- ✓ Implement complete Edge RAG solution (Lab 3)
-- ✓ Enforce governance policies across hybrid infrastructure (Lab 4)
-- ✓ Configure comprehensive monitoring and alerting (Lab 5)
-- ✓ All validation steps passing on 5 labs
 
 **Last Updated:** October 2025

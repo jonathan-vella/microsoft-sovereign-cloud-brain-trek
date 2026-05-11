@@ -1327,12 +1327,12 @@ Cons:
 
 - Solid foundation but gaps in advanced operations
 - Review MLOps and optimization sections
-- Complete hands-on labs
+- Build practical experience in a representative test environment
 
 ❌ **Below 12 correct (<67%):** Needs Improvement - Comprehensive review required
 
 - Revisit production RAG and MLOps modules
-- Complete all hands-on labs
+- Build practical experience in a representative test environment
 - Consider additional real-world practice
 
 ---
@@ -1401,7 +1401,6 @@ After completing this assessment:
 - [Production Architecture](edge-rag-architecture-production.md)
 - [Performance Optimization](edge-rag-optimization.md)
 - [MLOps Workflows](edge-rag-mlops.md)
-- [Production Lab](edge-rag-production-lab.md)
 
 ### 3. 🔗 Related Content
 
