@@ -1,12 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 200 40">
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
   <title>Microsoft Sovereign Cloud Brain Trek</title>
-  <g>
-    <rect width="14" height="14" x="2" y="13" fill="#F25022"/>
-    <rect width="14" height="14" x="18" y="13" fill="#7FBA00"/>
-    <rect width="14" height="14" x="2" y="29" fill="#00A4EF" transform="translate(0 -16)"/>
-    <rect width="14" height="14" x="18" y="29" fill="#FFB900" transform="translate(0 -16)"/>
-  </g>
-  <text x="42" y="26" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="currentColor">
-    Sovereign Cloud Brain Trek
-  </text>
+  <!-- Microsoft "four squares" logomark. The site title text is rendered
+       separately by Starlight (`replacesTitle: false` in astro.config.mjs),
+       so this SVG carries only the iconic squares and no embedded text. -->
+  <rect width="14" height="14" x="1"  y="1"  fill="#F25022"/>
+  <rect width="14" height="14" x="17" y="1"  fill="#7FBA00"/>
+  <rect width="14" height="14" x="1"  y="17" fill="#00A4EF"/>
+  <rect width="14" height="14" x="17" y="17" fill="#FFB900"/>
 </svg>

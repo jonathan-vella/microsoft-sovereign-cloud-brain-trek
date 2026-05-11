@@ -148,31 +148,42 @@ export async function buildLevelItems(level) {
 
 /**
  * Build the full top-level Starlight sidebar configuration.
+ *
+ * Top-level level groups are `collapsed: true` so the sidebar opens with a
+ * clean five-row outline (Level 50 / 100 / 200 / 300 + Resources). Inside
+ * each level, module groups are also `collapsed: true` so the nested tree
+ * doesn't auto-expand when the user clicks into a single level. Starlight
+ * still auto-opens the active path on the page being viewed.
  */
 export async function buildSidebar() {
   return [
     {
       label: "Level 50 — Prerequisites",
       badge: { text: "L50", variant: "note" },
+      collapsed: true,
       items: await buildLevelItems("level-50"),
     },
     {
       label: "Level 100 — Foundational",
       badge: { text: "L100", variant: "tip" },
+      collapsed: true,
       items: await buildLevelItems("level-100"),
     },
     {
       label: "Level 200 — Intermediate",
       badge: { text: "L200", variant: "caution" },
+      collapsed: true,
       items: await buildLevelItems("level-200"),
     },
     {
       label: "Level 300 — Advanced",
       badge: { text: "L300", variant: "danger" },
+      collapsed: true,
       items: await buildLevelItems("level-300"),
     },
     {
       label: "Resources",
+      collapsed: true,
       autogenerate: { directory: "resources" },
     },
   ];
