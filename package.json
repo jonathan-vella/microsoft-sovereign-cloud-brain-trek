@@ -12,7 +12,10 @@
   },
   "author": "Jonathan Vella",
   "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "devDependencies": {
-    "markdownlint-cli2": "^0.21.0"
+    "markdownlint-cli2": "^0.22.1"
   }
 }

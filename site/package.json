@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -13,18 +16,18 @@
     "emit-legacy-stubs": "node scripts/emit-legacy-stubs.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "^5.0.0",
-    "@astrojs/starlight": "^0.39.0",
+    "@astrojs/mdx": "^5.0.4",
+    "@astrojs/starlight": "^0.39.2",
     "@fontsource-variable/inter": "^5.2.8",
     "astro": "^6.3.1",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.0",
+    "@astrojs/check": "^0.9.9",
     "rehype-mermaid-lite": "^1.1.0",
     "typescript": "^6.0.3"
   },
   "overrides": {
-    "@astrojs/sitemap": "3.6.1"
+    "@astrojs/sitemap": "3.7.2"
   }
 }
