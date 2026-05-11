@@ -15,7 +15,7 @@
   "dependencies": {
     "astro": "^5.7.0",
     "@astrojs/starlight": "0.32.4",
-    "@astrojs/mdx": "^4.0.0",
+    "@astrojs/mdx": "^5.0.4",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
