@@ -1,0 +1,13 @@
+# Astro / Starlight build artifacts
+node_modules/
+dist/
+.astro/
+*.log
+.env
+.env.local
+.DS_Store
+
+# Migration script working artifacts (regenerable from docs/)
+needs-manual-fix/
+path-rewrite-map.json
+migration-report.json

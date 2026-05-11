@@ -1,0 +1,82 @@
+/**
+ * Custom CSS for Microsoft Sovereign Cloud Brain Trek.
+ *
+ * Layered on top of Starlight's default theme. The Microsoft Azure brand
+ * palette and Segoe UI font stack mirror the Microsoft Learn experience,
+ * matching what the Jekyll/just-the-docs site uses today and what
+ * dc2fabric uses for its Starlight build.
+ */
+
+:root {
+  /* Azure brand palette */
+  --azure-blue: #0078d4;
+  --azure-dark-blue: #004578;
+  --azure-light-blue: #50e6ff;
+  --azure-green: #107c10;
+  --azure-orange: #ff8c00;
+  --azure-red: #d13438;
+
+  /* Starlight theme overrides — light */
+  --sl-color-accent-low: #cce4f5;
+  --sl-color-accent: var(--azure-blue);
+  --sl-color-accent-high: var(--azure-dark-blue);
+
+  --sl-font: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Arial, sans-serif;
+  --sl-font-system-mono: "Cascadia Code", "Consolas", "Monaco", "Courier New",
+    monospace;
+}
+
+:root[data-theme="dark"] {
+  /* Starlight theme overrides — dark */
+  --sl-color-accent-low: #002b4a;
+  --sl-color-accent: #4cb1f0;
+  --sl-color-accent-high: #cce4f5;
+}
+
+/* Knowledge Check answer reveal */
+.knowledge-check {
+  border-left: 4px solid var(--azure-blue);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  background: var(--sl-color-bg-nav);
+  border-radius: 0.25rem;
+}
+
+.knowledge-check summary {
+  cursor: pointer;
+  color: var(--azure-blue);
+  font-weight: 600;
+}
+
+/* Diagram container */
+.diagram-container {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.diagram-container > summary {
+  background: var(--sl-color-bg-nav);
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.diagram-container[open] > summary {
+  border-bottom: 1px solid var(--sl-color-gray-5);
+}
+
+.diagram-container .diagram-body {
+  padding: 1rem;
+}
+
+/* Mermaid diagrams render as SVG inside <pre class="mermaid"> by
+   rehype-mermaid-lite. Center and size them consistently. */
+pre.mermaid svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}

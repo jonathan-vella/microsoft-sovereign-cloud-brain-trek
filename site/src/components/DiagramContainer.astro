@@ -1,0 +1,39 @@
+---
+/**
+ * DiagramContainer.astro
+ *
+ * Collapsible wrapper used by complex Mermaid or image diagrams. Replaces
+ * the Jekyll pattern:
+ *
+ *   <details class="diagram-container" open>
+ *   <summary>Diagram Title</summary>
+ *
+ *   ```mermaid
+ *   ...
+ *   ```
+ *   </details>
+ *
+ * IMPORTANT: rehype-mermaid-lite must be able to see the fenced ```mermaid
+ * block. We pass children through unmodified — Astro's MDX pipeline runs
+ * the rehype plugin chain on children before this component renders, so
+ * the diagram will already be a <pre class="mermaid"> SVG by the time
+ * the slot is rendered. Verified during the Level-50 pilot.
+ *
+ * Props:
+ *   title       — required. Plain text label shown in the summary row.
+ *   defaultOpen — if true, the diagram is expanded on first paint.
+ */
+interface Props {
+  title: string;
+  defaultOpen?: boolean;
+}
+
+const { title, defaultOpen = false } = Astro.props;
+---
+
+<details class="diagram-container" open={defaultOpen}>
+  <summary>{title}</summary>
+  <div class="diagram-body">
+    <slot />
+  </div>
+</details>

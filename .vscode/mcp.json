@@ -1,0 +1,9 @@
+{
+  "// info": "VS Code MCP server config — workspace-shared. The Astro Docs MCP server gives Copilot Chat and the Coding Agent live access to current Astro and Starlight documentation while the migration to Astro is in progress. See https://docs.astro.build/en/guides/build-with-ai/ for details.",
+  "servers": {
+    "astro-docs": {
+      "type": "http",
+      "url": "https://mcp.docs.astro.build/mcp"
+    }
+  }
+}

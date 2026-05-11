@@ -3,7 +3,9 @@
 Thumbs.db
 
 # Ignore editor files
-.vscode/
+.vscode/*
+!.vscode/mcp.json
+!.vscode/extensions.json
 .idea/
 *.swp
 *.swo
@@ -23,6 +25,10 @@ Gemfile.lock
 # Ignore node modules if using any npm packages
 node_modules/
 package-lock.json
+# The Astro site (site/) needs its lockfile checked in for reproducible
+# installs across CI and contributors. The root rule above stays for the
+# Jekyll project root.
+!site/package-lock.json
 
 # Ignore temporary files
 *.tmp
