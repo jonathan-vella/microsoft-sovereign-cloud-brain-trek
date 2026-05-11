@@ -20,7 +20,7 @@
     "**/node_modules/**",
     "**/vendor/**",
     "**/.git/**",
-    "**/VISUAL_SPECIFICATIONS.md"
+    "**/visual-specifications.md"
   ],
 
   // Use the .markdownlint.json config file

@@ -248,12 +248,17 @@ function planPaths(files, moduleIndex, args) {
     const destPath = path.join(DEST_DIR, destRel);
 
     // Starlight slug is the path without /index and without the .md ext.
-    const slug =
+    // Starlight lowercases the route slug at build time (so source file
+    // `VISUAL_SPECIFICATIONS.md` ships at `/level-100/visual_specifications/`),
+    // so we lowercase the slug here too — otherwise the path-rewrite-map
+    // would point legacy `.html` URLs at uppercase routes that 404.
+    const slug = (
       "/" +
       (leaf === "index"
         ? folder.split(path.sep).join("/")
         : `${folder.split(path.sep).join("/")}/${leaf}`) +
-      "/";
+      "/"
+    ).toLowerCase();
 
     const oldSlug = `/${file.levelDir}/${file.baseName}.html`;
 
