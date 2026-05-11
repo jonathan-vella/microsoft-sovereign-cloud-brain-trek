@@ -864,6 +864,4 @@ After achieving mastery (80%+):
 
 ---
 
-</details>
-
 **Last Updated:** October 2025

@@ -1,0 +1,146 @@
+---
+title: "Sovereign Landing Zone"
+description: "Complete enterprise reference architecture for sovereign cloud infrastructure — SLZ design principles, identity, network, governance, and compliance landing pads."
+sidebar:
+  order: 20
+---
+
+import DiagramContainer from "~/components/DiagramContainer.astro";
+
+Complete enterprise reference architecture for deploying sovereign cloud infrastructure with full compliance and governance controls.
+
+---
+
+## Overview
+
+A Sovereign Landing Zone provides a standardized, secure foundation for deploying workloads that must comply with data residency, regulatory, and operational sovereignty requirements. This architecture implements Azure's Cloud Adoption Framework principles with sovereignty-specific enhancements.
+
+## Learning Objectives
+
+After completing this section, you will be able to:
+
+- ✅ Design a complete Sovereign Landing Zone architecture
+- ✅ Implement management group hierarchy for governance
+- ✅ Configure network topology for sovereignty requirements
+- ✅ Apply policy-as-code for compliance enforcement
+
+## Prerequisites
+
+- [ ] Completed Level 200 modules
+- [ ] Understanding of Azure management groups and subscriptions
+- [ ] Familiarity with Azure Policy and governance concepts
+
+---
+
+## Sovereign Landing Zone Components
+
+<DiagramContainer title="Sovereign Landing Zone Architecture">
+
+_
+_[Sovereign Landing Zone Architecture](../assets/images/level-300/sovereign-landing-zone.svg)_
+_Figure 1: Complete Sovereign Landing Zone with management group hierarchy, network topology, and security controls_
+
+</DiagramContainer>
+
+### Management Group Hierarchy
+
+The Sovereign Landing Zone uses a hierarchical management group structure:
+
+| Level | Purpose | Example |
+|-------|---------|---------|
+| Root | Tenant-wide governance | Contoso Root |
+| Platform | Central IT services | Platform MG |
+| Landing Zones | Workload subscriptions | EU Landing Zones |
+| Sandbox | Development/testing | Dev/Test MG |
+
+### Core Components
+
+#### 1. Identity & Access
+
+- **Microsoft Entra ID** — Centralized identity with conditional access
+- **Privileged Identity Management (PIM)** — Just-in-time access
+- **Customer Lockbox** — Operator access approval
+
+#### 2. Network Topology
+
+- **Hub-Spoke Architecture** — Centralized connectivity
+- **Azure Firewall** — Egress filtering and threat protection
+- **ExpressRoute** — Private connectivity to on-premises
+- **Private Endpoints** — PaaS service isolation
+
+#### 3. Security & Compliance
+
+- **Azure Policy** — Guardrails and compliance automation
+- **Microsoft Defender for Cloud** — Security posture management
+- **Key Vault with HSM** — Centralized secrets and key management
+- **Log Analytics** — Centralized logging and monitoring
+
+---
+
+## Multi-Region Deployment
+
+For organizations requiring geographic redundancy within sovereignty boundaries:
+
+<DiagramContainer title="Multi-Region Sovereign Deployment">
+
+_
+_[Multi-Region Sovereign Deployment](../assets/images/level-300/multi-region-sovereign.svg)_
+_Figure 2: Multi-region deployment with data residency controls and cross-region replication_
+
+</DiagramContainer>
+
+### Region Selection Criteria
+
+When selecting Azure regions for sovereign deployments:
+
+1. **Data Residency** — Regions within sovereignty boundary
+2. **Compliance Certifications** — Required regulatory approvals
+3. **Service Availability** — Needed Azure services present
+4. **Latency Requirements** — Performance for end users
+
+---
+
+## Hybrid Identity Architecture
+
+Organizations with on-premises Active Directory require hybrid identity integration:
+
+<DiagramContainer title="Hybrid Identity Architecture">
+
+_
+_[Hybrid Identity Architecture](../assets/images/level-300/hybrid-identity.svg_
+_Figure 3: Hybrid identity with Microsoft Entra Connect and conditional access_
+
+</DiagramContainer>
+
+### Identity Synchronization Options
+
+| Option | Use Case | Sovereignty Impact |
+|--------|----------|-------------------|
+| Password Hash Sync | Cloud-first | Hashes stored in cloud |
+| Pass-through Auth | On-premises control | No password data in cloud |
+| Federation (AD FS) | Full on-premises | Complete identity sovereignty |
+
+---
+
+## Implementation Checklist
+
+- [ ] Define management group hierarchy
+- [ ] Create platform subscriptions (connectivity, identity, management)
+- [ ] Deploy hub virtual network with Azure Firewall
+- [ ] Configure ExpressRoute or VPN connectivity
+- [ ] Implement Azure Policy initiatives
+- [ ] Enable Microsoft Defender for Cloud
+- [ ] Deploy Log Analytics workspace
+- [ ] Configure Microsoft Entra ID with PIM
+
+---
+
+## Next Steps
+
+- **[Data Classification Flow →](/level-300/data-classification/)** — Classify and protect sensitive data
+- **[Incident Response Workflow →](/level-300/incident-response/)** — Security incident procedures
+- **[Industry Architectures →](/level-300/healthcare-sovereign/)** — Industry-specific implementations
+
+---
+
+**Reference:** [Azure Landing Zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) — Microsoft Cloud Adoption Framework

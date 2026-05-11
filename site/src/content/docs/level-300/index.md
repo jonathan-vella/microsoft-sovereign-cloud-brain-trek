@@ -1,9 +1,166 @@
 ---
-title: Level 300 — Advanced
-description: Production patterns including zero trust, multi-site, air-gapped, MLOps, certificate management, and disaster recovery for sovereign cloud workloads.
+title: "Level 300 - Advanced"
+description: "Advanced implementation and expert-level guidance for Microsoft Sovereign Cloud solutions"
 sidebar:
-  order: 0
+  order: 6
 ---
 
-This level lands during the migration. Pages from `docs/level-300/` will be
-ported here as part of Phase 2 of the migration plan.
+## Overview
+
+Achieve expert-level proficiency to lead complex deployments, manage production environments, and drive strategic customer engagements.
+
+---
+
+## Learning Objectives
+
+By the end of Level 300, you will be able to:
+
+### Sales & Pre-Sales Track
+
+- ✅ Structure complex multi-component sovereign cloud deals
+- ✅ Navigate deep compliance discussions (FedRAMP High, ITAR, etc.)
+- ✅ Conduct executive-level strategic workshops
+- ✅ Define PoC-to-production roadmaps
+- ✅ Lead large-scale enterprise engagements
+
+### Technical Track
+
+- ✅ Execute production Azure Local deployments
+- ✅ Implement Zero Trust security controls
+- ✅ Manage air-gapped environments
+- ✅ Optimize Edge RAG for production workloads
+- ✅ Troubleshoot complex deployment issues independently
+
+---
+
+## Prerequisites
+
+Before starting Level 300, ensure you have:
+
+- [x] Completed Level 200 learning objectives and knowledge checks
+- [ ] Recommended: AZ-104 (Azure Administrator) or AZ-305 (Solutions Architect) certification
+- [ ] Access to a production or production-like lab environment
+- [ ] Experience with at least one Azure Local deployment
+- [ ] Familiarity with PowerShell and infrastructure-as-code tools
+
+**Estimated Time Commitment:** 2-3 hours per week
+**Total Duration:** 4-6 weeks
+**Total Hours:** 10-16 hours
+
+---
+
+## Learning Modules
+
+### 1. Zero Trust Security for Sovereign Clouds
+
+**Duration:** 1.5-2 hours
+
+- [Zero Trust Principles](/level-300/zero-trust/)
+- [Implementation Patterns](/level-300/zero-trust/#implementation)
+- [Monitoring and Compliance](/level-300/zero-trust/#monitoring)
+
+### 2. Azure Local at Scale - Connected
+
+**Duration:** 2-2.5 hours
+
+- [Advanced Networking](/level-300/azure-local-advanced-connected/)
+- [Multi-Site Deployments](/level-300/azure-local-advanced-connected/#multi-site)
+- [Cloud-Integrated Updates](/level-300/azure-local-advanced-connected/#updates)
+
+### 3. Azure Local at Scale - Disconnected
+
+**Duration:** 2-2.5 hours
+
+- [Air-Gapped Operations](/level-300/azure-local-advanced-disconnected/)
+- [Manual Update Procedures](/level-300/azure-local-advanced-disconnected/#updates)
+- [Certificate Lifecycle Management](/level-300/azure-local-advanced-disconnected/#certificates)
+
+### 4. Production Edge RAG Deployment
+
+**Duration:** 2.5-3 hours
+
+- [Production Architecture](/level-300/edge-rag-production/)
+- [Performance Optimization](/level-300/edge-rag-production/#optimization)
+- [MLOps at the Edge](/level-300/edge-rag-production/#mlops)
+
+### 5. Advanced Troubleshooting
+
+**Duration:** 1.5-2 hours
+
+- [Diagnostic Tools and Techniques](/level-300/troubleshooting/)
+- [Common Issues and Resolutions](/level-300/troubleshooting/#common-issues)
+- [Support Escalation Paths](/level-300/troubleshooting/#escalation)
+
+---
+
+## Recommended Microsoft Learn Resources
+
+### Essential Learning
+
+1. **[Design identity and access management solutions](https://learn.microsoft.com/en-us/training/modules/design-authentication-authorization-solutions/)**
+   - Advanced identity architecture
+
+2. **[Design for high availability](https://learn.microsoft.com/en-us/training/modules/design-for-high-availability/)**
+   - Resilient architecture patterns
+
+3. **[Azure Local networking deep dive](https://learn.microsoft.com/en-us/azure/azure-local/plan/choose-network-pattern?view=azloc-2509)**
+   - Advanced networking architectures
+
+### Recommended Reading
+
+- **[Zero Trust security model](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)** - Comprehensive security framework
+- **[Disconnected operations detailed guide](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)** - Air-gapped operations best practices
+- **[Edge RAG production deployment](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/overview)** - Complete deployment walkthrough
+- **[Azure Local update management](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509)** - Update strategies
+
+---
+
+## Success Criteria
+
+### Sales Track Completion ✅
+
+You have successfully completed Level 300 (Sales Track) when you can:
+
+- ✓ Lead a customer engagement from discovery through contract signature
+- ✓ Conduct executive-level briefings on sovereign cloud strategy
+- ✓ Structure complex multi-component deals
+- ✓ Navigate regulatory compliance discussions with confidence
+- ✓ Define clear PoC-to-production roadmaps
+
+### Technical Track Completion ✅
+
+You have successfully completed Level 300 (Technical Track) when you can:
+
+- ✓ Execute end-to-end production deployments
+- ✓ Troubleshoot and resolve deployment issues independently
+- ✓ Optimize Edge RAG for production workloads
+- ✓ Implement Zero Trust security controls
+- ✓ Manage air-gapped environments with manual updates
+
+---
+
+## Certification Recommendations
+
+Consider pursuing these certifications to validate your expertise:
+
+- **[AZ-104: Microsoft Azure Administrator](https://learn.microsoft.com/en-us/certifications/azure-administrator/)**
+- **[AZ-305: Designing Microsoft Azure Infrastructure Solutions](https://learn.microsoft.com/en-us/certifications/azure-solutions-architect/)**
+- **[AZ-500: Microsoft Azure Security Technologies](https://learn.microsoft.com/en-us/certifications/azure-security-engineer/)**
+- **[AI-102: Designing and Implementing a Microsoft Azure AI Solution](https://learn.microsoft.com/en-us/certifications/azure-ai-engineer/)**
+
+---
+
+## Next Steps
+
+Congratulations on completing the Microsoft Sovereign Cloud & AI at the Edge Skilling Plan!
+
+### Continue Your Journey
+
+- 📚 **[Explore Additional Resources](../resources/)**
+- 🤝 **[Join the Community](https://techcommunity.microsoft.com/)**
+- 🎯 **[Stay Updated with What's New](https://azure.microsoft.com/updates/)**
+- 💼 **Apply Your Skills in Real Customer Engagements** — reference real-world deployment patterns covered throughout this level
+
+---
+
+**Last Updated:** October 2025

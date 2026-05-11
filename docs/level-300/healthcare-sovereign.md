@@ -138,7 +138,6 @@ New-AzMLWorkspace `
 ```
 
 ### PHI Processing Guidelines
->
 
 {: .warning }
 >

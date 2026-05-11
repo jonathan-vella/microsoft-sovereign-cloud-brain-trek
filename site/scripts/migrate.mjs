@@ -125,17 +125,25 @@ async function discover(args) {
     const segments = rel.split(path.sep);
     const levelDir = segments[0];
 
-    // Top-level files (index.md, introduction.md, README.md, 404.md) are
-    // handled separately by the splash/landing pipeline. Skip them here.
+    // Top-level pages need per-file handling:
+    //   docs/index.md         — Jekyll home; we keep the Phase-1.1 Starlight
+    //                           splash instead, but record a link map so
+    //                           refs to ../index.md resolve to "/".
+    //   docs/introduction.md  — real content page; migrate it.
+    //   docs/404.md           — Starlight emits its own 404; skip.
+    //   docs/README.md        — project status doc; not user content; skip.
     if (segments.length === 1) {
-      skipped.push({ srcPath: rel, reason: "top-level-page" });
-      continue;
-    }
-    if (!LEVELS.includes(levelDir)) {
+      if (rel === "introduction.md") {
+        // Fall through into the normal pipeline; processed below.
+      } else {
+        skipped.push({ srcPath: rel, reason: "top-level-page" });
+        continue;
+      }
+    } else if (!LEVELS.includes(levelDir)) {
       skipped.push({ srcPath: rel, reason: `not-a-known-level: ${levelDir}` });
       continue;
     }
-    if (args.level && levelDir !== args.level) continue;
+    if (args.level && segments.length > 1 && levelDir !== args.level) continue;
 
     let parsed;
     try {
@@ -186,9 +194,33 @@ function planPaths(files, moduleIndex, args) {
   const pathMap = new Map();
   const slugByOldSlug = new Map();
 
+  // Hardcoded slug entries for top-level pages that exist in the source
+  // but are intentionally not migrated 1:1. Lets the link rewriter
+  // resolve ../index.md and similar refs without warnings.
+  const SYNTHETIC_TOP_LEVEL = {
+    "index.md": "/",
+    "404.md": "/404",
+  };
+
   for (const file of files) {
     const fm = file.frontMatter;
     const isModuleIndex = fm.has_children === true;
+
+    // Top-level introduction.md routes to a flat root page.
+    if (file.relPath === "introduction.md") {
+      const destRel = "introduction.md";
+      const destPath = path.join(DEST_DIR, destRel);
+      const slug = "/introduction/";
+      pathMap.set(file.srcPath, {
+        destPath,
+        destRel,
+        slug,
+        isModuleIndex: false,
+      });
+      slugByOldSlug.set("/introduction.html", slug);
+      continue;
+    }
+
     let folder = file.levelDir;
     let leaf = file.baseName;
 
@@ -356,6 +388,15 @@ function convertCallouts(body, warnings, fileLabel) {
       while (quoted.length && quoted[quoted.length - 1].trim() === "")
         quoted.pop();
       out.push(...quoted);
+      // MD032 (blanks-around-lists): if the aside body ends with a list item,
+      // we must insert a blank line before the closing `:::` so the list
+      // terminates cleanly.
+      if (
+        quoted.length &&
+        /^\s*([-*+]|\d+\.)\s+/.test(quoted[quoted.length - 1])
+      ) {
+        out.push("");
+      }
       out.push(":::");
       out.push("");
       continue;
@@ -397,9 +438,12 @@ function convertKnowledgeChecks(body, warnings, fileLabel) {
   let anyConverted = false;
   body = body.replace(re, (_match, _summary, inner) => {
     anyConverted = true;
-    const answerMatch = inner.match(
-      /\*\*Correct Answer:\s*([^*]+?)\s*\*\*\s*\n?/,
-    );
+    // Two source variants exist:
+    //   **Correct Answer: B**       — closing ** wraps the answer letter
+    //   **Correct Answer:** B       — colon-close, answer in plain text
+    const answerMatch =
+      inner.match(/\*\*Correct Answer:\s*([^*\n]+?)\s*\*\*\s*\n?/) ||
+      inner.match(/\*\*Correct Answer:\*\*\s*([^\n]+?)\s*\n?/);
     const refMatch = inner.match(
       /\*\*Reference:\*\*\s*\[[^\]]+\]\(([^)]+)\)\s*\n?/,
     );
@@ -664,9 +708,51 @@ function mdxSafetyPass(body) {
     s = s.replace(/<br\s*>/g, "<br />");
     s = s.replace(/<hr\s*>/g, "<hr />");
     s = s.replace(/<(\d)/g, "&lt;$1");
+    // Escape bare braces in prose that would otherwise be parsed as JSX
+    // expressions by MDX. We only protect ones that are not already
+    // escaped and not part of a JSX attribute / component (which appear
+    // immediately after a tag name and the parser handles natively).
+    s = escapeBareBraces(s);
     segments[i].text = s;
   }
   return segments.map((s) => s.text).join("");
+}
+
+/**
+ * Walk the prose segment line by line. Skip lines that look like part
+ * of a JSX tag block (start with `<` or `</` or are inside one). On
+ * every other line, escape `{` and `}` to `\{` and `\}` so MDX does
+ * not try to parse them as expressions. Common offenders in the Jekyll
+ * source: pseudo-config code samples that escaped their fence, kramdown
+ * inline attribute lists (we already strip the most common ones, but
+ * this catches stragglers), and prose that contains literal JSON.
+ */
+function escapeBareBraces(text) {
+  const lines = text.split("\n");
+  let insideJsxBlock = false;
+  for (let i = 0; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+    // Heuristic: a line starting with `<` and not `</` opens a JSX block
+    // and we let MDX handle its attributes. A line that's purely a JSX
+    // close (or self-close) ends the block.
+    if (/^<\/?[A-Za-z]/.test(trimmed)) {
+      insideJsxBlock = !/\/>\s*$/.test(trimmed) && !/^<\//.test(trimmed)
+        ? true
+        : false;
+      continue;
+    }
+    if (insideJsxBlock) {
+      // Heuristic: blank line ends the JSX block we were in for the
+      // purposes of this scanner; child prose is on subsequent lines.
+      if (trimmed === "") insideJsxBlock = false;
+      continue;
+    }
+    // Don't escape an already-escaped brace.
+    lines[i] = lines[i]
+      .replace(/(?<!\\)\{/g, "\\{")
+      .replace(/(?<!\\)\}/g, "\\}");
+  }
+  return lines.join("\n");
 }
 
 function tokenizeFenced(body) {
@@ -779,6 +865,13 @@ async function main() {
   const srcLookup = new Map();
   for (const f of files) srcLookup.set(f.relPath, pathMap.get(f.srcPath));
 
+  // Register synthetic entries for top-level pages that exist in the
+  // source but are intentionally not converted 1:1 (the Starlight
+  // splash replaces docs/index.md; Starlight emits its own 404). Allows
+  // internal links like `../index.md` to resolve without warnings.
+  srcLookup.set("index.md", { slug: "/" });
+  srcLookup.set("404.md", { slug: "/404" });
+
   const warnings = [];
   const promotedToMdx = [];
   const stayedAsMd = [];
@@ -795,10 +888,14 @@ async function main() {
     const plan = pathMap.get(file.srcPath);
     let body = file.body;
 
-    body = stripKramdownDirectives(body);
     body = stripTocSection(body);
     body = stripLeadingH1(body);
     body = convertCallouts(body, warnings, file.relPath);
+    // Strip remaining kramdown directives AFTER convertCallouts so that
+    // `{: .note }`, `{: .warning }`, etc. survive long enough to be recognized
+    // as callout markers. Anything still present at this point is layout
+    // metadata (`.no_toc`, `.text-delta`) that Starlight does not consume.
+    body = stripKramdownDirectives(body);
 
     const kc = convertKnowledgeChecks(body, warnings, file.relPath);
     body = kc.body;
