@@ -6,7 +6,11 @@ hero:
   tagline: Sovereign Cloud · Azure Local · Edge RAG · Zero Trust — built for architects and solutions professionals.
   actions:
     - text: Start at Level 50
-      link: /level-50/
+      # Hero action `link` values are emitted verbatim into the rendered
+      # <a href>; Starlight does NOT auto-prepend the site `base` path for
+      # hero actions in 0.32 (unlike Markdown body links). Hard-code the
+      # full path so the splash CTA lands on the actual Level 50 route.
+      link: /microsoft-sovereign-cloud-brain-trek/level-50/
       icon: right-arrow
       variant: primary
     - text: View on GitHub
