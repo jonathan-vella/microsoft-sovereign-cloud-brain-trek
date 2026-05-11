@@ -1,0 +1,11 @@
+# robots.txt for Microsoft Sovereign Cloud Brain Trek
+# https://jonathan-vella.github.io/microsoft-sovereign-cloud-brain-trek/
+
+User-agent: *
+Allow: /
+
+# Sitemap (emitted by @astrojs/sitemap, hosted under the base path)
+Sitemap: https://jonathan-vella.github.io/microsoft-sovereign-cloud-brain-trek/sitemap-index.xml
+
+# Hide internal/specification files
+Disallow: /microsoft-sovereign-cloud-brain-trek/*VISUAL_SPECIFICATIONS*

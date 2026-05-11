@@ -183,7 +183,7 @@ protection:
 ## Next Steps
 
 - **[Incident Response Workflow →](/level-300/incident-response/)** — Handle security incidents
-- **[Encryption & Key Management →](../level-200/encryption-key-management.md)** — Protect classified data
+- **[Encryption & Key Management →](/level-200/encryption-key-management/)** — Protect classified data
 
 ---
 

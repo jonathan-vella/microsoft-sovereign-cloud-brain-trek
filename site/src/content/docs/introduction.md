@@ -186,7 +186,7 @@ The skilling plan is divided into four progressive levels, each building upon th
 
 ### 📋 Level 50: Prerequisites
 
-**[Start Level 50 →](level-50/README.md)**
+**[Start Level 50 →](/level-50/)**
 
 **Goal:** Build essential foundational knowledge in cloud computing, security, and Azure fundamentals.
 
@@ -208,7 +208,7 @@ The skilling plan is divided into four progressive levels, each building upon th
 
 ### 🎯 Level 100: Foundational Concepts
 
-**[Start Level 100 →](level-100/README.md)**
+**[Start Level 100 →](/level-100/)**
 
 **Goal:** Build a solid understanding of core concepts, terminology, and value propositions.
 
@@ -231,7 +231,7 @@ The skilling plan is divided into four progressive levels, each building upon th
 
 ### 🏗️ Level 200: Intermediate Skills
 
-**[Start Level 200 →](level-200/README.md)**
+**[Start Level 200 →](/level-200/)**
 
 **Goal:** Develop the ability to design solutions, plan deployments, and address customer-specific requirements.
 
@@ -409,8 +409,8 @@ Each level has clear success metrics to validate learning outcomes:
 
 Ready to begin? Start your learning journey:
 
-1. **[Start with Level 50: Prerequisites](level-50/README.md)**
-2. **[Continue to Level 100: Foundational Concepts](level-100/README.md)**
+1. **[Start with Level 50: Prerequisites](/level-50/)**
+2. **[Continue to Level 100: Foundational Concepts](/level-100/)**
 3. **[Explore Additional Resources](resources/)**
 
 ---

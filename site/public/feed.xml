@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Migration note (Phase 5.3): this stub replaces the jekyll-feed-generated
+  /feed.xml that the previous Jekyll site shipped. The Astro Starlight
+  build does not include a blog collection, so there is nothing meaningful
+  to syndicate. Subscribers who still poll this URL get a single-item feed
+  pointing at the project's GitHub releases page, where new content drops
+  are summarized.
+-->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microsoft Sovereign Cloud Brain Trek</title>
+    <link>https://jonathan-vella.github.io/microsoft-sovereign-cloud-brain-trek/</link>
+    <description>The previous Jekyll RSS feed has been retired. For updates, see the project's GitHub releases.</description>
+    <language>en-us</language>
+    <atom:link href="https://jonathan-vella.github.io/microsoft-sovereign-cloud-brain-trek/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RSS feed retired — follow GitHub releases instead</title>
+      <link>https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/releases</link>
+      <guid isPermaLink="false">migration-2026-rss-retired</guid>
+      <description>The Brain Trek migrated from Jekyll to Astro Starlight in 2026. The blog/RSS feature is not currently in scope. For change notifications, subscribe to the project's GitHub releases page.</description>
+    </item>
+  </channel>
+</rss>

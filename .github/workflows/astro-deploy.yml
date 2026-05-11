@@ -1,0 +1,87 @@
+name: Deploy Astro Site to GitHub Pages
+
+# Phase 5.4 — Workflow is intentionally `workflow_dispatch`-only until the
+# Phase 6 cutover. Until then, the Jekyll workflow (jekyll-deploy.yml) owns
+# the published `gh-pages` site. We can still smoke-test this workflow by
+# triggering it manually from the Actions tab; it will deploy to the
+# `astro-preview` GitHub environment so it does not clobber production.
+#
+# At cutover (Phase 6):
+#   1. Add `push: { branches: [main], paths: ['site/**'] }` to `on`
+#   2. Change the deploy step's `environment` to `github-pages`
+#   3. Rename `jekyll-deploy.yml` to `jekyll-deploy.yml.disabled`
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Why are you running this manually?"
+        required: false
+        default: "smoke test"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "astro-pages"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: site
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Astro site
+        run: npm run build
+
+      - name: Emit legacy .html redirect stubs
+        # Phase 5.2 — preserve every legacy Jekyll URL via static stubs in
+        # dist/ that meta-refresh to the new clean slug and carry a
+        # canonical link for search engines.
+        run: npm run emit-legacy-stubs
+
+      - name: Setup Pages
+        # `enablement: false` because Pages is currently driven by the
+        # Jekyll workflow's deployment source. Flip this to `true` at
+        # cutover when this workflow takes over.
+        uses: actions/configure-pages@v5
+        with:
+          enablement: false
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site/dist
+
+  deploy:
+    # `astro-preview` is a separate GitHub environment from `github-pages`
+    # so this workflow cannot accidentally overwrite the live Jekyll site
+    # during pre-cutover testing. Configure the environment with the same
+    # branch protection as `github-pages` once you flip to push triggers.
+    environment:
+      name: astro-preview
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
