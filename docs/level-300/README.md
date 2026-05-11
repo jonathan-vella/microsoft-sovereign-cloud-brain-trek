@@ -1,0 +1,169 @@
+---
+layout: default
+title: Level 300 - Advanced
+nav_order: 6
+has_children: true
+description: "Advanced implementation and expert-level guidance for Microsoft Sovereign Cloud solutions"
+---
+
+# Level 300: Advanced - Expert Implementation & Strategy
+
+## Overview
+
+Achieve expert-level proficiency to lead complex deployments, manage production environments, and drive strategic customer engagements.
+
+---
+
+## Learning Objectives
+
+By the end of Level 300, you will be able to:
+
+### Sales & Pre-Sales Track
+
+- ✅ Structure complex multi-component sovereign cloud deals
+- ✅ Navigate deep compliance discussions (FedRAMP High, ITAR, etc.)
+- ✅ Conduct executive-level strategic workshops
+- ✅ Define PoC-to-production roadmaps
+- ✅ Lead large-scale enterprise engagements
+
+### Technical Track
+
+- ✅ Execute production Azure Local deployments
+- ✅ Implement Zero Trust security controls
+- ✅ Manage air-gapped environments
+- ✅ Optimize Edge RAG for production workloads
+- ✅ Troubleshoot complex deployment issues independently
+
+---
+
+## Prerequisites
+
+Before starting Level 300, ensure you have:
+
+- [x] Completed Level 200 learning objectives and knowledge checks
+- [ ] Recommended: AZ-104 (Azure Administrator) or AZ-305 (Solutions Architect) certification
+- [ ] Access to a production or production-like lab environment
+- [ ] Experience with at least one Azure Local deployment
+- [ ] Familiarity with PowerShell and infrastructure-as-code tools
+
+**Estimated Time Commitment:** 2-3 hours per week
+**Total Duration:** 4-6 weeks
+**Total Hours:** 10-16 hours
+
+---
+
+## Learning Modules
+
+### 1. Zero Trust Security for Sovereign Clouds
+
+**Duration:** 1.5-2 hours
+
+- [Zero Trust Principles](zero-trust.md)
+- [Implementation Patterns](zero-trust.md#implementation)
+- [Monitoring and Compliance](zero-trust.md#monitoring)
+
+### 2. Azure Local at Scale - Connected
+
+**Duration:** 2-2.5 hours
+
+- [Advanced Networking](azure-local-advanced-connected.md)
+- [Multi-Site Deployments](azure-local-advanced-connected.md#multi-site)
+- [Cloud-Integrated Updates](azure-local-advanced-connected.md#updates)
+
+### 3. Azure Local at Scale - Disconnected
+
+**Duration:** 2-2.5 hours
+
+- [Air-Gapped Operations](azure-local-advanced-disconnected.md)
+- [Manual Update Procedures](azure-local-advanced-disconnected.md#updates)
+- [Certificate Lifecycle Management](azure-local-advanced-disconnected.md#certificates)
+
+### 4. Production Edge RAG Deployment
+
+**Duration:** 2.5-3 hours
+
+- [Production Architecture](edge-rag-production.md)
+- [Performance Optimization](edge-rag-production.md#optimization)
+- [MLOps at the Edge](edge-rag-production.md#mlops)
+
+### 5. Advanced Troubleshooting
+
+**Duration:** 1.5-2 hours
+
+- [Diagnostic Tools and Techniques](troubleshooting.md)
+- [Common Issues and Resolutions](troubleshooting.md#common-issues)
+- [Support Escalation Paths](troubleshooting.md#escalation)
+
+---
+
+## Recommended Microsoft Learn Resources
+
+### Essential Learning
+
+1. **[Design identity and access management solutions](https://learn.microsoft.com/en-us/training/modules/design-authentication-authorization-solutions/)**
+   - Advanced identity architecture
+
+2. **[Design for high availability](https://learn.microsoft.com/en-us/training/modules/design-for-high-availability/)**
+   - Resilient architecture patterns
+
+3. **[Azure Local networking deep dive](https://learn.microsoft.com/en-us/azure/azure-local/plan/choose-network-pattern?view=azloc-2509)**
+   - Advanced networking architectures
+
+### Recommended Reading
+
+- **[Zero Trust security model](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)** - Comprehensive security framework
+- **[Disconnected operations detailed guide](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)** - Air-gapped operations best practices
+- **[Edge RAG production deployment](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/overview)** - Complete deployment walkthrough
+- **[Azure Local update management](https://learn.microsoft.com/en-us/azure/azure-local/update/about-updates-23h2?view=azloc-2509)** - Update strategies
+
+---
+
+## Success Criteria
+
+### Sales Track Completion ✅
+
+You have successfully completed Level 300 (Sales Track) when you can:
+
+- ✓ Lead a customer engagement from discovery through contract signature
+- ✓ Conduct executive-level briefings on sovereign cloud strategy
+- ✓ Structure complex multi-component deals
+- ✓ Navigate regulatory compliance discussions with confidence
+- ✓ Define clear PoC-to-production roadmaps
+
+### Technical Track Completion ✅
+
+You have successfully completed Level 300 (Technical Track) when you can:
+
+- ✓ Execute end-to-end production deployments
+- ✓ Troubleshoot and resolve deployment issues independently
+- ✓ Optimize Edge RAG for production workloads
+- ✓ Implement Zero Trust security controls
+- ✓ Manage air-gapped environments with manual updates
+
+---
+
+## Certification Recommendations
+
+Consider pursuing these certifications to validate your expertise:
+
+- **[AZ-104: Microsoft Azure Administrator](https://learn.microsoft.com/en-us/certifications/azure-administrator/)**
+- **[AZ-305: Designing Microsoft Azure Infrastructure Solutions](https://learn.microsoft.com/en-us/certifications/azure-solutions-architect/)**
+- **[AZ-500: Microsoft Azure Security Technologies](https://learn.microsoft.com/en-us/certifications/azure-security-engineer/)**
+- **[AI-102: Designing and Implementing a Microsoft Azure AI Solution](https://learn.microsoft.com/en-us/certifications/azure-ai-engineer/)**
+
+---
+
+## Next Steps
+
+Congratulations on completing the Microsoft Sovereign Cloud & AI at the Edge Skilling Plan!
+
+### Continue Your Journey
+
+- 📚 **[Explore Additional Resources](../resources/)**
+- 🤝 **[Join the Community](https://techcommunity.microsoft.com/)**
+- 🎯 **[Stay Updated with What's New](https://azure.microsoft.com/updates/)**
+- 💼 **Apply Your Skills in Real Customer Engagements** — reference real-world deployment patterns covered throughout this level
+
+---
+
+**Last Updated:** October 2025
