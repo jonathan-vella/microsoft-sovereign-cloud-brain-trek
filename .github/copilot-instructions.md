@@ -438,3 +438,47 @@ When creating or editing content:
 - [ ] Knowledge check questions use expandable answer format
 - [ ] Microsoft Learn references include full URLs
 - [ ] File name follows `lowercase-with-hyphens.md` convention
+
+---
+
+## Working with the Astro Starlight site (`site/`) — migration in progress
+
+The repository is mid-migration from Jekyll to Astro Starlight. The Jekyll tree
+under `docs/` is the production source until the Phase 6 cutover; the Astro
+tree under `site/src/content/docs/` is built and validated in parallel via
+`.github/workflows/astro-ci.yml`.
+
+### When editing `site/**`
+
+- **Use the `astro-docs` MCP server** (configured in `.vscode/mcp.json`) to
+  look up Astro / Starlight APIs before guessing. The repository's
+  `CONTRIBUTING.md` has the exact MCP setup snippet.
+- **Starlight asides** replace kramdown callouts:
+  - `{: .note }` / `> **...**` → `:::note[Title] ... :::`
+  - `{: .warning }` → `:::caution[Title] ... :::`
+  - `{: .important }` → `:::tip[Title] ... :::`
+- **Knowledge checks** use the `<KnowledgeCheck answer="B" reference="...">`
+  component, with rich MDX children for question + options + explanation.
+  The file extension MUST be `.mdx` when this component is used.
+- **Diagram containers** for collapsible Mermaid diagrams use
+  `<DiagramContainer title="..." defaultOpen>` — `.mdx` only.
+- A file should be `.md` unless it uses one of the components above.
+- **Internal links** drop the `.md` extension and use Starlight slugs:
+  `[Foo](../module-01-topic/foo/)` — note the trailing slash.
+- The site's **base path** is `/microsoft-sovereign-cloud-brain-trek/`. Always
+  use root-relative paths starting with `/level-XX/...` or relative paths;
+  never hard-code the base path.
+
+### Local validation before opening a PR touching `site/**`
+
+```bash
+cd site
+npm run check     # astro check — types + content collection schema
+npm run build     # full build — catches MDX errors and broken links
+```
+
+### When editing `docs/**` (Jekyll side)
+
+Keep the existing kramdown conventions documented above. Re-run
+`cd site && npm run migrate` afterwards so the Astro tree stays in sync, then
+commit both trees together.

@@ -202,6 +202,96 @@ Use Jekyll callout syntax:
 
 ---
 
+## Working on the Astro site (`site/`)
+
+The repo is **mid-migration** from Jekyll (`docs/`) to Astro Starlight (`site/`).
+Both trees are live; the Jekyll site is the production deployment until the
+Phase 6 cutover.
+
+### When to edit which tree
+
+| Editing                                | Tree                                | Why                                                                                  |
+| -------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------ |
+| Existing content (typo / clarification) | `docs/` AND `site/src/content/docs/`| Until cutover, **both trees must stay in sync**. Re-run `npm run migrate` after editing `docs/`. |
+| Brand-new content                      | `site/src/content/docs/`            | New content authored directly in Starlight format; no kramdown round-trip needed.    |
+| Workflow / tooling                     | repo root                           | `.github/workflows/*`, `package.json`, lint configs.                                 |
+
+### Astro authoring conventions
+
+- **Knowledge checks** use the `<KnowledgeCheck answer="B">…</KnowledgeCheck>` component (see `site/src/components/KnowledgeCheck.astro`).
+- **Mermaid diagrams** wrapped for collapse use `<DiagramContainer title="…">` (see `site/src/components/DiagramContainer.astro`).
+- **Callouts** use Starlight asides: `:::note`, `:::tip`, `:::caution`, `:::danger`.
+- A file becomes `.mdx` only if it uses one of the components above; otherwise it stays `.md`.
+
+### Astro Docs MCP server (Copilot)
+
+The workspace ships a Model Context Protocol config at `.vscode/mcp.json` that
+points GitHub Copilot at the official [Astro Docs MCP](https://docs.astro.build/en/guides/build-with-ai/)
+server. When you ask Copilot a question about Astro or Starlight, it will
+search official docs first.
+
+For the **Copilot Coding Agent** (server-side runs that don't read
+`.vscode/mcp.json`), add the equivalent server in repo settings under
+_Settings → Copilot → Coding agent → MCP servers_:
+
+```json
+{
+  "mcpServers": {
+    "astro-docs": {
+      "type": "http",
+      "url": "https://mcp.docs.astro.build/mcp",
+      "tools": ["search_astro_docs"]
+    }
+  }
+}
+```
+
+---
+
+## Rollback runbook (Phase 6 cutover)
+
+If the post-cutover Astro deploy is broken in production, follow this sequence
+to restore the Jekyll site. **Practice this once in a staging fork before
+cutover** so the timing is known.
+
+1. **Revert the cutover merge commit** on `main`:
+
+   ```bash
+   git revert <astro-cutover-merge-commit>
+   git push origin main
+   ```
+
+2. **Re-enable the Jekyll workflow**:
+
+   ```bash
+   git mv .github/workflows/jekyll-deploy.yml.disabled .github/workflows/jekyll-deploy.yml
+   ```
+
+3. **Disable the Astro workflow** (so it doesn't race with the Jekyll one):
+
+   ```bash
+   git mv .github/workflows/astro-deploy.yml .github/workflows/astro-deploy.yml.disabled
+   ```
+
+4. **Commit and push** the workflow renames:
+
+   ```bash
+   git commit -m "rollback: re-enable jekyll-deploy, disable astro-deploy"
+   git push origin main
+   ```
+
+5. **Trigger the Jekyll workflow manually** via the Actions tab
+   (`Run workflow` on _Deploy Jekyll Site to GitHub Pages_).
+   If the Pages cache is stale, force a redeploy by pushing a no-op edit to any
+   file under `docs/`.
+6. **Verify production**: hit `https://jonathan-vella.github.io/microsoft-sovereign-cloud-brain-trek/`
+   and spot-check three deep URLs. Check `_site/` rendered correctly via the
+   Pages deployment log.
+7. **Open a tracking issue** with the failure mode so the next cutover attempt
+   addresses the root cause before retrying.
+
+---
+
 ## Questions?
 
 If you have questions about contributing, please:

@@ -177,6 +177,55 @@ docs/
 2. **Review** Jekyll configuration (coming soon)
 3. **Test locally** before GitHub Pages deployment
 
+## Local Development
+
+This repository contains **two parallel site implementations** during the Astro
+migration window. Both are buildable locally. Only one is wired to the live
+GitHub Pages deployment at any given time (see [Deployment](#deployment-status)).
+
+### Jekyll site (current production)
+
+Source: `docs/`. Built and deployed by `.github/workflows/jekyll-deploy.yml`.
+
+```bash
+bundle install                  # one-time, installs the gems pinned in Gemfile
+bundle exec jekyll serve        # http://127.0.0.1:4000/microsoft-sovereign-cloud-brain-trek/
+```
+
+### Astro Starlight site (Phase 2 in progress)
+
+Source: `site/src/content/docs/`. Built locally and (until cutover) deployed via
+`workflow_dispatch` from `.github/workflows/astro-deploy.yml`.
+
+```bash
+cd site
+npm ci                          # one-time
+npm run dev                     # local dev server with live reload
+npm run check                   # astro check (types + content collection schema)
+npm run build                   # full static build into site/dist/
+npm run emit-legacy-stubs       # post-build: write meta-refresh .html stubs for legacy URLs
+```
+
+> **⚠️ Two `package.json` files**
+> The **root** `package.json` carries repo-wide tooling (audit scripts, lychee, etc.).
+> The **`site/package.json`** carries Astro / Starlight / MDX dependencies.
+> Run `npm install` inside `site/` when working on the Astro site —
+> never at the repo root, or the dependency trees will collide.
+
+### Migrating new content from Jekyll to Astro
+
+`site/scripts/migrate.mjs` is an idempotent converter from kramdown Markdown to
+Starlight MDX. Re-run it any time `docs/` is updated to refresh the Astro tree:
+
+```bash
+cd site
+npm run migrate                 # full tree
+npm run migrate -- --level 100  # one level at a time
+```
+
+The script emits `site/migration-report.json` and `site/path-rewrite-map.json`;
+the latter feeds `npm run emit-legacy-stubs`.
+
 ## Key Technologies Covered
 
 - Microsoft Sovereign Cloud
