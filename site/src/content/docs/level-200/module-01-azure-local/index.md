@@ -2,6 +2,7 @@
 title: "Module 1 - Azure Local Architecture"
 description: "Module 1: Azure Local deep-dive — architecture-deep-dive, advanced networking, hardware planning, and HA patterns for production deployments."
 sidebar:
+  label: Overview
   order: 1
 ---
 

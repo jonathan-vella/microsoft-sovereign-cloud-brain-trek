@@ -2,6 +2,7 @@
 title: "Module 1 - Digital Sovereignty"
 description: "Digital sovereignty foundations — data residency, operational sovereignty, regulatory drivers, and the strategic role of Microsoft Cloud for Sovereignty."
 sidebar:
+  label: Overview
   order: 1
 ---
 

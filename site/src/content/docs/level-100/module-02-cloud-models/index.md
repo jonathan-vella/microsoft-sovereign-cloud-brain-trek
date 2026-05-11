@@ -2,6 +2,7 @@
 title: "Module 2 - Sovereign Cloud Models"
 description: "Microsoft Sovereign Cloud delivery models — sovereign public cloud, sovereign private cloud (Azure Local), and national partner clouds with regulatory and operational comparison."
 sidebar:
+  label: Overview
   order: 2
 ---
 

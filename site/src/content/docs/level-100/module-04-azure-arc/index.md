@@ -2,6 +2,7 @@
 title: "Module 4 - Azure Arc Introduction"
 description: "Foundational introduction to Azure Arc — hybrid and multi-cloud management for servers, Kubernetes, and data services across on-premises, edge, and other clouds."
 sidebar:
+  label: Overview
   order: 4
 ---
 

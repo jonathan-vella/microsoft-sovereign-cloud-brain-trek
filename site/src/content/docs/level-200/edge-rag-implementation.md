@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Edge RAG Implementation
 description: "Edge RAG (preview) implementation overview — deployment topology, Azure Arc-enabled Kubernetes prerequisites, and end-to-end RAG pipeline configuration."
 sidebar:
   order: 1

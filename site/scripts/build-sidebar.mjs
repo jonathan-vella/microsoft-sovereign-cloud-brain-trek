@@ -155,9 +155,12 @@ export async function buildLevelItems(level) {
  * each level, module groups are also `collapsed: true` so the nested tree
  * doesn't auto-expand when the user clicks into a single level. Starlight
  * still auto-opens the active path on the page being viewed.
+ *
+ * @returns {Promise<import('@astrojs/starlight/schema').StarlightUserConfig['sidebar']>}
  */
 export async function buildSidebar() {
-  return [
+  /** @type {any} */
+  const items = [
     {
       label: "Level 50 — Prerequisites",
       badge: { text: "L50", variant: "note" },
@@ -188,4 +191,5 @@ export async function buildSidebar() {
       items: [{ autogenerate: { directory: "resources", collapsed: true } }],
     },
   ];
+  return items;
 }

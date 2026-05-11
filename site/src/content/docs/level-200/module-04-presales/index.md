@@ -2,6 +2,7 @@
 title: "Module 4 - Pre-Sales & Solution Design"
 description: "Module 4: Pre-sales and solution design — customer discovery, solution sizing, cost estimation / TCO, and presales solution design patterns for sovereign cloud opportunities."
 sidebar:
+  label: Overview
   order: 4
 ---
 

@@ -2,6 +2,7 @@
 title: "Level 200 - Intermediate"
 description: "Intermediate architecture and pre-sales skills for Microsoft Sovereign Cloud solutions"
 sidebar:
+  label: Overview
   order: 5
 ---
 

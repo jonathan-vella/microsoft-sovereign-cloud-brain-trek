@@ -1,0 +1,41 @@
+---
+/**
+ * Misconception.astro
+ *
+ * Two-column "Myth vs Reality" block used to call out common misconceptions
+ * across the learning modules. Both columns accept MDX children so they can
+ * contain bullet lists, code blocks, or links. Use it in .mdx files like:
+ *
+ *   <Misconception>
+ *     <Fragment slot="myth">
+ *       Cloud is just someone else's computer.
+ *     </Fragment>
+ *     <Fragment slot="reality">
+ *       Cloud delivers managed services, global scale, and security
+ *       capabilities that aren't possible on individual machines.
+ *     </Fragment>
+ *   </Misconception>
+ */
+interface Props {
+  /** Optional override label (default: "Myth"). */
+  mythLabel?: string;
+  /** Optional override label (default: "Reality"). */
+  realityLabel?: string;
+}
+const { mythLabel = "Myth", realityLabel = "Reality" } = Astro.props;
+---
+
+<div class="misconception" role="group" aria-label="Common misconception">
+  <div class="misconception__myth">
+    <div class="misconception__label">
+      <span aria-hidden="true">✕</span> {mythLabel}
+    </div>
+    <slot name="myth" />
+  </div>
+  <div class="misconception__reality">
+    <div class="misconception__label">
+      <span aria-hidden="true">✓</span> {realityLabel}
+    </div>
+    <slot name="reality" />
+  </div>
+</div>

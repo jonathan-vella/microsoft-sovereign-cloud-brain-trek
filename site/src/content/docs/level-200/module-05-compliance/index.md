@@ -2,6 +2,7 @@
 title: "Module 5 - Compliance & Security"
 description: "Module 5: Compliance and security implementation — GDPR, FedRAMP, encryption key management, security hardening, and compliance / security patterns."
 sidebar:
+  label: Overview
   order: 5
 ---
 

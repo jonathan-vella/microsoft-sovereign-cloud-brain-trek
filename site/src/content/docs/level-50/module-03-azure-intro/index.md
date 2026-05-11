@@ -2,6 +2,7 @@
 title: "Module 3 - Microsoft Azure Introduction"
 description: "Microsoft Azure platform introduction — service categories, global infrastructure (regions and availability zones), and the management tools (portal, CLI, PowerShell, ARM, Bicep) used throughout the program."
 sidebar:
+  label: Overview
   order: 3
 ---
 

@@ -1,65 +1,212 @@
 /**
  * Custom CSS for Microsoft Sovereign Cloud Brain Trek.
  *
- * Layered on top of Starlight's default theme. The Microsoft Azure brand
- * palette and Segoe UI font stack mirror the Microsoft Learn experience.
+ * Layered on top of Starlight's default theme. Aligns the site visually
+ * with the Microsoft Learn / Fluent 2 design language:
+ *   - Inter Variable (self-hosted) as the body font with a Segoe UI
+ *     fallback so Windows visitors keep the native look.
+ *   - Fluent 2 brand-ramp blues for accent (#0F6CBD primary).
+ *   - Warm-neutral page background with a slightly elevated content card.
+ *   - Tighter heading scale, weight 600.
+ *   - Smaller, denser level badges in the sidebar.
  */
 
+/* Self-hosted Inter Variable (loaded via @fontsource-variable/inter in
+   custom.css's import chain — see ThemeProvider.astro). */
+@import "@fontsource-variable/inter/index.css";
+
 :root {
-  /* Azure brand palette */
-  --azure-blue: #0078d4;
+  /* Azure / Fluent 2 brand palette */
+  --azure-blue: #0f6cbd;
+  --azure-blue-hover: #115ea3;
+  --azure-blue-pressed: #0c3b5e;
+  --azure-blue-tint: #deecf9;
+  --azure-blue-link: #2886de;
   --azure-dark-blue: #004578;
   --azure-light-blue: #50e6ff;
   --azure-green: #107c10;
   --azure-orange: #ff8c00;
   --azure-red: #d13438;
 
-  /* Starlight theme overrides — light */
-  --sl-color-accent-low: #cce4f5;
-  --sl-color-accent: var(--azure-blue);
-  --sl-color-accent-high: var(--azure-dark-blue);
+  /* Page chrome */
+  --page-bg: #fafafa;
+  --card-bg: #ffffff;
+  --card-border: #edebe9;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 
-  --sl-font: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-    Arial, sans-serif;
-  --sl-font-system-mono: "Cascadia Code", "Consolas", "Monaco", "Courier New",
-    monospace;
+  /* Starlight theme overrides — light */
+  --sl-color-accent-low: var(--azure-blue-tint);
+  --sl-color-accent: var(--azure-blue);
+  --sl-color-accent-high: var(--azure-blue-hover);
+  --sl-color-text-accent: var(--azure-blue-hover);
+  --sl-color-bg: var(--page-bg);
+
+  /* Typography — Inter Variable with Segoe UI fallback so Windows users
+     get the native Microsoft feel when offline. */
+  --sl-font: "Inter Variable", "Segoe UI Variable", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --sl-font-system-mono: "Cascadia Code", "Cascadia Mono", "Consolas",
+    "Monaco", "Courier New", monospace;
+
+  /* Slightly bigger body type for a long-form learning site. */
+  --sl-text-base: 1.0625rem; /* 17px */
+
+  /* Tighter heading scale (Microsoft Learn proportions) */
+  --sl-text-h1: 2.25rem; /* 36px */
+  --sl-text-h2: 1.625rem; /* 26px */
+  --sl-text-h3: 1.25rem; /* 20px */
+  --sl-text-h4: 1.0625rem; /* 17px */
 }
 
 :root[data-theme="dark"] {
-  /* Starlight theme overrides — dark */
+  /* Starlight theme overrides — dark (unused while site is light-locked
+     but kept so accent variables remain valid if dark is re-enabled). */
   --sl-color-accent-low: #002b4a;
   --sl-color-accent: #4cb1f0;
   --sl-color-accent-high: #cce4f5;
+  --sl-color-bg: #0e1116;
 }
+
+/* Apply Inter ligature features for a slightly tighter, more modern feel. */
+html {
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body line-height calibrated for long-form reading. */
+body,
+.sl-markdown-content {
+  line-height: 1.65;
+}
+
+/* Heading weight 600 (Fluent 2) instead of Starlight's 700 default. */
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.sl-markdown-content h1 {
+  letter-spacing: -0.015em;
+}
+
+.sl-markdown-content h2 {
+  margin-top: 2.25rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--sl-color-gray-6, #e1dfdd);
+}
+
+.sl-markdown-content h3 {
+  margin-top: 1.75rem;
+}
+
+/* Slightly tighter ↔ readable paragraph spacing inside body copy. */
+.sl-markdown-content p,
+.sl-markdown-content li {
+  font-variant-numeric: oldstyle-nums;
+}
+
+/* Elevated content card on the main column.
+   Starlight wraps the main markdown body in `.sl-container > main`. We
+   keep the chrome (header + sidebars) flush with the warm background and
+   lift only the article surface. */
+main {
+  background: transparent;
+}
+
+.sl-markdown-content {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  padding: 2rem 2.5rem;
+}
+
+/* The splash template doesn't have an article body, so don't card it.
+   Starlight sets `data-has-hero` on the <html> element for hero pages. */
+html[data-has-hero] .sl-markdown-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+@media (max-width: 50rem) {
+  .sl-markdown-content {
+    padding: 1.25rem 1.25rem;
+    border-radius: 6px;
+  }
+}
+
+/* Code blocks: pull them flush against the card and tighten radius. */
+.sl-markdown-content .expressive-code {
+  margin: 1.25rem 0;
+}
+
+/* Inline code with a subtle Azure tint. */
+.sl-markdown-content :not(pre) > code {
+  background: var(--azure-blue-tint);
+  color: var(--azure-blue-pressed);
+  border: 1px solid #cfe3f6;
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.92em;
+}
+
+/* Sidebar badges — smaller / denser. The defaults are huge in the
+   screenshot and the orange L200 chip dominates the eye. */
+.sidebar-content .badge,
+starlight-sidebar-state-persist .badge,
+.large.badge {
+  font-size: 0.65rem !important;
+  padding: 0 0.4em !important;
+  line-height: 1.6 !important;
+  border-radius: 4px !important;
+}
+
+/* Cap right-rail TOC width and reduce font slightly so long lists are
+   less visually noisy. */
+.right-sidebar nav,
+.right-sidebar .toc {
+  font-size: 0.875rem;
+}
+
+/* ───────────────────────── Components ───────────────────────── */
 
 /* Knowledge Check answer reveal */
 .knowledge-check {
   border-left: 4px solid var(--azure-blue);
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
-  background: var(--sl-color-bg-nav);
-  border-radius: 0.25rem;
+  background: var(--azure-blue-tint);
+  border-radius: 0 6px 6px 0;
 }
 
 .knowledge-check summary {
   cursor: pointer;
-  color: var(--azure-blue);
+  color: var(--azure-blue-pressed);
   font-weight: 600;
+}
+
+.knowledge-check[open] summary {
+  margin-bottom: 0.5rem;
 }
 
 /* Diagram container */
 .diagram-container {
   border: 1px solid var(--sl-color-gray-5);
-  border-radius: 0.5rem;
-  margin: 1.5rem 0;
+  border-radius: 8px;
+  margin: 1.75rem 0;
   overflow: hidden;
+  background: var(--card-bg);
 }
 
 .diagram-container > summary {
-  background: var(--sl-color-bg-nav);
+  background: linear-gradient(180deg, #f7fafd 0%, #eef4fa 100%);
   padding: 0.75rem 1rem;
   cursor: pointer;
   font-weight: 600;
+  color: var(--azure-blue-pressed);
 }
 
 .diagram-container[open] > summary {
@@ -70,11 +217,143 @@
   padding: 1rem;
 }
 
-/* Mermaid diagrams render as SVG inside <pre class="mermaid"> by
-   rehype-mermaid-lite. Center and size them consistently. */
+/* Mermaid SVGs — frame them like inline diagrams from Microsoft Learn. */
+pre.mermaid {
+  background: #f7fafd;
+  border: 1px solid #dfe9f3;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  overflow-x: auto;
+}
+
 pre.mermaid svg {
   display: block;
   margin: 0 auto;
   max-width: 100%;
   height: auto;
+}
+
+/* ───────────── Learning Objectives card (LearningObjectives.astro) ───────────── */
+.learning-objectives {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f2fd 100%);
+  border: 1px solid #cfe3f6;
+  border-left: 4px solid var(--azure-blue);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.learning-objectives__title {
+  font-weight: 600;
+  color: var(--azure-blue-pressed);
+  margin: 0 0 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.0625rem;
+}
+
+.learning-objectives ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.learning-objectives li {
+  margin: 0.2rem 0;
+}
+
+/* ───────────── Misconception two-column block (Misconception.astro) ───────────── */
+.misconception {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.misconception__myth,
+.misconception__reality {
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  border: 1px solid transparent;
+}
+
+.misconception__myth {
+  background: #fdecea;
+  border-color: #f5c2bc;
+}
+
+.misconception__reality {
+  background: #e8f5e8;
+  border-color: #b8e0b8;
+}
+
+.misconception__label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.misconception__myth .misconception__label {
+  color: #a4262c;
+}
+
+.misconception__reality .misconception__label {
+  color: #0b6a0b;
+}
+
+@media (max-width: 50rem) {
+  .misconception {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ───────────── Splash hero polish ───────────── */
+.hero {
+  padding-top: 1.5rem;
+}
+
+.hero .tagline {
+  color: #4c4a48;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  max-width: 38ch;
+}
+
+/* Card grid on the splash page: lift cards slightly for the Learn vibe. */
+.card-grid .card,
+.card {
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: transform 120ms ease, box-shadow 120ms ease,
+    border-color 120ms ease;
+}
+
+.card-grid .card:hover,
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(15, 108, 189, 0.12);
+  border-color: #cfe3f6;
+}
+
+/* Hero CTA primary button — solid Fluent blue. */
+.action.primary,
+a.action--primary {
+  background: var(--azure-blue);
+  color: #fff;
+  border-color: var(--azure-blue);
+}
+
+.action.primary:hover,
+a.action--primary:hover {
+  background: var(--azure-blue-hover);
+  border-color: var(--azure-blue-hover);
 }

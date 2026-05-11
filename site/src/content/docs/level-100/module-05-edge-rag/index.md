@@ -2,6 +2,7 @@
 title: "Module 5 - Edge RAG Concepts"
 description: "Edge RAG (preview) foundations — retrieval-augmented generation on-premises with Azure Arc-enabled Kubernetes; concepts, reference architecture, and sovereign-cloud use cases."
 sidebar:
+  label: Overview
   order: 5
 ---
 

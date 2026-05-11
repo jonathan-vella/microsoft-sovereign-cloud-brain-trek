@@ -2,6 +2,7 @@
 title: "Level 50 - Prerequisites"
 description: "Essential prerequisites for Microsoft Sovereign Cloud & AI at the Edge learning journey"
 sidebar:
+  label: Overview
   order: 3
 ---
 

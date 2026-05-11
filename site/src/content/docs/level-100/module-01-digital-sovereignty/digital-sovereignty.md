@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Digital Sovereignty Defined
 description: "Digital sovereignty defined — the difference between data, operational, and software sovereignty, and how Microsoft Cloud for Sovereignty addresses each pillar for regulated organizations."
 sidebar:
   order: 1

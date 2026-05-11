@@ -2,6 +2,7 @@
 title: "Level 300 - Advanced"
 description: "Advanced implementation and expert-level guidance for Microsoft Sovereign Cloud solutions"
 sidebar:
+  label: Overview
   order: 6
 ---
 

@@ -2,6 +2,7 @@
 title: "Level 100 - Foundation"
 description: "Foundational concepts for Microsoft Sovereign Cloud & AI at the Edge"
 sidebar:
+  label: Overview
   order: 4
 ---
 

@@ -2,6 +2,7 @@
 title: "Module 1 - Cloud Computing Fundamentals"
 description: "Cloud computing fundamentals — IaaS / PaaS / SaaS service models, public / private / hybrid / multi-cloud deployment models, and the business and operational benefits of cloud adoption."
 sidebar:
+  label: Overview
   order: 1
 ---
 

@@ -2,6 +2,7 @@
 title: "Module 3 - Edge RAG Implementation"
 description: "Module 3: Edge RAG (preview) implementation — vector databases on the edge, deployment strategies, LLM inference optimization, and operations / monitoring."
 sidebar:
+  label: Overview
   order: 3
 ---
 

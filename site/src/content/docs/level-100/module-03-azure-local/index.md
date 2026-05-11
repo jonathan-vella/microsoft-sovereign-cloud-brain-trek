@@ -2,6 +2,7 @@
 title: "Module 3 - Azure Local Overview"
 description: "Azure Local foundations — architecture overview, hardware planning, and the connected vs disconnected operational modes that enable sovereign on-premises Azure services."
 sidebar:
+  label: Overview
   order: 3
 ---
 

@@ -4,15 +4,22 @@ description: Master Sovereign Cloud, Azure Local, and Edge AI Technologies — a
 template: splash
 hero:
   tagline: Sovereign Cloud · Azure Local · Edge RAG · Zero Trust — built for architects and solutions professionals.
+  image:
+    file: ../../../public/images/hero/sovereign-cloud-hero.svg
+    alt: Sovereign cloud, edge, and datacenter architecture with a zero-trust shield
   actions:
+    # Hero action `link` values are emitted verbatim into the rendered
+    # <a href>; Starlight does NOT auto-prepend the site `base` path for
+    # hero actions (unlike Markdown body links). Hard-code the full path
+    # so each splash CTA lands on the right Starlight route.
     - text: Start at Level 50
-      # Hero action `link` values are emitted verbatim into the rendered
-      # <a href>; Starlight does NOT auto-prepend the site `base` path for
-      # hero actions in 0.32 (unlike Markdown body links). Hard-code the
-      # full path so the splash CTA lands on the actual Level 50 route.
       link: /microsoft-sovereign-cloud-brain-trek/level-50/
       icon: right-arrow
       variant: primary
+    - text: Browse modules
+      link: /microsoft-sovereign-cloud-brain-trek/level-100/
+      icon: open-book
+      variant: secondary
     - text: View on GitHub
       link: https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek
       icon: external
@@ -22,7 +29,7 @@ hero:
 import { Card, CardGrid } from "@astrojs/starlight/components";
 
 <CardGrid>
-  <Card title="Level 50 — Prerequisites" icon="seti:default">
+  <Card title="Level 50 — Prerequisites" icon="approve-check-circle">
     Foundation knowledge: cloud, networking, security, and identity primers
     before the sovereign cloud journey begins.
   </Card>
@@ -37,5 +44,26 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
   <Card title="Level 300 — Advanced" icon="rocket">
     Production patterns: zero trust, multi-site, air-gapped, MLOps, and
     disaster recovery.
+  </Card>
+</CardGrid>
+
+## What you'll learn
+
+<CardGrid>
+  <Card title="Digital sovereignty" icon="seti:lock">
+    Data residency, regulatory boundaries, and the technical controls that
+    keep regulated workloads compliant in the cloud.
+  </Card>
+  <Card title="Azure Local & Arc" icon="seti:azure">
+    Deploy and operate hybrid infrastructure that spans Azure regions and
+    on-premises edge sites with a single control plane.
+  </Card>
+  <Card title="Edge RAG patterns" icon="seti:db">
+    Architect retrieval-augmented generation pipelines that keep enterprise
+    knowledge on-prem while still leveraging Azure OpenAI.
+  </Card>
+  <Card title="Zero Trust" icon="seti:shield">
+    Identity, network segmentation, and continuous verification patterns
+    applied to sovereign and edge deployments.
   </Card>
 </CardGrid>

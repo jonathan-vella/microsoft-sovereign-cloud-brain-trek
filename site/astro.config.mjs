@@ -5,21 +5,37 @@ import mdx from "@astrojs/mdx";
 import rehypeMermaid from "rehype-mermaid-lite";
 import { buildSidebar } from "./scripts/build-sidebar.mjs";
 
-// Mermaid init script with the Azure color palette used across the docs.
-// The Mermaid module is loaded from a CDN to keep the build self-contained.
+// Mermaid init script with the Fluent 2 / Azure color palette. The
+// previous palette set primary fill to #0078D4 with white text, which
+// produced low-contrast nodes on Microsoft Learn-style diagrams. The
+// new palette uses a light tint fill with a dark border + dark text,
+// matching how Microsoft Learn renders inline architecture diagrams.
 const mermaidInitScript = `import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
 mermaid.initialize({
   startOnLoad: true,
   theme: "base",
   themeVariables: {
-    primaryColor: "#0078D4",
-    primaryTextColor: "#ffffff",
-    primaryBorderColor: "#004578",
-    lineColor: "#505050",
-    secondaryColor: "#107C10",
-    tertiaryColor: "#FF8C00",
-    fontFamily: "Segoe UI, system-ui, sans-serif"
-  }
+    primaryColor: "#DEECF9",
+    primaryTextColor: "#0C3B5E",
+    primaryBorderColor: "#0F6CBD",
+    secondaryColor: "#E8F5E8",
+    secondaryBorderColor: "#107C10",
+    secondaryTextColor: "#0B6A0B",
+    tertiaryColor: "#FFF4CE",
+    tertiaryBorderColor: "#B89500",
+    tertiaryTextColor: "#5C4400",
+    lineColor: "#605E5C",
+    textColor: "#242424",
+    mainBkg: "#DEECF9",
+    nodeBorder: "#0F6CBD",
+    clusterBkg: "#F7FAFD",
+    clusterBorder: "#CFE3F6",
+    fontFamily: "Inter Variable, Segoe UI, system-ui, sans-serif",
+    fontSize: "15px"
+  },
+  flowchart: { curve: "basis", padding: 14 },
+  sequence: { useMaxWidth: true },
+  themeCSS: ".edgeLabel { background-color: #F7FAFD; }"
 });`;
 
 export default defineConfig({
@@ -51,6 +67,9 @@ export default defineConfig({
         baseUrl:
           "https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/edit/main/site/",
       },
+      lastUpdated: true,
+      pagination: true,
+      tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
       social: [
         {
           icon: "github",

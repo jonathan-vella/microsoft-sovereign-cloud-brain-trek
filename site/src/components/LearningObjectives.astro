@@ -1,0 +1,26 @@
+---
+/**
+ * LearningObjectives.astro
+ *
+ * Styled "Learning Objectives" card that prefixes module content pages.
+ * Children are rendered as MDX — pass a Markdown list:
+ *
+ *   <LearningObjectives>
+ *     - Understand cloud service models (IaaS / PaaS / SaaS).
+ *     - Compare public / private / hybrid / multi-cloud deployments.
+ *     - Identify when sovereign cloud requirements apply.
+ *   </LearningObjectives>
+ */
+interface Props {
+  /** Override the default heading (default: "Learning Objectives"). */
+  title?: string;
+}
+const { title = "Learning Objectives" } = Astro.props;
+---
+
+<aside class="learning-objectives" aria-label={title}>
+  <p class="learning-objectives__title">
+    <span aria-hidden="true">🎯</span> {title}
+  </p>
+  <slot />
+</aside>
