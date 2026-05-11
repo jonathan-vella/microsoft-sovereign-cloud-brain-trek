@@ -11,24 +11,8 @@ Thumbs.db
 *.swo
 *~
 
-# Ignore build output
-_site/
-.jekyll-cache/
-.jekyll-metadata
-.sass-cache/
-
-# Ignore Ruby/Bundler files
-vendor/
-Gemfile.lock
-.bundle/
-
-# Ignore node modules if using any npm packages
+# Ignore node modules
 node_modules/
-package-lock.json
-# The Astro site (site/) needs its lockfile checked in for reproducible
-# installs across CI and contributors. The root rule above stays for the
-# Jekyll project root.
-!site/package-lock.json
 
 # Ignore temporary files
 *.tmp
@@ -41,4 +25,3 @@ package-lock.json
 # Ignore personal notes
 notes/
 scratch/
-docs/level-50/plan.md

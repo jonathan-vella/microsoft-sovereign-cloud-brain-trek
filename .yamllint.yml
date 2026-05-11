@@ -9,7 +9,7 @@ rules:
     max: 200
     level: warning
 
-  # Require document start marker for Jekyll files
+  # `---` document-start markers are optional
   document-start: disable
 
   # Allow inline mappings

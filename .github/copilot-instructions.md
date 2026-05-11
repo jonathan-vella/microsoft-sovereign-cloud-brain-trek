@@ -1,486 +1,204 @@
 # GitHub Copilot Instructions
 
-> **⚠️ Stack:** This site is now built with **Astro Starlight** (sources under
-> `site/src/content/docs/`). The Jekyll tree under `docs/` was removed at the
-> Phase 6 cutover. The detailed conventions in this file historically referred
-> to kramdown/Jekyll syntax and are progressively being rewritten; until that
-> rewrite lands, **when editing under `site/**`, follow the "Working with the
-> Astro Starlight site" section at the bottom of this file** — it supersedes
-> the kramdown rules. `CONTRIBUTING.md` has the authoritative authoring guide.
+This repository builds the **Microsoft Sovereign Cloud Brain Trek**, a
+technical training site for architects and solutions professionals covering
+Microsoft Sovereign Cloud, Azure Local, Azure Arc, Edge RAG (Retrieval-Augmented
+Generation), and Zero Trust.
 
-## Project Overview
+## Stack
 
-This is the **Microsoft Sovereign Cloud Brain Trek** — a technical documentation and training platform for architects and solutions professionals. The repository provides structured learning content covering Microsoft Sovereign Cloud technologies including Azure Local, Azure Arc, and Edge RAG (Retrieval-Augmented Generation).
+- **Framework:** [Astro 5](https://astro.build/) with the
+  [Starlight 0.32](https://starlight.astro.build/) documentation theme.
+- **Content:** MDX + Markdown under `site/src/content/docs/`.
+- **Diagrams:** Mermaid via `rehype-mermaid-lite` (client-side rendering, Azure
+  color palette configured in `site/astro.config.mjs`).
+- **Search:** [Pagefind](https://pagefind.app/) (built-in to Starlight).
+- **Hosting:** GitHub Pages, deployed by `.github/workflows/astro-deploy.yml`
+  at base path `/microsoft-sovereign-cloud-brain-trek/`.
 
-### Target Audience
+When you have a question about Astro or Starlight, use the **Astro Docs MCP
+server** wired in at `.vscode/mcp.json` (`search_astro_docs` tool) before
+guessing.
 
-| Track                 | Roles                                                                | Focus                                                                       |
-| --------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| **Sales & Pre-Sales** | Account Executives, Solution Specialists, Pre-Sales Consultants      | Business value, opportunity qualification, deal structuring (L50-L100)      |
-| **Technical**         | Cloud Architects, Field Engineers, AI Developers, Solution Engineers | Architecture design, deployment, implementation, troubleshooting (L50-L300) |
-
-### Core Technologies
-
-- **Digital Sovereignty** — Data residency, operational sovereignty, regulatory compliance
-- **Azure Local** — Hyperconverged infrastructure (connected & disconnected modes)
-- **Azure Arc** — Hybrid management for servers, Kubernetes, and data services
-- **Edge RAG** — On-premises AI with retrieval-augmented generation
-- **Zero Trust Security** — Multi-pillar security architecture
-- **Compliance Frameworks** — GDPR, FedRAMP, HIPAA, ITAR, PCI DSS
-
----
-
-## Content Structure
-
-### Level-Based Hierarchy
-
-Content is organized by proficiency level:
+## Content layout
 
 ```text
-docs/
-├── level-50/    # Prerequisites (1-2 weeks, 2-4 hours)
-├── level-100/   # Foundational (2-4 weeks, 4-12 hours)
-├── level-200/   # Intermediate (4-6 weeks, 16-36 hours)
-├── level-300/   # Advanced (8-12 weeks, 48-120 hours)
-└── resources/   # External links & reference materials
+site/src/content/docs/
+├── index.mdx                 # Splash hero with CardGrid
+├── introduction.md           # Project introduction
+├── level-50/                 # Prerequisites (cloud, security, Azure fundamentals)
+├── level-100/                # Foundational
+│   ├── module-01-digital-sovereignty/
+│   ├── module-02-cloud-models/
+│   ├── module-03-azure-local/
+│   ├── module-04-azure-arc/
+│   └── module-05-edge-rag/
+├── level-200/                # Intermediate
+├── level-300/                # Advanced
+└── resources/                # External links + glossary
+
+site/public/images/           # Static images served at /images/...
 ```
 
-### Module Structure Pattern
+Levels render in the left sidebar with badges (L50/L100/L200/L300) configured
+in `site/astro.config.mjs`. The Resources section gets no badge.
 
-Each module follows this standard structure:
+## Authoring conventions
 
-1. **Main Module Page** (`module-0N-topic-name.md`) — Overview, learning objectives, key concepts
-2. **Topic Sub-pages** (2-4 files) — Detailed content deep-dives
-3. **Knowledge Check** (`topic-knowledge-check.md`) — 10-15 assessment questions
-4. **Hands-on Lab** (Level 200+) (`lab-0N-lab-name.md`) — Step-by-step exercises
+### Front matter
 
----
-
-## File Naming Conventions
-
-### Markdown Files
-
-- Use **lowercase with hyphens**: `topic-name.md`
-- Be descriptive and content-focused
-
-| Type            | Pattern                    | Example                            |
-| --------------- | -------------------------- | ---------------------------------- |
-| Module overview | `module-0N-topic.md`       | `module-01-digital-sovereignty.md` |
-| Topic page      | `topic-name.md`            | `azure-arc-kubernetes.md`          |
-| Knowledge check | `topic-knowledge-check.md` | `azure-arc-knowledge-check.md`     |
-| Lab exercise    | `lab-0N-name.md`           | `lab-01-azure-local-deployment.md` |
-| Specifications  | `VISUAL_SPECIFICATIONS.md` | Internal design reference          |
-| Level overview  | `README.md`                | Level index and navigation         |
-
-### Folders
-
-- All lowercase with hyphens
-- Level-based: `level-50/`, `level-100/`, `level-200/`, `level-300/`
-- Supporting: `resources/`, `assets/images/`
-
----
-
-## YAML Front Matter
-
-All content pages must include YAML front matter:
+Every content page **must** have a `title` and `description` (validated by the
+Zod schema in `site/src/content.config.ts`; description is 20–220 chars). All
+other keys are optional.
 
 ```yaml
 ---
-layout: default
 title: Page Title
-nav_order: 1
-parent: Parent Section Name # For child pages
-has_children: true # For parent pages with sub-pages
-description: "Brief description for SEO and navigation"
-nav_exclude: true # For internal/specification files
+description: "Short description for SEO and the sidebar tagline (20-220 chars)."
+sidebar:
+  order: 1        # Position within its parent folder. Lower = earlier.
+  hidden: false   # Optional: hide from the sidebar.
 ---
 ```
 
-### Layout Values
+Do **not** add `layout`, `nav_order`, or `parent` — those were Jekyll keys and
+are not used by Starlight.
 
-- `default` — Standard documentation page
-- `page` — Standalone page
-- `post` — Blog post format
+### Components (only inside `.mdx` files)
 
----
+`.mdx` is required to use any component. Plain `.md` cannot host JSX.
 
-## Markdown Formatting Standards
+- **`<KnowledgeCheck answer="B" reference="...">…</KnowledgeCheck>`** —
+  quiz-question wrapper. Children are full MDX (the question, options, and
+  explanation). See `site/src/components/KnowledgeCheck.astro`.
+- **`<DiagramContainer title="..." defaultOpen>…</DiagramContainer>`** —
+  collapsible wrapper for Mermaid blocks. See
+  `site/src/components/DiagramContainer.astro`.
 
-### Page Structure Template
+If a page uses neither component, keep it as `.md`.
 
-```markdown
-# Page Title
+### Callouts
 
-{: .no_toc }
-
-Brief introduction paragraph explaining the topic.
-
-## Table of Contents
-
-{: .no_toc .text-delta }
-
-1. TOC
-   {:toc}
-
----
-
-## Overview
-
-Module overview content here.
-
-## Learning Objectives
-
-After completing this module, you will be able to:
-
-- ✅ Objective 1
-- ✅ Objective 2
-- ✅ Objective 3
-
-## Prerequisites
-
-- [ ] Prerequisite 1
-- [ ] Prerequisite 2
-
-## Key Concepts
-
-### Concept Heading
-
-Content here...
-
-## Next Steps
-
-- **[Proceed to Next Module →](next-module.md)**
-```
-
-### Heading Hierarchy
-
-- `#` (H1) — Page title only (one per page), followed by `{: .no_toc }`
-- `##` (H2) — Major sections
-- `###` (H3) — Subsections
-- `####` (H4) — Detailed breakdowns (use sparingly)
-
-**Never skip heading levels** (e.g., don't go from H2 to H4).
-
-### Callouts and Notices
+Use Starlight asides (NOT kramdown `{: .note }` blockquotes):
 
 ```markdown
-{: .warning }
+:::note[Optional title]
+Helpful side note.
+:::
 
-> **⚠️ Warning Title**
-> Warning content describing a potential issue.
+:::tip[Optional title]
+Good-to-know.
+:::
 
-{: .note }
+:::caution[Optional title]
+Warning to the reader.
+:::
 
-> **💡 Note:** Additional helpful information.
-
-{: .important }
-
-> **Important:** Critical information the reader must know.
+:::danger[Optional title]
+Critical warning.
+:::
 ```
 
-### Expandable Content (Details/Summary)
+### Mermaid diagrams
 
-```markdown
-<details>
-<summary>Click to expand</summary>
-
-Hidden content here...
-
-</details>
-```
-
-### Code Blocks
-
-Always specify the language:
-
-````markdown
-```powershell
-Get-AzResourceGroup -Name "sovereign-rg"
-```
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-```
-
-```bash
-az login --use-device-code
-```
-````
-
-### Links
-
-Both Jekyll `{% link %}` tags and relative `.md` paths are valid project styles
-(the `jekyll-relative-links` plugin resolves the latter at build time). Choose one
-style per file consistently; do not mix within a single page. New content should
-prefer the form already used by sibling pages.
-
-- **Internal links (relative path style):** `[Link Text](../level-100/topic.md)`
-- **Internal links (Jekyll link tag):** `[Link Text]({% link level-100/topic.md %})` — path is
-  relative to the Jekyll source root (`docs/`), and validates at build time
-- **External links:** Use full URLs — `[Microsoft Learn](https://learn.microsoft.com/)`
-- **Section anchors:** `[Section](#section-heading-lowercase-with-hyphens)`
-
-When the docs review pipeline (see `scripts/review/`) flags a broken link, repair
-the link in place; do not mass-convert between the two styles.
-
----
-
-## Knowledge Check Format
-
-Use this standard format for assessment questions. **All knowledge checks must use collapsible answer sections** for consistency across the training platform.
-
-```markdown
-### Question N: Topic Name
-
-Question text here?
-
-A) Option A
-B) Option B
-C) Option C
-D) Option D
-
-<details markdown="1">
-<summary>Click to reveal answer</summary>
-
-**Correct Answer: B**
-
-**Explanation:** Detailed explanation of why this answer is correct and why other options are incorrect.
-
-**Reference:** [Topic Documentation](relative-link-to-content.md)
-
-</details>
-```
-
-**Critical Requirements:**
-
-- **Always use `<details markdown="1">`** — The `markdown="1"` attribute is required for kramdown to parse markdown inside HTML elements
-- **Blank line after `</summary>`** — Required for proper markdown rendering
-- **Blank line before `</details>`** — Ensures clean closing of the collapsible section
-- **Never use separate answer keys** — All answers must be inline with their questions using collapsible sections
-
-Guidelines:
-
-- Include 10-15 questions per knowledge check
-- Cover key concepts from the module
-- Balance difficulty across the question set
-- Always provide explanations and references
-
----
-
-## Visual Assets
-
-### Placeholder Format
-
-When visual assets are pending design, use this placeholder:
-
-```markdown
-> **📊 Visual Asset Placeholder**
-> _Asset Name: [Asset N: Asset Title]_
-> Description of what the diagram will show...
-> **Source:** Adapted from Microsoft Learn documentation
-```
-
-### Delivered Assets
-
-When SVG/PNG assets are available:
-
-```markdown
-![Descriptive alt text](../../assets/images/level-100/asset-name.svg)
-_Figure N: Caption describing the visual_
-```
-
-### Mermaid Diagrams
-
-Use Mermaid.js for inline diagrams with Azure color palette:
+Use a fenced code block with the `mermaid` language. The site-wide init script
+(in `site/astro.config.mjs`) applies the Azure color palette automatically.
 
 ````markdown
 ```mermaid
-graph TD
-    A[Azure Portal] --> B[Azure Arc]
-    B --> C[On-Premises Resources]
-
-    style A fill:#0078D4,stroke:#004578,color:#fff
-    style B fill:#0078D4,stroke:#004578,color:#fff
-    style C fill:#107C10,stroke:#0B5C0B,color:#fff
+graph TB
+  A[User] --> B[Identity]
+  B --> C[Resource]
 ```
 ````
 
-**Azure Color Palette:**
+If you want the diagram inside a collapsible container, wrap it in
+`<DiagramContainer>` (which requires `.mdx`).
 
-- Azure Blue: `#0078D4` (primary)
-- Azure Dark Blue: `#004578` (borders/strokes)
-- Azure Green: `#107C10` (success/on-premises)
-- Azure Orange: `#FF8C00` (warnings)
-- Azure Red: `#D13438` (errors/critical)
+### Internal links
 
-For detailed visual specifications, refer to `VISUAL_SPECIFICATIONS.md` files in each level folder.
-
----
-
-## Writing Guidelines
-
-### Terminology Consistency
-
-Use these standard terms throughout:
-
-| Correct Term                 | Avoid                           |
-| ---------------------------- | ------------------------------- |
-| Azure Local                  | Azure Stack HCI (legacy)        |
-| Sovereign Landing Zone (SLZ) | sovereign landing zone          |
-| Edge RAG                     | edge-rag, EdgeRAG               |
-| Microsoft Entra ID           | Azure Active Directory (legacy) |
-| Customer Lockbox             | customer lockbox                |
-| Air-gapped                   | air gapped, airgapped           |
-
-### Voice and Tone
-
-- Use **active voice** where possible
-- Be **clear and concise** — avoid jargon without explanation
-- **Technical accuracy** is paramount — verify against Microsoft Learn
-- **Accessible language** — define acronyms on first use
-
-### Source Verification (Critical)
-
-**All technical content must be verified against authoritative Microsoft documentation.** Do not generate specifications, feature lists, or technical details from memory or assumption.
-
-**Required verification sources:**
-
-| Topic            | Authoritative URL                                                                             |
-| ---------------- | --------------------------------------------------------------------------------------------- |
-| Azure Local      | `https://learn.microsoft.com/en-us/azure/azure-local/`                                        |
-| Azure Arc        | `https://learn.microsoft.com/en-us/azure/azure-arc/`                                          |
-| Sovereign Cloud  | `https://learn.microsoft.com/en-us/industry/sovereignty/`                                     |
-| Edge RAG         | `https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/`                                 |
-| Disconnected Ops | `https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview` |
-
-**Verification requirements:**
-
-1. **Fetch before writing:** Always retrieve current documentation before adding technical specifications (node counts, feature availability, hardware requirements)
-2. **Mark preview features:** Clearly indicate features in Preview vs GA status
-3. **Include references:** Add Microsoft Learn links for verifiable claims
-4. **Date-stamp volatile content:** Note the documentation version date for rapidly-changing features
-5. **Avoid assumptions:** If documentation is unclear, state "verify with current Microsoft documentation" rather than guessing
-
-**Example of proper attribution:**
+Use Starlight slugs, not `.md` paths:
 
 ```markdown
-{: .note }
+<!-- ✅ correct -->
+[Azure Arc Intro](/level-100/module-04-azure-arc/azure-arc-intro/)
+[Same-folder sibling](./sibling-page/)
 
-> **📝 Source:** [Article Title](https://learn.microsoft.com/...) — Microsoft Learn (Month YYYY)
+<!-- ❌ wrong -->
+[Azure Arc Intro](azure-arc-intro.md)
+[Same-folder sibling](sibling-page.md)
 ```
 
-**Features known to change frequently:**
+The base path `/microsoft-sovereign-cloud-brain-trek/` is added automatically
+by Starlight. Never hard-code it in content.
 
-- Node count limits and scaling
-- Preview feature availability
-- Hardware requirements
-- Regional availability
-- Pricing and licensing
+### Images
 
-### Role-Specific Content
-
-When content differs by audience:
+Place files under `site/public/images/level-XX/...` and reference them with
+root-relative URLs:
 
 ```markdown
-{: .note }
-
-> **For Sales Professionals:** Focus on business value and ROI metrics.
-> **For Technical Professionals:** See the [architecture deep-dive](link.md) for implementation details.
+![Architecture](/images/level-100/azure-local-architecture.svg)
 ```
 
----
+Starlight prepends the base path at build time.
 
-## Accessibility Requirements
+### File names
 
-- **Alt text**: All images must have descriptive alt text
-- **Heading levels**: Never skip levels (H1 → H2 → H3)
-- **Link text**: Use descriptive text (not "click here")
-- **Color contrast**: WCAG AA compliance (4.5:1 ratio)
-- **Tables**: Include header rows with proper markup
+Use **lowercase kebab-case** for all content files. Examples:
 
----
+- `cloud-deployment-models.md`
+- `azure-arc-intro.mdx`
+- `module-04-azure-arc/index.md` (module landing page)
 
-## Microsoft Learn References
+Uppercase or snake_case file names break the link rewriter (Starlight lowercases
+route slugs, so `VISUAL_SPECIFICATIONS.md` would ship at
+`/level-100/visual_specifications/` while content authors and old bookmarks
+expect `visual-specifications`).
 
-When referencing official documentation:
-
-```markdown
-**Reference:** [Article Title](https://learn.microsoft.com/path) — Microsoft Learn
-```
-
-Key documentation sources:
-
-- [Microsoft Sovereign Cloud](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)
-- [Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/)
-- [Azure Arc](https://learn.microsoft.com/en-us/azure/azure-arc/)
-- [Edge RAG](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/)
-- [Zero Trust](https://learn.microsoft.com/en-us/security/zero-trust/)
-
----
-
-## Jekyll Configuration
-
-This site uses:
-
-- **Theme**: Minima with Just the Docs influences
-- **Jekyll version**: 4.2.0
-- **Plugins**: `jekyll-feed`, `jekyll-seo-tag`, `jekyll-sitemap`
-
-Navigation is defined in `_data/navigation.yml` and controlled via `nav_order` in front matter.
-
----
-
-## Quick Reference Checklist
-
-When creating or editing content:
-
-- [ ] YAML front matter includes `layout`, `title`, `nav_order`, `description`
-- [ ] Page title uses `# Title` with `{: .no_toc }`
-- [ ] Table of contents included for pages with multiple sections
-- [ ] Learning objectives use ✅ checkmarks
-- [ ] Heading hierarchy is sequential (no skipped levels)
-- [ ] Internal links use a single style per file (either relative `.md` paths or `{% link %}` tags)
-- [ ] Code blocks specify language
-- [ ] Images have descriptive alt text
-- [ ] Knowledge check questions use expandable answer format
-- [ ] Microsoft Learn references include full URLs
-- [ ] File name follows `lowercase-with-hyphens.md` convention
-
----
-
-## Working with the Astro Starlight site (`site/`) — migration in progress
-
-The repository is mid-migration from Jekyll to Astro Starlight. The Jekyll tree
-under `docs/` is the production source until the Phase 6 cutover; the Astro
-tree under `site/src/content/docs/` is built and validated in parallel via
-`.github/workflows/astro-ci.yml`.
-
-### When editing `site/**`
-
-- **Use the `astro-docs` MCP server** (configured in `.vscode/mcp.json`) to
-  look up Astro / Starlight APIs before guessing. The repository's
-  `CONTRIBUTING.md` has the exact MCP setup snippet.
-- **Starlight asides** replace kramdown callouts:
-  - `{: .note }` / `> **...**` → `:::note[Title] ... :::`
-  - `{: .warning }` → `:::caution[Title] ... :::`
-  - `{: .important }` → `:::tip[Title] ... :::`
-- **Knowledge checks** use the `<KnowledgeCheck answer="B" reference="...">`
-  component, with rich MDX children for question + options + explanation.
-  The file extension MUST be `.mdx` when this component is used.
-- **Diagram containers** for collapsible Mermaid diagrams use
-  `<DiagramContainer title="..." defaultOpen>` — `.mdx` only.
-- A file should be `.md` unless it uses one of the components above.
-- **Internal links** drop the `.md` extension and use Starlight slugs:
-  `[Foo](../module-01-topic/foo/)` — note the trailing slash.
-- The site's **base path** is `/microsoft-sovereign-cloud-brain-trek/`. Always
-  use root-relative paths starting with `/level-XX/...` or relative paths;
-  never hard-code the base path.
-
-### Local validation before opening a PR touching `site/**`
+## Local development
 
 ```bash
 cd site
-npm run check     # astro check — types + content collection schema
-npm run build     # full build — catches MDX errors and broken links
+npm ci                    # one-time install
+npm run dev               # dev server with HMR at http://localhost:4321/microsoft-sovereign-cloud-brain-trek/
+npm run check             # astro check (types + content collection schema)
+npm run build             # full static build into site/dist/
+npm run preview           # serve the built site (matches production)
+npm run emit-legacy-stubs # post-build: regenerate static .html redirect stubs
+                          # for legacy Jekyll URLs from path-rewrite-map.json
 ```
+
+Run `npm run check && npm run build` before opening a PR that touches `site/**`.
+
+## CI
+
+- `.github/workflows/astro-ci.yml` — runs `astro check` + `astro build` on
+  every PR touching `site/**` and uploads `dist/` as an artifact.
+- `.github/workflows/astro-deploy.yml` — deploys `dist/` to GitHub Pages on
+  every push to `main` that touches `site/**`.
+- `.github/workflows/markdown-lint.yml` — runs `markdownlint-cli2` (pinned to
+  the pre-commit hook version) on `.md` files. `.mdx` files are not linted by
+  markdownlint (cannot parse JSX); MDX correctness is enforced by
+  `astro check`.
+- `.github/workflows/link-check.yml` — runs `lychee` on demand.
+
+## Rollback
+
+If a deploy regresses production, the `legacy/jekyll-last` tag preserves the
+pre-cutover state. Detailed rollback steps live in
+[`CONTRIBUTING.md`](../CONTRIBUTING.md#rollback-runbook-post-cutover-safety-net).
+
+## Things to avoid
+
+- Don't add Jekyll/kramdown syntax (`{: .note }`, `{:toc}`, `{% link %}`,
+  `<details markdown="1">`, `layout:`, `nav_order:`, `parent:`).
+- Don't add `Just the Docs` classes (`.btn`, `.fs-9`, `.text-delta`,
+  `.no_toc`).
+- Don't hard-code the base path in content.
+- Don't enable a dark-theme selector — the site is locked to light theme by
+  the `ThemeProvider.astro` and `ThemeSelect.astro` overrides under
+  `site/src/components/`.
+- Don't create a top-level `package.json` install — Astro dependencies live in
+  `site/package.json`. Running `npm install` at the repo root will produce a
+  conflicting `node_modules/` tree.

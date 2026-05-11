@@ -247,7 +247,9 @@ _Settings → Copilot → Coding agent → MCP servers_:
 
 If a regression on `main` breaks the Astro deploy in production, restore the
 previous Jekyll site using the `legacy/jekyll-last` tag (the last commit before
-the Phase 6 cutover).
+the Phase 6 cutover). The tag preserves the Jekyll source tree (`docs/`,
+`_config.yml`, `Gemfile`) and the Jekyll deploy workflow exactly as they were
+just before cutover.
 
 1. **Revert the cutover merge commit** on `main`:
 
@@ -256,14 +258,18 @@ the Phase 6 cutover).
    git push origin main
    ```
 
-2. **Restore the Jekyll workflow and source tree** from the tag:
+2. **Restore the Jekyll source + workflow from the tag.** The cutover commit
+   deleted `docs/`, `_config.yml`, `Gemfile`, and the Jekyll workflow; this
+   command checks them all out of the tag and stages them for commit:
 
    ```bash
-   git checkout legacy/jekyll-last -- docs/ _config.yml Gemfile .github/workflows/jekyll-deploy.yml.disabled
-   git mv .github/workflows/jekyll-deploy.yml.disabled .github/workflows/jekyll-deploy.yml
+   git checkout legacy/jekyll-last -- docs/ _config.yml Gemfile
+   git show legacy/jekyll-last:.github/workflows/jekyll-deploy.yml \
+       > .github/workflows/jekyll-deploy.yml
+   git add .github/workflows/jekyll-deploy.yml
    ```
 
-3. **Disable the Astro workflow** (so it doesn't race with the Jekyll one):
+3. **Disable the Astro workflow** so it doesn't race with the Jekyll one:
 
    ```bash
    git mv .github/workflows/astro-deploy.yml .github/workflows/astro-deploy.yml.disabled

@@ -2,9 +2,7 @@
  * Custom CSS for Microsoft Sovereign Cloud Brain Trek.
  *
  * Layered on top of Starlight's default theme. The Microsoft Azure brand
- * palette and Segoe UI font stack mirror the Microsoft Learn experience,
- * matching what the Jekyll/just-the-docs site uses today and what
- * dc2fabric uses for its Starlight build.
+ * palette and Segoe UI font stack mirror the Microsoft Learn experience.
  */
 
 :root {
