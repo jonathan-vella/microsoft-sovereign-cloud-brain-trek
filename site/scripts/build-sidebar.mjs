@@ -136,7 +136,8 @@ export async function buildLevelItems(level) {
       items.push({
         label: item.label,
         collapsed: true,
-        autogenerate: { directory: `${level}/${item.name}` },
+        // Starlight 0.39 requires `autogenerate` to be wrapped in `items`.
+        items: [{ autogenerate: { directory: `${level}/${item.name}`, collapsed: true } }],
       });
     } else {
       items.push({ slug: item.slug });
@@ -184,7 +185,7 @@ export async function buildSidebar() {
     {
       label: "Resources",
       collapsed: true,
-      autogenerate: { directory: "resources" },
+      items: [{ autogenerate: { directory: "resources", collapsed: true } }],
     },
   ];
 }

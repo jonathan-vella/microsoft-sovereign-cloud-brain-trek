@@ -13,9 +13,9 @@
     "emit-legacy-stubs": "node scripts/emit-legacy-stubs.mjs"
   },
   "dependencies": {
-    "astro": "^5.7.0",
-    "@astrojs/starlight": "0.32.4",
-    "@astrojs/mdx": "^4.0.0",
+    "astro": "^6.3.1",
+    "@astrojs/starlight": "^0.39.0",
+    "@astrojs/mdx": "^5.0.0",
     "sharp": "^0.34.5"
   },
   "devDependencies": {

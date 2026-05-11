@@ -51,10 +51,13 @@ export default defineConfig({
         baseUrl:
           "https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/edit/main/site/",
       },
-      social: {
-        github:
-          "https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek",
+        },
+      ],
       sidebar: await buildSidebar(),
       components: {
         // Lock the site to light theme: ThemeSelect is empty (hides the
