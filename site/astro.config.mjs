@@ -81,10 +81,11 @@ export default defineConfig({
         },
       ],
       components: {
-        // Theme components (light/dark switcher) ported from dc2fabric.
-        // These will be added in Phase 1.3 alongside KnowledgeCheck and DiagramContainer.
-        // ThemeProvider: "./src/components/ThemeProvider.astro",
-        // ThemeSelect: "./src/components/ThemeSelect.astro",
+        // Lock the site to light theme: ThemeSelect is empty (hides the
+        // header dropdown) and ThemeProvider forces `data-theme="light"`
+        // on every page load. See site/src/components/ for both overrides.
+        ThemeSelect: "./src/components/ThemeSelect.astro",
+        ThemeProvider: "./src/components/ThemeProvider.astro",
       },
     }),
     mdx(),

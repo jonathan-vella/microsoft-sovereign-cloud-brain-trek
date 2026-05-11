@@ -1,0 +1,24 @@
+---
+/**
+ * ThemeProvider.astro
+ *
+ * Overrides Starlight's built-in theme provider to lock the site to light
+ * theme. Starlight's default reads localStorage / `prefers-color-scheme` and
+ * applies `data-theme="dark|light"` to `<html>`; this override hard-codes
+ * `data-theme="light"` and clears any stale localStorage entry on every page
+ * load so the dark theme cannot be re-enabled even by users who previously
+ * selected it on the pre-cutover site.
+ */
+---
+<script is:inline>
+  (function () {
+    try {
+      // Always set light theme; remove any persisted user override.
+      document.documentElement.dataset.theme = "light";
+      localStorage.removeItem("starlight-theme");
+    } catch (_e) {
+      // localStorage may be unavailable (Safari private mode etc.); the
+      // data-theme assignment above is sufficient by itself.
+    }
+  })();
+</script>
