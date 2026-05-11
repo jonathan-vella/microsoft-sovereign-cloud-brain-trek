@@ -1,96 +1,73 @@
 # Dev Container Configuration
 
-This directory contains the development container configuration for the Sovereign Cloud Brain Trek project.
+This directory contains the development container configuration for the
+Sovereign Cloud Brain Trek project.
 
 ## Overview
 
-The dev container provides a consistent, pre-configured development environment with all the tools needed to build, test, and contribute to this Jekyll-based documentation site.
+The dev container provides a consistent, pre-configured environment for
+building and contributing to the Astro Starlight documentation site.
 
 ## Base Image
 
-- **Image:** `mcr.microsoft.com/devcontainers/jekyll:2-bookworm`
+- **Image:** `mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm`
 - **OS:** Debian 12 (Bookworm)
-- **Ruby:** Pre-installed with Jekyll and Bundler
+- **Node.js:** 20.x pre-installed
 
 ## Included Features
 
-| Feature | Version | Purpose |
-|---------|---------|---------|
-| Node.js | LTS | markdownlint-cli2, npm scripts |
-| Python | 3.12 | Diagram generation scripts |
-
-## Pre-installed Tools
-
-### Ruby/Jekyll
-
-- `jekyll` — Static site generator
-- `bundler` — Ruby dependency management
-- `github-pages` gem — GitHub Pages compatibility
-
-### Node.js
-
-- `markdownlint-cli2` — Markdown linting
-- `npm` — Package management
-
-### Python
-
-- `matplotlib` — Diagram generation
-- `pillow` — Image processing
-- `diagrams` — Infrastructure diagrams
-- `cartopy` — Geographic mapping
-- `pre-commit` — Git hooks
-
-### System
-
-- `graphviz` — DOT graph rendering
-- `libgeos-dev`, `libproj-dev` — Cartopy dependencies
+| Feature | Version | Purpose                                  |
+| ------- | ------- | ---------------------------------------- |
+| Python  | 3.12    | Ad-hoc scripts (no longer required for builds) |
 
 ## VS Code Extensions
 
-The following extensions are automatically installed:
+The following extensions are installed automatically:
 
-| Extension | Purpose |
-|-----------|---------|
-| Ruby LSP | Ruby language support |
-| Shopify Liquid | Liquid template syntax |
-| markdownlint | Markdown linting |
-| Markdown All in One | Markdown editing features |
-| Markdown Mermaid | Mermaid diagram preview |
-| YAML | YAML language support |
-| EditorConfig | Consistent editor settings |
-| Prettier | Code formatting |
+| Extension              | Purpose                                |
+| ---------------------- | -------------------------------------- |
+| Astro                  | `.astro` and `.mdx` language support   |
+| markdownlint           | Markdown linting                       |
+| Markdown All in One    | Markdown editing features              |
+| Markdown Mermaid       | Mermaid diagram preview                |
+| YAML                   | YAML language support                  |
+| EditorConfig           | Consistent editor settings             |
+| Prettier               | Code formatting                        |
 
 ## Forwarded Ports
 
-| Port | Service |
-|------|---------|
-| 4000 | Jekyll development server |
+| Port | Service                       |
+| ---- | ----------------------------- |
+| 4321 | Astro dev / preview server    |
 
 ## Getting Started
 
-1. **Open in VS Code** with the Dev Containers extension installed
-2. **Rebuild Container** when prompted (or use Command Palette → "Dev Containers: Rebuild Container")
-3. **Wait for setup** — the `postCreateCommand` installs dependencies automatically
+1. **Open in VS Code** with the Dev Containers extension installed.
+2. **Rebuild Container** when prompted (or use Command Palette →
+   _Dev Containers: Rebuild Container_).
+3. **Wait for setup** — `postCreateCommand` runs `npm ci --prefix site` and
+   `pre-commit install`.
 
 ### Running the Site Locally
 
 ```bash
-# Start Jekyll development server
-bundle exec jekyll serve --livereload
-
-# Or use the npm script
-npm run serve
+cd site
+npm run dev                 # dev server with live reload
+npm run check               # type and content-collection check
+npm run build               # full static build into site/dist/
+npm run preview             # serve the built site
 ```
 
-The site will be available at `http://localhost:4000`.
+The dev server is reachable at
+`http://localhost:4321/microsoft-sovereign-cloud-brain-trek/`.
 
 ### Running Linters
 
 ```bash
-# Lint all markdown files
-npx markdownlint-cli2 "docs/**/*.md"
+# Lint all markdown
+npx markdownlint-cli2
 
-# Run pre-commit hooks manually
+# Run pre-commit hooks against the working tree
 pre-commit run --all-files
 ```
 
@@ -98,41 +75,33 @@ pre-commit run --all-files
 
 ### Adding VS Code Extensions
 
-Edit `devcontainer.json` and add extension IDs to the `customizations.vscode.extensions` array.
+Edit `devcontainer.json` and add extension IDs to
+`customizations.vscode.extensions`.
 
 ### Adding System Packages
 
-Append to the `postCreateCommand` in `devcontainer.json`:
+Append to `postCreateCommand`:
 
 ```json
-"postCreateCommand": "... && sudo apt-get install -y <package-name>"
+"postCreateCommand": "... && sudo apt-get install -y <package>"
 ```
-
-### Adding Python Packages
-
-Add to `requirements.txt` in the repository root.
 
 ## Troubleshooting
 
 ### Container Build Fails
 
-1. Check Docker is running
-2. Try "Dev Containers: Rebuild Container Without Cache"
-3. Check `postCreateCommand` for errors
+1. Confirm Docker is running.
+2. Try _Dev Containers: Rebuild Container Without Cache_.
+3. Check `postCreateCommand` for errors.
 
-### Jekyll Won't Start
+### Astro Dev Server Won't Start
 
 ```bash
-# Reinstall gems
-bundle install
+# Re-install dependencies cleanly
+cd site
+rm -rf node_modules
+npm ci
 
 # Check for port conflicts
-lsof -i :4000
-```
-
-### Markdownlint Issues
-
-```bash
-# Reinstall markdownlint-cli2
-npm install -g markdownlint-cli2
+lsof -i :4321
 ```

@@ -38,10 +38,10 @@ jobs:
         run: npm install -g markdownlint-cli2@0.17.2
 
       - name: Run markdownlint
-        # Globs include both the legacy Jekyll docs/ tree and the new Astro
-        # site/src/content/docs/ tree. .mdx files are NOT linted here —
-        # markdownlint does not parse JSX expressions and would flag every
-        # component tag. MDX correctness is enforced by `astro check` (see
-        # the astro-ci.yml workflow) and by the MDX safety pass inside
-        # site/scripts/migrate.mjs.
+        # Lints every .md file in the repo (root README, .github/, and the
+        # Astro Starlight content under site/src/content/docs/). .mdx files
+        # are NOT linted here — markdownlint cannot parse JSX expressions
+        # and would flag every component tag. MDX correctness is enforced by
+        # `astro check` (see the astro-ci.yml workflow) and by the MDX
+        # safety pass inside site/scripts/migrate.mjs.
         run: markdownlint-cli2 "**/*.md"

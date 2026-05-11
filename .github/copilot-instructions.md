@@ -1,8 +1,16 @@
 # GitHub Copilot Instructions
 
+> **⚠️ Stack:** This site is now built with **Astro Starlight** (sources under
+> `site/src/content/docs/`). The Jekyll tree under `docs/` was removed at the
+> Phase 6 cutover. The detailed conventions in this file historically referred
+> to kramdown/Jekyll syntax and are progressively being rewritten; until that
+> rewrite lands, **when editing under `site/**`, follow the "Working with the
+> Astro Starlight site" section at the bottom of this file** — it supersedes
+> the kramdown rules. `CONTRIBUTING.md` has the authoritative authoring guide.
+
 ## Project Overview
 
-This is the **Microsoft Sovereign Cloud Brain Trek** — a Jekyll-based technical documentation and training platform for architects and solutions professionals. The repository provides structured learning content covering Microsoft Sovereign Cloud technologies including Azure Local, Azure Arc, and Edge RAG (Retrieval-Augmented Generation).
+This is the **Microsoft Sovereign Cloud Brain Trek** — a technical documentation and training platform for architects and solutions professionals. The repository provides structured learning content covering Microsoft Sovereign Cloud technologies including Azure Local, Azure Arc, and Edge RAG (Retrieval-Augmented Generation).
 
 ### Target Audience
 
@@ -476,9 +484,3 @@ cd site
 npm run check     # astro check — types + content collection schema
 npm run build     # full build — catches MDX errors and broken links
 ```
-
-### When editing `docs/**` (Jekyll side)
-
-Keep the existing kramdown conventions documented above. Re-run
-`cd site && npm run migrate` afterwards so the Astro tree stays in sync, then
-commit both trees together.

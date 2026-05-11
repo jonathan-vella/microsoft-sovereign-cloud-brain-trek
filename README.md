@@ -18,7 +18,7 @@ A comprehensive learning journey for architects and solutions professionals
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
 [![Claude Haiku](https://img.shields.io/badge/Claude%20Haiku-191919?logo=anthropic&logoColor=white)](https://www.anthropic.com/claude)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Documentation](https://img.shields.io/badge/Documentation-Complete-brightgreen.svg)](docs/README.md)
+[![Documentation](https://img.shields.io/badge/Documentation-Complete-brightgreen.svg)](site/src/content/docs/)
 
 ## Overview
 
@@ -145,86 +145,53 @@ graph TD
 ## Documentation Structure
 
 ```text
-docs/
-├── index.md                    # Home page
-├── introduction.md             # Project introduction
-├── level-50/                   # Prerequisites
-├── level-100/                  # Foundational concepts
-├── level-200/                  # Intermediate skills
-├── level-300/                  # Advanced expertise
-├── resources/                  # Additional resources
-└── assets/                     # Images and diagrams
+site/src/content/docs/
+├── index.mdx                # Home (splash page)
+├── introduction.md          # Project introduction
+├── level-50/                # Prerequisites
+├── level-100/               # Foundational concepts
+├── level-200/               # Intermediate skills
+├── level-300/               # Advanced expertise
+└── resources/               # Additional resources
+site/public/images/         # Static images served at /images/...
 ```
 
 ## Getting Started
 
 ### For Learners
 
-1. **Start with Level 50** in [`/docs/level-50/`](docs/level-50/README.md) — Cloud, security & Azure fundamentals
-2. **Continue to Level 100** in [`/docs/level-100/`](docs/level-100/README.md) — Foundational sovereign cloud concepts
-3. **Progress to Level 200** in [`/docs/level-200/`](docs/level-200/README.md) — Solution design & deployment planning
-4. **Complete Level 300** in [`/docs/level-300/`](docs/level-300/README.md) — Advanced expertise & customer leadership
+1. **Start with Level 50** at [`/level-50/`](site/src/content/docs/level-50/) — Cloud, security & Azure fundamentals
+2. **Continue to Level 100** at [`/level-100/`](site/src/content/docs/level-100/) — Foundational sovereign cloud concepts
+3. **Progress to Level 200** at [`/level-200/`](site/src/content/docs/level-200/) — Solution design & deployment planning
+4. **Complete Level 300** at [`/level-300/`](site/src/content/docs/level-300/) — Advanced expertise & customer leadership
 
 ### For Content Contributors
 
 1. **Review** [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines
 2. **Check** [.github/PROJECT_FILES.md](.github/PROJECT_FILES.md) for current project status
-3. **Reference** [docs/README.md](docs/README.md) for content structure
-
-### For Deploying the Site
-
-1. **See** [docs/README.md](docs/README.md) for content organization
-2. **Review** Jekyll configuration (coming soon)
-3. **Test locally** before GitHub Pages deployment
+3. **Reference** [Local Development](#local-development) below for build commands
 
 ## Local Development
 
-This repository contains **two parallel site implementations** during the Astro
-migration window. Both are buildable locally. Only one is wired to the live
-GitHub Pages deployment at any given time (see [Deployment](#deployment-status)).
-
-### Jekyll site (current production)
-
-Source: `docs/`. Built and deployed by `.github/workflows/jekyll-deploy.yml`.
-
-```bash
-bundle install                  # one-time, installs the gems pinned in Gemfile
-bundle exec jekyll serve        # http://127.0.0.1:4000/microsoft-sovereign-cloud-brain-trek/
-```
-
-### Astro Starlight site (Phase 2 in progress)
-
-Source: `site/src/content/docs/`. Built locally and (until cutover) deployed via
-`workflow_dispatch` from `.github/workflows/astro-deploy.yml`.
+The site is built with [Astro](https://astro.build/) and the
+[Starlight](https://starlight.astro.build/) documentation theme. Source content
+lives under `site/src/content/docs/`.
 
 ```bash
 cd site
-npm ci                          # one-time
-npm run dev                     # local dev server with live reload
+npm ci                          # one-time install
+npm run dev                     # local dev server with live reload (http://localhost:4321/microsoft-sovereign-cloud-brain-trek/)
 npm run check                   # astro check (types + content collection schema)
 npm run build                   # full static build into site/dist/
-npm run emit-legacy-stubs       # post-build: write meta-refresh .html stubs for legacy URLs
+npm run preview                 # serve the built site (matches production output)
+npm run emit-legacy-stubs       # post-build: write meta-refresh .html stubs for legacy Jekyll URLs
 ```
 
 > **⚠️ Two `package.json` files**
-> The **root** `package.json` carries repo-wide tooling (audit scripts, lychee, etc.).
+> The **root** `package.json` carries repo-wide tooling (lychee, pre-commit, etc.).
 > The **`site/package.json`** carries Astro / Starlight / MDX dependencies.
-> Run `npm install` inside `site/` when working on the Astro site —
+> Run `npm install` inside `site/` when working on the site —
 > never at the repo root, or the dependency trees will collide.
-
-### Migrating new content from Jekyll to Astro
-
-`site/scripts/migrate.mjs` is an idempotent converter from kramdown Markdown to
-Starlight MDX. Re-run it any time `docs/` is updated to refresh the Astro tree:
-
-```bash
-cd site
-npm run migrate                 # full tree
-npm run migrate -- --level 100  # one level at a time
-```
-
-The script emits `site/migration-report.json` and `site/path-rewrite-map.json`;
-the latter feeds `npm run emit-legacy-stubs`.
 
 ## Key Technologies Covered
 
@@ -244,14 +211,14 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for deta
 
 New content should follow:
 
-1. Level/module structure in `docs/level-XXX/`
-2. YAML frontmatter template (see existing files)
-3. Markdown formatting standards
-4. Visual asset placeholder format (see examples in existing files)
+1. Level/module structure in `site/src/content/docs/level-XXX/`
+2. YAML frontmatter template (see existing files; required keys are `title` and `description`)
+3. Markdown / MDX formatting standards documented in [CONTRIBUTING.md](CONTRIBUTING.md)
+4. Starlight aside / `<KnowledgeCheck>` / `<DiagramContainer>` conventions for asides, quizzes, and diagrams
 
-### Jekyll Deployment
+### Deployment
 
-Site deployment preparation is underway for late November 2025. See [deployment status](#deployment-status) below.
+The site is deployed to GitHub Pages by `.github/workflows/astro-deploy.yml` on every push to `main` that touches `site/**`.
 
 ## Resources
 

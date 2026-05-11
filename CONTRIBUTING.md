@@ -40,17 +40,17 @@ This project adheres to the [Microsoft Open Source Code of Conduct](https://open
 2. **Install dependencies:**
 
    ```bash
-   bundle install
-   npm install -g markdownlint-cli2
+   cd site
+   npm ci
    ```
 
 3. **Run the site locally:**
 
    ```bash
-   bundle exec jekyll serve
+   npm run dev
    ```
 
-4. **Open in browser:** Navigate to `http://localhost:4000`
+4. **Open in browser:** Navigate to `http://localhost:4321/microsoft-sovereign-cloud-brain-trek/`
 
 ### Using the Dev Container (Recommended)
 
@@ -81,9 +81,9 @@ This project includes a dev container configuration for VS Code:
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/your-feature-name`)
-3. Make your changes
-4. Run linting: `markdownlint-cli2 "**/*.md"`
-5. Test locally with Jekyll
+3. Make your changes under `site/src/content/docs/**`
+4. Run linting: `npx markdownlint-cli2` (from repo root) and `npm run check` (from `site/`)
+5. Run a full build to catch broken links / schema issues: `cd site && npm run build`
 6. Commit your changes
 7. Push to your fork
 8. Open a Pull Request
@@ -95,12 +95,13 @@ This project includes a dev container configuration for VS Code:
 ### File Structure
 
 ```text
-docs/
+site/src/content/docs/
 ├── level-50/      # Prerequisites (1-2 weeks)
 ├── level-100/     # Foundational (2-4 weeks)
 ├── level-200/     # Intermediate (4-6 weeks)
 ├── level-300/     # Advanced (8-12 weeks)
 └── resources/     # External references
+site/public/images/  # Static images served at /images/...
 ```
 
 ### File Naming
@@ -112,15 +113,16 @@ docs/
 
 ### Required Front Matter
 
-All content pages must include YAML front matter:
+All content pages must include YAML front matter. The Zod content-collection
+schema validates this at build time (see `site/src/content.config.ts`):
 
 ```yaml
 ---
-layout: default
 title: Page Title
-nav_order: 1
-parent: Parent Section Name
-description: "Brief description for SEO"
+description: "Brief description for SEO (required, 20-220 chars)"
+sidebar:
+  order: 1                # Optional: position in the sidebar
+  hidden: false           # Optional: hide from the sidebar
 ---
 ```
 
@@ -137,10 +139,9 @@ description: "Brief description for SEO"
 ## Pull Request Process
 
 1. **Before submitting:**
-   - Run `markdownlint-cli2 "**/*.md"` and fix any errors
-   - Test the Jekyll build locally
-   - Ensure all links are valid
-   - Update related documentation if needed
+   - Run `npx markdownlint-cli2` from the repo root and fix any errors
+   - Run `cd site && npm run check && npm run build` and confirm both pass
+   - Update related documentation (CONTRIBUTING.md, README.md) if needed
 
 2. **PR requirements:**
    - Clear, descriptive title
@@ -184,43 +185,37 @@ kind: ConfigMap
 
 ### Links
 
-- **Internal links:** Use relative paths (`../level-100/topic.md`)
-- **External links:** Use full URLs with descriptive text
-- **Microsoft Learn:** Include as references where applicable
+- **Internal links:** Use Starlight slugs (no `.md` extension, trailing slash) — e.g. `[Foo](../module-01-topic/foo/)`.
+- **External links:** Use full URLs with descriptive text.
+- **Microsoft Learn:** Include as references where applicable.
+- The site's **base path** is `/microsoft-sovereign-cloud-brain-trek/`. Use root-relative paths (`/level-XX/...`) or relative paths; never hard-code the base path.
 
 ### Callouts
 
-Use Jekyll callout syntax:
+Use Starlight aside syntax:
 
 ```markdown
-{: .note }
-> **Note:** Additional helpful information.
+:::note[Optional title]
+Additional helpful information.
+:::
 
-{: .warning }
-> **Warning:** Important caution for the reader.
+:::caution[Optional title]
+Important caution for the reader.
+:::
+
+:::tip[Optional title]
+Useful tip or "good to know".
+:::
 ```
 
 ---
 
-## Working on the Astro site (`site/`)
+## Authoring conventions for `site/`
 
-The repo is **mid-migration** from Jekyll (`docs/`) to Astro Starlight (`site/`).
-Both trees are live; the Jekyll site is the production deployment until the
-Phase 6 cutover.
+### Components
 
-### When to edit which tree
-
-| Editing                                | Tree                                | Why                                                                                  |
-| -------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------ |
-| Existing content (typo / clarification) | `docs/` AND `site/src/content/docs/`| Until cutover, **both trees must stay in sync**. Re-run `npm run migrate` after editing `docs/`. |
-| Brand-new content                      | `site/src/content/docs/`            | New content authored directly in Starlight format; no kramdown round-trip needed.    |
-| Workflow / tooling                     | repo root                           | `.github/workflows/*`, `package.json`, lint configs.                                 |
-
-### Astro authoring conventions
-
-- **Knowledge checks** use the `<KnowledgeCheck answer="B">…</KnowledgeCheck>` component (see `site/src/components/KnowledgeCheck.astro`).
-- **Mermaid diagrams** wrapped for collapse use `<DiagramContainer title="…">` (see `site/src/components/DiagramContainer.astro`).
-- **Callouts** use Starlight asides: `:::note`, `:::tip`, `:::caution`, `:::danger`.
+- **Knowledge checks** use the `<KnowledgeCheck answer="B" reference="...">…</KnowledgeCheck>` component (see `site/src/components/KnowledgeCheck.astro`). Children are rich MDX containing the question, options, and explanation.
+- **Mermaid diagrams** wrapped for collapse use `<DiagramContainer title="…" defaultOpen>` (see `site/src/components/DiagramContainer.astro`).
 - A file becomes `.mdx` only if it uses one of the components above; otherwise it stays `.md`.
 
 ### Astro Docs MCP server (Copilot)
@@ -248,11 +243,11 @@ _Settings → Copilot → Coding agent → MCP servers_:
 
 ---
 
-## Rollback runbook (Phase 6 cutover)
+## Rollback runbook (post-cutover safety net)
 
-If the post-cutover Astro deploy is broken in production, follow this sequence
-to restore the Jekyll site. **Practice this once in a staging fork before
-cutover** so the timing is known.
+If a regression on `main` breaks the Astro deploy in production, restore the
+previous Jekyll site using the `legacy/jekyll-last` tag (the last commit before
+the Phase 6 cutover).
 
 1. **Revert the cutover merge commit** on `main`:
 
@@ -261,9 +256,10 @@ cutover** so the timing is known.
    git push origin main
    ```
 
-2. **Re-enable the Jekyll workflow**:
+2. **Restore the Jekyll workflow and source tree** from the tag:
 
    ```bash
+   git checkout legacy/jekyll-last -- docs/ _config.yml Gemfile .github/workflows/jekyll-deploy.yml.disabled
    git mv .github/workflows/jekyll-deploy.yml.disabled .github/workflows/jekyll-deploy.yml
    ```
 
@@ -273,22 +269,22 @@ cutover** so the timing is known.
    git mv .github/workflows/astro-deploy.yml .github/workflows/astro-deploy.yml.disabled
    ```
 
-4. **Commit and push** the workflow renames:
+4. **Commit and push**:
 
    ```bash
-   git commit -m "rollback: re-enable jekyll-deploy, disable astro-deploy"
+   git commit -m "rollback: restore jekyll-deploy from legacy/jekyll-last"
    git push origin main
    ```
 
 5. **Trigger the Jekyll workflow manually** via the Actions tab
-   (`Run workflow` on _Deploy Jekyll Site to GitHub Pages_).
-   If the Pages cache is stale, force a redeploy by pushing a no-op edit to any
-   file under `docs/`.
-6. **Verify production**: hit `https://jonathan-vella.github.io/microsoft-sovereign-cloud-brain-trek/`
-   and spot-check three deep URLs. Check `_site/` rendered correctly via the
-   Pages deployment log.
-7. **Open a tracking issue** with the failure mode so the next cutover attempt
-   addresses the root cause before retrying.
+   (_Run workflow_ on _Deploy Jekyll Site to GitHub Pages_). If the Pages
+   cache is stale, force a redeploy by pushing a no-op edit to any file
+   under `docs/`.
+6. **Verify production**: hit
+   `https://jonathan-vella.github.io/microsoft-sovereign-cloud-brain-trek/`
+   and spot-check three deep URLs.
+7. **Open a tracking issue** with the failure mode so the next cutover
+   attempt addresses the root cause before retrying.
 
 ---
 
@@ -296,7 +292,7 @@ cutover** so the timing is known.
 
 If you have questions about contributing, please:
 
-1. Check the [documentation](docs/README.md)
+1. Check the [content tree](site/src/content/docs/)
 2. Search existing [issues](https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek/issues)
 3. Open a new issue with your question
 

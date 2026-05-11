@@ -1,12 +1,11 @@
 {
     "name": "Sovereign Cloud Brain Trek",
-    "image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
 
-    // Features to add - Node.js for markdownlint-cli2, Python for diagram generation
+    // Phase 6 cutover — switched from the Jekyll dev container image to a
+    // Node 20 image because the Astro Starlight build is the production
+    // path. Python is still available as a feature for ad-hoc scripts.
     "features": {
-        "ghcr.io/devcontainers/features/node:1": {
-            "version": "lts"
-        },
         "ghcr.io/devcontainers/features/python:1": {
             "version": "3.12"
         }
@@ -16,8 +15,7 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "shopify.ruby-lsp",
-                "sissel.shopify-liquid",
+                "astro-build.astro-vscode",
                 "DavidAnson.vscode-markdownlint",
                 "yzhang.markdown-all-in-one",
                 "bierner.markdown-mermaid",
@@ -34,10 +32,9 @@
         }
     },
 
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [4000],
+    // Astro dev/preview server defaults to 4321.
+    "forwardPorts": [4321],
 
-    // Use 'postCreateCommand' to run commands after the container is created.
-    // Install graphviz for diagrams, cartopy dependencies for geographic maps
-    "postCreateCommand": "sh /usr/local/post-create.sh && sudo apt-get update && sudo apt-get install -y graphviz libgeos-dev libproj-dev proj-data proj-bin && pip install -r requirements.txt && npm install -g markdownlint-cli2 && pre-commit install"
+    // Install site dependencies and pre-commit hooks on first create.
+    "postCreateCommand": "npm ci --prefix site && pre-commit install"
 }

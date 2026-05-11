@@ -3,15 +3,15 @@
   // https://github.com/DavidAnson/markdownlint-cli2
 
   // Glob patterns for files to lint
-  // Phase 3 — added site/src/content/docs/**/*.md so the migrated Astro
-  // Starlight content is checked alongside the legacy Jekyll tree. .mdx
+  // Phase 6 cutover — the legacy Jekyll docs/ tree has been removed. Lint
+  // covers the Astro Starlight content and top-level Markdown only. .mdx
   // files are intentionally excluded because markdownlint cannot parse
   // JSX expressions; MDX correctness is enforced by `astro check` and by
   // the MDX safety pass inside site/scripts/migrate.mjs.
   "globs": [
-    "docs/**/*.md",
     "site/src/content/docs/**/*.md",
     "README.md",
+    "CONTRIBUTING.md",
     ".github/**/*.md"
   ],
 

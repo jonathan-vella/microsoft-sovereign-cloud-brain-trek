@@ -18,9 +18,8 @@ exclude_path = [
   "node_modules",
   "vendor",
   ".git",
-  ".vale",
-  "scripts/review/cache",
-  "scripts/review/reports",
+  "site/dist",
+  "site/node_modules",
 ]
 
 # Don't fail on rate-limited Microsoft Learn pages — they retry with 429s
