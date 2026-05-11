@@ -3,19 +3,6 @@
 
 version: 2
 updates:
-  # Ruby Gems (Jekyll and dependencies)
-  - package-ecosystem: "bundler"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-    open-pull-requests-limit: 5
-    labels:
-      - "dependencies"
-      - "ruby"
-    commit-message:
-      prefix: "chore(deps)"
-
   # GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -29,7 +16,7 @@ updates:
     commit-message:
       prefix: "chore(deps)"
 
-  # npm (for markdownlint-cli2 and other tools)
+  # npm — root tooling (markdownlint, etc.)
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -39,5 +26,19 @@ updates:
     labels:
       - "dependencies"
       - "javascript"
+    commit-message:
+      prefix: "chore(deps)"
+
+  # npm — Astro Starlight site dependencies
+  - package-ecosystem: "npm"
+    directory: "/site"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "javascript"
+      - "astro"
     commit-message:
       prefix: "chore(deps)"

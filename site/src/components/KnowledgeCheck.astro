@@ -3,20 +3,11 @@
  * KnowledgeCheck.astro
  *
  * Collapsible "Click to reveal answer" block used in the level-NN knowledge
- * checks. Replaces the Jekyll/kramdown pattern:
+ * checks. The answer body is provided as MDX children (NOT a prop string),
+ * so it can contain code blocks, links, lists, callouts, and diagrams
+ * without any escaping. Use it in .mdx files like:
  *
- *   <details markdown="1">
- *   <summary>Click to reveal answer</summary>
- *
- *   **Correct Answer: B**
- *   ...
- *   </details>
- *
- * The answer body is provided as MDX children (NOT a prop string), so it
- * can contain code blocks, links, lists, callouts, and diagrams without
- * any escaping. Use it in .mdx files like:
- *
- *   <KnowledgeCheck answer="B" reference="../level-100/topic.md">
+ *   <KnowledgeCheck answer="B" reference="/level-100/module-04-azure-arc/azure-arc-intro/">
  *     **Explanation:** Detailed reasoning here. Other options are wrong
  *     because ...
  *   </KnowledgeCheck>

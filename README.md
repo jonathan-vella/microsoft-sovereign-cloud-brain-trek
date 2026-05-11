@@ -184,7 +184,7 @@ npm run dev                     # local dev server with live reload (http://loca
 npm run check                   # astro check (types + content collection schema)
 npm run build                   # full static build into site/dist/
 npm run preview                 # serve the built site (matches production output)
-npm run emit-legacy-stubs       # post-build: write meta-refresh .html stubs for legacy Jekyll URLs
+npm run emit-legacy-stubs       # post-build: write meta-refresh .html stubs for legacy URLs
 ```
 
 > **⚠️ Two `package.json` files**

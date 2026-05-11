@@ -12,7 +12,7 @@
 - [ ] 🐛 Bug fix (broken links, typos, formatting issues)
 - [ ] ✨ New feature (new module, lab, or learning path)
 - [ ] 🎨 Visual asset (diagrams, images, mermaid charts)
-- [ ] 🔧 Configuration change (Jekyll, workflows, tooling)
+- [ ] 🔧 Configuration change (Astro, workflows, tooling)
 - [ ] 📚 Other (please describe)
 
 ## Learning Level Affected
@@ -46,10 +46,10 @@
 - [ ] I have read the [CONTRIBUTING.md](../CONTRIBUTING.md) guidelines
 - [ ] My changes follow the project's markdown formatting standards
 - [ ] I have run `markdownlint-cli2` and fixed any issues
-- [ ] I have tested the Jekyll build locally (`bundle exec jekyll serve`)
-- [ ] All links are valid and use relative paths where appropriate
+- [ ] I have run `npm run check` and `npm run build` from `site/` and both pass
+- [ ] All links are valid and use Starlight slugs (no `.md` extension, trailing slash)
 - [ ] Images have descriptive alt text
-- [ ] YAML front matter is complete and valid
+- [ ] YAML front matter is complete and valid (title + description required)
 - [ ] Code blocks specify the correct language
 
 ## Content Quality Checklist
