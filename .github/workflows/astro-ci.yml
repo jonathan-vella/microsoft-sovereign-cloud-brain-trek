@@ -1,0 +1,76 @@
+name: Astro CI
+
+# Phase 3 — quality gate for the Astro Starlight site at `site/`.
+#
+# Runs on every PR and on pushes to main that touch `site/`. Catches:
+#   - MDX compile errors (every .mdx file is parsed during `astro build`)
+#   - Content collection schema violations (Zod schema in site/src/content.config.ts)
+#   - Broken internal links (Starlight resolves every Markdown link at build time)
+#   - TypeScript / component prop errors (`astro check`)
+#   - Astro Image / asset reference errors
+#
+# This workflow does NOT deploy. The Phase 5 `astro-deploy.yml` workflow is
+# responsible for deployment, and is `workflow_dispatch` only until cutover.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/astro-ci.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/astro-ci.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "astro-ci-${{ github.ref }}"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: site
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Astro check (types + content collection schema)
+        run: npm run check
+
+      - name: Astro build
+        # The build is the strictest validator we have: it parses every
+        # .md/.mdx file through MDX, runs the Zod schema, resolves every
+        # internal link, and rehype-mermaid-lite runs (for syntax errors
+        # in Mermaid blocks).
+        run: npm run build
+
+      - name: Emit legacy redirect stubs
+        # Surfaces problems with path-rewrite-map.json (e.g., missing
+        # entries) before deploy.
+        run: npm run emit-legacy-stubs
+
+      - name: Upload dist as artifact for review
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: astro-dist-${{ github.event.pull_request.number }}
+          path: site/dist
+          retention-days: 7

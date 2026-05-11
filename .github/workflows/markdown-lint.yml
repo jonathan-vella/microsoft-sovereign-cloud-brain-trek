@@ -5,12 +5,16 @@ on:
     branches: [main]
     paths:
       - "**/*.md"
+      - "**/*.mdx"
       - ".markdownlint.json"
+      - ".markdownlint-cli2.jsonc"
   pull_request:
     branches: [main]
     paths:
       - "**/*.md"
+      - "**/*.mdx"
       - ".markdownlint.json"
+      - ".markdownlint-cli2.jsonc"
 
 permissions:
   contents: read
@@ -28,7 +32,16 @@ jobs:
           node-version: "20"
 
       - name: Install markdownlint-cli2
-        run: npm install -g markdownlint-cli2
+        # Phase 3 — pinned to the same version the pre-commit hook uses
+        # (.pre-commit-config.yaml) so local and CI lint produce identical
+        # results.
+        run: npm install -g markdownlint-cli2@0.17.2
 
       - name: Run markdownlint
+        # Globs include both the legacy Jekyll docs/ tree and the new Astro
+        # site/src/content/docs/ tree. .mdx files are NOT linted here —
+        # markdownlint does not parse JSX expressions and would flag every
+        # component tag. MDX correctness is enforced by `astro check` (see
+        # the astro-ci.yml workflow) and by the MDX safety pass inside
+        # site/scripts/migrate.mjs.
         run: markdownlint-cli2 "**/*.md"

@@ -17,7 +17,11 @@ jobs:
       - name: Check all links in documentation
         uses: lycheeverse/lychee-action@v2.7.0
         with:
-          args: --verbose --no-progress 'docs/**/*.md' 'README.md' 'CONTRIBUTING.md' 'JEKYLL_PREP.md' 'HANDOFF.md' 'AUTOMATION.md'
+          # Phase 3 — point at the Astro Starlight source. The Jekyll docs/
+          # tree is still scanned until the Phase 6 cutover so authors get
+          # warnings on whichever surface they edit; remove the docs/**
+          # glob in the cutover PR.
+          args: --verbose --no-progress 'site/src/content/docs/**/*.md' 'site/src/content/docs/**/*.mdx' 'docs/**/*.md' 'README.md' 'CONTRIBUTING.md'
           fail: false # Don't fail build, just report
 
       - name: Create issue if links broken
