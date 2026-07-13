@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Check all links in documentation
-        uses: lycheeverse/lychee-action@v2.7.0
+        uses: lycheeverse/lychee-action@v2.9.0
         with:
           # Phase 6 cutover — docs/ is gone, lychee now checks only the
           # Astro Starlight source and top-level repo Markdown.
