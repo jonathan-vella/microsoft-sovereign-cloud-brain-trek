@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import mdx from "@astrojs/mdx";
+import { unified } from "@astrojs/markdown-remark";
 import rehypeMermaid from "rehype-mermaid-lite";
 import { buildSidebar } from "./scripts/build-sidebar.mjs";
 import { activeRedirects } from "./scripts/redirects.mjs";
@@ -13,7 +14,9 @@ import rehypeBasePath from "./src/plugins/rehype-base-path.mjs";
 // produced low-contrast nodes on Microsoft Learn-style diagrams. The
 // new palette uses a light tint fill with a dark border + dark text,
 // matching how Microsoft Learn renders inline architecture diagrams.
-const mermaidInitScript = `import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+// Mermaid (~200 KB) loads only on pages that contain a diagram.
+const mermaidInitScript = `if (document.querySelector("pre.mermaid")) {
+const { default: mermaid } = await import("https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs");
 mermaid.initialize({
   startOnLoad: false,
   theme: "base",
@@ -47,7 +50,8 @@ const draw = (root) => {
   if (nodes.length) mermaid.run({ nodes });
 };
 draw(document);
-document.addEventListener("toggle", (e) => e.target.open && draw(e.target), true);`;
+document.addEventListener("toggle", (e) => e.target.open && draw(e.target), true);
+}`;
 
 // Records each page the reader opens, for the progress marks on the learning path and module
 // pages (src/components/course/progress.ts reads the same key). Stays in the browser.
@@ -64,8 +68,13 @@ export default defineConfig({
   trailingSlash: "always",
   // Old URLs of moved or deleted pages. Source of truth: site/redirects.json.
   redirects: activeRedirects(),
+  // Astro 7 defaults to JSX-style whitespace stripping ("jsx"), which can drop spaces between
+  // inline elements in components and content. Keep the Astro 6 HTML-aware behavior.
+  compressHTML: true,
   markdown: {
-    rehypePlugins: [rehypeMermaid, rehypeBasePath],
+    // Astro 7 renders Markdown with Sätteri by default. Our rehype plugins (Mermaid, base path)
+    // and Starlight need the unified (remark/rehype) pipeline.
+    processor: unified({ rehypePlugins: [rehypeMermaid, rehypeBasePath] }),
   },
   integrations: [
     starlight({
@@ -109,6 +118,8 @@ export default defineConfig({
         // on every page load. See site/src/components/ for both overrides.
         ThemeSelect: "./src/components/ThemeSelect.astro",
         ThemeProvider: "./src/components/ThemeProvider.astro",
+        // Short "Brain Trek" title on narrow screens so the header title is not cut off.
+        SiteTitle: "./src/components/overrides/SiteTitle.astro",
         // Level and module landing page templates (learning path, module summary and pages).
         MarkdownContent: "./src/components/overrides/MarkdownContent.astro",
         // "Last verified" from front matter next to "Last updated".

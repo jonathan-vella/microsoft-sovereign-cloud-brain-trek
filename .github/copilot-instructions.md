@@ -7,11 +7,14 @@ Generation), and Zero Trust.
 
 ## Stack
 
-- **Framework:** [Astro 5](https://astro.build/) with the
-  [Starlight 0.32](https://starlight.astro.build/) documentation theme.
-- **Content:** MDX + Markdown under `site/src/content/docs/`.
+- **Framework:** [Astro 7](https://astro.build/) with the
+  [Starlight 0.42](https://starlight.astro.build/) documentation theme.
+- **Content:** MDX + Markdown under `site/src/content/docs/`, rendered with the
+  `unified()` (remark/rehype) Markdown processor from `@astrojs/markdown-remark`
+  because the site uses rehype plugins.
 - **Diagrams:** Mermaid via `rehype-mermaid-lite` (client-side rendering, Azure
-  color palette configured in `site/astro.config.mjs`).
+  color palette configured in `site/astro.config.mjs`). Mermaid loads only on
+  pages that contain a diagram.
 - **Search:** [Pagefind](https://pagefind.app/) (built-in to Starlight).
 - **Hosting:** GitHub Pages, deployed by `.github/workflows/astro-deploy.yml`
   at base path `/microsoft-sovereign-cloud-brain-trek/`.

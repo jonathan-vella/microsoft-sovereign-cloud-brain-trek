@@ -17,10 +17,15 @@ const mod = level?.modules.find((m) => m.overview?.isCurrent);
 const meta = entry.data.module ?? {};
 const knowledgeChecks = mod?.units.filter((u) => u.isKnowledgeCheck) ?? [];
 
+// Module titles repeat across levels ("Module 1" exists in every level), so name the level too.
+const levelOf = (item: string) => item.match(/^\/level-(\d+)\//)?.[1];
 const prerequisites = await Promise.all(
   (meta.prerequisites ?? []).map(async (item) => {
     const doc = await findDoc(item);
-    return doc ? { text: doc.data.title, href: withBase(item) } : { text: item };
+    if (!doc) return { text: item };
+    const lvl = levelOf(item);
+    const level = lvl && !/^Level\s/i.test(doc.data.title) ? `Level ${lvl}` : undefined;
+    return { text: doc.data.title, href: withBase(item), level };
   }),
 );
 ---
@@ -83,7 +88,10 @@ const prerequisites = await Promise.all(
       <h2 id="prerequisites">Prerequisites</h2>
       <ul>
         {prerequisites.map((p) => (
-          <li>{p.href ? <a href={p.href}>{p.text}</a> : p.text}</li>
+          <li>
+            {p.href ? <a href={p.href}>{p.text}</a> : p.text}
+            {p.level && <span class="prerequisite-level"> ({p.level})</span>}
+          </li>
         ))}
       </ul>
     </>

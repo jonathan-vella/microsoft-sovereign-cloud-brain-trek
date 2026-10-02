@@ -3,7 +3,7 @@
     "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
 
     // Phase 6 cutover — switched from the Jekyll dev container image to a
-    // Node 22 image (the current LTS, codenamed "Jod") because Astro 6
+    // Node 22 image (the current LTS, codenamed "Jod") because Astro
     // requires Node >= 22.12.0. Python is still available as a feature
     // for ad-hoc scripts.
     "features": {
