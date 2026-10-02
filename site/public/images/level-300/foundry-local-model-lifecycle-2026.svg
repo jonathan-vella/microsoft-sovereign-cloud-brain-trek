@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="fll-title fll-desc">
+  <title id="fll-title">Foundry Local model lifecycle on Azure Local</title>
+  <desc id="fll-desc">Six stages: get a model from the Foundry catalog through catalog sync, from an imported expansion pack in the EdgeArtifacts registry when disconnected, or from your own OCI registry; cache it on the cluster with StoreModel; deploy it with Model and ModelDeployment resources on ONNX-GenAI or vLLM; evaluate it on the cluster with NLP metrics or a judge model; serve it through the gateway; and monitor, then roll out a new version. Foundry Local on Azure Local is in preview.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#F7FAFD"/><stop offset="100%" stop-color="#EEF5FC"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#616161"/></marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F6CBD"/></marker>
+  </defs>
+  <rect width="960" height="420" rx="12" fill="url(#bg)"/>
+  <text x="32" y="44" font-family="Inter Variable, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#0C3B5E" text-anchor="start">Foundry Local model lifecycle</text>
+  <rect x="370" y="28" width="70" height="20" rx="10" fill="#FFF1E0" stroke="#C25E00" stroke-width="1"/>
+  <text x="405.0" y="42" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#C25E00" text-anchor="middle">Preview</text>
+  <text x="32" y="68" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="400" fill="#616161" text-anchor="start">The same flow works connected and disconnected. Evaluation data stays on the cluster.</text>
+  <rect x="30" y="100" width="136" height="210" rx="10" fill="#EBF3FC" stroke="#0F6CBD" stroke-width="1.5"/>
+  <text x="44" y="128" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F6CBD" text-anchor="start">1. Source</text>
+  <text x="44" y="156" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Foundry catalog</text>
+  <text x="44" y="174" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">(catalog sync)</text>
+  <text x="44" y="192" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Expansion pack in</text>
+  <text x="44" y="210" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">EdgeArtifacts registry</text>
+  <text x="44" y="228" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Your OCI registry</text>
+  <path d="M 167 205.0 L 183 205.0" stroke="#616161" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <rect x="184" y="100" width="136" height="210" rx="10" fill="#FFF1E0" stroke="#C25E00" stroke-width="1.5"/>
+  <text x="198" y="128" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#C25E00" text-anchor="start">2. Cache</text>
+  <text x="198" y="156" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">StoreModel</text>
+  <text x="198" y="174" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">resource</text>
+  <text x="198" y="192" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Artifacts on</text>
+  <text x="198" y="210" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">cluster nodes</text>
+  <path d="M 321 205.0 L 337 205.0" stroke="#616161" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <rect x="338" y="100" width="136" height="210" rx="10" fill="#E7F4E4" stroke="#107C10" stroke-width="1.5"/>
+  <text x="352" y="128" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#107C10" text-anchor="start">3. Deploy</text>
+  <text x="352" y="156" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Model and</text>
+  <text x="352" y="174" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">ModelDeployment</text>
+  <text x="352" y="192" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">ONNX-GenAI or</text>
+  <text x="352" y="210" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">vLLM runtime</text>
+  <path d="M 475 205.0 L 491 205.0" stroke="#616161" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <rect x="492" y="100" width="136" height="210" rx="10" fill="#EFE6F8" stroke="#5C2E91" stroke-width="1.5"/>
+  <text x="506" y="128" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#5C2E91" text-anchor="start">4. Evaluate</text>
+  <text x="506" y="156" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">NLP metrics or</text>
+  <text x="506" y="174" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">a judge model</text>
+  <text x="506" y="192" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Runs on the</text>
+  <text x="506" y="210" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">cluster</text>
+  <path d="M 629 205.0 L 645 205.0" stroke="#616161" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <rect x="646" y="100" width="136" height="210" rx="10" fill="#EBF3FC" stroke="#0F6CBD" stroke-width="1.5"/>
+  <text x="660" y="128" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F6CBD" text-anchor="start">5. Serve</text>
+  <text x="660" y="156" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Gateway API</text>
+  <text x="660" y="174" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">routes</text>
+  <text x="660" y="192" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Inference-aware</text>
+  <text x="660" y="210" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">routing</text>
+  <path d="M 783 205.0 L 799 205.0" stroke="#616161" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <rect x="800" y="100" width="136" height="210" rx="10" fill="#F2F2F2" stroke="#616161" stroke-width="1.5"/>
+  <text x="814" y="128" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#616161" text-anchor="start">6. Monitor</text>
+  <text x="814" y="156" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Health and</text>
+  <text x="814" y="174" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">usage</text>
+  <text x="814" y="192" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Plan the next</text>
+  <text x="814" y="210" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">version</text>
+  <path d="M 868.0 310 L 868.0 344 L 406.0 344 L 406.0 314" stroke="#0F6CBD" stroke-width="1.6" fill="none" stroke-dasharray="5 4" marker-end="url(#arrowBlue)"/>
+  <text x="637.0" y="364" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#0F6CBD" text-anchor="middle">New model version: deploy, evaluate, then switch traffic</text>
+  <rect x="30" y="370" width="900" height="34" rx="8" fill="#FFFFFF" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="46" y="392" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Disconnected: transfer model expansion packs and import them into Azure Local disconnected operations first.</text>
+</svg>

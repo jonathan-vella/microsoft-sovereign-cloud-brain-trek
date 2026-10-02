@@ -1,0 +1,140 @@
+---
+title: "Model lifecycle"
+description: "Manage Foundry Local model catalog sync, ModelDeployment rollout, evaluation, and disconnected model transfer on Azure Local."
+lastVerified: 2026-10-02
+sidebar:
+  order: 3
+---
+
+import DiagramContainer from "~/components/DiagramContainer.astro";
+
+[Foundry Local on Azure Local is in preview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview). Its model lifecycle is Kubernetes-native. You manage model metadata and model deployments through custom resources or the inference operator REST API, then the operator reconciles the desired state into Kubernetes resources.
+
+<DiagramContainer title="Foundry Local model lifecycle" defaultOpen>
+
+![Foundry Local model lifecycle: get a model from the catalog, an imported expansion pack, or your own OCI registry, cache it on the cluster, define Model and ModelDeployment resources, evaluate on the cluster, then serve through the gateway and monitor](/images/level-300/foundry-local-model-lifecycle-2026.svg)
+
+</DiagramContainer>
+
+## Lifecycle stages
+
+The lifecycle in Learn has these stages:
+
+1. Catalog sync for connected deployments, or expansion pack import for disconnected deployments.
+2. Model artifact source selection from the online catalog, the local `edgeartifacts` registry, or a customer-managed OCI-compatible registry.
+3. Local model caching through `StoreModel`.
+4. `Model` resource resolution and `ModelDeployment` creation or update.
+5. Evaluation on the cluster against test datasets, using NLP metrics or a judge model.
+6. Runtime endpoint exposure through internal service or Gateway API.
+7. Monitoring, update, or delete through Kubernetes reconciliation.
+
+In disconnected environments, the transfer stage happens before deployment. You install Foundry Local extension and model expansion packs into Azure Local Disconnected Operations. The packs populate the local `edgeartifacts` container registry. Catalog model deployments pull artifacts from `edgeartifacts`, and bring-your-own models can come from a customer-managed OCI-compatible registry inside the disconnected environment. Authentication integrates with the local Active Directory infrastructure configured in the disconnected Azure Local environment instead of public Microsoft Entra ID endpoints.
+
+## Catalog and model sources
+
+Foundry Local uses a model catalog `ConfigMap` named `foundry-local-catalog`. The catalog-sync component populates it from the Azure AI Foundry catalog in connected deployments. It runs once at install through a Helm post-install hook and then daily through a Kubernetes CronJob. You can also trigger a manual sync.
+
+The catalog entry records model metadata such as alias, publisher, task, context length, supported compute types, and hardware-specific variants. When a `ModelDeployment` references a catalog model, the operator can perform lazy registration. It reads the catalog entry and creates a reusable `Model` resource if one does not already exist.
+
+Foundry Local supports two model sources:
+
+| Source | How it works | Use when |
+| --- | --- | --- |
+| Catalog | The operator resolves model metadata from the catalog `ConfigMap`, then caches artifacts locally before serving. | Use for Microsoft-supported catalog models such as Phi, Mistral, or GPT-OSS entries documented in the catalog. |
+| Custom | You define a `Model` resource that points to an OCI-compatible registry and credentials. | Use for fine-tuned, proprietary, or third-party models you package yourself. |
+
+For quick catalog deployments, Learn says you can skip creating a `Model` resource and reference the catalog model directly from `ModelDeployment`. For custom models, create a `Model` resource with the registry, repository, tag, and credential reference.
+
+## ModelDeployment reconciliation
+
+`ModelDeployment` is the running endpoint. It defines the model, workload type, compute, runtime, replica count, resources, endpoint exposure, and authentication. The operator handles create, update, and delete events. It also uses a 30-second timer to monitor deployment health, pod scheduling, and replica count status.
+
+The operator reconciliation path is documented as:
+
+1. Validate the resource specification.
+2. Resolve the model source from catalog lookup, a `Model` custom resource, or inline custom configuration.
+3. Ensure the model is cached locally by creating a `StoreModel` resource and waiting for the cache job.
+4. Select the container image based on workload type, compute, runtime, and model source.
+5. Generate API key secrets.
+6. Create child resources, including Kubernetes Deployment, Service, nginx ConfigMap, Certificate when TLS is enabled, and Gateway API resources when configured.
+7. Set owner references for garbage collection.
+8. Update status with endpoint information.
+
+`ModelDeployment` states are:
+
+| State | Meaning |
+| --- | --- |
+| `Pending` | Resource created and waiting for processing. |
+| `Creating` | The operator is creating child resources and waiting for model cache. |
+| `Running` | All replicas are ready and serving traffic. |
+| `Updating` | The operator is applying configuration changes. |
+| `Error` | Reconciliation failed. Check the status message and events. |
+| `Terminating` | The resource is being deleted. |
+
+Learn documents this reconciliation model. It does not document a built-in blue-green or canary strategy for `ModelDeployment` rollout. If your production process requires staged release, implement that outside the documented operator lifecycle, for example with separate deployments, gateway routing, and evaluation gates that your platform team controls.
+
+## StoreModel cache lifecycle
+
+`StoreModel` is an internal custom resource. You do not create it directly. The operator creates it during `ModelDeployment` reconciliation to track whether the model artifacts are cached in the cluster's local OCI registry.
+
+| Phase | Meaning |
+| --- | --- |
+| `Pending` | `StoreModel` exists, but the cache job has not started. |
+| `Storing` | A Kubernetes Job is downloading artifacts and pushing them to the local registry. |
+| `Available` | Artifacts are cached, and `status.storeRef` has the local OCI path. |
+| `Error` | The cache job failed. The operator deletes the `StoreModel` so a later attempt can retry. |
+
+When the cache is available, inference pods use an init container to retrieve model files from the local registry before the main inference container starts. This is why cache job sizing affects deployment time. In [July 2026](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/whats-new#july-2026), the default StoreModel cache job memory increased to a 16 GiB request and 32 GiB limit for large models.
+
+## Evaluation on the cluster
+
+[Model evaluation was added in August 2026](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/whats-new#august-2026). Evaluation runs entirely on the cluster, and Learn states that no data leaves the environment. You upload a test dataset, run evaluators, and download structured results.
+
+Foundry Local supports two evaluator families:
+
+| Evaluator family | Examples | Judge model required |
+| --- | --- | --- |
+| NLP evaluators | `f1_score`, `bleu`, `gleu`, `rouge`, `meteor` | No |
+| Quality evaluators | `coherence`, `fluency`, `relevance`, `similarity`, `response_completeness` | Yes |
+
+Datasets must include `query` and `ground_truth` columns. Foundry Local supports JSONL and CSV. The default dataset file limit is [1 MB](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/how-to-evaluate-model#dataset-limits), and each evaluation run supports [one to 10 evaluators](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/how-to-evaluate-model#evaluation-limits). The system generates model responses during the run, then returns aggregate metrics and per-row results. CSV downloads include per-row scores but not aggregate metrics.
+
+Evaluation also works in disconnected environments. The disconnected evaluation page uses the same model and dataset pattern, but the base URL points at the disconnected Foundry API path and the deployment must already be running in the disconnected cluster.
+
+## Disconnected model transfer
+
+Disconnected Foundry Local deployments require [Azure Local Disconnected Operations 2604.3.0 or later](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-requirements#on-premises-resources). The Learn flow has two separate pack types:
+
+| Pack type | What it contains | When to install |
+| --- | --- | --- |
+| Foundry Local extension expansion pack | Extension availability, container images, networking dependencies, certificate tooling, and base model artifacts. | Before deploying the Foundry Local extension in the disconnected environment. |
+| Model expansion pack | One model per pack, added to the local model catalog. | When you need models beyond what the base pack provides. |
+
+To add a model in disconnected mode, download the model expansion pack in a connected environment, transfer it to the disconnected Azure Local environment, and import it with `Start-AldoExpansionPackUpload` and `Start-AldoExpansionPackInstallation` on the Azure Local Disconnected Operations machine. After installation, model artifacts are imported into `edgeartifacts`. Then call the Foundry Local REST API model sync endpoint, `/api/v1/models/sync`, and confirm the model appears in `/api/v1/models`.
+
+The lifecycle diagram's `EdgeArtifacts` stage means the local `edgeartifacts` container registry for expansion-pack assets and model artifacts. For bring-your-own models, Learn also supports a customer-managed OCI-compatible registry inside the disconnected environment. The operator's cache job then pulls from `edgeartifacts` or the customer-managed registry into the local model cache before pods load model files.
+
+## Agentic Retrieval evaluation boundary
+
+Foundry Local model evaluation measures a model endpoint. Agentic Retrieval has its own multistep evaluation improvements in the [July 2026](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new#july-2026) release, which measure answer quality across conversation turns. Keep the two evaluation scopes separate:
+
+| Evaluation scope | Measures | Owner |
+| --- | --- | --- |
+| Foundry Local model evaluation | Model response quality against test datasets and judge-model metrics. | Platform or model operations team. |
+| Agentic Retrieval multistep evaluation | Agentic answer quality across conversation turns. | RAG, prompt, and agent team. |
+
+Use both when Agentic Retrieval calls a Foundry Local endpoint. A model can score well on standalone questions while the agent flow still fails retrieval, tool selection, or context compaction.
+
+## Sources
+
+- [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
+- [Inference operator and model lifecycle in Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-inference-operator)
+- [Deploy a catalog model on Foundry Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/how-to-deploy-model)
+- [Model caching and StoreModel lifecycle in Foundry Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-model-caching)
+- [Evaluate a model on Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/how-to-evaluate-model)
+- [Evaluate a model in Foundry Local on Azure Local in a disconnected environment](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/disconnected-operations/how-to-evaluate-model-disconnected)
+- [Foundry Local on Azure Local in disconnected environments overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/disconnected-operations/concept-overview)
+- [Prepare to deploy Foundry Local on Azure Local in disconnected environments](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/disconnected-operations/how-to-prepare)
+- [Deploy Foundry Local as an Azure Arc extension in a disconnected environment](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/disconnected-operations/deploy-platform)
+- [Expand model catalog in disconnected mode](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/disconnected-operations/how-to-expand-catalog)
+- [What's new in Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new)

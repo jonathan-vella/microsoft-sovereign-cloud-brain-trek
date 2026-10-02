@@ -1,0 +1,159 @@
+---
+title: "Foundry Local in production knowledge check"
+description: "Scenario questions for production Foundry Local on Azure Local, Agentic Retrieval integration, model lifecycle, and performance choices."
+lastVerified: 2026-10-02
+sidebar:
+  order: 10
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Use these architect-level scenarios to check whether you can apply the production Foundry Local design choices from this module.
+
+## Question 1: Place responsibilities
+
+A team wants one platform to ingest documents, run vector search, orchestrate agents, and host the local language model. Which production split matches current Microsoft Learn guidance?
+
+- A) Put ingestion, vector search, agents, and model serving inside Agentic Retrieval only.
+- B) Use Foundry Local on Azure Local for model serving and Agentic Retrieval for the agentic RAG platform.
+- C) Use Foundry Local on client devices for all on-premises workloads.
+- D) Treat Agentic Retrieval (formerly Edge RAG) as only a name change and keep all model serving inside that extension.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-04-foundry-local-production/production-architecture/">
+
+B is correct because [Foundry Local on Azure Local is the preview model-serving platform](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview), and [Agentic Retrieval in Foundry Local is the preview agentic RAG platform](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview). A is wrong because Agentic Retrieval now requires an external language model endpoint. C is wrong because client-device Foundry Local is a different option from Foundry Local on Azure Local. D is wrong because Agentic Retrieval (formerly Edge RAG) requires a language model endpoint and added an agentic layer in [June 2026](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new#june-2026).
+
+</KnowledgeCheck>
+
+## Question 2: Choose the runtime
+
+You need to run a compact model on CPU nodes because the site has no GPU capacity yet. Which runtime choice fits the documented Foundry Local runtime model?
+
+- A) vLLM, because it supports CPU and GPU.
+- B) ONNX-GenAI, because it supports CPU and GPU.
+- C) vLLM with tensor parallelism, because tensor parallelism removes the GPU requirement.
+- D) Endpoint Picker, because it converts CPU workloads into GPU workloads.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-04-foundry-local-production/performance-optimization/">
+
+B is correct because [ONNX Runtime through ONNX-GenAI supports CPU and GPU execution](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-inference-runtimes#onnx-runtime). A is wrong because vLLM requires GPU. C is wrong because tensor parallelism is for vLLM GPU deployments. D is wrong because Endpoint Picker routes multi-replica vLLM requests; it does not change compute type.
+
+</KnowledgeCheck>
+
+## Question 3: Route production traffic
+
+A production model endpoint must be reachable from outside the cluster with TLS terminated at the gateway. Which `ModelDeployment` exposure setting should you use?
+
+- A) `internal`
+- B) `external`
+- C) `none`
+- D) Omit Gateway API and configure NGINX ingress annotations.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-04-foundry-local-production/production-architecture/">
+
+B is correct because `spec.endpoint.exposure: external` creates or uses an external Gateway and terminates TLS at that gateway. A is wrong because `internal` is for in-cluster access. C is wrong because `none` leaves only the ClusterIP service and no HTTPRoute. D is wrong because [Foundry Local replaced the NGINX ingress data path with Kubernetes Gateway API in July 2026](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/whats-new#july-2026).
+
+</KnowledgeCheck>
+
+## Question 4: Size Agentic Retrieval with a local model endpoint
+
+You deploy Agentic Retrieval in combined mode and use GPT-OSS-20B through Foundry Local as the recommended language model endpoint. Which GPU plan matches Learn?
+
+- A) Two GPUs total, both used by the language model endpoint.
+- B) Two GPUs for Agentic Retrieval embedding models, plus a separate GPU for the GPT-OSS-20B model endpoint.
+- C) No GPUs, because Docling now runs on CPU.
+- D) Four GPUs inside Agentic Retrieval because the June 2026 release increased the GPU requirement.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-04-foundry-local-production/production-architecture/">
+
+B is correct because [Agentic Retrieval uses two GPUs for BGE-M3 text embedding and CLIP ViT-L/14 image embedding](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/requirements#language-model-requirement), while the recommended GPT-OSS-20B endpoint through Foundry Local needs its own GPU. A is wrong because it ignores the embedding GPUs. C is wrong because Docling moved to CPU, but embedding still uses GPUs. D is wrong because the [June 2026 release reduced the Agentic Retrieval GPU requirement from four to two](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new#june-2026).
+
+</KnowledgeCheck>
+
+## Question 5: Use service account token authentication
+
+An in-cluster application in one namespace calls a model deployment in another namespace. The team wants identity without storing API keys. Which authentication method fits?
+
+- A) Kubernetes service account token authentication.
+- B) Anonymous access to `/v1/chat/completions`.
+- C) API key authentication only.
+- D) Microsoft Entra ID authentication with automatic fallback inside the middleware.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-04-foundry-local-production/production-architecture/">
+
+A is correct because [Kubernetes service account token authentication lets an in-cluster workload call a ModelDeployment by using its Kubernetes service account identity](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/how-to-configure-service-account-token-authentication). B is wrong because inference paths require authentication. C is wrong because API keys work but do not satisfy the requirement to avoid separate stored credentials. D is wrong because the middleware does not silently switch credentials; each request uses one credential.
+
+</KnowledgeCheck>
+
+## Question 6: Handle disconnected model transfer
+
+A disconnected Azure Local environment needs a catalog model that is not in the base Foundry Local pack. What is the documented transfer flow?
+
+- A) Pull the model directly from the online Foundry catalog during deployment.
+- B) Download the model expansion pack in a connected environment, transfer it, install it into Azure Local Disconnected Operations, run model sync, and confirm it appears in the catalog.
+- C) Copy model files into each inference pod manually.
+- D) Add the model to Agentic Retrieval and wait for Foundry Local to discover it.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-04-foundry-local-production/model-lifecycle/">
+
+B is correct because [each disconnected model is distributed as a separate expansion pack](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/disconnected-operations/how-to-expand-catalog). After installation, artifacts are imported into `edgeartifacts`, then `/api/v1/models/sync` refreshes the catalog. A is wrong because disconnected deployment avoids online model access. C is wrong because the operator manages model caching. D is wrong because Agentic Retrieval is not the Foundry Local model catalog.
+
+</KnowledgeCheck>
+
+## Question 7: Interpret StoreModel state
+
+A new deployment stays unavailable while the model artifacts are still being downloaded and pushed to the local registry. Which internal lifecycle phase describes this state?
+
+- A) `Running`
+- B) `Updating`
+- C) `Storing`
+- D) `Terminating`
+
+<KnowledgeCheck answer="C" reference="/level-300/module-04-foundry-local-production/model-lifecycle/">
+
+C is correct because [`StoreModel` uses `Storing` while a Kubernetes Job downloads model artifacts and pushes them to the local registry](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-model-caching#storemodel-lifecycle). A is wrong because `Running` is a `ModelDeployment` serving state. B is wrong because `Updating` applies to deployment configuration changes. D is wrong because `Terminating` means deletion is in progress.
+
+</KnowledgeCheck>
+
+## Question 8: Evaluate a model
+
+A model team wants text-matching metrics and judge-model quality scores without sending evaluation data outside the cluster. Which evaluation plan fits Foundry Local?
+
+- A) Use only cloud-hosted evaluators because local evaluation is not documented.
+- B) Upload a JSONL or CSV dataset with `query` and `ground_truth`, then run NLP evaluators and quality evaluators on the cluster.
+- C) Use Agentic Retrieval multistep evaluation as the only model endpoint test.
+- D) Use safety evaluators such as violence and self-harm because they are listed in the Foundry Local evaluator table.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-04-foundry-local-production/model-lifecycle/">
+
+B is correct because [Foundry Local model evaluation runs entirely on the cluster](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/how-to-evaluate-model) and supports NLP evaluators plus quality evaluators with a judge model. A is wrong because local evaluation is documented. C is wrong because Agentic Retrieval multistep evaluation tests conversation quality, not the model endpoint alone. D is wrong because Learn says safety evaluators are not supported.
+
+</KnowledgeCheck>
+
+## Question 9: Use multi-GPU inference
+
+A vLLM model needs to run one replica across four GPUs by combining tensor and pipeline parallelism. Which configuration rule must the architect follow?
+
+- A) Set `resources.limits.gpu` to one because vLLM discovers the other GPUs.
+- B) Set tensor parallel size and pipeline parallel size so their product is four, and request four GPUs.
+- C) Place two GPUs on one node and two GPUs on another node for one replica.
+- D) Use ONNX-GenAI because it is the only runtime with model parallelism.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-04-foundry-local-production/performance-optimization/">
+
+B is correct because [required GPUs equal `tensor_parallel_size * pipeline_parallel_size`](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-model-parallelism#resource-and-configuration-requirements), and the GPU resource limit must match that product. A is wrong because requesting multiple GPUs without the parallelism settings does not enable model parallelism. C is wrong because Learn says all GPUs for one replica must be on the same cluster node. D is wrong because model parallelism is documented for vLLM deployments.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
+- [What's new in Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/whats-new)
+- [Inference runtimes in Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-inference-runtimes)
+- [Model caching and StoreModel lifecycle in Foundry Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-model-caching)
+- [Model parallelism for multi-GPU inference in Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-model-parallelism)
+- [Evaluate a model on Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/how-to-evaluate-model)
+- [Expand model catalog in disconnected mode](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/disconnected-operations/how-to-expand-catalog)
+- [What is Agentic Retrieval in Agents and Tools with Foundry Local?](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)
+- [What's new in Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new)
+- [What you need for Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/requirements)
