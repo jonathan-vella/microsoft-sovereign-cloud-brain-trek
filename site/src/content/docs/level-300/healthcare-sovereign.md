@@ -29,7 +29,7 @@ _
 ## Healthcare Architecture
 
 _
-![Healthcare Sovereign Cloud Architecture](/microsoft-sovereign-cloud-brain-trek/images/level-300/healthcare-sovereign.svg)
+![Healthcare Sovereign Cloud Architecture](/images/level-300/healthcare-sovereign.svg)
 _Figure 1: HIPAA-compliant architecture with PHI protection and AI/ML capabilities_
 
 ### Key Components

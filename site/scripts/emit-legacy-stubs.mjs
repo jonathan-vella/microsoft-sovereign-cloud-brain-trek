@@ -30,6 +30,8 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { resolveRoute } from "./redirects.mjs";
+import { SITE as ASTRO_SITE, BASE as ASTRO_BASE } from "./site-constants.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -37,10 +39,6 @@ const __dirname = path.dirname(__filename);
 const SITE_ROOT = path.resolve(__dirname, "..");
 const MAP_PATH = path.join(SITE_ROOT, "path-rewrite-map.json");
 const DIST_DIR = path.join(SITE_ROOT, "dist");
-
-// These must match `site` + `base` in astro.config.mjs.
-const ASTRO_SITE = "https://jonathan-vella.github.io";
-const ASTRO_BASE = "/microsoft-sovereign-cloud-brain-trek";
 
 /**
  * Escape a string for safe HTML attribute / text content interpolation.
@@ -143,7 +141,9 @@ async function main() {
   let skipped = 0;
   let collisions = 0;
 
-  for (const [legacyKey, target] of entries) {
+  for (const [legacyKey, mappedTarget] of entries) {
+    // Point straight at the current page when the mapped page has moved (no redirect chains).
+    const target = resolveRoute(mappedTarget);
     if (!isStubTarget(legacyKey, target)) {
       skipped++;
       continue;

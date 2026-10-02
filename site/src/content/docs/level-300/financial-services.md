@@ -29,7 +29,7 @@ _
 ## Financial Services Architecture
 
 _
-![Financial Services Sovereign Architecture](/microsoft-sovereign-cloud-brain-trek/images/level-300/financial-services.svg)
+![Financial Services Sovereign Architecture](/images/level-300/financial-services.svg)
 _Figure 1: PCI-DSS compliant architecture with cardholder data environment isolation_
 
 ### Architecture Zones

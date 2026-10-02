@@ -49,12 +49,14 @@ in `site/astro.config.mjs`. The Resources section gets no badge.
 
 Every content page **must** have a `title` and `description` (validated by the
 Zod schema in `site/src/content.config.ts`; description is 20–220 chars). All
-other keys are optional.
+other keys are optional. `lastVerified` is optional during the content rebuild
+and will become required.
 
 ```yaml
 ---
 title: Page Title
 description: "Short description for SEO and the sidebar tagline (20-220 chars)."
+lastVerified: 2026-10-02  # Date the page's facts were checked against Microsoft sources.
 sidebar:
   order: 1        # Position within its parent folder. Lower = earlier.
   hidden: false   # Optional: hide from the sidebar.
@@ -63,6 +65,17 @@ sidebar:
 
 Do **not** add `layout`, `nav_order`, or `parent` — those were Jekyll keys and
 are not used by Starlight.
+
+### Sources and writing style
+
+- End every page with a `## Sources` section listing the Microsoft Learn pages
+  and official Microsoft blog posts it was checked against. Only Microsoft
+  domains (plus the `Azure` and `microsoft` GitHub orgs) are allowed. Learn wins
+  over blogs on capabilities and status.
+- Cite volatile facts inline: status (GA, preview, retired), dates, limits,
+  sizes, prices, legal claims.
+- Apply the [unslop skill](skills/unslop/SKILL.md) to every page you write or
+  materially rewrite.
 
 ### Components (only inside `.mdx` files)
 
@@ -122,15 +135,25 @@ Use Starlight slugs, not `.md` paths:
 ```markdown
 <!-- ✅ correct -->
 [Azure Arc Intro](/level-100/module-04-azure-arc/azure-arc-intro/)
-[Same-folder sibling](./sibling-page/)
 
 <!-- ❌ wrong -->
 [Azure Arc Intro](azure-arc-intro.md)
-[Same-folder sibling](sibling-page.md)
+[Level 200](../level-200/)
 ```
 
-The base path `/microsoft-sovereign-cloud-brain-trek/` is added automatically
-by Starlight. Never hard-code it in content.
+Prefer root-relative slugs. Every page URL ends in a slash, so relative `../`
+links are easy to get one level wrong. The base path
+`/microsoft-sovereign-cloud-brain-trek/` is added at build time by
+`site/src/plugins/rehype-base-path.mjs` (and by `KnowledgeCheck` for its
+`reference` prop). Never hard-code it in page bodies.
+
+### Moving, renaming, or deleting pages
+
+Published URLs must never 404. Add `"old-route/": "new-route/"` to
+`site/redirects.json` pointing at the closest equivalent final page. Never
+remove entries from `redirects.json`, `path-rewrite-map.json`, or
+`url-baseline.json`. A redirect activates automatically once its source page is
+gone, and `npm run check:urls` fails if any baseline URL stops resolving.
 
 ### Images
 
@@ -141,7 +164,9 @@ root-relative URLs:
 ![Architecture](/images/level-100/azure-local-architecture.svg)
 ```
 
-Starlight prepends the base path at build time.
+The rehype base-path plugin prepends the base path at build time. When you
+replace an outdated image, add a new file name and keep the old file so its URL
+keeps working.
 
 ### File names
 
@@ -167,14 +192,19 @@ npm run build             # full static build into site/dist/
 npm run preview           # serve the built site (matches production)
 npm run emit-legacy-stubs # post-build: regenerate static .html redirect stubs
                           # for legacy Jekyll URLs from path-rewrite-map.json
+npm run check:urls        # post-stubs: every old URL resolves, no broken internal links
+npm run lint:content      # base path, lastVerified, Sources, unslop style warnings
+npm run capture-url-baseline # after adding pages: protect their URLs in url-baseline.json
 ```
 
-Run `npm run check && npm run build` before opening a PR that touches `site/**`.
+Run `npm run check && npm run build && npm run emit-legacy-stubs && npm run check:urls && npm run lint:content`
+before opening a PR that touches `site/**`.
 
 ## CI
 
-- `.github/workflows/astro-ci.yml` — runs `astro check` + `astro build` on
-  every PR touching `site/**` and uploads `dist/` as an artifact.
+- `.github/workflows/astro-ci.yml` — runs `astro check`, `astro build`,
+  legacy stubs, `check:urls`, and `lint:content` on every PR touching
+  `site/**` and uploads `dist/` as an artifact.
 - `.github/workflows/astro-deploy.yml` — deploys `dist/` to GitHub Pages on
   every push to `main` that touches `site/**`.
 - `.github/workflows/markdown-lint.yml` — runs `markdownlint-cli2` (pinned to

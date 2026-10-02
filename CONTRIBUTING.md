@@ -120,19 +120,42 @@ schema validates this at build time (see `site/src/content.config.ts`):
 ---
 title: Page Title
 description: "Brief description for SEO (required, 20-220 chars)"
+lastVerified: 2026-10-02  # Date the page's facts were checked against Microsoft sources (YYYY-MM-DD)
 sidebar:
   order: 1                # Optional: position in the sidebar
   hidden: false           # Optional: hide from the sidebar
 ---
 ```
 
+`lastVerified` is optional while the content rebuild is in progress and becomes
+required afterwards. Set it to the date you checked the page's facts, not the
+date you edited the wording.
+
+### Sources
+
+Every content page ends with a `## Sources` section that lists the Microsoft
+Learn pages and official Microsoft blog posts the page was checked against.
+Only Microsoft domains are allowed (`learn.microsoft.com`,
+`azure.microsoft.com`, `blogs.microsoft.com`, `news.microsoft.com`,
+`techcommunity.microsoft.com`, `microsoft.com`, `aka.ms`, and the `Azure` and
+`microsoft` GitHub organizations). When Learn and a blog disagree, Learn wins
+on capabilities and status.
+
+Cite volatile facts inline as well: GA, preview, or retired status, dates,
+limits, sizes, prices, and legal claims.
+
 ### Writing Style
 
-- Use clear, concise technical language
+Follow the [unslop skill](.github/skills/unslop/SKILL.md) for every page you
+write or materially rewrite. In short:
+
+- Use plain, specific language and active voice
 - Define acronyms on first use
-- Use active voice
-- Include practical examples
-- Reference official Microsoft Learn documentation
+- No em dashes, decorative emoji, or bold-label lines
+- Sentence case headings
+- Name the source for every claim
+
+`npm run lint:content` (from `site/`) reports style warnings for these rules.
 
 ---
 
@@ -140,7 +163,7 @@ sidebar:
 
 1. **Before submitting:**
    - Run `npx markdownlint-cli2` from the repo root and fix any errors
-   - Run `cd site && npm run check && npm run build` and confirm both pass
+   - Run `cd site && npm run check && npm run build && npm run emit-legacy-stubs && npm run check:urls && npm run lint:content` and confirm all pass
    - Update related documentation (CONTRIBUTING.md, README.md) if needed
 
 2. **PR requirements:**
@@ -153,6 +176,20 @@ sidebar:
    - PRs require at least one approving review
    - Address reviewer feedback promptly
    - Keep PRs focused and reasonably sized
+
+### Moving, renaming, or deleting pages
+
+Published URLs must never 404.
+
+- Add an entry to `site/redirects.json` mapping the old route to the closest
+  equivalent page (for example `"/level-200/old-page/": "/level-200/module-02-arc/new-page/"`).
+  Point at the final page, never at another redirect.
+- Never remove entries from `redirects.json`, `site/path-rewrite-map.json`, or
+  `site/url-baseline.json`. Edit a destination if it changes.
+- A redirect activates automatically once its source page no longer exists.
+- `npm run check:urls` fails if any URL in `url-baseline.json` stops resolving.
+- After adding new pages, run `npm run capture-url-baseline` after a build so
+  their URLs are protected too.
 
 ---
 
@@ -188,7 +225,7 @@ kind: ConfigMap
 - **Internal links:** Use Starlight slugs (no `.md` extension, trailing slash) — e.g. `[Foo](../module-01-topic/foo/)`.
 - **External links:** Use full URLs with descriptive text.
 - **Microsoft Learn:** Include as references where applicable.
-- The site's **base path** is `/microsoft-sovereign-cloud-brain-trek/`. Use root-relative paths (`/level-XX/...`) or relative paths; never hard-code the base path.
+- The site's **base path** is `/microsoft-sovereign-cloud-brain-trek/`. Use root-relative paths (`/level-XX/...`, `/images/...`); the build adds the base path (`site/src/plugins/rehype-base-path.mjs`). Never hard-code the base path in page bodies. Prefer root-relative links: every page URL ends in a slash, so relative `../` links are easy to get one level wrong.
 
 ### Callouts
 

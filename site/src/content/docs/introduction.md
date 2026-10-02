@@ -411,7 +411,7 @@ Ready to begin? Start your learning journey:
 
 1. **[Start with Level 50: Prerequisites](/level-50/)**
 2. **[Continue to Level 100: Foundational Concepts](/level-100/)**
-3. **[Explore Additional Resources](resources/)**
+3. **[Explore Additional Resources](/resources/)**
 
 ---
 

@@ -4,6 +4,9 @@ import starlight from "@astrojs/starlight";
 import mdx from "@astrojs/mdx";
 import rehypeMermaid from "rehype-mermaid-lite";
 import { buildSidebar } from "./scripts/build-sidebar.mjs";
+import { activeRedirects } from "./scripts/redirects.mjs";
+import { SITE, BASE } from "./scripts/site-constants.mjs";
+import rehypeBasePath from "./src/plugins/rehype-base-path.mjs";
 
 // Mermaid init script with the Fluent 2 / Azure color palette. The
 // previous palette set primary fill to #0078D4 with white text, which
@@ -39,11 +42,13 @@ mermaid.initialize({
 });`;
 
 export default defineConfig({
-  site: "https://jonathan-vella.github.io",
-  base: "/microsoft-sovereign-cloud-brain-trek",
+  site: SITE,
+  base: BASE,
   trailingSlash: "always",
+  // Old URLs of moved or deleted pages. Source of truth: site/redirects.json.
+  redirects: activeRedirects(),
   markdown: {
-    rehypePlugins: [rehypeMermaid],
+    rehypePlugins: [rehypeMermaid, rehypeBasePath],
   },
   integrations: [
     starlight({
