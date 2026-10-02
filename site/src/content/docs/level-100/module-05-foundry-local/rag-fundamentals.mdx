@@ -1,0 +1,89 @@
+---
+title: "RAG fundamentals"
+description: "Learn how retrieval-augmented generation uses chunks, embeddings, vector search, grounding, and citations to answer from current sources."
+lastVerified: 2026-10-02
+sidebar:
+  order: 1
+---
+
+import DiagramContainer from "~/components/DiagramContainer.astro";
+
+Retrieval-augmented generation (RAG) is a pattern for answering questions from source content instead of only from a model's training data. A RAG system retrieves relevant passages, adds them to the prompt, and asks the language model to answer from that context.
+
+RAG is useful when the answer depends on private, recent, or frequently changing information. The model still generates the final text, but the retrieval step gives it source material to use.
+
+<DiagramContainer title="Vector embedding process" defaultOpen>
+
+![Vector embedding process showing documents split into chunks, embedded into vectors in a vector store, and a query matched by similarity before the top chunks and question go to a language model](/images/level-100/vector-embedding-process-2026.svg)
+
+</DiagramContainer>
+
+## Why RAG exists
+
+A language model has general language ability, but it does not automatically know your current policies, incident notes, maintenance manuals, or case files. It may answer from older training data, miss private facts, or produce text that sounds confident without a source.
+
+RAG changes the task. Instead of asking the model to remember everything, the application gives the model selected evidence. The usual flow is:
+
+1. A user asks a question.
+2. The system searches a knowledge store for relevant chunks.
+3. The system adds those chunks to the model prompt.
+4. The model answers with the retrieved context.
+5. The application shows citations or source links so a person can check the answer.
+
+This pattern does not make a model perfect. It gives the application more control over what information the model sees and makes the answer easier to inspect.
+
+## Chunking
+
+Most documents are too large and too mixed to retrieve as one item. A RAG pipeline splits them into smaller **chunks** before indexing them. A chunk might be a paragraph, a section, a table row, or another unit that keeps enough context to be meaningful.
+
+Chunking is a design choice. Chunks that are too small can lose the surrounding context. Chunks that are too large can pull unrelated text into the answer and fill the model context window. Many systems use overlap between chunks so a sentence at a boundary is not lost.
+
+Good chunking also keeps useful metadata. Examples include document title, path, owner, version, classification, effective date, and source system. Metadata lets the retriever filter results before semantic matching.
+
+## Embeddings
+
+An **embedding** is a list of numbers that represents the meaning of text, an image, or another item. An embedding model converts each chunk into a vector. It also converts the user's question into a vector.
+
+Vectors make similarity search possible. If two pieces of text have related meaning, their vectors should be close in the embedding space. This is why a query for "network outage procedure" can retrieve a document section titled "WAN failover runbook" even when the words do not match exactly.
+
+Embedding quality matters. The embedding model, chunking method, and source content all affect what the system retrieves. RAG quality often fails at retrieval before it fails at generation.
+
+## Vector search
+
+A vector store keeps embeddings and the metadata that points back to source chunks. When the user asks a question, the system embeds the question and compares it with stored vectors.
+
+The search can use different methods:
+
+| Search method | What it matches | When it helps |
+|---|---|---|
+| Keyword search | Exact terms and phrases | Names, identifiers, error codes, and legal phrases |
+| Vector search | Semantic similarity | Questions that use different wording from the source |
+| Hybrid search | Both keyword and semantic signals | Enterprise content with acronyms, product names, and natural language questions |
+| Reranking | A second pass over candidate results | Queries where the first search returns many similar chunks |
+
+The retriever usually returns a small set of top chunks. Returning too many chunks can confuse the model or exceed its context window. Returning too few chunks can omit the answer.
+
+## Grounding and citations
+
+**Grounding** means the model's answer is tied to retrieved source material. A grounded prompt tells the model to answer only from the provided context and to say when the context is not enough.
+
+Citations make grounding visible. A citation can point to a file, page, paragraph, section, or record. The user should be able to inspect the cited source and decide whether the answer is reliable.
+
+For sovereignty training, citations also support accountability. If an answer affects operations, compliance, or safety, the reader needs to know which source the system used.
+
+## Limits and failure modes
+
+RAG reduces some risks, but it does not remove them. Common failure modes include:
+
+- The source content is wrong, outdated, duplicated, or incomplete.
+- The chunking strategy separates a rule from its exception.
+- Metadata filters exclude the best source.
+- The retriever finds related content that does not answer the exact question.
+- The model ignores the instruction to stay within the context.
+- Citations point to the retrieved source but the generated sentence overstates it.
+
+Use human review for high-impact decisions. RAG can help people find and compare source material, but the application still needs access control, audit logs, evaluation, and clear escalation paths.
+
+## Sources
+
+- [What is Agentic Retrieval in Agents and Tools with Foundry Local?](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)

@@ -1,462 +1,106 @@
 ---
-title: "Azure Arc-Enabled Kubernetes"
-description: "Azure Arc-enabled Kubernetes — attach any CNCF-certified Kubernetes cluster to Azure for unified inventory, GitOps configuration, monitoring, and policy enforcement."
+title: Azure Arc-enabled Kubernetes
+description: "Learn how Azure Arc connects CNCF-certified Kubernetes clusters to Azure inventory, GitOps, extensions, monitoring, and policy."
+lastVerified: 2026-10-02
 sidebar:
-  order: 4.2
+  order: 3
 ---
 
 import DiagramContainer from "~/components/DiagramContainer.astro";
 
----
+Azure Arc-enabled Kubernetes connects Kubernetes clusters to Azure without moving the cluster into Azure. Microsoft describes the service as working with any Cloud Native Computing Foundation certified Kubernetes cluster ([Azure Arc-enabled Kubernetes overview](https://learn.microsoft.com/azure/azure-arc/kubernetes/overview)).
 
-## What is Arc-Enabled Kubernetes?
+For sovereign cloud design, this means a cluster can run on-premises, on Azure Local, or in another cloud while Azure provides inventory, GitOps configuration, extensions, monitoring, and policy.
 
-<DiagramContainer title="Arc-Enabled Kubernetes Architecture">
+<DiagramContainer title="Arc-enabled Kubernetes control flow" defaultOpen>
 
 ```mermaid
 graph TB
-    subgraph Azure["☁️ Azure"]
-        ARM[Azure Resource Manager]
-        GitOps[GitOps Configuration]
-        Policy[Azure Policy for K8s]
-        Monitor[Container Insights]
-        KeyVault[Key Vault Provider]
-    end
-
-    subgraph K8sCluster["⚙️ Kubernetes Cluster (Any Location)"]
-        subgraph ArcAgents["Arc Agents Namespace"]
-            Agent[Arc Agent]
-            Flux[Flux Controller]
-            PolicyAgent[Policy Agent]
-            Prometheus[Metrics Agent]
-        end
-
-        subgraph Workloads["Application Workloads"]
-            App1[App Pods]
-            App2[Services]
-            Secrets[Secrets from KV]
-        end
-    end
-
-    ARM <-->|Secure Channel| Agent
-    GitOps --> Flux
-    Flux --> Workloads
-    Policy --> PolicyAgent
-    PolicyAgent --> Workloads
-    Monitor --> Prometheus
-    KeyVault --> Secrets
-
-    style Azure fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
-    style ArcAgents fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
-    style Workloads fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+  Azure[Azure Resource Manager] --> Connected[Connected cluster resource]
+  Connected --> Agents[Arc agents]
+  Azure --> GitOps[GitOps with Flux]
+  Azure --> Policy[Azure Policy extension]
+  Azure --> Ext[Cluster extensions]
+  Agents --> Cluster[Kubernetes cluster]
+  GitOps --> Cluster
+  Policy --> Cluster
+  Ext --> Cluster
 ```
-
-_Figure 1: Arc-enabled Kubernetes connects any CNCF cluster to Azure management_
 
 </DiagramContainer>
 
-Azure Arc-enabled Kubernetes allows you to attach and configure Kubernetes clusters running anywhere - on-premises, in other clouds, or at the edge. Arc brings Azure services and management to any CNCF-certified Kubernetes cluster.
+## What Arc adds to a Kubernetes cluster
 
-**Key Capabilities:**
+Arc registers the cluster as an Azure resource. After registration, administrators can use Azure to see the cluster in inventory, assign tags and role-based access, and attach selected services.
 
-- Connect any CNCF-certified Kubernetes cluster to Azure
-- Deploy applications using GitOps (Flux)
-- Apply Azure Policy for Kubernetes
-- Monitor with Azure Monitor Container Insights
-- Deploy Azure services to clusters (App Services, Event Grid, etc.)
-- Implement security best practices at scale
+Arc can also install extensions. Common examples include Azure Policy for Kubernetes, Azure Monitor Container Insights, GitOps with Flux, and other Microsoft or partner extensions. Each extension has its own prerequisites and data flow.
 
-**[← Back to Azure Arc Introduction](/level-100/module-04-azure-arc/azure-arc-intro/)**
+Arc does not replace the Kubernetes API server, the container runtime, or cluster operations tools. Cluster administrators still need Kubernetes operations skills, local break-glass access, backup planning, and a lifecycle plan for the distribution they run.
 
----
+## Validated distributions
 
-## Supported Kubernetes Distributions
+Arc-enabled Kubernetes works with CNCF-certified Kubernetes clusters. Microsoft also publishes a validation program for distributions that have passed conformance tests for Arc-enabled Kubernetes. Current validated distributions ([validation program](https://learn.microsoft.com/azure/azure-arc/kubernetes/validation-program)) include:
 
-**Microsoft:**
+| Distribution | Version note from Microsoft validation |
+|---|---|
+| AKS enabled by Azure Arc on Azure Local | Validated distribution |
+| Kubernetes on Azure Stack Edge | Validated distribution |
+| AKS Edge Essentials | Validated distribution |
+| Cluster API Provider on Azure | Validated distribution |
+| Canonical Charmed Kubernetes | Versions 1.32 through 1.34 |
+| Wind River Cloud Platform | Version 26.03 with Kubernetes 1.34.1 |
 
-- AKS (Azure Kubernetes Service) on Azure Local
-- AKS Edge Essentials
+The validation list is volatile, so use the current Microsoft validation page before you commit to a distribution in a design ([Azure Arc-enabled Kubernetes validation](https://learn.microsoft.com/azure/azure-arc/kubernetes/validation-program)).
 
-**Major Distributions:**
+## GitOps with Flux
 
-- Amazon EKS (Elastic Kubernetes Service)
-- Google GKE (Google Kubernetes Engine)
-- Red Hat OpenShift (OCP)
-- Rancher (RKE, K3s)
-- VMware Tanzu Kubernetes Grid
-- SUSE Rancher
-- Canonical Kubernetes
-
-**Requirements:**
-
-- CNCF-certified Kubernetes 1.19 or newer
-- Outbound internet connectivity
-- kubectl access to cluster
-- ClusterAdmin permissions
-
----
-
-## Deployment and Cluster Onboarding
-
-### Prerequisites
-
-**Azure Side:**
-
-- Azure subscription
-- Resource group
-- Registered resource providers
-- Service principal (for automation)
-
-**Cluster Side:**
-
-- Running Kubernetes cluster
-- kubectl configured
-- Outbound HTTPS connectivity
-- Sufficient cluster resources (2 vCPU, 4 GB RAM minimum)
-
-### Onboarding Steps
-
-**1. Install Azure CLI Extensions:**
-
-```bash
-az extension add --name connectedk8s
-az extension add --name k8s-configuration
-az extension add --name k8s-extension
-```
-
-**2. Connect Cluster:**
-
-```bash
-az connectedk8s connect   --name myCluster   --resource-group myResourceGroup   --location eastus
-```
-
-**3. Verify Connection:**
-
-```bash
-az connectedk8s list --resource-group myResourceGroup
-kubectl get deployments,pods -n azure-arc
-```
-
-**What Gets Installed:**
-
-- Azure Arc agents (azure-arc namespace)
-- Cluster Connect feature
-- Config management (GitOps) controllers
-- Azure Policy extension (optional)
-
----
-
-## GitOps-Based Configuration Management
-
-### What is GitOps?
-
-GitOps uses Git repositories as the source of truth for cluster configuration. Changes to the Git repo automatically sync to clusters.
-
-**Benefits:**
-
-- Declarative configuration
-- Version control for all changes
-- Audit trail (Git history)
-- Easy rollback (Git revert)
-- Consistent across multiple clusters
-
-### Flux v2 Integration
-
-Azure Arc uses Flux v2 for GitOps:
-
-**Create GitOps Configuration:**
-
-```bash
-az k8s-configuration flux create   --name my-app-config   --cluster-name myCluster   --resource-group myResourceGroup   --namespace my-app   --scope cluster   --url https://github.com/my-org/my-app   --branch main   --kustomization name=my-app path=./deploy
-```
-
-**Flux Components:**
-
-- **Source Controller:** Monitors Git repos
-- **Kustomize Controller:** Applies Kustomize overlays
-- **Helm Controller:** Manages Helm releases
-- **Notification Controller:** Sends alerts
-
-### Application Deployment Workflow
+GitOps uses a Git repository as the source of truth for cluster configuration. Arc-enabled Kubernetes uses Flux so the cluster can pull manifests, Helm releases, or Kustomize overlays from a repository and reconcile the desired state.
 
 ```mermaid
 graph LR
-    Dev[1. Developer<br/>Pushes to Git] --> Detect[2. Flux Detects<br/>Changes]
-    Detect --> Pull[3. Flux Pulls<br/>Manifests]
-    Pull --> Apply[4. Flux Applies<br/>to Cluster]
-    Apply --> Update[5. Application<br/>Updates]
-
-    Git[(Git Repository<br/>Source of Truth)]
-
-    Dev --> Git
-    Git --> Detect
-
-    style Dev fill:#E8F4FD,stroke:#0078D4,stroke-width:2px,color:#000
-    style Git fill:#FFF4E6,stroke:#FF8C00,stroke-width:2px,color:#000
-    style Detect fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
-    style Pull fill:#F3E8FF,stroke:#7B3FF2,stroke-width:2px,color:#000
-    style Apply fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
-    style Update fill:#D4E9D7,stroke:#107C10,stroke-width:2px,color:#000
+  Git[Git repository] --> Flux[Flux controllers]
+  Flux --> Namespace[Namespace and workloads]
+  Azure[Azure configuration] --> Flux
+  Operator[Pull request review] --> Git
 ```
 
----
+This pattern helps sovereignty work because it creates a reviewable record of cluster configuration changes. It also lets a central platform team publish baseline configuration while local teams keep operational control of the cluster.
 
-## Policy Enforcement on Kubernetes
+GitOps does not remove the need for change control. Protect the repository, require review for production changes, and define how emergency fixes are reconciled back into Git.
 
-### Azure Policy for Kubernetes
+## Azure Policy for Kubernetes
 
-**Policy Categories:**
+Azure Policy for Kubernetes extends policy evaluation into the cluster. The extension can audit or enforce Kubernetes settings such as allowed container images, pod security, labels, resource constraints, and networking rules.
 
-- **Security:** Pod security standards, image restrictions
-- **Resource Management:** CPU/memory limits, resource quotas
-- **Networking:** Ingress restrictions, network policies
-- **Compliance:** Labeling requirements, allowed registries
+Microsoft states that the Azure Policy extension for Arc-enabled Kubernetes is generally available and lists conformance-tested environments that include AKS on Azure Local, Azure Red Hat OpenShift, Kind, Rancher Government with RKE2, Minikube, K3s, AKS Edge, and VMware Tanzu Kubernetes Grid. The same Microsoft page notes that RKE is deprecated in favor of RKE2 ([available extensions for Arc-enabled Kubernetes](https://learn.microsoft.com/azure/azure-arc/kubernetes/extensions-release#azure-policy)).
 
-**Built-in Policies:**
+Policy can help a platform team apply guardrails across clusters in different locations. It is not a substitute for cluster hardening, image signing, network design, or local incident response.
 
-- Enforce HTTPS ingress only
-- Require CPU and memory limits
-- Block privileged containers
-- Enforce read-only root filesystems
-- Restrict hostPath volumes
+## Relationship to AKS on Azure Local
 
-### Policy Implementation
+AKS on Azure Local is a Microsoft-managed way to run Kubernetes on Azure Local. Azure Arc is the management connection that lets those clusters appear in Azure, use extensions, and take part in Azure governance.
 
-**1. Install Azure Policy Extension:**
+Do not treat every Azure Local Kubernetes scenario as generally available in every connectivity mode. AKS on Azure Local with disconnected operations is explicitly in preview, and the Azure Local disconnected operations service table also labels Arc-enabled Kubernetes clusters under disconnected operations as preview ([AKS on Azure Local disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview)).
 
-```bash
-az k8s-extension create   --cluster-name myCluster   --resource-group myResourceGroup   --cluster-type connectedClusters   --extension-type Microsoft.PolicyInsights   --name azure-policy
-```
+Arc gateway also has a different status for Kubernetes than for servers. Gateway is generally available for Azure Local infrastructure and VMs, but Microsoft lists Arc gateway for AKS on Azure Local as preview ([Azure Local Arc gateway overview](https://learn.microsoft.com/azure/azure-local/deploy/deployment-azure-arc-gateway-overview?view=azloc-2609)).
 
-**2. Assign Policies:**
+## Sovereign design checks
 
-```bash
-az policy assignment create   --name 'enforce-https-ingress'   --policy <policy-id>   --scope /subscriptions/<sub-id>/resourceGroups/myResourceGroup
-```
+Use these questions during early design:
 
-**3. View Compliance:**
+- Which organization operates the Kubernetes cluster and handles local break-glass access?
+- Which extensions are required, and what data does each extension send to Azure?
+- Which policy assignments are audit-only, and which ones deny workload deployment?
+- Which distribution and version are validated for the planned Arc features?
+- Does the design need connected operations, or does it require an Azure Local disconnected operations pattern?
 
-- Azure portal → Policy → Compliance
-- Filter by Kubernetes clusters
-- Drill into non-compliant resources
-- View remediation recommendations
+The answer should name the cluster distribution, connectivity model, extensions, policy scope, and data flows. Avoid a generic statement that the cluster is "managed by Azure" unless you specify which management functions are enabled.
 
-### Pod Security Standards
+## Sources
 
-**Baseline:** Minimize privilege escalation
-**Restricted:** Hardened security (production workloads)
-**Privileged:** Unrestricted (dev/test only)
-
----
-
-## Multi-Cluster Orchestration
-
-### Managing Multiple Clusters
-
-**Benefits:**
-
-- Consistent configuration across clusters
-- Central visibility and control
-- Unified security posture
-- Simplified operations
-
-**Approaches:**
-
-**1. GitOps at Scale:**
-
-- Single Git repo for all clusters
-- Cluster-specific overlays (Kustomize)
-- Environment-based branching
-
-**2. Policy Inheritance:**
-
-- Policies at subscription or management group level
-- Apply to all clusters automatically
-- Override at cluster level if needed
-
-**3. Centralized Monitoring:**
-
-- Azure Monitor for all clusters
-- Unified dashboards
-- Cross-cluster queries
-- Correlated alerts
-
-### Example: 3-Tier Application Across Clusters
-
-**Development Cluster:**
-
-- Git branch: dev
-- Namespace: my-app-dev
-- Replica count: 1
-
-**Staging Cluster:**
-
-- Git branch: staging
-- Namespace: my-app-staging
-- Replica count: 2
-
-**Production Cluster:**
-
-- Git branch: main
-- Namespace: my-app-prod
-- Replica count: 5
-
-All clusters auto-sync from Git, ensuring consistent deployment patterns.
-
----
-
-## Cost Considerations
-
-**Azure Arc-enabled Kubernetes:**
-
-- **Free** to connect clusters
-- **Free** GitOps configuration (up to 10 configurations per cluster)
-
-**Additional Costs:**
-
-- **Azure Policy:** First 6 vCPUs free, then ~$6/vCPU/month
-- **Azure Monitor:** ~$2.30/GB logs + $0.50/GB for Prometheus metrics
-- **Azure services deployed:** Varies by service
-
-**Cost Optimization:**
-
-- Use built-in monitoring before Azure Monitor (if cost-sensitive)
-- Limit number of policies to essential
-- Right-size log retention
-- Use free tier where available
-
----
-
-## Use Case Scenarios
-
-### Scenario 1: Retail Multi-Cloud Kubernetes
-
-**Challenge:** Microservices running on Azure AKS and on-premises Rancher.
-
-**Solution:**
-
-- Connect all clusters to Azure Arc
-- Unified GitOps deployment
-- Consistent policies across clusters
-- Centralized monitoring
-
-**Results:**
-
-- 50% faster deployments
-- Zero configuration drift
-- Unified security compliance
-- Simplified operations
-
-### Scenario 2: Manufacturing Edge Deployment
-
-**Challenge:** Deploy AI models to 20 edge locations with local K3s clusters.
-
-**Solution:**
-
-- Arc-enable all edge clusters
-- GitOps for model deployment
-- Azure Policy for security baseline
-- Azure Monitor for edge observability
-
-**Results:**
-
-- Consistent model deployment
-- Real-time monitoring from central location
-- Automated rollback on failures
-- 90% reduction in deployment errors
-
-### Scenario 3: Financial Services Compliance
-
-**Challenge:** Enforce security standards on 15 Kubernetes clusters (on-prem + cloud).
-
-**Solution:**
-
-- Arc-enable all clusters
-- Apply Azure Policy for pod security
-- Implement admission controller policies
-- Centralized audit logs
-
-**Results:**
-
-- 100% policy compliance
-- Passed regulatory audit
-- Blocked 50+ policy violations
-- Automated compliance reporting
-
----
-
-## Best Practices
-
-**1. Start with GitOps:**
-
-- Store all configs in Git from day 1
-- Use branching strategy (dev/staging/prod)
-- Implement code review for config changes
-
-**2. Implement Policy Early:**
-
-- Start with restrictive policies
-- Gradually relax as needed
-- Test policies in dev first
-
-**3. Monitor from the Start:**
-
-- Enable Container Insights
-- Set up essential alerts
-- Create custom dashboards
-
-**4. Use Namespaces:**
-
-- Isolate workloads by namespace
-- Apply policies per namespace
-- Use RBAC for namespace access
-
-**5. Plan for Scale:**
-
-- Design for multiple clusters from start
-- Use cluster selectors for targeting
-- Automate onboarding process
-
----
-
-## Troubleshooting
-
-**Cluster Won't Connect:**
-
-- Verify internet connectivity to Azure endpoints
-- Check kubectl access
-- Validate ClusterAdmin permissions
-- Review cluster logs
-
-**GitOps Not Syncing:**
-
-- Verify Git repo access
-- Check Flux controller logs
-- Validate manifest syntax
-- Confirm branch/path configuration
-
-**Policy Not Enforced:**
-
-- Wait for policy sync (15-20 minutes)
-- Check policy extension status
-- Verify policy scope
-- Review pod admission logs
-
----
-
-## Next Steps
-
-- [Arc Data Services →](/level-100/module-04-azure-arc/azure-arc-data-services/)
-- [Arc Servers →](/level-100/module-04-azure-arc/azure-arc-servers/)
-- [Azure Arc Quiz →](/level-100/module-04-azure-arc/azure-arc-knowledge-check/)
-- [Back to Arc Overview →](/level-100/module-04-azure-arc/azure-arc-intro/)
-
-**External Resources:**
-
-- [Azure Arc-enabled Kubernetes docs](https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/)
-- [GitOps with Flux documentation](https://fluxcd.io/docs/)
-- [Azure Arc Jumpstart - Kubernetes scenarios](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/)
-
----
-
-**Last Updated:** October 2025
+- [What is Azure Arc-enabled Kubernetes?](https://learn.microsoft.com/azure/azure-arc/kubernetes/overview)
+- [Azure Arc-enabled Kubernetes validation](https://learn.microsoft.com/azure/azure-arc/kubernetes/validation-program)
+- [Available extensions for Azure Arc-enabled Kubernetes clusters](https://learn.microsoft.com/azure/azure-arc/kubernetes/extensions-release)
+- [GitOps with Flux v2 in Azure Arc-enabled Kubernetes](https://learn.microsoft.com/azure/azure-arc/kubernetes/conceptual-gitops-flux2)
+- [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview)
+- [About Azure Arc gateway for Azure Local](https://learn.microsoft.com/azure/azure-local/deploy/deployment-azure-arc-gateway-overview?view=azloc-2609)

@@ -1,388 +1,98 @@
 ---
-title: "Azure Arc-Enabled Servers"
-description: "Azure Arc-enabled Servers — extend Azure governance, monitoring, security, and update management to Windows and Linux servers running outside Azure."
+title: Azure Arc-enabled servers
+description: "Learn how the Connected Machine agent brings Windows and Linux servers into Azure governance, licensing, update, and management workflows."
+lastVerified: 2026-10-02
 sidebar:
-  order: 4.1
+  order: 2
 ---
 
 import DiagramContainer from "~/components/DiagramContainer.astro";
 
----
+Azure Arc-enabled servers connects Windows and Linux machines that run outside Azure to Azure Resource Manager. A connected machine gets an Azure resource ID, a managed identity, tags, role assignments, policy assignments, and access to Azure extensions.
 
-## What is Arc-Enabled Servers?
+The server does not become an Azure virtual machine. Its operating system, applications, and data remain on the host. Arc adds a management channel that uses outbound connectivity to Azure.
 
-Azure Arc-enabled Servers extends Azure management to Windows and Linux machines hosted outside of Azure - in your datacenter, at the edge, or in other clouds.
-
-<DiagramContainer title="Arc-Enabled Servers Architecture">
+<DiagramContainer title="Arc-enabled server management path" defaultOpen>
 
 ```mermaid
 graph LR
-    subgraph Azure["☁️ Azure"]
-        ARM[Azure Resource Manager]
-        POL[Azure Policy]
-        MON[Azure Monitor]
-        DEF[Microsoft Defender]
-    end
-
-    subgraph OnPrem["🏢 On-Premises / Other Clouds"]
-        AG[Arc Agent]
-        SRV1[Windows Server]
-        SRV2[Linux Server]
-    end
-
-    ARM <--> AG
-    AG --> SRV1
-    AG --> SRV2
-    POL --> AG
-    MON --> AG
-    DEF --> AG
-
-    style Azure fill:#e3f2fd,stroke:#0078d4
-    style OnPrem fill:#fff3e0,stroke:#ef6c00
+  Admin[Azure tools] --> ARM[Azure Resource Manager]
+  ARM --> Agent[Connected Machine agent]
+  Agent --> Server[Windows or Linux server]
+  ARM --> Policy[Azure Policy]
+  ARM --> Update[Azure Update Manager]
+  ARM --> WSM[Windows Server management]
+  Policy --> Agent
+  Update --> Agent
+  WSM --> Agent
 ```
 
 </DiagramContainer>
 
-**Key Capabilities:**
+## Connected Machine agent
 
-- Organize and inventory servers using Azure Resource Manager
-- Apply Azure Policy for compliance and configuration
-- Monitor with Azure Monitor and Log Analytics
-- Protect with Microsoft Defender for Cloud
-- Manage updates with Azure Update Management
-- Automate with Azure Automation runbooks
+The Connected Machine agent is the software that registers a non-Azure server with Azure Arc. It runs on the machine, authenticates to Azure, and maintains the management channel. Microsoft documents support for Windows Server 2012 R2 and later and a set of supported Linux distributions for Arc-enabled server update scenarios, including Red Hat Enterprise Linux, Ubuntu LTS, SUSE Linux Enterprise Server, Debian, Oracle Linux, AlmaLinux, Rocky Linux, and Amazon Linux versions listed in the support matrix ([Azure Update Manager support matrix](https://learn.microsoft.com/azure/update-manager/support-matrix-updates)).
 
-**[← Back to Azure Arc Introduction](/level-100/module-04-azure-arc/azure-arc-intro/)**
+The agent uses outbound HTTPS. You do not need to open inbound management ports to Azure for ordinary Arc registration. If the network must minimize allowed destinations, Arc gateway can reduce required outbound endpoints for supported server scenarios.
 
----
+The agent also gives the server a system-assigned managed identity. Azure services and extensions can use that identity instead of storing long-lived credentials on the server.
 
-## Prerequisites
+## Onboarding approaches
 
-**Server Requirements:**
+You can onboard servers one at a time from the Azure portal, Azure CLI, or PowerShell. At scale, use tools such as Configuration Manager, Group Policy, scripted deployment, or service principal based automation. The right method depends on who owns the servers and how software is normally deployed in that environment.
 
-- **Windows:** Server 2012 R2 or newer
-- **Linux:** Various distributions (Ubuntu 16.04+, RHEL 7+, SUSE 12+, etc.)
-- Internet connectivity (outbound HTTPS/443)
-- Minimum 2 GB RAM
+At L100 depth, remember the onboarding sequence:
 
-**Agent Requirements:**
+1. Confirm the operating system, network, and Azure permissions.
+2. Install the Connected Machine agent.
+3. Connect the agent to a subscription, resource group, region, and tenant.
+4. Organize the new Arc resource with tags, role assignments, and policy assignments.
+5. Add only the extensions and Azure services that the design needs.
 
-- Connected Machine agent installation
-- Outbound connectivity to Azure endpoints
-- Local administrator/root privileges for installation
+When SQL Server is installed on a connected Windows or Linux server, Microsoft can automatically connect the SQL Server instances to Azure Arc as SQL Server enabled by Azure Arc. Microsoft documents an opt-out tag named `ArcSQLServerExtensionDeployment` with value `Disabled` for environments that do not want automatic SQL Server connection ([Azure Connected Machine agent deployment options](https://learn.microsoft.com/azure/azure-arc/servers/deployment-options#automatic-connection-for-sql-server)).
 
-**Azure Requirements:**
+## Management features
 
-- Azure subscription
-- Permissions to create resources
-- Resource group for Arc servers
+Arc-enabled servers can use Azure-native governance and operations features.
 
----
+| Feature | What it does | Sovereignty note |
+|---|---|---|
+| Azure Policy and machine configuration | Audits or configures settings inside the guest operating system | Use it for consistent baselines across datacenters and clouds |
+| Azure Update Manager | Assesses and schedules operating system updates | Validate maintenance windows and reboot policies locally |
+| Azure Monitor | Collects metrics and logs when configured | Log data follows the workspace and data collection rule configuration |
+| Microsoft Defender for Cloud | Adds security posture and threat protection plans | Defender plans bill separately and can collect security data |
+| Windows Admin Center in Azure | Provides browser-based Windows Server management | Scope access with Azure RBAC |
+| Run Command | Runs scripts on connected machines | Treat it as privileged remote administration |
 
-## Onboarding Process and Architecture
+Azure machine configuration, formerly Guest Configuration, extends Azure Policy inside the guest operating system of Arc-connected servers ([cloud-native governance and policy](https://learn.microsoft.com/azure/azure-arc/servers/cloud-native/governance-policy)). This is useful when a sovereign baseline requires settings inside the operating system, not just resource tags or Azure-side configuration.
 
-### Installation Methods
+## Windows Server pay-as-you-go through Arc
 
-**1. Interactive Installation (Single Server):**
+Windows Server pay-as-you-go through Azure Arc is available for Windows Server 2025 and later. It bills Windows Server use through Azure by physical or virtual core, depending on how you configure licensing, and Microsoft states that it requires no product key and no client access licenses for the pay-as-you-go subscription ([cloud-native licensing and cost management](https://learn.microsoft.com/azure/azure-arc/servers/cloud-native/licensing-cost-management)).
 
-```bash
-# Linux example
-wget https://aka.ms/azcmagent -O ~/install_linux_azcmagent.sh
-bash ~/install_linux_azcmagent.sh
+This licensing model is different from bringing an existing Windows Server license. It is useful when an organization wants Azure-billed Windows Server licensing for servers outside Azure, especially where demand changes over time.
 
-# Connect to Azure
-azcmagent connect --resource-group "myResourceGroup"   --tenant-id "tenant-id"   --location "eastus"   --subscription-id "subscription-id"
-```
+## Windows Server Management enabled by Azure Arc
 
-**2. Service Principal (Scale Deployment):**
+Windows Server Management enabled by Azure Arc is a management benefit for eligible Windows Server machines. Microsoft lists Update Manager, Change Tracking and Inventory, Machine Configuration, Windows Admin Center in Azure, Remote Support, Network HUD for Windows Server 2025, Best Practices Assessment, Site Recovery configuration, and discounted Azure File Sync among the included capabilities ([Windows Server Management enabled by Azure Arc](https://learn.microsoft.com/azure/azure-arc/servers/windows-server-management-overview)).
 
-```powershell
-# Windows PowerShell example
-& "$env:ProgramW6432\AzureConnectedMachineAgentzcmagent.exe" connect `
-  --service-principal-id "app-id" `
-  --service-principal-secret "secret" `
-  --resource-group "myResourceGroup" `
-  --tenant-id "tenant-id" `
-  --location "eastus" `
-  --subscription-id "subscription-id"
-```
+At L100 depth, think of the benefit as a bundle that reduces the friction of using Azure management on Windows Server. It does not make every Azure service free, and it does not change where the server runs. Check the benefit prerequisites and service-specific data flows before you include it in a design.
 
-**3. At-Scale Deployment:**
+## Arc gateway for servers
 
-- Configuration Manager for Windows
-- Ansible/Puppet for Linux
-- Group Policy for domain-joined Windows
+Arc gateway is generally available for Arc-enabled servers. It can reduce outbound connectivity requirements from more than 200 endpoints to as few as 7 to 9 endpoints for supported Arc traffic ([Azure Arc gateway](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway)).
 
-### Architecture
+Arc gateway has limits. Microsoft currently limits a subscription to five gateway resources, supports public-cloud connectivity only, and does not recommend the feature where TLS termination or TLS inspection is required ([current limitations](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway#current-limitations)). One gateway resource can handle about 2,000 Arc-enabled server resources per region ([plan your Azure Arc gateway setup](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway#plan-your-azure-arc-gateway-setup)).
 
-**Components:**
+Use Arc gateway when firewall simplification is the goal. Do not use it as a substitute for Azure Local disconnected operations or as proof that no telemetry or service data leaves the site.
 
-- **Connected Machine Agent:** Runs on each server
-- **Instance Metadata Service:** Local endpoint (localhost:40342)
-- **Extension Manager:** Manages VM extensions
-- **Guest Configuration Agent:** Policy enforcement
+## Sources
 
-**Communication Flow:**
-
-1. Agent authenticates to Azure AD
-2. Receives managed identity
-3. Reports status and inventory
-4. Receives configurations and policies
-5. Executes extensions and scripts
-
----
-
-## Security and Authentication
-
-**Managed Identity:**
-
-- System-assigned managed identity per server
-- No stored credentials
-- Automatic token rotation
-- Least-privilege access
-
-**Certificate-Based Authentication:**
-
-- X.509 certificate for authentication
-- Stored securely in OS keystore
-- Automatic renewal
-
-**Network Security:**
-
-- Outbound HTTPS only (no inbound)
-- Proxy support available
-- Private Link support for isolated networks
-
----
-
-## Applying Azure Policy
-
-**Policy Capabilities:**
-
-- Audit configuration compliance
-- Deploy missing extensions
-- Enforce security baselines
-- Tag management
-- Location restrictions
-
-**Example Policies:**
-
-- Require anti-malware extension
-- Enforce disk encryption
-- Audit password policies
-- Require monitoring agent
-- Enforce naming conventions
-
-**Implementation:**
-
-```text
-1. Create policy assignment
-2. Assign to resource group or subscription
-3. Policy evaluates every 24 hours
-4. Non-compliant resources reported
-5. Optional auto-remediation
-```
-
----
-
-## Monitoring and Compliance Reporting
-
-**Azure Monitor Integration:**
-
-- Performance metrics (CPU, memory, disk, network)
-- Event logs and syslog
-- Custom metrics and logs
-- Alert rules and action groups
-
-**Log Analytics:**
-
-- Centralized log collection
-- KQL queries for analysis
-- Cross-server correlation
-- Long-term retention
-
-**Compliance Dashboard:**
-
-- Real-time compliance status
-- Policy compliance reporting
-- Remediation recommendations
-- Historical compliance trends
-
----
-
-## Update Management Capabilities
-
-**Azure Update Manager:**
-
-- Assess update compliance
-- Schedule update deployments
-- Pre and post-update scripts
-- Update exclusions
-- Reporting and auditing
-
-**Update Assessment:**
-
-- Automatic scanning for missing updates
-- Security vs. non-security classification
-- CVSS scoring for vulnerabilities
-
-**Update Deployment:**
-
-- Maintenance windows
-- Phased rollout
-- Reboot control
-- Rollback capability
-
----
-
-## Cost Model and Licensing
-
-**Arc-Enabled Servers:**
-
-- **No charge** for Azure Arc itself
-- Charges for Azure services consumed:
-  - Azure Monitor: ~$2.30/GB ingested
-  - Microsoft Defender: ~$15/server/month
-  - Azure Automation: ~$0.002/minute
-  - Update Management: Included with Azure Automation
-
-**Licensing:**
-
-- Windows Server: Requires valid license
-- Linux: Follows distribution license
-- Azure Hybrid Benefit: Available for Windows
-
----
-
-## Use Case Scenarios
-
-### Scenario 1: Data Center Server Management
-
-**Challenge:** 500 Windows/Linux servers across 3 data centers with inconsistent management.
-
-**Solution:**
-
-- Onboard all servers to Azure Arc
-- Apply Azure Policy for security baseline
-- Centralized monitoring with Azure Monitor
-- Unified update management
-
-**Results:**
-
-- 100% visibility across all servers
-- 60% faster patch deployment
-- Unified compliance reporting
-- Reduced management overhead by 40%
-
-### Scenario 2: Multi-Cloud Governance
-
-**Challenge:** Servers in Azure, AWS, and on-premises with fragmented governance.
-
-**Solution:**
-
-- Arc-enable servers in all environments
-- Apply consistent Azure policies everywhere
-- Deploy Microsoft Defender uniformly
-- Centralized security dashboard
-
-**Results:**
-
-- Unified security posture across all clouds
-- Consistent compliance reporting
-- Reduced tool sprawl
-- Single pane of glass management
-
-### Scenario 3: Compliance for Regulated Industry
-
-**Challenge:** Healthcare provider needs HIPAA compliance for 200+ servers.
-
-**Solution:**
-
-- Azure Arc with HIPAA initiative policies
-- Microsoft Defender for vulnerability scanning
-- Log Analytics for audit logging
-- Automated compliance reporting
-
-**Results:**
-
-- 95% compliance score
-- Passed HIPAA audit with zero findings
-- Automated monthly compliance reports
-- Reduced audit preparation time by 70%
-
----
-
-## Best Practices
-
-**1. Use Service Principals for Scale**
-
-- Automate onboarding with service principals
-- Store secrets securely (Azure Key Vault)
-- Rotate credentials regularly
-
-**2. Organize with Resource Groups**
-
-- Group by environment (prod, dev, test)
-- Group by location or business unit
-- Use tags for additional metadata
-
-**3. Implement Gradual Rollout**
-
-- Pilot with small group first
-- Validate monitoring and policies
-- Gradually expand to production
-
-**4. Monitor Agent Health**
-
-- Alert on agent disconnection
-- Regular connectivity validation
-- Document troubleshooting procedures
-
-**5. Leverage Automation**
-
-- Use ARM templates for consistency
-- Automate policy assignments
-- Script repetitive tasks
-
----
-
-## Troubleshooting
-
-**Agent Won't Connect:**
-
-- Verify internet connectivity to Azure endpoints
-- Check firewall rules
-- Validate Azure subscription and permissions
-- Review agent logs
-
-**Policy Not Applying:**
-
-- Wait for evaluation cycle (24 hours)
-- Force policy scan: `Start-GuestConfigurationAssessment`
-- Check for policy conflicts
-- Verify resource group assignment
-
-**Monitoring Data Missing:**
-
-- Verify Log Analytics agent extension installed
-- Check workspace configuration
-- Validate network connectivity
-- Review data collection rules
-
----
-
-## Next Steps
-
-- [Arc-Enabled Kubernetes →](/level-100/module-04-azure-arc/azure-arc-kubernetes/)
-- [Arc Data Services →](/level-100/module-04-azure-arc/azure-arc-data-services/)
-- [Azure Arc Quiz →](/level-100/module-04-azure-arc/azure-arc-knowledge-check/)
-- [Back to Arc Overview →](/level-100/module-04-azure-arc/azure-arc-intro/)
-
-**External Resources:**
-
-- [Azure Arc-enabled servers documentation](https://learn.microsoft.com/en-us/azure/azure-arc/servers/)
-- [Onboarding guide](https://learn.microsoft.com/en-us/azure/azure-arc/servers/onboard-portal)
-
----
-
-**Last Updated:** October 2025
+- [Azure Arc-enabled servers overview](https://learn.microsoft.com/azure/azure-arc/servers/overview)
+- [Azure Connected Machine agent overview](https://learn.microsoft.com/azure/azure-arc/servers/agent-overview)
+- [Azure Connected Machine agent deployment options](https://learn.microsoft.com/azure/azure-arc/servers/deployment-options)
+- [Support for Updates](https://learn.microsoft.com/azure/update-manager/support-matrix-updates)
+- [Cloud-native governance and policy with Azure Arc-enabled servers](https://learn.microsoft.com/azure/azure-arc/servers/cloud-native/governance-policy)
+- [Cloud-native licensing and cost management with Arc-enabled servers](https://learn.microsoft.com/azure/azure-arc/servers/cloud-native/licensing-cost-management)
+- [Windows Server Management enabled by Azure Arc](https://learn.microsoft.com/azure/azure-arc/servers/windows-server-management-overview)
+- [Simplify network configuration requirements with Azure Arc gateway](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway)

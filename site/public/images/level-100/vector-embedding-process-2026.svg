@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="rag-title rag-desc">
+  <title id="rag-title">How retrieval-augmented generation finds relevant text</title>
+  <desc id="rag-desc">Vendor-neutral diagram showing documents chunked and embedded into vectors, then a user question embedded for similarity search, grounding chunks, prompting, and a cited answer.</desc>
+  <defs>
+    <marker id="arrow-rag" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0078D4"/>
+    </marker>
+    <style>
+      .font { font-family: "Segoe UI", "Segoe UI Variable", Inter, system-ui, sans-serif; }
+      .title { font-size: 24px; font-weight: 700; fill: #243A5E; }
+      .subtitle { font-size: 15px; fill: #605E5C; }
+      .heading { font-size: 20px; font-weight: 700; fill: #243A5E; }
+      .label { font-size: 15px; fill: #323130; }
+      .small { font-size: 14px; fill: #605E5C; }
+      .chip { font-size: 14px; font-weight: 600; fill: #003A6C; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="760" rx="16" fill="#FFFFFF"/>
+  <rect x="28" y="28" width="1144" height="704" rx="18" fill="#F7FAFD" stroke="#DEECF9"/>
+
+  <text class="font title" x="60" y="76">How retrieval-augmented generation finds relevant text</text>
+  <text class="font subtitle" x="60" y="104">Embeddings convert text to vectors so semantically close chunks can be retrieved for grounded generation.</text>
+
+  <rect x="60" y="145" width="1080" height="162" rx="18" fill="#FFFFFF" stroke="#C8C6C4"/>
+  <text class="font heading" x="90" y="184">Indexing path</text>
+  <g transform="translate(90 220)">
+    <rect x="0" y="0" width="140" height="70" rx="12" fill="#EFF6FC" stroke="#8ABFE6"/>
+    <text class="font label" x="70" y="32" text-anchor="middle">Documents</text>
+    <text class="font small" x="70" y="54" text-anchor="middle">source text</text>
+    <path d="M150 35 L202 35" stroke="#0078D4" stroke-width="2.5" marker-end="url(#arrow-rag)"/>
+
+    <rect x="210" y="0" width="140" height="70" rx="12" fill="#EFF6FC" stroke="#8ABFE6"/>
+    <text class="font label" x="280" y="32" text-anchor="middle">Chunks</text>
+    <text class="font small" x="280" y="54" text-anchor="middle">smaller passages</text>
+    <path d="M360 35 L412 35" stroke="#0078D4" stroke-width="2.5" marker-end="url(#arrow-rag)"/>
+
+    <rect x="420" y="0" width="150" height="70" rx="12" fill="#F1ECF8" stroke="#B7A2D6"/>
+    <text class="font label" x="495" y="32" text-anchor="middle">Embedding model</text>
+    <text class="font small" x="495" y="54" text-anchor="middle">same model later</text>
+    <path d="M580 35 L632 35" stroke="#0078D4" stroke-width="2.5" marker-end="url(#arrow-rag)"/>
+
+    <rect x="640" y="0" width="120" height="70" rx="12" fill="#E6F4F1" stroke="#80C6BA"/>
+    <text class="font label" x="700" y="32" text-anchor="middle">Vectors</text>
+    <text class="font small" x="700" y="54" text-anchor="middle">numbers</text>
+    <path d="M770 35 L822 35" stroke="#0078D4" stroke-width="2.5" marker-end="url(#arrow-rag)"/>
+
+    <rect x="830" y="0" width="170" height="70" rx="12" fill="#E6F4F1" stroke="#80C6BA"/>
+    <text class="font label" x="915" y="32" text-anchor="middle">Vector store</text>
+    <text class="font small" x="915" y="54" text-anchor="middle">vectors plus text</text>
+  </g>
+
+  <rect x="60" y="350" width="760" height="342" rx="18" fill="#FFFFFF" stroke="#C8C6C4"/>
+  <text class="font heading" x="90" y="389">Query path</text>
+  <g transform="translate(90 425)">
+    <rect x="0" y="0" width="130" height="66" rx="12" fill="#EFF6FC" stroke="#8ABFE6"/>
+    <text class="font label" x="65" y="29" text-anchor="middle">User question</text>
+    <text class="font small" x="65" y="50" text-anchor="middle">plain text</text>
+    <path d="M140 33 L190 33" stroke="#0078D4" stroke-width="2.5" marker-end="url(#arrow-rag)"/>
+
+    <rect x="198" y="0" width="145" height="66" rx="12" fill="#F1ECF8" stroke="#B7A2D6"/>
+    <text class="font label" x="270" y="29" text-anchor="middle">Embedding model</text>
+    <text class="font small" x="270" y="50" text-anchor="middle">question vector</text>
+    <path d="M353 33 L403 33" stroke="#0078D4" stroke-width="2.5" marker-end="url(#arrow-rag)"/>
+
+    <rect x="410" y="0" width="145" height="66" rx="12" fill="#E6F4F1" stroke="#80C6BA"/>
+    <text class="font label" x="482" y="29" text-anchor="middle">Similarity search</text>
+    <text class="font small" x="482" y="50" text-anchor="middle">nearest vectors</text>
+    <path d="M565 33 L615 33" stroke="#0078D4" stroke-width="2.5" marker-end="url(#arrow-rag)"/>
+
+    <rect x="622" y="0" width="110" height="66" rx="12" fill="#FFF4CE" stroke="#EAA300"/>
+    <text class="font label" x="677" y="29" text-anchor="middle">Top chunks</text>
+    <text class="font small" x="677" y="50" text-anchor="middle">grounding</text>
+
+    <path d="M677 76 L677 110 L116 110 L116 132" stroke="#0078D4" stroke-width="2.5" fill="none" marker-end="url(#arrow-rag)"/>
+
+    <rect x="0" y="132" width="232" height="68" rx="12" fill="#F3F2F1" stroke="#C8C6C4"/>
+    <text class="font label" x="116" y="160" text-anchor="middle">Prompt</text>
+    <text class="font small" x="116" y="181" text-anchor="middle">question + chunks</text>
+    <path d="M242 166 L292 166" stroke="#0078D4" stroke-width="2.5" marker-end="url(#arrow-rag)"/>
+
+    <rect x="300" y="132" width="150" height="68" rx="12" fill="#F1ECF8" stroke="#B7A2D6"/>
+    <text class="font label" x="375" y="160" text-anchor="middle">Language model</text>
+    <text class="font small" x="375" y="181" text-anchor="middle">uses context</text>
+    <path d="M460 166 L510 166" stroke="#0078D4" stroke-width="2.5" marker-end="url(#arrow-rag)"/>
+
+    <rect x="518" y="132" width="214" height="68" rx="12" fill="#E6F4F1" stroke="#80C6BA"/>
+    <text class="font label" x="625" y="160" text-anchor="middle">Grounded answer</text>
+    <text class="font small" x="625" y="181" text-anchor="middle">with citations</text>
+  </g>
+
+  <rect x="850" y="350" width="290" height="342" rx="18" fill="#FFFFFF" stroke="#C8C6C4"/>
+  <text class="font heading" x="880" y="389">Vector space sketch</text>
+  <text class="font small" x="880" y="417">Similar meanings sit close together.</text>
+  <line x1="890" y1="628" x2="1110" y2="628" stroke="#C8C6C4"/>
+  <line x1="910" y1="648" x2="910" y2="480" stroke="#C8C6C4"/>
+  <circle cx="950" cy="555" r="9" fill="#0078D4" opacity="0.9"/>
+  <circle cx="980" cy="543" r="9" fill="#0078D4" opacity="0.75"/>
+  <circle cx="965" cy="581" r="9" fill="#0078D4" opacity="0.65"/>
+  <circle cx="1058" cy="515" r="9" fill="#008575" opacity="0.85"/>
+  <circle cx="1088" cy="530" r="9" fill="#008575" opacity="0.72"/>
+  <circle cx="1066" cy="588" r="9" fill="#5C2E91" opacity="0.78"/>
+  <path d="M926 638 L976 547" stroke="#0078D4" stroke-width="2" marker-end="url(#arrow-rag)"/>
+  <path d="M926 638 L1062 517" stroke="#008575" stroke-width="2"/>
+  <text class="font small" x="930" y="522">topic A</text>
+  <text class="font small" x="1038" y="482">topic B</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="eudb-title eudb-desc">
+  <title id="eudb-title">EU Data Boundary</title>
+  <desc id="eudb-desc">Diagram showing the EU Data Boundary covering 27 European Union member states plus EFTA, with in-scope Microsoft services, data categories, and product-specific scope rules.</desc>
+  <defs>
+    <marker id="arrow-eudb" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0078D4"/>
+    </marker>
+    <style>
+      .font { font-family: "Segoe UI", "Segoe UI Variable", Inter, system-ui, sans-serif; }
+      .title { font-size: 24px; font-weight: 700; fill: #243A5E; }
+      .subtitle { font-size: 15px; fill: #605E5C; }
+      .heading { font-size: 19px; font-weight: 700; fill: #243A5E; }
+      .label { font-size: 15px; fill: #323130; }
+      .small { font-size: 14px; fill: #605E5C; }
+      .chip { font-size: 15px; font-weight: 600; fill: #003A6C; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="760" rx="16" fill="#FFFFFF"/>
+  <rect x="28" y="28" width="1144" height="704" rx="18" fill="#F7FAFD" stroke="#DEECF9"/>
+
+  <text class="font title" x="60" y="76">EU Data Boundary</text>
+  <text class="font subtitle" x="60" y="104">A geographically defined boundary for Microsoft enterprise online services in Europe.</text>
+
+  <rect x="58" y="135" width="745" height="450" rx="28" fill="#EFF6FC" stroke="#0078D4" stroke-width="3"/>
+  <text class="font heading" x="430" y="210" text-anchor="middle">Boundary region</text>
+  <text class="font label" x="430" y="238" text-anchor="middle">27 EU member states + EFTA</text>
+  <text class="font small" x="430" y="262" text-anchor="middle">Iceland, Liechtenstein, Norway, Switzerland</text>
+
+  <g transform="translate(115 310)">
+    <rect x="0" y="0" width="310" height="190" rx="12" fill="#DEECF9" stroke="#8ABFE6"/>
+    <text class="font heading" x="22" y="34">Services in scope</text>
+    <rect x="24" y="58" width="110" height="36" rx="18" fill="#FFFFFF" stroke="#0078D4"/>
+    <text class="font chip" x="79" y="82" text-anchor="middle">Azure</text>
+    <rect x="150" y="58" width="136" height="36" rx="18" fill="#FFFFFF" stroke="#0078D4"/>
+    <text class="font chip" x="218" y="82" text-anchor="middle">Microsoft 365</text>
+    <rect x="24" y="110" width="136" height="36" rx="18" fill="#FFFFFF" stroke="#0078D4"/>
+    <text class="font chip" x="92" y="134" text-anchor="middle">Dynamics 365</text>
+    <rect x="176" y="110" width="134" height="36" rx="18" fill="#FFFFFF" stroke="#0078D4"/>
+    <text class="font chip" x="243" y="134" text-anchor="middle">Power Platform</text>
+  </g>
+
+  <g transform="translate(455 310)">
+    <rect x="0" y="0" width="285" height="190" rx="12" fill="#F3F2F1" stroke="#C8C6C4"/>
+    <text class="font heading" x="22" y="34">Data in scope</text>
+    <circle cx="34" cy="70" r="6" fill="#008575"/>
+    <text class="font label" x="52" y="75">Customer data</text>
+    <circle cx="34" cy="108" r="6" fill="#008575"/>
+    <text class="font label" x="52" y="105">Personal data, including</text>
+    <text class="font small" x="52" y="126">pseudonymized system logs</text>
+    <circle cx="34" cy="158" r="6" fill="#008575"/>
+    <text class="font label" x="52" y="155">Professional services data</text>
+    <text class="font small" x="52" y="176">stored at rest</text>
+  </g>
+
+  <path d="M805 398 L875 398" stroke="#0078D4" stroke-width="2.5" marker-end="url(#arrow-eudb)"/>
+
+  <rect x="875" y="135" width="270" height="450" rx="18" fill="#FFFFFF" stroke="#C8C6C4"/>
+  <text class="font heading" x="905" y="180">How scope is decided</text>
+
+  <g transform="translate(905 218)">
+    <rect x="0" y="0" width="210" height="72" rx="10" fill="#EFF6FC" stroke="#8ABFE6"/>
+    <text class="font chip" x="18" y="26">Azure</text>
+    <text class="font small" x="18" y="50">Region of deployment</text>
+  </g>
+
+  <g transform="translate(905 314)">
+    <rect x="0" y="0" width="210" height="88" rx="10" fill="#EFF6FC" stroke="#8ABFE6"/>
+    <text class="font chip" x="18" y="26">Microsoft 365</text>
+    <text class="font small" x="18" y="50">Tenant sign-up country</text>
+    <text class="font small" x="18" y="72">Multi-Geo excluded</text>
+  </g>
+
+  <g transform="translate(905 426)">
+    <rect x="0" y="0" width="210" height="116" rx="10" fill="#EFF6FC" stroke="#8ABFE6"/>
+    <text class="font chip" x="18" y="26">Dynamics 365</text>
+    <text class="font chip" x="18" y="48">and Power Platform</text>
+    <text class="font small" x="18" y="74">EU tenant geography</text>
+    <text class="font small" x="18" y="96">and EU billing address</text>
+  </g>
+
+  <rect x="96" y="622" width="644" height="36" rx="18" fill="#FFF4CE" stroke="#EAA300"/>
+  <text class="font small" x="418" y="646" text-anchor="middle" fill="#8A5300">System-generated logs are pseudonymized, not anonymized.</text>
+</svg>
