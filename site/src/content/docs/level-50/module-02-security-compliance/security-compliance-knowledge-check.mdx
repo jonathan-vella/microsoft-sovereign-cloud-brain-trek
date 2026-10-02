@@ -1,186 +1,224 @@
 ---
-title: "Security & Compliance Knowledge Check"
-description: "Test your understanding of security and compliance fundamentals"
+title: "Security and compliance knowledge check"
+description: "Twelve questions on the CIA triad, defense in depth, Zero Trust principles and pillars, encryption, compliance offerings, identity, and Conditional Access."
+lastVerified: 2026-10-02
 sidebar:
   order: 5
 ---
 
 import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
 
-## Instructions
+Answer each question, then open the answer to check your reasoning. Each answer explains why the other options are wrong and links to the page to review. Aim for 10 out of 12 before you move on to Module 3.
 
-Test your understanding of security and compliance concepts covered in Module 2.
+## Question 1
 
-**Passing Score:** 80% (8 out of 10 questions correct)
+An attacker changes the bank account number on a supplier invoice in your finance system. Which property of the CIA triad did the attacker break?
 
----
-
-## Questions
-
-### Question 1
-
-What does the CIA triad in information security represent?
-
-**A)** Central Intelligence Agency guidelines
-**B)** Confidentiality, Integrity, Availability
-**C)** Cloud Infrastructure Architecture
-**D)** Compliance, Identity, Access
+- A. Confidentiality
+- B. Integrity
+- C. Availability
+- D. Accountability
 
 <KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
 
-**Explanation:** The CIA triad represents the three fundamental principles of information security.
+Integrity means data changes only through authorized processes. An unauthorized edit is an integrity violation.
+
+A would apply if the attacker only read the invoice. C would apply if the finance system went offline. D isn't one of the three CIA properties.
 
 </KnowledgeCheck>
 
-### Question 2
+## Question 2
 
-Which authentication factor includes passwords and PINs?
+In the defense-in-depth model on Microsoft Learn, which layer sits at the center, protected by all the others?
 
-**A)** Something you are
-**B)** Something you have
-**C)** Something you know
-**D)** Somewhere you are
+- A. Physical security
+- B. Identity and access
+- C. Network
+- D. Data
 
-<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/data-protection-principles/">
+<KnowledgeCheck answer="D" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
 
-**Explanation:** Knowledge factors include passwords, PINs, and security questions.
+Data is the innermost layer, because data is what attackers are after. The other six layers (physical security, identity and access, perimeter, network, compute, application) surround it.
 
-</KnowledgeCheck>
-
-### Question 3
-
-What is the principle of least privilege?
-
-**A)** Giving users maximum access for convenience
-**B)** Providing minimum necessary permissions for job function
-**C)** Allowing equal access for all users
-**D)** Restricting access only to sensitive data
-
-<KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/compliance-frameworks/">
-
-**Explanation:** Least privilege means providing only the minimum permissions necessary.
+A is the outermost layer. B and C are outer layers that protect the layers inside them.
 
 </KnowledgeCheck>
 
-### Question 4
+## Question 3
 
-Which compliance framework is specifically for healthcare data in the US?
+Which list contains the three Zero Trust principles?
 
-**A)** GDPR
-**B)** SOC 2
-**C)** HIPAA
-**D)** PCI DSS
+- A. Verify explicitly, use least privilege access, assume breach
+- B. Confidentiality, integrity, availability
+- C. Identify, assess, respond
+- D. Trust the network, verify users, monitor devices
+
+<KnowledgeCheck answer="A" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
+
+Zero Trust rests on three principles: verify explicitly, use least privilege access, and assume breach.
+
+B is the CIA triad. C is part of the risk management cycle. D contradicts Zero Trust, which never trusts a request because of its network location.
+
+</KnowledgeCheck>
+
+## Question 4
+
+How many technology pillars does Microsoft's current Zero Trust guidance use, and which pillar ties the others together?
+
+- A. Five, with Network at the center
+- B. Six, with Identities at the center
+- C. Seven, with SecOps integrating signals from the other six
+- D. Eight, with Data at the center
 
 <KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
 
-**Explanation:** HIPAA specifically protects healthcare data in the United States.
+The seven pillars are Identities, Endpoints, Data, Apps, Infrastructure, Network, and SecOps. SecOps (called visibility, automation, and orchestration in the security fundamentals module) collects signals from the other six to detect and respond to threats.
+
+B reflects older material that listed six pillars. A and D don't match Microsoft's guidance.
 
 </KnowledgeCheck>
 
-### Question 5
+## Question 5
 
-What does "defense in depth" mean?
+Which encryption protects data while a VM processes it in memory?
 
-**A)** Having the strongest perimeter security
-**B)** Using multiple layers of security controls
-**C)** Focusing on the most critical vulnerabilities
-**D)** Implementing security only at network level
+- A. Encryption at rest
+- B. Encryption in transit
+- C. Encryption in use, through confidential computing
+- D. Hashing
+
+<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/data-protection-principles/">
+
+Data is normally decrypted when it's loaded into memory. Confidential computing processes it in a protected hardware environment that even the operating system and hypervisor can't read.
+
+A protects stored data. B protects data moving across a network. D is one-way and can't be reversed to process the data.
+
+</KnowledgeCheck>
+
+## Question 6
+
+Why should encryption keys be stored apart from the data they protect?
+
+- A. It makes encryption faster.
+- B. An attacker who gets the data shouldn't automatically get the key as well.
+- C. Regulations forbid storing keys in the cloud.
+- D. Keys are too large to store with data.
 
 <KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/data-protection-principles/">
 
-**Explanation:** Defense in depth uses multiple security layers for comprehensive protection.
+Encryption only helps if the key stays secret. Keeping keys in a separate service, such as Azure Key Vault or a hardware security module, means a stolen copy of the data stays unreadable.
+
+A is false; separation doesn't change speed. C is false as a general rule. D is false; keys are small.
 
 </KnowledgeCheck>
 
-### Question 6
+## Question 7
 
-What is the primary purpose of data classification?
+Microsoft groups its compliance offerings into four segments. Which list is correct?
 
-**A)** To organize files in folders
-**B)** To determine appropriate protection levels
-**C)** To improve search capabilities
-**D)** To reduce storage costs
+- A. Public, private, hybrid, multicloud
+- B. Globally applicable, US government, industry specific, region or country specific
+- C. Identity, data, network, compute
+- D. Free, basic, standard, premium
 
 <KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/compliance-frameworks/">
 
-**Explanation:** Data classification determines what protection measures are needed.
+The compliance offerings page groups offerings as globally applicable (for example ISO/IEC 27001), US government (for example FedRAMP), industry specific (for example PCI DSS), and region or country specific (for example Germany C5).
+
+A lists deployment models. C mixes Zero Trust pillars and defense-in-depth layers. D isn't a compliance grouping.
 
 </KnowledgeCheck>
 
-### Question 7
+## Question 8
 
-Which type of encryption protects data during transmission?
+Your application runs on Azure services that are ISO/IEC 27001 certified. What does that mean for your own compliance?
 
-**A)** Encryption at rest
-**B)** Encryption in use
-**C)** Encryption in transit
-**D)** Encryption in storage
-
-<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
-
-**Explanation:** Encryption in transit protects data moving between systems.
-
-</KnowledgeCheck>
-
-### Question 8
-
-What is multi-factor authentication designed to provide?
-
-**A)** Faster login times
-**B)** Single sign-on capability
-**C)** Enhanced security through multiple verification methods
-**D)** Simplified password management
-
-<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/data-protection-principles/">
-
-**Explanation:** MFA enhances security by requiring multiple forms of verification.
-
-</KnowledgeCheck>
-
-### Question 9
-
-In RBAC, what are permissions typically assigned to?
-
-**A)** Individual users directly
-**B)** Roles that users are assigned to
-**C)** Applications and systems
-**D)** Network segments
+- A. Your application is automatically ISO/IEC 27001 certified.
+- B. You inherit the platform's controls for the in-scope services, but you're still responsible for your own compliance.
+- C. You no longer need to configure security.
+- D. Nothing; provider certifications don't apply to customers.
 
 <KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/compliance-frameworks/">
 
-**Explanation:** In RBAC, permissions are assigned to roles, and users are assigned to roles.
+Provider certifications cover the provider's side of the shared responsibility model, and you can use their audit reports as evidence. Microsoft states that you're wholly responsible for your own compliance.
+
+A and C overstate what a provider certification covers. D understates it; inherited controls and audit reports do help you.
 
 </KnowledgeCheck>
 
-### Question 10
+## Question 9
 
-What is the shared responsibility model in cloud security?
+Under GDPR, which role does Microsoft take when it processes personal data in its online services for you?
 
-**A)** All security is the provider's responsibility
-**B)** All security is the customer's responsibility
-**C)** Clear division of security responsibilities between provider and customer
-**D)** Security responsibilities are shared equally
+- A. Data controller
+- B. Data processor
+- C. Supervisory authority
+- D. Data subject
 
-<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
+<KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/compliance-frameworks/">
 
-**Explanation:** The shared responsibility model clearly divides security responsibilities.
+Microsoft acts as a data processor. You're the controller: you decide why and how personal data is processed.
+
+A is your role. C is a public authority that enforces GDPR. D is the person the data is about.
 
 </KnowledgeCheck>
 
----
+## Question 10
 
-## Scoring
+Which sign-in method uses a hardware device, needs no password, and resists phishing?
 
-- **8-10 correct**: Excellent understanding, proceed to Module 3
-- **6-7 correct**: Good understanding, review missed concepts
-- **Below 6**: Review Module 2 content before proceeding
+- A. Password with security questions
+- B. SMS one-time code
+- C. FIDO2 security key
+- D. Single sign-on
 
-## Next Steps
+<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/identity-access-basics/">
 
-1. ✅ Review any missed concepts
-2. ✅ Proceed to [Microsoft Azure Overview](/level-50/module-03-azure-intro/microsoft-azure-overview/)
-3. ✅ Continue with Module 3: Azure Fundamentals
+FIDO2 security keys are passwordless hardware authenticators. With no password to type, there's nothing for a phishing site to steal.
 
----
+A is password-based. B is a second factor used alongside a password, so it isn't passwordless. D lets you sign in once for many apps, but it's only as strong as that first sign-in.
 
-**Assessment Created:** November 2025
+</KnowledgeCheck>
+
+## Question 11
+
+A user signs in from a new country on an unmanaged laptop. Conditional Access requires MFA before granting access. Which Zero Trust principle does this apply most directly?
+
+- A. Verify explicitly
+- B. Assume breach
+- C. Defense in depth
+- D. Shared responsibility
+
+<KnowledgeCheck answer="A" reference="/level-50/module-02-security-compliance/identity-access-basics/">
+
+Conditional Access evaluates signals (location, device, risk) for each request and then decides. That's "verify explicitly" in practice.
+
+B is about limiting damage once an attacker is inside. C and D are security models, not Zero Trust principles.
+
+</KnowledgeCheck>
+
+## Question 12
+
+Your company deploys AI agents that read customer data on behalf of employees. Which Microsoft Entra product gives each agent its own governed identity with least-privilege access and an audit trail?
+
+- A. Microsoft Entra Domain Services
+- B. Microsoft Entra Verified ID
+- C. Microsoft Entra Agent ID
+- D. Microsoft Entra Internet Access
+
+<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/identity-access-basics/">
+
+Microsoft Entra Agent ID extends Entra identity, authorization, governance, and protection to AI agents.
+
+A provides managed domain services for older applications. B issues verifiable credentials to people. D secures access to internet resources.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [Describe security and compliance concepts (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/)
+- [Describe Azure identity, access, and security (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-azure-identity-access-security/)
+- [Zero Trust technology pillars overview](https://learn.microsoft.com/security/zero-trust/deploy/overview)
+- [Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings](https://learn.microsoft.com/azure/compliance/offerings/)
+- [General Data Protection Regulation](https://learn.microsoft.com/compliance/regulatory/gdpr)
+- [What is Microsoft Entra?](https://learn.microsoft.com/entra/fundamentals/what-is-entra)

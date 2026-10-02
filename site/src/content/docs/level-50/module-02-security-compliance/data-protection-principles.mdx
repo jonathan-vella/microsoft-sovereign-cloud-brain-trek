@@ -1,74 +1,113 @@
 ---
-title: "Data Protection Principles"
-description: "Core principles for protecting data in cloud environments"
+title: "Data protection principles"
+description: "Classify data by sensitivity, encrypt it at rest, in transit, and in use, manage keys, prevent data loss, and apply privacy principles such as data minimization."
+lastVerified: 2026-10-02
 sidebar:
   order: 2
 ---
 
 import DiagramContainer from "~/components/DiagramContainer.astro";
+import LearningObjectives from "~/components/LearningObjectives.astro";
 
-## Overview
+Data is the innermost layer of defense in depth and the target of most attacks. This page covers the basic ways to protect it: know what you have, encrypt it, control the keys, stop it from leaking, and handle personal data with care.
 
-Understanding how to properly classify, handle, and protect data is fundamental to cloud security and compliance.
+<LearningObjectives>
+- Explain why you classify data before you protect it.
+- Describe encryption at rest, in transit, and in use.
+- Explain symmetric and asymmetric encryption, and how hashing differs from encryption.
+- Describe what a key management service does and why keys live apart from data.
+- Describe what privacy laws require, and explain data residency and data sovereignty.
+</LearningObjectives>
 
-<DiagramContainer title="Data Classification Pyramid">
+## Classify data first
 
-![Data Classification Pyramid](/images/level-50/data-classification-pyramid.svg)
-_Figure: Data classification levels from Restricted (highest protection) to Public (basic controls)_
+You can't protect everything at the highest level, and you shouldn't try. **Data classification** sorts data by how much harm its exposure would cause, so each class gets the right controls.
+
+Many organizations use four or five levels. A common vendor-neutral scheme:
+
+| Level | Harm if disclosed | Examples | Typical controls |
+|---|---|---|---|
+| Public | None | Press releases, published prices | Integrity checks only |
+| Internal | Minor | Policies, internal procedures | Sign-in required |
+| Confidential | Serious | Financial results, HR records, contracts | Restricted access, encryption |
+| Restricted | Severe | Personal data, credentials, trade secrets | Strict access, encryption, monitoring, data loss prevention |
+
+<DiagramContainer title="Data classification levels">
+
+![Pyramid with four levels. Public at the base with basic controls, then internal, then confidential, and restricted at the top with the highest protection. Examples range from marketing materials at the base to personal data, credentials, and trade secrets at the top.](/images/level-50/data-classification-pyramid.svg)
 
 </DiagramContainer>
 
-## Data Classification Framework
+In Microsoft 365 and Azure, Microsoft Purview applies classification with **sensitivity labels**. A label can add encryption, access restrictions, and visual markings, and the protection travels with the file or email wherever it goes.
 
-### Classification Levels
+## Encryption
 
-- **Public**: No harm if disclosed (marketing materials)
-- **Internal**: For internal use only (policies, procedures)
-- **Confidential**: Could cause harm if disclosed (financial data)
-- **Restricted**: Severe damage if disclosed (personal data, secrets)
+**Encryption** makes data unreadable without a secret key. If an attacker steals encrypted data but not the key, the data is useless to them.
 
-### Data Handling Requirements
+### Two kinds of encryption
 
-Each classification level requires specific handling procedures, access controls, and protection measures.
+- **Symmetric** encryption uses the same key to encrypt and decrypt. It's fast, so it's used for large amounts of data such as disks and databases. The hard part is sharing the key safely.
+- **Asymmetric** encryption uses a key pair. Anyone can encrypt with the public key, and only the holder of the private key can decrypt. HTTPS uses it to set up secure connections. The private key can also create **digital signatures** that prove who sent the data and that it wasn't changed.
 
-## Data Protection Methods
+### Three states of data
 
-### Encryption
+| State | What it means | How it's protected |
+|---|---|---|
+| At rest | Stored on a disk, in a database, or in a storage account | Storage and database encryption |
+| In transit | Moving across a network, between services, or to a user | Transport Layer Security (TLS) for HTTPS, and VPN tunnels |
+| In use | Loaded into memory and being processed | Confidential computing, which processes data in a protected hardware environment that the operating system and hypervisor can't read |
 
-- **At Rest**: Protects stored data
-- **In Transit**: Protects data during transmission
-- **In Use**: Protects data during processing
+Encryption in use matters most in shared, multitenant environments, where other customers' workloads run on the same physical hardware. Level 200 covers confidential computing in Azure.
 
-### Access Controls
+### Hashing is not encryption
 
-- Role-based access control (RBAC)
-- Attribute-based access control (ABAC)
-- Just-in-time access for privileged operations
+**Hashing** turns any input into a fixed-length value. Unlike encryption, it's one-way: you can't get the original back from the hash. Systems store password hashes instead of passwords, and add a random **salt** to each password before hashing so that identical passwords give different hashes. Hashing also checks integrity: if a file's hash matches the published value, the file wasn't changed.
 
-### Data Loss Prevention (DLP)
+## Key management
 
-- Monitor data movement
-- Prevent unauthorized disclosure
-- Alert on policy violations
+Encryption is only as strong as the protection of its keys. Good key management means:
 
-## Privacy Principles
+- Store keys separately from the data they protect.
+- Keep high-value keys in a **hardware security module (HSM)**, a tamper-resistant device built to store keys.
+- Rotate keys on a schedule, so a leaked key exposes less data.
+- Limit who can use, view, and rotate keys, and audit their use.
 
-### Data Minimization
+In Azure, **Azure Key Vault** stores and controls access to secrets (such as connection strings and passwords), encryption keys, and certificates. Applications fetch secrets from Key Vault at runtime instead of keeping them in code. Who holds the keys is a central sovereignty question, and Level 100 returns to it.
 
-Collect and process only necessary data for specific purposes.
+## Data loss prevention
 
-### Purpose Limitation
+**Data loss prevention (DLP)** stops sensitive data from leaving where it should be. A DLP policy watches for sensitive information, such as card numbers or files with a Confidential label, and warns the user, blocks the action, or alerts an administrator. Microsoft Purview DLP works across Microsoft 365 services and endpoints.
 
-Use data only for stated, legitimate purposes.
+## Backups protect availability
 
-### Storage Limitation
+Encryption protects confidentiality, but it doesn't help if ransomware encrypts your files or someone deletes a database. Regular, tested backups stored away from the original data protect availability and integrity.
 
-Retain data only as long as necessary.
+## Privacy principles
 
-## Next Steps
+Privacy is about handling **personal data**: anything that relates to an identified or identifiable person, from names and email addresses to location history. Privacy laws, such as the EU General Data Protection Regulation (GDPR), generally require you to:
 
-Continue to [Compliance Frameworks](/level-50/module-02-security-compliance/compliance-frameworks/) to understand regulatory requirements.
+- Tell people what personal data you collect and how you use it.
+- Get consent before you collect certain categories of data.
+- Give people rights over their data, such as access, correction, and deletion.
+- Protect personal data against unauthorized access.
 
----
+Microsoft's GDPR accountability readiness checklists add privacy by design and by default. That includes **minimization**: collect, process, and keep only the personal data you need.
 
-**Last Updated:** November 2025
+## Data residency and data sovereignty
+
+Two terms come up in every sovereignty conversation:
+
+- **Data residency** is about where data is physically stored, and when it may be moved, processed, or accessed across borders.
+- **Data sovereignty** means data is subject to the laws of the country where it's collected, held, or processed. One record collected in one country, stored in a second, and processed in a third can fall under all three sets of laws.
+
+Data residency is a location. Data sovereignty is about which laws apply and who controls access. Level 100 builds on this distinction.
+
+## Sources
+
+- [Describe encryption and hashing (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/5-describe-encryption-hashing)
+- [Describe encryption and key management in Azure (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-azure-identity-access-security/9a-describe-encryption-key-management)
+- [Describe governance, risk, and compliance (GRC) concepts (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/6-describe-compliance-concepts)
+- [Where to start with Microsoft Purview](https://learn.microsoft.com/purview/purview-where-to-start)
+- [Learn about data loss prevention](https://learn.microsoft.com/purview/dlp-learn-about-dlp)
+- [Accountability readiness checklist for Microsoft 365 (GDPR)](https://learn.microsoft.com/compliance/regulatory/gdpr-arc-office365)
+- [Azure Key Vault overview](https://learn.microsoft.com/azure/key-vault/general/overview)

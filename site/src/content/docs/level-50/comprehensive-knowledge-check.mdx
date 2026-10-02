@@ -1,408 +1,370 @@
 ---
-title: "Level 50 Comprehensive Knowledge Check"
-description: "Final assessment covering all Level 50 prerequisite topics"
+title: "Level 50 comprehensive knowledge check"
+description: "Twenty scenario questions across all three Level 50 modules: cloud concepts, security and compliance, and Azure basics. Use it to confirm you're ready for Level 100."
+lastVerified: 2026-10-02
 sidebar:
   order: 4
 ---
 
 import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
 
-This comprehensive assessment covers all topics from Level 50: Essential Prerequisites. Test your understanding of cloud computing fundamentals, security principles, and Azure basics before proceeding to Level 100.
+This check covers all three Level 50 modules. Most questions describe a short scenario, so they test whether you can apply the ideas, not just recall them. Answer each one, then open the answer to see the reasoning and the page to review. If you get 16 or more right, you're ready for Level 100.
 
----
+## Cloud computing
 
-## Instructions
+### Question 1
 
-- **Passing Score:** 80% (16 out of 20 questions correct)
-- **Time Limit:** 45 minutes
-- **Topics Covered:** Cloud fundamentals, security basics, Azure overview
+A finance team asks why their cloud bill is classed as operational expenditure. What's the best answer?
 
----
-
-## Questions
-
-### Question 1: NIST Cloud Characteristics
-
-What are the five essential characteristics of cloud computing according to NIST?
-
-A) Scalability, Security, Speed, Simplicity, Savings
-B) On-demand self-service, Broad network access, Resource pooling, Rapid elasticity, Measured service
-C) IaaS, PaaS, SaaS, Public cloud, Private cloud
-D) Confidentiality, Integrity, Availability, Authentication, Authorization
+- A. The provider owns the hardware, so it can't be capital expenditure.
+- B. They pay for cloud services as they consume them, over time.
+- C. Cloud services are always cheaper than servers.
+- D. Operational expenditure is required by cloud contracts.
 
 <KnowledgeCheck answer="B" reference="/level-50/module-01-cloud-computing/cloud-computing-primer/">
 
-**Explanation:** These are the five essential characteristics defined by NIST that distinguish cloud computing from traditional IT services: On-demand self-service, Broad network access, Resource pooling, Rapid elasticity, and Measured service.
+Cloud computing uses a consumption-based model, so spending is ongoing and tied to use. That's operational expenditure.
+
+A gives a related fact but not the reason for the classification. C is false; cost depends on how you run workloads. D isn't true.
 
 </KnowledgeCheck>
 
----
+### Question 2
 
-### Question 2: Cloud Service Models
+Which NIST characteristic explains why your VM might run on the same physical server as another customer's VM?
 
-In which cloud service model does the customer have the most control over the underlying infrastructure?
+- A. On-demand self-service
+- B. Broad network access
+- C. Resource pooling
+- D. Measured service
 
-A) Software as a Service (SaaS)
-B) Platform as a Service (PaaS)
-C) Infrastructure as a Service (IaaS)
-D) Functions as a Service (FaaS)
+<KnowledgeCheck answer="C" reference="/level-50/module-01-cloud-computing/cloud-computing-primer/">
+
+Resource pooling means the provider serves many tenants from one shared pool of hardware. It's also why data location and isolation become design questions.
+
+A is about provisioning without help, B is about reaching services over the network, and D is about metering use.
+
+</KnowledgeCheck>
+
+### Question 3
+
+A company moves its email to Microsoft 365. Under the shared responsibility model, which of these is still the company's job?
+
+- A. Patching the mail server operating system
+- B. Managing the physical datacenter
+- C. Managing user accounts and who can access mailboxes
+- D. Maintaining the physical network
 
 <KnowledgeCheck answer="C" reference="/level-50/module-01-cloud-computing/cloud-service-models/">
 
-**Explanation:** IaaS provides the most control as customers manage everything from the operating system up, while the provider manages only the underlying infrastructure.
+Microsoft 365 is SaaS. The customer always keeps responsibility for its data, identities, and access, whatever the service model.
+
+A, B, and D belong to the provider in SaaS.
 
 </KnowledgeCheck>
 
----
+### Question 4
 
-### Question 3: CIA Triad
+A hospital keeps patient records in its own datacenter and runs its public website in Azure, with the two connected. Which deployment model is this?
 
-What does the "C" in the CIA security triad represent?
-
-A) Control
-B) Compliance
-C) Confidentiality
-D) Cybersecurity
-
-<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
-
-**Explanation:** The CIA triad consists of Confidentiality, Integrity, and Availability - the three fundamental principles of information security.
-
-</KnowledgeCheck>
-
----
-
-### Question 4: Authentication Factors
-
-Which authentication factor category includes fingerprints and facial recognition?
-
-A) Knowledge factors (something you know)
-B) Possession factors (something you have)
-C) Inherence factors (something you are)
-D) Location factors (somewhere you are)
-
-<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/identity-access-basics/">
-
-**Explanation:** Biometric factors like fingerprints and facial recognition are inherence factors because they're based on physical characteristics unique to the individual.
-
-</KnowledgeCheck>
-
----
-
-### Question 5: Hybrid Cloud Benefits
-
-What is the primary benefit of using a hybrid cloud deployment model?
-
-A) Lowest possible costs
-B) Simplest management
-C) Maximum security
-D) Balance of control and cloud benefits
-
-<KnowledgeCheck answer="D" reference="/level-50/module-01-cloud-computing/cloud-deployment-models/">
-
-**Explanation:** Hybrid cloud allows organizations to keep sensitive data on-premises while leveraging cloud benefits for other workloads, providing a balance of control and cloud advantages.
-
-</KnowledgeCheck>
-
----
-
-### Question 6: Azure Identity Services
-
-Which Azure service provides identity and access management capabilities?
-
-A) Azure Security Center
-B) Microsoft Entra ID
-C) Azure Key Vault
-D) Azure Policy
-
-<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/microsoft-azure-overview/">
-
-**Explanation:** Microsoft Entra ID (now Microsoft Entra ID) is Microsoft's cloud-based identity and access management service.
-
-</KnowledgeCheck>
-
----
-
-### Question 7: Defense in Depth
-
-What does "defense in depth" mean in cybersecurity?
-
-A) Having the strongest possible perimeter security
-B) Using multiple layers of security controls
-C) Focusing only on the most critical vulnerabilities
-D) Implementing security controls deep in the network
-
-<KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
-
-**Explanation:** Defense in depth uses multiple security layers so that if one fails, others continue to provide protection. This layered approach provides redundancy in security controls.
-
-</KnowledgeCheck>
-
----
-
-### Question 8: Healthcare Compliance
-
-Which compliance framework is specifically designed for healthcare data protection in the United States?
-
-A) GDPR
-B) SOC 2
-C) HIPAA
-D) PCI DSS
-
-<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/compliance-frameworks/">
-
-**Explanation:** The Health Insurance Portability and Accountability Act (HIPAA) specifically protects healthcare data in the United States.
-
-</KnowledgeCheck>
-
----
-
-### Question 9: CapEx vs OpEx
-
-What is the main difference between CapEx and OpEx in cloud computing?
-
-A) CapEx is cheaper than OpEx
-B) CapEx requires large upfront investments, OpEx uses pay-as-you-consume
-C) CapEx is only for small businesses, OpEx is for enterprises
-D) There is no difference between them
-
-<KnowledgeCheck answer="B" reference="/level-50/module-01-cloud-computing/cloud-computing-primer/">
-
-**Explanation:** This represents the fundamental shift from capital expenditure (large upfront investments in hardware) to operational expenditure (pay-as-you-consume) models in cloud computing.
-
-</KnowledgeCheck>
-
----
-
-### Question 10: Azure Storage
-
-Which Azure storage service is best for storing unstructured data like images and videos?
-
-A) Azure Files
-B) Azure Disk Storage
-C) Azure Blob Storage
-D) Azure Table Storage
-
-<KnowledgeCheck answer="C" reference="/level-50/module-03-azure-intro/azure-service-categories/">
-
-**Explanation:** Azure Blob Storage is specifically designed for unstructured data like images, videos, documents, and backups.
-
-</KnowledgeCheck>
-
----
-
-### Question 11: Least Privilege
-
-What is the principle of least privilege?
-
-A) Giving users the maximum access they might ever need
-B) Providing users only the minimum permissions necessary for their role
-C) Allowing all users equal access to all resources
-D) Restricting access only to highly sensitive data
-
-<KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
-
-**Explanation:** Least privilege reduces security risk by limiting access to only what's absolutely necessary for users to perform their job functions.
-
-</KnowledgeCheck>
-
----
-
-### Question 12: Multi-Cloud Strategy
-
-In a multi-cloud strategy, what is the primary advantage?
-
-A) Reduced complexity
-B) Lower costs
-C) Avoiding vendor lock-in
-D) Better performance
+- A. Public cloud
+- B. Private cloud
+- C. Hybrid cloud
+- D. Multicloud
 
 <KnowledgeCheck answer="C" reference="/level-50/module-01-cloud-computing/cloud-deployment-models/">
 
-**Explanation:** Multi-cloud primarily provides independence from any single vendor and negotiating leverage, helping organizations avoid vendor lock-in.
+Hybrid cloud connects a private environment with a public cloud so they work together.
+
+A and B describe only one side. D means two or more public cloud providers.
 
 </KnowledgeCheck>
 
----
+### Question 5
 
-### Question 13: Disaster Recovery
+During a sales event, a web app goes from 3 VMs to 12 VMs and back to 3 afterward. Which concept does this show?
 
-What does RTO stand for in disaster recovery planning?
+- A. Vertical scaling
+- B. Horizontal scaling (scale out and in)
+- C. High availability
+- D. Region pairing
 
-A) Recovery Time Objective
-B) Risk Treatment Option
-C) Real-Time Operations
-D) Resource Tracking Output
+<KnowledgeCheck answer="B" reference="/level-50/module-01-cloud-computing/cloud-benefits/">
 
-<KnowledgeCheck answer="A" reference="/level-50/module-02-security-compliance/data-protection-principles/">
+Adding and removing instances is horizontal scaling.
 
-**Explanation:** RTO (Recovery Time Objective) defines how quickly systems must be restored after a disaster. It's a key metric in disaster recovery planning alongside RPO (Recovery Point Objective).
-
-</KnowledgeCheck>
-
----
-
-### Question 14: Data Sovereignty
-
-Which Azure region consideration is most important for data sovereignty requirements?
-
-A) Performance and latency
-B) Data residency and location
-C) Cost optimization
-D) Service availability
-
-<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-global-infrastructure/">
-
-**Explanation:** Data sovereignty requires understanding and controlling where data is stored and processed. Data residency and location are critical for meeting regulatory and compliance requirements.
+A changes the size of one resource. C is about staying available despite failures. D is about pairs of regions for recovery.
 
 </KnowledgeCheck>
 
----
+## Security and compliance
 
-### Question 15: Shared Responsibility Model
+### Question 6
 
-What is the shared responsibility model in cloud computing?
+An attacker floods a public website with traffic until it stops responding. Which property of the CIA triad is under attack?
 
-A) Customers and providers share all responsibilities equally
-B) Clear division of security responsibilities between provider and customer
-C) Only the cloud provider is responsible for security
-D) Only the customer is responsible for security
-
-<KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
-
-**Explanation:** The shared responsibility model clearly defines what the cloud provider secures (physical infrastructure, hypervisor) vs. what the customer must secure (data, applications, identity).
-
-</KnowledgeCheck>
-
----
-
-### Question 16: Data Classification
-
-Which type of data classification would apply to publicly available marketing materials?
-
-A) Restricted
-B) Confidential
-C) Internal
-D) Public
-
-<KnowledgeCheck answer="D" reference="/level-50/module-02-security-compliance/data-protection-principles/">
-
-**Explanation:** Public data has no restrictions and causes no harm if disclosed widely. Marketing materials intended for external audiences are classified as Public.
-
-</KnowledgeCheck>
-
----
-
-### Question 17: Encryption in Transit
-
-What is encryption in transit designed to protect?
-
-A) Data stored in databases
-B) Data moving between systems
-C) Data in backup files
-D) Data in user devices
-
-<KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
-
-**Explanation:** Encryption in transit protects data during transmission between different systems or locations, typically using protocols like TLS/SSL.
-
-</KnowledgeCheck>
-
----
-
-### Question 18: Availability Zones
-
-Azure availability zones provide which primary benefit?
-
-A) Cost reduction
-B) High availability and fault tolerance
-C) Improved performance
-D) Simplified management
-
-<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-global-infrastructure/">
-
-**Explanation:** Availability zones provide redundancy across physically separate data centers within a region, enabling high availability and fault tolerance for critical workloads.
-
-</KnowledgeCheck>
-
----
-
-### Question 19: Network Segmentation
-
-What is the main purpose of network segmentation?
-
-A) Improve network performance
-B) Reduce network costs
-C) Isolate resources and limit attack spread
-D) Simplify network management
+- A. Confidentiality
+- B. Integrity
+- C. Availability
+- D. Authentication
 
 <KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
 
-**Explanation:** Network segmentation limits lateral movement of attackers and contains potential breaches by isolating resources into separate network segments.
+A distributed denial-of-service attack takes a system offline, so it targets availability.
+
+A is about who can read data. B is about data being changed. D isn't part of the CIA triad.
 
 </KnowledgeCheck>
 
----
+### Question 7
 
-### Question 20: Azure Portal
+In the defense-in-depth model, which layer uses DDoS protection and firewalls at the network edge?
 
-Which Azure management tool provides a web-based graphical interface?
+- A. Physical security
+- B. Perimeter
+- C. Compute
+- D. Data
 
-A) Azure CLI
-B) Azure PowerShell
-C) Azure Portal
-D) Azure Resource Manager
+<KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
 
-<KnowledgeCheck answer="C" reference="/level-50/module-03-azure-intro/microsoft-azure-overview/">
+The perimeter layer filters large-scale attacks with DDoS protection and inspects traffic with perimeter firewalls.
 
-**Explanation:** The Azure Portal provides the primary web-based graphical management interface for Azure resources, accessible through any modern web browser.
+A protects buildings and hardware. C protects VMs and containers. D protects the data itself.
 
 </KnowledgeCheck>
 
----
+### Question 8
 
-## Scoring Guide
+A security architect says, "We design as if an attacker is already inside, so we segment access and monitor everything." Which Zero Trust principle is that?
 
-| Score | Rating | Recommendation |
-|-------|--------|----------------|
-| 18-20 (90-100%) | Outstanding | Ready for Level 100, consider advanced tracks |
-| 16-17 (80-85%) | Proficient | Ready for Level 100, review missed topics |
-| 14-15 (70-75%) | Developing | Review key concepts before proceeding |
-| Below 14 (&lt;70%) | Needs Review | Complete all Level 50 modules, retake assessment |
+- A. Verify explicitly
+- B. Use least privilege access
+- C. Assume breach
+- D. Defense in depth
 
----
+<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
 
-## Remediation Resources
+Assume breach means limiting the damage an attacker can do once inside, and detecting them quickly.
 
-### For Cloud Computing Concepts
+A is about checking every request. B is about giving minimal access. D is a separate layered model, not a Zero Trust principle.
 
-- Review [Cloud Computing Primer](/level-50/module-01-cloud-computing/cloud-computing-primer/)
-- Study [Cloud Service Models](/level-50/module-01-cloud-computing/cloud-service-models/)
-- Read [Cloud Deployment Models](/level-50/module-01-cloud-computing/cloud-deployment-models/)
+</KnowledgeCheck>
 
-### For Security and Compliance
+### Question 9
 
-- Review [Security & Compliance Basics](/level-50/module-02-security-compliance/security-compliance-basics/)
-- Study compliance framework requirements
-- Practice security scenario analysis
+An older slide lists six Zero Trust pillars. Which pillar does Microsoft's current guidance add as the seventh?
 
-### For Azure Fundamentals
+- A. Identities
+- B. Data
+- C. SecOps
+- D. Compliance
 
-- Explore [Microsoft Azure Overview](/level-50/module-03-azure-intro/microsoft-azure-overview/)
-- Complete [Azure Fundamentals learning path](https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/)
-- Practice with Azure Portal
+<KnowledgeCheck answer="C" reference="/level-50/module-02-security-compliance/security-compliance-basics/">
 
----
+The seven pillars are Identities, Endpoints, Data, Apps, Infrastructure, Network, and SecOps. SecOps collects signals from the others to detect and respond.
 
-## Completion Criteria
+A and B were already among the six. D isn't a Zero Trust pillar.
 
-✅ **Module 1: Cloud Computing Fundamentals** - Passed with 80%+
-✅ **Module 2: Security & Compliance Basics** - Completed all topics
-✅ **Module 3: Microsoft Azure Introduction** - Reviewed core concepts
-✅ **Comprehensive Assessment** - Scored 80%+ (16/20 questions)
+</KnowledgeCheck>
 
-**Next Step:** [Proceed to Level 100: Foundation →](/level-100/)
+### Question 10
 
----
+Which statement best describes data sovereignty?
 
-**Assessment Created:** November 2025
+- A. Data is stored in a specific physical location.
+- B. Data is subject to the laws of the country where it's collected, held, or processed.
+- C. Data is encrypted at rest.
+- D. Data is backed up to a second region.
+
+<KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/data-protection-principles/">
+
+Data sovereignty is about which laws apply to data. Data residency, in A, is about where it's stored. The two are related but not the same.
+
+C and D are protection measures, not definitions of sovereignty.
+
+</KnowledgeCheck>
+
+### Question 11
+
+A bank needs to keep its encryption keys in tamper-resistant hardware, separate from its data. What should it use?
+
+- A. A hardware security module, for example through Azure Key Vault
+- B. A configuration file next to the application
+- C. A hash of the key stored in the database
+- D. A shared password in a spreadsheet
+
+<KnowledgeCheck answer="A" reference="/level-50/module-02-security-compliance/data-protection-principles/">
+
+Hardware security modules are built to store and protect keys. Azure Key Vault centralizes keys, secrets, and certificates and controls access to them.
+
+B and D keep keys where an attacker can find them. C doesn't work; you can't recover a key from its hash.
+
+</KnowledgeCheck>
+
+### Question 12
+
+Microsoft groups its compliance offerings into four segments. In which segment is Germany's C5?
+
+- A. Globally applicable
+- B. US government
+- C. Industry specific
+- D. Region or country specific
+
+<KnowledgeCheck answer="D" reference="/level-50/module-02-security-compliance/compliance-frameworks/">
+
+C5 is a German national scheme, so it sits in the region or country specific segment.
+
+A covers offerings such as ISO/IEC 27001. B covers programs such as FedRAMP. C covers offerings such as PCI DSS.
+
+</KnowledgeCheck>
+
+### Question 13
+
+What happened on November 18, 2025, under the EU's Digital Operational Resilience Act (DORA)?
+
+- A. DORA was first proposed.
+- B. The European Supervisory Authorities published the list of critical ICT third-party providers, including Microsoft Ireland Operations Limited.
+- C. DORA was repealed.
+- D. GDPR replaced DORA.
+
+<KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/compliance-frameworks/">
+
+On November 18, 2025, the authorities published the list of critical ICT third-party providers. Microsoft Ireland Operations Limited is on it and subject to their direct oversight. DORA itself has applied since January 17, 2025.
+
+A, C, and D didn't happen.
+
+</KnowledgeCheck>
+
+### Question 14
+
+An organization deploys AI agents that act on employee data. Which Microsoft Entra product is built to give those agents governed identities?
+
+- A. Microsoft Entra ID Protection
+- B. Microsoft Entra Agent ID
+- C. Microsoft Entra Domain Services
+- D. Microsoft Entra External ID
+
+<KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/identity-access-basics/">
+
+Microsoft Entra Agent ID gives each AI agent an identity, enforces least-privilege access, and keeps an audit trail.
+
+A detects identity risks for users. C provides managed domain services for older apps. D handles partners, guests, and customers.
+
+</KnowledgeCheck>
+
+### Question 15
+
+You assign the Reader role to a group at the subscription scope. What can the group's members do?
+
+- A. Nothing until you also assign Reader on each resource group.
+- B. View every resource group and resource in that subscription.
+- C. Change every resource in the subscription.
+- D. Read the data inside every application.
+
+<KnowledgeCheck answer="B" reference="/level-50/module-02-security-compliance/identity-access-basics/">
+
+Azure RBAC permissions inherit downward, so Reader on a subscription applies to everything in it.
+
+A ignores inheritance. C would need a role such as Contributor. D is wrong because Azure RBAC controls Azure resources, not access to data inside an application.
+
+</KnowledgeCheck>
+
+## Microsoft Azure
+
+### Question 16
+
+A colleague says Azure has "exactly 60 regions." What's the most accurate response?
+
+- A. That's right; Azure has had 60 regions since launch.
+- B. The Azure regions list on Microsoft Learn showed 57 named regions when this course was checked. Other Microsoft pages round to "more than 60." The number changes, so check the list.
+- C. Azure has 200 regions.
+- D. Azure doesn't publish its regions.
+
+<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-global-infrastructure/">
+
+Use 57 as the count from the regions list, and "more than 60" only as a rounded figure. Both change as regions open.
+
+A, C, and D are wrong. Microsoft publishes the full regions list on Microsoft Learn.
+
+</KnowledgeCheck>
+
+### Question 17
+
+How many availability zones do most zone-enabled Azure regions have?
+
+- A. One
+- B. Two
+- C. Three
+- D. Ten
+
+<KnowledgeCheck answer="C" reference="/level-50/module-03-azure-intro/azure-global-infrastructure/">
+
+Every zone-enabled region has at least three availability zones, and most have exactly three. Not every region has zones.
+
+A and B are below the minimum. D doesn't match any region.
+
+</KnowledgeCheck>
+
+### Question 18
+
+Customer records must not leave one country, and the Azure region in that country has no region pair. Which storage redundancy option fits best?
+
+- A. Geo-redundant storage (GRS)
+- B. Zone-redundant storage (ZRS)
+- C. Read-access geo-redundant storage (RA-GRS)
+- D. No redundancy
+
+<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-service-categories/">
+
+ZRS keeps three copies across the region's availability zones and doesn't copy data to a second region. Microsoft recommends it when replication must stay in one country or region.
+
+A and C copy data to a secondary region. D isn't an option; Azure Storage always keeps at least three copies.
+
+</KnowledgeCheck>
+
+### Question 19
+
+A team wants to deploy the same set of Azure resources for development, test, and production, the same way every time. What should they use?
+
+- A. The Azure portal, clicking through each environment
+- B. Bicep files stored in source control
+- C. Azure Copilot only
+- D. Azure Cloud Shell history
+
+<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-management-tools/">
+
+Bicep is declarative infrastructure as code. The same file deploys the same environment every time.
+
+A is manual and easy to get wrong. C can help draft code but doesn't replace a repeatable deployment file. D isn't a deployment method.
+
+</KnowledgeCheck>
+
+### Question 20
+
+A defense customer runs in Azure Government and asks for Azure Copilot. What do you tell them?
+
+- A. It's available in all Azure clouds.
+- B. Azure Copilot isn't available in Azure Government or Azure operated by 21Vianet.
+- C. It's available only through the Azure CLI there.
+- D. It requires a separate Azure Government license.
+
+<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-management-tools/">
+
+Microsoft Learn states that Azure Copilot isn't available in the national clouds. Checking which features exist in which cloud is a routine step in sovereign designs.
+
+A is false. C and D describe options that don't exist.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [Introduction to Cloud Infrastructure: Describe cloud concepts (learning path)](https://learn.microsoft.com/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/)
+- [Introduction to security, compliance, and identity concepts (learning path)](https://learn.microsoft.com/training/paths/describe-concepts-of-security-compliance-identity/)
+- [Introduction to Cloud Infrastructure: Describe Azure architecture and services (learning path)](https://learn.microsoft.com/training/paths/azure-fundamentals-describe-azure-architecture-services/)
+- [Zero Trust technology pillars overview](https://learn.microsoft.com/security/zero-trust/deploy/overview)
+- [What is Microsoft Entra?](https://learn.microsoft.com/entra/fundamentals/what-is-entra)
+- [Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings](https://learn.microsoft.com/azure/compliance/offerings/)
+- [What is DORA?](https://learn.microsoft.com/compliance/dora/dora-what-is-dora)
+- [List of Azure regions](https://learn.microsoft.com/azure/reliability/regions-list)
+- [What are availability zones?](https://learn.microsoft.com/azure/reliability/availability-zones-overview)
+- [What is Azure Copilot?](https://learn.microsoft.com/azure/copilot/overview)

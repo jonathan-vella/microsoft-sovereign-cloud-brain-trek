@@ -1,238 +1,109 @@
 ---
-title: "Cloud Deployment Models"
-description: "Understanding public, private, hybrid, and multi-cloud deployment strategies"
+title: "Cloud deployment models"
+description: "Public, private, hybrid, and multicloud deployments compared, with the trade-offs in control, cost, and compliance, and the Azure tools that span them."
+lastVerified: 2026-10-02
 sidebar:
   order: 3
 ---
 
 import DiagramContainer from "~/components/DiagramContainer.astro";
+import LearningObjectives from "~/components/LearningObjectives.astro";
 
----
+A service model says how much of the stack the provider runs. A **deployment model** says where the resources run and who can use the infrastructure. Microsoft Learn names three main models (public, private, and hybrid) and a fourth, multicloud, that more organizations end up with.
 
-## Overview
+<LearningObjectives>
+- Describe public, private, hybrid, and multicloud deployments.
+- Compare them on control, cost, and responsibility.
+- Name the Azure tools that manage resources across more than one environment.
+</LearningObjectives>
 
-Cloud deployment models define where cloud infrastructure is located, who has access to it, and how it's managed. Understanding these models is essential for designing solutions that meet sovereignty, security, and compliance requirements.
+<DiagramContainer title="Four deployment models">
 
-<DiagramContainer title="Cloud Deployment Architectures">
-
-![Cloud Deployment Models showing Public, Private, Hybrid, and Multi-cloud architectures](/images/level-50/cloud-deployment-models.svg)
-_Figure 1: Cloud deployment model architectures and their relationships_
-
-</DiagramContainer>
-
-<DiagramContainer title="Cloud Deployment Models Overview">
-
-![Cloud Deployment Models Overview](/images/level-50/cloud-deployment-models-overview.svg)
-_Figure 2: Four primary cloud deployment models and their characteristics_
+![Four cards. Public cloud: shared infrastructure, internet access, pay per use. Private cloud: dedicated infrastructure, on-premises or hosted, full control. Hybrid cloud: public plus private, unified management, workload flexibility. Multicloud: multiple providers, choose services per provider, avoid lock-in.](/images/level-50/cloud-deployment-models-overview.svg)
 
 </DiagramContainer>
 
-## Public Cloud
+## Public cloud
 
-### Definition
+A third-party cloud provider builds, controls, and maintains a public cloud. Anyone who buys the service can use it. Many customers share the same physical infrastructure, and the provider keeps their resources isolated.
 
-Services delivered over the public internet and shared across organizations. Resources owned and operated by third-party providers (Microsoft Azure, AWS, Google Cloud).
+- You have no capital expenditure to scale up.
+- You can provision and remove applications quickly.
+- You pay only for what you use.
+- You don't have complete control over the hardware, its location within a region, or the people who operate it.
 
-### Key Characteristics
+## Private cloud
 
-- **Multi-tenant architecture** with shared infrastructure
-- **Internet-based access** with global availability
-- **Provider-managed** infrastructure and operations
-- **Pay-per-use** pricing model
+A private cloud is used by a single organization. It grew out of the traditional datacenter: IT services are delivered the cloud way, with self-service and automation, but the resources belong to one organization. A private cloud can run in your own datacenter or in a dedicated offsite datacenter, sometimes operated by a third party.
 
-### Advantages
+- You control the resources and their security.
+- Your data isn't stored on hardware shared with other tenants.
+- You buy the hardware up front and pay to maintain and update it.
 
-- No upfront capital investment
-- Virtually unlimited scalability
-- 99.9%+ uptime SLAs
-- Access to latest technologies
+## Hybrid cloud
 
-### Challenges
+A hybrid cloud connects public and private clouds so they work as one environment. Two common reasons:
 
-- Limited control over data location
-- Compliance complexity for regulated industries
-- Internet connectivity dependency
+- Burst capacity. The private cloud handles normal load and adds public cloud resources for temporary peaks.
+- Workload placement. You decide which workloads stay private (for example, because of a legal requirement) and which go to the public cloud.
 
-### Ideal Use Cases
+Hybrid gives you the most flexibility. You also manage more: two environments, the network between them, and a consistent security model across both.
 
-Web applications, development/testing, big data analytics, backup/DR, collaboration tools
+## Multicloud
 
-## Private Cloud
+In a multicloud environment you use two or more public cloud providers. You might pick different services from different providers, or you might be partway through moving from one provider to another. Either way, you manage resources and security in each provider's environment.
 
-### Definition
+## Compare the models
 
-Dedicated infrastructure for a single organization, located on-premises or hosted by provider.
+| | Public | Private | Hybrid | Multicloud |
+|---|---|---|---|---|
+| Who uses the infrastructure | Many customers | One organization | Mix of both | Many customers, across providers |
+| Up-front hardware cost | None | High | Some | None |
+| Control over hardware and location | Lowest | Highest | You choose per workload | Lowest, per provider |
+| Who maintains hardware | Provider | You or your hosting partner | Both | Each provider |
+| Management effort | Lowest | High | Higher | Higher |
 
-### Key Characteristics
+## Manage more than one environment
 
-- **Single-tenant** with dedicated resources
-- **Enhanced security** with isolated environment
-- **Customizable** to specific requirements
-- **Performance predictability** with no "noisy neighbors"
+Two Azure services from the Microsoft Learn fundamentals path work across deployment models:
 
-### Types
+- **Azure Arc** projects resources outside Azure into Azure Resource Manager. You can manage servers, virtual machines, Kubernetes clusters, and databases in your datacenter, at the edge, or in another cloud from the Azure portal, and govern them with the same tools, such as Azure Policy.
+- **Azure VMware Solution** runs your VMware workloads in Azure, so an organization with a VMware private cloud can move to public or hybrid cloud without rebuilding its VMs first.
 
-**On-Premises:** Organization's data center, full control
-**Hosted:** Provider-managed, dedicated hardware
-**Virtual Private Cloud (VPC):** Isolated section within public cloud
+Azure Arc comes back many times in this course. Level 100 has a module about it.
 
-### Advantages
+```mermaid
+graph LR
+  subgraph Public[Public cloud]
+    A[Azure resources]
+  end
+  subgraph Private[Your datacenter]
+    B[Servers and Kubernetes]
+  end
+  subgraph Other[Another cloud]
+    C[VMs and clusters]
+  end
+  P[Azure portal and Azure Policy] --> A
+  P -- Azure Arc --> B
+  P -- Azure Arc --> C
+```
 
-- Complete security and compliance control
-- Predictable performance
-- Full customization capabilities
+## Choose a deployment model
 
-### Challenges
+Start with the requirements that rule options out, then compare cost and effort:
 
-- Higher capital investment
-- Limited scalability
-- Full management responsibility
+1. Regulation and data sensitivity. Some data must stay in a country, or must not run on shared hardware. Those rules can exclude public cloud regions or require a private cloud.
+2. Connectivity. A site with an unreliable or no internet link needs local compute, which means a private or hybrid design.
+3. Skills and operating effort. Every environment you add needs people to run and secure it.
+4. Cost profile. Steady, predictable workloads and variable, spiky workloads favor different models.
 
-### Ideal Use Cases
+Sovereignty requirements often lead to hybrid designs. Microsoft Sovereign Cloud offers Sovereign Public Cloud in Microsoft datacenters within defined boundaries such as the EU Data Boundary, and Sovereign Private Cloud on Azure Local in your own datacenter ([Microsoft Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/microsoft-sovereign-cloud)). Level 100 explains both.
 
-Regulated industries (healthcare, finance), sensitive data, mission-critical applications
+## Sources
 
-**Examples:** Azure Local (connected and disconnected modes), VMware Private Cloud, on-premises Hyper-V
-
-## Hybrid Cloud
-
-### Definition
-
-Combines public and private clouds, enabling data and application sharing while maintaining distinct boundaries.
-
-### Key Characteristics
-
-- **Multi-environment** integration with unified management
-- **Workload portability** between environments
-- **Flexible resource allocation** for optimal placement
-
-### Common Patterns
-
-**Cloud Bursting:** Scale to public cloud during peak demand
-**Data Locality:** Keep sensitive data on-premises, use cloud for processing
-**Disaster Recovery:** Primary on-premises, backup/DR in cloud
-
-### Advantages
-
-- Workload flexibility and gradual migration
-- Cost optimization (base in private, burst to public)
-- Balance compliance with innovation
-- Access to latest cloud services
-
-### Challenges
-
-- Multi-environment complexity
-- Network connectivity requirements
-- Cross-platform expertise needed
-
-### Ideal Use Cases
-
-Gradual cloud migration, variable workloads, compliance with innovation needs, DR/business continuity
-
-**Technologies:** Azure Arc, Azure Local (connected), AWS Outposts, Google Anthos, VMware Cloud Foundation
-
-## Multi-Cloud
-
-### Definition
-
-Using services from multiple cloud providers simultaneously to avoid vendor lock-in or leverage best-of-breed capabilities.
-
-### Key Characteristics
-
-- **Multiple providers** with diverse technology stacks
-- **Best-of-breed** service selection
-- **Distributed architecture** across clouds
-
-### Common Strategies
-
-**Diversified Portfolio:** Different apps on different clouds
-**Active-Active:** Same apps on multiple clouds for redundancy
-**Specialized Services:** Best capabilities from each provider
-
-### Advantages
-
-- Avoid vendor lock-in
-- Increased resilience and redundancy
-- Optimize service selection per use case
-
-### Challenges
-
-- Management complexity across platforms
-- Multi-platform expertise required
-- Integration and data transfer complexity
-- Multiple billing relationships
-
-### Ideal Use Cases
-
-Vendor independence strategy, global enterprises, high-availability needs, specialized service requirements
-
-## Deployment Model Comparison
-
-| Aspect | Public Cloud | Private Cloud | Hybrid Cloud | Multi-Cloud |
-|--------|--------------|---------------|--------------|-------------|
-| **Cost** | Low | High | Medium | Variable |
-| **Control** | Low | High | Medium | Medium |
-| **Scalability** | High | Limited | High | High |
-| **Security** | Shared | Dedicated | Mixed | Variable |
-| **Compliance** | Standard | Custom | Flexible | Complex |
-| **Management** | Simple | Complex | Medium | Complex |
-
-## Decision Framework
-
-### Choosing the Right Model
-
-**Public Cloud:** Cost optimization, standard compliance, rapid scaling, limited IT resources
-**Private Cloud:** Data sovereignty, regulated industry, predictable workloads, custom security
-**Hybrid Cloud:** Gradual migration, variable workloads, data locality + cloud benefits
-**Multi-Cloud:** Vendor independence, best-of-breed services, high availability
-
-### Key Assessment Areas
-
-**Regulatory:** Data residency, compliance frameworks, data sensitivity
-**Technical:** Performance needs, workload predictability, integration requirements
-**Business:** Risk tolerance, cost priorities, vendor independence
-**Organizational:** IT expertise, scaling speed, complexity tolerance
-
-## Real-World Examples
-
-**Financial Services (Hybrid):** Core banking in private cloud, web/analytics in public cloud
-**Healthcare (Private + SaaS):** Patient records private, collaboration tools SaaS
-**Global Retailer (Multi-Cloud):** AWS for e-commerce, Azure for AI, Google for data warehouse
-**Startup (Public):** Single provider, maximize SaaS/PaaS for rapid scaling
-
-## Migration Strategies
-
-**Cloud-Native:** Build new apps in cloud directly
-**Lift-and-Shift:** Move existing apps with minimal changes
-**Modernization:** Refactor for cloud-native architectures
-**Hybrid-First:** Keep critical systems on-premises, gradual migration
-
-## Summary
-
-Cloud deployment models provide different approaches to leveraging cloud benefits while meeting specific requirements:
-
-- **Public Cloud** offers maximum cost efficiency and scalability
-- **Private Cloud** provides maximum control and customization
-- **Hybrid Cloud** balances control with cloud benefits
-- **Multi-Cloud** maximizes choice and reduces vendor dependence
-
-The optimal approach depends on your specific requirements for cost, control, compliance, and complexity tolerance.
-
-## Next Steps
-
-1. ✅ Review deployment model characteristics and trade-offs
-2. ✅ Assess which models align with your organization's needs
-3. ✅ Continue to [Cloud Benefits and Considerations](/level-50/module-01-cloud-computing/cloud-benefits/)
-4. ✅ Complete the [Knowledge Check](/level-50/module-01-cloud-computing/cloud-computing-knowledge-check/) after all Module 1 content
-
----
-
-## Additional Resources
-
-- [Azure Hybrid and Multi-Cloud](https://azure.microsoft.com/en-us/solutions/hybrid-cloud-app/)
-- [AWS Hybrid Cloud](https://aws.amazon.com/hybrid/)
-- [Google Cloud Hybrid and Multi-Cloud](https://cloud.google.com/solutions/hybrid-and-multi-cloud)
-
----
-
-**Last Updated:** November 2025
+- [Define cloud models (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-cloud-compute/5-define-cloud-models)
+- [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/overview)
+- [What is Azure VMware Solution?](https://learn.microsoft.com/azure/azure-vmware/introduction)
+- [What is Microsoft Sovereign Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/microsoft-sovereign-cloud)
+- [Sovereign Public Cloud overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-public-cloud)
+- [Sovereign Private Cloud overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud)

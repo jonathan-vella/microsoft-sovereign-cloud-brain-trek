@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 600" role="img" aria-labelledby="srm-title srm-desc">
+  <title id="srm-title">Shared responsibility matrix</title>
+  <desc id="srm-desc">Who is responsible for each area of the stack in on-premises, IaaS, PaaS, and SaaS. The customer always owns customer data, configurations and settings, and identities and users. The cloud provider owns physical hosts, network, and datacenter in every cloud model. Client devices, applications, network controls, and the operating system shift between customer, shared, and provider as you move from IaaS to SaaS.</desc>
+  <defs><linearGradient id="srm-bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#F7FAFD"/><stop offset="100%" stop-color="#E6F2FD"/></linearGradient></defs>
+  <rect width="760" height="600" rx="12" fill="url(#srm-bg)"/>
+  <text x="32" y="44" font-family="Segoe UI, Inter Variable, sans-serif" font-size="22" font-weight="600" fill="#0C3B5E">Shared responsibility by service model</text>
+  <text x="32" y="70" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#41566B">Based on the Microsoft Learn responsibility matrix for Azure</text>
+  <text x="309" y="98" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#0C3B5E">On-premises</text>
+  <text x="433" y="98" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#0C3B5E">IaaS</text>
+  <text x="557" y="98" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#0C3B5E">PaaS</text>
+  <text x="681" y="98" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#0C3B5E">SaaS</text>
+  <text x="236" y="132" text-anchor="end" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Customer data</text>
+  <rect x="250" y="110" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="309" y="132" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="374" y="110" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="433" y="132" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="498" y="110" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="557" y="132" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="622" y="110" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="681" y="132" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <text x="236" y="172" text-anchor="end" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Configurations and settings</text>
+  <rect x="250" y="150" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="309" y="172" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="374" y="150" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="433" y="172" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="498" y="150" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="557" y="172" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="622" y="150" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="681" y="172" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <text x="236" y="212" text-anchor="end" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Identities and users</text>
+  <rect x="250" y="190" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="309" y="212" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="374" y="190" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="433" y="212" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="498" y="190" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="557" y="212" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="622" y="190" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="681" y="212" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <text x="236" y="252" text-anchor="end" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Client devices</text>
+  <rect x="250" y="230" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="309" y="252" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="374" y="230" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="433" y="252" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="498" y="230" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="557" y="252" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="622" y="230" width="118" height="34" rx="5" fill="#FFE0B3"/>
+  <text x="681" y="252" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#5C3B00">Shared</text>
+  <text x="236" y="292" text-anchor="end" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Applications</text>
+  <rect x="250" y="270" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="309" y="292" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="374" y="270" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="433" y="292" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="498" y="270" width="118" height="34" rx="5" fill="#FFE0B3"/>
+  <text x="557" y="292" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#5C3B00">Shared</text>
+  <rect x="622" y="270" width="118" height="34" rx="5" fill="#FFE0B3"/>
+  <text x="681" y="292" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#5C3B00">Shared</text>
+  <text x="236" y="332" text-anchor="end" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Network controls</text>
+  <rect x="250" y="310" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="309" y="332" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="374" y="310" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="433" y="332" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="498" y="310" width="118" height="34" rx="5" fill="#FFE0B3"/>
+  <text x="557" y="332" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#5C3B00">Shared</text>
+  <rect x="622" y="310" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="681" y="332" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <text x="236" y="372" text-anchor="end" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Operating system</text>
+  <rect x="250" y="350" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="309" y="372" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="374" y="350" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="433" y="372" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="498" y="350" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="557" y="372" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <rect x="622" y="350" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="681" y="372" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <text x="236" y="412" text-anchor="end" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Physical hosts</text>
+  <rect x="250" y="390" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="309" y="412" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="374" y="390" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="433" y="412" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <rect x="498" y="390" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="557" y="412" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <rect x="622" y="390" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="681" y="412" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <text x="236" y="452" text-anchor="end" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Physical network</text>
+  <rect x="250" y="430" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="309" y="452" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="374" y="430" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="433" y="452" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <rect x="498" y="430" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="557" y="452" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <rect x="622" y="430" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="681" y="452" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <text x="236" y="492" text-anchor="end" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Physical datacenter</text>
+  <rect x="250" y="470" width="118" height="34" rx="5" fill="#0F6CBD"/>
+  <text x="309" y="492" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Customer</text>
+  <rect x="374" y="470" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="433" y="492" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <rect x="498" y="470" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="557" y="492" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <rect x="622" y="470" width="118" height="34" rx="5" fill="#107C10"/>
+  <text x="681" y="492" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Provider</text>
+  <rect x="250" y="527" width="18" height="18" rx="4" fill="#0F6CBD" stroke="#8AA4BC" stroke-width="0.5"/>
+  <text x="276" y="541" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Customer</text>
+  <rect x="390" y="527" width="18" height="18" rx="4" fill="#FFE0B3" stroke="#8AA4BC" stroke-width="0.5"/>
+  <text x="416" y="541" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Shared</text>
+  <rect x="530" y="527" width="18" height="18" rx="4" fill="#107C10" stroke="#8AA4BC" stroke-width="0.5"/>
+  <text x="556" y="541" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#1B2A38">Provider</text>
+  <text x="32" y="576" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#41566B">Responsibility moves from the customer to the provider as you go from on-premises to SaaS.</text>
+</svg>

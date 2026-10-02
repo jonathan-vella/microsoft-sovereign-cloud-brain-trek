@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" role="img" aria-labelledby="tl-title tl-desc">
+  <title id="tl-title">Regulatory timeline for cloud compliance</title>
+  <desc id="tl-desc">Six milestones. December 2011: FedRAMP established for US federal cloud authorization. May 25, 2018: GDPR takes effect in the EU. 2022: the EU adopts the NIS2 Directive (EU) 2022/2555. January 17, 2025: DORA applies to EU financial entities and critical ICT third-party providers. April 30, 2025: Microsoft announces five European digital commitments. November 18, 2025: the European Supervisory Authorities publish the list of critical ICT third-party providers under DORA, naming Microsoft Ireland Operations Limited.</desc>
+  <defs><linearGradient id="tl-bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#F7FAFD"/><stop offset="100%" stop-color="#E6F2FD"/></linearGradient></defs>
+  <rect width="1000" height="400" rx="12" fill="url(#tl-bg)"/>
+  <text x="32" y="44" font-family="Segoe UI, Inter Variable, sans-serif" font-size="22" font-weight="600" fill="#0C3B5E">Regulatory timeline</text>
+  <text x="32" y="70" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#41566B">Milestones you meet in this course. Not to scale.</text>
+  <line x1="60" y1="210" x2="940" y2="210" stroke="#8AA4BC" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="130" cy="210" r="9" fill="#0C3B5E" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="130" y1="184" x2="130" y2="201" stroke="#0C3B5E" stroke-width="1.5"/>
+  <rect x="46" y="100" width="168" height="84" rx="8" fill="#FFFFFF" stroke="#0C3B5E" stroke-width="1.5"/>
+  <text x="130" y="122" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="700" fill="#0C3B5E">Dec 2011</text>
+  <text x="130" y="142" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13.5" font-weight="600" fill="#1B2A38">FedRAMP established</text>
+  <text x="130" y="160" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12" fill="#41566B">US federal cloud program</text>
+  <circle cx="278" cy="210" r="9" fill="#0F6CBD" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="278" y1="219" x2="278" y2="236" stroke="#0F6CBD" stroke-width="1.5"/>
+  <rect x="194" y="236" width="168" height="84" rx="8" fill="#FFFFFF" stroke="#0F6CBD" stroke-width="1.5"/>
+  <text x="278" y="258" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="700" fill="#0F6CBD">May 25, 2018</text>
+  <text x="278" y="278" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13.5" font-weight="600" fill="#1B2A38">GDPR takes effect</text>
+  <text x="278" y="296" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12" fill="#41566B">EU personal data protection</text>
+  <circle cx="426" cy="210" r="9" fill="#0F6CBD" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="426" y1="184" x2="426" y2="201" stroke="#0F6CBD" stroke-width="1.5"/>
+  <rect x="342" y="100" width="168" height="84" rx="8" fill="#FFFFFF" stroke="#0F6CBD" stroke-width="1.5"/>
+  <text x="426" y="122" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="700" fill="#0F6CBD">2022</text>
+  <text x="426" y="142" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13.5" font-weight="600" fill="#1B2A38">NIS2 adopted</text>
+  <text x="426" y="160" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12" fill="#41566B">EU Directive (EU) 2022/2555</text>
+  <circle cx="574" cy="210" r="9" fill="#107C10" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="574" y1="219" x2="574" y2="236" stroke="#107C10" stroke-width="1.5"/>
+  <rect x="490" y="236" width="168" height="84" rx="8" fill="#FFFFFF" stroke="#107C10" stroke-width="1.5"/>
+  <text x="574" y="258" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="700" fill="#107C10">Jan 17, 2025</text>
+  <text x="574" y="278" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13.5" font-weight="600" fill="#1B2A38">DORA applies</text>
+  <text x="574" y="296" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12" fill="#41566B">EU financial entities and</text>
+  <text x="574" y="312" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12" fill="#41566B">critical ICT providers</text>
+  <circle cx="722" cy="210" r="9" fill="#C46200" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="722" y1="184" x2="722" y2="201" stroke="#C46200" stroke-width="1.5"/>
+  <rect x="638" y="100" width="168" height="84" rx="8" fill="#FFFFFF" stroke="#C46200" stroke-width="1.5"/>
+  <text x="722" y="122" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="700" fill="#C46200">Apr 30, 2025</text>
+  <text x="722" y="142" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13.5" font-weight="600" fill="#1B2A38">Microsoft announces</text>
+  <text x="722" y="160" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12" fill="#41566B">five European digital</text>
+  <text x="722" y="176" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12" fill="#41566B">commitments</text>
+  <circle cx="870" cy="210" r="9" fill="#107C10" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="870" y1="219" x2="870" y2="236" stroke="#107C10" stroke-width="1.5"/>
+  <rect x="786" y="236" width="168" height="84" rx="8" fill="#FFFFFF" stroke="#107C10" stroke-width="1.5"/>
+  <text x="870" y="258" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="700" fill="#107C10">Nov 18, 2025</text>
+  <text x="870" y="278" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13.5" font-weight="600" fill="#1B2A38">DORA critical providers</text>
+  <text x="870" y="296" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12" fill="#41566B">listed by EU supervisors,</text>
+  <text x="870" y="312" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12" fill="#41566B">Microsoft Ireland named</text>
+  <text x="32" y="378" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#41566B">Dates from Microsoft Learn. EU AI Act milestones are not shown because Microsoft Learn does not publish them.</text>
+</svg>

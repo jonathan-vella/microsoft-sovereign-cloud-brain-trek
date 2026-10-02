@@ -1,230 +1,225 @@
 ---
-title: "Azure Fundamentals Knowledge Check"
-description: "Test your understanding of Azure fundamentals"
+title: "Azure fundamentals knowledge check"
+description: "Twelve questions on the Azure resource hierarchy, regions and availability zones, region pairs, compute and storage choices, management tools, and Azure Copilot."
+lastVerified: 2026-10-02
 sidebar:
   order: 5
 ---
 
 import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
 
-## Instructions
+Answer each question, then open the answer to check your reasoning. Each answer explains why the other options are wrong and links to the page to review. Aim for 10 out of 12, then try the Level 50 comprehensive knowledge check.
 
-Test your understanding of Microsoft Azure fundamentals covered in Module 3. This assessment focuses on core Azure concepts and services.
+## Question 1
 
-**Passing Score:** 80% (8 out of 10 questions correct)
-**Time Limit:** 20 minutes
+Which order is correct, from the broadest scope to the narrowest?
 
----
-
-## Questions
-
-### Question 1
-
-What is an Azure region?
-
-**A)** A single data center
-**B)** A geographic area containing one or more data centers
-**C)** A network security boundary
-**D)** A billing unit in Azure
+- A. Resource group, subscription, management group, resource
+- B. Management group, subscription, resource group, resource
+- C. Subscription, management group, resource, resource group
+- D. Resource, resource group, subscription, management group
 
 <KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/microsoft-azure-overview/">
 
-**Explanation:** An Azure region is a geographic area containing one or more data centers.
+Management groups hold subscriptions, subscriptions hold resource groups, and resource groups hold resources. Policies and access set at one level apply to everything below it.
+
+A and C mix up the levels. D is the right order but reversed, from narrowest to broadest.
 
 </KnowledgeCheck>
 
-### Question 2
+## Question 2
 
-Which Azure service provides identity and access management?
+A team creates a test environment in one resource group. What happens when they delete the resource group?
 
-**A)** Azure Security Center
-**B)** Microsoft Entra ID
-**C)** Azure Key Vault
-**D)** Azure Policy
+- A. Only the empty resource group is removed.
+- B. All resources in the resource group are deleted.
+- C. The resources move to the subscription's default resource group.
+- D. Azure blocks the deletion until each resource is deleted first.
 
-<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-service-categories/">
+<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/microsoft-azure-overview/">
 
-**Explanation:** Microsoft Entra ID provides identity and access management services.
+Actions on a resource group apply to everything in it. Deleting the group deletes all its resources, which makes cleanup of temporary environments simple.
 
-</KnowledgeCheck>
-
-### Question 3
-
-What is the primary benefit of Azure availability zones?
-
-**A)** Cost reduction
-**B)** High availability and fault tolerance
-**C)** Improved performance
-**D)** Simplified management
-
-<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-global-infrastructure/">
-
-**Explanation:** Availability zones provide high availability and fault tolerance within a region.
+A, C, and D don't match how resource groups work. There's no default resource group that catches orphaned resources.
 
 </KnowledgeCheck>
 
-### Question 4
+## Question 3
 
-Which Azure storage service is best for unstructured data like images and videos?
+How many named regions does the Azure regions list on Microsoft Learn show for the global public cloud, as checked for this course?
 
-**A)** Azure Files
-**B)** Azure Disk Storage
-**C)** Azure Blob Storage
-**D)** Azure Table Storage
-
-<KnowledgeCheck answer="C" reference="/level-50/module-03-azure-intro/microsoft-azure-overview/">
-
-**Explanation:** Azure Blob Storage is designed for unstructured data like images, videos, and documents.
-
-</KnowledgeCheck>
-
-### Question 5
-
-What is the Azure Portal?
-
-**A)** A command-line interface
-**B)** A web-based graphical management interface
-**C)** A PowerShell module
-**D)** An API gateway
-
-<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-service-categories/">
-
-**Explanation:** The Azure Portal is a web-based graphical interface for managing Azure resources.
-
-</KnowledgeCheck>
-
-### Question 6
-
-Which tool would you use for cross-platform Azure automation scripts?
-
-**A)** Azure Portal
-**B)** Azure PowerShell only
-**C)** Azure CLI
-**D)** Azure Resource Manager only
+- A. 23
+- B. 42
+- C. 57
+- D. 120
 
 <KnowledgeCheck answer="C" reference="/level-50/module-03-azure-intro/azure-global-infrastructure/">
 
-**Explanation:** Azure CLI is the cross-platform command-line tool for Azure automation.
+The regions list showed 57 named regions when this course was checked in October 2026. Other Microsoft pages round it to "more than 60." The number changes as regions open, so check the list before you quote it.
+
+A, B, and D don't match the list.
 
 </KnowledgeCheck>
 
-### Question 7
+## Question 4
 
-What is Infrastructure as Code (IaC) in Azure?
+What is an availability zone?
 
-**A)** Running code on Azure infrastructure
-**B)** Using templates to define and deploy infrastructure
-**C)** Writing applications for Azure
-**D)** Managing code repositories
-
-<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/microsoft-azure-overview/">
-
-**Explanation:** IaC uses templates (like ARM templates) to define and deploy infrastructure declaratively.
-
-</KnowledgeCheck>
-
-### Question 8
-
-Which Azure service model provides the most control over the operating system?
-
-**A)** SaaS (Software as a Service)
-**B)** PaaS (Platform as a Service)
-**C)** IaaS (Infrastructure as a Service)
-**D)** FaaS (Functions as a Service)
-
-<KnowledgeCheck answer="C" reference="/level-50/module-03-azure-intro/azure-service-categories/">
-
-**Explanation:** IaaS provides virtual machines where customers control the operating system.
-
-</KnowledgeCheck>
-
-### Question 9
-
-What is an Azure resource group?
-
-**A)** A billing unit
-**B)** A logical container for Azure resources
-**C)** A security boundary
-**D)** A geographic region
+- A. A single server rack in a datacenter
+- B. A group of one or more physically separate datacenters within a region, with independent power, cooling, and networking
+- C. A second region in the same geography
+- D. A content delivery location at the network edge
 
 <KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-global-infrastructure/">
 
-**Explanation:** A resource group is a logical container for organizing and managing Azure resources.
+An availability zone is an isolation boundary inside a region. If one zone fails, the others keep running. Regions that support zones have at least three, and most have exactly three.
+
+A is far smaller than a zone. C describes a paired region. D describes an edge location, not a zone.
 
 </KnowledgeCheck>
 
-### Question 10
+## Question 5
 
-Which Azure service is used for serverless computing?
+A workload must keep all its data inside one Azure region for legal reasons. What does Microsoft recommend to maximize its availability?
 
-**A)** Azure Virtual Machines
-**B)** Azure App Service
-**C)** Azure Functions
-**D)** Azure Container Instances
+- A. Replicate it to the paired region in another country.
+- B. Deploy it across availability zones in that region, and add backups.
+- C. Use locally redundant storage only.
+- D. Nothing; a single-region workload can't be made more available.
 
-<KnowledgeCheck answer="C" reference="/level-50/module-03-azure-intro/microsoft-azure-overview/">
+<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-global-infrastructure/">
 
-**Explanation:** Azure Functions provides serverless computing capabilities.
+For workloads limited to one region by data residency or sovereignty rules, Microsoft recommends a zone-resilient design. It keeps every copy in the region and survives the loss of one zone. Backups cover a full-region outage.
+
+A breaks the legal requirement. C keeps all copies in one datacenter, so it doesn't survive a zone failure. D is false.
 
 </KnowledgeCheck>
 
----
+## Question 6
 
-## Scoring Guide
+Which statement about region pairs is true?
 
-**8-10 correct (80-100%): Excellent**
+- A. Every Azure region has a pair.
+- B. Deploying to a paired region gives you automatic disaster recovery.
+- C. Some newer regions, such as Italy North and Poland Central, have no pair and rely on availability zones.
+- D. Region pairs are always in different geographies.
 
-- Strong understanding of Azure fundamentals
-- Ready to proceed to Level 100
-- Consider exploring Azure hands-on
+<KnowledgeCheck answer="C" reference="/level-50/module-03-azure-intro/azure-global-infrastructure/">
 
-**6-7 correct (60-70%): Good**
+Many newer regions have no region pair and use availability zones for resilience.
 
-- Solid grasp of basic concepts
-- Review missed topics before proceeding
-- Explore Azure Portal for hands-on experience
+A is false for those regions. B is false; only some services use the pair, and you still need your own recovery plan. D is false; pairs are almost always in the same geography.
 
-**Below 6 correct (&lt;60%): Needs Review**
+</KnowledgeCheck>
 
-- Review [Microsoft Azure Overview](/level-50/module-03-azure-intro/microsoft-azure-overview/)
-- Complete [Azure Fundamentals learning path](https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/)
-- Retake assessment after review
+## Question 7
 
----
+You want to run a single container quickly without managing virtual machines or a Kubernetes cluster. Which service fits best?
 
-## Remediation Resources
+- A. Azure Virtual Machines
+- B. Azure Kubernetes Service
+- C. Azure Container Instances
+- D. Azure Virtual Desktop
 
-### For Azure Concepts
+<KnowledgeCheck answer="C" reference="/level-50/module-03-azure-intro/azure-service-categories/">
 
-- [Microsoft Azure Overview](/level-50/module-03-azure-intro/microsoft-azure-overview/)
-- [Azure Service Categories](/level-50/module-03-azure-intro/azure-service-categories/)
-- [Azure Global Infrastructure](/level-50/module-03-azure-intro/azure-global-infrastructure/)
+Azure Container Instances is the fastest and simplest way to run a container in Azure, with no VMs or orchestration to manage.
 
-### Official Microsoft Learn
+A needs you to manage a VM. B is for orchestrating a fleet of containers. D delivers desktops, not containers.
 
-- [Azure Fundamentals](https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/)
-- [Azure Administration Basics](https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/)
+</KnowledgeCheck>
 
-### Hands-On Practice
+## Question 8
 
-- [Azure Free Account](https://azure.microsoft.com/en-us/free/)
-- [Azure Portal](https://portal.azure.com)
+Which Azure Storage redundancy option keeps three copies of data across three availability zones in one region, without copying to a second region?
 
-## Next Steps
+- A. Locally redundant storage (LRS)
+- B. Zone-redundant storage (ZRS)
+- C. Geo-redundant storage (GRS)
+- D. Geo-zone-redundant storage (GZRS)
 
-### For Passing Scores
+<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-service-categories/">
 
-1. ✅ Review any missed concepts
-2. ✅ Complete the [Level 50 Comprehensive Assessment](/level-50/comprehensive-knowledge-check/)
-3. ✅ Proceed to [Level 100: Foundation](/level-100/)
+ZRS replicates data synchronously across three zones in the primary region. Microsoft recommends it when data must stay in one country or region.
 
-### For Additional Study
+A keeps all three copies in one datacenter. C and D also copy data to a secondary region.
 
-1. ✅ Review all Module 3 content
-2. ✅ Explore Azure Portal hands-on
-3. ✅ Complete Azure Fundamentals learning path
-4. 🔄 Retake this assessment
+</KnowledgeCheck>
 
----
+## Question 9
 
-**Assessment Created:** November 2025
+You need to store backups that are almost never read and can wait several hours to be restored, at the lowest storage cost. Which blob access tier fits?
+
+- A. Hot
+- B. Cool
+- C. Cold
+- D. Archive
+
+<KnowledgeCheck answer="D" reference="/level-50/module-03-azure-intro/azure-service-categories/">
+
+The archive tier has the lowest storage cost, a 180-day minimum, and retrieval measured in hours.
+
+A is for data in active use. B (30-day minimum) and C (90-day minimum) are online tiers for data you need immediately, at a higher storage cost than archive.
+
+</KnowledgeCheck>
+
+## Question 10
+
+Which tool gives you a browser-based, already-authenticated terminal with the Azure CLI and Azure PowerShell preinstalled?
+
+- A. Azure portal dashboards
+- B. Azure Cloud Shell
+- C. Bicep
+- D. Azure Arc
+
+<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-management-tools/">
+
+Cloud Shell runs in the browser, signs you in automatically, and lets you choose Bash or PowerShell.
+
+A is a graphical view, not a terminal. C is a language for infrastructure as code. D brings resources outside Azure under Azure management.
+
+</KnowledgeCheck>
+
+## Question 11
+
+Why would a team use Bicep instead of creating resources by hand in the portal?
+
+- A. Bicep is the only way to create VMs.
+- B. Bicep files declare the end state, so the same environment deploys the same way every time.
+- C. Bicep bypasses Azure Resource Manager and is faster.
+- D. Bicep can only deploy storage accounts.
+
+<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-management-tools/">
+
+Bicep is declarative infrastructure as code. You describe what you want, store it in source control, and get repeatable deployments.
+
+A is false; every tool can create VMs. C is false; Bicep deploys through Azure Resource Manager like every tool. D is false; Bicep supports every Azure resource type.
+
+</KnowledgeCheck>
+
+## Question 12
+
+A public sector customer runs its workloads in Azure Government. Can its administrators use Azure Copilot there?
+
+- A. Yes, Azure Copilot is available in every Azure cloud.
+- B. No, Azure Copilot isn't available in Azure Government or Azure operated by 21Vianet.
+- C. Yes, but only in English.
+- D. Only through the Azure CLI.
+
+<KnowledgeCheck answer="B" reference="/level-50/module-03-azure-intro/azure-management-tools/">
+
+Microsoft Learn states that Azure Copilot isn't available in the national clouds: Azure Government and Azure operated by 21Vianet. This is a common gap to check in sovereign designs.
+
+A is false. C and D describe options that don't exist; in global Azure, Azure Copilot works in the portal and the Azure mobile app, in 19 languages.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [Describe the core architectural components of Azure (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-core-architectural-components-of-azure/)
+- [List of Azure regions](https://learn.microsoft.com/azure/reliability/regions-list)
+- [What are availability zones?](https://learn.microsoft.com/azure/reliability/availability-zones-overview)
+- [Azure region pairs and nonpaired regions](https://learn.microsoft.com/azure/reliability/regions-paired)
+- [Describe Azure storage services (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-azure-storage-services/)
+- [Describe features and tools for managing and deploying Azure resources (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-features-tools-manage-deploy-azure-resources/)
+- [What is Azure Copilot?](https://learn.microsoft.com/azure/copilot/overview)

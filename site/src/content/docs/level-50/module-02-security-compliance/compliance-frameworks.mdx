@@ -1,81 +1,124 @@
 ---
-title: "Compliance Frameworks"
-description: "Overview of major compliance frameworks and regulations"
+title: "Compliance frameworks"
+description: "Laws, standards, and attestations such as GDPR, ISO/IEC 27001, SOC 2, and PCI DSS, how Microsoft groups its compliance offerings, and the tools that help you prove compliance."
+lastVerified: 2026-10-02
 sidebar:
   order: 3
 ---
 
 import DiagramContainer from "~/components/DiagramContainer.astro";
+import LearningObjectives from "~/components/LearningObjectives.astro";
+import Misconception from "~/components/Misconception.astro";
 
-## Overview
+A compliance framework is a set of requirements that an organization must or chooses to meet. Some are laws. Others are industry standards or audit programs. This page explains the common ones, how Microsoft organizes the assurances it holds, and what stays your job when you use a cloud provider.
 
-Compliance frameworks provide structured approaches to meeting regulatory and industry requirements for data protection, security, and governance.
+<LearningObjectives>
+- Tell a law, a standard, and an audit attestation apart.
+- Describe what GDPR, ISO/IEC 27001, SOC 2, PCI DSS, HIPAA, and FedRAMP cover.
+- Name the four segments Microsoft uses to group its compliance offerings.
+- Explain what a cloud provider's certification does and doesn't cover for you.
+</LearningObjectives>
 
-<DiagramContainer title="Major Compliance Framework Timeline">
+## Laws, standards, and attestations
 
-![Regulatory Timeline](/images/level-100/regulatory-timeline.svg)
-_Figure: Timeline of major compliance and data protection regulations_
+Frameworks come in three broad kinds:
+
+- **Laws and regulations** are legal obligations set by governments. Examples are GDPR in the EU and HIPAA in the US. You must comply if they apply to you.
+- **Standards** are published sets of controls that an organization can be certified against by an independent auditor. ISO/IEC 27001 is the best-known security standard.
+- **Attestations and authorizations** are audit reports or government approvals about a specific service. A SOC 2 report and a FedRAMP authorization are examples.
+
+## Common frameworks
+
+| Framework | Kind | Applies to | What it covers |
+|---|---|---|---|
+| ISO/IEC 27001 | International standard | Any organization | Requirements for an information security management system (ISMS) |
+| SOC 2 | Audit attestation | Service providers that store or process customer data | Controls for security, availability, processing integrity, confidentiality, and privacy |
+| PCI DSS | Industry standard | Anyone who stores, processes, or transmits payment card data | Protection of cardholder data |
+| HIPAA | US law | HIPAA covered entities, such as healthcare providers, and their business associates | Protection of health information |
+| FedRAMP | US government program | Cloud services used by US federal agencies | Standard security assessment and authorization for cloud services |
+| GDPR | EU regulation | Organizations that process personal data of people in the EU | Personal data protection and privacy rights |
+
+For GDPR, Microsoft acts as a **data processor** for its online services, and you, the customer, are the **data controller** ([Microsoft Learn](https://learn.microsoft.com/compliance/regulatory/gdpr)). The controller decides why and how personal data is processed, and carries most of the obligations.
+
+### EU regulations you'll meet later
+
+Two newer EU laws come up often in sovereignty work. Level 100 covers them in more detail.
+
+- **NIS2** is the EU cybersecurity directive, Directive (EU) 2022/2555. Microsoft Defender for Cloud and Microsoft Purview Compliance Manager both include an NIS2 assessment ([Defender for Cloud standards](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards)).
+- **DORA**, the Digital Operational Resilience Act, applies to EU financial entities and their critical ICT providers from January 17, 2025 ([Microsoft Learn](https://learn.microsoft.com/compliance/dora/dora-what-is-dora)). On November 18, 2025, the European Supervisory Authorities published the list of critical ICT third-party providers under DORA. Microsoft Ireland Operations Limited is on it, so it's subject to direct oversight by those authorities ([Microsoft Learn](https://learn.microsoft.com/compliance/dora/dora-what-is-dora)).
+
+### Key dates
+
+<DiagramContainer title="Regulatory timeline" defaultOpen>
+
+![Timeline with six milestones. December 2011: FedRAMP established. May 25, 2018: GDPR takes effect. 2022: NIS2 Directive (EU) 2022/2555 adopted. January 17, 2025: DORA applies. April 30, 2025: Microsoft announces five European digital commitments. November 18, 2025: EU supervisors list critical ICT providers under DORA, including Microsoft Ireland Operations Limited.](/images/level-50/regulatory-timeline-2026.svg)
 
 </DiagramContainer>
 
-## Major Global Frameworks
+GDPR took effect on May 25, 2018 ([Microsoft Learn](https://learn.microsoft.com/windows-server/security/gdpr/gdpr-winserver-whitepaper)). FedRAMP was established in December 2011 ([Microsoft Learn](https://learn.microsoft.com/azure/compliance/offerings/offering-fedramp)). Microsoft announced its five European digital commitments on April 30, 2025 ([Microsoft Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/european-digital-commitments)). You'll also see the EU AI Act in compliance tools, but Microsoft Learn doesn't publish its phased dates, so they aren't shown here.
 
-### GDPR (General Data Protection Regulation)
+## How Microsoft organizes its compliance offerings
 
-- **Scope**: EU personal data protection
-- **Key Requirements**: Consent, data portability, right to be forgotten
-- **Penalties**: Up to 4% of annual revenue
+Microsoft groups the compliance offerings for Azure, Dynamics 365, Microsoft 365, and Power Platform into four segments ([Microsoft Learn](https://learn.microsoft.com/azure/compliance/offerings/)):
 
-### SOC 2 (Service Organization Control 2)
+1. **Globally applicable**, such as ISO/IEC 27001, SOC 1, SOC 2, SOC 3, and CSA STAR.
+2. **US government**, such as FedRAMP High, Department of Defense Impact Levels, and CJIS.
+3. **Industry specific**, such as PCI DSS, HITRUST, and HIPAA.
+4. **Region or country specific**, such as Germany C5, Spain ENS High, and Australia IRAP.
 
-- **Scope**: Service providers handling customer data
-- **Principles**: Security, availability, processing integrity, confidentiality, privacy
-- **Audit**: Annual independent assessment
+The Azure portfolio has more than 100 compliance offerings across these segments ([Microsoft Learn](https://learn.microsoft.com/azure/azure-government/documentation-government-overview-wwps)). Each offering is based on a certification, attestation, authorization, or assessment by an independent auditor, or on contract terms and guidance documents from Microsoft.
 
-### ISO 27001
+<DiagramContainer title="Compliance offerings in four segments" defaultOpen>
 
-- **Scope**: Information security management systems
-- **Approach**: Risk-based security management
-- **Certification**: Global standard recognition
+![Four columns. Globally applicable: ISO/IEC 27001, SOC 1, SOC 2, SOC 3, CSA STAR. US government: FedRAMP High, DoD Impact Levels, CJIS. Industry specific: PCI DSS, HITRUST, HIPAA. Region or country specific: Germany C5, Spain ENS High, Australia IRAP.](/images/level-50/compliance-offerings-2026.svg)
 
-## Industry-Specific Frameworks
+</DiagramContainer>
 
-### Healthcare
+### Different clouds, different offerings
 
-- **HIPAA**: US healthcare data protection
-- **HITECH**: Enhanced HIPAA enforcement
-- **Medical Device Regulation (MDR)**: EU medical device compliance
+The offerings page lists five Azure cloud environments, and an offering may apply to some and not others ([Microsoft Learn](https://learn.microsoft.com/azure/compliance/offerings/)):
 
-### Financial Services
+- **Azure**, the global public cloud, sometimes called Azure commercial.
+- **Azure operated by 21Vianet** in China, physically separated and independently operated.
+- **Azure Government**, five US regions for US government agencies and their partners. Two of them (US DoD Central and US DoD East) are reserved for the US Department of Defense.
+- **Azure Government Secret**, three regions for classified Secret workloads.
+- **Azure Government Top Secret**, for workloads classified Top Secret.
 
-- **PCI DSS**: Payment card data security
-- **SOX**: Financial reporting controls
-- **Basel III**: Banking risk management
+These environments are early examples of separate clouds built for national requirements. Level 100 shows how Microsoft Sovereign Cloud extends the idea.
 
-### Government
+## What a provider's certification covers
 
-- **FedRAMP**: US federal cloud security
-- **FISMA**: Federal information system security
-- **ITAR**: Defense-related data controls
+A provider's certification covers the provider's part of the shared responsibility model. You inherit the controls the platform implements, and you can use the provider's audit reports as evidence. You still configure and operate your own workloads in a compliant way.
 
-## Cloud Compliance Considerations
+Microsoft states it directly: you're wholly responsible for your own compliance with the laws and regulations that apply to you ([Microsoft Learn](https://learn.microsoft.com/azure/compliance/offerings/)).
 
-### Shared Responsibility
+<Misconception>
+  <Fragment slot="myth">
+    Azure is ISO/IEC 27001 certified, so my application is too.
+  </Fragment>
+  <Fragment slot="reality">
+    The certification covers the Azure services in its audit scope. Your application, its configuration, and your processes need their own controls, and your own audit if you want certification. Also check that every service you use is in the audit scope.
+  </Fragment>
+</Misconception>
 
-- Provider handles infrastructure compliance
-- Customer responsible for data and application compliance
-- Clear documentation of responsibility boundaries
+## Tools that help you prove compliance
 
-### Compliance Inheritance
+| Tool | What it does |
+|---|---|
+| Service Trust Portal | Download Microsoft's audit reports, certificates, and assessment documents, for example ISO certificates and SOC reports. Requires sign-in. |
+| Microsoft Defender for Cloud regulatory compliance dashboard | Continuously assesses your Azure, hybrid, and multicloud resources against standards you choose, such as ISO/IEC 27001, PCI DSS, GDPR, NIS2, and DORA, and shows where you fall short. |
+| Microsoft Purview Compliance Manager | Tracks your compliance posture across Microsoft 365 and other services with assessment templates for regulations, and suggests improvement actions. |
 
-- Leverage provider certifications
-- Understand scope and limitations
-- Maintain customer-specific requirements
+## Sources
 
-## Next Steps
-
-Review [Identity and Access Basics](/level-50/module-02-security-compliance/identity-access-basics/) for access control fundamentals.
-
----
-
-**Last Updated:** November 2025
+- [Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings](https://learn.microsoft.com/azure/compliance/offerings/)
+- [Azure for secure worldwide public sector cloud adoption](https://learn.microsoft.com/azure/azure-government/documentation-government-overview-wwps)
+- [Describe governance, risk, and compliance (GRC) concepts (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/6-describe-compliance-concepts)
+- [General Data Protection Regulation](https://learn.microsoft.com/compliance/regulatory/gdpr)
+- [What is DORA?](https://learn.microsoft.com/compliance/dora/dora-what-is-dora)
+- [Regulatory compliance standards in Microsoft Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards)
+- [Microsoft Purview Compliance Manager regulations list](https://learn.microsoft.com/purview/compliance-manager-regulations-list)
+- [FedRAMP offering](https://learn.microsoft.com/azure/compliance/offerings/offering-fedramp)
+- [Beginning your GDPR journey for Windows Server](https://learn.microsoft.com/windows-server/security/gdpr/gdpr-winserver-whitepaper)
+- [European digital commitments](https://learn.microsoft.com/azure/azure-sovereign-clouds/european-digital-commitments)
+- [NERC CIP standards and cloud computing (control inheritance)](https://learn.microsoft.com/azure/azure-government/documentation-government-overview-nerc)

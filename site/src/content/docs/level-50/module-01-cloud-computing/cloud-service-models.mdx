@@ -1,228 +1,112 @@
 ---
-title: "Cloud Service Models"
-description: "Understanding IaaS, PaaS, and SaaS with practical examples"
+title: "Cloud service models"
+description: "IaaS, PaaS, and SaaS explained with Azure examples, typical scenarios, and the shared responsibility model that decides who secures each layer."
+lastVerified: 2026-10-02
 sidebar:
   order: 2
 ---
 
 import DiagramContainer from "~/components/DiagramContainer.astro";
+import LearningObjectives from "~/components/LearningObjectives.astro";
 
----
+A service model says how much of the stack the provider runs for you. The three models are infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS). NIST SP 800-145 defines all three, and every major provider uses the same names.
 
-## Overview
+<LearningObjectives>
+- Describe IaaS, PaaS, and SaaS and give an example of each.
+- Pick a service model for a simple scenario.
+- Explain the shared responsibility model and name the responsibilities you always keep.
+</LearningObjectives>
 
-Cloud service models define the level of control and responsibility between cloud providers and customers. Understanding these models is crucial for selecting appropriate cloud solutions and understanding shared responsibility boundaries.
+## Infrastructure as a service (IaaS)
 
-## The Three Primary Service Models
+IaaS gives you the most control and the most work. The provider maintains the hardware, the network connection to the internet, and physical security. You install, configure, and patch the operating system, and you configure the network, databases, and storage. In effect you rent hardware in the provider's datacenter.
 
-### Infrastructure as a Service (IaaS)
+Azure examples are Azure Virtual Machines, Azure Disk Storage, and virtual networks.
 
-**Definition:** Virtualized computing infrastructure (servers, storage, networking) delivered over the internet.
+Common IaaS scenarios:
 
-**Provider Manages:** Physical hardware, virtualization layer
-**You Manage:** OS, middleware, applications, data, security
+- Lift-and-shift migration. You build cloud resources that look like your on-premises servers and move the workloads across with few changes.
+- Development and test. You copy an established configuration, start it when a team needs it, and shut it down afterward.
 
-**Examples:** Azure Virtual Machines, AWS EC2, Google Compute Engine
-**Use Cases:** Web hosting, dev/test, big data, backup/DR
+## Platform as a service (PaaS)
 
-### Platform as a Service (PaaS)
+PaaS sits between IaaS and SaaS. The provider also runs the operating system, middleware, development tools, and managed runtimes. You don't license or patch the operating system or the database engine. You bring the application code and the data, and you control who has access.
 
-**Definition:** Platform for developing and running applications without infrastructure management complexity.
+Azure examples are Azure App Service, Azure Functions, Azure SQL Database, and Azure Storage.
 
-**Provider Manages:** Infrastructure, OS, development tools, scaling
-**You Manage:** Applications, data, configurations
+Common PaaS scenarios:
 
-**Examples:** Azure App Service, Azure Functions, Google Cloud Run, Heroku
-**Use Cases:** Web apps, APIs, databases, microservices
+- Development framework. Developers build on platform components and get scaling, high availability, and multitenancy without writing that code themselves.
+- Analytics and business intelligence. Teams use hosted tools to analyze data and find patterns.
 
-### Software as a Service (SaaS)
+## Software as a service (SaaS)
 
-**Definition:** Complete applications delivered over the internet with full provider management.
+SaaS is a finished application that you rent. It's the easiest model to start with and the least flexible. The provider runs almost the whole stack, including application updates. You manage your data, user access, and the devices that connect.
 
-**Provider Manages:** Everything (infrastructure, platform, application, updates)
-**You Manage:** User data, access permissions, configurations
+Microsoft 365 and Dynamics 365 are SaaS. Email, messaging, productivity, and finance applications are typical SaaS uses.
 
-**Examples:** Microsoft 365, Salesforce, ServiceNow, Slack
+## Compare the three models
 
-**Use Cases:**
+| | IaaS | PaaS | SaaS |
+|---|---|---|---|
+| You manage | Operating system, runtime, applications, data, access | Application code, data, access | Data, users, devices |
+| Provider manages | Hardware, physical network, physical security, hypervisor | Everything in IaaS, plus the operating system, middleware, and runtime | Everything in PaaS, plus the application |
+| Flexibility | Highest | Medium | Lowest |
+| Effort to run | Highest | Medium | Lowest |
+| Azure example | Azure Virtual Machines | Azure App Service | Microsoft 365 |
 
-- Email and collaboration
-- Customer relationship management
-- Human resources management
-- Accounting and finance
+Many solutions mix models. A company might use Microsoft 365 for email and documents, run a customer portal on Azure App Service, and keep an older line-of-business application on Azure Virtual Machines until it can be rewritten.
 
-## Service Model Comparison
+## The shared responsibility model
 
-| Aspect | IaaS | PaaS | SaaS |
-|--------|------|------|------|
-| **Control** | High | Medium | Low |
-| **Flexibility** | Maximum | Moderate | Limited |
-| **Management Overhead** | High | Medium | Low |
-| **Time to Deploy** | Days/Weeks | Hours/Days | Minutes |
-| **Scalability Control** | Manual | Automatic | Automatic |
-| **Customization** | Full | Moderate | Limited |
-| **Cost Predictability** | Variable | Moderate | Predictable |
+In your own datacenter you own the whole stack, from the building to the data. In the cloud the provider takes over some layers. The **shared responsibility model** says which layers belong to you, which belong to the provider, and which you share. The split depends on the service model.
 
-## Shared Responsibility Model
+<DiagramContainer title="Shared responsibility by service model" defaultOpen>
 
-Understanding who is responsible for what in each service model:
-
-<DiagramContainer title="Shared Responsibility Matrix (Visual)">
-
-![Shared Responsibility Matrix showing customer vs provider responsibilities across IaaS, PaaS, and SaaS](/images/level-50/shared-responsibility-matrix.svg)
-_Figure 1: Shared Responsibility Matrix across cloud service models_
+![Matrix with ten rows and four columns (on-premises, IaaS, PaaS, SaaS). The customer owns customer data, configurations and settings, and identities and users in every column. Physical hosts, network, and datacenter belong to the provider in IaaS, PaaS, and SaaS. Client devices become shared in SaaS. Applications are shared in PaaS and SaaS. Network controls are shared in PaaS and run by the provider in SaaS. The operating system moves to the provider in PaaS and SaaS.](/images/level-50/shared-responsibility-matrix-2026.svg)
 
 </DiagramContainer>
 
-<DiagramContainer title="Shared Responsibility Model (Table)">
+| Responsibility area | On-premises | IaaS | PaaS | SaaS |
+|---|---|---|---|---|
+| Customer data | Customer | Customer | Customer | Customer |
+| Configurations and settings | Customer | Customer | Customer | Customer |
+| Identities and users | Customer | Customer | Customer | Customer |
+| Client devices | Customer | Customer | Customer | Shared |
+| Applications | Customer | Customer | Shared | Shared |
+| Network controls | Customer | Customer | Shared | Provider |
+| Operating system | Customer | Customer | Provider | Provider |
+| Physical hosts | Customer | Provider | Provider | Provider |
+| Physical network | Customer | Provider | Provider | Provider |
+| Physical datacenter | Customer | Provider | Provider | Provider |
 
-| Layer | On-Premises | IaaS | PaaS | SaaS |
-|:------|:-----------:|:----:|:----:|:----:|
-| **Data** | 🔵 You | 🔵 You | 🔵 You | 🔵 You |
-| **Applications** | 🔵 You | 🔵 You | 🔵 You | 🟢 Provider |
-| **Runtime** | 🔵 You | 🔵 You | 🟢 Provider | 🟢 Provider |
-| **Middleware** | 🔵 You | 🔵 You | 🟢 Provider | 🟢 Provider |
-| **Operating System** | 🔵 You | 🔵 You | 🟢 Provider | 🟢 Provider |
-| **Virtualization** | 🔵 You | 🟢 Provider | 🟢 Provider | 🟢 Provider |
-| **Servers** | 🔵 You | 🟢 Provider | 🟢 Provider | 🟢 Provider |
-| **Storage** | 🔵 You | 🟢 Provider | 🟢 Provider | 🟢 Provider |
-| **Networking** | 🔵 You | 🟢 Provider | 🟢 Provider | 🟢 Provider |
+The table follows the Azure responsibility matrix on Microsoft Learn, with "Microsoft" shown as "Provider".
 
-_🔵 You = Customer Responsibility | 🟢 Provider = Cloud Provider Responsibility_
+### What you always keep
 
-![Shared Responsibility Shift](/images/level-50/shared-responsibility-shift.svg)
-_Figure: Responsibility shifts from customer to provider as you move from On-Premises to SaaS_
+Whatever the service model, you're responsible for:
 
-</DiagramContainer>
+- Your data, including how you classify it, protect it, and decide whether to encrypt it.
+- The devices that connect to your cloud services, such as laptops and phones.
+- Accounts and identities: creating users, removing them when they leave, and controlling what they can do with role-based access control, multifactor authentication, and Conditional Access policies.
 
-### IaaS Responsibilities
+### What the provider always keeps
 
-**Customer Responsible For:**
+In every cloud model the provider is responsible for the physical datacenter, the physical network, the physical hosts, and the hypervisor.
 
-- Operating system updates and patches
-- Application security
-- Network configuration
-- Access management
-- Data encryption
-- Backup and recovery
+### An example
 
-**Provider Responsible For:**
+Suppose you need a SQL database. If you install SQL Server on an Azure VM (IaaS), you patch the operating system and the database engine and you protect the data. If you use Azure SQL Database (PaaS), Microsoft maintains the database engine, and you're still responsible for the data you load into it and for who can read it.
 
-- Physical security
-- Hardware maintenance
-- Network infrastructure
-- Hypervisor security
-- Power and cooling
+:::note[Responsibility is not the same as liability]
+Microsoft Learn uses "responsibility" in a governance sense: who configures, operates, and monitors each control. It doesn't change the terms of your agreement with the provider.
+:::
 
-### PaaS Responsibilities
+## Sources
 
-**Customer Responsible For:**
-
-- Application code security
-- Data protection
-- User access management
-- Application configuration
-- Identity management
-
-**Provider Responsible For:**
-
-- Operating system maintenance
-- Runtime environment security
-- Platform scaling
-- Infrastructure security
-- Network security
-
-### SaaS Responsibilities
-
-**Customer Responsible For:**
-
-- Data classification
-- User access management
-- Device management
-- Account management
-
-**Provider Responsible For:**
-
-- Application security
-- Infrastructure security
-- Platform maintenance
-- Data backup
-- Network security
-
-## Choosing the Right Service Model
-
-**Choose IaaS:** Maximum control, specific configurations, specialized requirements, lift-and-shift migrations
-**Choose PaaS:** Focus on development, rapid deployment, cloud-native apps, managed services
-**Choose SaaS:** Immediate application access, limited IT resources, subscription pricing, collaboration needs
-
-### Cost Comparison
-
-**IaaS:** Lower base costs but higher management overhead
-**PaaS:** Higher base costs but lower management overhead
-**SaaS:** Per-user pricing, no management overhead
-
-## Hybrid and Multi-Service Approaches
-
-### Combining Service Models
-
-Many organizations use multiple service models simultaneously:
-
-**Example Architecture:**
-
-- **SaaS:** Microsoft 365 for productivity and collaboration
-- **PaaS:** Azure App Service for custom web applications
-- **IaaS:** Virtual machines for legacy applications
-
-**Benefits:**
-
-- Optimize each workload for appropriate service model
-- Gradual cloud migration strategy
-- Balance control and convenience
-
-### Real-World Example
-
-Organizations often combine all three models:
-**SaaS:** Microsoft 365 for collaboration
-**PaaS:** Azure App Service for custom apps
-**IaaS:** VMs for legacy applications
-
-## Cloud Migration Journey
-
-**Phase 1 (IaaS):** Lift-and-shift existing applications
-**Phase 2 (PaaS):** Modernize with cloud-native services
-**Phase 3 (SaaS + PaaS):** Adopt SaaS where possible, build differentiators on PaaS
-
-## Common Pitfalls & Best Practices
-
-**IaaS:** Avoid under-estimating management; use infrastructure as code, monitoring, auto-scaling
-**PaaS:** Plan for portability; implement logging, API-first design, understand service limits
-**SaaS:** Establish data governance; invest in training, plan integrations early
-
-## Summary
-
-Understanding cloud service models is fundamental to making informed decisions about cloud adoption:
-
-- **IaaS** provides maximum control and flexibility with higher management overhead
-- **PaaS** balances control and convenience, enabling rapid application development
-- **SaaS** offers immediate value with minimal management requirements
-
-Most organizations benefit from a multi-model approach, selecting the appropriate service model for each workload based on requirements, constraints, and strategic objectives.
-
-## Next Steps
-
-1. ✅ Review service model characteristics and use cases
-2. ✅ Consider which models apply to your organization's needs
-3. ✅ Continue to [Cloud Deployment Models](/level-50/module-01-cloud-computing/cloud-deployment-models/)
-4. ✅ Complete the [Knowledge Check](/level-50/module-01-cloud-computing/cloud-computing-knowledge-check/)
-
----
-
-## Additional Resources
-
-- [Azure Service Models Overview](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/fundamental-concepts)
-- [AWS Service Models Explained](https://aws.amazon.com/types-of-cloud-computing/)
-- [Google Cloud Service Models](https://cloud.google.com/docs/overview/cloud-platform-services)
-
----
-
-**Last Updated:** November 2025
+- [Shared responsibility in the cloud](https://learn.microsoft.com/azure/security/fundamentals/shared-responsibility)
+- [Describe the shared responsibility model (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model)
+- [Describe Infrastructure as a Service (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-cloud-service-types/2-describe-infrastructure-service)
+- [Describe Platform as a Service (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-cloud-service-types/3-describe-platform-service)
+- [Describe Software as a Service (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-cloud-service-types/4-describe-software-service)
+- [NERC CIP standards and cloud computing (references NIST SP 800-145)](https://learn.microsoft.com/azure/azure-government/documentation-government-overview-nerc)

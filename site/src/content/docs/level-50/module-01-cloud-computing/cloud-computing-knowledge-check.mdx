@@ -1,384 +1,189 @@
 ---
-title: "Cloud Computing Knowledge Check"
-description: "Test your understanding of cloud computing fundamentals"
+title: "Cloud computing knowledge check"
+description: "Ten questions on cloud characteristics, service models, shared responsibility, deployment models, scaling, and the consumption-based model."
+lastVerified: 2026-10-02
 sidebar:
   order: 5
 ---
 
 import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
 
-## Instructions
+Answer each question, then open the answer to check your reasoning. Each answer explains why the other options are wrong and links to the page to review. Aim for 8 out of 10 before you move on to Module 2.
 
-Test your understanding of cloud computing fundamentals covered in Module 1. Choose the best answer for each question. Detailed explanations are provided after each question.
+## Question 1
 
-**Passing Score:** 80% (8 out of 10 questions correct)
-**Time Limit:** None
-**Attempts:** Unlimited for learning purposes
+Which list contains the three cloud service models?
 
----
+- A. Public, private, hybrid
+- B. IaaS, PaaS, SaaS
+- C. Compute, storage, networking
+- D. Basic, standard, premium
 
-## Questions
+<KnowledgeCheck answer="B" reference="/level-50/module-01-cloud-computing/cloud-service-models/">
 
-### Question 1
+IaaS, PaaS, and SaaS are the service models defined in NIST SP 800-145. They describe how much of the stack the provider runs.
 
-What are the three primary cloud service models?
-
-**A)** Public, Private, Hybrid
-**B)** IaaS, PaaS, SaaS
-**C)** Small, Medium, Large
-**D)** Basic, Standard, Premium
-
-<KnowledgeCheck answer="B) IaaS, PaaS, SaaS" reference="/level-50/module-01-cloud-computing/cloud-computing-primer/">
-
-**Explanation:**
-The three primary cloud service models are:
-
-- **IaaS (Infrastructure as a Service)**: Provides virtualized computing infrastructure
-- **PaaS (Platform as a Service)**: Provides platform for developing and running applications
-- **SaaS (Software as a Service)**: Provides complete software applications
-
-Option A refers to deployment models, not service models.
+A lists deployment models, which describe where resources run. C lists service categories. D looks like pricing tiers.
 
 </KnowledgeCheck>
 
----
+## Question 2
 
-### Question 2
+You run SQL Server on an Azure virtual machine. Who patches the guest operating system?
 
-In the IaaS service model, which of the following is the customer responsible for managing?
+- A. Microsoft, because the VM runs in Azure
+- B. You, because the VM is IaaS
+- C. Nobody, because cloud VMs don't need patches
+- D. Microsoft and you share it equally
 
-**A)** Physical servers and networking hardware
-**B)** Hypervisor and virtualization layer
-**C)** Operating system and applications
-**D)** Data center facilities and power
+<KnowledgeCheck answer="B" reference="/level-50/module-01-cloud-computing/cloud-service-models/">
 
-<KnowledgeCheck answer="C) Operating system and applications" reference="/level-50/module-01-cloud-computing/cloud-service-models/">
+In IaaS the provider is responsible for the physical hosts, network, datacenter, and hypervisor. You're responsible for the operating system and everything above it.
 
-**Explanation:**
-In IaaS, the cloud provider manages the physical infrastructure, hypervisor, and data center facilities. The customer is responsible for:
-
-- Operating systems
-- Middleware
-- Runtime environments
-- Applications
-- Data
-- Security configurations
-
-This follows the shared responsibility model where infrastructure management is handled by the provider, but the customer manages everything from the OS layer up.
+A would be true for PaaS, such as Azure SQL Database. C is false: every operating system needs updates. D is wrong because the operating system isn't a shared area in IaaS.
 
 </KnowledgeCheck>
 
----
+## Question 3
 
-### Question 3
+Which responsibilities stay with the customer in every service model, including SaaS?
 
-What is the primary difference between public cloud and private cloud?
+- A. Physical hosts and physical network
+- B. Operating system and network controls
+- C. Customer data, and identities and users
+- D. The hypervisor
 
-**A)** Public cloud is free, private cloud costs money
-**B)** Public cloud uses shared infrastructure, private cloud uses dedicated infrastructure
-**C)** Public cloud is less secure than private cloud
-**D)** Public cloud is only for small businesses, private cloud is for enterprises
+<KnowledgeCheck answer="C" reference="/level-50/module-01-cloud-computing/cloud-service-models/">
 
-<KnowledgeCheck answer="B) Public cloud uses shared infrastructure, private cloud uses dedicated infrastructure" reference="/level-50/module-01-cloud-computing/cloud-deployment-models/">
+The customer always owns customer data, configurations and settings, and identities and users, whatever the service model.
 
-**Explanation:**
-The key difference is resource sharing:
-
-- **Public cloud**: Multi-tenant shared infrastructure serving multiple customers
-- **Private cloud**: Dedicated infrastructure for a single organization
-
-While security and cost differ between models, these are outcomes of the fundamental infrastructure sharing difference, not the primary distinction itself.
+A and D belong to the provider in every cloud model. B moves to the provider in PaaS (operating system) and SaaS (both).
 
 </KnowledgeCheck>
 
----
+## Question 4
 
-### Question 4
+What is the main difference between a public cloud and a private cloud?
 
-Which cloud deployment model combines both public and private cloud environments?
+- A. A public cloud is free and a private cloud is paid.
+- B. A public cloud is available to anyone who buys the service. A private cloud is used by a single organization.
+- C. A public cloud can't be secured.
+- D. A private cloud always runs in the customer's own building.
 
-**A)** Multi-cloud
-**B)** Hybrid cloud
-**C)** Community cloud
-**D)** Federated cloud
+<KnowledgeCheck answer="B" reference="/level-50/module-01-cloud-computing/cloud-deployment-models/">
 
-<KnowledgeCheck answer="B) Hybrid cloud" reference="/level-50/module-01-cloud-computing/cloud-computing-primer/">
+The defining difference is who can use the infrastructure: anyone in a public cloud, one organization in a private cloud.
 
-**Explanation:**
-**Hybrid cloud** specifically refers to combining public and private cloud environments with integration between them. This allows organizations to:
-
-- Keep sensitive data in private cloud
-- Use public cloud for variable workloads
-- Move workloads between environments as needed
-
-Multi-cloud refers to using multiple different cloud providers, not necessarily combining public and private deployments.
+A is false; public cloud is pay-as-you-go. C is false; security is a shared responsibility in both. D is false; a private cloud can also run in a dedicated offsite datacenter operated by a third party.
 
 </KnowledgeCheck>
 
----
+## Question 5
 
-### Question 5
+A company uses Azure for its web shop and a second public cloud provider for analytics. Which deployment model is this?
 
-What does "elasticity" mean in cloud computing?
+- A. Private cloud
+- B. Hybrid cloud
+- C. Multicloud
+- D. Community cloud
 
-**A)** The ability to recover from failures quickly
-**B)** The ability to automatically scale resources up and down based on demand
-**C)** The ability to access resources from anywhere
-**D)** The ability to choose from multiple service providers
+<KnowledgeCheck answer="C" reference="/level-50/module-01-cloud-computing/cloud-deployment-models/">
 
-<KnowledgeCheck answer="B) The ability to automatically scale resources up and down based on demand" reference="/level-50/module-01-cloud-computing/cloud-service-models/">
+Multicloud means using two or more public cloud providers.
 
-**Explanation:**
-**Elasticity** is the ability to automatically provision and release resources to match workload demands. This means:
-
-- Scale up during high demand periods
-- Scale down during low demand periods
-- Automatic adjustment without manual intervention
-- Pay only for resources actually used
-
-This is different from basic scalability, which might require manual intervention.
+A and B both need a private cloud, which this company doesn't have. Hybrid connects public and private clouds. D isn't one of the models in the Microsoft Learn fundamentals path.
 
 </KnowledgeCheck>
 
----
+## Question 6
 
-### Question 6
+A VM is running out of memory. You resize it from 4 GB to 16 GB of RAM. What kind of scaling is this?
 
-Which of the following is an example of SaaS (Software as a Service)?
+- A. Horizontal scaling (scale out)
+- B. Vertical scaling (scale up)
+- C. Elastic pooling
+- D. Load balancing
 
-**A)** Amazon EC2 virtual machines
-**B)** Microsoft Azure App Service
-**C)** Microsoft 365 (Office applications)
-**D)** Azure Virtual Networks
+<KnowledgeCheck answer="B" reference="/level-50/module-01-cloud-computing/cloud-benefits/">
 
-<KnowledgeCheck answer="C) Microsoft 365 (Office applications)" reference="/level-50/module-01-cloud-computing/cloud-deployment-models/">
+Vertical scaling changes the size of a resource, such as adding CPUs or memory.
 
-**Explanation:**
-**Microsoft 365** is a complete SaaS solution providing ready-to-use applications like Word, Excel, PowerPoint, and Teams accessed through a web browser or installed applications.
-
-- Amazon EC2 = IaaS (virtual machines)
-- Azure App Service = PaaS (application hosting platform)
-- Azure Virtual Networks = IaaS (networking infrastructure)
+A changes the number of resources, for example from 2 VMs to 5. C isn't a scaling type. D spreads traffic across resources but doesn't add capacity.
 
 </KnowledgeCheck>
 
----
+## Question 7
 
-### Question 7
+Why is cloud computing classed as operational expenditure (OpEx)?
 
-What is the primary cost model difference between traditional IT and cloud computing?
+- A. You buy the servers up front and depreciate them.
+- B. You pay for services as you consume them.
+- C. The provider owns the operating system.
+- D. Cloud services have no fixed costs.
 
-**A)** Cloud computing is always more expensive
-**B)** Traditional IT uses OpEx, cloud computing uses CapEx
-**C)** Traditional IT uses CapEx, cloud computing uses OpEx
-**D)** There is no cost model difference
+<KnowledgeCheck answer="B" reference="/level-50/module-01-cloud-computing/cloud-computing-primer/">
 
-<KnowledgeCheck answer="C) Traditional IT uses CapEx, cloud computing uses OpEx" reference="/level-50/module-01-cloud-computing/cloud-computing-primer/">
+OpEx is ongoing spending on services over time. The consumption-based model bills you as you use resources, so cloud spending is OpEx.
 
-**Explanation:**
-
-- **Traditional IT**: Large upfront capital expenditure (CapEx) for hardware, software licenses, and infrastructure
-- **Cloud Computing**: Operational expenditure (OpEx) with pay-as-you-consume pricing
-
-This shift from CapEx to OpEx provides:
-
-- Better cash flow management
-- No large upfront investments
-- Variable costs based on actual usage
-- Improved budget predictability
+A describes capital expenditure (CapEx). C is unrelated to how spending is classified. D is false; some services and commitments have fixed monthly charges.
 
 </KnowledgeCheck>
 
----
+## Question 8
 
-### Question 8
+Which NIST characteristic lets you create a VM from a portal at 2 a.m. without contacting the provider?
 
-Which cloud characteristic enables users to provision computing resources automatically without human interaction with the service provider?
+- A. Broad network access
+- B. Resource pooling
+- C. On-demand self-service
+- D. Measured service
 
-**A)** Broad network access
-**B)** Resource pooling
-**C)** On-demand self-service
-**D)** Measured service
+<KnowledgeCheck answer="C" reference="/level-50/module-01-cloud-computing/cloud-computing-primer/">
 
-<KnowledgeCheck answer="C) On-demand self-service" reference="/level-50/module-01-cloud-computing/cloud-service-models/">
+On-demand self-service means you provision resources yourself, through a portal or API, with no human interaction with the provider.
 
-**Explanation:**
-**On-demand self-service** is the NIST cloud characteristic that allows users to:
-
-- Provision computing capabilities automatically
-- Access resources when needed
-- No human interaction required with service provider
-- Self-service portals and APIs for resource management
-
-This enables the agility and speed benefits that cloud computing provides.
+A is about reaching the service over the network. B is about the provider sharing hardware across tenants. D is about metering and billing what you use.
 
 </KnowledgeCheck>
 
----
+## Question 9
 
-### Question 9
+Which Azure service lets you manage servers and Kubernetes clusters in your own datacenter and in other clouds from the Azure portal?
 
-What is a key advantage of using multiple cloud providers (multi-cloud strategy)?
+- A. Azure VMware Solution
+- B. Azure Arc
+- C. Azure App Service
+- D. Microsoft 365
 
-**A)** Reduced complexity in management
-**B)** Lower total costs
-**C)** Avoiding vendor lock-in
-**D)** Simplified security management
+<KnowledgeCheck answer="B" reference="/level-50/module-01-cloud-computing/cloud-deployment-models/">
 
-<KnowledgeCheck answer="C) Avoiding vendor lock-in" reference="/level-50/module-01-cloud-computing/cloud-deployment-models/">
+Azure Arc projects resources outside Azure into Azure Resource Manager, so you can manage and govern them with Azure tools.
 
-**Explanation:**
-The primary advantage of multi-cloud is **avoiding vendor lock-in** by:
-
-- Maintaining independence from any single provider
-- Having negotiating leverage
-- Freedom to choose best services from different providers
-- Reduced risk of being dependent on one vendor's roadmap
-
-Multi-cloud typically increases complexity and costs, but provides strategic flexibility and risk mitigation.
+A runs VMware workloads inside Azure; it doesn't manage resources in other clouds. C is a PaaS service for hosting web apps. D is a SaaS productivity suite.
 
 </KnowledgeCheck>
 
----
+## Question 10
 
-### Question 10
+A regulator requires that certain records never run on hardware shared with other organizations. Which factor should drive the deployment model choice first?
 
-Which factor is most important when deciding between public, private, or hybrid cloud deployment?
+- A. Number of employees
+- B. Data sensitivity and regulatory requirements
+- C. Location of the head office
+- D. Age of the existing servers
 
-**A)** Total number of employees in the organization
-**B)** Data sensitivity and compliance requirements
-**C)** Geographic location of the company headquarters
-**D)** Age of the existing IT infrastructure
+<KnowledgeCheck answer="B" reference="/level-50/module-01-cloud-computing/cloud-deployment-models/">
 
-<KnowledgeCheck answer="B) Data sensitivity and compliance requirements" reference="/level-50/module-01-cloud-computing/cloud-computing-primer/">
+Regulatory and data-sensitivity requirements rule options in or out before cost and convenience. Here they point to a private cloud, or a hybrid design that keeps those records private.
 
-**Explanation:**
-**Data sensitivity and compliance requirements** are the most critical factors because they determine:
-
-- Where data can be stored and processed
-- What security controls are required
-- Whether shared infrastructure is acceptable
-- Regulatory compliance obligations
-
-Organizations with highly sensitive data or strict compliance requirements often need private or hybrid clouds, while those with standard requirements can leverage public cloud benefits.
+A and C don't decide where data may run. D affects migration timing, not which model is allowed.
 
 </KnowledgeCheck>
 
----
+## Sources
 
-## Scoring
-
-### Calculate Your Score
-
-Count the number of questions you answered correctly:
-
-- **9-10 correct (90-100%)**: Excellent understanding of cloud fundamentals
-- **8 correct (80%)**: Good understanding, meets passing criteria
-- **6-7 correct (60-70%)**: Adequate understanding, review recommended
-- **5 or fewer correct (50% or less)**: Additional study needed
-
-### Score Interpretation
-
-**90-100% (Excellent)**
-You have demonstrated strong understanding of cloud computing fundamentals. You're ready to proceed to more advanced topics.
-
-**80-89% (Good)**
-You have solid grasp of the concepts with minor knowledge gaps. Review any missed questions and proceed to the next module.
-
-**60-79% (Adequate)**
-You understand basic concepts but should review the material before proceeding. Focus on areas where you missed questions.
-
-**Below 60% (Needs Improvement)**
-Consider reviewing all Module 1 content before proceeding. Focus on understanding the fundamental differences between service models and deployment models.
-
----
-
-## Key Concepts Summary
-
-### Cloud Service Models
-
-- **IaaS**: Infrastructure virtualization (servers, storage, networking)
-- **PaaS**: Application development and deployment platform
-- **SaaS**: Complete software applications delivered over internet
-
-### Cloud Deployment Models
-
-- **Public Cloud**: Shared infrastructure, internet-based access
-- **Private Cloud**: Dedicated infrastructure, enhanced control
-- **Hybrid Cloud**: Combination of public and private clouds
-- **Multi-Cloud**: Multiple cloud providers simultaneously
-
-### Essential Characteristics (NIST Model)
-
-- **On-demand self-service**: Automatic resource provisioning
-- **Broad network access**: Available over network via standard mechanisms
-- **Resource pooling**: Multi-tenant model with location independence
-- **Rapid elasticity**: Automatic scaling capabilities
-- **Measured service**: Pay-per-use based on actual consumption
-
-### Cost Models
-
-- **Traditional IT**: CapEx model with large upfront investments
-- **Cloud Computing**: OpEx model with pay-as-you-consume pricing
-
----
-
-## Areas for Further Study
-
-Based on common areas where learners need additional focus:
-
-### If you missed service model questions
-
-- Review shared responsibility boundaries
-- Study specific examples of each service type
-- Practice identifying service models in real scenarios
-
-### If you missed deployment model questions
-
-- Review hybrid cloud integration patterns
-- Study multi-cloud vs. hybrid cloud differences
-- Understand when each model is appropriate
-
-### If you missed cost model questions
-
-- Review CapEx vs. OpEx implications
-- Study cloud cost optimization strategies
-- Understand total cost of ownership calculations
-
-### If you missed characteristic questions
-
-- Review NIST cloud computing definition
-- Study how characteristics enable cloud benefits
-- Understand relationship between characteristics and capabilities
-
----
-
-## Next Steps
-
-### For Scores 80% and Above
-
-1. ✅ Review any missed concepts
-2. ✅ Proceed to [Module 2: Security & Compliance Fundamentals](/level-50/module-02-security-compliance/security-compliance-basics/)
-3. ✅ Continue with Level 50 learning path
-
-### For Scores Below 80%
-
-1. ✅ Review [Cloud Computing Primer](/level-50/module-01-cloud-computing/cloud-computing-primer/)
-2. ✅ Study [Cloud Service Models](/level-50/module-01-cloud-computing/cloud-service-models/) in detail
-3. ✅ Review [Cloud Deployment Models](/level-50/module-01-cloud-computing/cloud-deployment-models/)
-4. ✅ Read [Cloud Benefits and Considerations](/level-50/module-01-cloud-computing/cloud-benefits/)
-5. 🔄 Retake this knowledge check
-
----
-
-## Additional Resources for Review
-
-- [NIST Definition of Cloud Computing](https://csrc.nist.gov/publications/detail/sp/800-145/final)
-- [Microsoft Learn: Cloud Concepts](https://learn.microsoft.com/en-us/training/modules/principles-cloud-computing/)
-- [AWS Cloud Computing Concepts](https://aws.amazon.com/what-is-cloud-computing/)
-- [Google Cloud Overview](https://cloud.google.com/docs/overview/)
-
----
-
-**Assessment Created:** November 2025
-**Last Updated:** November 2025
+- [Describe cloud computing (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-cloud-compute/)
+- [Describe the benefits of using cloud services (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/)
+- [Describe cloud service types (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-cloud-service-types/)
+- [Shared responsibility in the cloud](https://learn.microsoft.com/azure/security/fundamentals/shared-responsibility)
+- [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/overview)

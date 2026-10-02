@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 620" role="img" aria-labelledby="sc-title sc-desc">
+  <title id="sc-title">Azure service categories</title>
+  <desc id="sc-desc">Ten Azure service categories with example services. Core categories covered in depth by Azure Fundamentals: compute (Virtual Machines, App Service, Azure Functions, Azure Kubernetes Service), networking (Virtual Network, VPN Gateway, ExpressRoute, Azure DNS), storage (Blob Storage, Azure Files, Managed Disks, Queue Storage), and identity and security (Microsoft Entra ID, Azure Key Vault, Defender for Cloud). Other categories: databases, AI and machine learning (Microsoft Foundry, Foundry Tools, Azure Machine Learning), analytics, integration, Internet of Things, and management and governance.</desc>
+  <defs><linearGradient id="sc-bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#F7FAFD"/><stop offset="100%" stop-color="#E6F2FD"/></linearGradient></defs>
+  <rect width="980" height="620" rx="12" fill="url(#sc-bg)"/>
+  <text x="32" y="44" font-family="Segoe UI, Inter Variable, sans-serif" font-size="22" font-weight="600" fill="#0C3B5E">Azure service categories</text>
+  <text x="32" y="70" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#41566B">Examples only. Azure has hundreds of services.</text>
+  <rect x="32" y="100" width="172" height="214" rx="10" fill="#FFFFFF" stroke="#0F6CBD" stroke-width="2"/>
+  <path d="M 32 110 a 10 10 0 0 1 10 -10 h 152 a 10 10 0 0 1 10 10 v 44 h -172 z" fill="#0F6CBD"/>
+  <text x="118" y="133" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Compute</text>
+  <rect x="42" y="166" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="118" y="184.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Virtual Machines</text>
+  <rect x="42" y="202" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="118" y="220.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">App Service</text>
+  <rect x="42" y="238" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="118" y="256.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Functions</text>
+  <rect x="42" y="274" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="118" y="292.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Kubernetes Service</text>
+  <rect x="217" y="100" width="172" height="214" rx="10" fill="#FFFFFF" stroke="#0F6CBD" stroke-width="2"/>
+  <path d="M 217 110 a 10 10 0 0 1 10 -10 h 152 a 10 10 0 0 1 10 10 v 44 h -172 z" fill="#0F6CBD"/>
+  <text x="303" y="133" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Networking</text>
+  <rect x="227" y="166" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="303" y="184.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Virtual Network</text>
+  <rect x="227" y="202" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="303" y="220.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">VPN Gateway</text>
+  <rect x="227" y="238" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="303" y="256.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">ExpressRoute</text>
+  <rect x="227" y="274" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="303" y="292.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure DNS</text>
+  <rect x="402" y="100" width="172" height="214" rx="10" fill="#FFFFFF" stroke="#0F6CBD" stroke-width="2"/>
+  <path d="M 402 110 a 10 10 0 0 1 10 -10 h 152 a 10 10 0 0 1 10 10 v 44 h -172 z" fill="#0F6CBD"/>
+  <text x="488" y="133" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Storage</text>
+  <rect x="412" y="166" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="488" y="184.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Blob Storage</text>
+  <rect x="412" y="202" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="488" y="220.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Files</text>
+  <rect x="412" y="238" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="488" y="256.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Managed Disks</text>
+  <rect x="412" y="274" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="488" y="292.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Queue Storage</text>
+  <rect x="587" y="100" width="172" height="214" rx="10" fill="#FFFFFF" stroke="#0F6CBD" stroke-width="2"/>
+  <path d="M 587 110 a 10 10 0 0 1 10 -10 h 152 a 10 10 0 0 1 10 10 v 44 h -172 z" fill="#0F6CBD"/>
+  <text x="673" y="124" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Identity</text>
+  <text x="673" y="142" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">and security</text>
+  <rect x="597" y="166" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="673" y="184.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Microsoft Entra ID</text>
+  <rect x="597" y="202" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="673" y="220.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Key Vault</text>
+  <rect x="597" y="238" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="673" y="256.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Defender for Cloud</text>
+  <rect x="772" y="100" width="172" height="214" rx="10" fill="#FFFFFF" stroke="#9DB9D3" stroke-width="1.2"/>
+  <path d="M 772 110 a 10 10 0 0 1 10 -10 h 152 a 10 10 0 0 1 10 10 v 44 h -172 z" fill="#DCEAF7"/>
+  <text x="858" y="133" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#0C3B5E">Databases</text>
+  <rect x="782" y="166" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="858" y="184.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure SQL Database</text>
+  <rect x="782" y="202" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="858" y="220.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Cosmos DB</text>
+  <rect x="782" y="238" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="858" y="256.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Database for PostgreSQL</text>
+  <rect x="32" y="336" width="172" height="214" rx="10" fill="#FFFFFF" stroke="#9DB9D3" stroke-width="1.2"/>
+  <path d="M 32 346 a 10 10 0 0 1 10 -10 h 152 a 10 10 0 0 1 10 10 v 44 h -172 z" fill="#DCEAF7"/>
+  <text x="118" y="360" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#0C3B5E">AI and</text>
+  <text x="118" y="378" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#0C3B5E">machine learning</text>
+  <rect x="42" y="402" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="118" y="420.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Microsoft Foundry</text>
+  <rect x="42" y="438" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="118" y="456.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Foundry Tools</text>
+  <rect x="42" y="474" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="118" y="492.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Machine Learning</text>
+  <rect x="217" y="336" width="172" height="214" rx="10" fill="#FFFFFF" stroke="#9DB9D3" stroke-width="1.2"/>
+  <path d="M 217 346 a 10 10 0 0 1 10 -10 h 152 a 10 10 0 0 1 10 10 v 44 h -172 z" fill="#DCEAF7"/>
+  <text x="303" y="369" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#0C3B5E">Analytics</text>
+  <rect x="227" y="402" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="303" y="420.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Data Factory</text>
+  <rect x="227" y="438" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="303" y="456.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Databricks</text>
+  <rect x="227" y="474" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="303" y="492.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Stream Analytics</text>
+  <rect x="402" y="336" width="172" height="214" rx="10" fill="#FFFFFF" stroke="#9DB9D3" stroke-width="1.2"/>
+  <path d="M 402 346 a 10 10 0 0 1 10 -10 h 152 a 10 10 0 0 1 10 10 v 44 h -172 z" fill="#DCEAF7"/>
+  <text x="488" y="369" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#0C3B5E">Integration</text>
+  <rect x="412" y="402" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="488" y="420.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Logic Apps</text>
+  <rect x="412" y="438" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="488" y="456.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">API Management</text>
+  <rect x="412" y="474" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="488" y="492.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Service Bus</text>
+  <rect x="587" y="336" width="172" height="214" rx="10" fill="#FFFFFF" stroke="#9DB9D3" stroke-width="1.2"/>
+  <path d="M 587 346 a 10 10 0 0 1 10 -10 h 152 a 10 10 0 0 1 10 10 v 44 h -172 z" fill="#DCEAF7"/>
+  <text x="673" y="360" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#0C3B5E">Internet</text>
+  <text x="673" y="378" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#0C3B5E">of Things</text>
+  <rect x="597" y="402" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="673" y="420.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">IoT Hub</text>
+  <rect x="597" y="438" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="673" y="456.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">IoT Edge</text>
+  <rect x="772" y="336" width="172" height="214" rx="10" fill="#FFFFFF" stroke="#9DB9D3" stroke-width="1.2"/>
+  <path d="M 772 346 a 10 10 0 0 1 10 -10 h 152 a 10 10 0 0 1 10 10 v 44 h -172 z" fill="#DCEAF7"/>
+  <text x="858" y="360" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#0C3B5E">Management</text>
+  <text x="858" y="378" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#0C3B5E">and governance</text>
+  <rect x="782" y="402" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="858" y="420.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Monitor</text>
+  <rect x="782" y="438" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="858" y="456.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Policy</text>
+  <rect x="782" y="474" width="152" height="28" rx="5" fill="#F2F6FA"/>
+  <text x="858" y="492.5" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#1B2A38">Azure Arc</text>
+  <rect x="32" y="585" width="18" height="18" rx="4" fill="#0F6CBD"/>
+  <text x="58" y="599" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#1B2A38">Core categories in the Azure Fundamentals learning path</text>
+  <rect x="430" y="585" width="18" height="18" rx="4" fill="#DCEAF7" stroke="#9DB9D3"/>
+  <text x="456" y="599" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#1B2A38">Other categories</text>
+</svg>

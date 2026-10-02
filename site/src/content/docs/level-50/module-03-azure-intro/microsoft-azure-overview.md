@@ -1,120 +1,76 @@
 ---
-title: "Microsoft Azure Overview"
-description: "Introduction to Microsoft Azure platform and core services"
+title: "Microsoft Azure overview"
+description: "What Azure is, the separate Azure clouds, how management groups, subscriptions, resource groups, and resources fit together, and how you pay for Azure."
+lastVerified: 2026-10-02
 sidebar:
   order: 1
 ---
 
----
+Azure is Microsoft's public cloud platform: a growing set of hundreds of services that you can use to build, deploy, and manage applications. You can run existing applications on virtual machines, or build new ones on managed services such as databases, AI models, and serverless functions.
 
-## What is Microsoft Azure?
+This page explains how Azure is organized, so that later modules make sense. The next pages cover the service categories, the global infrastructure, and the tools.
 
-Microsoft Azure is a comprehensive cloud computing platform that provides infrastructure, platform, and software services. It enables organizations to build, deploy, and manage applications through Microsoft's global network of data centers.
+## One platform, several clouds
 
-## Core Azure Services
+Most people use global Azure, sometimes called Azure commercial or Azure public. Microsoft also runs separate Azure clouds for specific legal and national requirements ([Microsoft Learn](https://learn.microsoft.com/azure/compliance/offerings/)):
 
-### Compute Services
+| Cloud | Who it's for |
+|---|---|
+| Azure (global) | Any customer, in regions worldwide |
+| Azure Government | US government agencies and their partners, in physically and logically isolated US regions run by screened US personnel |
+| Azure Government Secret and Top Secret | US classified workloads |
+| Azure operated by 21Vianet | Customers in China. 21Vianet operates the datacenters, and Microsoft doesn't maintain them directly. |
 
-- **Virtual Machines**: IaaS compute resources
-- **App Service**: PaaS for web apps and APIs
-- **Azure Functions**: Serverless compute
-- **Container Instances**: Container hosting
+Microsoft Learn calls these isolated instances **sovereign regions**. They're the starting point for Microsoft Sovereign Cloud, which Level 100 covers.
 
-### Storage Services
+:::note
+Some features of global Azure aren't in the other clouds. For example, Azure Copilot isn't available in Azure Government or Azure operated by 21Vianet ([Microsoft Learn](https://learn.microsoft.com/azure/copilot/overview)). Always check service availability for the cloud and region you plan to use.
+:::
 
-- **Blob Storage**: Object storage for unstructured data
-- **File Storage**: Managed file shares
-- **Disk Storage**: Persistent disks for VMs
-- **Archive Storage**: Long-term data archival
+## How Azure organizes your resources
 
-### Networking Services
+Azure has four levels for organizing what you deploy. Policies and access you set at one level apply to everything below it.
 
-- **Virtual Network**: Software-defined networking
-- **Load Balancer**: Traffic distribution
-- **VPN Gateway**: Secure connectivity
-- **CDN**: Content delivery network
+```mermaid
+graph TD
+  T[Tenant root group] --> MG1[Management group: Production]
+  T --> MG2[Management group: Development]
+  MG1 --> S1[Subscription: Web]
+  MG1 --> S2[Subscription: Data]
+  MG2 --> S3[Subscription: Sandbox]
+  S1 --> RG1[Resource group: web-prod]
+  S1 --> RG2[Resource group: network-prod]
+  RG1 --> R1[App Service]
+  RG1 --> R2[Azure SQL Database]
+  RG2 --> R3[Virtual network]
+```
 
-### Database Services
+- A **resource** is anything you create: a VM, a virtual network, a database, a storage account.
+- A **resource group** holds related resources. Every resource belongs to exactly one resource group. Resource groups can't be nested. Deleting a resource group deletes everything in it, which is handy for a temporary test environment.
+- A **subscription** is a unit of management, billing, and scale. Each subscription gets its own invoice, and it's also an access boundary. Many organizations use separate subscriptions for development and production.
+- A **management group** holds subscriptions, so you can apply policies and access to many subscriptions at once. Management groups can be nested up to six levels deep. Every Microsoft Entra tenant has one tenant root group at the top.
 
-- **SQL Database**: Managed relational database
-- **CosmosDB**: NoSQL database service
-- **MySQL/PostgreSQL**: Managed open-source databases
+Every request to create, change, or delete a resource goes through **Azure Resource Manager**, whichever tool sends it. Resource Manager authenticates and authorizes the request, applies role-based access control, and passes it to the service. That's why the portal, the command line, and templates all behave the same way.
 
-## Azure Global Infrastructure
+## How you pay for Azure
 
-### Regions and Availability Zones
+Azure uses the consumption-based model from Module 1. The main pricing options are:
 
-- **60+ Azure regions** worldwide
-- **Availability Zones** for high availability
-- **Data residency** compliance options
-- **Edge locations** for content delivery
+- **Pay-as-you-go.** You pay for what you use, with no commitment.
+- **Reservations.** You commit to a one-year or three-year plan for a specific resource type and get a discount ([Microsoft Learn](https://learn.microsoft.com/azure/cost-management-billing/reservations/save-compute-costs-reservations)).
+- **Savings plans.** You commit to an hourly spend on compute for one or three years and get a discount across eligible services ([Microsoft Learn](https://learn.microsoft.com/azure/cost-management-billing/savings-plan/savings-plan-overview)).
+- **Azure Hybrid Benefit.** You apply existing Windows Server and SQL Server licenses, and Linux subscriptions, to Azure resources ([Microsoft Learn](https://learn.microsoft.com/azure/azure-vmware/sql-server-hybrid-benefit)).
 
-### Key Regions for Sovereignty
+Before you deploy, the Azure Pricing Calculator estimates the cost of a design. After you deploy, Microsoft Cost Management tracks spending, and tags on resources let you report costs by project or team.
 
-- **European regions** for EU data residency
-- **Government clouds** for public sector
-- **National clouds** for specific countries
+## Sources
 
-## Azure Management Tools
-
-### Azure Portal
-
-- Web-based management interface
-- Graphical resource management
-- Monitoring and troubleshooting tools
-- Customizable dashboards
-
-### Azure CLI and PowerShell
-
-- Command-line interface for automation
-- Cross-platform availability
-- Scripting and infrastructure as code
-- Integration with DevOps pipelines
-
-## Security and Compliance
-
-### Built-in Security Features
-
-- **Microsoft Entra ID**: Identity and access management
-- **Security Center**: Unified security monitoring
-- **Key Vault**: Secrets and key management
-- **Network Security Groups**: Traffic filtering
-
-### Compliance Certifications
-
-- SOC 1, 2, and 3
-- ISO 27001, 27018, 27017
-- GDPR, HIPAA, PCI DSS
-- FedRAMP, DoD compliance
-
-## Pricing Models
-
-### Pay-as-You-Go
-
-- No upfront costs
-- Pay for resources consumed
-- Flexible scaling options
-
-### Reserved Instances
-
-- Discounted pricing for committed usage
-- 1-year or 3-year terms
-- Up to 72% savings
-
-### Hybrid Benefit
-
-- Use existing licenses in Azure
-- Windows Server and SQL Server
-- Cost optimization for existing investments
-
-## Next Steps
-
-1. ✅ Explore Azure Portal interface
-2. ✅ Continue to [Azure Service Categories](/level-50/module-03-azure-intro/azure-service-categories/)
-3. ✅ Review [Azure Global Infrastructure](/level-50/module-03-azure-intro/azure-global-infrastructure/)
-4. ✅ Study [Azure Management Tools](/level-50/module-03-azure-intro/azure-management-tools/)
-5. ✅ Complete [Azure Fundamentals Knowledge Check](/level-50/module-03-azure-intro/azure-fundamentals-knowledge-check/)
-
----
-
-**Last Updated:** November 2025
+- [What is Microsoft Azure (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-core-architectural-components-of-azure/2-what-microsoft-azure)
+- [Describe Azure physical infrastructure (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure)
+- [Describe Azure management infrastructure (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure)
+- [Describe Azure Resource Manager and ARM templates (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates)
+- [Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings](https://learn.microsoft.com/azure/compliance/offerings/)
+- [What is Azure Copilot?](https://learn.microsoft.com/azure/copilot/overview)
+- [What are Azure Reservations?](https://learn.microsoft.com/azure/cost-management-billing/reservations/save-compute-costs-reservations)
+- [What are savings plans?](https://learn.microsoft.com/azure/cost-management-billing/savings-plan/savings-plan-overview)
+- [Describe cost management in Azure (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-cost-management-azure/)
