@@ -66,6 +66,39 @@ sidebar:
 Do **not** add `layout`, `nav_order`, or `parent` — those were Jekyll keys and
 are not used by Starlight.
 
+### Navigation, level pages, and module pages
+
+The sidebar, prev/next links, learning path, and landing page templates are all
+built from the folders, so a new module or page needs no config change.
+
+- Module folders are `level-NN/module-NN-short-name/`. The number in the folder
+  name sets the module order. The sidebar label is the landing page title
+  without its "Module N:" prefix, so write titles as
+  `title: "Module 6: Microsoft 365 Local"` (sentence case, official product
+  names kept).
+- Inside a module the landing page comes first, then pages by `sidebar.order`,
+  then title. Pages with `knowledge-check` in the file name always come last.
+- Level landing pages (`level-NN/index.md`) show the level's modules
+  automatically above the page body. Don't keep a hand-written module list.
+- Module landing pages (`index.md` or `index.mdx`) show a summary row, the
+  optional fields below, the module's pages with their `description`, and a
+  link to the next module. Don't keep a hand-written page list or a
+  `## Overview` heading; start with a short intro paragraph.
+
+```yaml
+---
+title: "Module 6: Microsoft 365 Local"
+description: "20-220 characters. Also shown on the level page and home page."
+module:                          # Every key is optional.
+  duration: "30-45 minutes"
+  objectives:                    # Shown as "After this module, you can:"
+    - Explain what Microsoft 365 Local runs and where.
+  prerequisites:                 # Plain text, or a root-relative page link
+    - /level-100/module-03-azure-local/
+  next: /level-200/              # Override the computed next module
+---
+```
+
 ### Sources and writing style
 
 - End every page with a `## Sources` section listing the Microsoft Learn pages

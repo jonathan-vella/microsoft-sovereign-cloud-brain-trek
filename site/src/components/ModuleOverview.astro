@@ -1,0 +1,95 @@
+---
+/**
+ * ModuleOverview.astro
+ *
+ * Top of a module landing page (`level-NN/module-NN-name/index.md[x]`): a summary row (level,
+ * duration, pages, knowledge check, progress) and the optional learning objectives and
+ * prerequisites from the page's `module` front matter. Added automatically by the
+ * MarkdownContent override; pages do not import it. Every field is optional.
+ */
+import { findDoc, getCourse, pluralize } from "./course/course";
+import { withBase } from "../../scripts/site-constants.mjs";
+
+const { entry, sidebar } = Astro.locals.starlightRoute;
+const course = await getCourse(sidebar);
+const level = course.find((l) => l.modules.some((m) => m.overview?.isCurrent));
+const mod = level?.modules.find((m) => m.overview?.isCurrent);
+const meta = entry.data.module ?? {};
+const knowledgeChecks = mod?.units.filter((u) => u.isKnowledgeCheck) ?? [];
+
+const prerequisites = await Promise.all(
+  (meta.prerequisites ?? []).map(async (item) => {
+    const doc = await findDoc(item);
+    return doc ? { text: doc.data.title, href: withBase(item) } : { text: item };
+  }),
+);
+---
+
+{
+  mod && level && (
+    <dl class="module-glance not-content" aria-label="Module summary" data-progress-pages={mod.hrefs.join(" ")}>
+      <div>
+        <dt>Level</dt>
+        <dd>
+          <a href={level.overview.href}>{level.label}</a>
+        </dd>
+      </div>
+      {meta.duration && (
+        <div>
+          <dt>Duration</dt>
+          <dd>{meta.duration}</dd>
+        </div>
+      )}
+      <div>
+        <dt>Pages</dt>
+        <dd>{pluralize(mod.hrefs.length, "page")}</dd>
+      </div>
+      {knowledgeChecks.length > 0 && (
+        <div>
+          <dt>Assessment</dt>
+          <dd>
+            <a href={knowledgeChecks[0].href}>Knowledge check</a>
+          </dd>
+        </div>
+      )}
+      <div class="module-glance__progress">
+        <dt>Your progress</dt>
+        <dd>
+          <span data-progress-text hidden />
+          <noscript>Shown when JavaScript is on</noscript>
+        </dd>
+      </div>
+    </dl>
+  )
+}
+
+{
+  meta.objectives && meta.objectives.length > 0 && (
+    <>
+      <h2 id="learning-objectives">Learning objectives</h2>
+      <p>After this module, you can:</p>
+      <ul>
+        {meta.objectives.map((o) => (
+          <li>{o}</li>
+        ))}
+      </ul>
+    </>
+  )
+}
+
+{
+  prerequisites.length > 0 && (
+    <>
+      <h2 id="prerequisites">Prerequisites</h2>
+      <ul>
+        {prerequisites.map((p) => (
+          <li>{p.href ? <a href={p.href}>{p.text}</a> : p.text}</li>
+        ))}
+      </ul>
+    </>
+  )
+}
+
+<script>
+  import "./course/progress";
+</script>

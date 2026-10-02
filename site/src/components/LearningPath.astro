@@ -1,0 +1,98 @@
+---
+/**
+ * LearningPath.astro
+ *
+ * Levels and their modules in learning order, read from the sidebar so new modules appear
+ * automatically. Shows "x of y pages visited" per module and level from the reader's browser
+ * history (see course/progress.ts).
+ *
+ *   <LearningPath />                    every level (home page)
+ *   <LearningPath level="level-100" />  one level's modules (level landing pages, added automatically)
+ */
+import { getCourse, pluralize } from "./course/course";
+
+interface Props {
+  /** Level folder id, for example "level-100". Omit to show every level. */
+  level?: string;
+  /** Heading text. Defaults to "Learning path" or "Modules in this level". */
+  title?: string;
+}
+
+const { level: levelId } = Astro.props;
+const course = await getCourse(Astro.locals.starlightRoute.sidebar);
+const levels = levelId ? course.filter((l) => l.id === levelId) : course;
+const title = Astro.props.title ?? (levelId ? "Modules in this level" : "Learning path");
+const headingId = levelId ? "modules-in-this-level" : "learning-path";
+const single = Boolean(levelId);
+---
+
+{
+  levels.length > 0 && (
+    <section class:list={["learning-path not-content", { "learning-path--single": single }]} aria-labelledby={headingId}>
+      <h2 id={headingId} class="learning-path__title">{title}</h2>
+      <ol class="learning-path__levels" role="list">
+        {levels.map((level) => (
+          <li class="lp-level" data-progress-pages={level.hrefs.join(" ")}>
+            {!single && (
+              <div class="lp-level__head">
+                <span class:list={["lp-level__badge", `lp-level__badge--${level.badge?.variant ?? "default"}`]} aria-hidden="true">
+                  {level.badge?.text ?? `L${level.number}`}
+                </span>
+                <h3 class="lp-level__title">
+                  <a href={level.overview.href}>{level.label}</a>
+                </h3>
+                {level.overview.description && <p class="lp-level__desc">{level.overview.description}</p>}
+                <p class="lp-level__meta">
+                  {pluralize(level.modules.length, "module")}, {pluralize(level.hrefs.length, "page")}
+                  <span class="lp-progress-text" data-progress-text hidden />
+                </p>
+              </div>
+            )}
+            {level.modules.length > 0 && (
+              <ol class="lp-modules" role="list" aria-label={single ? undefined : `${level.label} modules`}>
+                {level.modules.map((mod) => {
+                  const target = mod.overview ?? mod.units[0];
+                  const duration = mod.entry?.data.module?.duration;
+                  return (
+                    <li class:list={["lp-module", { "lp-module--current": mod.isCurrent }]} data-progress-pages={mod.hrefs.join(" ")}>
+                      <span class="lp-module__num" aria-hidden="true">{mod.number}</span>
+                      <div class="lp-module__body">
+                        <a class="lp-module__link" href={target?.href} aria-current={mod.isCurrent ? "true" : undefined}>
+                          <span class="sr-only">Module {mod.number}: </span>
+                          {mod.name}
+                        </a>
+                        {single && mod.overview?.description && <p class="lp-module__desc">{mod.overview.description}</p>}
+                        <p class="lp-module__meta">
+                          <span>{pluralize(mod.hrefs.length, "page")}</span>
+                          {duration && <span>{duration}</span>}
+                          <span class="lp-progress-text" data-progress-text hidden />
+                        </p>
+                      </div>
+                      <span class="lp-module__bar" aria-hidden="true" />
+                    </li>
+                  );
+                })}
+              </ol>
+            )}
+            {single && level.extras.length > 0 && (
+              <div class="lp-extras">
+                <h3 class="lp-extras__title">Also in this level</h3>
+                <ul role="list">
+                  {level.extras.map((u) => (
+                    <li data-progress-page={u.href}>
+                      <a href={u.href}>{u.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </li>
+        ))}
+      </ol>
+    </section>
+  )
+}
+
+<script>
+  import "./course/progress";
+</script>

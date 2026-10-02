@@ -90,13 +90,20 @@ body,
   letter-spacing: -0.015em;
 }
 
-.sl-markdown-content h2 {
+/* H2 rule. Starlight wraps markdown headings in `.sl-heading-wrapper` (a flex row with the
+   anchor link), so the border goes on the wrapper to span the full column. Headings rendered
+   by components are not wrapped and get the same rule directly. */
+.sl-markdown-content h2:not(:where(.not-content *)) {
   margin-top: 2.25rem;
+}
+
+.sl-markdown-content .sl-heading-wrapper.level-h2,
+.sl-markdown-content > h2 {
   padding-bottom: 0.35rem;
   border-bottom: 1px solid var(--sl-color-gray-6, #e1dfdd);
 }
 
-.sl-markdown-content h3 {
+.sl-markdown-content h3:not(:where(.not-content *)) {
   margin-top: 1.75rem;
 }
 
@@ -171,50 +178,121 @@ starlight-sidebar-state-persist .badge,
   font-size: 0.875rem;
 }
 
+/* Module groups inside a level: Starlight gives every group label the large size, which made
+   seven module names wrap and outweigh the level they belong to. Level labels drop one step,
+   and the label and L50-L300 badge sit in one row so a long label wraps beside its badge
+   instead of pushing the badge onto its own line. */
+.sidebar-content .group-label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4em;
+}
+
+.sidebar-content .group-label > .large {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.sidebar-content .group-label > .badge {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.sidebar-content .top-level > li > details > summary .group-label > .large {
+  font-size: 1rem;
+}
+
+.sidebar-content ul:not(.top-level) .group-label > .large {
+  font-size: 0.9375rem;
+  line-height: 1.35;
+}
+
 /* ───────────────────────── Components ───────────────────────── */
 
-/* Knowledge Check answer reveal */
-.knowledge-check {
-  border-left: 4px solid var(--azure-blue);
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
-  background: var(--azure-blue-tint);
-  border-radius: 0 6px 6px 0;
+/* Keyboard focus: one visible ring for links, summaries, and buttons in content and
+   components (Starlight's default is the browser outline, black on the blue tints). */
+.sl-markdown-content :is(a, summary, button):focus-visible,
+.not-content :is(a, summary, button):focus-visible {
+  outline: 2px solid var(--azure-blue);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
-.knowledge-check summary {
-  cursor: pointer;
+/* Knowledge Check answer reveal (KnowledgeCheck.astro).
+   Starlight's details styles add the chevron and a 2px start border; this tints the block. */
+.sl-markdown-content details.knowledge-check {
+  --sl-details-border-color: var(--azure-blue);
+  margin: 1.25rem 0 1.75rem;
+  padding: 0.25rem 1rem;
+  background: #f3f8fd;
+  border: 1px solid #cfe3f6;
+  border-radius: 6px;
+}
+
+/* 0.5625rem padding + 1.65 line height gives a 44px touch target. */
+.sl-markdown-content details.knowledge-check > summary {
   color: var(--azure-blue-pressed);
   font-weight: 600;
+  padding-block: 0.5625rem;
 }
 
-.knowledge-check[open] summary {
-  margin-bottom: 0.5rem;
+.sl-markdown-content details.knowledge-check[open] > summary {
+  margin-bottom: 0.25rem;
 }
 
-/* Diagram container */
-.diagram-container {
+.knowledge-check__body {
+  padding-bottom: 0.75rem;
+}
+
+.knowledge-check__body > :first-child {
+  margin-top: 0;
+}
+
+.knowledge-check__answer {
+  color: var(--sl-color-white);
+}
+
+.knowledge-check__reference {
+  font-size: 0.9375rem;
+  color: var(--sl-color-gray-2);
+}
+
+/* Diagram container (DiagramContainer.astro) */
+.sl-markdown-content details.diagram-container {
   border: 1px solid var(--sl-color-gray-5);
   border-radius: 8px;
   margin: 1.75rem 0;
-  overflow: hidden;
+  padding: 0;
   background: var(--card-bg);
 }
 
-.diagram-container > summary {
-  background: linear-gradient(180deg, #f7fafd 0%, #eef4fa 100%);
+.sl-markdown-content details.diagram-container > summary {
+  background: #f7fafd;
+  border-radius: 8px;
   padding: 0.75rem 1rem;
-  cursor: pointer;
   font-weight: 600;
   color: var(--azure-blue-pressed);
 }
 
-.diagram-container[open] > summary {
+.sl-markdown-content details.diagram-container[open] > summary {
+  margin-bottom: 0;
   border-bottom: 1px solid var(--sl-color-gray-5);
+  border-radius: 8px 8px 0 0;
 }
 
+.sl-markdown-content details.diagram-container:hover,
+.sl-markdown-content details.diagram-container:has(> summary:hover) {
+  border-color: #b4d6f3;
+}
+
+/* Wide diagrams and tables scroll inside the body instead of being clipped. */
 .diagram-container .diagram-body {
   padding: 1rem;
+  overflow-x: auto;
+}
+
+.diagram-container .diagram-body > :first-child {
+  margin-top: 0;
 }
 
 /* Mermaid SVGs — frame them like inline diagrams from Microsoft Learn. */
@@ -237,9 +315,8 @@ pre.mermaid svg {
 
 /* ───────────── Learning Objectives card (LearningObjectives.astro) ───────────── */
 .learning-objectives {
-  background: linear-gradient(135deg, #f0f7ff 0%, #e6f2fd 100%);
+  background: #f3f8fd;
   border: 1px solid #cfe3f6;
-  border-left: 4px solid var(--azure-blue);
   border-radius: 8px;
   padding: 1.25rem 1.5rem;
   margin: 1.5rem 0 2rem;
@@ -249,9 +326,6 @@ pre.mermaid svg {
   font-weight: 600;
   color: var(--azure-blue-pressed);
   margin: 0 0 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   font-size: 1.0625rem;
 }
 
@@ -326,22 +400,13 @@ pre.mermaid svg {
   max-width: 38ch;
 }
 
-/* Card grid on the splash page: lift cards slightly for the Learn vibe. */
+/* Starlight <Card> is not a link, so it gets no hover lift. */
 .card-grid .card,
 .card {
   border-radius: 8px;
   border: 1px solid var(--card-border);
   background: var(--card-bg);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-  transition: transform 120ms ease, box-shadow 120ms ease,
-    border-color 120ms ease;
-}
-
-.card-grid .card:hover,
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(15, 108, 189, 0.12);
-  border-color: #cfe3f6;
 }
 
 /* Hero CTA primary button — solid Fluent blue. */
@@ -356,4 +421,476 @@ a.action--primary {
 a.action--primary:hover {
   background: var(--azure-blue-hover);
   border-color: var(--azure-blue-hover);
+}
+
+/* ───────────── Page footer: dates and sources ───────────── */
+
+.page-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin: 0 0 0 auto;
+}
+
+/* The `## Sources` section closes every page. Pages write it as plain Markdown; this sets it
+   apart as reference material: a top rule, a smaller heading, and compact link lists. */
+.sl-markdown-content .sl-heading-wrapper.level-h2:has(> #sources) {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0;
+  border-top: 1px solid var(--sl-color-gray-5);
+  border-bottom: 0;
+}
+
+.sl-markdown-content .sl-heading-wrapper.level-h2 > h2#sources {
+  font-size: var(--sl-text-lg);
+  color: var(--sl-color-gray-2);
+}
+
+.sl-markdown-content .sl-heading-wrapper.level-h2:has(> #sources) ~ :is(ul, ol, p) {
+  font-size: var(--sl-text-sm);
+  color: var(--sl-color-gray-2);
+}
+
+.sl-markdown-content .sl-heading-wrapper.level-h2:has(> #sources) ~ :is(ul, ol) > li + li {
+  margin-top: 0.125rem;
+}
+
+/* ───────────── Learning path (LearningPath.astro) ───────────── */
+
+.learning-path {
+  --lp-num: 1.75rem;
+  --lp-line: var(--sl-color-gray-5);
+  margin-block: 0 2.5rem;
+}
+
+.learning-path__title {
+  font-size: var(--sl-text-h2);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--sl-color-white);
+  letter-spacing: -0.005em;
+  margin: 0 0 1.25rem;
+}
+
+.learning-path__levels,
+.lp-modules,
+.unit-list,
+.topic-list,
+.lp-extras ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lp-level {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(15rem, 19rem) 1fr;
+  gap: 1rem 2.5rem;
+  padding-block: 1.75rem;
+  border-top: 1px solid var(--sl-color-gray-5);
+}
+
+/* The path: each level badge connects down to the next one. */
+.lp-level:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 1.375rem;
+  top: 4.25rem;
+  bottom: -1.75rem;
+  border-inline-start: 2px dotted var(--lp-line);
+}
+
+.lp-level__head {
+  position: relative;
+  padding-inline-start: 3.75rem;
+}
+
+.lp-level__badge {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  background: var(--sl-color-gray-6);
+  color: var(--sl-color-white);
+}
+
+.lp-level__badge--note { background: var(--sl-color-blue-low); color: var(--sl-color-blue-high); }
+.lp-level__badge--tip { background: var(--sl-color-purple-low); color: var(--sl-color-purple-high); }
+.lp-level__badge--caution { background: var(--sl-color-orange-low); color: var(--sl-color-orange-high); }
+.lp-level__badge--danger { background: var(--sl-color-red-low); color: var(--sl-color-red-high); }
+
+.lp-level__title {
+  margin: 0;
+  font-size: var(--sl-text-h4);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.lp-level__title a {
+  color: var(--sl-color-white);
+  text-decoration: none;
+}
+
+.lp-level__title a:hover {
+  color: var(--azure-blue);
+  text-decoration: underline;
+}
+
+.lp-level__desc {
+  margin: 0.375rem 0 0;
+  font-size: var(--sl-text-sm);
+  line-height: 1.5;
+  color: var(--sl-color-gray-2);
+}
+
+.lp-level__meta,
+.lp-module__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.5rem;
+  margin: 0.375rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--sl-color-gray-3);
+}
+
+.lp-module__meta > * + *::before {
+  content: "·";
+  margin-inline-end: 0.5rem;
+}
+
+.lp-level__meta .lp-progress-text {
+  flex-basis: 100%;
+}
+
+.lp-modules {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(17rem, 100%), 1fr));
+  gap: 0.25rem 1.5rem;
+  align-content: start;
+}
+
+.lp-module {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--lp-num) 1fr;
+  gap: 0.75rem;
+  padding-block: 0.625rem;
+}
+
+.lp-module__num,
+.unit__step {
+  display: grid;
+  place-items: center;
+  width: var(--lp-num, 1.75rem);
+  height: var(--lp-num, 1.75rem);
+  border: 1px solid var(--sl-color-gray-4);
+  border-radius: 50%;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--sl-color-gray-2);
+  background: var(--card-bg);
+}
+
+[data-progress-state="started"] > .lp-module__num {
+  border-color: var(--azure-blue);
+  color: var(--azure-blue);
+}
+
+[data-progress-state="done"] > .lp-module__num,
+[data-visited="true"] > .unit__step {
+  border-color: var(--azure-blue);
+  background: var(--azure-blue);
+  color: #fff;
+}
+
+.lp-module--current > .lp-module__num {
+  box-shadow: 0 0 0 3px var(--azure-blue-tint);
+}
+
+.lp-module__link {
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--sl-color-white);
+  text-decoration: none;
+}
+
+.lp-module__link:hover {
+  color: var(--azure-blue);
+  text-decoration: underline;
+}
+
+/* The whole row is clickable; the link stays the only focus stop. */
+.lp-module__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.lp-module__desc {
+  margin: 0.25rem 0 0;
+  font-size: var(--sl-text-sm);
+  line-height: 1.5;
+  color: var(--sl-color-gray-2);
+}
+
+/* Thin progress line under each module, filled from the reader's visited pages. */
+.lp-module__bar {
+  position: absolute;
+  inset-inline: calc(var(--lp-num) + 0.75rem) 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 1px;
+  background: linear-gradient(var(--azure-blue), var(--azure-blue)) no-repeat 0 0 /
+      calc(var(--progress, 0) * 100%) 100%,
+    var(--sl-color-gray-6);
+  transition: background-size 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* One level on its own landing page: a single column with descriptions. */
+.learning-path--single .lp-level {
+  display: block;
+  padding-block: 0;
+  border-top: 0;
+}
+
+.learning-path--single .learning-path__title {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--sl-color-gray-6);
+}
+
+.learning-path--single .lp-modules {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.learning-path--single .lp-module {
+  padding-block: 0.875rem;
+}
+
+.lp-extras {
+  margin-top: 1.5rem;
+}
+
+.lp-extras__title {
+  margin: 0 0 0.5rem;
+  font-size: var(--sl-text-base);
+  font-weight: 600;
+  color: var(--sl-color-white);
+}
+
+.lp-extras li + li {
+  margin-top: 0.25rem;
+}
+
+.lp-extras a,
+.unit__link,
+.topic__link {
+  color: var(--sl-color-text-accent);
+  text-decoration: none;
+}
+
+.lp-extras a:hover,
+.unit__link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 50rem) {
+  .lp-level {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-modules {
+    padding-inline-start: 3.75rem;
+  }
+
+  .lp-level:not(:last-child)::before {
+    top: 3.25rem;
+  }
+}
+
+/* ───────────── Module landing pages (ModuleOverview / ModuleUnits) ───────────── */
+
+.module-glance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2.25rem;
+  margin: 0 0 2rem;
+  padding: 1rem 1.25rem;
+  background: #f7fafd;
+  border: 1px solid #dfe9f3;
+  border-radius: 8px;
+}
+
+.module-glance dt {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--sl-color-gray-3);
+}
+
+.module-glance dd {
+  margin: 0.125rem 0 0;
+  padding: 0;
+  font-weight: 600;
+  color: var(--sl-color-white);
+}
+
+.module-glance dd a {
+  color: var(--sl-color-text-accent);
+}
+
+.module-glance__progress dd {
+  font-weight: 400;
+}
+
+.module-glance noscript {
+  color: var(--sl-color-gray-3);
+}
+
+.unit-list {
+  counter-reset: unit;
+}
+
+.unit {
+  display: grid;
+  grid-template-columns: 1.75rem 1fr;
+  gap: 0.875rem;
+  padding-block: 0.875rem;
+  border-bottom: 1px solid var(--sl-color-gray-6);
+}
+
+.unit:last-child {
+  border-bottom: 0;
+}
+
+.unit__link {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.unit__tag {
+  display: inline-block;
+  margin-inline-start: 0.5rem;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.6;
+  vertical-align: 0.1em;
+  background: var(--azure-blue-tint);
+  color: var(--azure-blue-pressed);
+}
+
+.unit__visited:not(:empty) {
+  margin-inline-start: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--sl-color-gray-3);
+}
+
+.unit__desc {
+  margin: 0.25rem 0 0;
+  font-size: var(--sl-text-sm);
+  line-height: 1.5;
+  color: var(--sl-color-gray-2);
+}
+
+.next-module {
+  margin-top: 2rem;
+}
+
+.next-module a {
+  display: grid;
+  gap: 0.125rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: border-color 160ms ease-out, box-shadow 160ms ease-out;
+}
+
+.next-module a:hover {
+  border-color: var(--azure-blue);
+  box-shadow: 0 2px 8px rgba(15, 108, 189, 0.12);
+}
+
+.next-module__label {
+  font-size: 0.8125rem;
+  color: var(--sl-color-gray-3);
+}
+
+.next-module__title {
+  font-size: var(--sl-text-h4);
+  font-weight: 600;
+  color: var(--sl-color-text-accent);
+}
+
+.next-module__title::after {
+  content: " →";
+}
+
+/* ───────────── Home page ───────────── */
+
+html[data-has-hero] .hero {
+  padding-bottom: 2.5rem;
+}
+
+html[data-has-hero] .learning-path {
+  margin-top: 0;
+}
+
+.topic-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(22rem, 100%), 1fr));
+  gap: 0 2.5rem;
+}
+
+.topic {
+  padding-block: 1rem;
+  border-top: 1px solid var(--sl-color-gray-5);
+}
+
+.topic__link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.625rem;
+  text-decoration: none;
+}
+
+.topic__link:hover .topic__title {
+  text-decoration: underline;
+}
+
+.topic__title {
+  font-size: var(--sl-text-h4);
+  font-weight: 600;
+}
+
+.topic__meta {
+  font-size: 0.8125rem;
+  color: var(--sl-color-gray-3);
+}
+
+.topic__desc {
+  margin-top: 0.25rem;
+  font-size: var(--sl-text-sm);
+  line-height: 1.55;
+  color: var(--sl-color-gray-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-module__bar,
+  .next-module a {
+    transition: none;
+  }
 }

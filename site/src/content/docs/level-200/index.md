@@ -1,12 +1,10 @@
 ---
-title: "Level 200 - Intermediate"
+title: "Level 200: Intermediate"
 description: "Intermediate architecture and pre-sales skills for Microsoft Sovereign Cloud solutions"
 sidebar:
   label: Overview
   order: 5
 ---
-
-## Overview
 
 Develop the ability to design solutions, plan deployments, and address customer-specific requirements for sovereign cloud architectures.
 

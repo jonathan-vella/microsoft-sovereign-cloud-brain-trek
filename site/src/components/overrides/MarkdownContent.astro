@@ -1,0 +1,24 @@
+---
+/**
+ * Wraps Starlight's MarkdownContent to add the landing page templates:
+ *   level-NN/index                 -> learning path of the level's modules, above the page body
+ *   level-NN/module-NN-name/index     -> module summary, objectives, prerequisites above the body;
+ *                                     the module's pages and the next module below it
+ * Every other page renders unchanged.
+ */
+import Default from "@astrojs/starlight/components/MarkdownContent.astro";
+import LearningPath from "../LearningPath.astro";
+import ModuleOverview from "../ModuleOverview.astro";
+import ModuleUnits from "../ModuleUnits.astro";
+
+const { id } = Astro.locals.starlightRoute;
+const isLevel = /^level-\d+$/.test(id);
+const isModule = /^level-\d+\/module-[^/]+$/.test(id);
+---
+
+<Default>
+  {isModule && <ModuleOverview />}
+  {isLevel && <LearningPath level={id} />}
+  <slot />
+  {isModule && <ModuleUnits />}
+</Default>

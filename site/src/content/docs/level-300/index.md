@@ -1,12 +1,10 @@
 ---
-title: "Level 300 - Advanced"
+title: "Level 300: Advanced"
 description: "Advanced implementation and expert-level guidance for Microsoft Sovereign Cloud solutions"
 sidebar:
   label: Overview
   order: 6
 ---
-
-## Overview
 
 Achieve expert-level proficiency to lead complex deployments, manage production environments, and drive strategic customer engagements.
 

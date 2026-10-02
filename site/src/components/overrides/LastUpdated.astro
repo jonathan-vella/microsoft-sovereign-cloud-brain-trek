@@ -1,0 +1,29 @@
+---
+/**
+ * Replaces Starlight's LastUpdated line in the page footer. Shows "Last verified <date>" from the
+ * page's `lastVerified` front matter (when the facts were checked against Microsoft sources) next
+ * to the git-based "Last updated" date, both in the same format.
+ */
+import { formatDate } from "../course/course";
+
+const { entry, lastUpdated } = Astro.locals.starlightRoute;
+const verified = entry.data.lastVerified ? formatDate(entry.data.lastVerified) : undefined;
+const updated = lastUpdated ? formatDate(lastUpdated) : undefined;
+---
+
+{
+  (verified || updated) && (
+    <p class="page-dates">
+      {verified && (
+        <span>
+          Last verified <time datetime={verified.iso}>{verified.text}</time>
+        </span>
+      )}
+      {updated && (
+        <span>
+          Last updated <time datetime={updated.iso}>{updated.text}</time>
+        </span>
+      )}
+    </p>
+  )
+}
