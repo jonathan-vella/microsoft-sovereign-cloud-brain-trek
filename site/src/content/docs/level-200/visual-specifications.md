@@ -1,608 +1,73 @@
 ---
-title: "Level 200 Visual Asset Specifications"
-description: "Internal Level 200 visual asset specifications (excluded from nav)."
+title: "Level 200 visual specifications"
+description: "Internal specifications for the Level 200 diagrams: the SVG files, the Mermaid diagrams, their sources, and the retired assets they replace."
+lastVerified: 2026-10-02
 sidebar:
   hidden: true
 ---
 
-Purpose: Detailed design briefs for all 18 Level 200 visual assets (Assets 21–38)
-Created: October 21, 2025
-Asset Registry: See `docs/assets/images/README.md` for short specs and usage
-
----
-
-## Module 1: Azure Local Architecture Deep Dive
-
-### Asset 21: Advanced Networking Architecture
-
-Context:
-This diagram helps architects and networking engineers design Azure Local clusters with resilient, high-performance network topologies. It explains SET (Switch Embedded Teaming), VLAN segmentation, and RDMA optimizations needed for low-latency, high-throughput storage and compute traffic.
-
-Design Constraints:
-- Canvas 1400x1000 px, 50px margins
-- Use Microsoft color palette and Segoe-like typography
-- Maintain clarity at 800px width for inline displays
-- Compatible with accessibility requirements (patterns + colors)
-
-Content Requirements:
-- Physical server with 6–8 NICs
-- Virtual switch (vSwitch) + SET team labels
-- VLAN segmentation: management, storage, cluster, customer
-- RDMA path overlay (separate line style)
-- Dual ToR switches and failover paths
-- Bandwidth allocation indicators (eg. 10Gb/25Gb/100Gb)
-- Legend and short notes
-
-Visual Elements:
-- Server icon with adapter slots
-- vSwitch block showing teaming
-- Color-coded VLAN flows (blue, orange, green, purple)
-- Solid arrows for active, dashed for failover
-- Small iconography for redundancy and QoS
-
-Wireframe Guidance:
-Top: server with ports; center-left: vSwitch visualization; center-right: ToR switches; bottom: RDMA overlay and storage array. Legend on the right.
-
-Acceptance Criteria:
-- [ ] Shows 6–8 NICs labeled
-- [ ] SET team and vSwitch are clearly depicted
-- [ ] VLANs color-coded and legible
-- [ ] RDMA paths visually distinct and labeled
-- [ ] Dual-switch redundancy is evident
-- [ ] Bandwidth nodes present with numeric values
-- [ ] Legend explains colors and line styles
-- [ ] Alt text provided in final SVG
-
-Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2509
-- Adapt SET examples and include RDMA notes from system requirements
-
----
-
-### Asset 22: High-Availability Architecture
-
-Context:
-Shows HA patterns for Azure Local: node layout, quorum options, storage resilience, and failover. Useful for operations and DR planning.
-
-Design Constraints:
-- Canvas 1300x900 px
-- Include options for 3-node and 4-node clusters
-- Keep diagrams simple for export to slides
-
-Content Requirements:
-- Cluster node arrangement (3/4 nodes)
-- Storage Spaces Direct replication modes
-- Quorum options: disk, file share, cloud witness
-- Replication/backup flows and RTO/RPO annotations
-- Failover scenarios illustrated
-
-Visual Elements:
-- Circular node layout with storage tier in center
-- Arrows for replication paths
-- Highlighted quorum options with callouts
-- Color states: active/standby/failed
-
-Wireframe Guidance:
-Top left: 3-node cluster; top right: 4-node cluster; bottom: quorum options and storage replication details. Provide side column with RTO/RPO guidance.
-
-Acceptance Criteria:
-- [ ] Shows both 3-node and 4-node topologies
-- [ ] Quorum placement options annotated
-- [ ] Storage redundancy types labeled (2-way/3-way/EC)
-- [ ] Failover path visible and explained
-- [ ] RTO/RPO indicators present
-- [ ] Diagram readable at 1024 width
-- [ ] Accessibility: color + pattern for states
-
-Microsoft Learn Adaptation:
-- References: https://learn.microsoft.com/en-us/azure/azure-local/deploy/create-cluster
-- Use official S2D icons and concepts as basis
-
----
-
-### Asset 23: Hardware Planning Decision Tree
-
-Context:
-A decision flowchart guiding hardware selection based on workload class, capacity, redundancy and budget.
-
-Design Constraints:
-- Canvas 1200x1400 px (vertical)
-- Decision diamonds and endpoint recommendation cards
-
-Content Requirements:
-- Start: workload requirements
-- Branches: performance tier, capacity, redundancy, environment
-- Endpoints: validated BOM recommendations
-
-Visual Elements:
-- Diamonds for decisions, rectangles for actions
-- Color-coded outcome paths for recommended tiers
-- Cost/perf mini-metrics on endpoints
-
-Wireframe Guidance:
-Top: start node. Follow vertical tree down with 3–5 layers. Endpoints at bottom with recommended configs.
-
-Acceptance Criteria:
-- [ ] Flow covers performance, capacity, redundancy, budget
-- [ ] Endpoints include BOM and short rationale
-- [ ] No decision path exceeds 5 hops
-- [ ] Visuals use accessible colors and patterns
-- [ ] All endpoints have brief cost guidance
-
-Microsoft Learn Adaptation:
-- Reference: https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-prerequisites?view=azloc-2509
-
----
-
-## Module 2: Arc Advanced Management
-
-### Asset 24: Arc Governance Framework
-
-Context:
-Explains layered governance across tenant, subscription, resource group and resource using Azure Policy and RBAC for Arc-managed resources.
-
-Design Constraints:
-- Canvas 1300x900 px
-- Hierarchical/pyramid visual
-
-Content Requirements:
-- Policy layers and inheritance arrows
-- RBAC role mapping examples
-- Monitoring feedback loops and remediation paths
-
-Visual Elements:
-- Layered pyramid with arrows, small RBAC boxes, policy iconography
-- Compliance status indicators (green/red)
-
-Wireframe Guidance:
-Left: pyramid showing layers; center: enforcement arrows; right: monitoring and remediation loops.
-
-Acceptance Criteria:
-- [ ] Shows inheritance across layers
-- [ ] RBAC roles and example permissions shown
-- [ ] Remediation/monitoring feedback loops illustrated
-- [ ] Links to policy definition examples included
-
-Microsoft Learn Adaptation:
-- Arc Policy: https://learn.microsoft.com/en-us/azure/azure-arc/servers/security-overview
-- Azure Policy overview: https://learn.microsoft.com/en-us/azure/governance/policy/overview
-
----
-
-### Asset 25: Arc Cost Optimization Flows
-
-Context:
-Guides discussions about cost levers and chargeback models for Arc-managed resources, helping presales and architects.
-
-Design Constraints:
-- Canvas 1200x800 px
-- Emphasize flow and before/after comparisons
-
-Content Requirements:
-- Resource consumption flows
-- Cost levers: reserved, spot, right-size, hybrid benefits
-- Analytics & chargeback model
-
-Visual Elements:
-- Dollar-flow diagrams, percentage savings callouts, before/after visuals
-
-Wireframe Guidance:
-Left: consumption sources; center: cost levers; right: savings/outcome panel
-
-Acceptance Criteria:
-- [ ] Shows 4–6 clear cost levers
-- [ ] Includes visual savings example
-- [ ] Includes chargeback model callout
-- [ ] Uses correct palette and icons
-
-Microsoft Learn Adaptation:
-- Arc pricing and cost mgmt references: https://azure.microsoft.com/en-us/pricing/details/azure-arc/
-
----
-
-### Asset 26: Enterprise Deployment Topology
-
-Context:
-Shows multi-site Arc-managed topology with central governance and hybrid connectivity options for enterprise deployments.
-
-Design Constraints:
-- Canvas 1400x900 px
-- Include network types (ExpressRoute, VPN), satellite hints optional
-
-Content Requirements:
-- Multiple sites with local resources
-- Central Azure control plane and management agents
-- Connectivity patterns and latency notes
-
-Visual Elements:
-- Geographic site icons, central dashboard, connection line styles for latency
-
-Wireframe Guidance:
-Map layout: HQ on left, branch/retail on right, cloud control plane top center. Include legend for connection types.
-
-Acceptance Criteria:
-- [ ] Shows central management clearly
-- [ ] Distinguishes connection types and latency cues
-- [ ] Agent communication patterns labeled
-- [ ] Resilience and offline scenarios noted
-
-Microsoft Learn Adaptation:
-- Arc at scale: https://learn.microsoft.com/en-us/azure/azure-arc/servers/onboard-group-policy-powershell
-
----
-
-## Module 3: Edge RAG Implementation
-
-### Asset 27: Production RAG Architecture (Detailed)
-
-Context:
-A production-grade Edge RAG topology with load balancing, HA, vector DB replication, LLM inference services and persistence.
-
-Design Constraints:
-- Canvas 1400x1100 px
-- Show both HA and optional cloud sync (dashed lines)
-
-Content Requirements:
-- Load balancer/ingress
-- Replica services for RAG components
-- Vector DB replication and backup
-- LLM inference cluster (Ollama or equivalent)
-- Ingestion pipeline and storage
-- Monitoring/alerting stack
-
-Visual Elements:
-- Layered sections for ingress, processing, storage, monitoring
-- Colored overlays for optional cloud components
-
-Wireframe Guidance:
-Top: ingress/load balancer; mid: RAG services and vector DB; bottom: storage and monitoring; right: optional cloud sync dashed overlay.
-
-Acceptance Criteria:
-- [ ] HA and replicas are indicated
-- [ ] Vector DB replication/backups labeled
-- [ ] LLM inference cluster and model instances visible
-- [ ] Ingestion pipeline with queue shown
-- [ ] Monitoring stack illustrated with metrics/log flow
-- [ ] Optional cloud components dashed and labeled
-
-Microsoft Learn Adaptation:
-- Weaviate deployment notes: https://weaviate.io/blog/how-to-deploy-weaviate
-- Ollama setup: https://github.com/ollama/ollama
-
----
-
-### Asset 28: LLM Inference Optimization
-
-Context:
-Visualizes inference optimizations like quantization, batching, caching and hardware acceleration to help engineers trade off latency vs accuracy.
-
-Design Constraints:
-- Canvas 1300x900 px
-- Include performance curves or small charts
-
-Content Requirements:
-- Quantization options, batching strategies, caching (KV cache)
-- Hardware paths: CPU/GPU/NPU options
-- Tradeoffs: latency vs accuracy
-
-Visual Elements:
-- Pipeline diagram with branches for optimization approaches
-- Small performance curves or heatmap
-
-Wireframe Guidance:
-Left: model baseline; center: optimization branches; right: performance curves and recommended hardware.
-
-Acceptance Criteria:
-- [ ] Shows quantization techniques and tradeoffs
-- [ ] Shows batching and cache impact
-- [ ] Hardware options mapped to performance curves
-- [ ] Clear recommendations for edge configurations
-
-Microsoft Learn Adaptation:
-- LLM optimization references: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/model-versions
-
----
-
-### Asset 29: Vector Database Architecture Comparison
-
-Context:
-Compares Weaviate, Milvus and PostgreSQL+pgvector across architecture, performance and operational considerations.
-
-Design Constraints:
-- Canvas 1400x1000 px
-- Three-column comparative layout
-
-Content Requirements:
-- Architecture style, indexing, HA, backup, cost and recommended use-cases
-
-Visual Elements:
-- Three columns with micro-architecture sketches, charts and feature matrix
-
-Wireframe Guidance:
-Three vertical panels: left Weaviate, center Milvus, right pgvector; bottom row: feature matrix and recommendation
-
-Acceptance Criteria:
-- [ ] Each DB has architecture sketch
-- [ ] Feature matrix compares all critical dimensions
-- [ ] Recommendations per use-case present
-- [ ] Performance indicators and cost notes included
-
-Microsoft Learn Adaptation:
-- Vector DB comparison reference: https://learn.microsoft.com/en-us/semantic-kernel/concepts/vector-store-connectors/
-
----
-
-### Asset 30: RAG Deployment Topology Options
-
-Context:
-Shows multiple RAG topology templates to map customer scale and availability needs to architecture.
-
-Design Constraints:
-- Canvas 1400x900 px
-- Include four topology variants in grid
-
-Content Requirements:
-- Single-node edge, HA cluster, multi-site federation, hybrid cloud+edge
-- Latency/throughput and cost tradeoffs per variant
-
-Visual Elements:
-- Four topology diagrams in 2x2 grid with short metrics and pros/cons
-
-Wireframe Guidance:
-Top left: single-node; top right: HA cluster; bottom left: multi-site; bottom right: hybrid cloud+edge
-
-Acceptance Criteria:
-- [ ] All four topologies clearly shown
-- [ ] Each has latency/cost/scale notes
-- [ ] Pros/cons bullets present
-
-Microsoft Learn Adaptation:
-- RAG patterns: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data
-
----
-
-### Asset 31: RAG Monitoring and Observability
-
-Context:
-Provides a map of metrics/logs/traces and alerting for a production RAG deployment, enabling ops to set up observability.
-
-Design Constraints:
-- Canvas 1300x900 px
-- Include Prometheus-style metrics and Azure Monitor integration pointers
-
-Content Requirements:
-- Data collection points, processing pipelines (metrics/logs/traces), alert routing, dashboards
-
-Visual Elements:
-- Pipelines with arrows from components to monitoring stack
-- Dashboard mockups and feedback loop
-
-Wireframe Guidance:
-Left: RAG components; center: metrics & logs pipelines; right: dashboards & alerts
-
-Acceptance Criteria:
-- [ ] Data collection arrows from all major components
-- [ ] Monitoring and logging tools labeled (Prometheus, Azure Monitor)
-- [ ] Tracing and alert routing visible
-- [ ] Dashboard and feedback loop included
-
-Microsoft Learn Adaptation:
-- Observability best practices: https://learn.microsoft.com/en-us/azure/architecture/best-practices/monitoring
-
----
-
-## Module 4: Pre-Sales & Solution Design
-
-### Asset 32: Customer Discovery Framework
-
-Context:
-Guides presales through discovery phases to map business drivers to solution recommendations.
-
-Design Constraints:
-- Canvas 1200x800 px
-- Funnel or circular process
-
-Content Requirements:
-- Phases 1–5 with key questions
-- Decision points and KPIs
-- Mapping to solution recommendations
-
-Visual Elements:
-- Funnel with callouts, decision nodes, customer profiles
-
-Wireframe Guidance:
-Circular or funnel flow left-to-right with phase callouts and final recommendation box
-
-Acceptance Criteria:
-- [ ] All discovery phases present with key questions
-- [ ] Decision tree leads to solution suggestions
-- [ ] KPIs and success criteria included
-
-Microsoft Learn Adaptation:
-- Use customer-discovery context in docs/level-200/customer-discovery.md
-
----
-
-### Asset 33: Solution Sizing Framework
-
-Context:
-Translates customer inputs into compute/storage/network sizing and cost estimates.
-
-Design Constraints:
-- Canvas 1300x800 px
-- Include formula flow and outputs
-
-Content Requirements:
-- Input variables and calculation layers
-- Example outputs and confidence ranges
-
-Visual Elements:
-- Flow diagram with inputs, calculations, and outputs; confidence/range visuals
-
-Wireframe Guidance:
-Top: inputs; mid: calculation layer with formulas; bottom: outputs and cost/ROI summary
-
-Acceptance Criteria:
-- [ ] Inputs, calculation layers, and outputs clearly shown
-- [ ] Example numbers or formulas present
-- [ ] Confidence ranges included
-
-Microsoft Learn Adaptation:
-- Cross-reference to docs/level-200/solution-sizing.md
-
----
-
-### Asset 34: TCO and ROI Analysis Model
-
-Context:
-Comparative TCO/ROI modeling for sovereign vs standard cloud to aid decisions.
-
-Design Constraints:
-- Canvas 1400x900 px
-- Include timeline graphs and sensitivity diagrams
-
-Content Requirements:
-- TCO categories, timeline, ROI drivers, break-even analysis
-
-Visual Elements:
-- Stacked cost charts, ROI waterfall and tornado sensitivity
-
-Wireframe Guidance:
-Top: stacked cost by year; mid: ROI waterfall; bottom: sensitivity chart
-
-Acceptance Criteria:
-- [ ] Breakdowns by cost category visible
-- [ ] ROI waterfall and break-even point shown
-- [ ] Sensitivity analysis present
-
-Microsoft Learn Adaptation:
-- Use cost-estimation guidance in docs/level-200/cost-estimation.md
-
----
-
-## Module 5: Compliance & Security Patterns
-
-### Asset 35: GDPR Compliance Mapping
-
-Context:
-Maps GDPR articles/principles to technical controls and evidence collection strategies in Azure Local and Arc deployments.
-
-Design Constraints:
-- Canvas 1400x900 px
-- Include three-column layout (requirements → controls → evidence)
-
-Content Requirements:
-- GDPR principles and mapping to Azure controls
-- Evidence examples and audit trace paths
-
-Visual Elements:
-- Three-column map, checkmark color coding, audit trail arrows
-
-Wireframe Guidance:
-Left: GDPR principles; center: technical controls; right: evidence and reporting flows
-
-Acceptance Criteria:
-- [ ] All major GDPR principles mapped
-- [ ] Technical controls and service names present
-- [ ] Evidence collection pathways shown
-- [ ] References to EU Data Boundary where applicable
-
-Microsoft Learn Adaptation:
-- GDPR & EU Data Boundary references: https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn
-
----
-
-### Asset 36: FedRAMP Compliance Architecture
-
-Context:
-Shows how Azure Local can be configured to meet FedRAMP control families and the ATO process.
-
-Design Constraints:
-- Canvas 1400x1000 px
-- Highlight control-family mapping and continuous monitoring
-
-Content Requirements:
-- Control family mappings, encryption and access controls, continuous monitoring pipeline
-
-Visual Elements:
-- Layered architecture with control-family overlays and ATO roadmap
-
-Wireframe Guidance:
-Top: control families; mid: architecture mappings; bottom: monitoring and ATO steps
-
-Acceptance Criteria:
-- [ ] Control families annotated and mapped to services
-- [ ] Encryption and access controls shown
-- [ ] ATO steps and continuous monitoring pipeline illustrated
-
-Microsoft Learn Adaptation:
-- FedRAMP and Azure Government references: https://www.fedramp.gov/documents-repository/
-
----
-
-### Asset 37: Encryption and Key Management Architecture
-
-Context:
-Depicts key lifecycle, HSM integration, BYOK/BYOHSM options, and where keys are used across systems.
-
-Design Constraints:
-- Canvas 1400x1000 px
-- Use key lifecycle flow and pyramid hierarchy
-
-Content Requirements:
-- Key hierarchy, lifecycle stages, Key Vault/HSM integration, access controls, audit trails
-
-Visual Elements:
-- Pyramid for hierarchy, flowchart for lifecycle, management plane with Key Vault icons
-
-Wireframe Guidance:
-Top left: key hierarchy; top right: lifecycle flow; bottom: Key Vault/HSM integration and access controls
-
-Acceptance Criteria:
-- [ ] Key lifecycle shown with stages
-- [ ] BYOK and HSM options depicted
-- [ ] Integration with Key Vault illustrated
-- [ ] Access control points and audits included
-
-Microsoft Learn Adaptation:
-- Key Vault overview: https://learn.microsoft.com/en-us/azure/key-vault/general/overview
-
----
-
-### Asset 38: Zero-Trust Security Architecture
-
-Context:
-Visualizes Zero-Trust applied to identities, devices, networks, apps and data in sovereign cloud deployments.
-
-Design Constraints:
-- Canvas 1300x1000 px
-- Centralized core with rings for pillars
-
-Content Requirements:
-- Core principle (verify, assume breach, secure layers) and mapping to Azure services
-
-Visual Elements:
-- Central core with radial pillars, service icons around ring, detection/response loop
-
-Wireframe Guidance:
-Core center: verify icon; surrounding rings: identity, endpoints, networks, data, apps; outer: detection & response
-
-Acceptance Criteria:
-- [ ] Core Zero-Trust principle shown
-- [ ] Pillars mapped to Azure services
-- [ ] Detection and response loop shown
-
-Microsoft Learn Adaptation:
-- Zero Trust guidance: https://learn.microsoft.com/en-us/security/zero-trust/
-
----
-
-## Summary & Next Steps
-
-- Total assets specified: 18 (Assets 21–38)
-- Each asset includes context, constraints, content, visuals, wireframes, acceptance criteria, and Learn references
-- Next: integrate placeholders into `docs/level-200/*.md` (Phase 3)
-
----
-
-Last Updated: October 21, 2025
+This page describes every diagram used in Level 200 so authors can update a diagram when its facts change. It lists
+the SVG files in `site/public/images/level-200/`, the Mermaid diagrams written inline in pages, and the older assets
+that stay on disk only so their URLs keep working.
+
+## Style rules for Level 200 SVGs
+
+- Hand-written SVG with a `viewBox` about 960 units wide. No embedded raster images and no external fonts.
+- `role="img"` with `aria-labelledby` pointing at a `<title>` and a `<desc>`. The `desc` states the facts the diagram
+  shows, so a screen reader user gets the same content.
+- Real `<text>` elements in sentence case, at least 12 units high, Segoe UI font stack.
+- Fluent 2 and Azure palette: blue `#0F6CBD` and `#2886DE` for Azure and Arc, green `#107C10` for workloads and
+  outputs, orange `#FF8C00` for customer-side or external parts, light backgrounds `#F7FAFD` and `#E6F2FD`. The
+  reference is `site/public/images/hero/sovereign-cloud-hero-2026.svg`.
+- Every label must match the page that uses the diagram. Show preview status in the label when a feature is preview.
+- To replace a diagram, add a new file name, update the page reference and alt text, and keep the old file.
+
+## SVG diagrams
+
+| File | Used on | What it shows | Replaces |
+|---|---|---|---|
+| `storage-spaces-direct-2026.svg` | [Azure Local architecture deep dive](/level-200/module-01-azure-local/azure-local-architecture-deep-dive/) | Hyperconverged storage path: machines with direct-attached drives, the storage bus, the shared pool, resiliency (mirror, dual parity, fault domains), CSV volumes, and Azure Local VMs and AKS. Notes that SAN-backed designs use the disaggregated or multi-rack types. | `storage-spaces-direct.svg` |
+| `sdn-architecture-2026.svg` | [Azure Local advanced networking](/level-200/module-01-azure-local/azure-local-advanced-networking/) | SDN enabled by Azure Arc (2506 or later): Azure portal, CLI, and ARM manage logical networks and NSGs through Azure Arc. Network Controller runs as a Failover Cluster service. Virtual networks, SLB, VPN, and L3/GRE gateways are marked as not supported. | `sdn-architecture.svg` |
+| `enterprise-arc-topology-2026.svg` | [Arc enterprise patterns](/level-200/module-02-arc/arc-enterprise-patterns/) | Azure landing zone governance (management groups, Azure Policy, RBAC, tags, cost) over Arc resource groups, private cloud operations through Arc resource bridge (Azure Local, VMware vSphere 7.0 or 8.0, SCVMM), and connectivity choices (Arc gateway, Private Link, ExpressRoute or VPN). | `enterprise-arc-topology.svg` |
+| `foundry-local-agentic-retrieval-2026.svg` | [Foundry Local deployment](/level-200/module-03-foundry-local/foundry-local-deployment/) | Azure Local with an AKS Arc cluster hosting two sibling Arc extensions: Foundry Local (inference operator, Model and ModelDeployment CRDs, ONNX Runtime or vLLM) and Agentic Retrieval `microsoft.arc.rag` (ingestion, Collections on Milvus and Postgres, agents runtime, MCP server with six search tools, chat UI). | `edge-rag-implementation.svg` |
+| `compliance-security-patterns-2026.svg` | [Compliance and security patterns](/level-200/module-05-compliance/compliance-security-patterns/) | Requirements (NIS2, DORA, GDPR, EU AI Act, FedRAMP, sovereign control levels) mapped to Defender for Cloud, Azure Policy, Compliance Manager, Microsoft Entra and Arc, then to evidence outputs. | `security-patterns-matrix.svg` |
+| `fedramp-boundaries-2026.svg` | [FedRAMP compliance](/level-200/module-05-compliance/fedramp-compliance/) | Azure commercial and Azure Government FedRAMP High P-ATO scope, the three US Gov regions (only Virginia with availability zones), the two DoD regions, Azure Government Secret, and Azure Government Top Secret. | `fedramp-control-families.svg` |
+| `encryption-key-hierarchy-2026.svg` | [Encryption key management](/level-200/module-06-sovereign-public-cloud-controls/encryption-key-management/) | Managed HSM (FIPS 140-3 Level 3, customer-controlled security domain) and the EKM preview path through a customer-run EKM Proxy (wrapKey and unwrapKey only), wrapping data-encryption keys for storage, confidential compute with Secure Key Release, and evidence. | `encryption-key-hierarchy.svg` |
+
+## Mermaid diagrams
+
+These diagrams are fenced `mermaid` blocks in the pages. The site applies the Azure palette at build time.
+
+| Page | Diagram |
+|---|---|
+| [Azure Local high availability patterns](/level-200/module-01-azure-local/azure-local-ha-patterns/) | HA stack: validated hardware, failover clustering, Storage Spaces Direct or SAN, redundant networking, VMs and AKS, backup and DR, and solution updates. |
+| [Arc policy and governance](/level-200/module-02-arc/arc-policy-and-governance/) | Policy flow from a management group assignment to Arc-enabled servers (machine configuration) and Arc-enabled Kubernetes (Azure Policy extension and Gatekeeper). |
+| [Inference runtimes and GPUs](/level-200/module-03-foundry-local/inference-runtimes-and-gpus/) | Request path: Gateway API with TLS, authentication (API key, Entra ID, or service account token), then ONNX Runtime (CPU or GPU) or vLLM (GPU only, Endpoint Picker for multireplica). |
+| [Pre-sales solution design](/level-200/module-04-presales/presales-solution-design/) | From discovery requirements to an operating boundary: Sovereign Public Cloud controls or the Sovereign Private Cloud stack, then Azure Local deployment type and workload zones. |
+| [GDPR implementation](/level-200/module-05-compliance/gdpr-implementation/) | Controller and processor roles: the customer defines purpose and selects services and regions, Microsoft processes under instructions, and DSR and DPIA evidence is kept. |
+| [Sovereign Public Cloud controls](/level-200/module-06-sovereign-public-cloud-controls/sovereign-public-cloud-controls/) | The four capabilities and the EU Data Boundary mapped to Level 1, 2, and 3 controls. |
+| [Private cloud stack architecture](/level-200/module-07-sovereign-private-cloud-stack/private-cloud-stack-architecture/) | Azure Local as the platform for Microsoft 365 Local, GitHub Enterprise Local, Foundry Local, and Agentic Retrieval across connected and disconnected operations. |
+
+## Retired assets
+
+These files stay in `site/public/images/level-200/` so old links keep working. No Level 200 page uses them. Don't
+reference them in new content.
+
+| File | Why it was retired |
+|---|---|
+| `edge-rag-implementation.svg` | Shows Edge RAG with bundled language models. Edge RAG was renamed Agentic Retrieval in June 2026 and no longer bundles a model. |
+| `storage-spaces-direct.svg`, `sdn-architecture.svg`, `enterprise-arc-topology.svg` | Generated diagrams with numbers and topology details that couldn't be verified against Microsoft Learn. |
+| `security-patterns-matrix.svg`, `security-patterns-matrix.png` | Matrix included unverified coverage claims. |
+| `fedramp-control-families.svg`, `fedramp-control-families.png` | Showed control-family counts instead of the Azure and Azure Government authorization boundaries the page teaches. |
+| `encryption-key-hierarchy.svg` | Generic key hierarchy without the Managed HSM and External Key Management status. |
+
+## Sources
+
+- [Storage Spaces Direct overview](https://learn.microsoft.com/azure/azure-local/concepts/storage-spaces-direct-overview)
+- [Software defined networking enabled by Azure Arc on Azure Local](https://learn.microsoft.com/azure/azure-local/concepts/sdn-overview)
+- [Azure Arc resource bridge overview](https://learn.microsoft.com/azure/azure-arc/resource-bridge/overview)
+- [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
+- [What's new in Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new)
+- [Regulatory compliance standards in Microsoft Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards)
+- [Federal Risk and Authorization Management Program](https://learn.microsoft.com/azure/compliance/offerings/offering-fedramp)
+- [Managed HSM External Key Management](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)
