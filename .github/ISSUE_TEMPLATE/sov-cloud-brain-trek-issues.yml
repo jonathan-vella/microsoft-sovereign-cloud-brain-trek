@@ -62,7 +62,7 @@ body:
     attributes:
       label: Relevant Content Context
       description: |
-        - Which file/module is affected? (e.g., docs/level-100/azure-local-overview.md)
+        - Which file/module is affected? (e.g., site/src/content/docs/level-100/module-03-azure-local/azure-local-overview.mdx)
         - What's the specific section or quiz question number?
         - Any error messages, broken links, or incorrect information?
         - Relevant screenshots or examples?
