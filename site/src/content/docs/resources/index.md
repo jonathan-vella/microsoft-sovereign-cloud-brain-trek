@@ -1,251 +1,110 @@
 ---
 title: Resources
-description: "Additional resources, references, and support for Microsoft Sovereign Cloud learning"
+description: "Curated Microsoft Learn hubs and reference pages for Microsoft Sovereign Cloud training."
+lastVerified: 2026-10-02
 sidebar:
   order: 7
 ---
 
----
-
-## Microsoft Official Documentation
-
-### Sovereign Cloud
-
-- **[Microsoft Sovereign Cloud Hub](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)** - Central resource for all sovereign cloud documentation
-- **[What is digital sovereignty?](https://learn.microsoft.com/en-us/industry/sovereign-cloud/overview/digital-sovereignty)** - Core concepts
-- **[European Digital Commitments](https://learn.microsoft.com/en-us/industry/sovereign-cloud/overview/european-digital-commitments)** - Microsoft's commitments
-
-### Sovereign Public Cloud
-
-- **[Sovereign Public Cloud Overview](https://learn.microsoft.com/en-us/industry/sovereign-cloud/sovereign-public-cloud/overview-sovereign-public-cloud)** - Product overview
-- **[Sovereign Landing Zone](https://learn.microsoft.com/en-us/industry/sovereign-cloud/sovereign-public-cloud/sovereign-landing-zone/overview-slz)** - Architecture guidance
-- **[Implementing Workloads](https://learn.microsoft.com/en-us/industry/sovereign-cloud/sovereign-public-cloud/implementing-workloads/overview-implement-workloads)** - Deployment patterns
-
-### Azure Local
-
-- **[Azure Local Documentation](https://learn.microsoft.com/en-us/azure/azure-local/)** - Complete technical reference
-- **[Deployment Overview](https://learn.microsoft.com/en-us/azure/azure-local/deploy/deployment-introduction)** - Getting started
-- **[Disconnected Operations](https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-operations-overview)** - Air-gapped guidance
-- **[What's New](https://learn.microsoft.com/en-us/azure/azure-local/whats-new)** - Latest updates
-
-### Edge RAG
-
-- **[Edge RAG Documentation](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/)** - Main documentation
-- **[Prerequisites](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/complete-prerequisites)** - Deployment requirements
-- **[Deployment Guide](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/overview)** - Step-by-step deployment
-
-### Azure Arc
-
-- **[Azure Arc Overview](https://learn.microsoft.com/en-us/azure/azure-arc/)** - Product overview
-- **[Arc-enabled Servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/)** - Server management
-- **[Arc-enabled Kubernetes](https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/)** - Kubernetes management
-
----
-
-## Microsoft Learn Training Paths
-
-### Sovereignty & Compliance
-
-- **[Get started with Microsoft Cloud for Sovereignty](https://learn.microsoft.com/en-us/training/paths/get-started-sovereignty/)** - 4 modules, ~3 hours
-- **[Implement Azure Landing Zones](https://learn.microsoft.com/en-us/training/modules/enterprise-scale-introduction/)** - Foundation for SLZ
-
-### Azure Fundamentals
-
-- **[Azure fundamentals](https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/)** - 6 modules, ~6 hours
-- **[Introduction to Azure hybrid cloud services](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-hybrid-services/)** - ~45 minutes
-
-### Azure Arc
-
-- **[Introduction to Azure Arc](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-arc/)** - ~30 minutes
-- **[Manage hybrid workloads with Azure Arc](https://learn.microsoft.com/en-us/training/paths/manage-hybrid-infrastructure-with-azure-arc/)** - Complete learning path
-- **[Configure Azure Arc-enabled Kubernetes](https://learn.microsoft.com/en-us/training/modules/intro-to-arc-enabled-kubernetes/)** - Essential for Azure Local
-
-### Security & Identity
-
-- **[Design identity and access management solutions](https://learn.microsoft.com/en-us/training/modules/design-authentication-authorization-solutions/)** - Advanced identity
-- **[Zero Trust security](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)** - Comprehensive framework
-
----
-
-## Certifications
-
-### Foundational
-
-- **[AZ-900: Microsoft Azure Fundamentals](https://learn.microsoft.com/en-us/certifications/azure-fundamentals/)**
-  - Recommended for: All learners starting their Azure journey
-  - Focus: Cloud concepts, Azure services, pricing, and governance
-
-### Associate Level
-
-- **[AZ-104: Microsoft Azure Administrator](https://learn.microsoft.com/en-us/certifications/azure-administrator/)**
-  - Recommended for: Technical professionals
-  - Focus: Azure administration, virtual networks, storage, compute
-
-- **[AZ-305: Designing Microsoft Azure Infrastructure Solutions](https://learn.microsoft.com/en-us/certifications/azure-solutions-architect/)**
-  - Recommended for: Solution architects
-  - Focus: Architecture design, governance, security, high availability
-
-### Expert Level
-
-- **[AZ-500: Microsoft Azure Security Technologies](https://learn.microsoft.com/en-us/certifications/azure-security-engineer/)**
-  - Recommended for: Security professionals
-  - Focus: Identity, platform protection, security operations
-
-- **[AI-102: Designing and Implementing a Microsoft Azure AI Solution](https://learn.microsoft.com/en-us/certifications/azure-ai-engineer/)**
-  - Recommended for: AI developers working with Edge RAG
-  - Focus: Azure AI services, machine learning, NLP
-
----
-
-## Community & Support
-
-### Microsoft Tech Community
-
-- **[Sovereign Cloud Community](https://techcommunity.microsoft.com/t5/sovereign-cloud/ct-p/SovereignCloud)** - Forums and blogs
-- **[Azure Stack HCI Community](https://techcommunity.microsoft.com/t5/azure-stack-hci/bd-p/AzureStackHCI)** - Azure Local discussions
-- **[Azure Arc Blog](https://techcommunity.microsoft.com/t5/azure-arc-blog/bg-p/AzureArcBlog)** - Latest updates
-
-### GitHub Resources
-
-- **[Azure Local Supportability](https://github.com/Azure/AzureLocal-Supportability)** - Troubleshooting guides
-- **[Azure Arc Jumpstart](https://github.com/microsoft/azure_arc)** - Sample scenarios and automation
-
-### YouTube Channels
-
-- **[Microsoft Azure](https://www.youtube.com/@MicrosoftAzure)** - Official Azure channel
-- **[Azure Stack HCI](https://www.youtube.com/@AzureStackHCI)** - Azure Local content
-- **[Microsoft Mechanics](https://www.youtube.com/@MicrosoftMechanics)** - Technical deep dives
-
----
-
-## Tools & Downloads
-
-### Azure Local
-
-- **[Azure Local Catalog](https://aka.ms/AzureStackHCICatalog)** - Hardware options and sizing tool
-- **[Download Software](https://learn.microsoft.com/en-us/azure/azure-local/deploy/download-23h2-software)** - 60-day trial
-
-### Azure Arc
-
-- **[Azure Arc Jumpstart](https://azurearcjumpstart.io/)** - Automation and samples
-- **[Arc Kubernetes Extensions](https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/extensions)** - Available extensions
-
-### PowerShell Modules
-
-- **[Az PowerShell Module](https://learn.microsoft.com/en-us/powershell/azure/)** - Azure management
-- **[Azure Local PowerShell](https://learn.microsoft.com/en-us/azure/azure-local/overview?view=azloc-2509)** - Specific cmdlets
-
----
-
-## Compliance & Regulatory Resources
-
-### Microsoft Trust Center
-
-- **[Trust Center](https://www.microsoft.com/en-us/trust-center)** - Security, privacy, and compliance
-- **[Compliance Offerings](https://learn.microsoft.com/en-us/compliance/regulatory/offering-home)** - Certifications and attestations
-- **[Service Trust Portal](https://servicetrust.microsoft.com/)** - Audit reports and compliance docs
-
-### Regulatory Frameworks
-
-- **[GDPR Compliance](https://learn.microsoft.com/en-us/compliance/regulatory/gdpr)** - EU data protection
-- **[FedRAMP](https://learn.microsoft.com/en-us/compliance/regulatory/offering-fedramp)** - US federal cloud security
-- **[HIPAA](https://learn.microsoft.com/en-us/compliance/regulatory/offering-hipaa-hitech)** - Healthcare compliance
-- **[ISO 27001](https://learn.microsoft.com/en-us/compliance/regulatory/offering-iso-27001)** - Information security management
-
----
-
-## Architecture Resources
-
-### Azure Architecture Center
-
-- **[Cloud Design Patterns](https://learn.microsoft.com/en-us/azure/architecture/patterns/)** - Architecture patterns
-- **[Reference Architectures](https://learn.microsoft.com/en-us/azure/architecture/browse/)** - Proven solutions
-- **[Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)** - Best practices
-
-### Sovereign Cloud Specific
-
-- **[Sovereign Landing Zone](https://learn.microsoft.com/en-us/industry/sovereign-cloud/sovereign-public-cloud/sovereign-landing-zone/overview-slz)** - SLZ architecture
-- **[Azure Local Network Patterns](https://learn.microsoft.com/en-us/azure/azure-local/plan/choose-network-pattern?view=azloc-2509)** - Networking guidance
-
----
-
-## Pricing & Economics
-
-### Azure Pricing
-
-- **[Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)** - Estimate costs
-- **[Azure Local Pricing](https://aka.ms/azloc-pricing)** - Per-core pricing information
-- **[Total Cost of Ownership (TCO) Calculator](https://azure.microsoft.com/en-us/pricing/tco/calculator/)** - Compare costs
-
----
-
-## Case Studies & Success Stories
-
-### Customer Stories
-
-- **[Microsoft Customer Stories](https://customers.microsoft.com/)** - Real-world implementations
-- Filter by:
-  - Industry (Government, Financial Services, Healthcare)
-  - Product (Azure, Azure Local)
-  - Region (Europe, Americas, Asia Pacific)
-
----
-
-## Stay Updated
-
-### Release Notes & Updates
-
-- **[Azure Updates](https://azure.microsoft.com/en-us/updates/)** - Latest features and announcements
-- **[Azure Local What's New](https://learn.microsoft.com/en-us/azure/azure-local/whats-new)** - Product updates
-- **[Azure Arc Updates](https://azure.microsoft.com/en-us/updates/?category=hybrid-cloud)** - Hybrid cloud news
-
-### Events & Webinars
-
-- **[Microsoft Ignite](https://ignite.microsoft.com/)** - Annual conference (November)
-- **[Microsoft Build](https://build.microsoft.com/)** - Developer conference (May)
-- **[Azure Friday](https://learn.microsoft.com/en-us/shows/azure-friday/)** - Weekly video series
-- **[Virtual Training Days](https://www.microsoft.com/en-us/trainingdays)** - Free training events
-
----
-
-## Support Resources
-
-### Technical Support
-
-- **[Azure Support Plans](https://azure.microsoft.com/en-us/support/plans/)** - Support options
-- **[Azure Local Support](https://learn.microsoft.com/en-us/azure/azure-local/manage/get-support)** - How to get help
-- **[Azure Community Support](https://azure.microsoft.com/en-us/support/community/)** - Community forums
-
-### Partner Resources
-
-- **[Microsoft Partner Network](https://partner.microsoft.com/)** - Partner portal
-- **[Azure Local Partners](https://aka.ms/AzureStackHCICatalog)** - Hardware vendors
-- **[Find a Partner](https://appsource.microsoft.com/en-us/marketplace/partner-dir)** - Solution providers
-
----
-
-## Glossary
-
-### Key Terms
-
-- **Data Residency:** Geographic location where data is stored
-- **Operational Sovereignty:** Control over infrastructure operations
-- **Sovereign Landing Zone (SLZ):** Architectural pattern for sovereign workloads
-- **Azure Local:** Hyperconverged infrastructure extending Azure to customer premises
-- **Edge RAG:** Retrieval-Augmented Generation for on-premises AI
-- **Air-Gapped:** Isolated environment with no external connectivity
-- **Zero Trust:** Security model assuming breach and verifying each request
-
-**[Full Glossary →](/resources/glossary/)**
-
----
-
-## Next Steps
-
-- **[Return to Home](/)**
-- **[Start Level 50](../level-50/)**
-- **[Review Introduction](/introduction/)**
-
----
-
-**Last Updated:** November 2025
+Use these Microsoft sources when you need current product documentation, architecture guidance, compliance references, or definitions for the Brain Trek learning path. The links below were checked against Microsoft Learn on 2026-10-02.
+
+## Microsoft Sovereign Cloud portfolio
+
+| Resource | What to use it for |
+|---|---|
+| [What is Microsoft Sovereign Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/microsoft-sovereign-cloud) | Start here for the current name, deployment models, and portfolio components. |
+| [What is Sovereign Public Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-public-cloud) | Understand the public cloud model, sovereignty controls, Data Guardian, External Key Management, and policy guardrails. |
+| [What is Sovereign Private Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud) | Review the private cloud stack for Azure Local, Microsoft 365 Local, GitHub Enterprise Local ([preview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview)), and Foundry Local on Azure Local. |
+| [National Partner Clouds](https://learn.microsoft.com/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds) | Compare local partner-operated clouds such as Bleu in France and Delos Cloud in Germany. |
+| [Sovereign Landing Zone](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-landing-zone) | Learn how SLZ extends Azure landing zones with sovereign policy and management group patterns. |
+| [What are the European digital commitments?](https://learn.microsoft.com/azure/azure-sovereign-clouds/european-digital-commitments) | Review Microsoft's five European commitments, including the Digital Resilience Promise and capacity commitments. |
+| [What is the EU Data Boundary?](https://learn.microsoft.com/privacy/eudb/eu-data-boundary-learn) | Check which Microsoft enterprise online services and geographies are in scope for the EU Data Boundary. |
+
+## Sovereign Public Cloud controls
+
+| Resource | What to use it for |
+|---|---|
+| [What is Data Guardian?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/data-guardian) | Understand monitored Microsoft personnel access and tamper-evident logging for EU and EFTA operational oversight. |
+| [What is External Key Management?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management) | Compare Managed HSM key sovereignty with Managed HSM External Key Management, which is in preview. |
+| [Sovereign Control Panel](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/sovereign-control-panel) | Review the Discover, Control, and Act model for public cloud sovereignty posture management. |
+| [What is Azure Key Vault Managed HSM?](https://learn.microsoft.com/azure/key-vault/managed-hsm/overview) | Learn how Managed HSM provides single-tenant HSM key protection with FIPS 140-3 Level 3 validation. |
+
+## Sovereign Private Cloud and hybrid operations
+
+| Resource | What to use it for |
+|---|---|
+| [What are hyperconverged deployments of Azure Local?](https://learn.microsoft.com/azure/azure-local/overview/hyperconverged-overview) | Review Azure Local architecture, supported workloads, hardware sourcing, management, and scale basics. |
+| [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview) | Plan Azure Local environments that run selected Azure Arc-enabled services from a local control plane. |
+| [Dedicated management cluster for disconnected operations](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-control-plane-appliance) | Size and separate the management cluster used by the disconnected operations control plane. |
+| [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/overview) | Understand Azure Arc resource projection, governance, Kubernetes, servers, and Azure data services outside Azure. |
+| [Release notes for Azure Arc-enabled data services](https://learn.microsoft.com/azure/azure-arc/data/release-notes) | Check retired Arc data services features, including Azure Arc-enabled PostgreSQL server and indirect connectivity mode. |
+| [What is Microsoft 365 Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview) | Learn how Exchange Server, SharePoint Server, and Skype for Business Server run on Azure Local. |
+| [What is GitHub Enterprise Local? (preview)](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview) | Review the preview option for running GitHub Enterprise Server on Azure Local in connected or disconnected environments. |
+
+## Local AI and Agentic Retrieval
+
+| Resource | What to use it for |
+|---|---|
+| [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview) | Plan local model inference on Azure Local through an Arc-enabled Kubernetes extension. |
+| [What is Agentic Retrieval in Agents and Tools with Foundry Local?](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview) | Understand the preview platform for local agentic retrieval, knowledge sources, chat, and MCP tools. |
+| [What's new in Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new) | Track Agentic Retrieval (formerly Edge RAG) platform changes. |
+
+## Security, identity, and compliance
+
+| Resource | What to use it for |
+|---|---|
+| [Zero Trust as a security foundation](https://learn.microsoft.com/security/zero-trust/zero-trust-overview) | Review the Zero Trust principles and Microsoft adoption model. |
+| [What is Microsoft Defender for Cloud?](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction) | Understand CNAPP, CSPM, DevSecOps, CWPP, hybrid protection, and AI security posture management. |
+| [What is Microsoft Entra Agent ID?](https://learn.microsoft.com/entra/agent-id/what-is-microsoft-entra-agent-id) | Learn how Microsoft Entra extends identity, access, governance, and monitoring to AI agents. |
+| [What is Global Secure Access?](https://learn.microsoft.com/entra/global-secure-access/overview-what-is-global-secure-access) | Review Microsoft Entra Internet Access and Microsoft Entra Private Access under the Global Secure Access term. |
+| [Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings](https://learn.microsoft.com/azure/compliance/offerings/) | Find Azure compliance offering segments, audit document access, and cloud environment definitions. |
+| [What is DORA?](https://learn.microsoft.com/compliance/dora/dora-what-is-dora) | Review Microsoft guidance for the EU Digital Operational Resilience Act and CTPP oversight. |
+| [What is Azure Government?](https://learn.microsoft.com/azure/azure-government/documentation-government-welcome) | Understand Azure Government regions, eligibility, isolation, and differences from global Azure. |
+
+## Architecture guidance
+
+| Resource | What to use it for |
+|---|---|
+| [What is an Azure landing zone?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) | Review platform and workload landing zones, accelerators, and Cloud Adoption Framework guidance. |
+| [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/) | Find reference architectures, patterns, technology choices, and Well-Architected Framework guidance. |
+| [Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/) | Download approved Azure architecture icons for diagrams and visual assets. |
+
+## Site references
+
+- [Glossary](/resources/glossary/)
+- [Visual assets index](/resources/visual-assets-index/)
+- [Introduction](/introduction/)
+
+## Sources
+
+- [What is Microsoft Sovereign Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/microsoft-sovereign-cloud)
+- [What is Sovereign Public Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-public-cloud)
+- [What is Sovereign Private Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud)
+- [National Partner Clouds](https://learn.microsoft.com/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds)
+- [Sovereign Landing Zone](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-landing-zone)
+- [What are the European digital commitments?](https://learn.microsoft.com/azure/azure-sovereign-clouds/european-digital-commitments)
+- [What is the EU Data Boundary?](https://learn.microsoft.com/privacy/eudb/eu-data-boundary-learn)
+- [What is Data Guardian?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/data-guardian)
+- [What is External Key Management?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management)
+- [Sovereign Control Panel](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/sovereign-control-panel)
+- [What is Azure Key Vault Managed HSM?](https://learn.microsoft.com/azure/key-vault/managed-hsm/overview)
+- [What are hyperconverged deployments of Azure Local?](https://learn.microsoft.com/azure/azure-local/overview/hyperconverged-overview)
+- [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
+- [Dedicated management cluster for disconnected operations](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-control-plane-appliance)
+- [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/overview)
+- [Release notes for Azure Arc-enabled data services](https://learn.microsoft.com/azure/azure-arc/data/release-notes)
+- [What is Microsoft 365 Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview)
+- [What is GitHub Enterprise Local? (preview)](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview)
+- [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
+- [What is Agentic Retrieval in Agents and Tools with Foundry Local?](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)
+- [What's new in Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new)
+- [Zero Trust as a security foundation](https://learn.microsoft.com/security/zero-trust/zero-trust-overview)
+- [What is Microsoft Defender for Cloud?](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [What is Microsoft Entra Agent ID?](https://learn.microsoft.com/entra/agent-id/what-is-microsoft-entra-agent-id)
+- [What is Global Secure Access?](https://learn.microsoft.com/entra/global-secure-access/overview-what-is-global-secure-access)
+- [Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings](https://learn.microsoft.com/azure/compliance/offerings/)
+- [What is DORA?](https://learn.microsoft.com/compliance/dora/dora-what-is-dora)
+- [What is Azure Government?](https://learn.microsoft.com/azure/azure-government/documentation-government-welcome)
+- [What is an Azure landing zone?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)
+- [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/)
+- [Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/)

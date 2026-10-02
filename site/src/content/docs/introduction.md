@@ -1,420 +1,74 @@
 ---
 title: Introduction
-description: "Master Sovereign Cloud, Azure Local, and Edge AI Technologies - A comprehensive learning journey for architects and solutions professionals"
+description: "Start the Microsoft Sovereign Cloud Brain Trek learning path for architects and solutions professionals."
+lastVerified: 2026-10-02
 sidebar:
   order: 2
 ---
 
----
+The Microsoft Sovereign Cloud Brain Trek is a technical training path for architects, solution engineers, presales teams, and account teams who work with government, regulated industry, and critical infrastructure customers.
 
-## Purpose
+[Microsoft Sovereign Cloud](https://learn.microsoft.com/azure/azure-sovereign-clouds/microsoft-sovereign-cloud), formerly Microsoft Cloud for Sovereignty, is a set of deployment models and capabilities for data residency, compliance, operational oversight, and customer control. The training uses current Microsoft names. Use **Agentic Retrieval (formerly Edge RAG)** for the edge AI content.
 
-This document outlines the **Microsoft Sovereign Cloud Brain Trek** – a comprehensive, structured learning path for architects and solutions professionals to develop deep expertise in sovereign cloud technologies, hybrid infrastructure, and edge AI.
+## Who this training is for
 
-The skilling plan provides:
+Use this site if your role includes one or more of these activities:
 
-- **Structured learning progression** from foundational to advanced concepts
-- **Role-specific tracks** for sales and technical professionals
-- **Knowledge checks** at the end of each module to validate understanding
-- **Clear success metrics** and completion criteria at each level
-- **Curated Microsoft Learn resources** aligned with learning objectives
+- Designing cloud and hybrid architectures for sovereign, regulated, or disconnected environments.
+- Explaining sovereign cloud options to public sector, defense, healthcare, financial services, and critical infrastructure customers.
+- Planning Azure Local, Azure Arc, Microsoft 365 Local, Foundry Local on Azure Local, or Sovereign Landing Zone deployments.
+- Mapping regulatory and operational requirements to Microsoft controls.
+- Preparing for deeper delivery work across Zero Trust, operations, and industry solution patterns.
 
----
+## Microsoft Sovereign Cloud models
 
-## Target Audience
+Microsoft describes three deployment models for sovereign requirements.
 
-### 👔 Sales & Pre-Sales Track
+| Model | What it is | Typical fit |
+|---|---|---|
+| [Sovereign Public Cloud](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-public-cloud) | Microsoft hyperscale cloud regions with additional sovereignty controls such as data residency, operational oversight, customer-managed encryption keys, Sovereign Control Panel, and Sovereign Landing Zone. | Organizations that can use public Azure and need stronger controls, evidence, and policy guardrails. |
+| [Sovereign Private Cloud](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud) | Customer-owned or partner-operated infrastructure based on Azure Local, Microsoft 365 Local, GitHub Enterprise Local ([preview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview)), and Foundry Local on Azure Local. | Workloads that need local control, disconnected operations, or private cloud operation on customer infrastructure. |
+| [National Partner Clouds](https://learn.microsoft.com/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds) | Local partner-operated clouds that combine Microsoft technology with local ownership, local operation, and national governance requirements. | Country or region programs where local operational independence is part of the requirement. |
 
-**Roles:**
+## Learning path
 
-- Account Executives
-- Solution Specialists
-- Technical Sales Professionals
-- Pre-Sales Consultants
+Start at the level that matches your current knowledge. If you design or sell sovereign solutions, read the introduction and Resources section first, then use the levels as a reference path.
 
-**Objectives:**
+| Level | Scope | Use it when |
+|---|---|---|
+| [Level 50 prerequisites](/level-50/) | Cloud, security, compliance, identity, and Azure fundamentals. | You need shared language for cloud service models, data protection, identity, and core Azure concepts. |
+| [Level 100 foundational](/level-100/) | Digital sovereignty, Microsoft Sovereign Cloud models, Azure Local, Azure Arc, Foundry Local concepts, and local productivity patterns at an introductory level. | You need to explain the models, identify common customer scenarios, and understand the main Microsoft services without designing a production architecture. |
+| [Level 200 intermediate](/level-200/) | Solution planning, deployment considerations, governance, cost discussions, Sovereign Public Cloud controls, Sovereign Private Cloud stack decisions, and presales framing. | You need to shape a customer proposal, compare options, and prepare the technical plan for a more detailed design. |
+| [Level 300 advanced](/level-300/) | Architect-level design for Azure Local advanced, Sovereign Landing Zone, architecture patterns, Foundry Local in production, Zero Trust, operations, and industry solutions. | You need to design, review, or operate production sovereign architectures and explain trade-offs. |
+| [Resources](/resources/) | Current Microsoft Learn hubs, glossary terms, and visual asset references. | You need source material, definitions, or links to Microsoft documentation. |
 
-- Identify and qualify sovereign cloud opportunities
-- Articulate business value and ROI
-- Handle customer objections effectively
-- Structure complex deals
-- Navigate compliance discussions
-- Conduct executive briefings
+## Level 300 modules
 
-### 🔧 Technical Track
+Level 300 has seven modules. They focus on design decisions, failure modes, operations, and regulated workload patterns.
 
-**Roles:**
+| Module | Scope |
+|---|---|
+| Azure Local advanced | Scale, networking, certificates, multi-site design, and disconnected operations. |
+| Sovereign Landing Zone | Architecture, policy controls, implementation choices, and data classification. |
+| Architecture patterns | API gateway, event-driven architecture, data mesh, disaster recovery, and DevSecOps patterns for sovereign workloads. |
+| Foundry Local in production | Production architecture, performance, and model lifecycle for local inference and Agentic Retrieval. |
+| Zero Trust | Zero Trust architecture and monitoring across identity, endpoint, data, apps, infrastructure, network, and security operations. |
+| Operations | Observability, incident response, and troubleshooting for sovereign environments. |
+| Industry solutions | Financial services, healthcare, government cloud, and critical infrastructure scenarios. |
 
-- Cloud Architects
-- Field Engineers
-- AI Developers
-- Solution Engineers
-- Systems Administrators
+## How to use the site
 
-**Objectives:**
+Read the levels in order if you are new to sovereign cloud. If you already work with Azure architecture, use Level 50 and Level 100 to check terminology, then move to Level 200 planning and Level 300 design pages.
 
-- Design sovereign cloud architectures
-- Plan and execute deployments
-- Implement security and compliance controls
-- Troubleshoot production issues
-- Optimize performance and costs
-- Manage hybrid environments
+Presales readers should focus on customer scenarios, deployment model selection, regulatory constraints, and trade-offs. Technical readers should focus on landing zones, Azure Local, Arc-enabled management, Zero Trust, and operational runbooks.
 
----
+## Sources
 
-## Key Technologies
-
-This skilling plan covers the following Microsoft technologies:
-
-### Microsoft Sovereign Cloud
-
-**[Learn More →](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)**
-
-Microsoft Sovereign Cloud addresses digital sovereignty requirements through three models:
-
-- **Sovereign Public Cloud:** Enhanced Azure regions with additional sovereignty controls
-- **Sovereign Private Cloud:** Dedicated infrastructure for sovereign workloads
-- **National Partner Clouds:** Country-specific clouds operated by trusted local partners
-
-**Key Capabilities:**
-
-- Data residency and sovereignty
-- Operational sovereignty
-- Regulatory compliance (FedRAMP, ITAR, GDPR, etc.)
-- Enhanced security and isolation
-
-### Azure Local
-
-**[Learn More →](https://learn.microsoft.com/en-us/azure/azure-local/)**
-
-Azure Local (formerly Azure Stack HCI) extends Azure to customer-owned infrastructure for edge computing scenarios.
-
-**Operating Modes:**
-
-1. **Connected Operations**
-   - Seamless Azure integration
-   - Cloud-managed control plane via Azure Arc
-   - Hybrid Azure services (Monitor, Backup, Defender)
-   - Continuous updates from Azure
-
-2. **Disconnected Operations**
-   - Air-gapped environments
-   - Local control plane
-   - Highest operational sovereignty
-   - Manual update delivery
-
-**Common Use Cases:**
-
-- Branch office infrastructure
-- Data center modernization
-- Latency-sensitive workloads
-- Data residency requirements
-- Virtual Desktop Infrastructure (VDI)
-- Kubernetes at the edge
-
-### Azure Arc
-
-**[Learn More →](https://learn.microsoft.com/en-us/azure/azure-arc/)**
-
-Azure Arc enables management of resources across hybrid and multi-cloud environments from a unified Azure control plane.
-
-**Capabilities:**
-
-- Server management (Windows/Linux)
-- Kubernetes cluster management
-- Data services (SQL, PostgreSQL)
-- Azure services anywhere
-- Unified governance and compliance
-
-### Microsoft 365 Local
-
-**[Learn More →](https://learn.microsoft.com/en-us/microsoft-365/local/)**
-
-Microsoft 365 Local brings Microsoft productivity server software into an Azure Local environment that can run entirely in a customer's own datacenter.
-
-**Key Capabilities:**
-
-- Exchange Server and SharePoint Server on Azure Local
-- Full control over security, compliance, and governance
-- Support for both Connected and Disconnected Azure Local modes
-- Simplified deployment with validated reference architecture
-- Complete data sovereignty for productivity workloads
-
-**Designed For:**
-
-- Governments requiring highest standards of data residency
-- Critical industries (defense, intelligence)
-- Regulated sectors with strict compliance requirements
-- Organizations needing productivity services in air-gapped environments
-
-### Retrieval-Augmented Generation (RAG) on Azure Arc for Edge
-
-**[Learn More →](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/)**
-
-Edge RAG enables generative AI solutions on on-premises data without moving data to the cloud.
-
-**Key Features:**
-
-- Search on-premises data with generative AI
-- Data privacy and sovereignty
-- Low-latency AI inference
-- Custom model support (BYOM)
-- Integration with Azure AI services
-
-**Architecture Components:**
-
-- AKS Arc cluster for compute
-- NFS server for data storage
-- Language models (Microsoft-provided or custom)
-- Local portal for management
-- Vector database for embeddings
-
----
-
-## Learning Path Overview
-
-The skilling plan is divided into four progressive levels, each building upon the previous one.
-
-### 📊 Level Comparison
-
-| Level | Objective | Sales Focus | Technical Focus | Duration |
-|-------|-----------|-------------|-----------------|----------|
-| **50** | **Prerequisites:** Essential cloud computing and Azure fundamentals | Basic cloud concepts and terminology for customer conversations | Cloud service models, security principles, and Azure basics | 1 week (0.5-1 hour) |
-| **100** | **Foundational:** Understand the "what" and "why" | Articulate value propositions and identify customer scenarios | Grasp core architectural concepts and technology components | 1-2 weeks (1-3 hours) |
-| **200** | **Intermediate:** Design solutions and handle objections | Develop proposals, conduct TCO/ROI analysis, position against competitors | Plan deployments, understand prerequisites, design solution architectures | 2-3 weeks (6-10 hours) |
-| **300** | **Advanced:** Lead deployments and provide expert guidance | Structure complex deals and navigate deep compliance discussions | Execute end-to-end deployments, troubleshoot, and optimize for production | 4-6 weeks (10-16 hours) |
-
-### 📋 Level 50: Prerequisites
-
-**[Start Level 50 →](/level-50/)**
-
-**Goal:** Build essential foundational knowledge in cloud computing, security, and Azure fundamentals.
-
-**What You'll Learn:**
-
-- Cloud computing concepts (IaaS, PaaS, SaaS)
-- Security and compliance basics
-- Microsoft Azure overview
-- Data protection principles
-- Identity and access management fundamentals
-
-**Prerequisites:**
-
-- Basic computer literacy
-- Internet access for online learning
-- Microsoft Learn account (free)
-
-**Time Commitment:** 30 minutes per week
-
-### 🎯 Level 100: Foundational Concepts
-
-**[Start Level 100 →](/level-100/)**
-
-**Goal:** Build a solid understanding of core concepts, terminology, and value propositions.
-
-**What You'll Learn:**
-
-- Digital sovereignty principles
-- Sovereign cloud models and use cases
-- Azure Local architecture (connected vs. disconnected)
-- Azure Arc fundamentals
-- Edge RAG concepts
-
-**Prerequisites:**
-
-- Completion of Level 50 (or equivalent knowledge)
-- Basic cloud computing knowledge
-- Familiarity with virtualization
-- Microsoft Learn account (free)
-
-**Time Commitment:** 1 hour per week
-
-### 🏗️ Level 200: Intermediate Skills
-
-**[Start Level 200 →](/level-200/)**
-
-**Goal:** Develop the ability to design solutions, plan deployments, and address customer-specific requirements.
-
-**What You'll Learn:**
-
-- Sovereign Landing Zone architecture
-- Azure Local deployment planning
-- Edge RAG prerequisites and setup
-- TCO/ROI modeling
-- Competitive positioning
-
-**Prerequisites:**
-
-- Completion of Level 100
-- Recommended: AZ-900 certification or equivalent
-- Access to Azure subscription (technical track)
-
-**Time Commitment:** 2-3 hours per week
-
-### 🚀 Level 300: Advanced Expertise
-
-**[Start Level 300 →](/level-300/)**
-
-**Goal:** Achieve expert-level proficiency to lead complex deployments, manage production environments, and drive strategic engagements.
-
-**What You'll Learn:**
-
-- Zero Trust security implementation
-- Air-gapped deployment procedures
-- Production Edge RAG optimization
-- Advanced networking architectures
-- MLOps at the edge
-
-**Prerequisites:**
-
-- Completion of Level 200
-- Recommended: AZ-104 or AZ-305 certification
-- Production or lab environment access
-- PowerShell and IaC experience
-
-**Time Commitment:** 2-3 hours per week
-
----
-
-## Timeline Estimates
-
-### Program Duration
-
-**Total Program:** 8-12 weeks (approximately 2-3 months)
-
-```text
-Level 50:  ██ (1 week)
-Level 100: ████ (1-2 weeks)
-Level 200: ████████ (2-3 weeks)
-Level 300: ████████████████ (4-6 weeks)
-```
-
-### Weekly Time Commitment
-
-- **Level 50:** 30 minutes per week
-- **Level 100:** 1 hour per week
-- **Level 200:** 2-3 hours per week
-- **Level 300:** 2-3 hours per week
-
-### Total Learning Hours
-
-- **Level 50:** 0.5-1 hour total
-- **Level 100:** 1-3 hours total
-- **Level 200:** 6-10 hours total
-- **Level 300:** 10-16 hours total
-- **Complete Program:** 18-30 hours total
-
----
-
-## Success Metrics & Completion Criteria
-
-Each level has clear success metrics to validate learning outcomes:
-
-### Level 100 Completion ✅
-
-**Sales Track:**
-
-- ✓ Successfully articulate sovereign cloud value propositions in customer conversations
-- ✓ Pass knowledge check quizzes
-- ✓ Identify appropriate use cases for each sovereign model
-
-**Technical Track:**
-
-- ✓ Demonstrate understanding of architecture differences between connected and disconnected modes
-- ✓ Complete foundational Microsoft Learn modules
-- ✓ Explain key components and their interactions
-
-### Level 200 Completion ✅
-
-**Sales Track:**
-
-- ✓ Develop and present a complete business case (TCO/ROI) for Azure Local deployment
-- ✓ Handle common customer objections confidently
-- ✓ Position solutions against competitive offerings
-
-**Technical Track:**
-
-- ✓ Successfully plan and document a deployment architecture for a test environment
-- ✓ Complete lab exercises for Azure Local deployment planning
-- ✓ Deploy a basic Edge RAG test environment
-
-### Level 300 Completion ✅
-
-**Sales Track:**
-
-- ✓ Lead a customer engagement from discovery through contract signature
-- ✓ Conduct executive-level briefings on sovereign cloud strategy
-- ✓ Structure complex multi-component deals
-
-**Technical Track:**
-
-- ✓ Execute an end-to-end deployment in a production or production-like environment
-- ✓ Troubleshoot and resolve deployment issues independently
-- ✓ Optimize a production Edge RAG solution
-
----
-
-## How to Use This Skilling Plan
-
-### 1. Assess Your Starting Point
-
-- Review the prerequisites for Level 100
-- Determine which professional track (Sales or Technical) aligns with your role
-- Evaluate your current knowledge level
-
-### 2. Follow the Learning Path
-
-- Start with Level 100 even if you have some experience
-- Complete each level sequentially
-- Use the provided checklists to track progress
-- Allocate dedicated time each week
-
-### 3. Leverage Microsoft Resources
-
-- Complete recommended Microsoft Learn modules
-- Access official documentation
-- Join Microsoft Tech Community
-- Attend webinars and events
-
-### 4. Validate Your Learning
-
-- Complete knowledge checks
-- Meet success criteria for each level
-- Consider pursuing relevant Microsoft certifications
-- Apply skills in real customer scenarios
-
----
-
-## Additional Resources
-
-### Microsoft Official Documentation
-
-- **[Microsoft Sovereign Cloud Hub](https://learn.microsoft.com/en-us/industry/sovereign-cloud/)** - Central resource for all sovereign cloud documentation
-- **[Azure Local Documentation](https://learn.microsoft.com/en-us/azure/azure-local/)** - Complete technical reference
-- **[Edge RAG Documentation](https://learn.microsoft.com/en-us/azure/azure-arc/edge-rag/)** - Deployment guides and requirements
-
-### Microsoft Learn Training Paths
-
-- **[Get started with Microsoft Cloud for Sovereignty](https://learn.microsoft.com/en-us/training/paths/get-started-sovereignty/)**
-- **[Manage hybrid workloads with Azure Arc](https://learn.microsoft.com/en-us/training/paths/manage-hybrid-infrastructure-with-azure-arc/)**
-
-### Community & Support
-
-- **[Microsoft Tech Community](https://techcommunity.microsoft.com/)** - Forums and blogs
-- **[Azure Local Supportability GitHub](https://github.com/Azure/AzureLocal-Supportability)** - Troubleshooting guides
-
----
-
-## Next Steps
-
-Ready to begin? Start your learning journey:
-
-1. **[Start with Level 50: Prerequisites](/level-50/)**
-2. **[Continue to Level 100: Foundational Concepts](/level-100/)**
-3. **[Explore Additional Resources](/resources/)**
-
----
-
-<div class="note">
-  <strong>💡 Tip:</strong> Bookmark this page and return regularly to track your progress through the learning path.
-</div>
+- [What is Microsoft Sovereign Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/microsoft-sovereign-cloud)
+- [What is Sovereign Public Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-public-cloud)
+- [What is Sovereign Private Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud)
+- [National Partner Clouds](https://learn.microsoft.com/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds)
+- [Sovereign Landing Zone](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-landing-zone)
+- [What is Azure Local?](https://learn.microsoft.com/azure/azure-local/overview/hyperconverged-overview)
+- [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/overview)
+- [What is Agentic Retrieval in Agents and Tools with Foundry Local?](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)
