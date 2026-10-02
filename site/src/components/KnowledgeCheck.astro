@@ -17,6 +17,8 @@
  *   reference — optional internal or external link to follow up.
  *   summary   — override the default "Click to reveal answer" label.
  */
+import { withBase } from "../../scripts/site-constants.mjs";
+
 interface Props {
   answer: string;
   reference?: string;
@@ -33,7 +35,7 @@ const { answer, reference, summary = "Click to reveal answer" } = Astro.props;
   {
     reference && (
       <p class="knowledge-check__reference">
-        <strong>Reference:</strong> <a href={reference}>{reference}</a>
+        <strong>Reference:</strong> <a href={withBase(reference)}>{reference}</a>
       </p>
     )
   }

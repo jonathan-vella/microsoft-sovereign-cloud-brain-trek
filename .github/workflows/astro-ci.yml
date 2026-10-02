@@ -67,6 +67,12 @@ jobs:
         # entries) before deploy.
         run: npm run emit-legacy-stubs
 
+      - name: Check URLs (no 404s for old URLs, no broken internal links)
+        run: npm run check:urls
+
+      - name: Lint content (base path, lastVerified, Sources, writing style)
+        run: npm run lint:content
+
       - name: Upload dist as artifact for review
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v7

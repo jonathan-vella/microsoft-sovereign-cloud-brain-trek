@@ -21,7 +21,7 @@ Edge RAG, enabled by Azure Arc, is currently in **Preview**. Implementation deta
 <summary>View Diagram: Edge RAG Implementation Architecture</summary>
 <div class="diagram-content">
 
-![Edge RAG Implementation showing on-premises AI infrastructure with embedding, vector store, and LLM components](/microsoft-sovereign-cloud-brain-trek/images/level-200/edge-rag-implementation.svg)
+![Edge RAG Implementation showing on-premises AI infrastructure with embedding, vector store, and LLM components](/images/level-200/edge-rag-implementation.svg)
 _Figure 1: Production Edge RAG architecture on Azure Arc-enabled infrastructure_
 
 </div>

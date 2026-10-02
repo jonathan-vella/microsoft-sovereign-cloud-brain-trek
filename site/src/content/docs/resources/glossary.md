@@ -292,4 +292,4 @@ A security model based on the principle of "never trust, always verify" that req
 ## Next Steps
 
 - **[Return to Resources](./)**
-- **[Start Learning Path](../level-50/)**
+- **[Start Learning Path](/level-50/)**

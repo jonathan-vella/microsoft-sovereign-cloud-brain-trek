@@ -16,6 +16,11 @@
  * Run this whenever you add or remove pages so `emit-legacy-stubs.mjs`
  * keeps the legacy URLs covered. The output is checked in so the build
  * does not need `docs/` to recreate it.
+ *
+ * The existing map is loaded first and its keys are never removed, so a
+ * deleted page keeps its legacy URL. `emit-legacy-stubs.mjs` resolves each
+ * target through `redirects.json`, so stale targets still land on the
+ * current page.
  */
 
 import { promises as fs } from "node:fs";
@@ -88,11 +93,11 @@ function legacyUrlForRoute(route) {
 }
 
 async function main() {
-  const map = {};
+  const map = JSON.parse(await fs.readFile(OUT, "utf8").catch(() => "{}"));
   // Special-case top-level paths.
-  map["/introduction.html"] = "/introduction/";
+  map["/introduction.html"] ??= "/introduction/";
   for (const lvl of ["level-50", "level-100", "level-200", "level-300", "resources"]) {
-    map[`/${lvl}/README.html`] = `/${lvl}/`;
+    map[`/${lvl}/README.html`] ??= `/${lvl}/`;
   }
   // Original Jekyll uppercase URLs that the new Starlight build emits as
   // lowercase kebab-case slugs. Without these aliases the legacy bookmarks
@@ -104,7 +109,7 @@ async function main() {
     "/level-200/VISUAL_SPECIFICATIONS.html": "/level-200/visual-specifications/",
     "/level-300/VISUAL_SPECIFICATIONS.html": "/level-300/visual-specifications/",
   };
-  Object.assign(map, aliases);
+  for (const [k, v] of Object.entries(aliases)) map[k] ??= v;
 
   for await (const route of canonicalRoutes(DIST)) {
     if (route === "" || route === "/") continue;

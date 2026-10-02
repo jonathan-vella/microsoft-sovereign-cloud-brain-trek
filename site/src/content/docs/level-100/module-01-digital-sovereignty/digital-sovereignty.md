@@ -701,7 +701,7 @@ Explore control plane and operational independence:
 
 - **[Explore Microsoft Sovereign Cloud Models →](/level-100/module-02-cloud-models/sovereign-cloud-models/)**
 - **[Learn about Azure Local Overview →](/level-100/module-03-azure-local/azure-local-overview/)**
-- **[Review Regulatory Compliance Resources →](../resources/)**
+- **[Review Regulatory Compliance Resources →](/resources/)**
 
 ---
 

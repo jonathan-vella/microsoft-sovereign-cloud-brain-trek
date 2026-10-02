@@ -17,6 +17,12 @@ export const collections = {
           .min(20)
           .max(220)
           .describe("SEO and navigation description, 20–220 chars."),
+        // Date the page's facts were last checked against Microsoft sources (YYYY-MM-DD).
+        // Optional during the content rebuild; becomes required once every page has it.
+        lastVerified: z
+          .union([z.string().regex(/^\d{4}-\d{2}-\d{2}$/), z.date()])
+          .optional()
+          .describe("Date the page's facts were last verified, YYYY-MM-DD."),
         // The original Jekyll site used `nav_order` for sidebar position.
         // Starlight uses `sidebar.order` instead — the migration script
         // rewrites `nav_order: N` to `sidebar: { order: N }`. Keeping a
