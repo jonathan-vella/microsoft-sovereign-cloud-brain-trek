@@ -1,195 +1,227 @@
 /**
  * build-sidebar.mjs
  *
- * Reads `site/src/content/docs/<level>/` and produces a Starlight sidebar
- * `items` array. The default `autogenerate` config labels every group with
- * the literal folder name, so `module-01-cloud-computing/` shows up in the
- * sidebar as "module-01-cloud-computing" instead of the nicely-formatted
- * "Module 1 — Cloud Computing Fundamentals" that lives in the folder's
- * `index.md` front matter.
+ * Builds the Starlight sidebar from the folders under `src/content/docs/`, so new levels, modules,
+ * and pages appear without editing config. Called once at config-load time from `astro.config.mjs`.
  *
- * This helper walks the level directory, detects subdirectories starting
- * with `module-`, reads their `index.md` to extract the `title`, and emits
- * an explicit group for each. Flat pages and the level overview are still
- * picked up via `autogenerate` of the level root with a sub-directory
- * filter — but Starlight does not have a built-in "autogenerate but skip
- * folders" option, so we list flat pages explicitly as `slug` entries.
+ * Structure produced:
+ *   Introduction
+ *   Level NN group (level-NN/index title without "Level NN:", badge LNN)
+ *     Overview (the level landing page)
+ *     "N. Module title" group per module-NN-* folder (label from its index.md or index.mdx title)
+ *       Overview (the module landing page), content pages, knowledge checks last
+ *     Pages left at the level root (for example the Level 50 comprehensive knowledge check)
+ *   Resources group (resources/ pages, then each level's visual specifications page)
  *
- * The function is called at config-load time from `astro.config.mjs`.
+ * Ordering rules:
+ *   - Levels and modules sort by the number in the folder name (`level-100`, `module-03-...`).
+ *   - Inside a module: landing page first, then `sidebar.order`, then title. Pages whose file name
+ *     contains `knowledge-check` always go last.
+ *   - Pages with `sidebar.hidden: true` or `draft: true` are skipped.
+ *
+ * During the content rebuild some pages still sit at a level root while `redirects.json` already
+ * records the module folder they will move to. Those pages are listed under that module now
+ * (matched by module number), so navigation and prev/next follow the final outline before and
+ * after the move. Once a page moves, its redirect activates and it is picked up from its folder.
  */
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { readRedirects } from "./redirects.mjs";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const CONTENT_ROOT = path.resolve(__dirname, "../src/content/docs");
+const CONTENT_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../src/content/docs");
 
-/**
- * Parse a minimal `title:` value out of the front matter at the top of a
- * Markdown/MDX file. Avoids pulling in a full YAML parser — front matter
- * here is hand-authored and the `title` field is consistently quoted or
- * bare on its own line.
- */
-async function readFrontMatterTitle(filePath) {
+const LEVEL_RE = /^level-(\d+)$/;
+const MODULE_RE = /^module-(\d+)(?:-|$)/;
+const PAGE_RE = /\.mdx?$/;
+const KNOWLEDGE_CHECK_RE = /knowledge-check/;
+
+/** Starlight badge variant per level. Unknown levels fall back to "default". */
+const LEVEL_BADGE_VARIANTS = { 50: "note", 100: "tip", 200: "caution", 300: "danger" };
+
+/** Proper nouns kept capitalized when a label has to be derived from a folder name. */
+const PROPER_NOUNS = [
+  "Microsoft 365 Local", "Sovereign Private Cloud", "Sovereign Public Cloud", "Sovereign Landing Zone",
+  "Azure Local", "Azure Arc", "Foundry Local", "Zero Trust", "Azure", "Arc",
+];
+
+/** Read the keys the sidebar needs from a page's front matter. Returns null if the file is missing. */
+async function readMeta(filePath) {
   let text;
   try {
     text = await fs.readFile(filePath, "utf8");
   } catch {
     return null;
   }
-  if (!text.startsWith("---")) return null;
-  const end = text.indexOf("\n---", 3);
-  if (end === -1) return null;
-  const fm = text.slice(3, end);
-  const line = fm.split("\n").find((l) => /^title\s*:/.test(l));
-  if (!line) return null;
-  let value = line.replace(/^title\s*:\s*/, "").trim();
-  // Strip surrounding quotes if present.
-  if (
-    (value.startsWith('"') && value.endsWith('"')) ||
-    (value.startsWith("'") && value.endsWith("'"))
-  ) {
-    value = value.slice(1, -1);
-  }
-  return value || null;
+  const fm = text.startsWith("---") ? text.slice(3, Math.max(3, text.indexOf("\n---", 3))) : "";
+  const top = (key) => fm.match(new RegExp(`^${key}\\s*:\\s*(.+?)\\s*$`, "m"))?.[1];
+  const sidebar = fm.match(/^sidebar\s*:\s*\n((?:[ \t]+.*\n?)*)/m)?.[1] ?? "";
+  const nested = (key) => sidebar.match(new RegExp(`^[ \\t]+${key}\\s*:\\s*(.+?)\\s*$`, "m"))?.[1];
+  const unquote = (v) => v?.replace(/^(["'])(.*)\1$/, "$2");
+  const order = nested("order");
+  return {
+    title: unquote(top("title")) ?? null,
+    order: order !== undefined && /^-?\d+$/.test(order) ? Number(order) : null,
+    hidden: nested("hidden") === "true" || top("draft") === "true",
+  };
 }
 
-/**
- * Read `sidebar.order` from front matter (used by Starlight to sort items
- * within a group). Returns `null` if not present.
- */
-async function readFrontMatterOrder(filePath) {
-  let text;
+async function readDir(dir) {
   try {
-    text = await fs.readFile(filePath, "utf8");
+    return await fs.readdir(dir, { withFileTypes: true });
   } catch {
-    return null;
+    return [];
   }
-  if (!text.startsWith("---")) return null;
-  const end = text.indexOf("\n---", 3);
-  if (end === -1) return null;
-  const fm = text.slice(3, end);
-  // Look for `sidebar:` block followed by `  order: N`
-  const m = fm.match(/sidebar\s*:\s*\n(?:[ \t]+[a-z_]+\s*:.*\n?)*?[ \t]+order\s*:\s*(\d+)/);
-  return m ? Number(m[1]) : null;
+}
+
+/** Landing page of a folder: index.md or index.mdx. */
+async function readIndex(dir) {
+  for (const name of ["index.md", "index.mdx"]) {
+    const meta = await readMeta(path.join(dir, name));
+    if (meta) return meta;
+  }
+  return null;
+}
+
+/** Content pages (not the landing page) directly inside `dir`, as `{ slug, file, title, order }`. */
+async function readPages(dir, slugPrefix) {
+  const pages = [];
+  for (const ent of await readDir(dir)) {
+    if (!ent.isFile() || !PAGE_RE.test(ent.name) || /^index\.mdx?$/.test(ent.name)) continue;
+    const meta = await readMeta(path.join(dir, ent.name));
+    if (!meta || meta.hidden) continue;
+    const name = ent.name.replace(PAGE_RE, "");
+    pages.push({ slug: `${slugPrefix}/${name}`, name, title: meta.title ?? name, order: meta.order });
+  }
+  return pages;
+}
+
+function byPageOrder(a, b) {
+  const kc = Number(KNOWLEDGE_CHECK_RE.test(a.name)) - Number(KNOWLEDGE_CHECK_RE.test(b.name));
+  if (kc) return kc;
+  const order = (a.order ?? Infinity) - (b.order ?? Infinity);
+  if (order && !Number.isNaN(order)) return order;
+  return a.title.localeCompare(b.title);
+}
+
+/** "module-02-sovereign-landing-zone" -> "Sovereign Landing Zone". Used only when no landing page exists yet. */
+function labelFromFolder(folder) {
+  let label = folder.replace(MODULE_RE, "").replace(/-/g, " ").trim();
+  label = label.charAt(0).toUpperCase() + label.slice(1);
+  for (const noun of PROPER_NOUNS) label = label.replace(new RegExp(`\\b${noun}\\b`, "i"), noun);
+  return label;
+}
+
+/** "Module 3: Azure Local overview" (or "Module 3 - ...") -> "3. Azure Local overview". */
+function moduleLabel(title, number, folder) {
+  const name = title ? title.replace(/^module\s*\d+\s*[-:–—]\s*/i, "").trim() : labelFromFolder(folder);
+  return `${number}. ${name}`;
 }
 
 /**
- * Build the items array for one level (level-50, level-100, etc.).
- *
- * Layout produced:
- *   [
- *     { slug: 'level-50' },                                  // overview
- *     { label: 'Module 1 — Cloud Computing', autogenerate: { directory: 'level-50/module-01-cloud-computing' }, collapsed: true },
- *     { label: 'Module 2 — …', autogenerate: { … }, collapsed: true },
- *     { slug: 'level-50/comprehensive-knowledge-check' },    // flat page
- *     …
- *   ]
+ * Read one level folder: its modules (with interim pages merged in), the pages left at its root,
+ * and its visual specifications page.
  */
-export async function buildLevelItems(level) {
-  const levelDir = path.join(CONTENT_ROOT, level);
-  const entries = await fs.readdir(levelDir, { withFileTypes: true });
+async function readLevel(levelDir, level, redirects) {
+  const modules = new Map(); // module number -> { number, folder, title, hasIndex, overview, pages }
 
-  // Collect the level overview (index.md) — emitted first.
-  const items = [{ slug: level }];
+  for (const ent of await readDir(levelDir)) {
+    const m = ent.isDirectory() && ent.name.match(MODULE_RE);
+    if (!m) continue;
+    const index = await readIndex(path.join(levelDir, ent.name));
+    modules.set(Number(m[1]), {
+      number: Number(m[1]),
+      folder: ent.name,
+      title: index?.title ?? null,
+      overview: index && !index.hidden ? `${level}/${ent.name}` : null,
+      pages: await readPages(path.join(levelDir, ent.name), `${level}/${ent.name}`),
+    });
+  }
 
-  // Two lists so we can sort each independently and then interleave by order.
-  const moduleEntries = []; // { name, label, order }
-  const flatEntries = []; // { slug, order }
-
-  for (const ent of entries) {
-    if (ent.name.startsWith(".")) continue;
-    if (ent.isDirectory()) {
-      if (!ent.name.startsWith("module-")) continue;
-      const indexFile = path.join(levelDir, ent.name, "index.md");
-      const title = (await readFrontMatterTitle(indexFile)) || ent.name;
-      const order = (await readFrontMatterOrder(indexFile)) ?? 99;
-      moduleEntries.push({
-        name: ent.name,
-        label: title,
-        order,
-      });
-    } else if (ent.isFile()) {
-      if (ent.name === "index.md" || ent.name === "index.mdx") continue;
-      if (!/\.(md|mdx)$/.test(ent.name)) continue;
-      const slug = `${level}/${ent.name.replace(/\.(md|mdx)$/, "")}`;
-      const order =
-        (await readFrontMatterOrder(path.join(levelDir, ent.name))) ?? 99;
-      flatEntries.push({ slug, order });
+  const rootPages = [];
+  let visualSpecs = null;
+  for (const page of await readPages(levelDir, level)) {
+    if (page.name === "visual-specifications") {
+      visualSpecs = page.slug;
+      continue;
     }
-  }
-
-  // Merge & sort by order. Within the same order, modules come first
-  // (matches the visual hierarchy on the level overview pages).
-  const merged = [
-    ...moduleEntries.map((m) => ({ kind: "module", ...m })),
-    ...flatEntries.map((f) => ({ kind: "flat", ...f })),
-  ].sort((a, b) => {
-    if (a.order !== b.order) return a.order - b.order;
-    if (a.kind !== b.kind) return a.kind === "module" ? -1 : 1;
-    return (a.label || a.slug).localeCompare(b.label || b.slug);
-  });
-
-  for (const item of merged) {
-    if (item.kind === "module") {
-      items.push({
-        label: item.label,
-        collapsed: true,
-        // Starlight 0.39 requires `autogenerate` to be wrapped in `items`.
-        items: [{ autogenerate: { directory: `${level}/${item.name}`, collapsed: true } }],
-      });
+    // Interim placement: follow the planned move recorded in redirects.json.
+    const target = redirects[`/${page.slug}/`]?.match(new RegExp(`^/${level}/(module-(\\d+)[^/]*)/([^/]*)/?$`));
+    if (!target) {
+      rootPages.push(page);
+      continue;
+    }
+    const [, folder, num, child] = target;
+    const number = Number(num);
+    if (!modules.has(number)) {
+      modules.set(number, { number, folder, title: null, overview: null, pages: [] });
+    }
+    const mod = modules.get(number);
+    if (!child && !mod.overview) {
+      mod.overview = page.slug;
+      mod.title = page.title;
     } else {
-      items.push({ slug: item.slug });
+      mod.pages.push(page);
     }
   }
 
-  return items;
+  return {
+    modules: [...modules.values()].sort((a, b) => a.number - b.number),
+    rootPages: rootPages.sort(byPageOrder),
+    visualSpecs,
+  };
+}
+
+function moduleItem(mod) {
+  const items = [];
+  if (mod.overview) items.push({ slug: mod.overview, label: "Overview" });
+  for (const page of mod.pages.sort(byPageOrder)) items.push({ slug: page.slug });
+  return { label: moduleLabel(mod.title, mod.number, mod.folder), collapsed: true, items };
 }
 
 /**
  * Build the full top-level Starlight sidebar configuration.
  *
- * Top-level level groups are `collapsed: true` so the sidebar opens with a
- * clean five-row outline (Level 50 / 100 / 200 / 300 + Resources). Inside
- * each level, module groups are also `collapsed: true` so the nested tree
- * doesn't auto-expand when the user clicks into a single level. Starlight
- * still auto-opens the active path on the page being viewed.
- *
- * @returns {Promise<import('@astrojs/starlight/schema').StarlightUserConfig['sidebar']>}
+ * @returns {Promise<any[]>}
  */
 export async function buildSidebar() {
-  /** @type {any} */
-  const items = [
-    {
-      label: "Level 50 — Prerequisites",
-      badge: { text: "L50", variant: "note" },
+  const redirects = readRedirects();
+  const levels = (await readDir(CONTENT_ROOT))
+    .filter((ent) => ent.isDirectory() && LEVEL_RE.test(ent.name))
+    .map((ent) => ({ name: ent.name, number: Number(ent.name.match(LEVEL_RE)[1]) }))
+    .sort((a, b) => a.number - b.number);
+
+  /** @type {any[]} */
+  const sidebar = [];
+  if (await readMeta(path.join(CONTENT_ROOT, "introduction.md"))) sidebar.push({ slug: "introduction" });
+
+  const visualSpecs = [];
+  for (const { name, number } of levels) {
+    const levelDir = path.join(CONTENT_ROOT, name);
+    const index = await readIndex(levelDir);
+    const { modules, rootPages, visualSpecs: specs } = await readLevel(levelDir, name, redirects);
+    const items = [];
+    if (index && !index.hidden) items.push({ slug: name, label: "Overview" });
+    for (const mod of modules) items.push(moduleItem(mod));
+    for (const page of rootPages) items.push({ slug: page.slug });
+    if (specs) visualSpecs.push({ slug: specs, label: `Level ${number} visual specifications` });
+
+    sidebar.push({
+      // The badge carries the level, so "Level 100: Foundation" shows as "Foundation [L100]".
+      label: index?.title?.replace(/^level\s*\d+\s*[-:–—]\s*/i, "").trim() || `Level ${number}`,
+      badge: { text: `L${number}`, variant: LEVEL_BADGE_VARIANTS[number] ?? "default" },
       collapsed: true,
-      items: await buildLevelItems("level-50"),
-    },
-    {
-      label: "Level 100 — Foundational",
-      badge: { text: "L100", variant: "tip" },
-      collapsed: true,
-      items: await buildLevelItems("level-100"),
-    },
-    {
-      label: "Level 200 — Intermediate",
-      badge: { text: "L200", variant: "caution" },
-      collapsed: true,
-      items: await buildLevelItems("level-200"),
-    },
-    {
-      label: "Level 300 — Advanced",
-      badge: { text: "L300", variant: "danger" },
-      collapsed: true,
-      items: await buildLevelItems("level-300"),
-    },
-    {
-      label: "Resources",
-      collapsed: true,
-      items: [{ autogenerate: { directory: "resources", collapsed: true } }],
-    },
-  ];
-  return items;
+      items,
+    });
+  }
+
+  const resourcesDir = path.join(CONTENT_ROOT, "resources");
+  const resourcesIndex = await readIndex(resourcesDir);
+  const resources = [];
+  if (resourcesIndex && !resourcesIndex.hidden) resources.push({ slug: "resources", label: "Overview" });
+  for (const page of (await readPages(resourcesDir, "resources")).sort(byPageOrder)) resources.push({ slug: page.slug });
+  resources.push(...visualSpecs);
+  if (resources.length) sidebar.push({ label: "Resources", collapsed: true, items: resources });
+
+  return sidebar;
 }

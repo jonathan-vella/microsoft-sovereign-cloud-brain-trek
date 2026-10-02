@@ -1,0 +1,59 @@
+---
+/**
+ * ModuleUnits.astro
+ *
+ * Bottom of a module landing page: the module's pages in reading order with their descriptions
+ * and visited marks, then a link to the next module (or `module.next` from front matter).
+ * Added automatically by the MarkdownContent override.
+ */
+import { findDoc, getCourse, nextAfter, type NextLink } from "./course/course";
+import { withBase } from "../../scripts/site-constants.mjs";
+
+const { entry, sidebar } = Astro.locals.starlightRoute;
+const course = await getCourse(sidebar);
+const mod = course.flatMap((l) => l.modules).find((m) => m.overview?.isCurrent);
+const override = entry.data.module?.next;
+const overrideDoc = override ? await findDoc(override) : undefined;
+const next: NextLink | undefined = overrideDoc
+  ? { href: withBase(override!), title: overrideDoc.data.title, kind: "page" }
+  : mod && nextAfter(course, mod);
+const nextLabel = { module: "Next module", level: "Next level", page: "Next" };
+---
+
+{
+  mod && mod.units.length > 0 && (
+    <>
+      <h2 id="in-this-module">In this module</h2>
+      <ol class="unit-list not-content" role="list">
+        {mod.units.map((unit, i) => (
+          <li class="unit" data-progress-page={unit.href}>
+            <span class="unit__step" aria-hidden="true">{i + 1}</span>
+            <div class="unit__body">
+              <a class="unit__link" href={unit.href}>
+                {unit.title}
+              </a>
+              {unit.isKnowledgeCheck && <span class="unit__tag">Knowledge check</span>}
+              <span class="unit__visited" data-progress-label />
+              {unit.description && <p class="unit__desc">{unit.description}</p>}
+            </div>
+          </li>
+        ))}
+      </ol>
+    </>
+  )
+}
+
+{
+  next && (
+    <p class="next-module not-content">
+      <a href={next.href}>
+        <span class="next-module__label">{nextLabel[next.kind]}</span>
+        <span class="next-module__title">{next.title}</span>
+      </a>
+    </p>
+  )
+}
+
+<script>
+  import "./course/progress";
+</script>

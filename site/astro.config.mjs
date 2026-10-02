@@ -15,7 +15,7 @@ import rehypeBasePath from "./src/plugins/rehype-base-path.mjs";
 // matching how Microsoft Learn renders inline architecture diagrams.
 const mermaidInitScript = `import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
 mermaid.initialize({
-  startOnLoad: true,
+  startOnLoad: false,
   theme: "base",
   themeVariables: {
     primaryColor: "#DEECF9",
@@ -39,7 +39,24 @@ mermaid.initialize({
   flowchart: { curve: "basis", padding: 14 },
   sequence: { useMaxWidth: true },
   themeCSS: ".edgeLabel { background-color: #F7FAFD; }"
-});`;
+});
+// Mermaid measures text while drawing, so a diagram inside a closed <details> (DiagramContainer)
+// comes out squashed. Draw visible diagrams now and the rest when their container opens.
+const draw = (root) => {
+  const nodes = [...root.querySelectorAll("pre.mermaid:not([data-processed])")].filter((n) => !n.closest("details:not([open])"));
+  if (nodes.length) mermaid.run({ nodes });
+};
+draw(document);
+document.addEventListener("toggle", (e) => e.target.open && draw(e.target), true);`;
+
+// Records each page the reader opens, for the progress marks on the learning path and module
+// pages (src/components/course/progress.ts reads the same key). Stays in the browser.
+const recordVisitScript = `try {
+  const key = "brain-trek:visited";
+  const seen = JSON.parse(localStorage.getItem(key) || "[]");
+  const page = location.pathname.replace(/\\/?$/, "/");
+  if (!seen.includes(page)) localStorage.setItem(key, JSON.stringify(seen.concat(page).slice(-1000)));
+} catch {}`;
 
 export default defineConfig({
   site: SITE,
@@ -54,7 +71,7 @@ export default defineConfig({
     starlight({
       title: "Microsoft Sovereign Cloud Brain Trek",
       description:
-        "Master Sovereign Cloud, Azure Local, and Edge AI Technologies — a comprehensive learning journey for architects and solutions professionals.",
+        "Training for architects and solutions professionals on Microsoft Sovereign Cloud, Azure Local, Azure Arc, Foundry Local, and Zero Trust.",
       logo: {
         src: "./src/assets/brand/logo.svg",
         replacesTitle: false,
@@ -67,6 +84,7 @@ export default defineConfig({
           attrs: { type: "module" },
           content: mermaidInitScript,
         },
+        { tag: "script", content: recordVisitScript },
       ],
       editLink: {
         baseUrl:
@@ -83,12 +101,18 @@ export default defineConfig({
         },
       ],
       sidebar: await buildSidebar(),
+      // Hero link base path and title-based prev/next labels. See src/route-data.ts.
+      routeMiddleware: "./src/route-data.ts",
       components: {
         // Lock the site to light theme: ThemeSelect is empty (hides the
         // header dropdown) and ThemeProvider forces `data-theme="light"`
         // on every page load. See site/src/components/ for both overrides.
         ThemeSelect: "./src/components/ThemeSelect.astro",
         ThemeProvider: "./src/components/ThemeProvider.astro",
+        // Level and module landing page templates (learning path, module summary and pages).
+        MarkdownContent: "./src/components/overrides/MarkdownContent.astro",
+        // "Last verified" from front matter next to "Last updated".
+        LastUpdated: "./src/components/overrides/LastUpdated.astro",
       },
     }),
     mdx(),

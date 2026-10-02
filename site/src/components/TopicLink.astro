@@ -1,0 +1,35 @@
+---
+/**
+ * TopicLink.astro
+ *
+ * One row in a topic list on the home page. Links to `href` once that page exists, otherwise to
+ * `fallback` (the closest current page), so the home page can name modules before the level
+ * rebuilds create them. Wrap rows in `<ul class="topic-list not-content" role="list">`.
+ *
+ *   <TopicLink title="Microsoft 365 Local" href="/level-100/module-06-microsoft-365-local/"
+ *     fallback="/level-100/module-02-cloud-models/sovereign-private-cloud/">
+ *     Exchange Server, SharePoint Server, and Skype for Business Server on Azure Local.
+ *   </TopicLink>
+ */
+import { findDoc } from "./course/course";
+import { withBase } from "../../scripts/site-constants.mjs";
+
+interface Props {
+  title: string;
+  href: string;
+  fallback?: string;
+  /** Short context shown after the title, for example "Level 100". */
+  meta?: string;
+}
+
+const { title, href, fallback, meta } = Astro.props;
+const target = (await findDoc(href)) || !fallback ? href : fallback;
+---
+
+<li class="topic">
+  <a class="topic__link" href={withBase(target)}>
+    <span class="topic__title">{title}</span>
+    {meta && <span class="topic__meta">{meta}</span>}
+  </a>
+  <div class="topic__desc"><slot /></div>
+</li>

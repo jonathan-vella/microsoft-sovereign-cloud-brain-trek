@@ -2,21 +2,21 @@
 /**
  * KnowledgeCheck.astro
  *
- * Collapsible "Click to reveal answer" block used in the level-NN knowledge
- * checks. The answer body is provided as MDX children (NOT a prop string),
- * so it can contain code blocks, links, lists, callouts, and diagrams
- * without any escaping. Use it in .mdx files like:
+ * Collapsible answer block used in the knowledge checks. The explanation is provided as MDX
+ * children (not a prop string), so it can contain code blocks, links, lists, callouts, and
+ * diagrams without escaping:
  *
  *   <KnowledgeCheck answer="B" reference="/level-100/module-04-azure-arc/azure-arc-intro/">
- *     **Explanation:** Detailed reasoning here. Other options are wrong
- *     because ...
+ *     **Explanation:** Detailed reasoning here. Other options are wrong because ...
  *   </KnowledgeCheck>
  *
  * Props:
- *   answer    — short identifier ("B", "True", "All of the above").
- *   reference — optional internal or external link to follow up.
- *   summary   — override the default "Click to reveal answer" label.
+ *   answer    - short identifier ("B", "True", "All of the above").
+ *   reference - optional root-relative page link (with optional #anchor) or external URL to
+ *               review. Internal links show the page title; external links show the host name.
+ *   summary   - override the default "Show answer" label.
  */
+import { findDoc } from "./course/course";
 import { withBase } from "../../scripts/site-constants.mjs";
 
 interface Props {
@@ -25,25 +25,27 @@ interface Props {
   summary?: string;
 }
 
-const { answer, reference, summary = "Click to reveal answer" } = Astro.props;
+const { answer, reference, summary = "Show answer" } = Astro.props;
+
+let referenceText = reference;
+if (reference?.startsWith("/")) {
+  referenceText = (await findDoc(reference))?.data.title ?? reference;
+} else if (reference && URL.canParse(reference)) {
+  referenceText = new URL(reference).hostname.replace(/^www\./, "");
+}
 ---
 
 <details class="knowledge-check">
   <summary>{summary}</summary>
-  <p><strong>Correct Answer: {answer}</strong></p>
-  <slot />
-  {
-    reference && (
-      <p class="knowledge-check__reference">
-        <strong>Reference:</strong> <a href={withBase(reference)}>{reference}</a>
-      </p>
-    )
-  }
+  <div class="knowledge-check__body">
+    <p class="knowledge-check__answer"><strong>Answer: {answer}</strong></p>
+    <slot />
+    {
+      reference && (
+        <p class="knowledge-check__reference">
+          Review: <a href={withBase(reference)}>{referenceText}</a>
+        </p>
+      )
+    }
+  </div>
 </details>
-
-<style>
-  .knowledge-check__reference {
-    margin-top: 0.75rem;
-    font-size: 0.95em;
-  }
-</style>
