@@ -1,0 +1,156 @@
+---
+title: "Sovereign Landing Zone knowledge check"
+description: "Scenario questions for Sovereign Landing Zone architecture, policy controls, implementation, and data classification decisions."
+lastVerified: 2026-10-02
+sidebar:
+  order: 10
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Use these scenario questions to check whether you can place workloads, assign controls, and select an implementation path for Sovereign Landing Zone.
+
+## Question 1: Choose the right landing zone concept
+
+A platform team says it needs a separate "sovereign cloud product" before it can support regulated workloads in Azure public regions. What should the architect clarify?
+
+- A) SLZ replaces Azure landing zones for regulated workloads.
+- B) SLZ is a variant of the Azure landing zone architecture with extra sovereign controls.
+- C) SLZ is only for Azure Government and Azure operated by 21Vianet.
+- D) SLZ is a Microsoft Purview feature that labels data assets.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-02-sovereign-landing-zone/slz-architecture/">
+
+B is correct because Microsoft Learn describes Sovereign Landing Zone as a variant or tailored version of the Azure landing zone architecture. A is wrong because SLZ does not replace ALZ. C is wrong because the Microsoft Sovereign Cloud SLZ guidance is under the Sovereign Public Cloud documentation. D is wrong because Purview helps classify data, but it is not the landing zone architecture.
+
+</KnowledgeCheck>
+
+## Question 2: Place a workload by classification and network exposure
+
+A citizen services portal stores highly confidential records and must accept authenticated internet traffic. Which SLZ management group is the best fit?
+
+- A) Public
+- B) Online
+- C) Confidential Online
+- D) Confidential Corp
+
+<KnowledgeCheck answer="C" reference="/level-300/module-02-sovereign-landing-zone/slz-architecture/">
+
+C is correct because Confidential Online is for internet-facing workloads that handle highly confidential or secret data and need Level 1, Level 2, and Level 3 controls. A is wrong because Public should not host highly confidential data. B is wrong because Online is for general or confidential workloads without Level 3 placement. D is wrong because Confidential Corp is internal only.
+
+</KnowledgeCheck>
+
+## Question 3: Select the correct control level
+
+A workload stores confidential financial data in a regional database and uses customer-managed keys. It does not need confidential computing. Which control levels should normally apply?
+
+- A) ALZ defaults only
+- B) Level 1 only
+- C) Level 1 and Level 2
+- D) Level 1, Level 2, and Level 3
+
+<KnowledgeCheck answer="C" reference="/level-300/module-02-sovereign-landing-zone/slz-policy-and-controls/">
+
+C is correct because confidential data maps to data residency plus encryption at rest and in transit. A misses sovereign controls. B omits customer-managed key and transport encryption controls. D adds Level 3 encryption in use, which Microsoft Learn maps to secret or highly confidential classifications rather than ordinary confidential data.
+
+</KnowledgeCheck>
+
+## Question 4: Pick the correct policy initiative name
+
+An engineer proposes assigning an initiative named "Sovereignty Confidential Computing" to Confidential Corp. What should you do?
+
+- A) Assign it because it is the Level 3 initiative.
+- B) Replace it with "Sovereignty Baseline - Confidential Policies" or "[Preview]: Enforce Encryption-in-Use across Azure Services" depending on the intent.
+- C) Replace it with "Spain ENS" because it includes confidential computing controls.
+- D) Skip policy and rely on manual architecture review.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-02-sovereign-landing-zone/slz-policy-and-controls/">
+
+B is correct because the Azure Policy built-in initiative list has no initiative named "Sovereignty Confidential Computing." The mature Regulatory Compliance baseline is "Sovereignty Baseline - Confidential Policies" with 22 policies at version 1.2.0, and the granular preview Level 3 initiative is "[Preview]: Enforce Encryption-in-Use across Azure Services." A uses an initiative name that does not exist. C selects an unrelated regulatory initiative. D removes the policy control that SLZ uses at scale.
+
+</KnowledgeCheck>
+
+## Question 5: Roll out deny effects safely
+
+A brownfield Online subscription has many existing services. The team wants to assign the preview customer-managed key initiative. What is the safest first policy effect strategy?
+
+- A) Start with audit, remediate gaps, then move selected controls to deny for new deployments.
+- B) Assign deny immediately to every existing and new resource.
+- C) Disable the initiative until every service supports Managed HSM.
+- D) Create permanent exemptions for existing resources.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-02-sovereign-landing-zone/slz-policy-and-controls/">
+
+A is correct because audit lets the team find unsupported services and configuration drift before blocking deployments. B can break brownfield updates. C delays useful visibility. D turns exemptions into the operating model instead of a controlled exception process.
+
+</KnowledgeCheck>
+
+## Question 6: Choose an implementation path
+
+A platform team uses Terraform and wants Microsoft-supported landing zone modules with SLZ controls. Which path best matches current Learn guidance?
+
+- A) Use the Terraform Azure Verified Modules for the platform landing zone, deployed manually or through the Azure landing zone accelerator.
+- B) Use only the Azure portal landing zone deployment.
+- C) Use the Microsoft.Sovereign provider as the production replacement for accelerators.
+- D) Use the old Cloud Adoption Framework Terraform community project as the primary Microsoft accelerator.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-02-sovereign-landing-zone/slz-implementation/">
+
+A is correct because Microsoft Learn states that the Terraform SLZ implementation is available through Terraform Azure Verified Modules for the platform landing zone and can be deployed with the Azure landing zone accelerator. B is wrong because portal-based ALZ deployment is not the Terraform path and is not supported for Azure Government or 21Vianet. C is wrong because `Microsoft.Sovereign` uses preview API version `2025-02-27-preview`. D is wrong because the FAQ describes the older `aztfmod` project as community driven and outside the Azure landing zone core team.
+
+</KnowledgeCheck>
+
+## Question 7: Disambiguate sovereign cloud terminology
+
+A design document says, "ALZ portal deployment is not supported for Azure sovereign clouds, so SLZ cannot use accelerators." What is the likely terminology problem?
+
+- A) The statement confuses isolated Azure clouds such as Azure Government and 21Vianet with the Microsoft Sovereign Cloud portfolio guidance.
+- B) The statement confuses Online and Corp management groups.
+- C) The statement confuses Managed HSM and Key Vault Standard.
+- D) The statement confuses Purview classifications and sensitivity labels.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-02-sovereign-landing-zone/slz-implementation/">
+
+A is correct because "Azure sovereign clouds" can mean isolated national clouds in Architecture Center deployment guidance, while the Microsoft Sovereign Cloud docs use a broader portfolio meaning. The portal limitation applies to clouds such as Azure Government and Azure operated by 21Vianet. It does not mean the Sovereign Public Cloud SLZ accelerator guidance is unusable in Azure public regions. B, C, and D describe real distinctions but not this terminology issue.
+
+</KnowledgeCheck>
+
+## Question 8: Use Purview evidence for placement
+
+A workload owner requests Corp placement for an internal analytics platform. Purview Data Map scanning finds files and columns with highly confidential identifiers. What should happen before subscription vending?
+
+- A) Place the workload in Corp because it is internal only.
+- B) Place the workload in Public because analytics output is aggregated.
+- C) Review the classification with the owner and consider Confidential Corp with Level 3 controls.
+- D) Ignore the scan because Purview classifications do not apply to Azure landing zones.
+
+<KnowledgeCheck answer="C" reference="/level-300/module-02-sovereign-landing-zone/data-classification/">
+
+C is correct because management group placement depends on both network exposure and data classification. Internal workloads with highly confidential data belong in Confidential Corp when Level 3 controls are required. A ignores the classification evidence. B assumes aggregation removes the source data sensitivity. D is wrong because Purview classifications are useful evidence for placement, even though the business owner still approves the final classification.
+
+</KnowledgeCheck>
+
+## Question 9: Handle an exception
+
+A non-regional service is required for a Confidential Online workload, and the residency policy marks it non-compliant. The architecture board approves a compensating design for six months. Which Azure Policy mechanism should record the decision?
+
+- A) Delete the residency assignment from Confidential Online.
+- B) Create a time-bound policy exemption with a mitigation or waiver category and approval metadata.
+- C) Move the workload to Public.
+- D) Change the initiative version number in source control.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-02-sovereign-landing-zone/slz-policy-and-controls/">
+
+B is correct because Azure Policy exemptions can record a mitigated control or temporary waiver, include metadata, and expire. A weakens every workload in the management group. C changes the workload's governance without changing its classification. D does not record the approved exception.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [Sovereign Landing Zone](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-landing-zone)
+- [Implement controls and principles in SLZ](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/implement-controls-principles)
+- [Controls and principles in Sovereign Public Cloud](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-controls-principles)
+- [Azure Policy built-in initiative definitions](https://learn.microsoft.com/azure/governance/policy/samples/built-in-initiatives)
+- [Sovereign Landing Zone implementation options](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/implementation-options)
+- [Azure Policy exemption structure](https://learn.microsoft.com/azure/governance/policy/concepts/exemption-structure)
+- [Learn about sensitivity labels in Data Map](https://learn.microsoft.com/purview/data-map-sensitivity-labels)

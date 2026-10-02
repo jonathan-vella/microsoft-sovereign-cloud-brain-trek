@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="slz-title slz-desc">
+  <title id="slz-title">Sovereign Landing Zone management group hierarchy</title>
+  <desc id="slz-desc">The Sovereign Landing Zone extends the Azure landing zone hierarchy. Under Platform it adds a Security management group that hosts Managed HSM next to Management, Connectivity, and Identity. Under Landing zones it adds Public, Confidential Online, and Confidential Corp next to Online and Corp. Public applies Azure landing zone defaults only, Online and Corp add Level 1 data residency and Level 2 encryption at rest and in transit, and the Confidential groups add Level 3 encryption in use. Platform services need Level 1 and Level 2, and Level 3 where possible.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#F7FAFD"/><stop offset="100%" stop-color="#EEF5FC"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#616161"/></marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F6CBD"/></marker>
+  </defs>
+  <rect width="960" height="620" rx="12" fill="url(#bg)"/>
+  <text x="32" y="44" font-family="Inter Variable, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#0C3B5E" text-anchor="start">Sovereign Landing Zone management groups</text>
+  <text x="32" y="68" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="400" fill="#616161" text-anchor="start">An Azure landing zone variant. Highlighted groups are added by the Sovereign Landing Zone.</text>
+  <rect x="380" y="92" width="200" height="32" rx="6" fill="#FFFFFF" stroke="#0F6CBD" stroke-width="1"/>
+  <text x="480.0" y="112.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="500" fill="#0C3B5E" text-anchor="middle">Tenant root group</text>
+  <rect x="380" y="146" width="200" height="32" rx="6" fill="#FFFFFF" stroke="#0F6CBD" stroke-width="1"/>
+  <text x="480.0" y="166.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="500" fill="#0C3B5E" text-anchor="middle">Organization root</text>
+  <path d="M 480 124 L 480 144" stroke="#616161" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 480 178 L 480 196 L 170 196 L 170 214 M 480 196 L 640 196 L 640 214 M 480 196 L 862 196 L 862 214" stroke="#616161" stroke-width="1.6" fill="none"/>
+  <rect x="30" y="216" width="290" height="300" rx="10" fill="#FFFFFF" stroke="#0F6CBD" stroke-width="1.5"/>
+  <text x="48" y="242" font-family="Inter Variable, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F6CBD" text-anchor="start">Platform</text>
+  <text x="48" y="262" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#616161" text-anchor="start">L1 + L2, and L3 where possible</text>
+  <rect x="48" y="280" width="254" height="30" rx="6" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="175.0" y="299.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="500" fill="#0C3B5E" text-anchor="middle">Management</text>
+  <rect x="48" y="320" width="254" height="30" rx="6" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="175.0" y="339.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="500" fill="#0C3B5E" text-anchor="middle">Connectivity</text>
+  <rect x="48" y="360" width="254" height="30" rx="6" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="175.0" y="379.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="500" fill="#0C3B5E" text-anchor="middle">Identity</text>
+  <rect x="48" y="400" width="254" height="98" rx="8" fill="#FFF1E0" stroke="#C25E00" stroke-width="1.5"/>
+  <text x="64" y="424" font-family="Inter Variable, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#C25E00" text-anchor="start">Security</text>
+  <rect x="236" y="410" width="48" height="20" rx="10" fill="#FFF1E0" stroke="#C25E00" stroke-width="1"/>
+  <text x="260.0" y="424" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#C25E00" text-anchor="middle">SLZ</text>
+  <text x="64" y="446" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Managed HSM that holds</text>
+  <text x="64" y="463" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">service encryption keys</text>
+  <rect x="340" y="216" width="470" height="300" rx="10" fill="#FFFFFF" stroke="#0F6CBD" stroke-width="1.5"/>
+  <text x="358" y="242" font-family="Inter Variable, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#0F6CBD" text-anchor="start">Landing zones</text>
+  <rect x="358" y="258" width="434" height="42" rx="8" fill="#FFF1E0" stroke="#C25E00" stroke-width="1.2"/>
+  <text x="372" y="277" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#C25E00" text-anchor="start">Public</text>
+  <text x="372" y="293" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#616161" text-anchor="start">ALZ defaults only</text>
+  <rect x="736" y="269" width="44" height="20" rx="10" fill="#FFF1E0" stroke="#C25E00" stroke-width="1"/>
+  <text x="758.0" y="283" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#C25E00" text-anchor="middle">SLZ</text>
+  <rect x="358" y="308" width="434" height="42" rx="8" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1.2"/>
+  <text x="372" y="327" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0C3B5E" text-anchor="start">Online</text>
+  <text x="372" y="343" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#616161" text-anchor="start">Internet facing</text>
+  <rect x="600" y="319" width="36" height="20" rx="10" fill="#EBF3FC" stroke="#0F6CBD" stroke-width="1"/>
+  <text x="618.0" y="333" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#0F6CBD" text-anchor="middle">L1</text>
+  <rect x="642" y="319" width="36" height="20" rx="10" fill="#E7F4E4" stroke="#107C10" stroke-width="1"/>
+  <text x="660.0" y="333" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#107C10" text-anchor="middle">L2</text>
+  <rect x="358" y="358" width="434" height="42" rx="8" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1.2"/>
+  <text x="372" y="377" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0C3B5E" text-anchor="start">Corp</text>
+  <text x="372" y="393" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#616161" text-anchor="start">Internal only</text>
+  <rect x="600" y="369" width="36" height="20" rx="10" fill="#EBF3FC" stroke="#0F6CBD" stroke-width="1"/>
+  <text x="618.0" y="383" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#0F6CBD" text-anchor="middle">L1</text>
+  <rect x="642" y="369" width="36" height="20" rx="10" fill="#E7F4E4" stroke="#107C10" stroke-width="1"/>
+  <text x="660.0" y="383" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#107C10" text-anchor="middle">L2</text>
+  <rect x="358" y="408" width="434" height="42" rx="8" fill="#FFF1E0" stroke="#C25E00" stroke-width="1.2"/>
+  <text x="372" y="427" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#C25E00" text-anchor="start">Confidential Online</text>
+  <text x="372" y="443" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#616161" text-anchor="start">Internet facing</text>
+  <rect x="600" y="419" width="36" height="20" rx="10" fill="#EBF3FC" stroke="#0F6CBD" stroke-width="1"/>
+  <text x="618.0" y="433" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#0F6CBD" text-anchor="middle">L1</text>
+  <rect x="642" y="419" width="36" height="20" rx="10" fill="#E7F4E4" stroke="#107C10" stroke-width="1"/>
+  <text x="660.0" y="433" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#107C10" text-anchor="middle">L2</text>
+  <rect x="684" y="419" width="36" height="20" rx="10" fill="#EFE6F8" stroke="#5C2E91" stroke-width="1"/>
+  <text x="702.0" y="433" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#5C2E91" text-anchor="middle">L3</text>
+  <rect x="736" y="419" width="44" height="20" rx="10" fill="#FFF1E0" stroke="#C25E00" stroke-width="1"/>
+  <text x="758.0" y="433" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#C25E00" text-anchor="middle">SLZ</text>
+  <rect x="358" y="458" width="434" height="42" rx="8" fill="#FFF1E0" stroke="#C25E00" stroke-width="1.2"/>
+  <text x="372" y="477" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#C25E00" text-anchor="start">Confidential Corp</text>
+  <text x="372" y="493" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#616161" text-anchor="start">Internal only</text>
+  <rect x="600" y="469" width="36" height="20" rx="10" fill="#EBF3FC" stroke="#0F6CBD" stroke-width="1"/>
+  <text x="618.0" y="483" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#0F6CBD" text-anchor="middle">L1</text>
+  <rect x="642" y="469" width="36" height="20" rx="10" fill="#E7F4E4" stroke="#107C10" stroke-width="1"/>
+  <text x="660.0" y="483" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#107C10" text-anchor="middle">L2</text>
+  <rect x="684" y="469" width="36" height="20" rx="10" fill="#EFE6F8" stroke="#5C2E91" stroke-width="1"/>
+  <text x="702.0" y="483" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#5C2E91" text-anchor="middle">L3</text>
+  <rect x="736" y="469" width="44" height="20" rx="10" fill="#FFF1E0" stroke="#C25E00" stroke-width="1"/>
+  <text x="758.0" y="483" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#C25E00" text-anchor="middle">SLZ</text>
+  <rect x="830" y="216" width="100" height="300" rx="10" fill="#F2F2F2" stroke="#BDBDBD" stroke-width="1.2"/>
+  <text x="880" y="242" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#616161" text-anchor="middle">Other ALZ</text>
+  <text x="880" y="258" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#616161" text-anchor="middle">groups</text>
+  <rect x="840" y="280" width="80" height="26" rx="6" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="880.0" y="297.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="500" fill="#616161" text-anchor="middle">Sandbox</text>
+  <rect x="840" y="316" width="80" height="26" rx="6" fill="#FFFFFF" stroke="#BDBDBD" stroke-width="1"/>
+  <text x="880.0" y="333.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="500" fill="#616161" text-anchor="middle">Decom.</text>
+  <rect x="30" y="540" width="900" height="60" rx="10" fill="#FFFFFF" stroke="#CFE3F6" stroke-width="1"/>
+  <rect x="48" y="560" width="36" height="20" rx="10" fill="#EBF3FC" stroke="#0F6CBD" stroke-width="1"/>
+  <text x="66.0" y="574" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#0F6CBD" text-anchor="middle">L1</text>
+  <text x="92" y="574" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="400" fill="#242424" text-anchor="start">Data residency</text>
+  <rect x="250" y="560" width="36" height="20" rx="10" fill="#E7F4E4" stroke="#107C10" stroke-width="1"/>
+  <text x="268.0" y="574" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#107C10" text-anchor="middle">L2</text>
+  <text x="294" y="574" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="400" fill="#242424" text-anchor="start">Encryption at rest and in transit</text>
+  <rect x="530" y="560" width="36" height="20" rx="10" fill="#EFE6F8" stroke="#5C2E91" stroke-width="1"/>
+  <text x="548.0" y="574" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#5C2E91" text-anchor="middle">L3</text>
+  <text x="574" y="574" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="400" fill="#242424" text-anchor="start">Encryption in use (confidential computing)</text>
+</svg>
