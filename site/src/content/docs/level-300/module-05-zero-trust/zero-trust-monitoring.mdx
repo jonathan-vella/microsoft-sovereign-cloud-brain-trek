@@ -1,0 +1,106 @@
+---
+title: "Zero Trust monitoring and compliance"
+description: "Use Defender for Cloud, Microsoft Sentinel, and the Defender portal to monitor Zero Trust controls across sovereign estates."
+lastVerified: 2026-10-02
+sidebar:
+  order: 2
+---
+
+import DiagramContainer from "~/components/DiagramContainer.astro";
+
+Zero Trust monitoring is not a separate logging project. It is the SecOps pillar applied to every identity, endpoint, app, data, infrastructure, and network control. In a sovereign estate, the monitoring design must also prove where signals are stored, which operators can see them, and which response actions can run without breaking residency or customer-control requirements.
+
+<DiagramContainer title="Security monitoring flow" defaultOpen>
+
+![Security monitoring flow showing sources, Log Analytics, Sentinel, Defender for Cloud, and SOAR playbooks](/images/level-300/security-monitoring-flow.svg)
+
+</DiagramContainer>
+
+## Defender for Cloud as the CNAPP
+
+Microsoft Defender for Cloud is a Cloud Native Application Protection Platform, or CNAPP. Microsoft defines the three CNAPP components as Cloud Security Posture Management, DevSecOps, and Cloud Workload Protection Platform in the [Defender for Cloud overview](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction).
+
+Use the three components as a monitoring model.
+
+| CNAPP component | What it contributes to Zero Trust | Sovereign design check |
+| --- | --- | --- |
+| CSPM | Secure score, recommendations, attack paths, cloud security explorer, regulatory compliance, data and AI posture | Confirm standards, recommendations, and exports are scoped to the right subscriptions, management groups, clouds, and workspaces. |
+| DevSecOps | Code and pipeline findings from GitHub, Azure DevOps, and GitLab | Keep code-to-cloud findings tied to the environment that deploys the workload. |
+| CWPP | Runtime and workload protection for servers, containers, databases, storage, APIs, and AI services | Enable only the plans needed for the protected workload and document which agents, extensions, or agentless scanners are in use. |
+
+Defender for Cloud is also moving into the Microsoft Defender portal. The Defender for Cloud introduction says some features are already available there, and more capabilities will be added over time. The dedicated Defender portal article states that Defender for Cloud is integrated into security.microsoft.com with cloud overview, cloud inventory, cloud secure score, recommendations, attack paths, incidents, alerts, and advanced hunting experiences. Architects should expect a mixed operations period where initial onboarding, connector setup, and some configuration still start in Azure portal, while consumption and investigation move into the Defender portal.
+
+## Defender for Servers and Arc-enabled machines
+
+Defender for Servers protects Windows and Linux machines across Azure, AWS, GCP, and on-premises environments. For sovereign and hybrid estates, the important design point is how machines are onboarded.
+
+Microsoft Learn states that Defender for Servers no longer uses the Log Analytics agent or Azure Monitor Agent for most plan features. Agentless machine scanning and Microsoft Defender for Endpoint integration replace those agents for most features, while Azure Monitor Agent remains supported for the data ingestion benefit.
+
+Plan 2 adds controls that matter for Azure Local and Arc-connected estates:
+
+| Capability | Why it matters | Arc-specific note |
+| --- | --- | --- |
+| Agentless vulnerability scanning | Scans software inventory, vulnerabilities, machine secrets, and malware threats without an endpoint agent for those tasks | Plan 2 enables agentless scanning by default after enablement. |
+| Defender for Endpoint integration | Provides endpoint detection and response, vulnerability management, software inventory, and premium features | Defender for Endpoint still needs deployment to protected servers. |
+| OS system updates | Assesses periodic updates across Azure, AWS, GCP, and on-premises | Microsoft Learn marks this Plan 2 capability as only applicable to machines onboarded with Azure Arc. |
+| OS baseline misconfiguration | Assesses OS configuration against Microsoft Cloud Security Benchmark recommendations | Microsoft Learn marks this as only applicable to machines onboarded with Azure Arc. |
+| File integrity monitoring | Tracks file changes for investigation and compliance | Microsoft Learn marks file integrity monitoring for AWS and GCP machines as only applicable when those machines are onboarded with Azure Arc. |
+
+For Azure Local, the design implication is simple: onboard the local servers and VMs that need Defender for Servers controls through Arc when connected operations are available. For disconnected Azure Local sites, document which controls continue locally, which evidence is exported later, and which cloud-based Defender capabilities are unavailable while disconnected.
+
+## Defender for Containers on Arc-enabled Kubernetes
+
+Defender for Containers covers Kubernetes environments, but the support matrix differs by platform. For Arc-enabled Kubernetes, Microsoft Learn says you must onboard Azure Arc-enabled Kubernetes and enable Defender for Containers as an Arc extension to get protection.
+
+The [Defender for Containers support matrix](https://learn.microsoft.com/azure/defender-for-cloud/support-matrix-defender-for-containers) marks several Arc-enabled Kubernetes runtime threat protection features as preview, including control plane detection, workload detection, and advanced hunting with audit logs and process events. The same matrix marks workload hardening for Arc-enabled Kubernetes as generally available and enabled through auto-provisioned Azure Policy extension for Azure Arc.
+
+Do not copy an AKS feature list into an Arc-enabled Kubernetes proposal. Instead, state exactly which capabilities apply to the target cluster type, operating system, cloud, and Defender plan.
+
+## AI security posture and AI threat protection
+
+Generative AI introduces new assets into the Zero Trust model: prompts, grounding data, model endpoints, code repositories, vector stores, agents, and tool connections. Defender for Cloud now includes AI security posture management and AI threat protection for generative AI workloads.
+
+The [AI security posture management overview](https://learn.microsoft.com/azure/defender-for-cloud/ai-security-posture) states that Defender CSPM secures generative AI applications and AI agents in enterprise-built, multicloud, and hybrid cloud environments, including Azure, AWS, GCP, and Vertex AI. It discovers an AI Bill of Materials, finds risks with recommendations and attack path analysis, and highlights externally reachable AI endpoints so teams can enforce strong authentication and least-privilege identities. The same page states that AI agent discovery and security posture for Microsoft Foundry agents and third-party cloud agents are [preview capabilities that require Microsoft Agent 365 starting July 1, 2026](https://learn.microsoft.com/azure/defender-for-cloud/ai-security-posture#discover-ai-agents).
+
+Pair this with Entra Agent ID. Defender for Cloud can help find AI posture risk. Entra Agent ID gives the agent a governed identity so Conditional Access, identity protection, governance, and audit controls can apply to nonhuman access.
+
+## Microsoft Sentinel in the Defender portal
+
+Microsoft Sentinel remains the SIEM and SOAR layer for correlation, hunting, content, and automation. Microsoft Learn states that [Microsoft Sentinel is available in the Microsoft Defender portal without requiring Microsoft Defender XDR or an E5 license](https://learn.microsoft.com/azure/sentinel/microsoft-sentinel-onboard). When Sentinel and Defender XDR are used together in the Defender portal, analysts get shared incident management and advanced hunting.
+
+For sovereign design, start with workspace placement and access control. A Sentinel workspace is a Log Analytics workspace with Microsoft Sentinel enabled. After connecting Sentinel to the Defender portal, Azure role-based access control permissions still govern which Sentinel features users can access. Keep that role model separate from Defender portal navigation. A user seeing the portal does not mean the user should have access to every workspace, incident, or hunting table.
+
+Use Sentinel for:
+
+1. Cross-pillar correlation between identity, endpoint, network, app, data, and infrastructure alerts.
+2. SOAR playbooks that require human approval, customer notification, or evidence capture.
+3. Hunting across Defender and non-Microsoft signals.
+4. Long-running audit queries and workbook views for regulators and control owners.
+
+## Regulatory compliance monitoring
+
+The Defender for Cloud regulatory compliance dashboard can show standards that matter to sovereign customers. The support matrix in the shared research brief confirms built-in standards for [NIS2, DORA, GDPR, and the EU AI Act](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards). Treat the dashboard as evidence support, not legal advice. It maps technical controls and recommendations to standards. It does not replace a regulatory interpretation, risk acceptance, or customer-specific control narrative.
+
+Build the compliance evidence model with these questions:
+
+| Evidence question | Design answer |
+| --- | --- |
+| Which standard applies to this environment? | Assign only the standards the customer needs. Remove noise from irrelevant standards. |
+| Which scope is authoritative? | Use management groups, subscriptions, AWS accounts, GCP projects, and Sentinel workspaces that match the customer control boundary. |
+| Who owns remediation? | Use governance assignments or work tracking so every recommendation has an owner and due date. |
+| Which evidence is exportable? | Define export paths for assessments, recommendations, incidents, alerts, and workbook views. |
+| What happens while disconnected? | For disconnected Azure Local sites, document local logging, local identity, and evidence export after reconnection. |
+
+Zero Trust monitoring succeeds when control owners can trace a decision from policy intent to enforcement to evidence. If a Conditional Access policy blocks an AI agent, a Defender recommendation flags an internet-exposed endpoint, or Sentinel correlates a lateral movement incident, the architecture should show where that signal came from, who can act on it, and which response path is allowed for the sovereign boundary.
+
+## Sources
+
+- [Overview: Technology pillars](https://learn.microsoft.com/security/zero-trust/deploy/overview)
+- [What is Microsoft Defender for Cloud?](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [Defender for Cloud in Defender portal](https://learn.microsoft.com/azure/defender-for-cloud/defender-portal/defender-for-cloud-defender-portal)
+- [Defender for Servers](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-servers-overview)
+- [Containers support matrix in Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/support-matrix-defender-for-containers)
+- [Overview: AI security posture management](https://learn.microsoft.com/azure/defender-for-cloud/ai-security-posture)
+- [Connect Microsoft Sentinel to the Microsoft Defender portal](https://learn.microsoft.com/azure/sentinel/microsoft-sentinel-onboard)
+- [Regulatory compliance standards in Microsoft Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards)
+- [What is Microsoft Entra Agent ID?](https://learn.microsoft.com/entra/agent-id/what-is-microsoft-entra-agent-id)
