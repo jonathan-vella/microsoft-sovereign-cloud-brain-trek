@@ -49,8 +49,7 @@ in `site/astro.config.mjs`. The Resources section gets no badge.
 
 Every content page **must** have a `title` and `description` (validated by the
 Zod schema in `site/src/content.config.ts`; description is 20–220 chars). All
-other keys are optional. `lastVerified` is optional during the content rebuild
-and will become required.
+other keys are optional, except `lastVerified`, which is required.
 
 ```yaml
 ---
@@ -226,7 +225,7 @@ npm run preview           # serve the built site (matches production)
 npm run emit-legacy-stubs # post-build: regenerate static .html redirect stubs
                           # for legacy Jekyll URLs from path-rewrite-map.json
 npm run check:urls        # post-stubs: every old URL resolves, no broken internal links
-npm run lint:content      # base path, lastVerified, Sources, unslop style warnings
+npm run lint:content      # base path, lastVerified, Sources (fail); unslop style (warn)
 npm run capture-url-baseline # after adding pages: protect their URLs in url-baseline.json
 ```
 
