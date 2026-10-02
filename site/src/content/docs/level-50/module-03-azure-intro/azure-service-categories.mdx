@@ -1,115 +1,157 @@
 ---
-title: "Azure Service Categories"
-description: "Overview of Azure service categories with links to official documentation"
+title: "Azure service categories"
+description: "The main Azure service categories, with what each core service does: compute, networking, storage, databases, identity and security, AI, and management."
+lastVerified: 2026-10-02
 sidebar:
   order: 2
 ---
 
 import DiagramContainer from "~/components/DiagramContainer.astro";
+import LearningObjectives from "~/components/LearningObjectives.astro";
 
-## Overview
+Azure has hundreds of services. You don't need to know them all. The Azure Fundamentals learning path on Microsoft Learn focuses on four core categories: compute, networking, storage, and identity and security. This page covers those four in more depth and gives a short view of the rest.
 
-Azure provides hundreds of services organized into key categories. Rather than duplicate extensive documentation, this section provides a high-level overview with links to official Microsoft documentation.
+<LearningObjectives>
+- Name the main Azure service categories.
+- Choose between virtual machines, containers, functions, and App Service for a simple workload.
+- Describe virtual networks, VPN Gateway, and ExpressRoute.
+- Describe the Azure Storage services, access tiers, and redundancy options.
+- Name the current Azure AI services.
+</LearningObjectives>
 
-## Core Service Categories
+<DiagramContainer title="Azure service categories" defaultOpen>
 
-### Compute Services
-
-<DiagramContainer title="Azure Compute Options">
-
-![Azure Compute Options](/images/level-50/azure-compute-options.svg)
-_Figure 1: Azure compute options from full control (VMs) to fully managed (Serverless)_
-
-</DiagramContainer>
-
-Essential services for running applications and workloads.
-
-**Key Services:**
-
-- Virtual Machines (IaaS)
-- App Service (PaaS)
-- Azure Functions (Serverless)
-- Container Instances
-
-**📚 Official Documentation:**
-
-- [Azure Compute Services Overview](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree)
-
-### Storage Services
-
-<DiagramContainer title="Azure Storage Tiers">
-
-![Azure Storage Tiers](/images/level-50/azure-storage-tiers.svg)
-_Figure 2: Azure Storage tiers - balance access needs with cost_
+![Ten cards in two rows. Core categories: compute (Virtual Machines, App Service, Azure Functions, Azure Kubernetes Service), networking (Virtual Network, VPN Gateway, ExpressRoute, Azure DNS), storage (Blob Storage, Azure Files, Managed Disks, Queue Storage), and identity and security (Microsoft Entra ID, Azure Key Vault, Defender for Cloud). Other categories: databases, AI and machine learning (Microsoft Foundry, Foundry Tools, Azure Machine Learning), analytics, integration, Internet of Things, and management and governance.](/images/level-50/azure-service-categories-2026.svg)
 
 </DiagramContainer>
 
-Scalable storage solutions for all data types.
+## Compute
 
-**Key Services:**
+Compute services run your code. They range from full control to fully managed.
 
-- Blob Storage (Object storage)
-- File Storage (Managed file shares)
-- Disk Storage (VM disks)
-- Queue Storage (Messaging)
+| Service | Model | Use it when |
+|---|---|---|
+| Azure Virtual Machines | IaaS | You need full control of the operating system, or you're moving an existing server as is. |
+| Virtual Machine Scale Sets | IaaS | You need many identical VMs that scale in and out together. |
+| Azure Virtual Desktop | Desktop virtualization | Users need Windows desktops and apps delivered from the cloud. |
+| Azure Container Instances | PaaS | You want to run a container quickly, without managing VMs. |
+| Azure Container Apps | PaaS | You run containerized apps that need built-in load balancing and scaling. |
+| Azure Kubernetes Service (AKS) | Managed orchestration | You run a fleet of containers and want Kubernetes to manage them. |
+| Azure Functions | Serverless | Code runs in response to an event, such as a message or an HTTP request, with no servers to manage. |
+| Azure App Service | PaaS | You host web apps and APIs without managing servers. |
 
-**📚 Official Documentation:**
+A **container** packages an application with what it needs to run. Many containers can share one host, and they start and stop faster than VMs. Unlike a VM, you don't manage an operating system for each container.
 
-- [Azure Storage Documentation](https://learn.microsoft.com/en-us/azure/storage/)
+<DiagramContainer title="Azure compute options">
 
-### Networking Services
-
-<DiagramContainer title="Azure Networking Fundamentals">
-
-![Azure Networking Fundamentals](/images/level-50/azure-networking-fundamentals.svg)
-_Figure 3: Azure networking components - VNets, subnets, and connectivity_
+![Three groups from most control to least management. Infrastructure: Virtual Machines and VM Scale Sets. Platform: App Service, Container Instances, and Kubernetes Service. Serverless: Azure Functions and Logic Apps.](/images/level-50/azure-compute-options.svg)
 
 </DiagramContainer>
 
-Connect and secure your Azure resources.
+## Networking
 
-**Key Services:**
+- An **Azure virtual network (VNet)** is your private network in Azure. Resources in a VNet talk to each other privately. You split a VNet into subnets and filter traffic with network security groups.
+- **VPN Gateway** connects an on-premises network to a VNet with an encrypted tunnel over the internet.
+- **ExpressRoute** connects your offices and datacenters to the Microsoft cloud over a private connection through a connectivity provider. The traffic doesn't cross the public internet, which gives more consistent latency and higher security.
+- **Azure DNS** hosts your domain names on Microsoft's infrastructure.
 
-- Virtual Network
-- Load Balancer
-- Application Gateway
-- VPN Gateway
+<DiagramContainer title="Azure networking basics">
 
-**📚 Official Documentation:**
+![Internet traffic enters through Application Gateway and a load balancer into a virtual network with two subnets, protected by a network security group and Azure Firewall. An on-premises datacenter connects to the virtual network through VPN or ExpressRoute.](/images/level-50/azure-networking-fundamentals.svg)
 
-- [Azure Networking Documentation](https://learn.microsoft.com/en-us/azure/networking/)
+</DiagramContainer>
 
-### Database Services
+## Storage
 
-Managed database services for various data models.
+An Azure **storage account** holds your data. Azure encrypts all data written to a storage account. Azure Storage has five core services:
 
-**Key Services:**
+| Service | What it stores |
+|---|---|
+| Azure Blobs | Objects: documents, images, video, backups, and data for analytics |
+| Azure Files | File shares that you mount over SMB or NFS from the cloud or on-premises |
+| Azure Queues | Messages passed between parts of an application |
+| Azure Disks | Block storage volumes (managed disks) for VMs |
+| Azure Tables | Structured, non-relational (NoSQL) data |
 
-- Azure SQL Database
-- Cosmos DB
-- Database for MySQL/PostgreSQL
-- Redis Cache
+### Access tiers
 
-**📚 Official Documentation:**
+Blob storage has access tiers that trade storage cost against access cost.
 
-- [Azure Database Documentation](https://learn.microsoft.com/en-us/azure/?product=databases)
+| Tier | Best for | Minimum storage period |
+|---|---|---|
+| Hot | Data in active use | None |
+| Cool | Infrequently accessed data that must be available immediately | 30 days |
+| Cold | Rarely accessed data that must be available immediately | 90 days |
+| Archive | Rarely accessed data that can wait hours to be read back | 180 days |
 
-## Learning Resources
+If you delete or move a blob before its tier's minimum period, you pay an early deletion charge ([Microsoft Learn](https://learn.microsoft.com/azure/storage/blobs/access-tiers-overview)).
 
-### Microsoft Learn Paths
+<DiagramContainer title="Blob storage access tiers">
 
-- [Azure Fundamentals](https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/)
-- [Azure Administrator](https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/)
+![Four tiers from left to right. Hot: frequent access, lowest access cost, higher storage cost. Cool: infrequent access, 30-day minimum. Cold: rare access, 90-day minimum. Archive: offline, 180-day minimum, lowest storage cost, hours to rehydrate.](/images/level-50/azure-storage-tiers.svg)
 
-### Official Service Catalogs
+</DiagramContainer>
 
-- [Azure Products](https://azure.microsoft.com/en-us/products/)
-- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
+### Redundancy
 
-## Next Steps
+Azure Storage always keeps three copies of your data in the primary region. You choose how far apart they are:
 
-Continue to [Azure Global Infrastructure](/level-50/module-03-azure-intro/azure-global-infrastructure/) to understand Azure's worldwide presence.
+| Option | Where the copies are |
+|---|---|
+| Locally redundant storage (LRS) | Three copies in one datacenter |
+| Zone-redundant storage (ZRS) | One copy in each of three availability zones in the region |
+| Geo-redundant storage (GRS) | LRS in the primary region, plus LRS in a paired secondary region |
+| Geo-zone-redundant storage (GZRS) | ZRS in the primary region, plus LRS in a paired secondary region |
 
----
+Microsoft recommends ZRS when data must stay inside one country or region, because it doesn't copy data to a second region ([Microsoft Learn](https://learn.microsoft.com/training/modules/describe-azure-storage-services/3-redundancy)).
 
-**Last Updated:** November 2025
+## Databases
+
+Azure runs managed databases, so Microsoft handles patching, backups, and high availability:
+
+- **Azure SQL Database** for relational data on the SQL Server engine.
+- **Azure Cosmos DB** for NoSQL data that needs global distribution.
+- **Azure Database for PostgreSQL** and **Azure Database for MySQL** for open-source relational databases.
+
+## Identity and security
+
+Module 2 covered these in detail:
+
+- **Microsoft Entra ID** authenticates users and applications and enforces Conditional Access.
+- **Azure Key Vault** stores secrets, encryption keys, and certificates.
+- **Microsoft Defender for Cloud** assesses your security posture and protects workloads in Azure, other clouds, and on-premises. Microsoft is moving its experience into the unified Microsoft Defender portal ([Microsoft Learn](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction)).
+
+## AI and machine learning
+
+The names of the Azure AI services changed recently. Older material uses the earlier names.
+
+| Current name | Earlier name | What it does |
+|---|---|---|
+| Microsoft Foundry | Azure AI Studio, then Azure AI Foundry | One platform for building AI agents and applications, with a catalog of models from Microsoft, OpenAI, and others |
+| Foundry Tools | Azure AI services | Prebuilt APIs for language, speech, vision, and document processing |
+| Azure Machine Learning | Same | Build, train, and manage your own machine learning models |
+
+Source: [What is Microsoft Foundry?](https://learn.microsoft.com/azure/foundry/what-is-foundry)
+
+Level 100 introduces **Foundry Local**, which runs AI models on your own hardware with Azure Local. It's in preview ([Microsoft Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)).
+
+## Other categories
+
+- **Analytics.** Azure Data Factory moves and transforms data. Azure Databricks and Azure Stream Analytics process it.
+- **Integration.** Logic Apps automates workflows. API Management publishes APIs. Service Bus passes messages between applications.
+- **Internet of Things.** IoT Hub connects and manages devices. IoT Edge runs cloud workloads on devices near where data is created.
+- **Management and governance.** Azure Monitor collects metrics and logs. Azure Policy enforces rules on resources. Azure Arc extends Azure management to resources outside Azure.
+
+## Sources
+
+- [What is Microsoft Azure (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-core-architectural-components-of-azure/2-what-microsoft-azure)
+- [Introduction to Cloud Infrastructure: Describe Azure architecture and services (learning path)](https://learn.microsoft.com/training/paths/azure-fundamentals-describe-azure-architecture-services/)
+- [Describe Azure containers (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-azure-compute-networking-services/5-containers)
+- [Describe Azure ExpressRoute (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-azure-networking-services/4-expressroute)
+- [Describe Azure storage services (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-azure-storage-services/4-describe-azure-storage-services)
+- [Describe Azure storage redundancy (Microsoft Learn training)](https://learn.microsoft.com/training/modules/describe-azure-storage-services/3-redundancy)
+- [Access tiers for blob data](https://learn.microsoft.com/azure/storage/blobs/access-tiers-overview)
+- [What is Microsoft Defender for Cloud?](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [What is Microsoft Foundry?](https://learn.microsoft.com/azure/foundry/what-is-foundry)
+- [What are Foundry Tools?](https://learn.microsoft.com/azure/ai-services/what-are-ai-services)
+- [Foundry Local on Azure Local overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
