@@ -1,12 +1,10 @@
 ---
-title: "Level 50 - Prerequisites"
+title: "Level 50: Prerequisites"
 description: "Essential prerequisites for Microsoft Sovereign Cloud & AI at the Edge learning journey"
 sidebar:
   label: Overview
   order: 3
 ---
-
-## Overview
 
 Build essential foundational knowledge required before diving into Microsoft Sovereign Cloud, Azure Local, and Edge AI technologies. This level ensures all learners have the necessary background in cloud computing, security, and Azure fundamentals.
 

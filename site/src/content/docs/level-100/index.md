@@ -1,12 +1,10 @@
 ---
-title: "Level 100 - Foundation"
+title: "Level 100: Foundation"
 description: "Foundational concepts for Microsoft Sovereign Cloud & AI at the Edge"
 sidebar:
   label: Overview
   order: 4
 ---
-
-## Overview
 
 Build a solid understanding of the core concepts, terminology, and value propositions for Microsoft Sovereign Cloud, Azure Local, and Edge RAG.
 
