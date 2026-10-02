@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" role="img" aria-labelledby="did-title did-desc">
+  <title id="did-title">Defense in depth: seven layers</title>
+  <desc id="did-desc">Seven nested layers protect data at the center. From the outside in: physical security, identity and access, perimeter, network, compute, application, and data. Each layer lists example controls. If an attacker gets through one layer, the next layer still stands.</desc>
+  <defs><linearGradient id="did-bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#F7FAFD"/><stop offset="100%" stop-color="#E6F2FD"/></linearGradient></defs>
+  <rect width="880" height="560" rx="12" fill="url(#did-bg)"/>
+  <text x="32" y="44" font-family="Segoe UI, Inter Variable, sans-serif" font-size="22" font-weight="600" fill="#0C3B5E">Defense in depth</text>
+  <text x="32" y="70" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#41566B">Layers from the outside in, as described in Microsoft Learn</text>
+  <rect x="32" y="92" width="440" height="440" rx="14" fill="#41566B" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="44" y="112" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">1. Physical security</text>
+  <rect x="62" y="122" width="380" height="380" rx="14" fill="#5C2E91" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="74" y="142" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">2. Identity and access</text>
+  <rect x="92" y="152" width="320" height="320" rx="14" fill="#0C3B5E" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="104" y="172" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">3. Perimeter</text>
+  <rect x="122" y="182" width="260" height="260" rx="14" fill="#0F6CBD" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="134" y="202" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">4. Network</text>
+  <rect x="152" y="212" width="200" height="200" rx="14" fill="#107C10" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="164" y="232" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">5. Compute</text>
+  <rect x="182" y="242" width="140" height="140" rx="14" fill="#C46200" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="194" y="262" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">6. Application</text>
+  <rect x="212" y="272" width="80" height="80" rx="10" fill="#A4262C" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="252" y="308" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">7. Data</text>
+  <text x="252" y="328" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12" fill="#FFFFFF">What attackers want</text>
+  <rect x="500" y="108" width="8" height="44" rx="3" fill="#41566B"/>
+  <text x="520" y="125" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#1B2A38">1. Physical security</text>
+  <text x="520" y="145" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#41566B">Locked datacenters, badge readers, guards</text>
+  <rect x="500" y="170" width="8" height="44" rx="3" fill="#5C2E91"/>
+  <text x="520" y="187" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#1B2A38">2. Identity and access</text>
+  <text x="520" y="207" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#41566B">MFA, RBAC, Conditional Access, audited sign-ins</text>
+  <rect x="500" y="232" width="8" height="44" rx="3" fill="#0C3B5E"/>
+  <text x="520" y="249" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#1B2A38">3. Perimeter</text>
+  <text x="520" y="269" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#41566B">DDoS protection and perimeter firewalls</text>
+  <rect x="500" y="294" width="8" height="44" rx="3" fill="#0F6CBD"/>
+  <text x="520" y="311" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#1B2A38">4. Network</text>
+  <text x="520" y="331" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#41566B">Segmentation, deny by default, NSGs</text>
+  <rect x="500" y="356" width="8" height="44" rx="3" fill="#107C10"/>
+  <text x="520" y="373" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#1B2A38">5. Compute</text>
+  <text x="520" y="393" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#41566B">Patched VMs, endpoint protection, secure admin access</text>
+  <rect x="500" y="418" width="8" height="44" rx="3" fill="#C46200"/>
+  <text x="520" y="435" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#1B2A38">6. Application</text>
+  <text x="520" y="455" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#41566B">Secure development, secrets in Azure Key Vault</text>
+  <rect x="500" y="480" width="8" height="44" rx="3" fill="#A4262C"/>
+  <text x="520" y="497" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#1B2A38">7. Data</text>
+  <text x="520" y="517" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#41566B">Encryption at rest and in transit, access control</text>
+</svg>

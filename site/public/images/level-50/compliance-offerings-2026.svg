@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" role="img" aria-labelledby="co-title co-desc">
+  <title id="co-title">Microsoft compliance offerings in four segments</title>
+  <desc id="co-desc">Microsoft groups its Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings into four segments. Globally applicable, for example ISO/IEC 27001, SOC reports, and CSA STAR. US government, for example FedRAMP High, DoD Impact Levels, and CJIS. Industry specific, for example PCI DSS, HITRUST, and HIPAA. Region or country specific, for example Germany C5, Spain ENS High, and Australia IRAP. Audit reports are in the Service Trust Portal.</desc>
+  <defs><linearGradient id="co-bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#F7FAFD"/><stop offset="100%" stop-color="#E6F2FD"/></linearGradient></defs>
+  <rect width="900" height="400" rx="12" fill="url(#co-bg)"/>
+  <text x="32" y="44" font-family="Segoe UI, Inter Variable, sans-serif" font-size="22" font-weight="600" fill="#0C3B5E">Compliance offerings: four segments</text>
+  <text x="32" y="70" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" fill="#41566B">Examples only. Each segment has many more offerings.</text>
+  <rect x="32" y="96" width="196" height="236" rx="10" fill="#FFFFFF" stroke="#0F6CBD" stroke-width="2"/>
+  <path d="M 32 106 a 10 10 0 0 1 10 -10 h 176 a 10 10 0 0 1 10 10 v 46 h -196 z" fill="#0F6CBD"/>
+  <text x="130" y="130" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Globally applicable</text>
+  <text x="46" y="178" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#41566B">Any country, any industry</text>
+  <rect x="46" y="204" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="130" y="224" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">ISO/IEC 27001</text>
+  <rect x="46" y="244" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="130" y="264" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">SOC 1, SOC 2, SOC 3</text>
+  <rect x="46" y="284" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="130" y="304" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">CSA STAR</text>
+  <rect x="244" y="96" width="196" height="236" rx="10" fill="#FFFFFF" stroke="#0C3B5E" stroke-width="2"/>
+  <path d="M 244 106 a 10 10 0 0 1 10 -10 h 176 a 10 10 0 0 1 10 10 v 46 h -196 z" fill="#0C3B5E"/>
+  <text x="342" y="130" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">US government</text>
+  <text x="258" y="178" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#41566B">US public sector programs</text>
+  <rect x="258" y="204" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="342" y="224" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">FedRAMP High</text>
+  <rect x="258" y="244" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="342" y="264" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">DoD Impact Levels</text>
+  <rect x="258" y="284" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="342" y="304" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">CJIS</text>
+  <rect x="456" y="96" width="196" height="236" rx="10" fill="#FFFFFF" stroke="#107C10" stroke-width="2"/>
+  <path d="M 456 106 a 10 10 0 0 1 10 -10 h 176 a 10 10 0 0 1 10 10 v 46 h -196 z" fill="#107C10"/>
+  <text x="554" y="130" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Industry specific</text>
+  <text x="470" y="178" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#41566B">Rules for one industry</text>
+  <rect x="470" y="204" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="554" y="224" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">PCI DSS</text>
+  <rect x="470" y="244" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="554" y="264" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">HITRUST</text>
+  <rect x="470" y="284" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="554" y="304" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">HIPAA (BAA)</text>
+  <rect x="668" y="96" width="196" height="236" rx="10" fill="#FFFFFF" stroke="#C46200" stroke-width="2"/>
+  <path d="M 668 106 a 10 10 0 0 1 10 -10 h 176 a 10 10 0 0 1 10 10 v 46 h -196 z" fill="#C46200"/>
+  <text x="766" y="130" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Region or country specific</text>
+  <text x="682" y="178" font-family="Segoe UI, Inter Variable, sans-serif" font-size="12.5" fill="#41566B">National schemes</text>
+  <rect x="682" y="204" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="766" y="224" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">Germany C5</text>
+  <rect x="682" y="244" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="766" y="264" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">Spain ENS High</text>
+  <rect x="682" y="284" width="168" height="30" rx="6" fill="#F2F6FA"/>
+  <text x="766" y="304" text-anchor="middle" font-family="Segoe UI, Inter Variable, sans-serif" font-size="14" font-weight="600" fill="#1B2A38">Australia IRAP</text>
+  <text x="32" y="370" font-family="Segoe UI, Inter Variable, sans-serif" font-size="13" fill="#41566B">Download audit reports and certificates from the Microsoft Service Trust Portal.</text>
+</svg>
