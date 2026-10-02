@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="models-title models-desc">
+  <title id="models-title">Microsoft Sovereign Cloud deployment models</title>
+  <desc id="models-desc">Three column comparison of Sovereign Public Cloud, Sovereign Private Cloud, and National Partner Clouds, including operators, locations, key capabilities, and current status notes.</desc>
+  <defs>
+    <style>
+      .font { font-family: "Segoe UI", "Segoe UI Variable", Inter, system-ui, sans-serif; }
+      .title { font-size: 24px; font-weight: 700; fill: #243A5E; }
+      .subtitle { font-size: 15px; fill: #605E5C; }
+      .heading { font-size: 20px; font-weight: 700; fill: #243A5E; }
+      .label { font-size: 15px; fill: #323130; }
+      .small { font-size: 14px; fill: #605E5C; }
+      .tag { font-size: 14px; font-weight: 700; fill: #8A5300; }
+      .tableHead { font-size: 14px; font-weight: 700; fill: #243A5E; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="820" rx="16" fill="#FFFFFF"/>
+  <rect x="28" y="28" width="1144" height="764" rx="18" fill="#F7FAFD" stroke="#DEECF9"/>
+
+  <text class="font title" x="60" y="76">Microsoft Sovereign Cloud: three deployment models</text>
+  <text class="font subtitle" x="60" y="104">Sovereignty choices span Microsoft-operated public regions, customer-operated private deployments, and partner-operated national clouds.</text>
+
+  <g transform="translate(60 145)">
+    <rect x="0" y="0" width="340" height="400" rx="16" fill="#FFFFFF" stroke="#8ABFE6"/>
+    <rect x="0" y="0" width="340" height="74" rx="16" fill="#DEECF9" stroke="#8ABFE6"/>
+    <text class="font heading" x="24" y="44">Sovereign Public Cloud</text>
+    <text class="font label" x="24" y="104">Microsoft-operated Azure public regions</text>
+    <text class="font small" x="24" y="128">Sovereignty controls inside boundaries</text>
+    <text class="font small" x="24" y="150">such as the EU Data Boundary</text>
+
+    <text class="font tableHead" x="24" y="196">Capabilities</text>
+    <circle cx="34" cy="226" r="6" fill="#0078D4"/>
+    <text class="font label" x="52" y="231">Data Guardian</text>
+    <circle cx="34" cy="266" r="6" fill="#0078D4"/>
+    <text class="font label" x="52" y="271">External Key Management</text>
+    <circle cx="34" cy="306" r="6" fill="#0078D4"/>
+    <text class="font label" x="52" y="311">Azure confidential computing</text>
+    <circle cx="34" cy="346" r="6" fill="#0078D4"/>
+    <text class="font label" x="52" y="351">Sovereign Control Panel</text>
+  </g>
+
+  <g transform="translate(430 145)">
+    <rect x="0" y="0" width="340" height="400" rx="16" fill="#FFFFFF" stroke="#80C6BA"/>
+    <rect x="0" y="0" width="340" height="74" rx="16" fill="#E6F4F1" stroke="#80C6BA"/>
+    <text class="font heading" x="24" y="44">Sovereign Private Cloud</text>
+    <text class="font label" x="24" y="104">Customer-operated in customer datacenters</text>
+    <text class="font small" x="24" y="128">Connected or disconnected operation</text>
+
+    <text class="font tableHead" x="24" y="176">Building blocks</text>
+    <rect x="24" y="200" width="128" height="36" rx="18" fill="#EFF6FC" stroke="#8ABFE6"/>
+    <text class="font label" x="88" y="224" text-anchor="middle">Azure Local</text>
+    <rect x="166" y="200" width="144" height="36" rx="18" fill="#EFF6FC" stroke="#8ABFE6"/>
+    <text class="font label" x="238" y="224" text-anchor="middle">Microsoft 365 Local</text>
+    <rect x="24" y="254" width="172" height="36" rx="18" fill="#EFF6FC" stroke="#8ABFE6"/>
+    <text class="font label" x="110" y="278" text-anchor="middle">GitHub Enterprise Local</text>
+    <rect x="206" y="258" width="82" height="28" rx="14" fill="#FFF4CE" stroke="#EAA300"/>
+    <text class="font tag" x="247" y="277" text-anchor="middle">Preview</text>
+    <rect x="24" y="308" width="218" height="36" rx="18" fill="#EFF6FC" stroke="#8ABFE6"/>
+    <text class="font label" x="133" y="332" text-anchor="middle">Foundry Local on Azure Local</text>
+    <rect x="252" y="312" width="82" height="28" rx="14" fill="#FFF4CE" stroke="#EAA300"/>
+    <text class="font tag" x="293" y="331" text-anchor="middle">Preview</text>
+  </g>
+
+  <g transform="translate(800 145)">
+    <rect x="0" y="0" width="340" height="400" rx="16" fill="#FFFFFF" stroke="#B7A2D6"/>
+    <rect x="0" y="0" width="340" height="74" rx="16" fill="#F1ECF8" stroke="#B7A2D6"/>
+    <text class="font heading" x="24" y="44">National Partner Clouds</text>
+    <text class="font label" x="24" y="104">Partner-operated, jointly governed</text>
+    <text class="font small" x="24" y="128">Microsoft technology stack with local partners</text>
+
+    <rect x="24" y="174" width="286" height="84" rx="12" fill="#F3F2F1" stroke="#C8C6C4"/>
+    <text class="font tableHead" x="44" y="206">Bleu</text>
+    <text class="font label" x="44" y="232">France</text>
+    <rect x="214" y="194" width="76" height="28" rx="14" fill="#FFF4CE" stroke="#EAA300"/>
+    <text class="font tag" x="252" y="213" text-anchor="middle">Being built</text>
+
+    <rect x="24" y="286" width="286" height="84" rx="12" fill="#F3F2F1" stroke="#C8C6C4"/>
+    <text class="font tableHead" x="44" y="318">Delos Cloud</text>
+    <text class="font label" x="44" y="344">Germany</text>
+    <rect x="214" y="306" width="76" height="28" rx="14" fill="#FFF4CE" stroke="#EAA300"/>
+    <text class="font tag" x="252" y="325" text-anchor="middle">Being built</text>
+  </g>
+
+  <g transform="translate(60 640)">
+    <rect x="0" y="0" width="1080" height="96" rx="14" fill="#FFFFFF" stroke="#C8C6C4"/>
+    <text class="font tableHead" x="24" y="36">Operated by</text>
+    <text class="font label" x="250" y="36">Microsoft</text>
+    <text class="font label" x="520" y="36">Customer</text>
+    <text class="font label" x="805" y="36">National partner</text>
+    <line x1="0" y1="52" x2="1080" y2="52" stroke="#EDEBE9"/>
+    <text class="font tableHead" x="24" y="76">Runs in</text>
+    <text class="font label" x="250" y="76">Azure public regions</text>
+    <text class="font label" x="520" y="76">Customer datacenters</text>
+    <text class="font label" x="805" y="76">Partner national clouds</text>
+  </g>
+
+  <text class="font small" x="60" y="774">Note: Microsoft Sovereign Cloud is the current name for the portfolio formerly called Microsoft Cloud for Sovereignty.</text>
+</svg>
