@@ -1,493 +1,76 @@
 ---
-title: "Azure Arc Data Services"
-description: "Azure Arc-enabled Data Services — run SQL Managed Instance and PostgreSQL on any Kubernetes infrastructure with Azure-consistent management while keeping data on-premises."
+title: Azure Arc data services
+description: "Understand current Azure Arc data services facts, including SQL Managed Instance direct connectivity and retired PostgreSQL and indirect modes."
+lastVerified: 2026-10-02
 sidebar:
-  order: 4.3
+  order: 4
 ---
 
----
+Azure Arc data services bring selected Azure data service patterns to Kubernetes infrastructure outside Azure. Today that means one service: Azure Arc-enabled SQL Managed Instance, generally available in select regions and supported only in direct connectivity mode.
 
-## What are Arc Data Services?
+Arc data services used to include two services and two connectivity modes. Azure Arc-enabled PostgreSQL server was retired on July 14, 2025, and indirectly connected mode for Azure Arc-enabled data services retired in September 2025 ([release notes](https://learn.microsoft.com/azure/azure-arc/data/release-notes), [connectivity mode and requirements](https://learn.microsoft.com/azure/azure-arc/data/connectivity)).
 
-Azure Arc-enabled Data Services bring Azure database services to any infrastructure - on-premises, edge, or any public cloud. Get a managed database experience with evergreen updates, elastic scale, and Azure-consistent management while keeping data on-premises.
+## What remains current
 
-**Available Services:**
+| Area | Current status | What to remember |
+|---|---|---|
+| Azure Arc-enabled SQL Managed Instance | Generally available in select regions ([validation program](https://learn.microsoft.com/azure/azure-arc/data/validation-program)) | Runs on Kubernetes infrastructure and is managed through Azure Arc |
+| Direct connectivity mode | Required for Arc-enabled data services ([connectivity](https://learn.microsoft.com/azure/azure-arc/data/connectivity)) | The data controller has direct Azure connectivity for management, monitoring, and billing flows |
+| Indirect connectivity mode | Retired in September 2025 ([release notes](https://learn.microsoft.com/azure/azure-arc/data/release-notes#september-2025)) | Do not design new deployments around manual upload or disconnected indirect mode |
+| Azure Arc-enabled PostgreSQL server | Retired on July 14, 2025 ([release notes](https://learn.microsoft.com/azure/azure-arc/data/release-notes)) | Remove it from current solution options |
+| Grafana and OpenSearch dashboards for Arc SQL MI | Removed in August 2025 ([release notes](https://learn.microsoft.com/azure/azure-arc/data/release-notes)) | Do not include those dashboards in current operating models |
 
-- **Azure SQL Managed Instance:** Fully compatible SQL Server with PaaS benefits
-- **PostgreSQL Hyperscale:** Scalable PostgreSQL with Citus extension
+## SQL Managed Instance enabled by Azure Arc
 
-**[← Back to Azure Arc Introduction](/level-100/module-04-azure-arc/azure-arc-intro/)**
+SQL Managed Instance enabled by Azure Arc is a managed SQL service that runs on Kubernetes infrastructure and is exposed through Azure Arc. It targets cases where an organization wants a managed SQL experience while the database runs outside Azure.
 
----
+At L100 depth, focus on these points:
 
-## Available Services
+- The service is not retired. Microsoft lists SQL Managed Instance enabled by Azure Arc as generally available in select regions on the Arc-enabled data services Kubernetes validation page.
+- It now uses direct connectivity mode only. Indirect mode is retired.
+- Database files and query processing run on the target infrastructure, while Azure connectivity supports management, monitoring, and billing.
+- The service is distinct from SQL Server enabled by Azure Arc, which connects existing SQL Server instances running on Windows or Linux machines.
 
-### Azure SQL Managed Instance
+## Direct connectivity mode
 
-**What It Is:**
+Direct connectivity mode connects the Arc data controller directly to Azure. Microsoft states that direct mode is now the only supported connectivity mode for Azure Arc-enabled data services ([connectivity mode and requirements](https://learn.microsoft.com/azure/azure-arc/data/connectivity)).
 
-- SQL Server compatibility (99%+)
-- Managed instance with automatic backups
-- Built-in high availability
-- Evergreen (always up-to-date)
-- Running on your infrastructure
+Direct connectivity supports Azure portal inventory and management flows, Azure billing, usage reporting, and Azure-side monitoring integrations. Because those flows require connectivity, a design that cannot allow direct Azure connectivity should not assume that Arc-enabled SQL Managed Instance can use the old indirect model.
 
-**Key Features:**
+For sovereign cloud architecture, separate two questions:
 
-- T-SQL compatibility
-- Linked servers
-- CLR, SQL Agent, Database Mail
-- Full-text search
-- Elastic scale (Enterprise tier)
-- Point-in-time restore
+1. Where do the database files and query processing run?
+2. Which management, billing, monitoring, and diagnostic data flows go to Azure?
 
-**Licensing:**
+The first answer may be "local infrastructure." The second answer depends on direct mode configuration and any services you attach.
 
-- Pay-as-you-go (Azure meter)
-- Bring-your-own-license (BYOL)
-- Azure Hybrid Benefit
+## Retired PostgreSQL service
 
-### PostgreSQL Hyperscale
+Azure Arc-enabled PostgreSQL server was a separate Arc data service. It was retired on July 14, 2025 ([release notes](https://learn.microsoft.com/azure/azure-arc/data/release-notes)) and is no longer an option, including the PostgreSQL Hyperscale on Arc name that appears in older diagrams.
 
-**What It Is:**
+For existing PostgreSQL needs, choose a current PostgreSQL platform outside this module's scope. Options might include self-managed PostgreSQL, Azure Database for PostgreSQL in Azure, or another supported database platform, depending on sovereignty and connectivity requirements. Check the target platform against current Microsoft documentation before you commit to it.
 
-- PostgreSQL with Citus extension
-- Horizontal scaling (sharding)
-- Distributed tables and queries
-- Managed service experience
+## What the retirements mean
 
-**Key Features:**
+If an existing environment still refers to indirect mode or Arc-enabled PostgreSQL, treat it as a migration and risk review topic.
 
-- Scale out reads and writes
-- Parallel query execution
-- Real-time analytics
-- Multi-tenant applications
-- High throughput ingestion
+- Remove indirect mode from new designs.
+- Check existing Arc data services deployments for their connectivity mode.
+- Plan SQL Managed Instance enabled by Azure Arc around direct mode.
+- Remove Arc-enabled PostgreSQL server from current reference architectures.
+- Replace old Grafana and OpenSearch dashboard guidance for Arc SQL MI with current monitoring guidance.
 
-**Use Cases:**
+These retirements also affect sovereignty messaging. A design can still keep database files local, but it cannot claim an Arc data services deployment is supported without direct Azure connectivity unless a separate, current Microsoft pattern says so.
 
-- Multi-tenant SaaS applications
-- Real-time analytics dashboards
-- Time-series data
-- High-throughput OLTP
+## SQL Server enabled by Azure Arc
 
----
+SQL Server enabled by Azure Arc is related, but it is not the same thing as Azure Arc-enabled SQL Managed Instance. SQL Server enabled by Azure Arc connects existing SQL Server instances on Windows or Linux machines to Azure by using the Connected Machine agent and the Azure Extension for SQL Server ([SQL Server enabled by Azure Arc](https://learn.microsoft.com/sql/sql-server/azure-arc/overview?view=sql-server-ver17)).
 
-## Deployment Modes
+Use SQL Server enabled by Azure Arc when you need inventory and management for existing SQL Server instances. Use SQL Managed Instance enabled by Azure Arc when the design calls for the Arc data services managed instance pattern on Kubernetes. The names are similar, so state the distinction in architecture reviews.
 
-### Directly Connected Mode
+## Sources
 
-**Characteristics:**
-
-- Continuous or regular connection to Azure
-- Billing and usage data uploaded to Azure
-- Azure portal management available
-- Automatic updates
-
-**Requirements:**
-
-- Outbound HTTPS to Azure
-- Azure subscription
-- Upload to Azure every 24 hours
-
-**Benefits:**
-
-- Simplest to manage
-- Full Azure portal experience
-- Automated billing
-- Latest features first
-
-### Indirectly Connected Mode (Retired)
-
-:::caution[⚠️ Retired Feature]
-Indirectly Connected mode was retired in September 2025. For disconnected scenarios requiring Arc-enabled data services, use [Azure Local with Disconnected Operations](/level-100/module-03-azure-local/azure-local-disconnected-mode/) which provides a local control plane with Azure portal experience.
-:::
-
-
-**Historical Context:**
-
-This mode previously supported air-gapped environments with manual data export/import. Organizations requiring disconnected database services should now evaluate:
-
-- **Azure Local Disconnected Operations** — Local Azure portal and management
-- **Traditional SQL Server/PostgreSQL** — Self-managed databases on disconnected infrastructure
-
----
-
-## Managed Database Experience Anywhere
-
-### What "Managed" Means
-
-**Automated Operations:**
-
-- Backups and restore
-- High availability and failover
-- Patch management and updates
-- Performance monitoring
-- Resource scaling
-
-**Reduced Admin Overhead:**
-
-- No OS patching
-- No infrastructure management
-- Simplified disaster recovery
-- Built-in monitoring
-
-### Elastic Scale and High Availability
-
-**Scale Up/Down:**
-
-- Adjust CPU and memory dynamically
-- No downtime for scaling
-- Pay only for what you use
-
-**Scale Out (Hyperscale):**
-
-- Add read replicas
-- Shard data across nodes
-- Parallel query execution
-
-**High Availability:**
-
-- Always-On Availability Groups (SQL MI)
-- Synchronous replication
-- Automatic failover (< 30 seconds)
-- Built-in health monitoring
-
----
-
-## Billing Model
-
-### Pay-As-You-Go
-
-**How It Works:**
-
-- Billed based on vCore-hours consumed
-- Separate pricing for General Purpose and Business Critical tiers
-- Storage charged separately
-
-**Pricing Example (SQL MI):**
-
-- General Purpose: ~$0.40/vCore/hour
-- Business Critical: ~$1.00/vCore/hour
-- Storage: ~$0.11/GB/month
-
-### Bring Your Own License (BYOL)
-
-**Requirements:**
-
-- Active SQL Server license with Software Assurance
-- Azure Hybrid Benefit enrollment
-
-**Savings:**
-
-- Up to 55% savings vs. pay-as-you-go
-- License mobility (move between environments)
-
-**Combined with Azure Hybrid Benefit:**
-
-- Use existing on-premises licenses
-- Add free 180 days of Software Assurance
-- Further cost reduction
-
----
-
-## Migration from Traditional Databases
-
-### Assessment
-
-**Tools:**
-
-- Azure Migrate for database assessment
-- Data Migration Assistant (DMA)
-- Azure SQL Migration extension
-
-**Assessment Output:**
-
-- Compatibility issues
-- Feature parity analysis
-- Performance baseline
-- Sizing recommendations
-
-### Migration Methods
-
-**1. Backup and Restore:**
-
-- For offline migrations
-- Full/diff/log backups
-- Point-in-time recovery
-- Minimal downtime: Hours
-
-**2. Log Shipping:**
-
-- For near-zero downtime migrations
-- Continuous log replay
-- Manual cutover
-- Minimal downtime: Minutes
-
-**3. Distributed Availability Group (SQL MI):**
-
-- Replicate from on-premises SQL Server
-- Bidirectional replication
-- Minimal downtime migration
-- Rollback capability
-
-**4. Azure Database Migration Service:**
-
-- Online migrations
-- Minimal downtime
-- Automated process
-- Change data capture (CDC)
-
-### Post-Migration Validation
-
-**Performance:**
-
-- Benchmark queries
-- Compare execution plans
-- Validate throughput
-
-**Functionality:**
-
-- Test all application features
-- Validate integrations
-- Confirm backup/restore
-
-**Compliance:**
-
-- Security controls
-- Audit logging
-- Encryption validation
-
----
-
-## Security and Encryption
-
-**Encryption at Rest:**
-
-- Transparent Data Encryption (TDE) enabled by default
-- AES-256 encryption
-- Customer-managed keys (CMK) option
-
-**Encryption in Transit:**
-
-- TLS 1.2+ for all connections
-- Force encryption option
-- Certificate validation
-
-**Access Control:**
-
-- Azure AD authentication
-- SQL authentication
-- Role-based access control (RBAC)
-- Row-level security (RLS)
-- Dynamic data masking (DDM)
-
-**Auditing:**
-
-- SQL audit to local storage or Azure
-- Threat detection
-- Vulnerability assessment
-- Compliance reporting (PCI-DSS, HIPAA, etc.)
-
----
-
-## Data Residency Guarantees
-
-**Data Stays On-Premises:**
-
-- Database files remain on your infrastructure
-- Backups stored locally (or where you choose)
-- Query processing happens locally
-- No automatic replication to cloud
-
-**Metadata Sent to Azure (Direct Mode):**
-
-- Billing and usage data
-- Performance metrics (aggregate)
-- Diagnostic logs (optional)
-- Configuration metadata
-
-**Compliance:**
-
-- Meets GDPR requirements
-- HIPAA compliant
-- PCI-DSS ready
-- FedRAMP compatible
-
-**Audit Trail:**
-
-- All data movement logged
-- Compliance reports available
-- Demonstrates data residency
-
----
-
-## Use Case Scenarios
-
-### Scenario 1: Financial Services Database Modernization
-
-**Challenge:** 100+ SQL Server 2012 databases end of support, but data must stay on-premises.
-
-**Solution:**
-
-- Deploy Arc SQL Managed Instance
-- Migrate databases using DMA
-- Implement Always-On AG for HA
-- Enable TDE and auditing
-
-**Results:**
-
-- Modernized databases without cloud migration
-- Pay-as-you-go reduced costs by 40%
-- 99.95% availability SLA
-- Passed compliance audits
-- Reduced admin overhead by 50%
-
-### Scenario 2: Healthcare SaaS Multi-Tenant Application
-
-**Challenge:** SaaS app needs to scale to 1000s of tenants with high performance.
-
-**Solution:**
-
-- Deploy PostgreSQL Hyperscale
-- Shard by tenant ID
-- Scale to 10+ worker nodes
-- Parallel query execution
-
-**Results:**
-
-- 10x query performance improvement
-- Seamless scaling to 5000+ tenants
-- Sub-second query response times
-- Reduced infrastructure costs (better utilization)
-
-### Scenario 3: Retail Point-of-Sale System
-
-**Challenge:** Chain of 500 stores needs local database at each store with central reporting.
-
-**Solution:**
-
-- Deploy SQL MI at each store location
-- Local transactions (no cloud dependency)
-- Nightly replication to central data warehouse
-- Azure portal for monitoring all 500 instances
-
-**Results:**
-
-- Zero downtime from internet outages
-- Real-time POS transactions
-- Centralized reporting and analytics
-- Managed from single pane of glass
-
----
-
-## Best Practices
-
-**1. Right-Size from the Start:**
-
-- Use assessment tools
-- Start with actual workload metrics
-- Monitor and adjust
-
-**2. Implement HA from Day 1:**
-
-- Always-On AG for SQL MI
-- Multiple coordinator nodes for Hyperscale
-- Test failover procedures
-
-**3. Plan for Growth:**
-
-- Size for 2-3 year growth
-- Consider scaling options
-- Budget for storage growth
-
-**4. Backup Strategy:**
-
-- Define RPO and RTO
-- Test restores regularly
-- Implement offsite backups
-
-**5. Monitor Proactively:**
-
-- Set up alerts
-- Review performance metrics weekly
-- Capacity planning
-
-**6. Leverage Azure Hybrid Benefit:**
-
-- Use existing SQL licenses
-- Significant cost savings
-- License mobility
-
----
-
-## Cost Considerations
-
-**Total Cost of Ownership:**
-
-**Arc Data Services:**
-
-- Lower than Azure SQL Database for sustained workloads
-- Lower than self-managed on-premises (reduced admin)
-- Flexible with BYOL
-
-**Example Monthly Cost (SQL MI, 16 vCores):**
-
-**Pay-as-you-go:**
-
-- General Purpose: ~$4,600/month
-- Business Critical: ~$11,500/month
-
-**With Azure Hybrid Benefit:**
-
-- General Purpose: ~$2,100/month
-- Business Critical: ~$5,200/month
-
-**Break-Even vs. Azure SQL Database:**
-
-- Typically 6-12 months for sustained workloads
-- Faster for 24/7 production databases
-
----
-
-## Troubleshooting
-
-**Deployment Failures:**
-
-- Verify Kubernetes resource availability
-- Check storage class configuration
-- Validate network connectivity
-- Review controller logs
-
-**Performance Issues:**
-
-- Check resource allocation (CPU, memory)
-- Review query execution plans
-- Validate storage IOPS
-- Monitor network latency
-
-**Connectivity Problems:**
-
-- Verify service endpoint configuration
-- Check firewall rules
-- Validate DNS resolution
-- Test from application server
-
----
-
-## Next Steps
-
-- [Arc Servers →](/level-100/module-04-azure-arc/azure-arc-servers/)
-- [Arc Kubernetes →](/level-100/module-04-azure-arc/azure-arc-kubernetes/)
-- [Azure Arc Quiz →](/level-100/module-04-azure-arc/azure-arc-knowledge-check/)
-- [Back to Arc Overview →](/level-100/module-04-azure-arc/azure-arc-intro/)
-
-**External Resources:**
-
-- [Azure Arc-enabled data services docs](https://learn.microsoft.com/en-us/azure/azure-arc/data/)
-- [SQL Managed Instance on Arc](https://learn.microsoft.com/en-us/azure/azure-arc/data/managed-instance-overview)
-- [PostgreSQL Hyperscale on Arc](https://learn.microsoft.com/en-us/azure/azure-arc/data/overview)
-
----
-
-**Last Updated:** October 2025
+- [Connectivity mode and requirements](https://learn.microsoft.com/azure/azure-arc/data/connectivity)
+- [Release notes, Azure Arc-enabled data services](https://learn.microsoft.com/azure/azure-arc/data/release-notes)
+- [Azure Arc-enabled data services Kubernetes validation](https://learn.microsoft.com/azure/azure-arc/data/validation-program)
+- [SQL Server enabled by Azure Arc](https://learn.microsoft.com/sql/sql-server/azure-arc/overview?view=sql-server-ver17)
