@@ -24,10 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: "22"
 
@@ -35,7 +35,7 @@ jobs:
         # Phase 3 — pinned to the same version the pre-commit hook uses
         # (.pre-commit-config.yaml) so local and CI lint produce identical
         # results.
-        run: npm install -g markdownlint-cli2@0.17.2
+        run: npm install -g markdownlint-cli2@0.23.3
 
       - name: Run markdownlint
         # Lints every .md file in the repo (root README, .github/, and the

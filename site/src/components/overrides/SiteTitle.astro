@@ -1,0 +1,63 @@
+---
+/**
+ * SiteTitle override.
+ *
+ * Same markup as Starlight's SiteTitle (logo from src/assets/brand/logo.svg, the same file as the
+ * `logo` option in astro.config.mjs), but on narrow screens the visible title is the short
+ * "Brain Trek" so it is not cut off mid-word next to the search and menu buttons. The full title
+ * stays in the accessible name of the link at every width.
+ */
+import logo from "../../assets/brand/logo.svg";
+
+const { siteTitle, siteTitleHref } = Astro.locals.starlightRoute;
+const shortTitle = "Brain Trek";
+---
+
+<a href={siteTitleHref} class="site-title sl-flex" aria-label={siteTitle}>
+  <img alt="" src={logo.src} width={logo.width} height={logo.height} />
+  <span class="site-title__text" translate="no" aria-hidden="true">
+    <span class="site-title__full">{siteTitle}</span>
+    <span class="site-title__short">{shortTitle}</span>
+  </span>
+</a>
+
+<style>
+  @layer starlight.core {
+    .site-title {
+      align-items: center;
+      gap: var(--sl-nav-gap);
+      font-size: var(--sl-text-h4);
+      font-weight: 600;
+      color: var(--sl-color-text-accent);
+      text-decoration: none;
+      white-space: nowrap;
+      min-width: 0;
+    }
+    img {
+      height: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y));
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: 0 50%;
+    }
+  }
+
+  .site-title__text {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .site-title__short {
+    display: none;
+  }
+
+  @media (max-width: 40rem) {
+    .site-title__full {
+      display: none;
+    }
+    .site-title__short {
+      display: inline;
+    }
+  }
+</style>
