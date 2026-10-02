@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 540">
+  <title id="title">Compliance and security control map</title>
+  <desc id="desc">A control map from regulatory requirements through Microsoft tooling to evidence outputs.</desc>
+  <rect width="960" height="540" fill="#F7FAFD"/>
+  <text x="480" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#0F172A">Map requirements to controls and evidence</text>
+  <text x="480" y="76" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#334155">Use Microsoft tooling for assessment and enforcement, then keep customer evidence for authorization.</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="42" y="118" width="240" height="310" rx="18" fill="#E6F2FD" stroke="#0F6CBD" stroke-width="2"/>
+    <text x="162" y="152" text-anchor="middle" font-size="20" font-weight="700" fill="#0F6CBD">Requirements</text>
+    <text x="72" y="194" font-size="15" fill="#0F172A">NIS2</text>
+    <text x="72" y="230" font-size="15" fill="#0F172A">DORA</text>
+    <text x="72" y="266" font-size="15" fill="#0F172A">GDPR</text>
+    <text x="72" y="302" font-size="15" fill="#0F172A">EU AI Act</text>
+    <text x="72" y="338" font-size="15" fill="#0F172A">FedRAMP High and Moderate</text>
+    <text x="72" y="374" font-size="15" fill="#0F172A">Sovereign control levels</text>
+
+    <rect x="360" y="98" width="240" height="350" rx="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="480" y="132" text-anchor="middle" font-size="20" font-weight="700" fill="#0F172A">Control tooling</text>
+    <rect x="388" y="162" width="184" height="48" rx="10" fill="#E6F2FD" stroke="#2886DE"/>
+    <text x="480" y="192" text-anchor="middle" font-size="14" font-weight="600" fill="#0F172A">Defender for Cloud</text>
+    <rect x="388" y="230" width="184" height="48" rx="10" fill="#EAF6EA" stroke="#107C10"/>
+    <text x="480" y="260" text-anchor="middle" font-size="14" font-weight="600" fill="#0F172A">Azure Policy</text>
+    <rect x="388" y="298" width="184" height="48" rx="10" fill="#FFF4E6" stroke="#FF8C00"/>
+    <text x="480" y="328" text-anchor="middle" font-size="14" font-weight="600" fill="#0F172A">Compliance Manager</text>
+    <rect x="388" y="366" width="184" height="48" rx="10" fill="#F3E8FF" stroke="#7B3FF2"/>
+    <text x="480" y="396" text-anchor="middle" font-size="14" font-weight="600" fill="#0F172A">Microsoft Entra and Arc</text>
+
+    <rect x="668" y="118" width="260" height="310" rx="18" fill="#EAF6EA" stroke="#107C10" stroke-width="2"/>
+    <text x="798" y="152" text-anchor="middle" font-size="20" font-weight="700" fill="#107C10">Evidence outputs</text>
+    <text x="690" y="194" font-size="15" fill="#0F172A">Compliance dashboard exports</text>
+    <text x="690" y="230" font-size="15" fill="#0F172A">Policy assignment results</text>
+    <text x="690" y="266" font-size="15" fill="#0F172A">Assessment actions</text>
+    <text x="690" y="302" font-size="15" fill="#0F172A">Access reviews and logs</text>
+    <text x="690" y="338" font-size="15" fill="#0F172A">SIEM and incident records</text>
+    <text x="690" y="374" font-size="15" fill="#0F172A">Manual control evidence</text>
+
+    <path d="M 292 274 L 342 274" stroke="#0F6CBD" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <path d="M 610 274 L 660 274" stroke="#107C10" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+    <rect x="70" y="462" width="820" height="42" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="480" y="489" text-anchor="middle" font-size="15" fill="#334155">Shared responsibility: Microsoft operates platform controls, customers configure workloads and keep evidence.</text>
+  </g>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+  </defs>
+</svg>

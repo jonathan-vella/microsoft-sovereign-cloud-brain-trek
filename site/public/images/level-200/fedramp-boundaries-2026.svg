@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 540">
+  <title id="title">FedRAMP and Azure Government boundary map</title>
+  <desc id="desc">A diagram comparing Azure public US regions, Azure Government regions, DoD regions, Azure Government Secret, and Azure Government Top Secret.</desc>
+  <rect width="960" height="540" fill="#F7FAFD"/>
+  <text x="480" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="700" fill="#0F172A">US government cloud boundaries for FedRAMP planning</text>
+  <text x="480" y="74" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#334155">Choose the boundary that matches the agency, data type, and authorization scope.</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="48" y="116" width="256" height="140" rx="16" fill="#E6F2FD" stroke="#0F6CBD" stroke-width="2"/>
+    <text x="176" y="148" text-anchor="middle" font-size="20" font-weight="700" fill="#0F6CBD">Azure commercial</text>
+    <text x="76" y="184" font-size="14" fill="#0F172A">FedRAMP High P-ATO</text>
+    <text x="76" y="210" font-size="14" fill="#0F172A">All US public Azure regions</text>
+    <text x="76" y="236" font-size="14" fill="#0F172A">Agency ATO still required</text>
+
+    <rect x="352" y="116" width="256" height="140" rx="16" fill="#EAF6EA" stroke="#107C10" stroke-width="2"/>
+    <text x="480" y="148" text-anchor="middle" font-size="20" font-weight="700" fill="#107C10">Azure Government</text>
+    <text x="380" y="184" font-size="14" fill="#0F172A">FedRAMP High P-ATO</text>
+    <text x="380" y="210" font-size="14" fill="#0F172A">US Gov Arizona, Texas, Virginia</text>
+    <text x="380" y="236" font-size="14" fill="#0F172A">Only Virginia has AZ support</text>
+
+    <rect x="656" y="116" width="256" height="140" rx="16" fill="#FFF4E6" stroke="#FF8C00" stroke-width="2"/>
+    <text x="784" y="148" text-anchor="middle" font-size="20" font-weight="700" fill="#B45309">DoD regions</text>
+    <text x="684" y="184" font-size="14" fill="#0F172A">DoD IL5 audit scope</text>
+    <text x="684" y="210" font-size="14" fill="#0F172A">US DoD Central</text>
+    <text x="684" y="236" font-size="14" fill="#0F172A">US DoD East</text>
+
+    <rect x="178" y="316" width="256" height="140" rx="16" fill="#F3E8FF" stroke="#7B3FF2" stroke-width="2"/>
+    <text x="306" y="348" text-anchor="middle" font-size="20" font-weight="700" fill="#5C2D91">Government Secret</text>
+    <text x="206" y="384" font-size="14" fill="#0F172A">DoD IL6 provisional authorization</text>
+    <text x="206" y="410" font-size="14" fill="#0F172A">Three accredited regions</text>
+    <text x="206" y="436" font-size="14" fill="#0F172A">Classified network connections</text>
+
+    <rect x="526" y="316" width="256" height="140" rx="16" fill="#EEF2FF" stroke="#475569" stroke-width="2"/>
+    <text x="654" y="348" text-anchor="middle" font-size="20" font-weight="700" fill="#334155">Government Top Secret</text>
+    <text x="554" y="384" font-size="14" fill="#0F172A">National security workloads</text>
+    <text x="554" y="410" font-size="14" fill="#0F172A">JSIG ATO at Protection Level 3</text>
+    <text x="554" y="436" font-size="14" fill="#0F172A">Contact Microsoft for scope details</text>
+
+    <path d="M 480 266 L 480 292" stroke="#64748B" stroke-width="3" fill="none"/>
+    <path d="M 480 292 L 306 292 L 306 316" stroke="#64748B" stroke-width="3" fill="none"/>
+    <path d="M 480 292 L 654 292 L 654 316" stroke="#64748B" stroke-width="3" fill="none"/>
+  </g>
+</svg>

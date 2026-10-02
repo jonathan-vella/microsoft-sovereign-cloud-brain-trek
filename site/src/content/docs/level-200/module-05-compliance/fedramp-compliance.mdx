@@ -1,0 +1,115 @@
+---
+title: "FedRAMP compliance"
+description: "Plan FedRAMP inheritance, Azure and Azure Government boundaries, StateRAMP reuse, and Defender for Cloud evidence."
+lastVerified: 2026-10-02
+sidebar:
+  order: 4
+---
+
+import DiagramContainer from "~/components/DiagramContainer.astro";
+
+FedRAMP planning for Azure starts with inherited platform authorizations, then defines the customer's system boundary, controls, and agency authorization path. Azure's FedRAMP status helps, but a workload still needs its own authorization decisions and evidence package.
+
+<DiagramContainer title="FedRAMP and US government cloud boundaries">
+
+![FedRAMP and Azure Government boundary map for Azure public regions, Azure Government regions, DoD regions, Secret, and Top Secret](/images/level-200/fedramp-boundaries-2026.svg)
+
+</DiagramContainer>
+
+## Understand the authorization structure
+
+FedRAMP provides a standardized approach for assessment, monitoring, and authorization of cloud services. FedRAMP authorizations use Low, Moderate, and High impact levels based on NIST FIPS 199. Microsoft Learn states that the FedRAMP Moderate baseline has 325 controls and the FedRAMP High baseline has 421 controls ([Learn](https://learn.microsoft.com/azure/compliance/offerings/offering-fedramp)).
+
+There are three common paths:
+
+| Path | Meaning |
+| --- | --- |
+| JAB P-ATO | A Provisional Authorization to Operate granted by the FedRAMP Joint Authorization Board to a cloud service offering. |
+| Agency ATO | An agency authorization for a specific system or use. |
+| CSP supplied package | A provider-developed package that meets program requirements. |
+
+The P-ATO is an input to the agency process. Microsoft Learn says that once a P-ATO is granted, a cloud service provider still requires an authorization from any government agency it works with, and an agency can use an existing P-ATO as the basis for issuing an agency ATO ([Learn](https://learn.microsoft.com/azure/compliance/offerings/offering-fedramp)).
+
+## Use Azure and Azure Government P-ATOs
+
+Both Azure and Azure Government maintain FedRAMP High P-ATOs issued by the JAB, plus more than 400 Moderate and High ATOs issued by individual federal agencies for in-scope services ([Learn](https://learn.microsoft.com/azure/compliance/offerings/offering-fedramp)).
+
+Region scope is different for each cloud:
+
+| Cloud | FedRAMP High P-ATO scope |
+| --- | --- |
+| Azure commercial | All Azure public regions in the United States are in scope. Azure regions outside the United States are not formally authorized by the JAB and are not in the FedRAMP High P-ATO scope. |
+| Azure Government | US Gov Arizona, US Gov Texas, and US Gov Virginia are in scope. |
+
+Azure Government adds customer assurances through controls that limit potential access to systems processing customer data to screened US persons. Use Azure Government when the agency, data type, contract, or risk decision requires those assurances rather than only the commercial Azure FedRAMP High boundary.
+
+## Know the Azure Government region model
+
+Azure Government has three listed regions: US Gov Arizona, US Gov Texas, and US Gov Virginia. Of those, the Azure Government overview shows availability zone support only for US Gov Virginia ([Learn](https://learn.microsoft.com/azure/azure-government/documentation-government-welcome)).
+
+Azure Government compliance documentation also references two DoD-only regions, US DoD Central and US DoD East, for DoD IL5 audit scope. Those regions are separate from the three US Gov regions used for the Azure Government FedRAMP High P-ATO scope ([Learn](https://learn.microsoft.com/azure/azure-government/documentation-government-plan-compliance)).
+
+For classified workloads, Microsoft documents additional offerings:
+
+| Offering | Microsoft-documented status |
+| --- | --- |
+| Azure Government Secret | Maintains a DoD IL6 provisional authorization and is available from three accredited regions located more than 500 miles apart ([Learn](https://learn.microsoft.com/azure/compliance/offerings/offering-dod-il6)). |
+| Azure Government Top Secret | Microsoft documents Azure Government Top Secret as a national security offering and says Azure Government Secret and Azure Government Top Secret maintain JSIG ATOs at Protection Level 3 ([Learn](https://learn.microsoft.com/azure/compliance/offerings/offering-jsig)). |
+
+Do not collapse these into one "government cloud." Each has a different eligibility, connectivity, region, and compliance scope.
+
+## Map customer controls with Azure Policy and Defender for Cloud
+
+Microsoft provides Azure Policy regulatory compliance built-in initiatives for FedRAMP High and Moderate in both Azure and Azure Government. These initiatives map to FedRAMP compliance domains and controls, and each FedRAMP control is associated with one or more Azure Policy definitions where applicable ([Learn](https://learn.microsoft.com/azure/compliance/offerings/offering-fedramp)).
+
+Defender for Cloud includes a built-in FedRAMP "H" and "M" standard for Azure in the Regulatory compliance dashboard ([Learn](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards)). Use it to monitor assigned standards, recommendations, and resource compliance for automatically assessed controls.
+
+Use the tools together:
+
+| Need | Tooling |
+| --- | --- |
+| Prevent drift from required settings | Azure Policy assignments with audit, deny, modify, or deployIfNotExists effects. |
+| Track assessed compliance state | Defender for Cloud Regulatory compliance dashboard. |
+| Export resource evidence | Defender for Cloud reports, Azure Resource Graph, policy compliance data, and change records. |
+| Fill manual control evidence | Procedures, access reviews, incident records, vulnerability management reports, and agency-specific templates. |
+
+Azure Policy and Defender for Cloud show a partial view of compliance. Microsoft Learn states that Azure Policy compliance is only a partial view of overall compliance status ([Learn](https://learn.microsoft.com/azure/compliance/offerings/offering-fedramp)).
+
+## Apply StateRAMP reciprocity where relevant
+
+StateRAMP serves state and local governments. Microsoft Learn states that Azure, Azure Government, Dynamics 365, and Dynamics 365 US Government have achieved StateRAMP Authorized Security Status at High Impact Level. It also states that StateRAMP allows FedRAMP reciprocity as part of the fast track process, so cloud services in StateRAMP audit scope are the same services previously authorized by FedRAMP ([Learn](https://learn.microsoft.com/azure/compliance/offerings/offering-stateramp)).
+
+For a state or local government solution, decide whether the customer needs:
+
+- Azure or Azure Government StateRAMP evidence.
+- StateRAMP package requests through the StateRAMP PMO.
+- FedRAMP documentation from the Service Trust Portal or FedRAMP Marketplace.
+- A separate state agency authorization using the inherited evidence.
+
+## Account for Azure Copilot availability
+
+Azure Copilot is not available in national clouds, including Azure Government and Microsoft Azure operated by 21Vianet ([Learn](https://learn.microsoft.com/azure/copilot/overview)). Do not design an Azure Government operations process that depends on Azure Copilot prompts, chat history, or agent features.
+
+If an operations workflow uses Azure Copilot in commercial Azure, provide a separate documented workflow for Azure Government environments.
+
+## FedRAMP design checklist
+
+| Decision | Why it matters |
+| --- | --- |
+| Commercial Azure or Azure Government | Determines region scope, personnel screening, identity authority, endpoint domains, and available services. |
+| Impact level | Determines whether Low, Moderate, or High controls apply to the customer system. |
+| Service in scope | Confirms whether each Azure service is covered by the relevant FedRAMP or StateRAMP audit scope. |
+| Customer boundary | Defines the system boundary outside Microsoft's inherited platform controls. |
+| Evidence source | Identifies which evidence comes from Microsoft, which comes from customer tooling, and which comes from manual process records. |
+| Agency authorization path | Confirms whether the agency will issue an ATO using Microsoft's P-ATO as inherited evidence. |
+
+## Sources
+
+- [Federal Risk and Authorization Management Program](https://learn.microsoft.com/azure/compliance/offerings/offering-fedramp)
+- [Azure Government compliance](https://learn.microsoft.com/azure/azure-government/documentation-government-plan-compliance)
+- [What is Azure Government?](https://learn.microsoft.com/azure/azure-government/documentation-government-welcome)
+- [Department of Defense Impact Level 6](https://learn.microsoft.com/azure/compliance/offerings/offering-dod-il6)
+- [Joint Special Access Program Implementation Guide](https://learn.microsoft.com/azure/compliance/offerings/offering-jsig)
+- [StateRAMP](https://learn.microsoft.com/azure/compliance/offerings/offering-stateramp)
+- [Regulatory compliance standards in Microsoft Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards)
+- [What is Azure Copilot?](https://learn.microsoft.com/azure/copilot/overview)
