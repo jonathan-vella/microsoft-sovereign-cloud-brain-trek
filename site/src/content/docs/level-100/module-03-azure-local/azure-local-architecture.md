@@ -51,7 +51,7 @@ Microsoft Learn says connected operations can scale "from one node to thousands 
 
 ## Workload availability
 
-Workload support varies by deployment type. The deployment type guide lists Azure Local VMs across hyperconverged, disaggregated, and multi-rack, but not small form factor. It lists AKS on Azure Local across all four deployment types. Microsoft 365 Local and GitHub Enterprise Local are listed for hyperconverged and disaggregated only. Foundry Local is listed for hyperconverged and disaggregated, and for small form factor in preview ([source](https://learn.microsoft.com/azure/azure-local/plan/find-your-deployment-type?view=azloc-2609#workload-availability-by-deployment-type)).
+Workload support varies by deployment type. The deployment type guide lists Azure Local VMs across hyperconverged, disaggregated, and multi-rack, but not small form factor. It lists AKS on Azure Local across all four deployment types. Microsoft 365 Local and GitHub Enterprise Local ([preview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview)) are listed for hyperconverged and disaggregated only. Foundry Local is listed for hyperconverged and disaggregated, and for small form factor in preview ([source](https://learn.microsoft.com/azure/azure-local/plan/find-your-deployment-type?view=azloc-2609#workload-availability-by-deployment-type)).
 
 At L100 depth, this means architects should avoid one universal Azure Local design. Start with workload needs, connectivity mode, scale, and hardware category. Then confirm the selected workload is supported on the selected deployment type.
 
