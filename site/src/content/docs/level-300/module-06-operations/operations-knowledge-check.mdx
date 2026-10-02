@@ -1,0 +1,176 @@
+---
+title: "Operations knowledge check"
+description: "Check your ability to operate sovereign estates with Azure Monitor, Azure Local, Arc, Sentinel, and support controls."
+lastVerified: 2026-10-02
+sidebar:
+  order: 10
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Answer these scenario questions to check your operational design decisions for a sovereign estate.
+
+## Question 1: Workspace boundary
+
+A public-sector customer runs Azure Local in one EU country and cloud workloads in another EU region. The security team wants one global Log Analytics workspace outside the EU because it simplifies dashboards. What should the architect recommend first?
+
+- A) Use the global workspace because dashboards do not move data.
+- B) Place Log Analytics workspaces and any replica inside the approved boundary, then design cross-workspace views only for authorized users.
+- C) Store all logs only on Azure Local nodes.
+- D) Disable Azure Monitor Agent and rely on manual support bundles.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-06-operations/observability-stack/">
+
+B is correct because the workspace is the main Azure Monitor Logs store, and workspace replication sends new logs to a secondary region when enabled. The primary and secondary locations must fit the residency design. A is wrong because a global workspace changes where data is stored. C is wrong because cloud operations, alerts, and Sentinel need a managed log store. D is wrong because it removes routine monitoring and does not solve residency.
+
+</KnowledgeCheck>
+
+## Question 2: Data collection rules
+
+An operations team wants to remove user identifiers from Windows event records before the events are stored in Log Analytics. Which Azure Monitor mechanism should they design around?
+
+- A) Data collection rule transformations.
+- B) Azure Service Health.
+- C) Customer Lockbox.
+- D) Azure Resource Health.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-06-operations/observability-stack/">
+
+A is correct because [data collection rules](https://learn.microsoft.com/azure/azure-monitor/essentials/data-collection-rule-overview) can apply transformations to filter or modify incoming records before Azure Monitor stores them. B and D report health signals. C is an access approval workflow for supported Azure services, not a telemetry transformation feature.
+
+</KnowledgeCheck>
+
+## Question 3: Azure Local Insights
+
+An Azure Local workbook is blank after Insights was configured. What should the operator check before opening support?
+
+- A) Whether the DCR includes the required event channels and performance counters, and whether enough time has passed for AMA to collect data.
+- B) Whether Customer Lockbox was approved.
+- C) Whether the Azure Connected Machine agent replaced Azure Monitor Agent.
+- D) Whether the global Azure status page lists an outage.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-06-operations/observability-stack/">
+
+A is correct because the [Insights troubleshooting guidance](https://learn.microsoft.com/azure/azure-local/manage/monitor-single-23h2#troubleshoot) says to wait after recent configuration and verify the associated DCR has the required event channels and performance counters. B is unrelated. C is wrong because Azure Monitor Agent and the Connected Machine agent are separate agents. D may be useful later, but Resource Health and the DCR configuration are closer to the symptom.
+
+</KnowledgeCheck>
+
+## Question 4: Private monitoring path
+
+A regulated workload must keep monitoring ingestion and queries off the public internet. Which Azure Monitor design element sets the private boundary?
+
+- A) Azure Monitor Private Link Scope with private endpoints and Private Only access mode.
+- B) A Basic table plan.
+- C) A Microsoft Sentinel incident.
+- D) An Azure support request.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-06-operations/observability-stack/">
+
+A is correct because [Azure Monitor private link](https://learn.microsoft.com/azure/azure-monitor/logs/private-link-security) uses an Azure Monitor Private Link Scope to define the monitoring network boundary, and Private Only mode limits connected VNets to private link resources in the scope. B controls log cost and query behavior. C handles security incidents. D escalates a support case.
+
+</KnowledgeCheck>
+
+## Question 5: Sentinel incident handling
+
+An analyst receives a Microsoft Sentinel incident with mapped users, hosts, and IP addresses. What should they do to keep the investigation useful for the rest of the SOC?
+
+- A) Export the raw events to a personal workstation and close the incident.
+- B) Use the incident details page, assign ownership, use tasks or playbooks where approved, and document actions in the activity log and comments.
+- C) Delete comments after each shift to reduce clutter.
+- D) Wait for Microsoft support before triage.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-06-operations/incident-response/">
+
+B is correct because Sentinel's incident details page is the case page for alerts, entities, tasks, playbooks, activity, and comments. A can break evidence handling. C is wrong because comments and activity help audit and handoff. D delays MTTA and is not required for initial triage.
+
+</KnowledgeCheck>
+
+## Question 6: Support data access
+
+During a support escalation for Azure Monitor Log Analytics, Microsoft says the engineer needs direct access to customer data for a supported service. Which control should the customer expect to approve or deny the access request?
+
+- A) Data Guardian only.
+- B) Customer Lockbox for Microsoft Azure.
+- C) Azure Resource Health.
+- D) `azcmagent check`.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-06-operations/incident-response/">
+
+B is correct because [Customer Lockbox](https://learn.microsoft.com/azure/security/fundamentals/customer-lockbox-overview) lets the customer approve or reject Microsoft access to customer data for supported services, including Azure Monitor Log Analytics. Data Guardian adds regional oversight for Sovereign Public Cloud operations, but it is not the customer approval queue. Resource Health and `azcmagent check` do not approve data access.
+
+</KnowledgeCheck>
+
+## Question 7: Azure Local support access
+
+A support engineer asks for temporary diagnostic access to an Azure Local instance. Which command grants Diagnostics access for one day?
+
+- A) `Enable-RemoteSupport -AccessLevel Diagnostics -ExpireInMinutes 1440`
+- B) `Disable-RemoteSupport -AccessLevel Diagnostics`
+- C) `azcmagent show -j`
+- D) `Send-DiagnosticData -CollectSddc $false`
+
+<KnowledgeCheck answer="A" reference="/level-300/module-06-operations/troubleshooting/">
+
+A is correct because [Azure Local Remote Support](https://learn.microsoft.com/azure/azure-local/manage/get-remote-support#enable-remote-support-for-diagnostics) uses `Enable-RemoteSupport` with the access level and expiration. B revokes access. C shows Azure Connected Machine agent state. D collects diagnostic logs but does not grant remote support access.
+
+</KnowledgeCheck>
+
+## Question 8: Arc connectivity
+
+An Arc-enabled server stopped checking in, but the workload still runs. Which two commands should the operator use first to separate agent state from network reachability?
+
+- A) `azcmagent show` and `azcmagent check`.
+- B) `Get-LogCollectionHistory` and `Disable-RemoteSupport`.
+- C) `az aksarc get-logs` and `Get-AzAksArcLog`.
+- D) `Send-AzStackHciDiagnosticData` and `Enable-RemoteSupport`.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-06-operations/troubleshooting/">
+
+A is correct because [`azcmagent show`](https://learn.microsoft.com/azure/azure-arc/servers/azcmagent-show) displays the Connected Machine agent state, resource information, and dependent services, while [`azcmagent check`](https://learn.microsoft.com/azure/azure-arc/servers/azcmagent-check) tests required endpoint connectivity. B is for Azure Local support access history. C is for AKS on Azure Local logs. D is for standalone Azure Local diagnostics and Remote Support.
+
+</KnowledgeCheck>
+
+## Question 9: AKS on Azure Local logs
+
+An AKS on Azure Local cluster has a failed node operation, and support asks for logs from all cluster nodes. The operator has the kubeconfig and SSH key. Which command matches the documented approach?
+
+- A) `az aksarc get-logs --kubeconfig ./.kube/config --credentials-dir ./.ssh --out-dir ./logs`
+- B) `azcmagent check --extensions all`
+- C) `Send-DiagnosticData -FilterByRole BareMetal, ECE`
+- D) `Get-ClusterLog -Destination C:\ClusterLogs`
+
+<KnowledgeCheck answer="A" reference="/level-300/module-06-operations/troubleshooting/">
+
+A is correct because the [AKS on Azure Local log collection](https://learn.microsoft.com/azure/aks-hybrid-edge/local/hyperconverged/get-on-demand-logs) page documents `az aksarc get-logs` with `--kubeconfig` to collect logs from all cluster nodes. B checks Arc endpoint connectivity. C collects Azure Local role logs. D collects failover cluster logs but is not the AKS on Azure Local support log command.
+
+</KnowledgeCheck>
+
+## Question 10: Disconnected operations
+
+An architect is writing an operations runbook for Azure Local disconnected operations with AKS. Which statement should remain in the runbook?
+
+- A) Azure Local disconnected operations require Azure Local 2602 or later, while AKS on Azure Local with disconnected operations remains preview.
+- B) AKS on Azure Local disconnected operations are generally available whenever Azure Local disconnected operations are enabled.
+- C) Azure Monitor cloud workbooks continue to work normally during a complete disconnect.
+- D) Support logs can always be sent to Microsoft without recovering network connectivity.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-06-operations/observability-stack/">
+
+A is correct because Azure Local disconnected operations require [Azure Local 2602 or later](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview), and [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview) is still preview. B incorrectly promotes AKS disconnected support to GA. C overstates cloud monitoring during a disconnect. D is wrong because the AKS log collection page says to recover the network first if the environment is disconnected and logs must be sent to Microsoft Support.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [Azure Monitor Agent overview](https://learn.microsoft.com/azure/azure-monitor/agents/azure-monitor-agent-overview)
+- [Data collection rules in Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/essentials/data-collection-rule-overview)
+- [Use Azure Private Link to connect networks to Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/logs/private-link-security)
+- [Monitor a single Azure Local system with Insights](https://learn.microsoft.com/azure/azure-local/manage/monitor-single-23h2)
+- [Investigate Microsoft Sentinel incidents in depth in the Azure portal](https://learn.microsoft.com/azure/sentinel/investigate-incidents)
+- [Customer Lockbox for Microsoft Azure](https://learn.microsoft.com/azure/security/fundamentals/customer-lockbox-overview)
+- [Get remote support for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/get-remote-support)
+- [`azcmagent check`](https://learn.microsoft.com/azure/azure-arc/servers/azcmagent-check)
+- [`azcmagent show`](https://learn.microsoft.com/azure/azure-arc/servers/azcmagent-show)
+- [Get on-demand logs for troubleshooting](https://learn.microsoft.com/azure/aks-hybrid-edge/local/hyperconverged/get-on-demand-logs)
+- [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
+- [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview)

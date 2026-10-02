@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="flp-title flp-desc">
+  <title id="flp-title">Foundry Local on Azure Local in production</title>
+  <desc id="flp-desc">Applications and Agentic Retrieval, formerly Edge RAG, call inference endpoints through a Kubernetes Gateway API gateway built on Istio with TLS. For multi-replica vLLM deployments on GPU nodes, the Endpoint Picker routes each request to the best replica based on live inference signals; ONNX-GenAI deployments on CPU or GPU nodes are reached through the gateway route directly. The inference operator reconciles Model and ModelDeployment resources and uses a node-local model cache. The multi-node AKS cluster runs on Azure Local and is managed as an Azure Arc extension from Azure or from disconnected operations. Both Foundry Local on Azure Local and Agentic Retrieval are in preview.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#F7FAFD"/><stop offset="100%" stop-color="#EEF5FC"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#616161"/></marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F6CBD"/></marker>
+  </defs>
+  <rect width="960" height="600" rx="12" fill="url(#bg)"/>
+  <text x="32" y="44" font-family="Inter Variable, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#0C3B5E" text-anchor="start">Foundry Local on Azure Local in production</text>
+  <rect x="560" y="28" width="70" height="20" rx="10" fill="#FFF1E0" stroke="#C25E00" stroke-width="1"/>
+  <text x="595.0" y="42" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#C25E00" text-anchor="middle">Preview</text>
+  <text x="32" y="68" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="400" fill="#616161" text-anchor="start">Multi-node inference with Gateway API (Istio) and inference-aware routing</text>
+  <rect x="30" y="100" width="200" height="300" rx="10" fill="#FFFFFF" stroke="#CFE3F6" stroke-width="1.5"/>
+  <text x="46" y="126" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0C3B5E" text-anchor="start">Clients</text>
+  <rect x="46" y="144" width="168" height="30" rx="6" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="130.0" y="163.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0C3B5E" text-anchor="middle">Applications</text>
+  <rect x="46" y="184" width="168" height="30" rx="6" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="130.0" y="203.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0C3B5E" text-anchor="middle">Agentic Retrieval</text>
+  <text x="130" y="230" font-family="Inter Variable, Segoe UI, sans-serif" font-size="11" font-weight="400" fill="#616161" text-anchor="middle">formerly Edge RAG, preview</text>
+  <rect x="46" y="244" width="168" height="30" rx="6" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="130.0" y="263.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0C3B5E" text-anchor="middle">In-cluster pods</text>
+  <text x="46" y="304" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#242424" text-anchor="start">Auth options</text>
+  <text x="46" y="324" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">API key</text>
+  <text x="46" y="340" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Microsoft Entra ID</text>
+  <text x="46" y="356" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Active Directory when</text>
+  <text x="46" y="372" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">  disconnected</text>
+  <text x="46" y="388" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Service account token</text>
+  <rect x="260" y="100" width="670" height="420" rx="10" fill="#EBF3FC" stroke="#0F6CBD" stroke-width="1.5"/>
+  <text x="278" y="126" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F6CBD" text-anchor="start">Azure Local instance</text>
+  <rect x="278" y="140" width="636" height="364" rx="10" fill="#FFFFFF" stroke="#CFE3F6" stroke-width="1.2"/>
+  <text x="294" y="164" font-family="Inter Variable, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#0C3B5E" text-anchor="start">AKS enabled by Azure Arc, multi-node</text>
+  <rect x="294" y="178" width="190" height="120" rx="8" fill="#EFE6F8" stroke="#5C2E91" stroke-width="1.2"/>
+  <text x="310" y="202" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#5C2E91" text-anchor="start">Gateway API (Istio)</text>
+  <text x="310" y="222" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">TLS termination</text>
+  <text x="310" y="239" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">External endpoints</text>
+  <rect x="294" y="310" width="190" height="76" rx="8" fill="#EFE6F8" stroke="#5C2E91" stroke-width="1.2"/>
+  <text x="310" y="334" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#5C2E91" text-anchor="start">Endpoint Picker</text>
+  <text x="310" y="354" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Inference-aware routing</text>
+  <text x="310" y="371" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">for multi-replica vLLM</text>
+  <path d="M 389 298 L 389 308" stroke="#5C2E91" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 232 200 L 292 222" stroke="#0F6CBD" stroke-width="1.6" fill="none" marker-end="url(#arrowBlue)"/>
+  <path d="M 232 258 L 292 250" stroke="#0F6CBD" stroke-width="1.6" fill="none" marker-end="url(#arrowBlue)"/>
+  <rect x="294" y="398" width="190" height="92" rx="8" fill="#F2F2F2" stroke="#BDBDBD" stroke-width="1.2"/>
+  <text x="310" y="422" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#242424" text-anchor="start">Inference operator</text>
+  <text x="310" y="442" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Model and ModelDeployment</text>
+  <text x="310" y="459" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">resources, catalog sync</text>
+  <rect x="510" y="178" width="388" height="76" rx="8" fill="#E7F4E4" stroke="#107C10" stroke-width="1.2"/>
+  <text x="526" y="202" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#107C10" text-anchor="start">CPU or GPU nodes</text>
+  <rect x="526" y="214" width="190" height="26" rx="6" fill="#FFFFFF" stroke="#9FD89F" stroke-width="1"/>
+  <text x="621.0" y="231.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0B5A0B" text-anchor="middle">ONNX-GenAI deployment</text>
+  <rect x="510" y="266" width="388" height="150" rx="8" fill="#E7F4E4" stroke="#107C10" stroke-width="1.2"/>
+  <text x="526" y="290" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#107C10" text-anchor="start">GPU node pool (NVIDIA)</text>
+  <rect x="526" y="304" width="170" height="26" rx="6" fill="#FFFFFF" stroke="#9FD89F" stroke-width="1"/>
+  <text x="611.0" y="321.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0B5A0B" text-anchor="middle">vLLM replica</text>
+  <rect x="710" y="304" width="170" height="26" rx="6" fill="#FFFFFF" stroke="#9FD89F" stroke-width="1"/>
+  <text x="795.0" y="321.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0B5A0B" text-anchor="middle">vLLM replica</text>
+  <text x="526" y="354" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Tensor and pipeline parallelism across GPUs</text>
+  <text x="526" y="371" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Automatic GPU inference tuning</text>
+  <rect x="510" y="428" width="388" height="62" rx="8" fill="#FFF1E0" stroke="#C25E00" stroke-width="1.2"/>
+  <text x="526" y="452" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#C25E00" text-anchor="start">Model cache (StoreModel)</text>
+  <text x="526" y="472" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Artifacts cached on cluster nodes</text>
+  <path d="M 484 226 L 508 226" stroke="#5C2E91" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 484 348 L 508 348" stroke="#5C2E91" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 484 444 L 498 444" stroke="#616161" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <rect x="260" y="536" width="670" height="48" rx="10" fill="#FFFFFF" stroke="#CFE3F6" stroke-width="1.5"/>
+  <text x="278" y="566" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="400" fill="#0C3B5E" text-anchor="start">Managed as an Azure Arc extension from Azure, or from the local control plane of disconnected operations</text>
+</svg>

@@ -1,295 +1,344 @@
 ---
 title: Glossary
-description: "Definitions of key terms used throughout the Microsoft Sovereign Cloud Brain Trek program"
+description: "Definitions for current Microsoft Sovereign Cloud, Azure Local, Azure Arc, security, compliance, and AI terms."
+lastVerified: 2026-10-02
 sidebar:
   order: 2
 ---
 
-A comprehensive glossary of terminology used throughout the Microsoft Sovereign Cloud Brain Trek learning program.
-
----
+This glossary defines terms used across the Microsoft Sovereign Cloud Brain Trek. Product names use current Microsoft documentation.
 
 ## A
 
-### Air-Gapped
+### Agentic Retrieval
 
-An isolated computing environment with no external network connectivity. Air-gapped systems are physically separated from public networks and the internet, providing the highest level of security for sensitive workloads.
+Agentic Retrieval (formerly Edge RAG) is the [preview](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview) Azure Arc-enabled Kubernetes extension in Agents and Tools with Foundry Local for local agentic RAG over on-premises data. Microsoft documented the rename in the [June 2026 release](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new#june-2026). See [Foundry Local in production](/level-300/module-04-foundry-local-production/).
+
+### Air-gapped
+
+An air-gapped environment has no external network connection. In this site, use the Microsoft term **disconnected operations** when you refer to Azure Local environments that run a local control plane.
 
 ### Azure Arc
 
-A set of technologies that extends Azure management capabilities to on-premises, multi-cloud, and edge environments. Azure Arc enables centralized governance, security, and management of resources regardless of where they run.
+Azure Arc projects servers, Kubernetes clusters, Azure data services, and other non-Azure resources into Azure Resource Manager for management and governance. See [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/overview).
 
-### Azure Arc-enabled Data Services
+### Azure Arc-enabled data services
 
-Database services (SQL Managed Instance, PostgreSQL) that can run on any Kubernetes infrastructure while being managed through Azure Arc.
+Azure Arc-enabled data services run selected Azure data services on Kubernetes outside Azure. Azure Arc-enabled PostgreSQL server was [retired July 14, 2025](https://learn.microsoft.com/azure/azure-arc/data/release-notes), and indirectly connected mode for Arc-enabled data services was [retired in September 2025](https://learn.microsoft.com/azure/azure-arc/data/release-notes).
 
 ### Azure Arc-enabled Kubernetes
 
-The ability to attach and configure Kubernetes clusters running anywhere to Azure Arc for centralized management, policy enforcement, and GitOps deployments.
+Azure Arc-enabled Kubernetes lets you attach supported Kubernetes clusters to Azure for inventory, extensions, GitOps, policy, and governance. It is the management path used by Foundry Local on Azure Local and Agentic Retrieval.
 
-### Azure Arc-enabled Servers
+### Azure Arc-enabled servers
 
-Servers running Windows or Linux, whether on-premises or in other clouds, that are registered with Azure Arc for unified management.
+Azure Arc-enabled servers are Windows or Linux machines outside Azure that are registered with Azure Arc. After registration, they can use Azure management services such as Azure Policy, Microsoft Defender for Cloud, and Azure Monitor.
+
+### Azure Copilot
+
+Azure Copilot is the current Microsoft Learn name for the Azure portal AI assistant that was also described in older docs as Microsoft Copilot in Azure. Azure Copilot is available in commercial Azure and is [not available in national clouds](https://learn.microsoft.com/azure/copilot/overview), including Azure Government and Microsoft Azure operated by 21Vianet.
+
+### Azure Government
+
+Azure Government is a dedicated Azure cloud for eligible US government agencies and partners. It uses physically isolated US datacenters and has three listed Azure Government regions, with separate Azure Government Secret and Azure Government Top Secret offerings described in the compliance offerings documentation.
+
+### Azure landing zone
+
+An Azure landing zone is a platform and workload architecture for governing, securing, and scaling a multi-subscription Azure environment. Sovereign Landing Zone builds on this model.
 
 ### Azure Local
 
-Microsoft's hyperconverged infrastructure (HCI) solution that extends Azure to customer premises. Formerly known as Azure Stack HCI, Azure Local enables running Azure services on-premises while maintaining cloud connectivity for management.
+Azure Local is Microsoft's infrastructure for running Azure-consistent compute, storage, networking, and management on customer-owned hardware. It was formerly branded Azure Stack HCI, but training content should use Azure Local except where a legacy resource type requires the old name. See [Azure Local advanced](/level-300/module-01-azure-local-advanced/).
 
 ### Azure Policy
 
-A service that enables you to create, assign, and manage policies that enforce rules and effects over your resources, ensuring compliance with corporate standards and service level agreements.
-
----
+Azure Policy creates, assigns, and evaluates rules for Azure resources. Sovereign Landing Zone and Sovereign Control Panel use policy signals as part of sovereignty posture management.
 
 ## C
 
-### Cloud Operating Model
+### Cloud operating model
 
-A framework that defines how an organization manages, governs, and operates cloud resources. It encompasses processes, tools, and organizational structures.
+A cloud operating model defines how an organization governs, secures, deploys, and operates cloud resources. For sovereign environments, it must also define who can operate the platform, where control planes run, and how evidence is collected.
 
-### Compliance Framework
+### Compliance framework
 
-A structured set of guidelines and requirements (such as GDPR, HIPAA, or FedRAMP) that organizations must follow to meet regulatory or industry standards.
+A compliance framework is a set of legal, regulatory, contractual, or industry requirements. Examples in this site include GDPR, DORA, FedRAMP, and sector-specific security standards.
 
-### Connected Mode
+### Connected operations
 
-An operational mode for Azure Local where the cluster maintains continuous connectivity to Azure for management, updates, monitoring, and billing.
+Connected operations describe Azure Local environments that maintain required connectivity to Azure for registration, monitoring, billing, updates, and Arc-enabled management. Azure Local workloads can continue through short Azure connectivity interruptions, but the operating model still depends on Azure connectivity.
+
+### Critical ICT Third-Party Provider (CTPP)
+
+A Critical ICT Third-Party Provider is an ICT provider designated for direct oversight under DORA. Microsoft Ireland Operations Limited is named as a CTPP in the [Microsoft DORA guidance](https://learn.microsoft.com/compliance/dora/dora-what-is-dora), based on the European Supervisory Authorities list published on November 18, 2025.
 
 ### Customer Lockbox
 
-A feature that provides an approval workflow for Microsoft support access to customer data, ensuring customers maintain control over who accesses their resources.
-
----
+Customer Lockbox is an approval workflow for Microsoft support access to customer content in supported services. Use it when customer approval of support access is part of the control requirement.
 
 ## D
 
-### Data Residency
+### Data Guardian
 
-The geographic or jurisdictional location where data is stored and processed. Data residency requirements ensure that data remains within specific boundaries to comply with local regulations.
+Data Guardian is a Sovereign Public Cloud capability for enhanced operational oversight. It requires Microsoft personnel access in defined regions such as EU and EFTA to be monitored by authorized European-resident personnel and logged in a tamper-evident ledger.
 
-### Data Sovereignty
+### Data residency
 
-The concept that data is subject to the laws and governance structures of the nation or jurisdiction where it is collected or stored.
+Data residency is the geographic or jurisdictional location where data is stored and processed. Microsoft services apply residency rules differently by service, tenant geography, region selection, and product terms.
 
-### Digital Sovereignty
+### Data sovereignty
 
-The ability of organizations and nations to control their digital infrastructure, data, and technology assets according to their own governance requirements.
+Data sovereignty is the requirement that data remains subject to specific laws, governance controls, and operational rules. It includes data location, access control, encryption, and evidence that the controls work.
 
-### Disconnected Mode
+### Digital sovereignty
 
-An operational mode for Azure Local where the cluster operates with limited or intermittent Azure connectivity, requiring periodic synchronization for licensing and updates.
+Digital sovereignty is the ability of an organization, government, or jurisdiction to control digital assets, data, operations, and dependencies according to its own requirements. Microsoft Sovereign Cloud maps this need to public cloud, private cloud, and national partner cloud models.
 
----
+### Disconnected operations
+
+Disconnected operations for Azure Local let approved customers deploy and manage Azure Local instances without a connection to the Azure public cloud by using a local control plane. Azure Local disconnected operations require Azure Local 2602 or later, while AKS under disconnected operations remains [preview](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview). See [Azure Local disconnected operations](/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/).
+
+### DORA
+
+DORA is the EU Digital Operational Resilience Act for financial entities and ICT providers. Microsoft Learn states that financial entities and designated critical ICT third-party service providers needed to be ready to comply starting [January 17, 2025](https://learn.microsoft.com/compliance/dora/dora-what-is-dora).
 
 ## E
 
-### Edge Computing
+### Edge computing
 
-Computing infrastructure and services deployed at the network edge, closer to where data is generated and consumed, to reduce latency and enable local processing.
-
-### Edge RAG
-
-Edge Retrieval-Augmented Generation — a pattern for deploying AI systems on-premises that combine large language models with local document retrieval capabilities while maintaining data sovereignty.
+Edge computing places compute and data processing close to where data is created or consumed. In this site, Azure Local, Azure Arc, Foundry Local on Azure Local, and Agentic Retrieval are the main Microsoft edge technologies.
 
 ### Embedding
 
-A numerical representation of text or other data that captures semantic meaning, used in RAG systems to find relevant documents for AI queries.
+An embedding is a numerical representation of content used for similarity search. Agentic Retrieval creates embeddings for local knowledge sources and stores them in local collections.
 
----
+### EU Data Boundary
+
+The EU Data Boundary is a defined boundary where Microsoft commits to store and process Customer Data and personal data for covered Microsoft enterprise online services, subject to documented exceptions. It covers EU and EFTA countries for in-scope services.
+
+### External Key Management (EKM)
+
+External Key Management means encryption keys are generated, stored, and managed outside cloud infrastructure while protecting cloud data. Managed HSM External Key Management is [in preview](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management) and delegates wrap and unwrap operations to a customer-run EKM Proxy.
 
 ## F
 
 ### FedRAMP
 
-Federal Risk and Authorization Management Program — a US government program that provides a standardized approach to security assessment, authorization, and continuous monitoring for cloud products and services.
+FedRAMP is the US Federal Risk and Authorization Management Program for cloud products and services. Microsoft documents Azure compliance offerings and Azure Government compliance scope in Microsoft compliance documentation.
 
----
+### Foundry Local
+
+Foundry Local on Azure Local is a [preview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview) Arc-enabled Kubernetes extension for local AI inference on Azure Local. It is the recommended local language model endpoint for Agentic Retrieval. See [Foundry Local in production](/level-300/module-04-foundry-local-production/).
 
 ## G
 
 ### GDPR
 
-General Data Protection Regulation — European Union regulation on data protection and privacy that applies to organizations handling EU citizens' data.
+GDPR is the European Union General Data Protection Regulation. In sovereign cloud design, GDPR conversations usually focus on data protection roles, lawful processing, residency, transfer mechanisms, and audit evidence.
+
+### GitHub Enterprise Local
+
+GitHub Enterprise Local is a [preview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview) solution for running GitHub Enterprise Server on Azure Local infrastructure. It targets regulated environments that need local repositories, local CI/CD, and disconnected operations.
 
 ### GitOps
 
-An operational framework that uses Git repositories as the single source of truth for declarative infrastructure and application configuration.
+GitOps is an operating model that uses Git repositories as the source of truth for declarative configuration. Azure Arc-enabled Kubernetes can apply GitOps configuration across attached clusters.
 
----
+### Global Secure Access
+
+Global Secure Access is the unifying Microsoft Entra term for Microsoft Entra Internet Access and Microsoft Entra Private Access. These services are Microsoft's Security Service Edge solution and are now [generally available](https://learn.microsoft.com/entra/global-secure-access/overview-what-is-global-secure-access).
 
 ## H
 
 ### HIPAA
 
-Health Insurance Portability and Accountability Act — US legislation that provides data privacy and security provisions for safeguarding medical information.
+HIPAA is a US healthcare law that includes privacy and security requirements for protected health information. Healthcare sovereign designs often map HIPAA requirements to identity, encryption, audit, and data access controls.
 
-### Hybrid Cloud
+### Hybrid cloud
 
-A computing environment that combines on-premises infrastructure with public cloud services, allowing data and applications to be shared between them.
+Hybrid cloud combines cloud services with on-premises, edge, or partner-operated infrastructure. Azure Arc and Azure Local provide the management and infrastructure patterns used throughout this training.
 
-### Hyperconverged Infrastructure (HCI)
+### Hyperconverged infrastructure
 
-A software-defined IT infrastructure that virtualizes computing, storage, and networking in a single system, typically running on commodity hardware.
-
----
+Hyperconverged infrastructure combines compute, storage, and networking in a software-defined system. Azure Local hyperconverged deployments are [generally available](https://learn.microsoft.com/azure/azure-local/overview/hyperconverged-overview) and scale from one to 16 machines.
 
 ## I
 
-### Infrastructure as Code (IaC)
+### Indirectly connected mode
 
-The practice of managing and provisioning infrastructure through machine-readable definition files rather than physical hardware configuration or interactive configuration tools.
+Indirectly connected mode was a connectivity mode for Arc-enabled data services. It is [retired as of September 2025](https://learn.microsoft.com/azure/azure-arc/data/release-notes), so new training should describe direct connectivity for supported Arc data services.
+
+### Infrastructure as Code
+
+Infrastructure as Code is the practice of defining infrastructure in source-controlled templates or code. Sovereign Landing Zone implementations use infrastructure as code for repeatable policy, management group, and subscription deployment.
 
 ### ITAR
 
-International Traffic in Arms Regulations — US regulatory regime that controls the export and import of defense-related articles and services.
-
----
+ITAR is the US International Traffic in Arms Regulations. When ITAR applies, design discussions normally include eligibility, access restrictions, data handling, and the correct cloud environment.
 
 ## K
 
 ### Kubernetes
 
-An open-source container orchestration platform that automates deployment, scaling, and management of containerized applications.
-
----
+Kubernetes is a container orchestration platform for deploying and managing containerized applications. Azure Local uses AKS enabled by Azure Arc for Kubernetes workloads, and Arc-enabled Kubernetes hosts Foundry Local on Azure Local and Agentic Retrieval.
 
 ## L
 
-### Landing Zone
+### Landing zone
 
-A pre-configured environment in the cloud that provides the foundational infrastructure, security controls, and governance needed to deploy workloads.
+A landing zone is a prepared cloud environment for workload deployment. It includes governance, identity, networking, security, and management controls.
 
-### Large Language Model (LLM)
+### Large language model (LLM)
 
-An AI model trained on vast amounts of text data that can understand and generate human-like text. Examples include GPT-4 and Phi-3.
-
----
+A large language model is an AI model that generates or reasons over text and other inputs. In local sovereign AI designs, the model endpoint might run in Foundry Local on Azure Local.
 
 ## M
 
-### Managed Identity
+### Managed HSM
 
-An Azure feature that provides an automatically managed identity for applications to use when connecting to resources that support Microsoft Entra ID authentication.
+Azure Key Vault Managed HSM is a fully managed, highly available, single-tenant cloud service for HSM-protected cryptographic keys. Microsoft Learn states that Managed HSM uses [FIPS 140-3 Level 3](https://learn.microsoft.com/azure/key-vault/managed-hsm/overview) validated HSMs.
+
+### Managed identity
+
+Managed identity is an Azure identity that a service can use to authenticate to resources that support Microsoft Entra ID. It reduces the need to store credentials in application code or configuration.
+
+### Management cluster
+
+The management cluster is the dedicated Azure Local cluster that hosts the local control plane for disconnected operations. Production deployments require a [dedicated three-node Azure Local management cluster](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-control-plane-appliance), separate from tenant workload clusters. See [Azure Local disconnected operations](/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/).
+
+### Microsoft 365 Local
+
+Microsoft 365 Local runs Exchange Server, SharePoint Server, and Skype for Business Server on customer-owned Azure Local infrastructure. Microsoft Learn states that Microsoft 365 Local is [generally available](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview).
+
+### Microsoft Entra Agent ID
+
+Microsoft Entra Agent ID is an identity and security framework for AI agents. It gives agents governed identities and extends Microsoft Entra controls such as access protection, identity governance, and audit logging.
 
 ### Microsoft Entra ID
 
-Microsoft's cloud-based identity and access management service (formerly Azure Active Directory). Provides authentication, authorization, and identity governance across Microsoft 365, Azure, and integrated SaaS applications.
+Microsoft Entra ID is Microsoft's cloud identity and access management service. It provides authentication, authorization, Conditional Access, identity governance, workload identities, and related identity controls.
 
----
+### Microsoft Sovereign Cloud
+
+Microsoft Sovereign Cloud is the current name for the portfolio formerly called Microsoft Cloud for Sovereignty. It includes Sovereign Public Cloud, Sovereign Private Cloud, and National Partner Clouds.
 
 ## N
 
-### National/Regional Cloud
+### National Partner Clouds
 
-A cloud deployment that operates within specific geographic boundaries and may be operated by local partners to meet national sovereignty requirements.
-
----
+National Partner Clouds are local partner-operated cloud environments that use Microsoft technology with local ownership and governance. Microsoft Learn names Bleu in France and Delos Cloud in Germany as examples.
 
 ## O
 
-### Operational Sovereignty
+### Operational sovereignty
 
-Control over the operations, maintenance, and support of IT infrastructure, ensuring that operational personnel and processes meet specific jurisdictional or security requirements.
-
----
+Operational sovereignty is control over who can operate a platform, where operations occur, and how operational access is approved, monitored, and evidenced. Data Guardian, Customer Lockbox, and disconnected operations are examples of controls that support operational sovereignty.
 
 ## P
 
 ### PCI DSS
 
-Payment Card Industry Data Security Standard — a set of security standards designed to ensure that companies that accept, process, store, or transmit credit card information maintain a secure environment.
+PCI DSS is the Payment Card Industry Data Security Standard. It applies to organizations that store, process, or transmit cardholder data.
 
-### Policy-as-Code
+### Policy as Code
 
-The practice of defining and managing policies through code, enabling version control, testing, and automated enforcement.
+Policy as Code stores policy definitions and assignments in source-controlled artifacts. Sovereign Landing Zone uses policy as code to apply residency, encryption, and confidential computing controls.
 
-### Private Cloud
+### Private cloud
 
-Cloud infrastructure provisioned for exclusive use by a single organization, providing greater control over data, security, and compliance.
-
----
+Private cloud is cloud infrastructure dedicated to one organization or a controlled set of users. Sovereign Private Cloud uses Azure Local and related Microsoft services to run private cloud workloads in customer-controlled environments.
 
 ## R
 
 ### RBAC
 
-Role-Based Access Control — an approach to restricting system access based on the roles of individual users within an organization.
+Role-based access control grants access based on assigned roles. Azure RBAC, Microsoft Entra roles, Kubernetes RBAC, and local product roles can all appear in sovereign designs.
 
-### Retrieval-Augmented Generation (RAG)
+### Retrieval-Augmented Generation
 
-An AI architecture that enhances large language models by retrieving relevant information from external sources (like document stores) to provide more accurate and contextual responses.
-
----
+Retrieval-Augmented Generation, or RAG, combines retrieval from external knowledge sources with model generation. Agentic Retrieval extends RAG with agents, MCP tools, knowledge sources, and local collections.
 
 ## S
 
-### Sovereign Controls
+### Sovereign Control Panel
 
-Technical and operational measures implemented to ensure that cloud resources comply with sovereignty requirements, including data residency, access controls, and encryption.
+Sovereign Control Panel is the current name for Regulated Environment Management. Microsoft Learn states that [Regulated Environment Management is now Sovereign Control Panel](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/sovereign-control-panel), and describes a Discover, Control, and Act operating model.
 
-### Sovereign Landing Zone (SLZ)
+### Sovereign controls
 
-An architectural pattern that extends Azure Landing Zones with additional controls and configurations specifically designed to meet sovereignty requirements.
+Sovereign controls are technical and operational measures for data residency, encryption, operational oversight, policy enforcement, evidence collection, and continuity. The control set depends on the chosen deployment model.
+
+### Sovereign Landing Zone
+
+Sovereign Landing Zone is a variant of Azure landing zone architecture for sovereign public cloud requirements. It adds sovereign policy and management group patterns while retaining the Azure landing zone design areas. See [Sovereign Landing Zone architecture](/level-300/module-02-sovereign-landing-zone/slz-architecture/).
 
 ### Sovereign Private Cloud
 
-A cloud environment that combines private cloud isolation with sovereign controls for maximum data protection and regulatory compliance.
+Sovereign Private Cloud is the Microsoft deployment model for customer-controlled or partner-operated private cloud environments. Microsoft Learn describes it as built on Azure Local, Microsoft 365 Local, GitHub Enterprise Local ([preview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview)), and Foundry Local on Azure Local.
 
 ### Sovereign Public Cloud
 
-Azure public cloud regions enhanced with sovereign controls, including confidential computing, customer-managed keys, and restricted operations.
-
----
+Sovereign Public Cloud is the Microsoft deployment model that adds sovereignty controls to hyperscale Microsoft cloud regions. It includes capabilities such as Data Guardian, External Key Management, Sovereign Control Panel, and Sovereign Landing Zone.
 
 ## T
 
 ### Tenant
 
-In cloud computing, a logical isolation unit that represents an organization's dedicated instance within a shared infrastructure.
+A tenant is a logical instance of a cloud identity or service boundary for an organization. Tenant design affects identity, billing, policy, governance, and data boundary decisions.
 
 ### Trusted Launch
 
-A security feature for Azure VMs that protects against advanced and persistent attack techniques by enabling secure boot, vTPM, and boot integrity monitoring.
-
----
+Trusted Launch is an Azure VM security capability that uses secure boot, virtual TPM, and boot integrity monitoring. In sovereign designs, it can support platform hardening and attestation goals.
 
 ## V
 
-### Vector Database
+### Vector database
 
-A database optimized for storing and querying high-dimensional vectors (embeddings), commonly used in RAG systems for semantic search.
+A vector database stores embeddings and supports similarity search. Agentic Retrieval uses local collections backed by vector storage to retrieve relevant content for agents.
 
-### Virtual Machine (VM)
+### Virtual machine
 
-An emulation of a computer system that provides the functionality of a physical computer, running on top of a hypervisor.
-
----
+A virtual machine is a software-defined computer that runs on a hypervisor. Azure Local hosts Windows and Linux VMs on customer-owned infrastructure and can manage supported VMs through Azure Arc.
 
 ## W
 
 ### Workload
 
-An application, service, or capability deployed in a cloud environment, along with its associated resources and configurations.
-
----
+A workload is an application, service, data platform, or business capability and the resources required to run it. Sovereign architecture decisions should be made per workload because data, residency, access, and availability requirements differ.
 
 ## Z
 
 ### Zero Trust
 
-A security model based on the principle of "never trust, always verify" that requires strict identity verification for every person and device trying to access resources, regardless of their location.
+Zero Trust is a security approach based on "never trust, always verify." Microsoft describes three principles: verify explicitly, use least privilege access, and assume breach. See [Zero Trust architecture](/level-300/module-05-zero-trust/zero-trust-architecture/).
 
----
+## Sources
 
-## Additional Resources
-
-- **[Microsoft Terminology Collection](https://www.microsoft.com/en-us/language)** - Official Microsoft terminology
-- **[Cloud Computing Terms](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/)** - Azure glossary
-- **[NIST Cloud Computing Glossary](https://csrc.nist.gov/glossary)** - Government standards terminology
-
----
-
-## Next Steps
-
-- **[Return to Resources](./)**
-- **[Start Learning Path](/level-50/)**
+- [What is Microsoft Sovereign Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/microsoft-sovereign-cloud)
+- [What is Sovereign Public Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-public-cloud)
+- [What is Sovereign Private Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud)
+- [National Partner Clouds](https://learn.microsoft.com/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds)
+- [Sovereign Landing Zone](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-landing-zone)
+- [What is Data Guardian?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/data-guardian)
+- [What is External Key Management?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management)
+- [Sovereign Control Panel](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/sovereign-control-panel)
+- [What is Azure Key Vault Managed HSM?](https://learn.microsoft.com/azure/key-vault/managed-hsm/overview)
+- [What are hyperconverged deployments of Azure Local?](https://learn.microsoft.com/azure/azure-local/overview/hyperconverged-overview)
+- [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
+- [Dedicated management cluster for disconnected operations](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-control-plane-appliance)
+- [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/overview)
+- [Release notes for Azure Arc-enabled data services](https://learn.microsoft.com/azure/azure-arc/data/release-notes)
+- [What is Microsoft 365 Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview)
+- [What is GitHub Enterprise Local? (preview)](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview)
+- [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
+- [What is Agentic Retrieval in Agents and Tools with Foundry Local?](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)
+- [What's new in Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new)
+- [Zero Trust as a security foundation](https://learn.microsoft.com/security/zero-trust/zero-trust-overview)
+- [What is Microsoft Defender for Cloud?](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [What is Microsoft Entra Agent ID?](https://learn.microsoft.com/entra/agent-id/what-is-microsoft-entra-agent-id)
+- [What is Global Secure Access?](https://learn.microsoft.com/entra/global-secure-access/overview-what-is-global-secure-access)
+- [What is Azure Copilot?](https://learn.microsoft.com/azure/copilot/overview)
+- [Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings](https://learn.microsoft.com/azure/compliance/offerings/)
+- [What is DORA?](https://learn.microsoft.com/compliance/dora/dora-what-is-dora)
+- [What is Azure Government?](https://learn.microsoft.com/azure/azure-government/documentation-government-welcome)
+- [What is an Azure landing zone?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)

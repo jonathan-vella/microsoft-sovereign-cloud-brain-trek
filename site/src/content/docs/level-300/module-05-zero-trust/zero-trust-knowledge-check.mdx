@@ -1,0 +1,174 @@
+---
+title: "Zero Trust knowledge check"
+description: "Scenario questions on current Microsoft Zero Trust pillars, Entra Agent ID, Global Secure Access, Defender, and Sentinel."
+lastVerified: 2026-10-02
+sidebar:
+  order: 10
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Use these questions to check whether you can apply the current Microsoft Zero Trust model to a sovereign estate.
+
+## Question 1: Select the current pillar model
+
+A security architect is updating a design deck that still lists six Zero Trust pillars and treats security operations as a shared activity. Which update is correct?
+
+- A) Keep six pillars because SecOps is only a process.
+- B) Use seven pillars and include SecOps as a technology pillar.
+- C) Replace the Network pillar with AI because AI is a new attack path.
+- D) Collapse Data and Apps because both protect application content.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-05-zero-trust/">
+
+B is correct because Microsoft Learn lists [seven technology pillars](https://learn.microsoft.com/security/zero-trust/deploy/overview): Identities, Endpoints, Data, Apps, Infrastructure, Network, and SecOps. A is wrong because the current model makes SecOps explicit. C is wrong because AI is addressed through controls and workloads, not as a replacement for Network in this pillar list. D is wrong because Data and Apps answer different design questions.
+
+</KnowledgeCheck>
+
+## Question 2: Apply the three Zero Trust principles
+
+A ministry wants one phrase that explains the Zero Trust baseline for every architecture review. Which statement best matches the Microsoft foundation?
+
+- A) Trust internal networks and inspect internet traffic.
+- B) Verify explicitly, use least privilege, and assume breach.
+- C) Encrypt everything and allow administrators permanent access.
+- D) Keep production systems in one region and audit them annually.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-05-zero-trust/">
+
+B is correct because Microsoft defines the three principles as [verify explicitly, use least privilege access, and assume breach](https://learn.microsoft.com/security/zero-trust/zero-trust-overview). A is wrong because Zero Trust does not trust requests because they start on an internal network. C is wrong because permanent administrator access breaks least privilege. D is wrong because location and annual audit do not cover continuous verification.
+
+</KnowledgeCheck>
+
+## Question 3: Govern AI agents
+
+An agency is deploying autonomous agents that read internal data and call line-of-business APIs. The agents need nonhuman identities, least-privilege access, and audit records. Which control should the identity design include?
+
+- A) Shared service accounts with long-lived passwords.
+- B) Microsoft Entra Agent ID.
+- C) A network allowlist only.
+- D) Manual approval for every API call.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-05-zero-trust/zero-trust-architecture/">
+
+B is correct because [Microsoft Entra Agent ID](https://learn.microsoft.com/entra/agent-id/what-is-microsoft-entra-agent-id) provides identity management, access protection, governance, and compliance for AI agents. A is wrong because shared passwords are not least privilege or auditable per agent. C is wrong because a network allowlist does not identify the agent or govern its permissions. D is wrong because manual approval for every call is not an identity architecture.
+
+</KnowledgeCheck>
+
+## Question 4: Choose Global Secure Access
+
+A customer wants to replace broad VPN access with per-app access to private resources and identity-aware filtering for internet destinations. Which Microsoft Entra service family best fits this requirement?
+
+- A) Microsoft Entra Private Access and Microsoft Entra Internet Access under Global Secure Access.
+- B) Azure Private Link only.
+- C) Azure Firewall only.
+- D) Microsoft Purview only.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-05-zero-trust/zero-trust-architecture/">
+
+A is correct because [Global Secure Access](https://learn.microsoft.com/entra/global-secure-access/overview-what-is-global-secure-access) is the unifying term for Microsoft Entra Internet Access and Microsoft Entra Private Access. Private Access supports private app access without a legacy VPN, and Internet Access secures internet and SaaS access. B and C are still useful for Azure network design, but they do not provide the Entra identity-aware access layer. D is a data governance service, not a network access service.
+
+</KnowledgeCheck>
+
+## Question 5: Plan disconnected identity
+
+An Azure Local site must run disconnected operations. The cloud identity path is unavailable during disconnection. Which identity plan matches Microsoft Learn?
+
+- A) Use Entra ID only because disconnected operations inherit all cloud role assignments.
+- B) Integrate Active Directory for groups and memberships and AD FS for authentication.
+- C) Use local administrator accounts on every host as the normal operations model.
+- D) Delay identity planning until after deployment.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-05-zero-trust/zero-trust-architecture/">
+
+B is correct because Azure Local disconnected operations support [Active Directory groups and memberships and AD FS authentication](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-identity). A is wrong because the disconnected environment has local operator and subscription scoping. C is wrong because shared local administrator operations do not provide governed identity. D is wrong because identity integration must be planned before deployment.
+
+</KnowledgeCheck>
+
+## Question 6: Separate Global Secure Access from Azure network controls
+
+A design review finds that the team plans to use Global Secure Access as the only control for private endpoint traffic between Azure PaaS services. What should the architect change?
+
+- A) Keep the design because Global Secure Access replaces private endpoints.
+- B) Use Global Secure Access for identity-aware user access and Azure network controls for private endpoints and segmentation.
+- C) Remove Conditional Access because the network is private.
+- D) Use Microsoft Sentinel as the enforcement point for all traffic.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-05-zero-trust/zero-trust-architecture/">
+
+B is correct. Global Secure Access provides identity-aware access for internet, SaaS, Microsoft, and private-resource access, while Azure network controls such as private endpoints, Private Link, Azure Firewall, and segmentation still control Azure workload traffic. A is wrong because Global Secure Access does not replace every Azure network enforcement point. C is wrong because private connectivity does not remove the need for Conditional Access. D is wrong because Sentinel detects and responds; it is not the traffic enforcement point.
+
+</KnowledgeCheck>
+
+## Question 7: Interpret Defender for Servers Plan 2
+
+A sovereign customer has servers in Azure, AWS, GCP, and Azure Local. They want OS baseline assessment and periodic update assessment across hybrid machines. What onboarding requirement must the architect call out?
+
+- A) These Plan 2 capabilities require machines to be onboarded with Azure Arc where Microsoft Learn marks them Arc-only.
+- B) These capabilities require the retired Log Analytics agent for every server.
+- C) These capabilities work only on Azure VMs.
+- D) These capabilities are part of Microsoft Sentinel, not Defender for Servers.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-05-zero-trust/zero-trust-monitoring/">
+
+A is correct because Microsoft Learn marks [OS system updates and OS baseline misconfiguration for Defender for Servers Plan 2](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-servers-overview) as only applicable to machines onboarded with Azure Arc. B is wrong because Defender for Servers no longer uses the Log Analytics agent or Azure Monitor Agent for most plan features. C is wrong because Defender for Servers covers multicloud and on-premises machines. D is wrong because Sentinel is the SIEM and SOAR layer, not the server protection plan.
+
+</KnowledgeCheck>
+
+## Question 8: Scope Defender for Containers on Arc-enabled Kubernetes
+
+An architect copies an AKS Defender for Containers capability list into a proposal for Arc-enabled Kubernetes. Which correction is required?
+
+- A) State that every AKS, EKS, GKE, and Arc-enabled Kubernetes feature is identical.
+- B) State that Arc-enabled Kubernetes requires Arc onboarding and Defender for Containers as an Arc extension, and verify each feature in the support matrix.
+- C) Remove Defender for Containers because Arc-enabled Kubernetes cannot be protected.
+- D) Replace Defender for Containers with Conditional Access.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-05-zero-trust/zero-trust-monitoring/">
+
+B is correct because the [Defender for Containers support matrix](https://learn.microsoft.com/azure/defender-for-cloud/support-matrix-defender-for-containers) says Arc-enabled Kubernetes protection requires Azure Arc onboarding and Defender for Containers as an Arc extension, and support differs by feature. A is wrong because the feature matrix is not identical. C is wrong because Arc-enabled Kubernetes has supported capabilities. D is wrong because Conditional Access does not provide container runtime protection.
+
+</KnowledgeCheck>
+
+## Question 9: Use AI security posture management
+
+A platform team deploys generative AI workloads across Azure AI Foundry, Azure OpenAI, Amazon Bedrock, and Google Vertex AI. They need discovery, an AI Bill of Materials, recommendations, and attack path analysis. Which Defender for Cloud capability applies?
+
+- A) AI security posture management in Defender CSPM.
+- B) Defender for DNS only.
+- C) Customer Lockbox.
+- D) Azure Firewall threat intelligence only.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-05-zero-trust/zero-trust-monitoring/">
+
+A is correct because [AI security posture management](https://learn.microsoft.com/azure/defender-for-cloud/ai-security-posture) discovers generative AI workloads, builds an AI Bill of Materials, and uses recommendations and attack path analysis across Azure, AWS, and GCP environments. B is wrong because DNS alerts do not provide AI workload posture. C is wrong because Customer Lockbox governs Microsoft support access to customer data. D is wrong because firewall threat intelligence does not discover AI assets or model attack paths.
+
+</KnowledgeCheck>
+
+## Question 10: Place Sentinel in the Defender portal
+
+A SOC wants Microsoft Sentinel incidents and hunting in the Microsoft Defender portal but does not own Microsoft Defender XDR or E5 licenses. What should the architect say?
+
+- A) Sentinel cannot appear in the Defender portal without Defender XDR and E5.
+- B) Sentinel is available in the Defender portal without requiring Defender XDR or an E5 license.
+- C) Sentinel must stay in the Azure portal after July 1, 2025.
+- D) Sentinel replaces Defender for Cloud recommendations after onboarding.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-05-zero-trust/zero-trust-monitoring/">
+
+B is correct because Microsoft Learn states that [Microsoft Sentinel is available in the Microsoft Defender portal and does not require Defender XDR or an E5 license](https://learn.microsoft.com/azure/sentinel/microsoft-sentinel-onboard). A is the opposite of the documented requirement. C is wrong because many customers onboarding after July 1, 2025 are automatically onboarded to the Defender portal. D is wrong because Sentinel and Defender for Cloud keep different roles.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [Zero Trust as a security foundation](https://learn.microsoft.com/security/zero-trust/zero-trust-overview)
+- [Overview: Technology pillars](https://learn.microsoft.com/security/zero-trust/deploy/overview)
+- [What is Microsoft Entra Agent ID?](https://learn.microsoft.com/entra/agent-id/what-is-microsoft-entra-agent-id)
+- [What is Global Secure Access?](https://learn.microsoft.com/entra/global-secure-access/overview-what-is-global-secure-access)
+- [What is Conditional Access?](https://learn.microsoft.com/entra/identity/conditional-access/overview)
+- [Plan your identity for disconnected operations on Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-identity)
+- [Defender for Servers](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-servers-overview)
+- [Containers support matrix in Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/support-matrix-defender-for-containers)
+- [Overview: AI security posture management](https://learn.microsoft.com/azure/defender-for-cloud/ai-security-posture)
+- [Connect Microsoft Sentinel to the Microsoft Defender portal](https://learn.microsoft.com/azure/sentinel/microsoft-sentinel-onboard)

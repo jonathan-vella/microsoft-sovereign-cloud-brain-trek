@@ -1,0 +1,41 @@
+---
+title: "Module 4: Foundry Local in production"
+description: "Design production Foundry Local on Azure Local deployments, including routing, model lifecycle, evaluation, and Agentic Retrieval integration."
+lastVerified: 2026-10-02
+module:
+  duration: "60-90 minutes"
+  objectives:
+    - Design a multi-node Foundry Local on Azure Local deployment for production inference.
+    - Choose ONNX-GenAI or vLLM based on hardware, concurrency, and model size.
+    - Plan model catalog, caching, evaluation, and disconnected update flows.
+    - Connect Agentic Retrieval to a Foundry Local model endpoint.
+  prerequisites:
+    - /level-200/module-03-edge-rag/
+    - /level-300/module-01-azure-local-advanced/
+---
+
+import DiagramContainer from "~/components/DiagramContainer.astro";
+
+[Foundry Local on Azure Local is in preview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview). It serves AI models on an Arc-enabled Kubernetes cluster that runs on Azure Local. [Agentic Retrieval in Foundry Local is also in preview](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview). Agentic Retrieval (formerly Edge RAG) uses a Foundry Local on Azure Local endpoint as the recommended local language model endpoint.
+
+This module replaces the old production content for Agentic Retrieval (formerly Edge RAG) with the current Foundry Local family. You plan a production inference platform first, then connect Agentic Retrieval as a consuming workload. The design center is no longer a bundled RAG stack. It is a Kubernetes inference platform with model deployments, Gateway API routing, local model caching, evaluation jobs, and disconnected deployment paths.
+
+<DiagramContainer title="Foundry Local on Azure Local production pattern" defaultOpen>
+
+![Foundry Local on Azure Local in production: clients and Agentic Retrieval call a Gateway API (Istio) endpoint, which routes to ONNX-GenAI deployments directly and, through the Endpoint Picker, to multi-replica vLLM deployments on GPU nodes of a multi-node AKS cluster on Azure Local, managed through Azure Arc](/images/level-300/foundry-local-production-2026.svg)
+
+</DiagramContainer>
+
+## How to read this module
+
+Read the architecture page first if you own platform design. It maps Azure Local, AKS Arc, Azure Arc extensions, Gateway API, authentication, GPU pools, and Agentic Retrieval into one production shape. Read the performance page when you need to select a runtime, model, context window, or GPU topology. Read the lifecycle page when you need to prove how model catalog sync, caching, deployment, evaluation, and disconnected transfer work.
+
+The production decision is where to put responsibility. Foundry Local on Azure Local owns model serving. Agentic Retrieval owns ingestion, vector search, agents, tools, and chat. Keeping those responsibilities separate helps you size GPUs, secure endpoints, and update models without assuming the RAG layer and inference layer scale the same way.
+
+## Sources
+
+- [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
+- [What's new in Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/whats-new)
+- [What is Agentic Retrieval in Agents and Tools with Foundry Local?](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)
+- [What's new in Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new)
+- [What you need for Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/requirements)

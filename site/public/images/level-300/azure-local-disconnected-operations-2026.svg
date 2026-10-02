@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="dco-title dco-desc">
+  <title id="dco-title">Azure Local disconnected operations</title>
+  <desc id="dco-desc">A customer datacenter with no connection to Azure. A management cluster of three or more Azure Local machines runs the disconnected operations appliance, a local control plane with the Azure portal, Azure Resource Manager, RBAC, managed identity, Key Vault, Container Registry, Azure Policy, and Arc-enabled servers. It manages workload Azure Local instances that run Azure Local VMs, AKS enabled by Azure Arc (preview), and Microsoft 365 Local. Active Directory with AD FS provides identity, the customer PKI issues certificates, and updates and expansion packs arrive on transferred media.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#F7FAFD"/><stop offset="100%" stop-color="#EEF5FC"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#616161"/></marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F6CBD"/></marker>
+  </defs>
+  <rect width="960" height="600" rx="12" fill="url(#bg)"/>
+  <text x="32" y="44" font-family="Inter Variable, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#0C3B5E" text-anchor="start">Azure Local disconnected operations</text>
+  <text x="32" y="68" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="400" fill="#616161" text-anchor="start">GA from Azure Local 2602. AKS enabled by Azure Arc under disconnected operations is in preview.</text>
+  <rect x="740" y="22" width="196" height="56" rx="10" fill="#F2F2F2" stroke="#BDBDBD" stroke-width="1.5"/>
+  <text x="838" y="47" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#616161" text-anchor="middle">Azure public cloud</text>
+  <text x="838" y="66" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#C50F1F" text-anchor="middle">no connection</text>
+  <path d="M 838 80 L 838 104" stroke="#C50F1F" stroke-width="1.6" fill="none" stroke-dasharray="4 4"/>
+  <path d="M 828 92 L 848 100 M 848 92 L 828 100" stroke="#C50F1F" stroke-width="2" fill="none"/>
+  <rect x="20" y="108" width="920" height="476" rx="14" fill="none" stroke="#0F6CBD" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="36" y="132" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#0F6CBD" text-anchor="start">Customer datacenter boundary</text>
+  <rect x="40" y="148" width="420" height="300" rx="10" fill="#E7F4E4" stroke="#107C10" stroke-width="1.5"/>
+  <text x="58" y="174" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#107C10" text-anchor="start">Management cluster</text>
+  <text x="58" y="194" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Dedicated Azure Local instance, 3 or more machines in production</text>
+  <rect x="58" y="208" width="384" height="224" rx="8" fill="#FFFFFF" stroke="#107C10" stroke-width="1"/>
+  <text x="74" y="232" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#242424" text-anchor="start">Disconnected operations appliance (local control plane)</text>
+  <rect x="74" y="248" width="170" height="26" rx="6" fill="#E7F4E4" stroke="#9FD89F" stroke-width="1"/>
+  <text x="159.0" y="265.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0B5A0B" text-anchor="middle">Azure portal</text>
+  <rect x="254" y="248" width="170" height="26" rx="6" fill="#E7F4E4" stroke="#9FD89F" stroke-width="1"/>
+  <text x="339.0" y="265.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0B5A0B" text-anchor="middle">Azure Resource Manager</text>
+  <rect x="74" y="290" width="170" height="26" rx="6" fill="#E7F4E4" stroke="#9FD89F" stroke-width="1"/>
+  <text x="159.0" y="307.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0B5A0B" text-anchor="middle">RBAC</text>
+  <rect x="254" y="290" width="170" height="26" rx="6" fill="#E7F4E4" stroke="#9FD89F" stroke-width="1"/>
+  <text x="339.0" y="307.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0B5A0B" text-anchor="middle">Managed identity</text>
+  <rect x="74" y="332" width="170" height="26" rx="6" fill="#E7F4E4" stroke="#9FD89F" stroke-width="1"/>
+  <text x="159.0" y="349.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0B5A0B" text-anchor="middle">Azure Key Vault</text>
+  <rect x="254" y="332" width="170" height="26" rx="6" fill="#E7F4E4" stroke="#9FD89F" stroke-width="1"/>
+  <text x="339.0" y="349.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0B5A0B" text-anchor="middle">Azure Container Registry</text>
+  <rect x="74" y="374" width="170" height="26" rx="6" fill="#E7F4E4" stroke="#9FD89F" stroke-width="1"/>
+  <text x="159.0" y="391.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0B5A0B" text-anchor="middle">Azure Policy</text>
+  <rect x="254" y="374" width="170" height="26" rx="6" fill="#E7F4E4" stroke="#9FD89F" stroke-width="1"/>
+  <text x="339.0" y="391.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0B5A0B" text-anchor="middle">Arc-enabled servers</text>
+  <rect x="520" y="148" width="400" height="140" rx="10" fill="#EBF3FC" stroke="#0F6CBD" stroke-width="1.5"/>
+  <text x="538" y="174" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F6CBD" text-anchor="start">Workload Azure Local instance</text>
+  <text x="538" y="194" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Hyperconverged or disaggregated</text>
+  <rect x="538" y="210" width="150" height="26" rx="6" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="613.0" y="227.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0C3B5E" text-anchor="middle">Azure Local VMs</text>
+  <rect x="698" y="210" width="204" height="26" rx="6" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="800.0" y="227.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0C3B5E" text-anchor="middle">AKS enabled by Arc (preview)</text>
+  <rect x="538" y="246" width="364" height="26" rx="6" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="720.0" y="263.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0C3B5E" text-anchor="middle">Arc-enabled Kubernetes clusters (preview)</text>
+  <rect x="520" y="308" width="400" height="140" rx="10" fill="#EBF3FC" stroke="#0F6CBD" stroke-width="1.5"/>
+  <text x="538" y="334" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F6CBD" text-anchor="start">Workload Azure Local instance</text>
+  <text x="538" y="354" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Hyperconverged or disaggregated</text>
+  <rect x="538" y="370" width="150" height="26" rx="6" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="613.0" y="387.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0C3B5E" text-anchor="middle">Azure Local VMs</text>
+  <rect x="698" y="370" width="204" height="26" rx="6" fill="#EBF3FC" stroke="#CFE3F6" stroke-width="1"/>
+  <text x="800.0" y="387.0" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="500" fill="#0C3B5E" text-anchor="middle">Microsoft 365 Local</text>
+  <text x="538" y="426" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#616161" text-anchor="start">Add instances and machines from the local portal</text>
+  <path d="M 460 250 L 516 220" stroke="#0F6CBD" stroke-width="1.6" fill="none" marker-end="url(#arrowBlue)"/>
+  <path d="M 460 340 L 516 375" stroke="#0F6CBD" stroke-width="1.6" fill="none" marker-end="url(#arrowBlue)"/>
+  <text x="488" y="300" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#0F6CBD" text-anchor="middle">manage</text>
+  <rect x="40" y="478" width="270" height="86" rx="10" fill="#EFE6F8" stroke="#5C2E91" stroke-width="1.2"/>
+  <text x="56" y="504" font-family="Inter Variable, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#5C2E91" text-anchor="start">Identity</text>
+  <text x="56" y="526" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Active Directory with AD FS</text>
+  <text x="56" y="543" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">LDAP sync and OIDC sign-in</text>
+  <rect x="330" y="478" width="270" height="86" rx="10" fill="#EFE6F8" stroke="#5C2E91" stroke-width="1.2"/>
+  <text x="346" y="504" font-family="Inter Variable, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#5C2E91" text-anchor="start">Customer PKI</text>
+  <text x="346" y="526" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Certificates for the appliance</text>
+  <text x="346" y="543" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">endpoints, rotated by you</text>
+  <rect x="620" y="478" width="300" height="86" rx="10" fill="#FFF1E0" stroke="#C25E00" stroke-width="1.2"/>
+  <text x="636" y="504" font-family="Inter Variable, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#C25E00" text-anchor="start">Transferred media</text>
+  <text x="636" y="526" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">Updates and expansion packs</text>
+  <text x="636" y="543" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="400" fill="#242424" text-anchor="start">imported into the appliance</text>
+  <path d="M 175 478 L 175 452" stroke="#5C2E91" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 370 478 L 370 452" stroke="#5C2E91" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 680 478 L 680 466 L 430 466 L 430 452" stroke="#C25E00" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+</svg>

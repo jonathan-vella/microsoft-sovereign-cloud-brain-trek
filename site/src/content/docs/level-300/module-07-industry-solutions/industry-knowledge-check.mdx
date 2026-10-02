@@ -1,0 +1,175 @@
+---
+title: "Industry solutions knowledge check"
+description: "Scenario questions for financial services, healthcare, government, and critical infrastructure sovereign architectures."
+lastVerified: 2026-10-02
+sidebar:
+  order: 10
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Test the architecture decisions in this module. Each scenario uses a Microsoft-documented fact from the industry pages.
+
+## Question 1: DORA oversight update
+
+An EU bank is updating its third-party risk register for Microsoft cloud services. Which current fact must the architect include?
+
+- A) DORA is planned but not yet in force.
+- B) Microsoft Ireland Operations Limited is identified as a DORA Critical ICT Third-Party Provider subject to ESA oversight.
+- C) DORA applies only to payment-card environments.
+- D) DORA removed the need for cloud supplier oversight.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-07-industry-solutions/financial-services/">
+
+B is correct because Microsoft Learn says DORA applies from [January 17, 2025](https://learn.microsoft.com/compliance/dora/dora-what-is-dora), and that on [November 18, 2025](https://learn.microsoft.com/compliance/dora/dora-what-is-dora), Microsoft Ireland Operations Limited was identified as a Critical ICT Third-Party Provider subject to ESA oversight. A is wrong because DORA is in force. C is wrong because DORA is broader than PCI scope. D is wrong because third-party risk oversight is central to DORA.
+
+</KnowledgeCheck>
+
+## Question 2: External key management fit
+
+A financial-services customer asks to require Managed HSM external key management for every Azure workload, including Azure Government subscriptions. What should the architect say?
+
+- A) Require it everywhere because EKM is generally available in all Microsoft clouds.
+- B) Use it only for Azure Government because that is the only supported environment.
+- C) Treat it as an exception path because EKM is preview, gated, and excludes Azure Government and Azure China.
+- D) Replace Managed HSM with software keys because FIPS validation is not available.
+
+<KnowledgeCheck answer="C" reference="/level-300/module-07-industry-solutions/financial-services/">
+
+C is correct because [Managed HSM external key management](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview) is preview, gated through the Microsoft account team, and excludes Azure Government and Azure China. A is wrong because the feature is not generally available everywhere. B is wrong because Azure Government is excluded from the preview. D is wrong because Managed HSM key sovereignty is documented as [FIPS 140-3 Level 3](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management).
+
+</KnowledgeCheck>
+
+## Question 3: Healthcare BAA responsibility
+
+A hospital signs Microsoft's Business Associate Agreement for in-scope services and asks whether that alone makes the solution HIPAA compliant. What is the best answer?
+
+- A) Yes. The BAA transfers all HIPAA responsibility to Microsoft.
+- B) Yes, if the workload also uses private endpoints.
+- C) No. Microsoft says the BAA supports compliance, but the customer remains responsible for its compliance program and use of services.
+- D) No. Microsoft does not offer a BAA for cloud services.
+
+<KnowledgeCheck answer="C" reference="/level-300/module-07-industry-solutions/healthcare-sovereign/">
+
+C is correct because the [HIPAA and HITECH offering page](https://learn.microsoft.com/compliance/regulatory/offering-hipaa-hitech) says Microsoft offers a BAA for in-scope services but using Microsoft services does not on its own achieve HIPAA compliance. A and B overstate the BAA and network controls. D is wrong because Microsoft offers a BAA for covered entity and business associate customers.
+
+</KnowledgeCheck>
+
+## Question 4: FHIR placement
+
+A healthcare customer needs a managed cloud API for FHIR data exchange, with Microsoft Entra RBAC and audit logs. Which service should the architect evaluate first?
+
+- A) Azure Health Data Services FHIR service.
+- B) Azure IoT Operations MQTT broker.
+- C) Azure Government Secret.
+- D) Microsoft 365 Local.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-07-industry-solutions/healthcare-sovereign/">
+
+A is correct because the [FHIR service in Azure Health Data Services](https://learn.microsoft.com/azure/healthcare-apis/fhir/overview) is a managed FHIR-compliant PaaS service with Microsoft Entra RBAC and audit logs. B is for edge IoT data, not FHIR. C is a government cloud tier, not a FHIR API. D is local collaboration software, not a managed FHIR service.
+
+</KnowledgeCheck>
+
+## Question 5: Azure Government region resilience
+
+A US agency wants availability zones for an Azure Government workload. Which region fact must the architect use?
+
+- A) All Azure Government regions have availability zones.
+- B) Only US Gov Virginia has availability zones.
+- C) US DoD Central is the only Azure Government region with availability zones.
+- D) Availability zones are not documented for Azure Government.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-07-industry-solutions/government-cloud/">
+
+B is correct because [Azure Government documentation](https://learn.microsoft.com/azure/azure-government/documentation-government-welcome) lists US Gov Arizona, US Gov Texas, and US Gov Virginia, and states that only US Gov Virginia has availability zones. A and D contradict the Microsoft page. C is wrong because DoD regions are separate DoD-only regions in Azure Government documentation.
+
+</KnowledgeCheck>
+
+## Question 6: Azure Copilot in government cloud
+
+A government operations runbook includes Azure Copilot prompts for Azure Government incident triage. What should the reviewer change?
+
+- A) Keep the runbook because Azure Copilot is available in all Azure clouds.
+- B) Replace the step because Azure Copilot is not available in Azure Government.
+- C) Keep the step only for US Gov Virginia.
+- D) Move the workload to Azure Government Secret to enable Azure Copilot.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-07-industry-solutions/government-cloud/">
+
+B is correct because the [Azure Copilot overview](https://learn.microsoft.com/azure/copilot/overview) says Azure Copilot is not available in Azure Government or Azure operated by 21Vianet. A, C, and D invent availability that Microsoft does not document.
+
+</KnowledgeCheck>
+
+## Question 7: NIS2 technical posture
+
+An EU energy operator asks how to start tracking NIS2 technical posture for Azure resources. Which Microsoft tool provides a built-in standard named for NIS2?
+
+- A) Defender for Cloud regulatory compliance standards.
+- B) Azure Copilot.
+- C) Microsoft 365 Local.
+- D) Azure Government Secret.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-07-industry-solutions/critical-infrastructure/">
+
+A is correct because Defender for Cloud lists [EU 2022 2555 NIS2 2022](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards) as a built-in regulatory compliance standard. B is not available in Azure Government and is not the NIS2 standard. C is local collaboration. D is a classified US cloud tier.
+
+</KnowledgeCheck>
+
+## Question 8: OT monitoring pattern
+
+A manufacturing site has PLCs and industrial controllers that cannot run endpoint agents. The security team still needs asset discovery and threat detection. Which Microsoft service fits the requirement?
+
+- A) Microsoft Defender for IoT.
+- B) Azure Health Data Services.
+- C) Managed HSM EKM.
+- D) Microsoft 365 Local.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-07-industry-solutions/critical-infrastructure/">
+
+A is correct because [Defender for IoT](https://learn.microsoft.com/azure/defender-for-iot/organizations/overview) provides agentless network-layer monitoring for IoT and OT devices, vulnerabilities, and threats. B is for health data. C is a key-management preview. D is local collaboration software.
+
+</KnowledgeCheck>
+
+## Question 9: Azure IoT Operations offline behavior
+
+A remote plant wants Azure IoT Operations for edge data flows and asks whether it can be planned as permanently disconnected. What is the best answer?
+
+- A) Yes. Azure IoT Operations has no documented offline limit.
+- B) No. Microsoft documents a maximum of 72 hours offline, with possible degradation.
+- C) Yes, if the plant uses Defender for Cloud NIS2.
+- D) No. Azure IoT Operations can run only in cloud-connected VMs.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-07-industry-solutions/critical-infrastructure/">
+
+B is correct because the [Azure IoT Operations overview](https://learn.microsoft.com/azure/iot-operations/overview-iot-operations) states that it can operate offline for a maximum of 72 hours and that degradation might occur during that period. A ignores the documented limit. C does not change runtime behavior. D is wrong because Azure IoT Operations runs on Arc-enabled Kubernetes clusters.
+
+</KnowledgeCheck>
+
+## Question 10: AKS disconnected operations status
+
+A critical infrastructure customer wants Azure Local disconnected operations and AKS workloads under the same GA assumption. What should the architect document?
+
+- A) Azure Local disconnected operations require Azure Local 2602 or later, but AKS on Azure Local with disconnected operations remains preview.
+- B) Both Azure Local disconnected operations and AKS disconnected operations are retired.
+- C) AKS disconnected operations are GA only on Azure Government.
+- D) The status does not matter if the site uses private endpoints.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-07-industry-solutions/critical-infrastructure/">
+
+A is correct because Microsoft documents Azure Local disconnected operations as requiring [Azure Local 2602 or later](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview), while [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview) is preview. B, C, and D are not Microsoft-documented status statements.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [What is DORA?](https://learn.microsoft.com/compliance/dora/dora-what-is-dora)
+- [What is Managed HSM external key management?](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)
+- [Health Insurance Portability and Accountability Act and HITECH Act](https://learn.microsoft.com/compliance/regulatory/offering-hipaa-hitech)
+- [What is the FHIR service in Azure Health Data Services?](https://learn.microsoft.com/azure/healthcare-apis/fhir/overview)
+- [What is Azure Government?](https://learn.microsoft.com/azure/azure-government/documentation-government-welcome)
+- [What is Azure Copilot?](https://learn.microsoft.com/azure/copilot/overview)
+- [Regulatory compliance standards in Microsoft Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards)
+- [What is Microsoft Defender for IoT?](https://learn.microsoft.com/azure/defender-for-iot/organizations/overview)
+- [What is Azure IoT Operations?](https://learn.microsoft.com/azure/iot-operations/overview-iot-operations)
+- [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
+- [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview)

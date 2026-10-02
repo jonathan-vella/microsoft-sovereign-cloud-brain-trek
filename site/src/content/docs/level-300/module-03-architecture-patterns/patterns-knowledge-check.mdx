@@ -1,0 +1,159 @@
+---
+title: "Patterns knowledge check"
+description: "Check your architecture decisions for sovereign API, event, data mesh, recovery, and DevSecOps patterns."
+lastVerified: 2026-10-02
+sidebar:
+  order: 10
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Use these scenario questions to test the design choices from this module.
+
+## Question 1: Keep API traffic local
+
+A regulated manufacturer hosts production APIs on Azure Local. The central platform team wants one API Management experience but cannot send API traffic through Azure because plant data must stay on premises. Which design best fits?
+
+- A) Use an API Management self-hosted gateway near the APIs and manage it from an API Management instance.
+- B) Use only Azure Front Door because it is a global layer 7 gateway.
+- C) Expose each backend directly and rely on application code for authorization.
+- D) Use a Consumption tier API Management instance because it scales automatically.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-03-architecture-patterns/api-gateway-patterns/">
+
+A is correct because the self-hosted gateway is a containerized API Management gateway that can run where backend APIs are hosted, including Kubernetes and Azure Arc-enabled Kubernetes, while being managed from an API Management instance ([source](https://learn.microsoft.com/azure/api-management/self-hosted-gateway-overview)). B sends traffic through a global edge service. C removes central policy enforcement. D is wrong because the Consumption tier does not support self-hosted gateways according to the API Management feature table ([source](https://learn.microsoft.com/azure/api-management/api-management-features)).
+
+</KnowledgeCheck>
+
+## Question 2: Pick the right event service
+
+A payment workflow needs ordered handling for all messages that belong to the same account, duplicate detection, and transactional messaging. Which Azure messaging service should the architect choose first?
+
+- A) Event Grid
+- B) Event Hubs
+- C) Service Bus
+- D) Azure IoT Operations MQTT broker
+
+<KnowledgeCheck answer="C" reference="/level-300/module-03-architecture-patterns/event-driven-architecture/">
+
+C is correct because Microsoft's messaging comparison positions Service Bus for enterprise transactional messaging, with sessions for first-in-first-out processing and duplicate detection ([source](https://learn.microsoft.com/azure/event-grid/compare-messaging-services)). A is wrong because Event Grid has no ordering guarantee. B is better for high-throughput event streams and replay. D is for edge MQTT eventing, not enterprise transaction messaging.
+
+</KnowledgeCheck>
+
+## Question 3: Use Event Grid on Kubernetes
+
+An architect proposes Event Grid on Kubernetes with Azure Arc for a production disconnected plant because it keeps event routing local. What is the strongest review comment?
+
+- A) Approve it because Event Grid on Kubernetes is the current production edge eventing default.
+- B) Reject any local eventing because only cloud Event Grid supports publish-subscribe.
+- C) Require a preview risk decision because Learn labels Event Grid on Kubernetes with Azure Arc as public preview and not recommended for production workloads.
+- D) Replace it with Service Bus because Service Bus always runs disconnected on Azure Local.
+
+<KnowledgeCheck answer="C" reference="/level-300/module-03-architecture-patterns/event-driven-architecture/">
+
+C is correct because the Event Grid on Kubernetes overview labels it public preview and says the preview is provided without a service-level agreement and is not recommended for production workloads ([source](https://learn.microsoft.com/azure/event-grid/kubernetes/overview)). A ignores the preview status. B ignores local eventing options such as Azure IoT Operations MQTT broker. D invents a disconnected Service Bus capability not taught in the module.
+
+</KnowledgeCheck>
+
+## Question 4: Separate catalog visibility from data access
+
+A domain team registers restricted customer data in Microsoft Purview Unified Catalog. A reviewer says catalog registration gives approved users access to the source tables. Is that correct?
+
+- A) Yes. Purview catalog roles grant access to the underlying data.
+- B) Yes. Data products are always copied into Purview.
+- C) No. Purview Data Map and Unified Catalog store metadata, and their roles do not grant access to underlying data.
+- D) No. Purview cannot scan multicloud or on-premises sources.
+
+<KnowledgeCheck answer="C" reference="/level-300/module-03-architecture-patterns/data-mesh-sovereignty/">
+
+C is correct because Microsoft Learn states that Data Map and Unified Catalog data is metadata, not the underlying data itself, and that the roles do not provide access to the underlying data ([source](https://learn.microsoft.com/purview/data-governance-overview)). A and B confuse catalog metadata with data access. D is wrong because Purview scans data assets and multicloud sources.
+
+</KnowledgeCheck>
+
+## Question 5: Design Fabric domains
+
+A data mesh team uses Microsoft Fabric domains and assumes domain assignment is a security boundary. What should the architect require?
+
+- A) Keep the domain model, but enforce access through workspace roles, item permissions, and source-system controls.
+- B) Remove domains because Fabric does not support data mesh concepts.
+- C) Use domain assignment to block all tenant users from seeing domain names.
+- D) Put all domains in one workspace so access is simpler.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-03-architecture-patterns/data-mesh-sovereignty/">
+
+A is correct because Fabric domains help organize data and delegate some governance settings, but Microsoft Learn states that domain assignment does not affect item visibility or accessibility. Access depends on workspace role and item permissions ([source](https://learn.microsoft.com/fabric/governance/domains)). B is wrong because Fabric documentation explicitly describes data mesh and domains. C and D are not supported by the Fabric domain model.
+
+</KnowledgeCheck>
+
+## Question 6: Choose an in-boundary DR region
+
+A workload in West Europe stores regulated EU customer data. The team wants disaster recovery and assumes paired regions automatically make the workload resilient. What should the architect say?
+
+- A) Deploy only to West Europe because paired regions cannot support disaster recovery.
+- B) Use North Europe only after confirming it is an approved EU secondary region and designing the application failover plan.
+- C) Use any region with lower latency because encryption removes residency concerns.
+- D) Let Azure perform Microsoft-managed failover and skip workload recovery planning.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-03-architecture-patterns/disaster-recovery/">
+
+B is correct because West Europe pairs with North Europe, and Microsoft Learn says almost all region pairs stay in the same geography to meet data residency requirements. It also warns that deploying to a paired region does not automatically provide resilience, high availability, disaster recovery, or failover ([source](https://learn.microsoft.com/azure/reliability/regions-paired)). A is too restrictive. C ignores residency. D ignores the need for a workload-owned recovery plan.
+
+</KnowledgeCheck>
+
+## Question 7: Protect keys during DR
+
+A restricted workload uses Azure Key Vault Managed HSM. The team backs up databases but has not downloaded the HSM security domain. What is the risk?
+
+- A) No risk. Microsoft can recover the security domain during a disaster.
+- B) Low risk. The security domain is only needed for billing.
+- C) High risk. Without the security domain, Managed HSM disaster recovery is not possible.
+- D) No risk if the application uses private endpoints.
+
+<KnowledgeCheck answer="C" reference="/level-300/module-03-architecture-patterns/disaster-recovery/">
+
+C is correct because Microsoft Learn states that the Managed HSM security domain is required for disaster recovery and that Microsoft cannot recover it or access keys without it ([source](https://learn.microsoft.com/azure/reliability/reliability-managed-hsm)). A and B contradict the Managed HSM reliability guidance. D is unrelated to key recovery.
+
+</KnowledgeCheck>
+
+## Question 8: Connect code risks to cloud posture
+
+A security team sees infrastructure-as-code misconfigurations in pull requests and separate public endpoint findings in Azure. They want one view that correlates DevOps findings with cloud security insights. Which product capability fits?
+
+- A) Microsoft Defender for Cloud DevOps security
+- B) Azure Backup
+- C) Event Grid
+- D) Fabric domains
+
+<KnowledgeCheck answer="A" reference="/level-300/module-03-architecture-patterns/devsecops-pipeline/">
+
+A is correct because Defender for Cloud DevOps security gives security teams visibility across Azure DevOps, GitHub, and GitLab and correlates code, secrets, dependency, and infrastructure-as-code findings with cloud security insights ([source](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-devops-introduction)). B is for backup. C is for event routing. D organizes data in Fabric.
+
+</KnowledgeCheck>
+
+## Question 9: Deploy to a disconnected DevOps target
+
+A defense customer wants source control, packages, CI/CD execution, and advanced security scanning to run on customer-owned Azure Local infrastructure without internet connectivity. Which statement can the architect make from Microsoft Learn?
+
+- A) The Azure Local GitHub appliance is generally available and runs only in global Azure.
+- B) GitHub Enterprise Local is in preview ([source](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview)) and runs GitHub Enterprise Server on Azure Local, with GitHub Actions using self-hosted runners for offline pipelines.
+- C) GitHub Advanced Security for Azure DevOps requires public GitHub repositories.
+- D) Azure Pipelines Microsoft-hosted agents are the only supported way to deploy to Azure Local.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-03-architecture-patterns/devsecops-pipeline/">
+
+B is correct because Microsoft Learn labels GitHub Enterprise Local preview and says it runs GitHub Enterprise Server on Azure Local infrastructure ([source](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview)). The same page states it includes GitHub Actions with self-hosted runners for fully offline pipelines and GitHub Advanced Security. A gets the status and hosting model wrong. C is wrong because GitHub Advanced Security for Azure DevOps works with Azure Repos. D ignores self-hosted agents and runners.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [Self-hosted gateway overview](https://learn.microsoft.com/azure/api-management/self-hosted-gateway-overview)
+- [Feature-based comparison of the Azure API Management tiers](https://learn.microsoft.com/azure/api-management/api-management-features)
+- [Choose between Azure Event Grid, Event Hubs, and Service Bus](https://learn.microsoft.com/azure/event-grid/compare-messaging-services)
+- [Event Grid on Kubernetes with Azure Arc overview](https://learn.microsoft.com/azure/event-grid/kubernetes/overview)
+- [Data governance with Microsoft Purview](https://learn.microsoft.com/purview/data-governance-overview)
+- [Fabric domains](https://learn.microsoft.com/fabric/governance/domains)
+- [Azure region pairs and nonpaired regions](https://learn.microsoft.com/azure/reliability/regions-paired)
+- [Reliability in Azure Key Vault Managed HSM](https://learn.microsoft.com/azure/reliability/reliability-managed-hsm)
+- [Overview of Microsoft Defender for Cloud DevOps security](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-devops-introduction)
+- [What is GitHub Enterprise Local? (preview)](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview)

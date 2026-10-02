@@ -1,0 +1,97 @@
+---
+title: "SLZ architecture"
+description: "Architect the Sovereign Landing Zone hierarchy as an Azure landing zone variant with workload placement by network model and control level."
+lastVerified: 2026-10-02
+sidebar:
+  order: 1
+---
+
+Sovereign Landing Zone is a tailored version of the Azure landing zone reference architecture. Microsoft Learn describes SLZ as a variant of ALZ that keeps the same design principles and design areas, then adds sovereign controls and management groups for workloads with residency, encryption, and confidential computing requirements.
+
+That distinction matters in design reviews. Do not create a parallel governance model for sovereign workloads. Start with the Azure landing zone platform, subscription vending, management group inheritance, and policy-driven governance model. Add SLZ where the workload classification requires sovereignty controls that the standard ALZ hierarchy does not express clearly enough.
+
+![Sovereign Landing Zone management group hierarchy: Platform with Management, Connectivity, Identity, and Security (Managed HSM); Landing zones with Corp, Online, Public, Confidential Corp, and Confidential Online; plus Sandbox and Decommissioned](/images/level-300/sovereign-landing-zone-2026.svg)
+
+## What changes from Azure landing zones
+
+SLZ changes the resource organization and compliance design areas. Microsoft Learn states that Azure billing and tenant, identity and access management, network topology and connectivity, and platform automation and DevOps have no SLZ-specific changes. The compliance difference is the extra Azure Policy controls that an organization applies or requires based on sovereign needs.
+
+At the platform layer, current Azure landing zone reference guidance shows management groups for centralized capabilities such as Management, Connectivity, Identity, and Security. The SLZ implementation guidance calls out the Security management group and subscription because it hosts sovereign services such as the Managed HSM instance that stores service encryption keys. Treat that Security subscription as part of the platform landing zone, not as a workload subscription.
+
+At the workload layer, SLZ adds three management groups under Landing Zones:
+
+| SLZ addition | Why it exists |
+| --- | --- |
+| Public | Hosts public or general data that should stay isolated from sovereign and confidential workloads. |
+| Confidential Online | Hosts internet-facing workloads with highly confidential or secret data. |
+| Confidential Corp | Hosts internal workloads with highly confidential or secret data. |
+
+The standard ALZ hierarchy also keeps Corp and Online under Landing Zones, plus Sandbox and Decommissioned as separate management groups. Keep Sandbox for experiments and short-lived proof work. Keep Decommissioned for cleaned or retired subscriptions that are waiting for reuse, audit retention, or deletion. Do not use either group as a shortcut around sovereign policy.
+
+:::note[Azure Government and 21Vianet]
+The Azure Architecture Center states that the Azure portal deployment for Azure landing zones is not supported in Azure sovereign clouds such as Azure Government and Azure operated by 21Vianet. In those clouds, use the Bicep or Terraform code as a starting point and remove unsupported policies, resources, or API versions before deployment.
+:::
+
+## Design areas that stay stable
+
+Because SLZ is an ALZ variant, most architectural decisions still use standard ALZ guidance.
+
+| Design area | SLZ decision |
+| --- | --- |
+| Billing and tenant | No SLZ-specific change. Keep the same enrollment, tenant, identity boundary, and chargeback decisions. |
+| Identity and access management | No SLZ-specific change. Use Microsoft Entra ID, privileged access, conditional access, and role assignment patterns from ALZ. |
+| Network topology and connectivity | No SLZ-specific change. Hub and spoke and Azure Virtual WAN remain valid. The workload management group placement describes network exposure and data classification. |
+| Platform automation and DevOps | No SLZ-specific change. Use infrastructure as code, version control, and controlled promotion of policy assignments. |
+| Security, management, and governance | SLZ adds sovereign policy assignments and control levels that map to data classification. |
+
+This separation prevents over-design. A highly confidential workload might require confidential computing and Managed HSM backed keys, but it still uses the same subscription vending, central connectivity, identity, logging, and operations model as other Azure landing zone workloads.
+
+## Management group placement
+
+The SLZ hierarchy uses two axes. The first axis is network exposure. Online workloads can accept authenticated internet traffic and controlled connectivity through the hub. Corp workloads are internal only and connect through the hub. Public workloads are internet only and should not have private Layer 3 connectivity into Online, Corp, Confidential Online, or Confidential Corp subscriptions. The second axis is data classification. General and confidential workloads use Level 1 and Level 2 controls. Highly confidential and secret workloads use Level 1, Level 2, and Level 3 controls.
+
+| Management group | Parent | Best fit | Networking model | Learn control level |
+| --- | --- | --- | --- | --- |
+| Public | Landing Zones | Public or general data | Internet only, no Layer 3 connectivity to other application landing zone subscriptions | ALZ defaults and organization controls |
+| Online | Landing Zones | General or confidential data | Internet access with controlled connectivity through the connectivity hub | ALZ defaults, Level 1, Level 2, and organization controls |
+| Corp | Landing Zones | General or confidential data | Internal only, with controlled connectivity through the connectivity hub | ALZ defaults, Level 1, Level 2, and organization controls |
+| Confidential Online | Landing Zones | Highly confidential or secret data | Internet access with controlled connectivity through the connectivity hub | ALZ defaults, Level 1, Level 2, Level 3, and organization controls |
+| Confidential Corp | Landing Zones | Highly confidential or secret data | Internal only, with controlled connectivity through the connectivity hub | ALZ defaults, Level 1, Level 2, Level 3, and organization controls |
+| Platform | Root or intermediate ALZ root | Shared services that support sovereign workloads | Centralized connectivity, identity, management, key management, and security services | Most services need Level 1 and Level 2. Use Level 3 where possible. |
+| Sandbox | Root or intermediate ALZ root | Experiments and temporary work | Isolated from production connectivity unless explicitly approved | ALZ sandbox controls. Add sovereign controls only when the sandbox handles classified data. |
+| Decommissioned | Root or intermediate ALZ root | Retired or reusable subscriptions | No active production connectivity | ALZ decommissioning controls. Remove workload resources before reuse. |
+
+The Public group is not an invitation to weaken security. It exists because public information should not inherit unnecessary sovereign controls that make delivery harder. It must remain isolated from private sovereign workloads, and calls into controlled systems should use explicit application interfaces and zero trust authorization.
+
+Online and Corp are the normal landing points for business workloads that carry internal or confidential data. They inherit Level 1 and Level 2 controls, so they restrict deployment locations and require encryption at rest and in transit. The network difference between them remains the standard ALZ online and corp distinction.
+
+Confidential Online and Confidential Corp add Level 3 controls for encryption in use. Place workloads there when the classification requires confidential computing, attestation, and key release patterns that prove processing happens inside a trusted execution environment.
+
+## Platform subscriptions and key management
+
+The platform landing zone supports the workload landing zones, so it must match the highest data classification it supports. If confidential workloads depend on identity, connectivity, monitoring, or key services in platform subscriptions, those platform services become part of the confidential workload's control path.
+
+Use the Security management group and subscription for central sovereign security services. The SLZ guidance specifically names the Managed HSM instance that hosts service encryption keys. Managed HSM supports customer control of keys and is the preferred key store for workloads with stronger sovereignty requirements when the target service supports customer-managed keys from Managed HSM.
+
+Avoid a single global key design. Keep keys in the jurisdiction and operational boundary that matches the data. Document exceptions for non-regional services, global networking, DNS, and other services where Azure does not provide a strict regional data boundary.
+
+## Architecture review checks
+
+Use these checks before you approve a workload subscription:
+
+1. Confirm the data classification before subscription vending.
+2. Choose Public, Online, Corp, Confidential Online, or Confidential Corp based on data sensitivity and network exposure.
+3. Verify the inherited policy initiatives and effects at the management group scope.
+4. Check whether the workload services support customer-managed keys, Managed HSM, private endpoints, and confidential computing SKUs.
+5. Document non-regional services and any data residency exceptions before deployment.
+6. Keep platform dependencies inside the same sovereignty boundary or record an approved exception.
+
+This model lets a platform team scale governance without making every workload pay the cost of the strictest control level.
+
+## Sources
+
+- [Sovereign Landing Zone](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-landing-zone)
+- [Implement controls and principles in SLZ](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/implement-controls-principles)
+- [Controls and principles in Sovereign Public Cloud](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-controls-principles)
+- [What is an Azure landing zone?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)
+- [Deploy Azure landing zones](https://learn.microsoft.com/azure/architecture/landing-zones/landing-zone-deploy)
