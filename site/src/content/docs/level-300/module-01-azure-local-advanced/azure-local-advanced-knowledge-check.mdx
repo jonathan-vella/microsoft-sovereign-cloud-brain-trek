@@ -1,0 +1,174 @@
+---
+title: "Azure Local advanced knowledge check"
+description: "Test architect-level Azure Local decisions across scale, multi-site design, networking, certificates, and disconnected operations."
+lastVerified: 2026-10-02
+sidebar:
+  order: 10
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Use these scenarios to check whether you can apply the module's Azure Local architecture decisions.
+
+## Question 1: Fleet scale and instance scale
+
+A customer cites Microsoft's "thousands of nodes" statement and asks for one Azure Local cluster with 700 nodes. What should you say?
+
+- A) Azure Local supports 700 nodes in one hyperconverged instance.
+- B) The statement refers to fleet scale across a sovereign environment, while single-instance limits still apply.
+- C) The statement applies only to disconnected operations.
+- D) The statement applies only to Microsoft 365 Local.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-01-azure-local-advanced/azure-local-at-scale/">
+
+B is correct because Microsoft Learn describes connected operations as scaling from one node to thousands of nodes, and the [April 27, 2026 Microsoft blog](https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/) describes thousands of servers within a sovereign environment. That is fleet scale. A single instance still follows deployment-type limits such as 16, 64, or 128 nodes. A is wrong because it overstates hyperconverged scale. C and D are wrong because the fleet-scale statement is not limited to those cases.
+
+</KnowledgeCheck>
+
+## Question 2: Connected operations outage tolerance
+
+A connected Azure Local site loses internet connectivity for 12 days. Workloads are still running locally. What should the operations team do?
+
+- A) Treat the workload state as expected, but restore Azure connectivity before the 30-day tolerance is exceeded.
+- B) Shut down workloads because Azure Local requires continuous cloud connectivity.
+- C) Convert the deployment to disconnected operations without approval.
+- D) Ignore the outage because connected deployments never need Azure connectivity.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-01-azure-local-advanced/azure-local-at-scale/">
+
+A is correct because connected operations tolerate [up to 30 days of disconnection without affecting running workloads](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/azure-local/connected-operations-overview). B is wrong because running workloads can continue locally. C is wrong because disconnected operations is a separate, eligible deployment model. D is wrong because connected operations still require periodic Azure connectivity.
+
+</KnowledgeCheck>
+
+## Question 3: Multi-site clustering
+
+An architect proposes one Azure Local stretched cluster across two datacenters for automatic site failover. What is the correct response?
+
+- A) Approve it if latency is under 5 ms.
+- B) Approve it only if Storage Replica is synchronous.
+- C) Reject it because current Azure Local stretched clusters are not supported.
+- D) Approve it if both sites use cloud witness.
+
+<KnowledgeCheck answer="C" reference="/level-300/module-01-azure-local-advanced/azure-local-multi-site/">
+
+C is correct because the current Azure Local stretched-clusters page states that [stretched clusters are not supported in Azure Local](https://learn.microsoft.com/azure/azure-local/concepts/stretched-clusters?view=azloc-2609). A, B, and D describe Windows Server or older design ideas that do not override the current Azure Local support statement.
+
+</KnowledgeCheck>
+
+## Question 4: Rack-aware clustering
+
+A hospital wants a single Azure Local instance split across two equipment rooms in the same campus. The network team can provide high bandwidth and 1 ms or less round-trip latency. Which pattern fits?
+
+- A) Rack-aware clustering.
+- B) Azure Site Recovery to Azure.
+- C) One stretched Azure Local cluster across regions.
+- D) Disconnected operations.
+
+<KnowledgeCheck answer="A" reference="/level-300/module-01-azure-local-advanced/azure-local-multi-site/">
+
+A is correct because [rack-aware clustering](https://learn.microsoft.com/azure/azure-local/concepts/rack-aware-cluster-overview?view=azloc-2609) is designed for two physical racks with high bandwidth and 1 ms or less round-trip latency. B may be a disaster recovery option, but it is not the same-site rack pattern. C is unsupported. D changes the connectivity model, not the rack failure-domain design.
+
+</KnowledgeCheck>
+
+## Question 5: Arc-managed SDN scope
+
+A team wants Arc-managed SDN on Azure Local to provide virtual networks, software load balancers, VPN gateways, logical networks, VM NICs, and network security groups. Which part of the request is supported by Arc-managed SDN?
+
+- A) Virtual networks, software load balancers, and VPN gateways.
+- B) Logical networks, Azure Local VM NICs, and network security groups.
+- C) Only software load balancers.
+- D) Only VPN gateways.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-01-azure-local-advanced/azure-local-networking-advanced/">
+
+B is correct because [SDN enabled by Azure Arc](https://learn.microsoft.com/azure/azure-local/concepts/sdn-overview?view=azloc-2609) supports logical networks, Azure Local VM NICs, and NSGs. A, C, and D are wrong because Arc-managed SDN does not support virtual networks, software load balancers, or gateways.
+
+</KnowledgeCheck>
+
+## Question 6: RDMA protocol selection
+
+A customer has no experience managing Data Center Bridging on top-of-rack switches and wants a simpler RDMA operations model. Which RDMA protocol should the architect prefer if the adapters support it?
+
+- A) RoCE, because it never requires switch configuration.
+- B) iWARP, because it can be simpler to operate and DCB is optional.
+- C) InfiniBand, because Azure Local requires it.
+- D) Guest RDMA, because it replaces host RDMA.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-01-azure-local-advanced/azure-local-networking-advanced/">
+
+B is correct because Microsoft guidance says iWARP uses TCP and DCB is optional, while RoCE requires PFC and ETS. A is wrong because RoCE requires DCB. C is wrong because InfiniBand is not supported with Azure Local. D is wrong because guest RDMA is not the host cluster SMB traffic design.
+
+</KnowledgeCheck>
+
+## Question 7: Arc resource bridge certificate planning
+
+An operations plan keeps Azure Local within the six-month support window but does not track Arc resource bridge certificate validity. What is missing?
+
+- A) Nothing, because the six-month window covers every certificate.
+- B) A one-year solution-update requirement for Arc resource bridge certificates.
+- C) A requirement to rotate all certificates every 30 days.
+- D) A requirement to disable Azure Local VMs before every update.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-01-azure-local-advanced/azure-local-certificate-management/">
+
+B is correct because Azure Local update guidance warns that [Arc resource bridge requires solution updates within one year](https://learn.microsoft.com/azure/azure-local/update/about-updates-23h2?view=azloc-2609#lifecycle-cadence) to keep certificates valid and Azure Local VM functionality working. A is wrong because this is a separate planning clock. C and D are not documented requirements.
+
+</KnowledgeCheck>
+
+## Question 8: Disconnected operations management cluster
+
+A customer plans to run tenant workloads on the disconnected operations management cluster to save hardware. What should you recommend?
+
+- A) Allow it if the cluster has 512 GB of memory per node.
+- B) Allow it only for Microsoft 365 Local.
+- C) Reject it because the management cluster is dedicated to the local control plane and management services.
+- D) Allow it if the deployment uses Azure Site Recovery.
+
+<KnowledgeCheck answer="C" reference="/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/">
+
+C is correct because Microsoft states that production disconnected operations require a dedicated management cluster and that tenant workloads should run on separate Azure Local workload clusters. A, B, and D do not change that separation requirement.
+
+</KnowledgeCheck>
+
+## Question 9: Disconnected operations PKI
+
+For a fully disconnected Azure Local deployment, a team wants to use public CA certificates for appliance endpoints. What is the issue?
+
+- A) Public CA certificates are required for every fully disconnected deployment.
+- B) Public CA certificates are accepted only for AKS.
+- C) Fully disconnected deployments should use a private or internal CA because public CRL and OCSP access is unavailable.
+- D) Certificates are not used in disconnected operations.
+
+<KnowledgeCheck answer="C" reference="/level-300/module-01-azure-local-advanced/azure-local-certificate-management/">
+
+C is correct because disconnected operations PKI guidance says fully disconnected deployments should use a private or internal CA and not use a public or external CA, since the deployment cannot reach public CRL and OCSP services. A and B reverse the guidance. D is wrong because disconnected operations requires certificates for appliance endpoints and identity trust.
+
+</KnowledgeCheck>
+
+## Question 10: AKS under disconnected operations
+
+A proposal says AKS enabled by Arc for Azure Local is generally available under disconnected operations. How should you correct it?
+
+- A) Keep it. AKS under disconnected operations is generally available.
+- B) Mark it as preview under disconnected operations.
+- C) Remove all Kubernetes references because Kubernetes cannot run on Azure Local.
+- D) Mark only Azure Local VMs as preview.
+
+<KnowledgeCheck answer="B" reference="/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/">
+
+B is correct because Microsoft labels [AKS on Azure Local with disconnected operations as preview](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview), and the disconnected operations supported-services table also marks AKS enabled by Arc for Azure Local as preview. A is wrong because it overstates status. C is wrong because Kubernetes is supported in preview under disconnected operations. D is wrong because Azure Local VMs are supported.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [Connected operations overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/azure-local/connected-operations-overview)
+- [Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local](https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/)
+- [Stretched clusters overview](https://learn.microsoft.com/azure/azure-local/concepts/stretched-clusters?view=azloc-2609)
+- [Azure Local rack aware clustering overview](https://learn.microsoft.com/azure/azure-local/concepts/rack-aware-cluster-overview?view=azloc-2609)
+- [Software Defined Networking enabled by Azure Arc on Azure Local](https://learn.microsoft.com/azure/azure-local/concepts/sdn-overview?view=azloc-2609)
+- [Host network requirements for Azure Local disaggregated deployments](https://learn.microsoft.com/azure/azure-local/concepts/host-network-requirements-disaggregated?view=azloc-2609)
+- [About updates for Azure Local](https://learn.microsoft.com/azure/azure-local/update/about-updates-23h2?view=azloc-2609)
+- [Public key infrastructure for disconnected operations on Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-pki?view=azloc-2609)
+- [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2609)
+- [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview)
