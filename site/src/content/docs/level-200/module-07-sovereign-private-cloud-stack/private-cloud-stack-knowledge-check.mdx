@@ -1,0 +1,176 @@
+---
+title: "Knowledge check: Sovereign Private Cloud stack"
+description: "Check your ability to design Azure Local, disconnected operations, Microsoft 365 Local, GitHub Enterprise Local, Foundry Local, and Agentic Retrieval scenarios."
+lastVerified: 2026-10-02
+sidebar:
+  order: 99
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Ten scenario questions cover the module. Pick the single best answer.
+
+## Question 1: Identify the platform layer
+
+A public-sector customer wants Microsoft productivity, developer, and AI workloads to run on infrastructure it owns. Which component is the platform foundation for the Sovereign Private Cloud stack?
+
+- A) Sovereign Control Panel
+- B) Azure Local
+- C) Azure Data Boundary
+- D) Azure Policy only
+
+<KnowledgeCheck answer="B" reference="/level-200/module-07-sovereign-private-cloud-stack/private-cloud-stack-architecture/">
+
+B is correct because Microsoft documents Azure Local as the foundation for Sovereign Private Cloud. A is wrong because Sovereign Control Panel is a public-cloud posture-management capability. C is wrong because the EU Data Boundary is a public-cloud data-boundary commitment. D is wrong because Azure Policy is a governance service, not the infrastructure platform.
+
+</KnowledgeCheck>
+
+## Question 2: Interpret intermittent connectivity
+
+A factory can usually reach Azure, but it has predictable WAN outages during satellite handovers. The workloads must keep running during those outages, and the customer does not have a requirement to eliminate Azure public cloud connectivity. Which model should you start with?
+
+- A) Connected operations with intermittent loss of connectivity
+- B) Disconnected operations with a local control plane appliance
+- C) National Partner Cloud
+- D) Multi-rack only
+
+<KnowledgeCheck answer="A" reference="/level-200/module-07-sovereign-private-cloud-stack/private-cloud-stack-architecture/">
+
+A is correct because Learn describes connected operations as allowing intermittent loss of connectivity and tolerating disconnections up to 30 days without affecting running workloads. B is wrong because disconnected operations add procurement, local control plane, identity, DNS, and PKI requirements for environments that cannot depend on Azure public cloud connectivity. C is wrong because National Partner Cloud is a different deployment model. D is wrong because multi-rack is a deployment type, not a connectivity model.
+
+</KnowledgeCheck>
+
+## Question 3: Separate fleet scale from instance scale
+
+An executive says Azure Local now supports thousands of nodes, so the team plans a single 1000-node Azure Local instance. What should the architect correct?
+
+- A) Thousands of nodes is aggregate sovereign-environment scale, while single-instance maxima remain lower.
+- B) Hyperconverged Azure Local supports 1000 nodes in one instance.
+- C) Disaggregated Azure Local supports 1000 nodes in one instance.
+- D) Multi-rack Azure Local is not allowed in Sovereign Private Cloud.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-07-sovereign-private-cloud-stack/private-cloud-stack-architecture/">
+
+A is correct because the thousands-of-nodes statement applies to large sovereign environments or fleets, not a single instance. B is wrong because hyperconverged deployments support up to 16 machines. C is wrong because disaggregated deployments support up to 64 machines. D is wrong because multi-rack exists for large connected environments, but it has its own instance limit and workload support boundaries.
+
+</KnowledgeCheck>
+
+## Question 4: Place Microsoft 365 Local
+
+A customer wants Microsoft 365 Local and is comparing Azure Local deployment types. Which deployment types are listed as supported for Microsoft 365 Local?
+
+- A) Hyperconverged and disaggregated
+- B) Multi-rack and small form factor
+- C) Small form factor only
+- D) Any Azure Local deployment type
+
+<KnowledgeCheck answer="A" reference="/level-200/module-07-sovereign-private-cloud-stack/m365-local-planning/">
+
+A is correct because the Azure Local deployment-type table lists Microsoft 365 Local as supported on hyperconverged and disaggregated deployments. B and C are wrong because the table does not list Microsoft 365 Local as supported on multi-rack or small form factor. D is wrong because workload support varies by deployment type.
+
+</KnowledgeCheck>
+
+## Question 5: Size the disconnected management cluster
+
+A customer is planning production disconnected operations. Which management-cluster statement matches Microsoft guidance?
+
+- A) Use the same cluster for tenant VMs and the local control plane to reduce cost.
+- B) Deploy a dedicated three-node Azure Local management cluster for the local control plane.
+- C) Use a single-node management cluster for all production deployments.
+- D) Skip the management cluster if the workload cluster has spare capacity.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-07-sovereign-private-cloud-stack/disconnected-operations-design/">
+
+B is correct because production disconnected operations require a dedicated three-node Azure Local management cluster that hosts the local control plane. A and D are wrong because Microsoft says tenant workloads should run on separate workload clusters. C is wrong because single-node management cluster patterns appear only in proof-of-concept options.
+
+</KnowledgeCheck>
+
+## Question 6: Check disconnected eligibility
+
+A small organization has a Microsoft online subscription program agreement, no Microsoft support plan, and a preference to run offline. What should you tell them about Azure Local disconnected operations?
+
+- A) They can enable it directly because all Azure Local customers are eligible.
+- B) They need an eligible Microsoft agreement and Standard or higher support plan, and MOSA is not eligible.
+- C) They only need an Azure Policy assignment.
+- D) They can bypass approval by buying a small form factor appliance.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-07-sovereign-private-cloud-stack/disconnected-operations-design/">
+
+B is correct because Learn lists an eligible Microsoft agreement and Standard or higher support plan as eligibility criteria and says MOSA is not eligible. A is wrong because disconnected operations require procurement eligibility and approval. C is wrong because Azure Policy does not replace the disconnected operations eligibility process. D is wrong because hardware choice does not bypass eligibility.
+
+</KnowledgeCheck>
+
+## Question 7: Classify AKS disconnected status
+
+A proposal says Azure Local disconnected operations are available, so AKS enabled by Arc for Azure Local in disconnected operations is also generally available. What should you change?
+
+- A) Leave it because all supported services have the same status.
+- B) State that AKS enabled by Arc for Azure Local in disconnected operations is preview.
+- C) Remove all Kubernetes support from the design.
+- D) Replace AKS with Microsoft 365 Local.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-07-sovereign-private-cloud-stack/disconnected-operations-design/">
+
+B is correct because the disconnected operations supported-services table labels Azure Kubernetes Service enabled by Arc for Azure Local as preview. A is wrong because service status varies inside the supported-services table. C is wrong because preview does not mean unavailable, but it changes risk and approval language. D is wrong because Microsoft 365 Local is a productivity workload, not a Kubernetes replacement.
+
+</KnowledgeCheck>
+
+## Question 8: Plan PKI for a fully disconnected deployment
+
+A security team wants to use public CA certificates for a fully disconnected operations deployment. What is the best correction?
+
+- A) Use a private or internal CA because fully disconnected deployments cannot depend on public CRL or OCSP endpoints.
+- B) Use self-signed certificates because the environment is offline.
+- C) Use no certificates because traffic stays inside the datacenter.
+- D) Use public CA certificates only for the Azure portal endpoint.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-07-sovereign-private-cloud-stack/disconnected-operations-design/">
+
+A is correct because Learn says fully disconnected deployments should use a private or internal CA and should not use a public or external CA that requires internet access to CRL or OCSP services. B is wrong because self-signed certificates are not supported. C is wrong because the appliance endpoints require PKI. D is wrong because the certificate model covers many ingress and management endpoints, not only the portal.
+
+</KnowledgeCheck>
+
+## Question 9: Distinguish Foundry Local and Agentic Retrieval
+
+A team wants local model inference and also wants indexed private documents, vector search, agents, and an MCP server. Which pairing matches the current Microsoft terminology?
+
+- A) Foundry Local for inference, plus Agentic Retrieval for local RAG and agents
+- B) Edge RAG as the current product name, plus no Foundry Local
+- C) Microsoft 365 Local for model serving, plus GitHub Enterprise Local for vector search
+- D) Azure Data Boundary for inference, plus Azure Policy for agents
+
+<KnowledgeCheck answer="A" reference="/level-200/module-07-sovereign-private-cloud-stack/private-cloud-stack-architecture/">
+
+A is correct because Foundry Local on Azure Local provides local inference, while Agentic Retrieval provides the local knowledge and agentic RAG layer. B is wrong because Microsoft renamed Edge RAG enabled by Azure Arc to Agentic Retrieval in June 2026. C is wrong because Microsoft 365 Local and GitHub Enterprise Local serve productivity and developer-platform scenarios. D is wrong because those are public-cloud boundary and governance concepts, not AI runtime components.
+
+</KnowledgeCheck>
+
+## Question 10: State GitHub Enterprise Local status
+
+A draft architecture says GitHub Enterprise Local is a generally available workload because it appears in the Azure Local deployment-type table. What should the final text say?
+
+- A) GitHub Enterprise Local is preview and runs GitHub Enterprise Server on Azure Local infrastructure.
+- B) GitHub Enterprise Local is retired and should not be mentioned.
+- C) GitHub Enterprise Local is only a cloud-hosted GitHub.com feature.
+- D) GitHub Enterprise Local is the same workload as Microsoft 365 Local.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-07-sovereign-private-cloud-stack/private-cloud-stack-architecture/">
+
+A is correct because the GitHub Enterprise Local Learn page labels the capability as preview and describes it as running GitHub Enterprise Server on Azure Local. B is wrong because the Learn page is current and describes the capability. C is wrong because Learn describes a self-hosted DevOps platform on customer-owned infrastructure. D is wrong because Microsoft 365 Local is the productivity workload stack.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [What is Sovereign Private Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud)
+- [Connected operations overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/azure-local/connected-operations-overview)
+- [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
+- [Dedicated management cluster for disconnected operations](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-control-plane-appliance)
+- [Plan your network for disconnected operations on Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-network)
+- [Public key infrastructure for disconnected operations on Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-pki)
+- [Find your Azure Local deployment type](https://learn.microsoft.com/azure/azure-local/plan/find-your-deployment-type)
+- [What is Microsoft 365 Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview)
+- [What is GitHub Enterprise Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview)
+- [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
+- [What is Agentic Retrieval in Agents and Tools with Foundry Local?](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)
+- [What's new in Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new)
