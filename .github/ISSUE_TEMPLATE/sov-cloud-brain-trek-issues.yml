@@ -44,7 +44,11 @@ body:
         - label: Cloud Models Overview
         - label: Azure Local
         - label: Azure Arc
-        - label: Edge RAG (Retrieval-Augmented Generation)
+        - label: Foundry Local and Agentic Retrieval (formerly Edge RAG)
+        - label: Microsoft 365 Local
+        - label: Sovereign Public Cloud controls
+        - label: Sovereign Private Cloud stack
+        - label: Sovereign Landing Zone
         - label: Security & Compliance
         - label: Cost Optimization
         - label: Multiple/Other

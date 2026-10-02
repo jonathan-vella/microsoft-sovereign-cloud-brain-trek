@@ -42,3 +42,11 @@ updates:
       - "astro"
     commit-message:
       prefix: "chore(deps)"
+    groups:
+      # Astro, Starlight, and the official integrations must be upgraded together
+      # (Starlight pins a minimum Astro version, and Astro majors break integrations).
+      # One grouped PR is buildable; separate PRs are not.
+      astro:
+        patterns:
+          - "astro"
+          - "@astrojs/*"
