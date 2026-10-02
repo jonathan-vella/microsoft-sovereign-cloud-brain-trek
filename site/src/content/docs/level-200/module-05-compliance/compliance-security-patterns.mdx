@@ -1,0 +1,127 @@
+---
+title: "Compliance and security patterns"
+description: "Map sovereign compliance requirements to Microsoft controls, evidence sources, and shared-responsibility boundaries."
+lastVerified: 2026-10-02
+sidebar:
+  order: 1
+---
+
+import DiagramContainer from "~/components/DiagramContainer.astro";
+
+Compliance architecture starts by turning a requirement into a control owner, a technical enforcement point, and an evidence source. Microsoft services provide several control layers, but the customer still owns the workload design, data classification, and authorization package.
+
+<DiagramContainer title="Compliance control map">
+
+![Compliance control map showing requirements, Microsoft tooling, and evidence outputs](/images/level-200/compliance-security-patterns-2026.svg)
+
+</DiagramContainer>
+
+## Start with control ownership
+
+Every requirement should land in one of three responsibility buckets:
+
+| Responsibility | What it means | Example evidence |
+| --- | --- | --- |
+| Microsoft | Microsoft operates and audits the cloud service control. | Audit reports, compliance offerings, FedRAMP package materials, and Service Trust Portal evidence. |
+| Customer | The customer configures, monitors, and documents the control. | Azure Policy assignments, Defender for Cloud recommendations, Microsoft Entra access reviews, SIEM retention settings, and incident response procedures. |
+| Shared | Microsoft supplies a platform control, and the customer must configure or use it correctly. | Customer-managed key configuration, private endpoint use, role assignment review, and workload logging. |
+
+Defender for Cloud and Azure Policy help you measure the customer and shared portions. They are not the full authorization record. Use them as evidence inputs alongside architecture diagrams, operating procedures, risk acceptances, and audit reports.
+
+## Map requirements to Microsoft controls
+
+The table below shows common sovereign requirements and the Microsoft control surfaces that usually support them.
+
+| Requirement | Primary Microsoft control | Design decision |
+| --- | --- | --- |
+| Data residency | Azure regions, the EU Data Boundary, Azure Policy allowed locations, and Azure Local for on-premises placement | Decide whether the requirement is regional, national, tenant-based, or facility-based. Azure services in the EU Data Boundary follow product-specific scope rules for Azure, Dynamics 365, Power Platform, and Microsoft 365 ([Learn](https://learn.microsoft.com/privacy/eudb/eu-data-boundary-learn)). |
+| Encryption at rest | Platform encryption, customer-managed keys, Managed HSM, and Sovereignty Baseline confidential policies | Decide whether Microsoft-managed keys meet the requirement or whether the workload needs customer-managed keys or HSM-backed keys. |
+| Encryption in transit | TLS enforcement, private endpoints, network security groups, Azure Firewall, and Azure Policy encryption-in-transit initiatives | Define the allowed protocols and public-network restrictions before workload teams deploy resources. |
+| Encryption in use | Azure confidential computing, confidential VM SKUs, confidential containers, and Azure Policy encryption-in-use initiatives | Use for workloads that need memory protection or attestation, not as a blanket replacement for data classification. |
+| Regulatory posture | Defender for Cloud Regulatory compliance dashboard | Assign the relevant standards, review recommendations, and export evidence for control implementation work. |
+| Compliance assessment | Microsoft Purview Compliance Manager templates | Use templates to plan improvement actions, assign owners, and track progress. Confirm licensing before assuming a premium template is available. |
+| Identity governance | Microsoft Entra ID, Conditional Access, Privileged Identity Management, access reviews, workload identities, and Entra Agent ID | Use least privilege and separate human, workload, external, and AI agent identities. |
+| Hybrid and edge hardening | Azure Local security defaults, drift control, Arc onboarding, Defender for Cloud, and syslog forwarding | Decide which controls must stay local and which telemetry can flow to Azure or a customer SIEM. |
+
+## Use Defender for Cloud for regulatory posture
+
+Defender for Cloud represents industry standards, regulatory standards, and benchmarks as security standards in the Regulatory compliance dashboard. It continually assesses resources against controls that can be evaluated automatically, and some controls remain unavailable when Defender for Cloud cannot assess them automatically ([Learn](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards)).
+
+Current built-in standards include:
+
+| Standard | Cloud coverage in Defender for Cloud |
+| --- | --- |
+| EU 2022 2555 (NIS2) 2022 | Azure, AWS, and GCP |
+| EU General Data Protection Regulation 2016 679 | Azure, AWS, and GCP |
+| FedRAMP "H" and "M" | Azure |
+| Digital Operational Resilience Act (DORA) | Azure, AWS, and GCP |
+| European Union Artificial Intelligence Act (EU AI Act) | Azure, AWS, and GCP |
+
+Use Defender for Cloud to answer operational questions:
+
+- Which subscriptions or multicloud accounts have the standard assigned?
+- Which assessed controls have failing resources?
+- Which recommendations have resource owners and remediation due dates?
+- Which controls are manual and need nontechnical evidence?
+
+Do not treat a green dashboard as a certification. The dashboard checks implemented controls, not every legal, contractual, or agency-specific obligation.
+
+## Use Azure Policy for guardrails
+
+Azure Policy built-in initiatives can enforce or audit many control decisions. The regulatory compliance category includes DORA 2022 2554, EU 2022/2555 (NIS2) 2022, NIS2, FedRAMP High, FedRAMP Moderate, Sovereignty Baseline Global Policies, and Sovereignty Baseline Confidential Policies ([Learn](https://learn.microsoft.com/azure/governance/policy/samples/built-in-initiatives)).
+
+The Sovereignty category also includes preview initiatives that focus on concrete sovereignty controls:
+
+| Initiative | Purpose |
+| --- | --- |
+| Enforce Data Residency | Restrict or audit locations used by resources. |
+| Enforce Encryption-at-Rest with Customer Managed Keys | Require supported services to use customer-managed keys. |
+| Enforce Encryption-at-Rest with Customer Managed Keys with Azure Key Vault Managed HSM Keys | Require supported services to use Managed HSM-backed keys. |
+| Enforce Encryption-in-Transit across Azure Services, HTTPS | Require HTTPS or SSL settings where supported. |
+| Enforce Encryption-in-Transit across Azure Services, TLS Version | Require current TLS versions where supported. |
+| Enforce Encryption-in-Use across Azure Services | Restrict or audit supported services to Azure Confidential Computing VM SKUs or ACC-backed PaaS services. |
+
+Use deny effects only after you test the initiative against existing deployments. A deny policy without an exception path can block urgent remediation or platform operations. For brownfield estates, start with audit, review false positives, document exemptions, then move selected controls to deny or deployIfNotExists.
+
+## Use Compliance Manager for assessment work
+
+Compliance Manager provides regulatory templates for assessments. The Data Protection Baseline is included, while premium templates and premium AI templates depend on licensing ([Learn](https://learn.microsoft.com/purview/compliance-manager-regulations)). Templates help you assign improvement actions, track implementation status, and store evidence. They do not decide whether your architecture satisfies a regulator.
+
+Use Compliance Manager when the work needs human ownership:
+
+- A privacy team needs GDPR data subject request procedures.
+- A security team needs evidence that privileged access reviews run on schedule.
+- A financial services team needs DORA third-party risk assessment tasks.
+- An AI governance team needs EU AI Act readiness tasks for generative AI interactions.
+
+## Place Sovereign Public Cloud controls by level
+
+Sovereign Public Cloud controls are often described as progressive levels. Treat these as control patterns, not as legal labels.
+
+| Level | Control intent | Typical Azure implementation |
+| --- | --- | --- |
+| Level 1 | Keep resources and data in approved locations. | Allowed locations policy, EU Data Boundary configuration, regional service selection, private endpoints, and resource tagging for classification. |
+| Level 2 | Encrypt data at rest and in transit under approved key and protocol requirements. | Customer-managed keys, Managed HSM where needed, TLS controls, HTTPS-only settings, private connectivity, and Defender for Cloud recommendations. |
+| Level 3 | Protect data while in use for workloads that justify confidential computing. | Confidential VMs, confidential containers, attestation, and encryption-in-use policy initiatives. |
+
+Most workloads need a mix. A citizen portal might require Level 1 data residency and Level 2 key control for most services, while a sensitive analytics enclave might add Level 3 confidential compute for specific processing jobs.
+
+## Design the evidence path
+
+For each requirement, capture the evidence path before implementation starts:
+
+1. Define the control statement in plain language.
+2. Map it to the Microsoft service feature and the customer configuration.
+3. Assign an owner for deployment, monitoring, and exception approval.
+4. Decide which evidence proves the control works.
+5. Decide how often the evidence is refreshed.
+
+For example, a data residency control might use an Azure Policy allowed locations assignment, a Defender for Cloud compliance export, a region inventory query, and a change-management record for exceptions. A GDPR data subject request control might use a written operating procedure, a tested workflow, Purview records, and service-specific export logs.
+
+## Sources
+
+- [Regulatory compliance standards in Microsoft Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards)
+- [Azure Policy built-in initiative definitions](https://learn.microsoft.com/azure/governance/policy/samples/built-in-initiatives)
+- [Learn about regulations in Compliance Manager](https://learn.microsoft.com/purview/compliance-manager-regulations)
+- [What is the EU Data Boundary?](https://learn.microsoft.com/privacy/eudb/eu-data-boundary-learn)
+- [Sovereign design and implementation considerations](https://learn.microsoft.com/azure/azure-sovereign-clouds/sovereignty-implementation)

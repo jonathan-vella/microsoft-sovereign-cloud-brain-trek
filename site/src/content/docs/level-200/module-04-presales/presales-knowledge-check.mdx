@@ -1,0 +1,174 @@
+---
+title: "Knowledge check: Pre-sales for sovereign solutions"
+description: "Check your ability to map discovery answers, design choices, sizing facts, and cost rules for sovereign pre-sales work."
+lastVerified: 2026-10-02
+sidebar:
+  order: 99
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Ten scenario questions test the current Microsoft Sovereign Cloud pre-sales facts in this module. Pick the single best answer.
+
+## Question 1: Deployment model selection
+
+A European public sector customer can use Microsoft-operated cloud services if customer data stays inside the EU Data Boundary and Microsoft support access is monitored. Which model should you qualify first?
+
+- A) Sovereign Public Cloud
+- B) Sovereign Private Cloud
+- C) National Partner Cloud
+- D) Disconnected Azure Local only
+
+<KnowledgeCheck answer="A" reference="/level-200/module-04-presales/customer-discovery/">
+
+A is correct because the stated need is boundary, access, and evidence inside Microsoft-operated services. B is wrong because customer-owned infrastructure has not been required. C is wrong because no national operator requirement was stated. D is wrong because no local control plane or air-gap requirement was stated.
+
+</KnowledgeCheck>
+
+## Question 2: National Partner Clouds
+
+A French ministry says its program requires a national cloud operated through the Bleu model. What should you say in qualification?
+
+- A) Bleu is a current National Partner Cloud path for France, but service scope and rollout need account-team confirmation.
+- B) Bleu is a German cloud operated by an SAP subsidiary.
+- C) Bleu is the default Azure region for all EU Data Boundary workloads.
+- D) Bleu is required whenever GDPR applies.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-04-presales/customer-discovery/">
+
+A is correct because Bleu is the France National Partner Cloud path in Microsoft documentation and still needs rollout and service validation. B describes Delos Cloud Germany, not Bleu. C is wrong because the EU Data Boundary is not a single Azure region. D is wrong because GDPR alone does not require a National Partner Cloud.
+
+</KnowledgeCheck>
+
+## Question 3: Deployment type and workload support
+
+A customer wants Microsoft 365 Local and GitHub Enterprise Local. Which Azure Local deployment types remain valid options?
+
+- A) Hyperconverged or disaggregated
+- B) Multi-rack or small form factor
+- C) Small form factor only
+- D) Any Azure Local deployment type
+
+<KnowledgeCheck answer="A" reference="/level-200/module-04-presales/presales-solution-design/">
+
+A is correct because Microsoft Learn lists Microsoft 365 Local and GitHub Enterprise Local as supported on hyperconverged and disaggregated deployments only. B is wrong because those workloads are not supported on multi-rack or small form factor. C is wrong for the same reason. D ignores the workload support table.
+
+</KnowledgeCheck>
+
+## Question 4: Disconnected operations sizing
+
+A customer needs production disconnected operations for Azure Local. What must be included before workload cluster sizing?
+
+- A) A dedicated three-node Azure Local management cluster isolated from tenant workloads
+- B) A single management VM on the first workload cluster
+- C) A multi-rack deployment, because disconnected operations is a deployment type
+- D) No extra infrastructure if the workload cluster has spare capacity
+
+<KnowledgeCheck answer="A" reference="/level-200/module-04-presales/solution-sizing/">
+
+A is correct because production disconnected operations require a dedicated three-node management cluster for the local control plane. B and D are wrong because the management plane must be isolated from tenant workloads. C is wrong because disconnected operations is a connectivity mode, not a deployment type, and it applies to hyperconverged and disaggregated deployments.
+
+</KnowledgeCheck>
+
+## Question 5: Foundry Local GPU support
+
+A customer plans to reuse AMD GPU servers for Foundry Local on Azure Local. What is the best answer?
+
+- A) Supported, if the AMD GPUs have enough VRAM
+- B) Supported only in disconnected mode
+- C) Not supported by the current Foundry Local on Azure Local GPU requirements
+- D) Supported only for Agentic Retrieval embeddings
+
+<KnowledgeCheck answer="C" reference="/level-200/module-04-presales/solution-sizing/">
+
+C is correct because Foundry Local on Azure Local lists supported NVIDIA DDA-passthrough SKUs and says AMD GPUs are not supported. A is wrong because VRAM alone does not make the GPU supported. B is wrong because disconnected mode does not add AMD support. D is wrong because Agentic Retrieval still depends on supported GPU-enabled VMs for embeddings.
+
+</KnowledgeCheck>
+
+## Question 6: Agentic Retrieval capacity
+
+A customer wants Agentic Retrieval in combined mode and also wants GPT-OSS-20B as the local language model endpoint. Which sizing statement is correct?
+
+- A) Combined mode needs only CPU workers because the language model uses the GPUs.
+- B) Combined mode needs embedding capacity, and GPT-OSS-20B needs a separate GPU endpoint.
+- C) GPT-OSS-20B can share the two embedding GPUs without extra sizing.
+- D) Agentic Retrieval bundles the language model, so no endpoint is required.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-04-presales/solution-sizing/">
+
+B is correct because combined mode has its own CPU and embedding GPU needs, while GPT-OSS-20B through Foundry Local needs a separate language model endpoint GPU. A is wrong because combined mode uses GPUs for embeddings. C is wrong because the language model endpoint runs separately. D is wrong because Agentic Retrieval does not bundle language models.
+
+</KnowledgeCheck>
+
+## Question 7: Microsoft 365 Local reference architecture
+
+In a Microsoft 365 Local sizing conversation, a customer asks whether the Learn example is the required bill of materials. What should you say?
+
+- A) Yes, every deployment must use exactly three plus four plus two servers.
+- B) No, it is an example large-scale connected-mode reference architecture and partner sizing is required.
+- C) Yes, but only for disconnected deployments.
+- D) No, Microsoft 365 Local can run on any Azure Local hardware category.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-04-presales/solution-sizing/">
+
+B is correct because the Learn page presents the three-node plus four single-node plus two single-node layout as an example and says customers should work with an authorized Microsoft partner for sizing. A and C treat the example as mandatory. D is wrong because Microsoft 365 Local must run on Azure Local Premier Solutions through a certified partner.
+
+</KnowledgeCheck>
+
+## Question 8: Azure Hybrid Benefit
+
+A customer wants to apply Azure Hybrid Benefit to a disaggregated Azure Local deployment with external SAN storage. What is the right pre-sales guidance?
+
+- A) It applies because the customer has Windows Server Datacenter with Software Assurance.
+- B) It applies only if the customer also buys an OEM license.
+- C) It does not apply because Azure Hybrid Benefit for Azure Local supports only hyperconverged, cloud-connected, no-external-storage deployments.
+- D) It applies to disconnected deployments only.
+
+<KnowledgeCheck answer="C" reference="/level-200/module-04-presales/cost-estimation/">
+
+C is correct because Azure Hybrid Benefit for Azure Local supports only hyperconverged, cloud-connected, no-external-storage L1 deployments. A is incomplete because license eligibility is necessary but not sufficient. B is wrong because OEM licensing is a separate model. D is wrong because the benefit is not a disconnected-only model.
+
+</KnowledgeCheck>
+
+## Question 9: OEM licensing
+
+A customer proposes mixing OEM-licensed Azure Local nodes and monthly billed nodes in one Azure Local instance to reduce cost. What should you say?
+
+- A) This is supported if the hardware vendor is the same.
+- B) This is supported if each node has at least 16 cores.
+- C) This is not supported because nodes in one Azure Local instance need uniform hardware, operating system, and billing treatment.
+- D) This is recommended for phased deployments.
+
+<KnowledgeCheck answer="C" reference="/level-200/module-04-presales/cost-estimation/">
+
+C is correct because Microsoft documents mixed-node billing as unsupported for OEM licensing. A is wrong because same vendor alone is not enough. B is wrong because the core count does not permit mixed billing. D is wrong because a phased deployment still must respect billing model rules inside each instance.
+
+</KnowledgeCheck>
+
+## Question 10: Arc cost model
+
+A proposal lists Azure Arc control-plane functions as a separate platform license. What correction should you make?
+
+- A) Keep the license line because Arc always bills per server.
+- B) Remove the control-plane license line and list any layered services, such as Defender for Cloud or Azure Monitor, as separately billed.
+- C) Move the Arc license line under hardware.
+- D) Replace it with Windows Server Pay-as-you-go for every server.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-04-presales/cost-estimation/">
+
+B is correct because Azure Arc control-plane functionality is offered at no extra cost, while layered Azure services bill under their own pricing. A and C misstate the Arc pricing model. D is wrong because Windows Server Pay-as-you-go is optional licensing for eligible Windows Server 2025 and later servers, not a replacement for Arc pricing.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [What is Microsoft Sovereign Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/microsoft-sovereign-cloud)
+- [National Partner Clouds](https://learn.microsoft.com/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds)
+- [Find your Azure Local deployment type](https://learn.microsoft.com/azure/azure-local/plan/find-your-deployment-type)
+- [Dedicated management cluster for disconnected operations](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-control-plane-appliance)
+- [Requirements for Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-requirements)
+- [What you need for Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/requirements)
+- [What is Microsoft 365 Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview)
+- [Azure Hybrid Benefit for Azure Local](https://learn.microsoft.com/azure/azure-local/concepts/azure-hybrid-benefit)
+- [OEM license for Azure Local overview](https://learn.microsoft.com/azure/azure-local/oem-license)
+- [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/overview)

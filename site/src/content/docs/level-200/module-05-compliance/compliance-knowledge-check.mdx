@@ -1,0 +1,172 @@
+---
+title: "Knowledge check: Compliance and security"
+description: "Test current compliance and security design choices for sovereign solutions, including GDPR, FedRAMP, NIS2, DORA, and EU AI Act tooling."
+lastVerified: 2026-10-02
+sidebar:
+  order: 99
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Ten scenario questions covering compliance and security design for sovereign solutions. Pick the single best answer.
+
+## Question 1: Regulatory posture dashboard
+
+A security architect needs to monitor NIS2, GDPR, FedRAMP, DORA, and EU AI Act posture across assigned cloud scopes. Which Microsoft service provides the Regulatory compliance dashboard with built-in standards for these frameworks?
+
+- A) Azure Copilot
+- B) Microsoft Defender for Cloud
+- C) Azure Local security defaults
+- D) Microsoft Entra Domain Services
+
+<KnowledgeCheck answer="B" reference="/level-200/module-05-compliance/compliance-security-patterns/">
+
+B is correct because Defender for Cloud exposes regulatory standards in its Regulatory compliance dashboard, including NIS2, GDPR, FedRAMP "H" and "M", DORA, and the EU AI Act. A is wrong because Azure Copilot is an assistant, not the compliance dashboard. C is wrong because Azure Local security defaults harden hosts. D is wrong because Domain Services provides managed domain services, not regulatory posture assessment.
+
+</KnowledgeCheck>
+
+## Question 2: Sovereign control levels
+
+A public-sector workload must stay in approved regions, use customer-managed keys for storage services, and add confidential computing only for one sensitive analytics job. Which design best matches the Sovereign Public Cloud level pattern?
+
+- A) Apply Level 3 controls to every service, even if the service does not process sensitive data.
+- B) Use Level 1 for data residency, Level 2 for encryption at rest and in transit, and Level 3 only where encryption in use is justified.
+- C) Use only a Compliance Manager assessment because technical controls are not needed.
+- D) Use only a SIEM because residency and encryption controls are operational logging concerns.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-05-compliance/compliance-security-patterns/">
+
+B is correct because the level pattern is progressive: residency, then encryption at rest and in transit, then encryption in use for workloads that require confidential computing. A is wrong because blanket confidential computing can add cost and constraints without a requirement. C is wrong because assessments track work but do not enforce technical controls. D is wrong because a SIEM records events and does not enforce residency or encryption.
+
+</KnowledgeCheck>
+
+## Question 3: Azure Local host hardening
+
+An Azure Local design review finds that host baseline settings may drift after deployment. Which control should the architect plan around?
+
+- A) Disable the security baseline so operators can change protected settings freely.
+- B) Use drift control and document any approved exception before changing protected settings.
+- C) Replace Azure Local host controls with guest VM antivirus only.
+- D) Rely on Azure Copilot to restore settings automatically.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-05-compliance/security-hardening/">
+
+B is correct because Azure Local supports drift control for protected security settings. If a protected setting must change, the exception should be documented and drift control restored after the change. A is wrong because it removes the baseline protection. C is wrong because guest controls do not harden the host. D is wrong because Azure Copilot is not a configuration enforcement mechanism and is not available in Azure Government.
+
+</KnowledgeCheck>
+
+## Question 4: Defender for Servers on non-Azure machines
+
+A customer wants full Defender for Servers Plan 2 features for on-premises servers. What should the design include?
+
+- A) Directly onboard the servers to Defender for Cloud only.
+- B) Onboard the servers as Azure Arc VMs, then enable the Defender for Servers plan.
+- C) Use only syslog forwarding from Azure Local hosts.
+- D) Use only Microsoft Entra Conditional Access policies.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-05-compliance/security-hardening/">
+
+B is correct because Microsoft recommends onboarding on-premises machines as Azure Arc VMs to use all Defender for Servers features. A is wrong because direct onboarding does not provide full access to Plan 2 features. C is wrong because syslog forwarding sends events but does not provide the Defender for Servers Plan 2 capability set. D is wrong because Conditional Access protects access decisions, not server posture and threat protection.
+
+</KnowledgeCheck>
+
+## Question 5: GDPR roles
+
+A customer builds an Azure application that processes citizen data. The customer decides why the data is collected and how it is used. Microsoft processes Customer Data to provide the Online Service under the customer's documented instructions. Which GDPR role mapping fits this scenario?
+
+- A) Microsoft is the controller and the customer is the processor.
+- B) The customer is the controller and Microsoft is the processor.
+- C) Both parties are always joint controllers for all Azure workloads.
+- D) Neither party has GDPR duties because the workload runs in Azure.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-05-compliance/gdpr-implementation/">
+
+B is correct because the customer determines the purposes and means of processing, while Microsoft processes Customer Data on behalf of the customer according to documented instructions. A reverses the roles. C is wrong because joint-controller status is not the default for customer Azure workloads. D is wrong because cloud use does not remove GDPR duties.
+
+</KnowledgeCheck>
+
+## Question 6: GDPR DSR workflow
+
+A privacy team is building a Data Subject Request workflow. Which set matches the six DSR activities listed in Microsoft GDPR guidance?
+
+- A) Discover, classify, encrypt, monitor, alert, archive
+- B) Discovery, Access, Rectification, Restriction, Export, Deletion
+- C) Register, approve, deploy, attest, report, renew
+- D) Detect, contain, eradicate, recover, notify, close
+
+<KnowledgeCheck answer="B" reference="/level-200/module-05-compliance/gdpr-implementation/">
+
+B is correct because Microsoft GDPR guidance lists those six DSR activities. A mixes security and data governance tasks. C describes a deployment or authorization process. D describes incident response phases, not data subject request handling.
+
+</KnowledgeCheck>
+
+## Question 7: FedRAMP region scope
+
+A federal agency wants to use Azure commercial FedRAMP High inherited evidence. Which Azure commercial regions are in scope for the Azure FedRAMP High P-ATO?
+
+- A) All Azure public regions worldwide
+- B) All Azure public regions in the United States
+- C) Only US Gov Arizona, US Gov Texas, and US Gov Virginia
+- D) Only US DoD Central and US DoD East
+
+<KnowledgeCheck answer="B" reference="/level-200/module-05-compliance/fedramp-compliance/">
+
+B is correct because Microsoft states that all Azure public regions in the United States are in scope for the Azure FedRAMP High P-ATO. A is wrong because public regions outside the United States are not formally authorized by the FedRAMP JAB. C describes Azure Government FedRAMP High P-ATO scope. D refers to DoD regions, not the Azure commercial scope.
+
+</KnowledgeCheck>
+
+## Question 8: Azure Government structure
+
+A solution needs Azure Government FedRAMP High P-ATO scope and availability zone support. Which statement is correct?
+
+- A) Azure Government has three regions, and only US Gov Virginia is documented with availability zone support.
+- B) Azure Government has two regions, and both have availability zones.
+- C) Azure Government Secret is the same boundary as US Gov Virginia.
+- D) Azure Government Top Secret is part of the Azure commercial FedRAMP High P-ATO.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-05-compliance/fedramp-compliance/">
+
+A is correct because Microsoft lists US Gov Arizona, US Gov Texas, and US Gov Virginia, with availability zone support shown for US Gov Virginia. B is wrong because the listed Azure Government regions are three, not two. C is wrong because Azure Government Secret is a separate classified offering. D is wrong because Azure Government Top Secret is not part of the commercial Azure FedRAMP boundary.
+
+</KnowledgeCheck>
+
+## Question 9: DORA update
+
+A financial services customer asks what changed in Microsoft's DORA status. Which statement is supported by Microsoft Learn?
+
+- A) DORA starts January 17, 2025, and Microsoft Ireland Operations Limited was identified as a Critical ICT Third-Party Provider on the ESA list published November 18, 2025.
+- B) DORA applies only to US federal agencies.
+- C) DORA has no Microsoft tooling support.
+- D) DORA is a replacement for GDPR.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-05-compliance/eu-regulations/">
+
+A is correct because Microsoft Learn documents the January 17, 2025 DORA readiness date and the November 18, 2025 ESA CTPP designation list naming Microsoft Ireland Operations Limited. B is wrong because DORA is an EU financial-sector regulation. C is wrong because Microsoft documents Defender for Cloud, Compliance Manager, Defender for Cloud Apps, and other resources for DORA work. D is wrong because DORA addresses digital operational resilience and ICT third-party risk, not personal data protection as a replacement for GDPR.
+
+</KnowledgeCheck>
+
+## Question 10: EU AI Act tooling
+
+An AI governance team wants Microsoft-documented readiness tooling for the EU AI Act. Which option should the architect recommend?
+
+- A) State EU AI Act implementation dates and use them as the control plan.
+- B) Use Compliance Manager premium AI templates, Defender for Cloud's EU AI Act standard, and Azure AI Foundry evaluation sync where supported.
+- C) Use only FedRAMP High because it includes all EU AI Act requirements.
+- D) Treat the template as a certification that proves legal compliance.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-05-compliance/eu-regulations/">
+
+B is correct because Microsoft documents EU AI Act tooling in Compliance Manager, Defender for Cloud, and Azure AI Foundry evaluation sync. A is wrong because the question asks for readiness tooling, and dates alone are not a control plan. C is wrong because FedRAMP High is a US government cloud authorization framework. D is wrong because assessment templates help track readiness work, but they are not legal certifications.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [Regulatory compliance standards in Microsoft Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards)
+- [Manage security defaults for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/manage-secure-baseline)
+- [Plan Defender for Servers deployment](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-servers-introduction)
+- [General Data Protection Regulation](https://learn.microsoft.com/compliance/regulatory/gdpr)
+- [Federal Risk and Authorization Management Program](https://learn.microsoft.com/azure/compliance/offerings/offering-fedramp)
+- [What is Azure Government?](https://learn.microsoft.com/azure/azure-government/documentation-government-welcome)
+- [What is DORA?](https://learn.microsoft.com/compliance/dora/dora-what-is-dora)
+- [Build and manage assessments in Compliance Manager](https://learn.microsoft.com/purview/compliance-manager-assessments)

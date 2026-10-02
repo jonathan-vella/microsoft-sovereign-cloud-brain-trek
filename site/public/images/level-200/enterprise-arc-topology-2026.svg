@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 540">
+  <title id="title">Enterprise Azure Arc topology</title>
+  <desc id="desc">Azure landing zone governance connects to subscriptions that host Arc-enabled servers, Kubernetes clusters, private cloud VMs, Arc gateway, and Private Link connectivity.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #1f1f1f; }
+      .title { font-size: 24px; font-weight: 600; fill: #0f3a5f; }
+      .label { font-size: 15px; font-weight: 600; }
+      .small { font-size: 12px; fill: #3b3b3b; }
+      .box { fill: #f7fafd; stroke: #0f6cbd; stroke-width: 2; rx: 14; }
+      .azure { fill: #e6f2fd; stroke: #0f6cbd; stroke-width: 2; rx: 14; }
+      .green { fill: #e8f5e9; stroke: #107c10; stroke-width: 2; rx: 14; }
+      .orange { fill: #fff4e5; stroke: #ff8c00; stroke-width: 2; rx: 14; }
+      .line { stroke: #5c6f82; stroke-width: 2.5; fill: none; }
+      .dash { stroke: #5c6f82; stroke-width: 2.5; stroke-dasharray: 8 7; fill: none; }
+      .pill { fill: #ffffff; stroke: #9fb7cf; stroke-width: 1.5; rx: 10; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5c6f82" />
+    </marker>
+  </defs>
+
+  <rect width="960" height="540" fill="#ffffff" />
+  <text x="48" y="48" class="title">Enterprise Azure Arc topology</text>
+  <text x="48" y="74" class="small">Use the Azure landing zone as the control boundary for hybrid and multicloud resources.</text>
+
+  <rect x="48" y="104" width="864" height="104" class="azure" />
+  <text x="78" y="138" class="label">Azure landing zone governance</text>
+  <rect x="78" y="156" width="156" height="32" class="pill" />
+  <text x="96" y="177" class="small">Management groups</text>
+  <rect x="260" y="156" width="116" height="32" class="pill" />
+  <text x="285" y="177" class="small">Azure Policy</text>
+  <rect x="402" y="156" width="96" height="32" class="pill" />
+  <text x="430" y="177" class="small">RBAC</text>
+  <rect x="524" y="156" width="112" height="32" class="pill" />
+  <text x="557" y="177" class="small">Tags</text>
+  <rect x="662" y="156" width="170" height="32" class="pill" />
+  <text x="681" y="177" class="small">Cost management</text>
+
+  <rect x="70" y="260" width="238" height="188" class="box" />
+  <text x="98" y="294" class="label">Arc resource groups</text>
+  <text x="98" y="326" class="small">Arc-enabled servers</text>
+  <text x="98" y="352" class="small">Arc-enabled Kubernetes</text>
+  <text x="98" y="378" class="small">SQL MI enabled by Arc</text>
+  <text x="98" y="404" class="small">Owner and cost tags</text>
+
+  <rect x="362" y="260" width="236" height="188" class="green" />
+  <text x="392" y="294" class="label">Private cloud operations</text>
+  <text x="392" y="326" class="small">Azure Local</text>
+  <text x="392" y="352" class="small">VMware vSphere 7.0 or 8.0</text>
+  <text x="392" y="378" class="small">SCVMM</text>
+  <text x="392" y="404" class="small">Arc resource bridge</text>
+
+  <rect x="652" y="260" width="238" height="188" class="orange" />
+  <text x="680" y="294" class="label">Connectivity choices</text>
+  <text x="680" y="326" class="small">Arc gateway</text>
+  <text x="680" y="352" class="small">Reduced public FQDNs</text>
+  <text x="680" y="378" class="small">Private Link for servers</text>
+  <text x="680" y="404" class="small">ExpressRoute or VPN path</text>
+
+  <path d="M 189 208 L 189 254" class="line" marker-end="url(#arrow)" />
+  <path d="M 480 208 L 480 254" class="line" marker-end="url(#arrow)" />
+  <path d="M 771 208 L 771 254" class="line" marker-end="url(#arrow)" />
+  <path d="M 308 354 L 356 354" class="dash" marker-end="url(#arrow)" />
+  <path d="M 598 354 L 646 354" class="dash" marker-end="url(#arrow)" />
+
+  <rect x="70" y="472" width="820" height="38" fill="#f7fafd" stroke="#d5e6f7" rx="12" />
+  <text x="92" y="496" class="small">Review per workload: policy scope, tags, RBAC, connectivity model, extension validation, data ingestion, and ownership handoff.</text>
+</svg>

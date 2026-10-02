@@ -1,0 +1,81 @@
+---
+title: "Azure Local advanced networking"
+description: "Plan Azure Local network intents, RDMA storage traffic, switched and switchless patterns, SDN enabled by Arc, and Arc gateway."
+lastVerified: 2026-10-02
+sidebar:
+  order: 4
+---
+
+import DiagramContainer from "~/components/DiagramContainer.astro";
+
+Azure Local networking must separate management, compute, and storage needs while keeping configuration consistent across nodes. Network ATC, supported storage connectivity, SDN enabled by Arc, and Arc gateway define the current planning surface.
+
+<DiagramContainer title="SDN enabled by Arc">
+
+![SDN enabled by Arc: Azure portal, CLI, and ARM templates manage logical networks and NSGs through Azure Arc, and Network Controller runs as a Failover Cluster service that applies them to Azure Local VM NICs](/images/level-200/sdn-architecture-2026.svg)
+
+</DiagramContainer>
+
+## Network intents with Network ATC
+
+Network ATC uses intents to define how Azure Local should use physical adapters. An intent has a friendly name, one or more physical adapters, and one or more intent types. Supported intent types include management, compute, storage, and stretch ([Learn](https://learn.microsoft.com/azure/azure-local/concepts/network-atc-overview#terminology)).
+
+| Intent type | Purpose | Planning note |
+| --- | --- | --- |
+| Management | Host management traffic. | Only one management intent is supported. |
+| Compute | VM and workload traffic. | Multiple compute intents can exist if adapter capacity supports them. |
+| Storage | SMB traffic, including Storage Spaces Direct. | Only one storage intent is supported. Network ATC configures storage adapters, VLANs, DCB, virtual adapters where required, and IP addresses. |
+| Stretch | Similar to storage but for storage replica networks. | RDMA cannot be used with stretch intents. |
+
+For Azure Local, Network ATC checks network symmetry across nodes, including adapter make, model, and speed. This matters because inconsistent host networking is a common cause of deployment and operations problems.
+
+## Switched, switchless, and RDMA choices
+
+Azure Local network planning separates physical connectivity from logical traffic use. Switched storage uses top-of-rack or other data center switches for storage traffic. Switchless storage connects nodes directly for storage and can reduce switch dependency at small scale.
+
+Use the Microsoft-supported pattern:
+
+- Switchless storage can be used only where the selected deployment and network pattern allow it.
+- Current SDN guidance supports switched or switchless storage for up to four-node deployments in several patterns.
+- Deployments with five or more nodes require switched storage connectivity in those patterns ([Learn](https://learn.microsoft.com/azure/azure-local/concepts/sdn-overview#supported-networking-patterns-for-sdn-enabled-by-arc)).
+
+RDMA is a storage-network design decision, not a generic workload accelerator. Network ATC configures Data Center Bridging, storage adapter properties, virtual adapters where needed, VLANs, and storage IP addresses for the storage intent ([Learn](https://learn.microsoft.com/azure/azure-local/concepts/network-atc-overview#features)). Validate RDMA adapter support, cabling, and switch configuration with the OEM.
+
+## Common intent patterns
+
+The current cloud deployment network-planning guidance asks you to determine network traffic intents. The design choice depends on node count, physical ports, storage connectivity, and whether compute traffic needs its own adapter set.
+
+| Pattern | When to use | Constraint to verify |
+| --- | --- | --- |
+| Group all traffic | Small designs with enough adapter bandwidth and a switched storage network. | This pattern requires a physical switch for storage traffic when the same ports carry compute traffic. |
+| Group management and compute, separate storage | Common design when VM traffic and host management share adapters, and storage needs its own intent. | Supported with switched or switchless storage up to four nodes in current SDN guidance. |
+| Separate management, compute, and storage | Designs with enough physical ports to isolate all traffic types. | Do not exceed supported intent combinations. More than three intents are not supported for SDN enabled by Arc. |
+
+Do not treat VLANs as a substitute for physical capacity. VLANs separate traffic logically. They do not add bandwidth, lower latency, or create adapter redundancy by themselves.
+
+## SDN enabled by Azure Arc
+
+Software Defined Networking enabled by Azure Arc is available with Azure Local 2506 and OS version 26100.xxxx or later ([Learn](https://learn.microsoft.com/azure/azure-local/concepts/sdn-overview#about-sdn-management-on-azure-local)). In this model, Network Controller runs as a Failover Cluster service rather than as a VM. It integrates with the Azure Arc control plane so you can manage logical networks and NSGs through Azure.
+
+Use SDN enabled by Arc when you want Azure portal, Azure CLI, and ARM template management for logical networks, VM NICs, and NSGs on Azure Local VMs. Keep management methods consistent. If SDN is enabled by Arc, manage it through Azure interfaces, not with Windows Admin Center or SDN Express scripts.
+
+Unsupported scenarios for SDN enabled by Arc include virtual networks, software load balancers, VPN, L3 and GRE gateways, mixed Arc and on-premises SDN management, multicast workloads, and NSG association with the logical network used for AKS workload deployment or AKS workload VM NICs ([Learn](https://learn.microsoft.com/azure/azure-local/concepts/sdn-overview#unsupported-scenarios-for-sdn-enabled-by-arc)).
+
+## Arc gateway
+
+Arc gateway for Azure Local reduces the number of outbound endpoints required to deploy and manage Azure Local. You can enable it on new deployments running Azure Local 2506 or later ([Learn](https://learn.microsoft.com/azure/azure-local/deploy/deployment-azure-arc-gateway-overview)). Arc gateway for Azure Local infrastructure and Azure Local VMs is generally available, while Arc gateway for AKS on Azure Local is still preview.
+
+The architecture adds two main components:
+
+- An Arc gateway resource in Azure that acts as a common entry point for Azure traffic.
+- Arc proxy on each Azure Local machine, running as the Azure Arc Proxy service and forwarding traffic for Arc agents and extensions.
+
+Plan the gateway before deployment. Microsoft documents that you cannot enable Arc gateway after deployment ([Learn](https://learn.microsoft.com/azure/azure-local/deploy/deployment-azure-arc-gateway-overview#supported-and-unsupported-scenarios)). Also confirm whether TLS-terminating proxies are in the path, because Arc gateway does not support them.
+
+## Sources
+
+- [Network ATC overview](https://learn.microsoft.com/azure/azure-local/concepts/network-atc-overview)
+- [Network considerations for cloud deployments of Azure Local](https://learn.microsoft.com/azure/azure-local/plan/cloud-deployment-network-considerations)
+- [Azure Local storage switchless architecture](https://learn.microsoft.com/azure/architecture/hybrid/azure-local-switchless)
+- [Software Defined Networking enabled by Azure Arc on Azure Local](https://learn.microsoft.com/azure/azure-local/concepts/sdn-overview)
+- [About Azure Arc gateway for Azure Local](https://learn.microsoft.com/azure/azure-local/deploy/deployment-azure-arc-gateway-overview)

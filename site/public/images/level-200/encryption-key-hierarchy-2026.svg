@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 640">
+  <title id="title">Encryption key hierarchy for sovereign workloads</title>
+  <desc id="desc">A layered diagram showing Managed HSM and optional external HSM protecting key-encryption keys, data-encryption keys, Azure services, attestation, and evidence logs.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7fafd; }
+      .panel { fill: #ffffff; stroke: #b8d9f5; stroke-width: 2; }
+      .primary { fill: #0f6cbd; }
+      .secondary { fill: #e6f2fd; stroke: #2886de; stroke-width: 2; }
+      .success { fill: #e7f6e7; stroke: #107c10; stroke-width: 2; }
+      .warning { fill: #fff4e5; stroke: #ff8c00; stroke-width: 2; }
+      .text { fill: #1f1f1f; font-family: "Segoe UI", Arial, sans-serif; }
+      .muted { fill: #4b5563; font-family: "Segoe UI", Arial, sans-serif; }
+      .label { fill: #ffffff; font-family: "Segoe UI", Arial, sans-serif; font-weight: 600; }
+      .arrow { stroke: #0f6cbd; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #ff8c00; stroke-width: 3; fill: none; stroke-dasharray: 8 8; marker-end: url(#arrow-orange); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#0f6cbd" />
+    </marker>
+    <marker id="arrow-orange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#ff8c00" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="960" height="640" rx="28" />
+  <text class="text" x="48" y="54" font-size="30" font-weight="700">Encryption key hierarchy for sovereign workloads</text>
+  <text class="muted" x="48" y="84" font-size="16">Use Managed HSM by default. Use external keys only when a mandate requires key custody outside Microsoft infrastructure.</text>
+
+  <rect class="panel" x="56" y="120" width="360" height="150" rx="18" />
+  <rect class="primary" x="80" y="144" width="140" height="34" rx="8" />
+  <text class="label" x="96" y="167" font-size="15">Managed HSM</text>
+  <text class="text" x="80" y="205" font-size="17" font-weight="600">FIPS 140-3 Level 3</text>
+  <text class="muted" x="80" y="232" font-size="14">Single-tenant HSM isolation</text>
+  <text class="muted" x="80" y="254" font-size="14">Customer-controlled security domain</text>
+
+  <rect class="panel" x="544" y="120" width="360" height="150" rx="18" />
+  <rect class="warning" x="568" y="144" width="164" height="34" rx="8" />
+  <text class="text" x="586" y="167" font-size="15" font-weight="600">External HSM</text>
+  <text class="text" x="568" y="205" font-size="17" font-weight="600">EKM preview</text>
+  <text class="muted" x="568" y="232" font-size="14">Customer-run EKM Proxy</text>
+  <text class="muted" x="568" y="254" font-size="14">wrapKey and unwrapKey only</text>
+
+  <rect class="secondary" x="190" y="322" width="580" height="86" rx="16" />
+  <text class="text" x="480" y="356" font-size="20" font-weight="700" text-anchor="middle">Key-encryption keys</text>
+  <text class="muted" x="480" y="384" font-size="15" text-anchor="middle">Wrap and unwrap data-encryption keys for supported Azure services.</text>
+
+  <rect class="success" x="64" y="472" width="264" height="100" rx="16" />
+  <text class="text" x="88" y="506" font-size="18" font-weight="700">Storage and data</text>
+  <text class="muted" x="88" y="532" font-size="14">DEKs encrypt disks, blobs,</text><text class="muted" x="88" y="552" font-size="14">databases, and backups.</text>
+
+  <rect class="success" x="348" y="472" width="264" height="100" rx="16" />
+  <text class="text" x="372" y="506" font-size="18" font-weight="700">Confidential compute</text>
+  <text class="muted" x="372" y="532" font-size="14">Secure Key Release gives keys</text><text class="muted" x="372" y="552" font-size="14">only to an attested TEE.</text>
+
+  <rect class="success" x="632" y="472" width="264" height="100" rx="16" />
+  <text class="text" x="656" y="506" font-size="18" font-weight="700">Evidence</text>
+  <text class="muted" x="656" y="532" font-size="14">Azure Monitor, proxy logs,</text><text class="muted" x="656" y="552" font-size="14">and policy compliance.</text>
+
+  <path class="arrow" d="M236 270 C286 292 340 306 396 322" />
+  <path class="dash" d="M724 270 C674 292 620 306 564 322" />
+  <path class="arrow" d="M398 408 C336 436 280 452 216 472" />
+  <path class="arrow" d="M480 408 L480 472" />
+  <path class="arrow" d="M562 408 C624 436 680 452 744 472" />
+
+  <text class="muted" x="90" y="612" font-size="13">Solid path: Managed HSM key sovereignty. Dashed path: external key management preview with customer-operated proxy and HSM.</text>
+</svg>

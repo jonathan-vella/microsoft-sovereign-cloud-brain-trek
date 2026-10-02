@@ -1,0 +1,100 @@
+---
+title: "Encryption key management"
+description: "Choose Managed HSM, customer-managed keys, External Key Management, and Secure Key Release patterns for sovereign workloads."
+lastVerified: 2026-10-02
+sidebar:
+  order: 3
+---
+
+import DiagramContainer from "~/components/DiagramContainer.astro";
+
+Encryption key management determines who can use cryptographic keys, where those keys live, and what happens when a workload needs to decrypt data. In Sovereign Public Cloud designs, the key choice must match the requirement. Managed HSM key sovereignty is the default high-assurance pattern. Managed HSM External Key Management is a preview pattern for rare mandates that require the key-encryption key to stay outside Microsoft infrastructure.
+
+<DiagramContainer title="Encryption key hierarchy" defaultOpen>
+
+![Encryption key hierarchy for sovereign workloads showing Managed HSM, optional external HSM, key-encryption keys, data-encryption keys, protected services, attestation, and evidence logs.](/images/level-200/encryption-key-hierarchy-2026.svg)
+
+</DiagramContainer>
+
+## Key hierarchy concepts
+
+Most cloud encryption systems use a key hierarchy:
+
+| Layer | Purpose | Sovereign design question |
+|---|---|---|
+| Hardware root of trust | Protects keys in an HSM or trusted execution environment. | Is the hardware single-tenant, certified, and under the right operational boundary? |
+| Key-encryption key | Wraps or unwraps lower-level data-encryption keys. | Does the KEK live in Managed HSM, or must it remain in an external HSM? |
+| Data-encryption key | Encrypts a disk, object, database, or service data set. | Which Azure service generates and rotates the DEK, and does it support CMK? |
+| Release or unwrap policy | Decides when key material can be used. | Is authorization enough, or must the workload prove attestation claims before the key is released? |
+| Evidence | Logs key use, failures, policy state, and exceptions. | Can auditors trace key access and failed operations without manual reconstruction? |
+
+Use customer-managed keys when a service supports them and the customer must control the key used for service encryption. Use Azure Key Vault Managed HSM when the key needs single-tenant HSM isolation and a customer-controlled security domain.
+
+## Managed HSM key sovereignty
+
+Azure Key Vault Managed HSM is a fully managed, highly available, single-tenant HSM service that uses FIPS 140-3 Level 3 validated HSMs ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/overview)). Microsoft Sovereign Cloud guidance describes Managed HSM key sovereignty as full customer control through FIPS 140-3 Level 3 validation, single-tenant isolation, and customer-controlled security domains ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management)).
+
+Managed HSM is the right first choice for most sovereign workloads because it keeps keys in Azure while preserving strong customer control. It avoids the network dependency and operational burden of an external HSM. It also keeps the Managed HSM service-level agreement for Managed HSM keys, unlike external keys.
+
+Plan the following items:
+
+- One or more Managed HSM instances in the required Azure regions. Managed HSM documentation states that it does not store or process customer data outside the region where the customer deploys the instance ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/overview)).
+- Administrative separation. Managed HSM has a local RBAC model, and subscription or resource group administrators cannot override designated HSM cluster administrators.
+- Key lifecycle. Define generation, import, rotation, disablement, soft-delete, purge protection, and break-glass rules.
+- Service support. Not all Azure services support customer-managed keys from Managed HSM. Check the service before standardizing.
+- Logging. Use Azure Monitor and retain key operation logs for the audit period.
+
+## Managed HSM External Key Management
+
+Managed HSM External Key Management is in preview ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)). With EKM, the key-encryption key stays in a customer-owned, customer-operated HSM outside Microsoft infrastructure. Managed HSM delegates `wrapKey` and `unwrapKey` operations to a customer-run EKM Proxy.
+
+The preview has strict boundaries. Microsoft Learn states that EKM:
+
+- Requires enablement by the Microsoft account team, an assigned Microsoft account manager, and USD 10 million or greater in committed annual Azure revenue ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)).
+- Supports only `wrapKey` and `unwrapKey`. Sign, verify, encrypt, decrypt, Secure Key Release, and Confidential VM launch scenarios are out of scope for external keys.
+- Has no SLA for external keys, the EKM Proxy, or the external HSM.
+- Is available in all Azure public regions at preview launch, with Azure Government and Azure China out of scope.
+- Does not support Managed HSM backup and restore operations for external keys.
+
+Microsoft lists the following HSM vendors as supporting the preview API specification: Entrust, Eviden, Fortanix, Futurex, Securosys, Thales, and Utimaco ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)). Microsoft does not ship or run the proxy. The customer or vendor owns the proxy, external HSM, network path, monitoring, scaling, availability, and support.
+
+Use EKM only when the requirement says the key-encryption key must never reside in Microsoft infrastructure. If the requirement is customer control, auditability, FIPS 140-3 Level 3 validation, or single-tenant HSM isolation, Managed HSM key sovereignty is usually the better pattern.
+
+## Customer-managed keys
+
+Customer-managed keys give the customer control over keys used by Azure services that support CMK. In a Level 2 Sovereign Public Cloud design, CMK is usually the point where encryption at rest moves from a platform default to a customer-governed control.
+
+For each service, verify:
+
+- Whether the service supports CMK.
+- Whether it supports Key Vault, Key Vault Premium, Managed HSM, or only a subset.
+- Whether all data paths use CMK or whether the service documents temporary data, metadata, diagnostics, or backups that use platform-managed keys.
+- How key rotation affects service availability.
+- What happens if the key is disabled, deleted, expired, or unreachable.
+
+Do not write "CMK enabled" as a single control in the design. Name the service, key store, key type, key scope, rotation process, and failure behavior.
+
+## Secure Key Release
+
+Secure Key Release is a feature of Azure Key Vault Premium and Managed HSM that can release an HSM-protected key only to a workload that presents a Microsoft Azure Attestation token satisfying the key release policy ([Learn](https://learn.microsoft.com/azure/confidential-computing/concept-skr-attestation)). It is commonly used with confidential computing because the attestation token can prove the workload is running in an expected trusted execution environment.
+
+SKR is different from EKM. SKR releases an exportable key based on attestation claims. EKM delegates wrap and unwrap operations to an external HSM and does not support SKR during the preview. Use SKR when the design requires decryption only inside an attested workload. Use EKM when the mandate requires the KEK to stay outside Microsoft infrastructure.
+
+## Decision table
+
+| Requirement | Recommended pattern | Avoid |
+|---|---|---|
+| Standard service encryption with Microsoft-managed operations | Platform-managed keys | Adding CMK without an owner or rotation process |
+| Customer controls keys for supported Azure services | Customer-managed keys in Key Vault or Managed HSM | Assuming every service supports the same CMK behavior |
+| High-assurance HSM isolation and customer-controlled security domain | Managed HSM key sovereignty | External HSM designs without a legal or contractual mandate |
+| KEK must physically remain outside Microsoft infrastructure | Managed HSM External Key Management preview | Treating EKM as a general upgrade to Managed HSM |
+| Decrypt only after workload attestation | Secure Key Release with Key Vault Premium or Managed HSM | Using authorization alone when runtime integrity is the control goal |
+
+## Sources
+
+- [What is External Key Management?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management)
+- [What is Azure Key Vault Managed HSM?](https://learn.microsoft.com/azure/key-vault/managed-hsm/overview)
+- [What is Managed HSM external key management? (preview)](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)
+- [Controls and principles in Sovereign Public Cloud](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-controls-principles)
+- [Secure Key Release feature with AKV and Azure Confidential Computing](https://learn.microsoft.com/azure/confidential-computing/concept-skr-attestation)
+- [Services that support customer-managed keys](https://learn.microsoft.com/azure/security/fundamentals/encryption-customer-managed-keys-support)

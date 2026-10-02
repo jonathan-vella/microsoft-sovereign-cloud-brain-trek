@@ -1,0 +1,126 @@
+---
+title: "Arc enterprise patterns"
+description: "Design enterprise Azure Arc onboarding with landing zones, RBAC, tags, connectivity choices, resource bridge, and Kubernetes validation."
+lastVerified: 2026-10-02
+sidebar:
+  order: 3
+---
+
+import DiagramContainer from "~/components/DiagramContainer.astro";
+
+Enterprise Azure Arc design starts with the Azure landing zone, not with an onboarding script. The goal is to make hybrid and multicloud resources land in predictable subscriptions, inherit governance, use the right connectivity model, and give application teams enough self-service without weakening operations.
+
+<DiagramContainer title="Enterprise Azure Arc topology">
+
+![Enterprise Azure Arc topology showing management groups, subscriptions, Arc gateway, Private Link, and hybrid resource groups](/images/level-200/enterprise-arc-topology-2026.svg)
+
+</DiagramContainer>
+
+## Start from a landing zone
+
+Microsoft's Cloud Adoption Framework article for hybrid and multicloud adoption with Azure Arc says organizations should establish a structured Azure environment before governing hybrid and multicloud resources. It calls out Azure landing zones, resource organization, governance, monitoring, and security as the foundation for Arc resources ([Learn](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone)).
+
+That CAF page is deprecated and scheduled for removal on October 30, 2026, so treat it as document lifecycle context, not as a product retirement ([Learn](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone)). Use its patterns while checking current Arc product pages for status, limits, and requirements.
+
+At minimum, an Arc landing zone needs:
+
+| Decision | Enterprise pattern |
+| --- | --- |
+| Management group placement | Put Arc subscriptions under the same policy hierarchy as comparable Azure workloads. Separate production, regulated, and non-production scopes where policy differs. |
+| Subscription model | Use subscriptions to separate platform ownership, billing, and blast radius. Avoid one large shared subscription for every Arc estate. |
+| Resource groups | Group by workload or operations team, not by onboarding wave. An onboarding wave ends, but ownership remains. |
+| Regions | Choose Azure regions that support the Arc resource type and related services. For resource bridge, both the bridge and private cloud capability must support the region. |
+| Naming | Use names that expose resource type, location, workload, and environment without relying on portal filters. |
+
+## Use RBAC for onboarding and operations separation
+
+Azure Arc-enabled servers expose Azure roles for onboarding and resource administration. The Cloud Adoption Framework cost governance page recommends least privilege with the Azure Connected Machine Onboarding role for onboarding and Azure Connected Machine Resource Administrator for administrators who need to manage connected machines ([Learn](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-cost-governance)).
+
+Separate these duties:
+
+| Duty | Role pattern |
+| --- | --- |
+| Onboarding | Limited platform identity that can register machines into approved subscriptions and resource groups. |
+| Operations | Team roles that can manage extensions, tags, and machine lifecycle after onboarding. |
+| Security | Reader or security roles that can view compliance, Defender, and policy state without broad write access. |
+| Finance | Cost Management access and tag reporting, not infrastructure write access. |
+
+Use Microsoft Entra ID groups, not direct user assignments. Give automation identities only the scopes they need. For onboarding at scale, a service principal can register machines, but the credential lifecycle must be managed like production infrastructure.
+
+## Make tags useful before chargeback
+
+Arc brings external assets into Azure Resource Manager, so tags become the shared vocabulary for inventory, policy targeting, cost analysis, and incident routing. Define a small required tag set and enforce it with Azure Policy.
+
+| Tag | Purpose |
+| --- | --- |
+| `Owner` | The accountable service or team. |
+| `Environment` | Production, non-production, development, test, or lab. |
+| `CostCenter` | Chargeback or showback key. |
+| `DataClassification` | Sensitivity and retention planning. |
+| `OperationsTeam` | Incident routing and patch ownership. |
+| `SovereigntyScope` | Optional value for regulated workloads that need a specific control set. |
+
+Do not overload one tag with several meanings. If `Environment=Prod-EU-Secure`, policy authors and cost analysts must parse strings. Use separate fields.
+
+## Choose Private Link or Arc gateway intentionally
+
+Private Link and Arc gateway solve different network problems.
+
+| Connectivity option | Use when | Watch for |
+| --- | --- | --- |
+| Arc gateway | You need to reduce public outbound FQDNs and audit Arc agent traffic. Arc-enabled servers can use seven required FQDNs, and Arc-enabled Kubernetes can use nine for the gateway path ([Learn](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway), [Learn](https://learn.microsoft.com/azure/azure-arc/kubernetes/arc-gateway-simplify-networking)). | It is public cloud connectivity, has five gateway resources per subscription, and is not recommended for TLS inspection scenarios. |
+| Private Link for Arc-enabled servers | You need servers to connect to Azure Arc over ExpressRoute or site-to-site VPN by using private endpoints instead of public networks ([Learn](https://learn.microsoft.com/azure/azure-arc/servers/private-link-security)). | It requires private endpoint, DNS, network routing, and separate Private Link configuration for other Azure services. |
+
+In many estates, Arc gateway is the faster path for controlled internet egress, and Private Link is the stricter path for private network routing. If a customer needs Arc VM management through resource bridge, remember that Arc resource bridge currently does not support Private Link ([Learn](https://learn.microsoft.com/azure/azure-arc/resource-bridge/overview#private-link-support)).
+
+## Use resource bridge where Azure must manage private cloud VMs
+
+Use Azure Arc resource bridge when the enterprise wants Azure portal, CLI, SDK, or infrastructure-as-code operations for VMs on Azure Local, VMware vSphere, or SCVMM. Resource bridge supports Azure Local, VMware vSphere 7.0 and 8.0, and SCVMM ([Learn](https://learn.microsoft.com/azure/azure-arc/resource-bridge/overview#private-cloud-environments)).
+
+Plan one operating model for every bridge:
+
+| Operating concern | Pattern |
+| --- | --- |
+| Ownership | Assign the bridge to the platform team that owns the private cloud fabric. |
+| Upgrade | Track the appliance version and upgrade at least every six months, staying within latest plus n-3 versions ([Learn](https://learn.microsoft.com/azure/azure-arc/resource-bridge/overview#supported-versions)). |
+| Monitoring | Monitor appliance health and certificate status. Treat a broken bridge as loss of Azure management, not loss of the local workload. |
+| Region | Validate that the selected Azure region supports both the resource bridge and the target Arc-enabled private cloud. |
+
+Do not deploy resource bridge only for inventory. Arc-enabled servers can provide inventory without a private cloud VM control plane.
+
+## Validate Kubernetes distributions by scenario
+
+Azure Arc-enabled Kubernetes works with any CNCF-certified Kubernetes cluster, even if the distribution is not listed on the validation page ([Learn](https://learn.microsoft.com/azure/azure-arc/kubernetes/validation-program)). That broad compatibility does not mean every extension has the same validation evidence.
+
+For enterprise platform standards, capture two levels:
+
+| Level | What to record |
+| --- | --- |
+| Arc connection support | Whether the Kubernetes distribution is CNCF-certified and can connect to Azure Arc. |
+| Extension validation | Whether the specific extension has conformance validation on that distribution. For Azure Policy, Microsoft lists conformance validation for AKS on Azure Local, Azure Red Hat OpenShift, Kind, Rancher Government RKE2, Minikube, K3s, AKS Edge, and VMware Tanzu Kubernetes Grid ([Learn](https://learn.microsoft.com/azure/azure-arc/kubernetes/extensions-release#azure-policy)). |
+
+This distinction helps architecture review boards avoid false confidence. A cluster can be connectable, while a specific compliance or security extension still needs validation or a pilot.
+
+## Sequence onboarding waves
+
+Use waves that reduce risk rather than waves that only follow datacenter geography.
+
+1. Connect a pilot set of servers and clusters in a non-production subscription.
+2. Apply tags, RBAC, and audit-only policy assignments.
+3. Add Arc gateway or Private Link based on the target network design.
+4. Add required extensions, Update Manager, and machine configuration.
+5. Move to production waves by workload owner, not by machine count alone.
+6. Review cost and policy reporting before enabling deny or autocorrect controls.
+
+Each wave should end with an operational handoff. The owner should know how the asset is patched, who gets alerts, where costs appear, which policies apply, and how exceptions expire.
+
+## Sources
+
+- [Implement hybrid and multicloud adoption with Azure Arc and Azure landing zones](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone)
+- [Cost governance for Azure Arc-enabled servers](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-cost-governance)
+- [Simplify network configuration requirements with Azure Arc gateway](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway)
+- [Simplify network configuration requirements with Azure Arc Gateway](https://learn.microsoft.com/azure/azure-arc/kubernetes/arc-gateway-simplify-networking)
+- [Use Azure Private Link to securely connect servers to Azure Arc](https://learn.microsoft.com/azure/azure-arc/servers/private-link-security)
+- [What is Azure Arc resource bridge?](https://learn.microsoft.com/azure/azure-arc/resource-bridge/overview)
+- [Azure Arc-enabled Kubernetes validation](https://learn.microsoft.com/azure/azure-arc/kubernetes/validation-program)
+- [Available extensions for Azure Arc-enabled Kubernetes clusters](https://learn.microsoft.com/azure/azure-arc/kubernetes/extensions-release#azure-policy)

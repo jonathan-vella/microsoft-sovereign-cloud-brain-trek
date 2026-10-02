@@ -1,0 +1,172 @@
+---
+title: "Knowledge check: Sovereign Public Cloud controls"
+description: "Ten scenario questions covering EU Data Boundary scope, Data Guardian, Customer Lockbox, EKM, confidential computing, and policy."
+lastVerified: 2026-10-02
+sidebar:
+  order: 99
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Answer these 10 scenario questions to check whether you can select and explain Sovereign Public Cloud controls.
+
+## Question 1: EU Data Boundary scope
+
+A customer deploys Azure regional services in West Europe and asks whether those Azure resources can be in scope for the EU Data Boundary. Which answer is best?
+
+- A) Yes, regional Azure services are in scope when deployed in an EU Data Boundary region.
+- B) Yes, but only if the customer also buys Microsoft 365 Multi-Geo.
+- C) No, Azure is not included in the EU Data Boundary.
+- D) No, only Dynamics 365 and Power Platform are included.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-06-sovereign-public-cloud-controls/sovereign-public-cloud-controls/">
+
+A is correct because Azure regional services are in scope when the customer deploys them in an EU Data Boundary region. B is wrong because Microsoft 365 Multi-Geo customers are excluded from Microsoft 365 EU Data Boundary scope, and Multi-Geo is not an Azure regional service requirement. C and D are wrong because Azure is included in the EU Data Boundary documentation.
+
+</KnowledgeCheck>
+
+## Question 2: Dynamics 365 and Power Platform scope
+
+A Power Platform tenant is provisioned in the EU and EFTA Macro Region Geography, but the customer's billing address is outside the EU Data Boundary countries. Is that enough for EU Data Boundary scope?
+
+- A) Yes, tenant geography alone is sufficient.
+- B) No, both the tenant and environments must be in the EU and EFTA Macro Region Geography, and the billing address must be in an EU Data Boundary country.
+- C) Yes, if Customer Lockbox is enabled.
+- D) No, Power Platform is not covered by the EU Data Boundary.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-06-sovereign-public-cloud-controls/sovereign-public-cloud-controls/">
+
+B is correct because Dynamics 365 and Power Platform require both the EU and EFTA Macro Region Geography and an EU Data Boundary country billing address. A is incomplete. C confuses access approval with data boundary scope. D is wrong because Power Platform is included.
+
+</KnowledgeCheck>
+
+## Question 3: Data Guardian versus Customer Lockbox
+
+A regulator asks for evidence that Microsoft remote access to in-scope European systems is monitored by European-resident Microsoft personnel and written to a tamper-evident ledger. Which control best fits?
+
+- A) Customer Lockbox
+- B) Data Guardian
+- C) Managed HSM External Key Management
+- D) Secure Key Release
+
+<KnowledgeCheck answer="B" reference="/level-200/module-06-sovereign-public-cloud-controls/data-guardian-and-lockbox/">
+
+B is correct because Data Guardian provides European-resident oversight of Microsoft remote access and tamper-evident logging. A is wrong because Customer Lockbox is a customer approval workflow for eligible customer data access requests. C is about external key custody. D is about attestation-gated key release.
+
+</KnowledgeCheck>
+
+## Question 4: Customer Lockbox coverage
+
+A solution architect writes, "Customer Lockbox covers every Azure service and every Power Platform feature." What should you change?
+
+- A) Keep the statement. Customer Lockbox is universal.
+- B) Replace it with a service-specific statement because Azure support is service-listed, Data Box Lockbox is preview, and Power Platform and Dynamics 365 have carve-outs.
+- C) Replace it with "Customer Lockbox only works for Data Box."
+- D) Replace it with "Customer Lockbox removes the need for Data Guardian."
+
+<KnowledgeCheck answer="B" reference="/level-200/module-06-sovereign-public-cloud-controls/data-guardian-and-lockbox/">
+
+B is correct because Customer Lockbox coverage is service-specific and has documented carve-outs. A is wrong because coverage is not universal. C is wrong because many Azure services are supported. D is wrong because Lockbox and Data Guardian address different access controls.
+
+</KnowledgeCheck>
+
+## Question 5: Managed HSM or EKM
+
+A bank needs customer-controlled, single-tenant HSM-backed keys with FIPS 140-3 Level 3 validation, but it does not have a legal requirement that the key-encryption key stay outside Microsoft infrastructure. Which pattern is the best first choice?
+
+- A) Managed HSM key sovereignty
+- B) Managed HSM External Key Management
+- C) Platform-managed keys only
+- D) No encryption at rest
+
+<KnowledgeCheck answer="A" reference="/level-200/module-06-sovereign-public-cloud-controls/encryption-key-management/">
+
+A is correct because Managed HSM provides single-tenant HSM isolation, FIPS 140-3 Level 3 validation, and customer-controlled security domains. B is wrong because EKM is a preview, gated, last-resort pattern for mandates that require the key-encryption key outside Microsoft infrastructure. C and D do not meet the stated control requirement.
+
+</KnowledgeCheck>
+
+## Question 6: EKM preview limits
+
+A customer wants Managed HSM External Key Management for signing operations and Secure Key Release. What should you tell them?
+
+- A) EKM preview supports sign, verify, and Secure Key Release.
+- B) EKM preview supports only `wrapKey` and `unwrapKey`; sign, verify, encrypt, decrypt, Secure Key Release, and Confidential VM launch scenarios are out of scope.
+- C) EKM preview is available in Azure Government.
+- D) EKM preview has the same SLA as Managed HSM keys.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-06-sovereign-public-cloud-controls/encryption-key-management/">
+
+B is correct because the EKM preview supports only wrap and unwrap operations and excludes SKR and signing scenarios. A states unsupported operations. C is wrong because Azure Government and Azure China are out of scope for the preview. D is wrong because external keys have no SLA.
+
+</KnowledgeCheck>
+
+## Question 7: Level 3 control
+
+A health research workload requires protection of data while it is processed in memory. Which Sovereign Public Cloud control level applies?
+
+- A) Level 1 data residency only
+- B) Level 2 encryption at rest and in transit only
+- C) Level 3 encryption in use through confidential computing
+- D) Customer Lockbox only
+
+<KnowledgeCheck answer="C" reference="/level-200/module-06-sovereign-public-cloud-controls/confidential-computing/">
+
+C is correct because Level 3 maps to encryption in use through confidential computing. A controls location. B controls storage and network traffic. D controls eligible customer data access requests and does not protect memory.
+
+</KnowledgeCheck>
+
+## Question 8: Confidential containers on ACI
+
+A team wants Linux container groups with remote guest attestation and a policy that defines which components are allowed to run. Which Azure option best matches?
+
+- A) Confidential containers on Azure Container Instances with CCE policies
+- B) Azure Front Door
+- C) Managed HSM External Key Management
+- D) Customer Lockbox
+
+<KnowledgeCheck answer="A" reference="/level-200/module-06-sovereign-public-cloud-controls/confidential-computing/">
+
+A is correct because confidential containers on Azure Container Instances support remote guest attestation and confidential computing enforcement policies. B is a global networking service. C is key custody for wrap and unwrap operations. D is an access approval workflow.
+
+</KnowledgeCheck>
+
+## Question 9: Sovereign Control Panel evidence
+
+An auditor asks whether the posture view is only based on Azure Policy aliases. Which answer is correct for Sovereign Control Panel?
+
+- A) SCP only reads Azure Policy aliases.
+- B) SCP combines Azure Policy evaluations with direct resource configuration reads.
+- C) SCP replaces all Azure Policy assignments.
+- D) SCP is the old name for Regulated Environment Management.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-06-sovereign-public-cloud-controls/sovereign-control-panel-and-policy/">
+
+B is correct because SCP combines Azure Policy results with direct resource configuration reads. A is too narrow. C is wrong because Azure Policy still enforces and audits controls. D reverses the rename. Regulated Environment Management is now Sovereign Control Panel.
+
+</KnowledgeCheck>
+
+## Question 10: Azure Policy initiative names
+
+A design document references a built-in initiative named "Sovereignty Confidential Computing." What should you do?
+
+- A) Keep it because it is the official name.
+- B) Replace it with the exact relevant built-in initiative name, such as "[Preview]: Enforce Encryption-in-Use across Azure Services," because there is no built-in initiative named "Sovereignty Confidential Computing."
+- C) Replace it with "Sovereignty Baseline - Global Policies" for every confidential workload.
+- D) Remove Azure Policy from the design.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-06-sovereign-public-cloud-controls/sovereign-control-panel-and-policy/">
+
+B is correct because the module uses the exact names from the Azure Policy built-in initiatives page. A is wrong because that name is not present. C may be a valid baseline for region controls, but it is not a confidential computing initiative. D removes a required enforcement and evidence mechanism.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [What is the EU Data Boundary?](https://learn.microsoft.com/privacy/eudb/eu-data-boundary-learn)
+- [What is Data Guardian?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/data-guardian)
+- [Customer Lockbox for Microsoft Azure](https://learn.microsoft.com/azure/security/fundamentals/customer-lockbox-overview)
+- [What is Managed HSM external key management? (preview)](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)
+- [Azure confidential computing offerings](https://learn.microsoft.com/azure/confidential-computing/overview-azure-products)
+- [Confidential containers on Azure Container Instances](https://learn.microsoft.com/azure/container-instances/container-instances-confidential-overview)
+- [Sovereign Control Panel (SCP)](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/sovereign-control-panel)
+- [Azure Policy built-in initiative definitions](https://learn.microsoft.com/azure/governance/policy/samples/built-in-initiatives)
