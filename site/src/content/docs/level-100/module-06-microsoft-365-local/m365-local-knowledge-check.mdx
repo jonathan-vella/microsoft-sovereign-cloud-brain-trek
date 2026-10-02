@@ -1,0 +1,169 @@
+---
+title: "Microsoft 365 Local knowledge check"
+description: "Check your understanding of Microsoft 365 Local scope, support dates, Azure Local deployment types, and operating modes."
+lastVerified: 2026-10-02
+sidebar:
+  order: 6.3
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Use these questions to check the Microsoft 365 Local facts that matter for sovereignty planning.
+
+### Question 1: Included workloads
+
+Which workload set does Microsoft Learn list for Microsoft 365 Local?
+
+- A) Exchange Server, SharePoint Server, and Skype for Business Server
+- B) Exchange Online, SharePoint Online, and Microsoft Teams
+- C) Microsoft Teams, Viva, and OneDrive
+- D) Project Server, Visio, and Power BI
+
+<KnowledgeCheck answer="A" reference="/level-100/module-06-microsoft-365-local/m365-local-overview/">
+
+A is correct because Microsoft Learn defines Microsoft 365 Local as Exchange Server, SharePoint Server, and Skype for Business Server on Azure Local infrastructure. B and C are cloud service groupings that Learn does not list as Microsoft 365 Local workloads. D is wrong because Project Server is not listed as a Microsoft 365 Local workload.
+
+</KnowledgeCheck>
+
+### Question 2: Infrastructure base
+
+Where does Microsoft 365 Local run?
+
+- A) On customer-owned Azure Local infrastructure
+- B) Only in a Microsoft-operated public cloud region
+- C) On any Windows Server host selected by the customer
+- D) Only on small form factor Azure Local appliances
+
+<KnowledgeCheck answer="A" reference="/level-100/module-06-microsoft-365-local/m365-local-overview/">
+
+A is correct because Microsoft Learn says Microsoft 365 Local runs on Azure Local infrastructure that is customer-owned and managed. B is wrong because the workloads run locally. C is wrong because Learn requires Azure Local, not arbitrary Windows Server hosts. D is wrong because the deployment-type guide does not support Microsoft 365 Local on small form factor deployments.
+
+</KnowledgeCheck>
+
+### Question 3: Support commitment
+
+Which date is the earliest possible end of support date for Exchange Server Subscription Edition, SharePoint Server Subscription Edition, and Skype for Business Server Subscription Edition?
+
+- A) December 31, 2031
+- B) December 31, 2035
+- C) February 24, 2026
+- D) No support date is listed for these products
+
+<KnowledgeCheck answer="B" reference="/level-100/module-06-microsoft-365-local/m365-local-overview/">
+
+B is correct because the Microsoft lifecycle page lists December 31, 2035 as the earliest possible end of support date for those three Subscription Edition products. A applies to Project Server Subscription Edition on the lifecycle page, but Project Server is not listed as part of Microsoft 365 Local. C is the date of the Microsoft blog that announced disconnected availability. D is wrong because the lifecycle page lists dates.
+
+</KnowledgeCheck>
+
+### Question 4: Product boundary
+
+What is the safest way to describe what Microsoft 365 Local is not?
+
+- A) It is not the full Microsoft 365 cloud service suite running locally.
+- B) It is not a Microsoft product.
+- C) It is not supported beyond 2031.
+- D) It is not related to Azure Local.
+
+<KnowledgeCheck answer="A" reference="/level-100/module-06-microsoft-365-local/m365-local-overview/">
+
+A is correct because Learn defines Microsoft 365 Local by three server workloads and does not list Microsoft Teams or the broader Microsoft 365 cloud service suite as included workloads. B is wrong because Microsoft Learn documents Microsoft 365 Local as a current Microsoft offering. C is wrong because the three listed Subscription Edition products have an earliest possible end of support date of December 31, 2035. D is wrong because Microsoft 365 Local runs on Azure Local infrastructure.
+
+</KnowledgeCheck>
+
+### Question 5: Certified delivery
+
+How must customers deploy Microsoft 365 Local?
+
+- A) Through a Microsoft 365 Local solution partner certified by Microsoft
+- B) By downloading a self-service installer from Microsoft Learn
+- C) By opening a support ticket after installing any hypervisor
+- D) By using only Microsoft Teams admin center
+
+<KnowledgeCheck answer="A" reference="/level-100/module-06-microsoft-365-local/m365-local-architecture/">
+
+A is correct because Microsoft Learn says customers must deploy Microsoft 365 Local through a Microsoft 365 Local solution partner certified by Microsoft. B is wrong because Learn describes partner-led deployment phases, not a self-service installer. C is wrong because Microsoft 365 Local requires Azure Local and certified delivery. D is wrong because Teams admin center is not the deployment path described by Learn.
+
+</KnowledgeCheck>
+
+### Question 6: Azure Local deployment type
+
+Which Azure Local deployment types support Microsoft 365 Local?
+
+- A) Hyperconverged and disaggregated
+- B) Multi-rack and small form factor
+- C) Small form factor only
+- D) Multi-rack only
+
+<KnowledgeCheck answer="A" reference="/level-100/module-06-microsoft-365-local/m365-local-architecture/">
+
+A is correct because the Azure Local deployment-type guide lists Microsoft 365 Local as supported on hyperconverged and disaggregated deployments. B, C, and D are wrong because that guide lists Microsoft 365 Local as not supported on multi-rack and small form factor deployments.
+
+</KnowledgeCheck>
+
+### Question 7: Connected operation
+
+In a connected Microsoft 365 Local architecture, what is Azure's role?
+
+- A) Azure provides the cloud-connected control plane for management services.
+- B) Azure stores all mailbox and document data by default.
+- C) Azure replaces the local Azure Local infrastructure.
+- D) Azure runs Microsoft Teams locally.
+
+<KnowledgeCheck answer="A" reference="/level-100/module-06-microsoft-365-local/m365-local-architecture/">
+
+A is correct because the Learn overview describes connected mode as using Azure services for monitoring, updates, policy enforcement, and centralized management. B is wrong because Microsoft 365 Local workloads run on customer-owned Azure Local infrastructure. C is wrong because Azure Local remains the infrastructure base. D is wrong because Learn does not list Teams as a Microsoft 365 Local workload.
+
+</KnowledgeCheck>
+
+### Question 8: Disconnected operation
+
+What changes in disconnected operation?
+
+- A) The control plane runs locally in the customer's environment.
+- B) The workloads move to Exchange Online and SharePoint Online.
+- C) Microsoft 365 Local stops supporting Exchange Server.
+- D) Multi-rack becomes the only supported Azure Local deployment type.
+
+<KnowledgeCheck answer="A" reference="/level-100/module-06-microsoft-365-local/m365-local-architecture/">
+
+A is correct because Azure Local disconnected operations move the control plane into the customer's environment. B is wrong because Microsoft 365 Local remains local server workloads. C is wrong because Exchange Server is one of the listed workloads. D is wrong because Microsoft 365 Local is supported on hyperconverged and disaggregated deployments, not multi-rack.
+
+</KnowledgeCheck>
+
+### Question 9: Disconnected availability
+
+Which statement matches Microsoft sources about disconnected operation?
+
+- A) Azure Local disconnected operations and Microsoft 365 Local disconnected were described as now available in the February 24, 2026 Microsoft blog.
+- B) Disconnected operation is available only for Project Server.
+- C) Disconnected operation requires Microsoft Teams.
+- D) Disconnected operation is a replacement for all disaster recovery planning.
+
+<KnowledgeCheck answer="A" reference="/level-100/module-06-microsoft-365-local/m365-local-architecture/">
+
+A is correct because the February 24, 2026 Microsoft blog says Azure Local disconnected operations and Microsoft 365 Local disconnected are now available. B is wrong because Project Server is not part of the Microsoft 365 Local workload list. C is wrong because Learn does not list Teams as a Microsoft 365 Local workload. D is wrong because the Learn page describes a fallback pattern, not a complete disaster recovery plan.
+
+</KnowledgeCheck>
+
+### Question 10: Business continuity
+
+How does Microsoft Learn describe the Microsoft 365 Local business-continuity pattern?
+
+- A) As a fallback environment that can continue locally during crisis scenarios if public cloud operation is unavailable
+- B) As automatic replication of every Microsoft 365 cloud service into Azure Local
+- C) As a way to remove the need for backups and identity planning
+- D) As a multi-rack-only design for hundreds of machines
+
+<KnowledgeCheck answer="A" reference="/level-100/module-06-microsoft-365-local/m365-local-architecture/">
+
+A is correct because Learn describes Microsoft 365 Local as a fallback environment for disaster recovery and business continuity. B is wrong because Learn does not describe full Microsoft 365 cloud service replication. C is wrong because the fallback pattern does not replace detailed recovery, backup, or identity planning. D is wrong because Microsoft 365 Local is not supported on multi-rack deployments.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [What is Microsoft 365 Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview)
+- [Additional support for select server products following Modern Lifecycle Policy](https://learn.microsoft.com/lifecycle/additional-support-server-modern-lifecycle-policy)
+- [Find your Azure Local deployment type](https://learn.microsoft.com/azure/azure-local/plan/find-your-deployment-type)
+- [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
+- [Microsoft Sovereign Cloud adds governance, productivity and support for large AI models, securely running even when completely disconnected](https://blogs.microsoft.com/blog/2026/02/24/microsoft-sovereign-cloud-adds-governance-productivity-and-support-for-large-ai-models-securely-running-even-when-completely-disconnected/)
