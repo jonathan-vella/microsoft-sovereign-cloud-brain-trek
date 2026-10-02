@@ -1,24 +1,21 @@
 ---
 title: Microsoft Sovereign Cloud Brain Trek
-description: Master Sovereign Cloud, Azure Local, and Edge AI Technologies — a comprehensive learning journey for architects and solutions professionals across Microsoft sovereign and edge offerings.
+description: Training for architects and solutions professionals on Microsoft Sovereign Cloud, Azure Local, Azure Arc, Foundry Local, and Zero Trust, from prerequisites to production design.
+lastVerified: 2026-10-02
 template: splash
 hero:
-  tagline: Sovereign Cloud · Azure Local · Edge RAG · Zero Trust — built for architects and solutions professionals.
+  tagline: Microsoft Sovereign Cloud training for architects and solutions professionals, from cloud basics to production designs on Azure Local.
   image:
-    file: ../../../public/images/hero/sovereign-cloud-hero.svg
-    alt: Sovereign cloud, edge, and datacenter architecture with a zero-trust shield
+    file: ../../../public/images/hero/sovereign-cloud-hero-2026.svg
+    alt: Sovereign Public Cloud and an Azure Local site connected through Azure Arc, with a Sovereign Private Cloud datacenter, Foundry Local, and Zero Trust.
   actions:
-    # Hero action `link` values are emitted verbatim into the rendered
-    # <a href>; Starlight does NOT auto-prepend the site `base` path for
-    # hero actions (unlike Markdown body links). Hard-code the full path
-    # so each splash CTA lands on the right Starlight route.
+    # Root-relative like page links; src/route-data.ts adds the base path.
     - text: Start at Level 50
-      link: /microsoft-sovereign-cloud-brain-trek/level-50/
+      link: /level-50/
       icon: right-arrow
       variant: primary
-    - text: Browse modules
-      link: /microsoft-sovereign-cloud-brain-trek/level-100/
-      icon: open-book
+    - text: Read the introduction
+      link: /introduction/
       variant: secondary
     - text: View on GitHub
       link: https://github.com/jonathan-vella/microsoft-sovereign-cloud-brain-trek
@@ -26,44 +23,37 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid } from "@astrojs/starlight/components";
+import LearningPath from "../../components/LearningPath.astro";
+import TopicLink from "../../components/TopicLink.astro";
 
-<CardGrid>
-  <Card title="Level 50 — Prerequisites" icon="approve-check-circle">
-    Foundation knowledge: cloud, networking, security, and identity primers
-    before the sovereign cloud journey begins.
-  </Card>
-  <Card title="Level 100 — Foundational" icon="open-book">
-    Digital sovereignty, Azure Local, Azure Arc, and Edge RAG — the core
-    concepts every architect needs.
-  </Card>
-  <Card title="Level 200 — Intermediate" icon="puzzle">
-    Architecture deep dives, advanced Arc patterns, compliance, and
-    enterprise design.
-  </Card>
-  <Card title="Level 300 — Advanced" icon="rocket">
-    Production patterns: zero trust, multi-site, air-gapped, MLOps, and
-    disaster recovery.
-  </Card>
-</CardGrid>
+<LearningPath />
 
-## What you'll learn
+## New in this edition
 
-<CardGrid>
-  <Card title="Digital sovereignty" icon="seti:lock">
-    Data residency, regulatory boundaries, and the technical controls that
-    keep regulated workloads compliant in the cloud.
-  </Card>
-  <Card title="Azure Local & Arc" icon="seti:azure">
-    Deploy and operate hybrid infrastructure that spans Azure regions and
-    on-premises edge sites with a single control plane.
-  </Card>
-  <Card title="Edge RAG patterns" icon="seti:db">
-    Architect retrieval-augmented generation pipelines that keep enterprise
-    knowledge on-prem while still leveraging Azure OpenAI.
-  </Card>
-  <Card title="Zero Trust" icon="seti:shield">
-    Identity, network segmentation, and continuous verification patterns
-    applied to sovereign and edge deployments.
-  </Card>
-</CardGrid>
+<ul class="topic-list not-content" role="list">
+  <TopicLink title="Foundry Local" meta="Levels 100 to 300" href="/level-100/module-05-foundry-local/" fallback="/level-100/module-05-edge-rag/">
+    Run AI models on Azure Local with Foundry Local, and build retrieval apps with Agentic Retrieval (formerly Edge RAG). Both are in preview.
+  </TopicLink>
+  <TopicLink title="Microsoft 365 Local" meta="Level 100" href="/level-100/module-06-microsoft-365-local/" fallback="/level-100/module-02-cloud-models/sovereign-private-cloud/">
+    Exchange Server, SharePoint Server, and Skype for Business Server on Azure Local, connected or disconnected.
+  </TopicLink>
+  <TopicLink title="Sovereign Public Cloud controls" meta="Level 200" href="/level-200/module-06-sovereign-public-cloud-controls/" fallback="/level-100/module-02-cloud-models/sovereign-public-cloud/">
+    Data Guardian, external key management, confidential computing, and the Sovereign Control Panel.
+  </TopicLink>
+  <TopicLink title="Sovereign Private Cloud stack" meta="Level 200" href="/level-200/module-07-sovereign-private-cloud-stack/" fallback="/level-100/module-02-cloud-models/sovereign-private-cloud/">
+    Azure Local, Microsoft 365 Local, Foundry Local, and GitHub Enterprise Local planned as one stack.
+  </TopicLink>
+  <TopicLink title="Sovereign Landing Zone" meta="Level 300" href="/level-300/module-02-sovereign-landing-zone/" fallback="/level-300/sovereign-landing-zone/">
+    The Azure landing zone variant for sovereignty: policy initiatives, management groups, and the Bicep and Terraform accelerators.
+  </TopicLink>
+</ul>
+
+## Sources
+
+- [What is Microsoft Sovereign Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/microsoft-sovereign-cloud)
+- [Sovereign Private Cloud overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud)
+- [Foundry Local on Azure Local overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
+- [Agentic Retrieval in Agents and Tools with Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)
+- [Microsoft 365 Local overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview)
+- [Sovereign Public Cloud capabilities](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/sovereign-public-cloud-capabilities)
+- [Sovereign Landing Zone overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-landing-zone)
