@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" role="img" aria-labelledby="fl-title fl-desc">
+  <title id="fl-title">Foundry Local and Agentic Retrieval on Azure Local</title>
+  <desc id="fl-desc">Azure Arc manages an Azure Local and AKS Arc cluster that hosts Foundry Local inference and the Agentic Retrieval extension with ingestion, collections on Milvus and Postgres, agents runtime, MCP server, and chat UI.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#F7FAFD"/>
+      <stop offset="100%" stop-color="#E6F2FD"/>
+    </linearGradient>
+    <linearGradient id="azure" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2886DE"/>
+      <stop offset="100%" stop-color="#0F6CBD"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#3FAB3F"/>
+      <stop offset="100%" stop-color="#107C10"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFB845"/>
+      <stop offset="100%" stop-color="#FF8C00"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0C3B5E" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0F6CBD"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="680" rx="18" fill="url(#bg)"/>
+  <g stroke="#CFE3F6" stroke-width="1" opacity="0.55">
+    <line x1="0" y1="112" x2="960" y2="112"/>
+    <line x1="0" y1="224" x2="960" y2="224"/>
+    <line x1="0" y1="336" x2="960" y2="336"/>
+    <line x1="0" y1="448" x2="960" y2="448"/>
+    <line x1="160" y1="0" x2="160" y2="680"/>
+    <line x1="320" y1="0" x2="320" y2="680"/>
+    <line x1="480" y1="0" x2="480" y2="680"/>
+    <line x1="640" y1="0" x2="640" y2="680"/>
+    <line x1="800" y1="0" x2="800" y2="680"/>
+  </g>
+
+  <text x="48" y="54" font-family="Inter Variable, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#0C3B5E">Foundry Local and Agentic Retrieval on Azure Local</text>
+  <text x="48" y="82" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" fill="#37576B">Sibling Azure Arc extensions on AKS Arc. Inference stays local, and RAG data stays in customer infrastructure.</text>
+
+  <g transform="translate(42,200)" filter="url(#shadow)">
+    <rect x="0" y="0" width="876" height="420" rx="18" fill="#FFFFFF" stroke="#B7D7F0" stroke-width="2"/>
+    <rect x="18" y="26" width="840" height="370" rx="16" fill="#F7FAFD" stroke="#CFE3F6"/>
+    <text x="42" y="58" font-family="Inter Variable, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0C3B5E">Azure Local with AKS Arc cluster</text>
+    <text x="42" y="82" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" fill="#48697A">Kubernetes worker pools with CPU nodes and supported NVIDIA GPU nodes</text>
+  </g>
+
+  <g transform="translate(80,320)" filter="url(#shadow)">
+    <rect width="240" height="190" rx="16" fill="#E6F2FD" stroke="#0F6CBD" stroke-width="2"/>
+    <rect x="18" y="18" width="204" height="38" rx="10" fill="url(#azure)"/>
+    <text x="120" y="43" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Foundry Local</text>
+    <text x="30" y="82" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" fill="#0C3B5E">Inference operator</text>
+    <text x="30" y="106" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" fill="#0C3B5E">Model and ModelDeployment CRDs</text>
+    <text x="30" y="130" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" fill="#0C3B5E">ONNX Runtime or vLLM</text>
+    <text x="30" y="154" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" fill="#0C3B5E">OpenAI-compatible endpoint</text>
+  </g>
+
+  <g transform="translate(370,306)" filter="url(#shadow)">
+    <rect width="500" height="288" rx="16" fill="#EAF6EA" stroke="#107C10" stroke-width="2"/>
+    <rect x="18" y="18" width="464" height="38" rx="10" fill="url(#green)"/>
+    <text x="250" y="43" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Agentic Retrieval, microsoft.arc.rag</text>
+
+    <g transform="translate(28,78)">
+      <rect width="132" height="70" rx="12" fill="#FFFFFF" stroke="#8CCB8C"/>
+      <text x="66" y="28" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0B6A0B">Ingestion</text>
+      <text x="66" y="50" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" fill="#37576B">Parse and chunk</text>
+    </g>
+
+    <g transform="translate(184,78)">
+      <rect width="132" height="70" rx="12" fill="#FFFFFF" stroke="#8CCB8C"/>
+      <text x="66" y="28" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0B6A0B">Collections</text>
+      <text x="66" y="50" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" fill="#37576B">Milvus and Postgres</text>
+    </g>
+
+    <g transform="translate(340,78)">
+      <rect width="132" height="70" rx="12" fill="#FFFFFF" stroke="#8CCB8C"/>
+      <text x="66" y="28" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0B6A0B">Agents runtime</text>
+      <text x="66" y="50" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" fill="#37576B">Threads and runs</text>
+    </g>
+
+    <g transform="translate(106,178)">
+      <rect width="132" height="70" rx="12" fill="#FFFFFF" stroke="#8CCB8C"/>
+      <text x="66" y="28" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0B6A0B">MCP server</text>
+      <text x="66" y="50" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" fill="#37576B">Six search tools</text>
+    </g>
+
+    <g transform="translate(262,178)">
+      <rect width="132" height="70" rx="12" fill="#FFFFFF" stroke="#8CCB8C"/>
+      <text x="66" y="28" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#0B6A0B">Chat UI</text>
+      <text x="66" y="50" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" fill="#37576B">SSE and citations</text>
+    </g>
+  </g>
+
+  <g transform="translate(72,112)">
+    <rect width="202" height="70" rx="14" fill="#FFF4E6" stroke="#FF8C00" stroke-width="2" filter="url(#shadow)"/>
+    <text x="101" y="30" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#5C4400">Azure Arc management</text>
+    <text x="101" y="52" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" fill="#5C4400">Extensions, identity, updates</text>
+  </g>
+
+  <g transform="translate(678,112)">
+    <rect width="202" height="70" rx="14" fill="#FFF4E6" stroke="#FF8C00" stroke-width="2" filter="url(#shadow)"/>
+    <text x="101" y="30" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#5C4400">Apps and users</text>
+    <text x="101" y="52" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" fill="#5C4400">API, agents, browser chat</text>
+  </g>
+
+  <path d="M173 182 L173 198" stroke="#0F6CBD" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M779 182 L779 304" stroke="#0F6CBD" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M320 415 L368 415" stroke="#0F6CBD" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="345" y="438" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#0F6CBD">Model</text><text x="345" y="453" text-anchor="middle" font-family="Inter Variable, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#0F6CBD">API</text>
+
+  <g transform="translate(88,652)">
+    <circle cx="0" cy="0" r="6" fill="#0F6CBD"/>
+    <text x="16" y="5" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" fill="#37576B">Foundry Local serves inference.</text>
+    <circle cx="222" cy="0" r="6" fill="#107C10"/>
+    <text x="238" y="5" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" fill="#37576B">Agentic Retrieval grounds agents in local collections.</text>
+    <circle cx="572" cy="0" r="6" fill="#FF8C00"/>
+    <text x="588" y="5" font-family="Inter Variable, Segoe UI, sans-serif" font-size="13" fill="#37576B">Azure Arc manages extensions and identity.</text>
+  </g>
+</svg>

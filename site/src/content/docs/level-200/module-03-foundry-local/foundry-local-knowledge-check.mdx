@@ -1,0 +1,173 @@
+---
+title: "Knowledge check: Foundry Local on Azure Local"
+description: "Check your understanding of Foundry Local, Agentic Retrieval, GPU sizing, collections, authentication, and operations."
+lastVerified: 2026-10-02
+sidebar:
+  order: 99
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Answer 10 scenario questions about Foundry Local on Azure Local and Agentic Retrieval. Pick the single best answer.
+
+## Question 1: Product split
+
+A team wants local model inference on Azure Local and also wants ingestion, collections, agents, MCP search tools, and a chat UI. Which design matches the current Microsoft product split?
+
+- A) Deploy only Agentic Retrieval because it includes the language model.
+- B) Deploy Foundry Local for inference and Agentic Retrieval for RAG, agents, MCP, and chat.
+- C) Deploy only Foundry Local because it manages collections and the chat UI.
+- D) Deploy the legacy pre-rename extension and disable the agentic layer.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-03-foundry-local/agentic-retrieval-deployment/">
+
+B is correct because Foundry Local serves models and Agentic Retrieval provides the RAG and agent platform. A is wrong because Agentic Retrieval no longer bundles language models. C is wrong because Foundry Local does not provide collections or the chat UI. D is wrong because Agentic Retrieval is the current extension after the June 2026 rename.
+
+</KnowledgeCheck>
+
+## Question 2: Runtime choice
+
+A factory site has no GPU capacity for the first pilot but wants to serve a small generative model locally. Which runtime should the architect choose first?
+
+- A) vLLM, because it supports CPU and GPU.
+- B) ONNX Runtime, because it supports CPU execution.
+- C) vLLM with Endpoint Picker, because it removes the need for GPUs.
+- D) Agentic Retrieval, because the embedding GPUs can serve the language model.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-03-foundry-local/inference-runtimes-and-gpus/">
+
+B is correct because ONNX Runtime supports CPU and GPU execution. A is wrong because vLLM requires GPU. C is wrong because Endpoint Picker routes multireplica vLLM traffic and does not remove the GPU requirement. D is wrong because Agentic Retrieval embedding GPUs are for BGE-M3 and CLIP, not the language model endpoint.
+
+</KnowledgeCheck>
+
+## Question 3: Agentic Retrieval deployment modes
+
+A customer has external MCP servers and does not need local document ingestion or local collections. They still want agents, knowledge bases, and the built-in MCP server. Which `layerSelection` mode fits best?
+
+- A) `combined`
+- B) `knowledge`
+- C) `agentic`
+- D) `edgeragapp`
+
+<KnowledgeCheck answer="C" reference="/level-200/module-03-foundry-local/agentic-retrieval-deployment/">
+
+C is correct because `agentic` mode deploys the agentic layer without local data ingestion and does not need Agentic Retrieval GPUs. A is wrong because `combined` deploys both layers. B is wrong because `knowledge` deploys ingestion and RAG without agents. D is wrong because `edgeragapp` is the default collection name, not a deployment mode.
+
+</KnowledgeCheck>
+
+## Question 4: Collection isolation
+
+A bank wants separate access for commercial lending, retail banking, and legal data. Users in one group must not query another group's content. What collection design should they use?
+
+- A) One collection with metadata filters for department.
+- B) One collection per department with matching app roles.
+- C) One default `edgeragapp` collection and three system prompts.
+- D) One Milvus database outside Agentic Retrieval.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-03-foundry-local/knowledge-sources-and-collections/">
+
+B is correct because Agentic Retrieval supports multiple collections with collection-specific app roles. A is weaker because access should not depend only on query filters. C is wrong because system prompts do not enforce collection access. D is wrong because Agentic Retrieval manages collections through its own Milvus and Postgres storage.
+
+</KnowledgeCheck>
+
+## Question 5: GPT-OSS-20B sizing
+
+A combined Agentic Retrieval deployment will use GPT-OSS-20B served by Foundry Local on the same Azure Local cluster. Which GPU plan matches Microsoft guidance?
+
+- A) Use the two Agentic Retrieval embedding GPUs for GPT-OSS-20B too.
+- B) Add a separate NVIDIA GPU with at least 24 GB VRAM for the Foundry Local model host, with 48 GB VRAM recommended for production.
+- C) Use any AMD GPU with 16 GB VRAM because vLLM handles paging.
+- D) Use CPU-only GPT-OSS-20B because Agentic Retrieval requires no model endpoint GPU.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-03-foundry-local/agentic-retrieval-deployment/">
+
+B is correct because GPT-OSS-20B via Foundry Local needs its own GPU, with at least 24 GB VRAM and 48 GB recommended for production. A is wrong because Agentic Retrieval uses its two GPUs for embedding models. C is wrong because Foundry Local does not support AMD GPUs. D is wrong because the recommended GPT-OSS-20B endpoint is GPU-backed.
+
+</KnowledgeCheck>
+
+## Question 6: Gateway and routing
+
+A model deployment uses vLLM with three replicas. The architect leaves `spec.vllm.epp.enabled` unset. What routing behavior should they expect?
+
+- A) Endpoint Picker is enabled by default because the deployment has more than one vLLM replica.
+- B) Gateway API is bypassed because vLLM uses direct pod IP routing.
+- C) Endpoint Picker is disabled by default for all deployments.
+- D) NGINX ingress handles round-robin routing because Gateway API is not used.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-03-foundry-local/inference-runtimes-and-gpus/">
+
+A is correct because Endpoint Picker is on by default for multireplica vLLM deployments. B is wrong because Foundry Local routes model traffic through Gateway API. C is wrong because the default depends on replica count. D is wrong because Foundry Local replaced the NGINX ingress data path with Gateway API for model traffic.
+
+</KnowledgeCheck>
+
+## Question 7: Authentication choice
+
+An in-cluster workload needs to call a Foundry Local `ModelDeployment` without managing separate shared credentials. Which authentication method is the best fit?
+
+- A) API key authentication.
+- B) Microsoft Entra ID authentication only.
+- C) Kubernetes service account token authentication.
+- D) Anonymous access to `/v1/chat/completions`.
+
+<KnowledgeCheck answer="C" reference="/level-200/module-03-foundry-local/foundry-local-operations/">
+
+C is correct because service account token authentication uses the workload's Kubernetes service account identity and Kubernetes RBAC for data-plane inference. A can work but requires shared key handling. B is useful for identity-based access, but it is not the simplest in-cluster path. D is wrong because inference endpoints require authentication except public health and model-list paths.
+
+</KnowledgeCheck>
+
+## Question 8: Disconnected deployment
+
+A defense customer must deploy without internet connectivity. What must they do before installing Agentic Retrieval in the disconnected environment?
+
+- A) Use the public Azure Arc extension feed from the disconnected cluster.
+- B) Download and import the Agentic Retrieval expansion pack into Azure Local Disconnected Operations.
+- C) Disable NetworkPolicy because it is not supported offline.
+- D) Use a cloud-hosted Microsoft Foundry model endpoint.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-03-foundry-local/agentic-retrieval-deployment/">
+
+B is correct because disconnected deployment imports an expansion pack that registers the extension and loads images and artifacts locally. A is wrong because the disconnected cluster does not pull from public feeds. C is wrong because a NetworkPolicy-enforcing CNI is still required. D is wrong because the model endpoint must be reachable from the disconnected environment, with Foundry Local on Azure Local recommended.
+
+</KnowledgeCheck>
+
+## Question 9: Chunking configuration
+
+A team ingests dense policy documents in the knowledge layer. They start with GPU mode and want a source-backed baseline before tuning. Which chunking baseline matches Microsoft guidance?
+
+- A) Chunk size 2000 and chunk overlap 200.
+- B) Chunk size 100 and chunk overlap 0.
+- C) Chunk size 8000 and chunk overlap 2000.
+- D) No chunking because vector search can index full documents.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-03-foundry-local/knowledge-sources-and-collections/">
+
+A is correct because Microsoft recommends chunk size 2000 and chunk overlap 200 as a high-level baseline. B may lose context. C exceeds the documented GPU maximum chunk size and overlap. D is wrong because ingestion uses chunking before embedding and retrieval.
+
+</KnowledgeCheck>
+
+## Question 10: Operations and updates
+
+A site plans to update Agentic Retrieval after reading that a new preview release includes security hardening and ingestion changes. What is the best release process?
+
+- A) Apply the extension update directly in production because Azure Arc extensions are always backward compatible.
+- B) Test the update in a non-production cluster, run model and chat evaluations, then promote it with rollback information.
+- C) Skip the update because preview releases cannot include security fixes.
+- D) Recreate all collections because every Agentic Retrieval release changes the collection schema.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-03-foundry-local/foundry-local-operations/">
+
+B is correct because preview releases can change behavior and should be tested with representative models, collections, and chat flows before production. A is wrong because preview updates can add prerequisites or behavior changes. C is wrong because Agentic Retrieval release notes include security fixes. D is wrong because collection recreation is not a default update requirement.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
+- [Requirements for Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-requirements)
+- [Inference runtimes in Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-inference-runtimes)
+- [Authentication and authorization in Foundry Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-authentication-authorization)
+- [What is Agentic Retrieval in Agents and Tools with Foundry Local?](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)
+- [What you need for Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/requirements)
+- [Knowledge layer configuration for Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/knowledge-layer-overview)
+- [Release notes for Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/release-notes)
+- [Disconnected operations for Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/disconnected-operations/overview-disconnected)
