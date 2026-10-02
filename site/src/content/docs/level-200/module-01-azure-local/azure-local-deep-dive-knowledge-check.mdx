@@ -1,0 +1,176 @@
+---
+title: "Knowledge check: Azure Local architecture"
+description: "Check your understanding of Azure Local deployment types, rack-aware clustering, releases, hardware, HA, networking, VM tiers, and AKS."
+lastVerified: 2026-10-02
+sidebar:
+  order: 99
+---
+
+import KnowledgeCheck from "~/components/KnowledgeCheck.astro";
+
+Ten scenario questions cover the module. Choose the single best answer.
+
+## Question 1: Deployment type
+
+A customer needs 40 compute machines and SAN-backed storage under one Azure Local instance. Which deployment type matches the scale and storage model?
+
+- A) Hyperconverged
+- B) Disaggregated
+- C) Rack-aware clustering
+- D) Small form factor
+
+<KnowledgeCheck answer="B" reference="/level-200/module-01-azure-local/azure-local-architecture-deep-dive/">
+
+B is correct because disaggregated deployments support up to 64 machines with SAN storage. A is wrong because hyperconverged deployments top out at 16 machines. C is wrong because rack-aware clustering is a two-rack hyperconverged pattern with a maximum of 8 machines. D is wrong because small form factor is a compact edge appliance pattern.
+
+</KnowledgeCheck>
+
+## Question 2: Multi-rack design
+
+An architect proposes a multi-rack Azure Local instance with two racks and no SAN because "multi-rack means any rack count." What should you correct?
+
+- A) Multi-rack requires a minimum footprint of four racks and uses SAN storage.
+- B) Multi-rack is the same as rack-aware clustering.
+- C) Multi-rack supports only disconnected operations.
+- D) Multi-rack control plane is available in every Azure region.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-01-azure-local/azure-local-architecture-deep-dive/">
+
+A is correct because Learn documents a minimum of four racks: one main rack plus at least three compute racks, with SAN storage. B is wrong because rack-aware clustering is a separate two-rack pattern. C is wrong because current deployment-type guidance lists multi-rack under connected mode. D is wrong because the current multi-rack control plane regions are East US, Australia East, and South Central US.
+
+</KnowledgeCheck>
+
+## Question 3: Rack-aware clustering
+
+A hospital wants rack-level resiliency in one facility and can provide two rooms with 0.8 ms round-trip latency. Which rack-aware cluster layout is supported?
+
+- A) 1+1
+- B) 2+2
+- C) 5+5
+- D) 4+4 with external SAN
+
+<KnowledgeCheck answer="B" reference="/level-200/module-01-azure-local/azure-local-ha-patterns/">
+
+B is correct because rack-aware clustering supports 2+2, 3+3, and 4+4 node layouts. A is wrong because the minimum is 2+2. C is wrong because 4+4 is the maximum. D is wrong because rack-aware clustering does not support external SAN configurations.
+
+</KnowledgeCheck>
+
+## Question 4: Release support
+
+An operations lead wants to keep an Azure Local instance on a release for one year before updating. What is the supported policy?
+
+- A) Keep the instance within six months of the latest release.
+- B) Update only when the OS reaches end of support.
+- C) Update every two years because Azure Local is on an annual cadence.
+- D) Stay on Azure Stack HCI 23H2 through 2027.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-01-azure-local/azure-local-architecture-deep-dive/">
+
+A is correct because Azure Local releases stay supported for six months. B is wrong because the release support window is shorter than waiting for OS end of support. C is wrong because Azure Local moved to a monthly release train. D is wrong because Azure Stack HCI 23H2 reached end of support in April 2026.
+
+</KnowledgeCheck>
+
+## Question 5: Connected operations
+
+A connected Azure Local site loses Azure connectivity for 12 days because of an ISP outage. What should the architect expect for running workloads?
+
+- A) Running workloads continue because connected operations tolerate intermittent disconnections up to 30 days.
+- B) All VMs shut down after 24 hours.
+- C) Azure Local immediately converts to disconnected operations.
+- D) AKS becomes generally available for disconnected operations.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-01-azure-local/azure-local-architecture-deep-dive/">
+
+A is correct because connected operations tolerate intermittent disconnections up to 30 days without affecting running workloads. B is wrong because 24 hours is not the documented limit. C is wrong because disconnected operations is a procured and planned mode, not an automatic conversion. D is wrong because AKS under disconnected operations is still preview.
+
+</KnowledgeCheck>
+
+## Question 6: Hardware support
+
+A team wants to deploy Azure Local on unlisted servers because the CPU and memory look sufficient. What should you say?
+
+- A) Proceed if the servers pass a burn-in test.
+- B) Proceed only for production if Microsoft confirms support outside the catalog.
+- C) Use hardware listed in the Azure Local catalog because Microsoft Support may only be provided on catalog hardware.
+- D) Use any Windows Server-certified hardware.
+
+<KnowledgeCheck answer="C" reference="/level-200/module-01-azure-local/azure-local-hardware-planning/">
+
+C is correct because the system requirements state Microsoft Support may only be provided for Azure Local running on hardware listed in the Azure Local catalog. A and D are wrong because generic validation is not the Azure Local support boundary. B is wrong because the documented path is catalog-listed hardware.
+
+</KnowledgeCheck>
+
+## Question 7: SBE planning
+
+An OEM offers two similar systems. One supports Solution Builder Extension packages and one does not. Why does that matter?
+
+- A) SBE can package vendor firmware, driver, monitoring, diagnostic, and validation updates into the Azure Local update flow.
+- B) SBE replaces the need for Azure Local solution updates.
+- C) SBE lets you ignore OEM guidance.
+- D) SBE applies only to unmanaged VMs.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-01-azure-local/azure-local-hardware-planning/">
+
+A is correct because SBE packages hardware vendor content and can integrate it with Azure Local solution updates. B is wrong because SBE complements solution updates. C is wrong because vendor guidance still matters. D is wrong because SBE is for the Azure Local system, not VM management tiers.
+
+</KnowledgeCheck>
+
+## Question 8: Update operations
+
+A Windows Server administrator wants to manually run Cluster-Aware Updating on Azure Local nodes. What is the best response?
+
+- A) Use manual Cluster-Aware Updating because it is required for Azure Local.
+- B) Use Azure Local supported update paths such as Azure Update Manager, the Azure Local resource page, or documented PowerShell.
+- C) Use SConfig for all security updates.
+- D) Use third-party update tools if they support Windows Server.
+
+<KnowledgeCheck answer="B" reference="/level-200/module-01-azure-local/azure-local-ha-patterns/">
+
+B is correct because Azure Local updates are supported through the Azure Local update orchestrator paths. A is wrong because Learn lists manual Cluster-Aware Updating as unsupported for Azure Local updates. C and D are wrong because SConfig and third-party tools are not supported Azure Local update interfaces.
+
+</KnowledgeCheck>
+
+## Question 9: SDN enabled by Arc
+
+A design uses SDN enabled by Arc and plans to manage NSGs on Azure Local VM NICs from Azure. Which scenario is unsupported?
+
+- A) Managing logical networks through Azure portal.
+- B) Applying NSGs to Azure Local VM NICs.
+- C) Managing the same SDN deployment with Windows Admin Center and SDN Express scripts.
+- D) Using Azure CLI for supported SDN resources.
+
+<KnowledgeCheck answer="C" reference="/level-200/module-01-azure-local/azure-local-advanced-networking/">
+
+C is correct because SDN enabled by Arc must be managed through Azure interfaces, not mixed with on-premises SDN tools. A, B, and D are supported management paths or resources for SDN enabled by Arc.
+
+</KnowledgeCheck>
+
+## Question 10: AKS on Azure Local
+
+A new AKS on Azure Local cluster is created after the 2510 release. What should the security architect know about Kubernetes secret encryption?
+
+- A) KMS v2 is enabled by default on new clusters.
+- B) KMS v1 is the only supported provider for new clusters.
+- C) Existing clusters are automatically migrated to KMS v2.
+- D) Secrets are never encrypted at rest on AKS on Azure Local.
+
+<KnowledgeCheck answer="A" reference="/level-200/module-01-azure-local/azure-local-architecture-deep-dive/">
+
+A is correct because KMS v2 is enabled by default for new AKS on Azure Local clusters starting with release 2510. B is wrong because KMS v2 is now the default for new clusters. C is wrong because existing clusters continue to use KMS v1. D is wrong because AKS on Azure Local includes etcd secret encryption using a KMS provider.
+
+</KnowledgeCheck>
+
+## Sources
+
+- [Find your Azure Local deployment type](https://learn.microsoft.com/azure/azure-local/plan/find-your-deployment-type)
+- [Azure Local rack aware clustering overview](https://learn.microsoft.com/azure/azure-local/concepts/rack-aware-cluster-overview)
+- [What are multi-rack deployments of Azure Local?](https://learn.microsoft.com/azure/azure-local/multi-rack/multi-rack-overview)
+- [Azure Local release information](https://learn.microsoft.com/azure/azure-local/release-information-23h2)
+- [Connected operations overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/azure-local/connected-operations-overview)
+- [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
+- [Microsoft Sovereign Cloud adds governance, productivity and support for large AI models securely running even when completely disconnected](https://blogs.microsoft.com/blog/2026/02/24/microsoft-sovereign-cloud-adds-governance-productivity-and-support-for-large-ai-models-securely-running-even-when-completely-disconnected/)
+- [System requirements for Azure Local](https://learn.microsoft.com/azure/azure-local/concepts/system-requirements-23h2)
+- [Solution Builder Extension updates for your Azure Local](https://learn.microsoft.com/azure/azure-local/update/solution-builder-extension)
+- [About updates for Azure Local](https://learn.microsoft.com/azure/azure-local/update/about-updates-23h2)
+- [Software Defined Networking enabled by Azure Arc on Azure Local](https://learn.microsoft.com/azure/azure-local/concepts/sdn-overview)
+- [Enable secrets encryption for Kubernetes secrets using KMS provider](https://learn.microsoft.com/azure/aks-hybrid-edge/local/hyperconverged/encrypt-etcd-secrets)

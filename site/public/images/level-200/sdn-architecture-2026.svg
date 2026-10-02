@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 540">
+  <title id="title">SDN enabled by Azure Arc on Azure Local</title>
+  <desc id="desc">Azure portal, Azure CLI, and ARM templates manage logical networks and network security groups through the Azure Arc control plane. Network Controller runs as a Failover Cluster service on the Azure Local instance and applies the policies to Azure Local VM network interfaces. Virtual networks, software load balancers, and gateways are not supported in this model.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0F6CBD" />
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #1f1f1f; }
+      .box { fill: #F7FAFD; stroke: #0F6CBD; stroke-width: 2; }
+      .green { fill: #EAF6EA; stroke: #107C10; }
+      .orange { fill: #FFF4E6; stroke: #FF8C00; }
+      .grey { fill: #F3F3F3; stroke: #8A8886; stroke-dasharray: 6 5; }
+      .line { stroke: #0F6CBD; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .muted { fill: #4f5f6f; font-size: 14px; }
+      .h { font-size: 20px; font-weight: 600; }
+      .t { font-size: 15px; }
+    </style>
+  </defs>
+  <rect width="960" height="540" fill="#FFFFFF" />
+  <text x="40" y="48" class="h">SDN enabled by Azure Arc on Azure Local</text>
+  <text x="40" y="74" class="muted">Azure Local 2506 or later. Manage it only from Azure interfaces, not Windows Admin Center or SDN Express.</text>
+
+  <rect x="40" y="110" width="250" height="120" rx="16" class="box" />
+  <text x="64" y="146" class="h">Azure management</text>
+  <text x="64" y="176" class="t">Azure portal</text>
+  <text x="64" y="200" class="t">Azure CLI and ARM templates</text>
+
+  <rect x="355" y="110" width="250" height="120" rx="16" class="box green" />
+  <text x="379" y="146" class="h">Azure Arc</text>
+  <text x="379" y="176" class="t">Control plane for the</text>
+  <text x="379" y="200" class="t">Azure Local instance</text>
+
+  <rect x="670" y="110" width="250" height="120" rx="16" class="box grey" />
+  <text x="694" y="146" class="h">Not supported</text>
+  <text x="694" y="176" class="t">Virtual networks, SLB,</text>
+  <text x="694" y="200" class="t">VPN and L3/GRE gateways</text>
+
+  <rect x="355" y="285" width="250" height="110" rx="16" class="box orange" />
+  <text x="379" y="321" class="h">Network Controller</text>
+  <text x="379" y="351" class="t">Runs as a Failover Cluster</text>
+  <text x="379" y="375" class="t">service, not as VMs</text>
+
+  <rect x="40" y="285" width="250" height="110" rx="16" class="box" />
+  <text x="64" y="321" class="h">Logical networks</text>
+  <text x="64" y="351" class="t">Created and managed</text>
+  <text x="64" y="375" class="t">as Azure resources</text>
+
+  <rect x="670" y="285" width="250" height="110" rx="16" class="box" />
+  <text x="694" y="321" class="h">NSGs</text>
+  <text x="694" y="351" class="t">Applied to VM NICs</text>
+  <text x="694" y="375" class="t">and logical networks</text>
+
+  <rect x="200" y="440" width="560" height="64" rx="16" class="box orange" />
+  <text x="480" y="479" class="h" text-anchor="middle">Azure Local VM network interfaces</text>
+
+  <path d="M 290 170 L 355 170" class="line" />
+  <path d="M 480 230 L 480 285" class="line" />
+  <path d="M 355 340 L 290 340" class="line" />
+  <path d="M 605 340 L 670 340" class="line" />
+  <path d="M 165 395 L 300 440" class="line" />
+  <path d="M 480 395 L 480 440" class="line" />
+  <path d="M 795 395 L 660 440" class="line" />
+</svg>
