@@ -127,9 +127,8 @@ sidebar:
 ---
 ```
 
-`lastVerified` is optional while the content rebuild is in progress and becomes
-required afterwards. Set it to the date you checked the page's facts, not the
-date you edited the wording.
+`lastVerified` is required. Set it to the date you checked the page's facts,
+not the date you edited the wording.
 
 ### Sources
 
@@ -155,7 +154,8 @@ write or materially rewrite. In short:
 - Sentence case headings
 - Name the source for every claim
 
-`npm run lint:content` (from `site/`) reports style warnings for these rules.
+`npm run lint:content` (from `site/`) fails on a missing `lastVerified` or
+Sources section and reports style warnings for these rules.
 
 ---
 

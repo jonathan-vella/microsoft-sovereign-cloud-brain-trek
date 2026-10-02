@@ -18,10 +18,8 @@ export const collections = {
           .max(220)
           .describe("SEO and navigation description, 20–220 chars."),
         // Date the page's facts were last checked against Microsoft sources (YYYY-MM-DD).
-        // Optional during the content rebuild; becomes required once every page has it.
         lastVerified: z
           .union([z.string().regex(/^\d{4}-\d{2}-\d{2}$/), z.date()])
-          .optional()
           .describe("Date the page's facts were last verified, YYYY-MM-DD."),
         // Module landing pages (`level-NN/module-NN-*/index.md[x]`) only. Every key is optional;
         // the landing template (src/components/ModuleOverview.astro) skips what is missing.

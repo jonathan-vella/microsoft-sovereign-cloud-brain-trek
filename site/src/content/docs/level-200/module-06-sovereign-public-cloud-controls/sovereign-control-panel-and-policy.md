@@ -68,7 +68,7 @@ Use policy progressively. Start in audit mode when the initiative is preview, se
 
 ## Link to the landing zone
 
-Sovereign Landing Zone applies policy-as-code and management group structure for sovereign workloads. In this repository, the current page on disk is [Sovereign Landing Zone](/level-300/sovereign-landing-zone/). Use that page for the current internal link until the Level 300 module move lands.
+Sovereign Landing Zone applies policy-as-code and management group structure for sovereign workloads. The Level 300 [Sovereign Landing Zone module](/level-300/module-02-sovereign-landing-zone/) covers its architecture, its policy initiatives, and how to deploy it.
 
 ## Implementation checklist
 

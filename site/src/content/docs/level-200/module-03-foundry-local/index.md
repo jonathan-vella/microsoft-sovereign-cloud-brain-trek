@@ -11,7 +11,7 @@ module:
     - Operate local AI endpoints with authentication, monitoring, evaluation, and disconnected deployment constraints.
   prerequisites:
     - /level-100/module-03-azure-local/
-    - /level-100/module-05-edge-rag/
+    - /level-100/module-05-foundry-local/
 sidebar:
   label: Overview
   order: 3

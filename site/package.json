@@ -16,7 +16,7 @@
     "emit-legacy-stubs": "node scripts/emit-legacy-stubs.mjs",
     "capture-url-baseline": "node scripts/capture-url-baseline.mjs",
     "check:urls": "node scripts/check-urls.mjs",
-    "lint:content": "node scripts/lint-content.mjs"
+    "lint:content": "node scripts/lint-content.mjs --strict"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.4",

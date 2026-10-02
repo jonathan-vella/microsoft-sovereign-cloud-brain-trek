@@ -1,264 +1,86 @@
 ---
-title: "Visual Assets Index"
-description: "Complete index of Brain Trek visual assets with regeneration instructions"
+title: "Visual assets index"
+description: "Catalog of the SVG diagrams used across the Brain Trek levels, the pages that show them, and how to add or replace a diagram."
 lastVerified: 2026-10-02
 sidebar:
   order: 3
 ---
 
-Complete catalog of 53 Python-generated SVG diagrams organized by learning level, with descriptions and regeneration instructions.
-
----
-
-## Overview
-
-All visual assets in Brain Trek are generated from Python scripts using matplotlib, enabling consistent styling and easy updates. Each SVG follows the Microsoft Azure color palette for brand consistency.
-
-### Azure Color Palette
-
-| Color | Hex | Usage |
-|-------|-----|-------|
-| Azure Blue | `#0078D4` | Primary elements, headers |
-| Azure Dark Blue | `#004578` | Borders, strokes |
-| Azure Green | `#107C10` | Success, on-premises |
-| Azure Orange | `#FF8C00` | Warnings, cautions |
-| Azure Red | `#D13438` | Errors, critical items |
-| Azure Light Blue | `#50E6FF` | Highlights, accents |
-| Azure Gray | `#6B6B6B` | Secondary text |
-
----
-
-## Regeneration Instructions
-
-### Prerequisites
-
-```bash
-# Ensure Python dependencies are installed
-pip install -r requirements.txt
-```
-
-### Regenerate All Diagrams
-
-```bash
-npm run diagrams
-```
-
-### Regenerate by Level
-
-```bash
-npm run diagrams:level50
-npm run diagrams:level100
-npm run diagrams:level200
-npm run diagrams:level300
-```
-
-### Regenerate Single Diagram
-
-```bash
-python scripts/regenerate-diagrams.py --level 100 --name azure-local-architecture
-```
-
----
-
-## Level 50: Foundational (21 diagrams)
-
-### Cloud Computing Concepts
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [cloud-computing-mindmap.svg](/images/level-50/cloud-computing-mindmap.svg) | Cloud computing essential characteristics mindmap | [Cloud computing primer](/level-50/module-01-cloud-computing/cloud-computing-primer/) |
-| [traditional-vs-cloud.svg](/images/level-50/traditional-vs-cloud.svg) | Traditional IT vs cloud infrastructure comparison | [Cloud computing primer](/level-50/module-01-cloud-computing/cloud-computing-primer/) |
-| [cloud-tco-comparison.svg](/images/level-50/cloud-tco-comparison.svg) | CapEx vs OpEx total cost of ownership | [Cloud computing primer](/level-50/module-01-cloud-computing/cloud-computing-primer/) |
-| [cloud-scalability-patterns.svg](/images/level-50/cloud-scalability-patterns.svg) | Horizontal vs vertical scaling patterns | [Cloud computing primer](/level-50/module-01-cloud-computing/cloud-computing-primer/) |
-
-### Service & Deployment Models
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [shared-responsibility-matrix.svg](/images/level-50/shared-responsibility-matrix.svg) | IaaS/PaaS/SaaS responsibility matrix | [Cloud service models](/level-50/module-01-cloud-computing/cloud-service-models/) |
-| [shared-responsibility-shift.svg](/images/level-50/shared-responsibility-shift.svg) | Responsibility shift across service models | [Cloud service models](/level-50/module-01-cloud-computing/cloud-service-models/) |
-| [cloud-deployment-models.svg](/images/level-50/cloud-deployment-models.svg) | Public/private/hybrid deployment comparison | [Cloud deployment models](/level-50/module-01-cloud-computing/cloud-deployment-models/) |
-| [cloud-deployment-models-overview.svg](/images/level-50/cloud-deployment-models-overview.svg) | Deployment model decision tree | [Cloud deployment models](/level-50/module-01-cloud-computing/cloud-deployment-models/) |
-| [hypervisor-types.svg](/images/level-50/hypervisor-types.svg) | Type 1 vs Type 2 hypervisors | [Cloud computing primer](/level-50/module-01-cloud-computing/cloud-computing-primer/) |
-
-### Security & Compliance
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [cia-triad.svg](/images/level-50/cia-triad.svg) | Confidentiality, Integrity, Availability triangle | [Security compliance basics](/level-50/module-02-security-compliance/security-compliance-basics/) |
-| [defense-in-depth.svg](/images/level-50/defense-in-depth.svg) | Multi-layer security model | [Security compliance basics](/level-50/module-02-security-compliance/security-compliance-basics/) |
-| [authentication-authorization-flow.svg](/images/level-50/authentication-authorization-flow.svg) | AuthN vs AuthZ flow comparison | [Security compliance basics](/level-50/module-02-security-compliance/security-compliance-basics/) |
-| [data-classification-pyramid.svg](/images/level-50/data-classification-pyramid.svg) | Data sensitivity classification levels | [Security compliance basics](/level-50/module-02-security-compliance/security-compliance-basics/) |
-| [compliance-frameworks-comparison.svg](/images/level-50/compliance-frameworks-comparison.svg) | GDPR, HIPAA, FedRAMP comparison | [Compliance frameworks](/level-50/module-02-security-compliance/compliance-frameworks/) |
-
-### Azure Fundamentals
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [azure-infrastructure-hierarchy.svg](/images/level-50/azure-infrastructure-hierarchy.svg) | Regions, zones, datacenters hierarchy | [Azure global infrastructure](/level-50/module-03-azure-intro/azure-global-infrastructure/) |
-| [azure-service-categories.svg](/images/level-50/azure-service-categories.svg) | Azure service taxonomy | [Azure service categories](/level-50/module-03-azure-intro/azure-service-categories/) |
-| [azure-compute-options.svg](/images/level-50/azure-compute-options.svg) | VMs, containers, serverless comparison | [Azure service categories](/level-50/module-03-azure-intro/azure-service-categories/) |
-| [azure-storage-tiers.svg](/images/level-50/azure-storage-tiers.svg) | Hot, cool, archive storage tiers | [Azure service categories](/level-50/module-03-azure-intro/azure-service-categories/) |
-| [azure-networking-fundamentals.svg](/images/level-50/azure-networking-fundamentals.svg) | VNet, subnet, NSG basics | [Azure service categories](/level-50/module-03-azure-intro/azure-service-categories/) |
-
----
-
-## Level 100: Foundational sovereignty (9 diagrams)
-
-### Sovereignty Concepts
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [azure-regions-map.svg](/images/level-100/azure-regions-map.svg) | Global Azure region distribution | [Azure global infrastructure](/level-50/module-03-azure-intro/azure-global-infrastructure/) |
-| [regulatory-timeline.svg](/images/level-100/regulatory-timeline.svg) | Key regulatory framework timeline | [Compliance frameworks](/level-50/module-02-security-compliance/compliance-frameworks/) |
-| [eu-data-boundary.svg](/images/level-100/eu-data-boundary.svg) | EU Data Boundary scope | [European commitments](/level-100/module-01-digital-sovereignty/european-commitments/) |
-| [sovereign-cloud-models-comparison.svg](/images/level-100/sovereign-cloud-models-comparison.svg) | Sovereign cloud model comparison matrix | [Sovereign cloud models](/level-100/module-02-cloud-models/sovereign-cloud-models/) |
-| [data-classification-pyramid.svg](/images/level-100/data-classification-pyramid.svg) | Sovereignty-focused data classification | [Data residency concepts](/level-100/module-01-digital-sovereignty/data-residency-concepts/) |
-
-### Azure Local
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [azure-local-architecture.svg](/images/level-100/azure-local-architecture.svg) | Azure Local cluster architecture overview | [Azure Local overview](/level-100/module-03-azure-local/azure-local-overview/) |
-| [capex-opex-comparison.svg](/images/level-100/capex-opex-comparison.svg) | Azure Local economics comparison | [Cloud computing primer](/level-50/module-01-cloud-computing/cloud-computing-primer/) |
-
-### Edge AI
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [vector-embedding-process.svg](/images/level-100/vector-embedding-process.svg) | RAG vector embedding workflow | [RAG fundamentals](/level-100/module-05-edge-rag/rag-fundamentals/) |
-| [nist-cloud-characteristics.svg](/images/level-100/nist-cloud-characteristics.svg) | NIST cloud characteristics | [Cloud computing primer](/level-50/module-01-cloud-computing/cloud-computing-primer/) |
-
----
-
-## Level 200: Intermediate (7 diagrams)
-
-### Azure Local Deep Dive
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [storage-spaces-direct.svg](/images/level-200/storage-spaces-direct.svg) | S2D architecture and data flow | [Azure Local architecture deep dive](/level-200/module-01-azure-local/azure-local-architecture-deep-dive/) |
-| [sdn-architecture.svg](/images/level-200/sdn-architecture.svg) | Software-defined networking stack | [Azure Local advanced networking](/level-200/azure-local-advanced-networking/) |
-
-### Azure Arc
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [enterprise-arc-topology.svg](/images/level-200/enterprise-arc-topology.svg) | Enterprise Arc deployment patterns | [Arc enterprise patterns](/level-200/arc-enterprise-patterns/) |
-
-### Edge RAG
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [edge-rag-implementation.svg](/images/level-200/edge-rag-implementation.svg) | RAG implementation architecture | [Edge RAG implementation](/level-200/edge-rag-implementation/) |
-
-### Compliance & Security
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [security-patterns-matrix.svg](/images/level-200/security-patterns-matrix.svg) | Security pattern decision matrix | [Compliance security patterns](/level-200/compliance-security-patterns/) |
-| [encryption-key-hierarchy.svg](/images/level-200/encryption-key-hierarchy.svg) | Key management hierarchy | [Encryption key management](/level-200/encryption-key-management/) |
-| [fedramp-control-families.svg](/images/level-200/fedramp-control-families.svg) | FedRAMP control family overview | [FedRAMP compliance](/level-200/fedramp-compliance/) |
-
----
-
-## Level 300: Advanced (16 diagrams)
-
-### Zero Trust
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [zero-trust-architecture.svg](/images/level-300/zero-trust-architecture.svg) | Complete Zero Trust implementation | [Zero Trust](/level-300/module-05-zero-trust/) |
-| [security-monitoring-flow.svg](/images/level-300/security-monitoring-flow.svg) | Security monitoring and alerting | [Zero Trust monitoring](/level-300/module-05-zero-trust/zero-trust-monitoring/) |
-| [hybrid-identity.svg](/images/level-300/hybrid-identity.svg) | Hybrid identity architecture | [Zero Trust](/level-300/module-05-zero-trust/) |
-
-### Azure Local at Scale
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [azure-local-multisite.svg](/images/level-300/azure-local-multisite.svg) | Multi-site deployment topology | [Azure Local multi-site](/level-300/module-01-azure-local-advanced/azure-local-multi-site/) |
-| [air-gapped-architecture.svg](/images/level-300/air-gapped-architecture.svg) | Air-gapped environment design | [Azure Local disconnected operations](/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/) |
-| [disaster-recovery-topology.svg](/images/level-300/disaster-recovery-topology.svg) | DR site configuration | [Disaster recovery](/level-300/module-03-architecture-patterns/disaster-recovery/) |
-| [multi-region-sovereign.svg](/images/level-300/multi-region-sovereign.svg) | Multi-region sovereign architecture | [SLZ architecture](/level-300/module-02-sovereign-landing-zone/slz-architecture/) |
-
-### Production Edge RAG
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [edge-rag-production.svg](/images/level-300/edge-rag-production.svg) | Production RAG deployment | [Foundry Local in production](/level-300/module-04-foundry-local-production/) |
-| [mlops-pipeline.svg](/images/level-300/mlops-pipeline.svg) | MLOps continuous improvement | [Model lifecycle](/level-300/module-04-foundry-local-production/model-lifecycle/) |
-
-### Industry Verticals
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [healthcare-sovereign.svg](/images/level-300/healthcare-sovereign.svg) | Healthcare sovereignty patterns | [Healthcare sovereign](/level-300/module-07-industry-solutions/healthcare-sovereign/) |
-| [financial-services.svg](/images/level-300/financial-services.svg) | Financial services architecture | [Financial services](/level-300/module-07-industry-solutions/financial-services/) |
-| [government-cloud.svg](/images/level-300/government-cloud.svg) | Government cloud design | [Government cloud](/level-300/module-07-industry-solutions/government-cloud/) |
-| [critical-infrastructure.svg](/images/level-300/critical-infrastructure.svg) | Critical infrastructure patterns | [Critical infrastructure](/level-300/module-07-industry-solutions/critical-infrastructure/) |
-
-### Architecture Patterns
-
-| Diagram | Description | Used In |
-|---------|-------------|---------|
-| [sovereign-landing-zone.svg](/images/level-300/sovereign-landing-zone.svg) | Sovereign Landing Zone structure | [SLZ architecture](/level-300/module-02-sovereign-landing-zone/slz-architecture/) |
-| [api-gateway-patterns.svg](/images/level-300/api-gateway-patterns.svg) | API gateway architectures | [API gateway patterns](/level-300/module-03-architecture-patterns/api-gateway-patterns/) |
-| [event-driven-architecture.svg](/images/level-300/event-driven-architecture.svg) | Event-driven patterns | [Event-driven architecture](/level-300/module-03-architecture-patterns/event-driven-architecture/) |
-| [data-mesh-sovereignty.svg](/images/level-300/data-mesh-sovereignty.svg) | Data mesh with sovereignty | [Data mesh sovereignty](/level-300/module-03-architecture-patterns/data-mesh-sovereignty/) |
-| [observability-stack.svg](/images/level-300/observability-stack.svg) | Observability architecture | [Observability stack](/level-300/module-06-operations/observability-stack/) |
-
----
-
-## Python Source Scripts
-
-All diagram sources are located in `docs/assets/diagrams/src/`:
-
-```text
-docs/assets/diagrams/src/
-├── level-50/     (21 scripts)
-├── level-100/    (9 scripts)
-├── level-200/    (7 scripts)
-└── level-300/    (16 scripts)
-```
-
-### Script Naming Convention
-
-- Script: `{diagram-name}.py`
-- Output: `docs/assets/images/level-{N}/{diagram-name}.svg`
-
-### Common Script Structure
-
-```python
-import matplotlib.pyplot as plt
-
-# Azure color palette
-AZURE_BLUE = '#0078D4'
-AZURE_DARK = '#004578'
-AZURE_GREEN = '#107C10'
-
-def create_diagram():
-    fig, ax = plt.subplots(figsize=(12, 8))
-    # ... diagram logic ...
-    plt.savefig('output.svg', format='svg', bbox_inches='tight')
-
-if __name__ == '__main__':
-    create_diagram()
-```
-
----
-
-## Adding New Diagrams
-
-1. Create Python script in appropriate `src/level-{N}/` folder
-2. Follow existing naming and color conventions
-3. Run regeneration: `npm run diagrams:level{N}`
-4. Embed in target Markdown file
-5. Update this index
-
----
-
-**Last Updated:** January 2025
+This page lists every SVG diagram that a learning page shows today (34 diagrams), grouped by level, with the alt text and the pages that use it. Mermaid diagrams are written inline in the pages and are not listed here.
+
+40 older SVG files are no longer shown on any page. They stay in `site/public/images/` so links to them keep working, and are listed under each level.
+
+## Add or replace a diagram
+
+1. Prefer a Mermaid block for simple flows and hierarchies. The site applies its color palette to Mermaid automatically.
+2. For a full diagram, write an SVG by hand in `site/public/images/<level>/`. Match the style of the current `*-2026.svg` files: real `<text>` elements, a `<title>` and `<desc>`, and readable font sizes.
+3. To replace an outdated diagram, save the new version under a new file name (for example `<name>-2026.svg`), point the page at it, and keep the old file.
+4. Reference images with root-relative paths such as `![Alt text](/images/level-100/name.svg)`. The build adds the base path.
+5. Write alt text that states what the diagram shows, not that it is a diagram.
+6. Check every fact in a diagram against Microsoft Learn, the same as page text. Use official names, for example from the Azure architecture icons set.
+
+## Level 50
+
+| Diagram | What it shows | Used on |
+|---|---|---|
+| [authentication-authorization-flow.svg](/images/level-50/authentication-authorization-flow.svg) | Flow from a user to authentication ("who are you?"), which verifies identity. An invalid identity is denied. A valid identity goes to authorization ("what can you do?"), which checks permissions. Allowed requests reach the resource. Requests without permission are denied. | [Identity and access basics](/level-50/module-02-security-compliance/identity-access-basics/) |
+| [azure-compute-options.svg](/images/level-50/azure-compute-options.svg) | Three groups from most control to least management. Infrastructure: Virtual Machines and VM Scale Sets. Platform: App Service, Container Instances, and Kubernetes Service. Serverless: Azure Functions and Logic Apps. | [Azure service categories](/level-50/module-03-azure-intro/azure-service-categories/) |
+| [azure-infrastructure-hierarchy.svg](/images/level-50/azure-infrastructure-hierarchy.svg) | Hierarchy diagram. A geography is a regulatory boundary that contains regions. A region contains availability zones. Each availability zone is a fault-isolation boundary that contains one or more datacenters. | [Azure global infrastructure](/level-50/module-03-azure-intro/azure-global-infrastructure/) |
+| [azure-networking-fundamentals.svg](/images/level-50/azure-networking-fundamentals.svg) | Internet traffic enters through Application Gateway and a load balancer into a virtual network with two subnets, protected by a network security group and Azure Firewall. An on-premises datacenter connects to the virtual network through VPN or ExpressRoute. | [Azure service categories](/level-50/module-03-azure-intro/azure-service-categories/) |
+| [azure-service-categories-2026.svg](/images/level-50/azure-service-categories-2026.svg) | Ten cards in two rows. Core categories: compute (Virtual Machines, App Service, Azure Functions, Azure Kubernetes Service), networking (Virtual Network, VPN Gateway, ExpressRoute, Azure DNS), storage (Blob Storage, Azure Files, Managed Disks, Queue Storage), and identity and security (Microsoft Entra ID, Azure Key Vault, Defender for Cloud). Other categories: databases, AI and machine learning (Microsoft Foundry, Foundry Tools, Azure Machine Learning), analytics, integration, Internet of Things, and management and governance. | [Azure service categories](/level-50/module-03-azure-intro/azure-service-categories/) |
+| [azure-storage-tiers.svg](/images/level-50/azure-storage-tiers.svg) | Four tiers from left to right. Hot: frequent access, lowest access cost, higher storage cost. Cool: infrequent access, 30-day minimum. Cold: rare access, 90-day minimum. Archive: offline, 180-day minimum, lowest storage cost, hours to rehydrate. | [Azure service categories](/level-50/module-03-azure-intro/azure-service-categories/) |
+| [cia-triad.svg](/images/level-50/cia-triad.svg) | Triangle with confidentiality, integrity, and availability at its corners. Confidentiality lists access controls, encryption, and authentication. Integrity lists checksums, digital signatures, and version control. Availability lists redundancy, backups, and disaster recovery. | [Security and compliance basics](/level-50/module-02-security-compliance/security-compliance-basics/) |
+| [cloud-computing-mindmap.svg](/images/level-50/cloud-computing-mindmap.svg) | Mind map with cloud computing at the center and five branches: on-demand self-service, broad network access, resource pooling, rapid elasticity, and measured service, each with short examples. | [Cloud computing primer](/level-50/module-01-cloud-computing/cloud-computing-primer/) |
+| [cloud-deployment-models-overview.svg](/images/level-50/cloud-deployment-models-overview.svg) | Four cards. Public cloud: shared infrastructure, internet access, pay per use. Private cloud: dedicated infrastructure, on-premises or hosted, full control. Hybrid cloud: public plus private, unified management, workload flexibility. Multicloud: multiple providers, choose services per provider, avoid lock-in. | [Cloud deployment models](/level-50/module-01-cloud-computing/cloud-deployment-models/) |
+| [cloud-scalability-patterns.svg](/images/level-50/cloud-scalability-patterns.svg) | Three panels. Vertical scaling: one VM grows from 2 CPUs and 4 GB to 16 CPUs and 64 GB. Horizontal scaling: a load balancer spreads traffic across several instances. Autoscaling: the number of instances rises from 2 at low demand to 10 at peak and falls again. | [Cloud benefits and considerations](/level-50/module-01-cloud-computing/cloud-benefits/) |
+| [compliance-offerings-2026.svg](/images/level-50/compliance-offerings-2026.svg) | Four columns. Globally applicable: ISO/IEC 27001, SOC 1, SOC 2, SOC 3, CSA STAR. US government: FedRAMP High, DoD Impact Levels, CJIS. Industry specific: PCI DSS, HITRUST, HIPAA. Region or country specific: Germany C5, Spain ENS High, Australia IRAP. | [Compliance frameworks](/level-50/module-02-security-compliance/compliance-frameworks/) |
+| [data-classification-pyramid.svg](/images/level-50/data-classification-pyramid.svg) | Pyramid with four levels. Public at the base with basic controls, then internal, then confidential, and restricted at the top with the highest protection. Examples range from marketing materials at the base to personal data, credentials, and trade secrets at the top. | [Data protection principles](/level-50/module-02-security-compliance/data-protection-principles/) |
+| [defense-in-depth-2026.svg](/images/level-50/defense-in-depth-2026.svg) | Seven nested boxes with data at the center. From the outside in: physical security, identity and access, perimeter, network, compute, application, data. A legend lists example controls for each layer. | [Security and compliance basics](/level-50/module-02-security-compliance/security-compliance-basics/) |
+| [hypervisor-types.svg](/images/level-50/hypervisor-types.svg) | Two stacks side by side. Type 1: physical hardware, then the hypervisor, then VMs. Type 2: physical hardware, then a host operating system, then the hypervisor, then VMs. | [Cloud computing primer](/level-50/module-01-cloud-computing/cloud-computing-primer/) |
+| [regulatory-timeline-2026.svg](/images/level-50/regulatory-timeline-2026.svg) | Timeline with six milestones. December 2011: FedRAMP established. May 25, 2018: GDPR takes effect. 2022: NIS2 Directive (EU) 2022/2555 adopted. January 17, 2025: DORA applies. April 30, 2025: Microsoft announces five European digital commitments. November 18, 2025: EU supervisors list critical ICT providers under DORA, including Microsoft Ireland Operations Limited. | [Compliance frameworks](/level-50/module-02-security-compliance/compliance-frameworks/) |
+| [shared-responsibility-matrix-2026.svg](/images/level-50/shared-responsibility-matrix-2026.svg) | Matrix with ten rows and four columns (on-premises, IaaS, PaaS, SaaS). The customer owns customer data, configurations and settings, and identities and users in every column. Physical hosts, network, and datacenter belong to the provider in IaaS, PaaS, and SaaS. Client devices become shared in SaaS. Applications are shared in PaaS and SaaS. Network controls are shared in PaaS and run by the provider in SaaS. The operating system moves to the provider in PaaS and SaaS. | [Cloud service models](/level-50/module-01-cloud-computing/cloud-service-models/) |
+| [traditional-vs-cloud.svg](/images/level-50/traditional-vs-cloud.svg) | Two columns. Traditional IT: purchase hardware, install and configure over weeks or months, maintain and patch with in-house staff, scale manually, decommission. Cloud computing: request resources, provision in minutes, provider manages the platform, autoscale, pay per use. | [Cloud computing primer](/level-50/module-01-cloud-computing/cloud-computing-primer/) |
+
+Not used on any page. These files stay published so their old URLs keep working: `azure-service-categories.svg`, `cloud-deployment-models.svg`, `cloud-tco-comparison.svg`, `compliance-frameworks-comparison.svg`, `defense-in-depth.svg`, `shared-responsibility-matrix.svg`, `shared-responsibility-shift.svg`.
+
+## Level 100
+
+| Diagram | What it shows | Used on |
+|---|---|---|
+| [azure-local-architecture-2026.svg](/images/level-100/azure-local-architecture-2026.svg) | Azure management plane connects through Azure Arc to Azure Local VMs and AKS on Azure Local running on Hyper-V, Storage Spaces Direct, failover clustering, networking, and one to 16 hyperconverged machines. | [Azure Local architecture](/level-100/module-03-azure-local/azure-local-architecture/) |
+| [eu-data-boundary-2026.svg](/images/level-100/eu-data-boundary-2026.svg) | Diagram of the EU Data Boundary showing EU and EFTA countries, covered services, covered data types, and product-specific scope rules. | [European digital commitments](/level-100/module-01-digital-sovereignty/european-commitments/) |
+| [sovereign-cloud-models-2026.svg](/images/level-100/sovereign-cloud-models-2026.svg) | Three-column diagram of Microsoft Sovereign Cloud models, showing the operator, location, and building blocks for Sovereign Public Cloud, Sovereign Private Cloud, and National Partner Clouds. | [Sovereign cloud models](/level-100/module-02-cloud-models/sovereign-cloud-models/) |
+| [vector-embedding-process-2026.svg](/images/level-100/vector-embedding-process-2026.svg) | Vector embedding process showing documents split into chunks, embedded into vectors in a vector store, and a query matched by similarity before the top chunks and question go to a language model | [RAG fundamentals](/level-100/module-05-foundry-local/rag-fundamentals/) |
+
+Not used on any page. These files stay published so their old URLs keep working: `azure-local-architecture.svg`, `azure-regions-map.svg`, `capex-opex-comparison.svg`, `data-classification-pyramid.svg`, `eu-data-boundary.svg`, `nist-cloud-characteristics.svg`, `regulatory-timeline.svg`, `sovereign-cloud-models-comparison.svg`, `vector-embedding-process.svg`.
+
+## Level 200
+
+| Diagram | What it shows | Used on |
+|---|---|---|
+| [compliance-security-patterns-2026.svg](/images/level-200/compliance-security-patterns-2026.svg) | Compliance control map showing requirements, Microsoft tooling, and evidence outputs | [Compliance and security patterns](/level-200/module-05-compliance/compliance-security-patterns/) |
+| [encryption-key-hierarchy-2026.svg](/images/level-200/encryption-key-hierarchy-2026.svg) | Encryption key hierarchy for sovereign workloads showing Managed HSM, optional external HSM, key-encryption keys, data-encryption keys, protected services, attestation, and evidence logs. | [Encryption key management](/level-200/module-06-sovereign-public-cloud-controls/encryption-key-management/) |
+| [enterprise-arc-topology-2026.svg](/images/level-200/enterprise-arc-topology-2026.svg) | Enterprise Azure Arc topology showing management groups, subscriptions, Arc gateway, Private Link, and hybrid resource groups | [Arc enterprise patterns](/level-200/module-02-arc/arc-enterprise-patterns/) |
+| [fedramp-boundaries-2026.svg](/images/level-200/fedramp-boundaries-2026.svg) | FedRAMP and Azure Government boundary map for Azure public regions, Azure Government regions, DoD regions, Secret, and Top Secret | [FedRAMP compliance](/level-200/module-05-compliance/fedramp-compliance/) |
+| [foundry-local-agentic-retrieval-2026.svg](/images/level-200/foundry-local-agentic-retrieval-2026.svg) | Azure Local and AKS Arc cluster running Foundry Local inference beside Agentic Retrieval services for ingestion, collections, agents, MCP, and chat. | [Foundry Local deployment](/level-200/module-03-foundry-local/foundry-local-deployment/) |
+| [sdn-architecture-2026.svg](/images/level-200/sdn-architecture-2026.svg) | SDN enabled by Arc: Azure portal, CLI, and ARM templates manage logical networks and NSGs through Azure Arc, and Network Controller runs as a Failover Cluster service that applies them to Azure Local VM NICs | [Azure Local advanced networking](/level-200/module-01-azure-local/azure-local-advanced-networking/) |
+| [storage-spaces-direct-2026.svg](/images/level-200/storage-spaces-direct-2026.svg) | Azure Local storage path showing direct-attached disks, Storage Spaces Direct, a shared storage pool, resiliency, CSVs, and VMs | [Azure Local architecture deep dive](/level-200/module-01-azure-local/azure-local-architecture-deep-dive/) |
+
+Not used on any page. These files stay published so their old URLs keep working: `edge-rag-implementation.svg`, `encryption-key-hierarchy.svg`, `enterprise-arc-topology.svg`, `fedramp-control-families.svg`, `sdn-architecture.svg`, `security-patterns-matrix.svg`, `storage-spaces-direct.svg`.
+
+## Level 300
+
+| Diagram | What it shows | Used on |
+|---|---|---|
+| [azure-local-disconnected-operations-2026.svg](/images/level-300/azure-local-disconnected-operations-2026.svg) | Disconnected operations: a management cluster hosts the local control plane and manages Azure Local workload instances inside the customer boundary, with no connection to Azure | [Azure Local disconnected operations](/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/) |
+| [foundry-local-model-lifecycle-2026.svg](/images/level-300/foundry-local-model-lifecycle-2026.svg) | Foundry Local model lifecycle: get a model from the catalog, an imported expansion pack, or your own OCI registry, cache it on the cluster, define Model and ModelDeployment resources, evaluate on the cluster, then serve through the gateway and monitor | [Model lifecycle](/level-300/module-04-foundry-local-production/model-lifecycle/) |
+| [foundry-local-production-2026.svg](/images/level-300/foundry-local-production-2026.svg) | Foundry Local on Azure Local in production: clients and Agentic Retrieval call a Gateway API (Istio) endpoint, which routes to ONNX-GenAI deployments directly and, through the Endpoint Picker, to multi-replica vLLM deployments on GPU nodes of a multi-node AKS cluster on Azure Local, managed through Azure Arc | [Module 4: Foundry Local in production](/level-300/module-04-foundry-local-production/) |
+| [security-monitoring-flow.svg](/images/level-300/security-monitoring-flow.svg) | Security monitoring flow showing sources, Log Analytics, Sentinel, Defender for Cloud, and SOAR playbooks | [Zero Trust monitoring and compliance](/level-300/module-05-zero-trust/zero-trust-monitoring/) |
+| [sovereign-landing-zone-2026.svg](/images/level-300/sovereign-landing-zone-2026.svg) | Sovereign Landing Zone management group hierarchy: Platform with Management, Connectivity, Identity, and Security (Managed HSM); Landing zones with Corp, Online, Public, Confidential Corp, and Confidential Online; plus Sandbox and Decommissioned | [SLZ architecture](/level-300/module-02-sovereign-landing-zone/slz-architecture/) |
+| [zero-trust-pillars-2026.svg](/images/level-300/zero-trust-pillars-2026.svg) | Zero Trust architecture: three principles applied across seven technology pillars, Identities, Endpoints, Data, Apps, Infrastructure, Network, and SecOps, with Conditional Access as the policy engine | [Zero Trust architecture for sovereign estates](/level-300/module-05-zero-trust/zero-trust-architecture/) |
+
+Not used on any page. These files stay published so their old URLs keep working: `air-gapped-architecture.svg`, `api-gateway-patterns.svg`, `azure-local-multisite.svg`, `critical-infrastructure.svg`, `data-mesh-sovereignty.svg`, `disaster-recovery-topology.svg`, `edge-rag-production.svg`, `event-driven-architecture.svg`, `financial-services.svg`, `government-cloud.svg`, `healthcare-sovereign.svg`, `hybrid-identity.svg`, `mlops-pipeline.svg`, `multi-region-sovereign.svg`, `observability-stack.svg`, `sovereign-landing-zone.svg`, `zero-trust-architecture.svg`.
 
 ## Sources
 
-- [Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/)
+- [Azure icons, Azure Architecture Center](https://learn.microsoft.com/azure/architecture/icons/)

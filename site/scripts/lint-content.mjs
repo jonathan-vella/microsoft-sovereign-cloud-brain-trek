@@ -5,7 +5,7 @@
  * Errors (always fail):
  *   - hard-coded base path in a page body (write `/images/...` or `/level-100/...`; the build adds the base)
  *   - `lastVerified` present but not YYYY-MM-DD
- * Metadata checks (warn by default, fail with --strict):
+ * Metadata checks (fail with --strict, which `npm run lint:content` and CI use; warn without it):
  *   - missing `lastVerified`
  *   - missing `## Sources` section
  *   - Sources links outside the allowed Microsoft domains
