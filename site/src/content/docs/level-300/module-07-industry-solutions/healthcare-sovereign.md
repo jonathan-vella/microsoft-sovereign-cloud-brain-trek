@@ -1,7 +1,7 @@
 ---
 title: "Healthcare sovereignty"
 description: "Design healthcare workloads with HIPAA, HITRUST, FHIR, EU data, and confidential workload controls across Microsoft cloud models."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 2
 ---
@@ -65,11 +65,13 @@ Do not treat the FHIR service as a free path to analytics. Downstream systems in
 
 ## On-premises and edge healthcare
 
-Azure Local fits hospitals, labs, imaging sites, and remote-care locations that require local operations. Keep safety-critical clinical systems operational without depending on a public cloud control path. If the deployment is connected, Azure Arc can supply inventory, policy, monitoring, and update coordination. If the site needs disconnected operations, use the Azure Local disconnected operations requirements and treat AKS under disconnected operations separately because Microsoft documents it as preview.
+Azure Local fits hospitals, labs, imaging sites, and remote-care locations that require local operations. Keep safety-critical clinical systems operational without depending on a public cloud control path. If the deployment is connected, Azure Arc can supply inventory, policy, monitoring, and update coordination. If the site needs disconnected operations, verify the local control-plane requirements. AKS under disconnected operations is GA from disconnected operations release 2609 ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)). Verify the support status of clinical workloads separately.
 
 Microsoft 365 Local is relevant when clinical communications and document collaboration must remain local. It runs Exchange Server, SharePoint Server, and Skype for Business Server Subscription Editions on Azure Local Premier Solution hardware. That is a different design choice from Microsoft 365 in the EU Data Boundary. Use Microsoft 365 Local only when the collaboration workload itself needs private-cloud placement.
 
 ## Sources
+
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)
 
 - [Health Insurance Portability and Accountability Act and HITECH Act](https://learn.microsoft.com/compliance/regulatory/offering-hipaa-hitech)
 - [Compliance in Microsoft for Healthcare](https://learn.microsoft.com/industry/healthcare/compliance-overview)

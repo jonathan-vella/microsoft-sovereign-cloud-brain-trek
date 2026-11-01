@@ -1,7 +1,7 @@
 ---
 title: "Arc cost optimization"
 description: "Plan Azure Arc cost ownership with free control-plane capabilities, paid layered services, Windows Server licensing, ESU, and governance controls."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 4
 ---
@@ -28,7 +28,7 @@ For prices, link customers to current pricing pages instead of copying numbers i
 
 ## Treat linked services as the main cost driver
 
-The Cloud Adoption Framework cost governance page for Arc-enabled servers is deprecated and scheduled for removal on October 30, 2026, but it clearly states the cost boundary: Arc control-plane functionality is provided at no extra cost, while Azure services used with Arc-enabled servers incur costs according to their usage ([Learn](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-cost-governance)). The deprecation is a documentation lifecycle note, not a product retirement.
+The [former CAF cost governance URL](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-cost-governance) now redirects to cloud-native licensing guidance. For the cost boundary, use the current Arc overview. Arc control-plane functionality is provided at no extra cost, while attached Azure services incur their own usage charges ([Learn](https://learn.microsoft.com/azure/azure-arc/overview#pricing)). The redirect is a documentation change, not a product retirement.
 
 Common linked services include:
 
@@ -64,10 +64,12 @@ Record the chosen licensing path per server:
 
 Extended Security Updates enabled by Azure Arc provide a pay-as-you-go monthly path for eligible Windows Server versions after end of support. Microsoft states that Windows Server 2012 and 2012 R2 reached end of support on October 10, 2023, Windows Server 2016 reaches end of support on January 12, 2027, and Windows Server 2016 ESU configuration in the Azure portal starts August 3, 2026, with billing beginning January 13, 2027 ([Learn](https://learn.microsoft.com/azure/azure-arc/servers/cloud-native/licensing-cost-management#extended-security-updates-esus)).
 
+The Windows Server 2012 and 2012 R2 ESU period ended on October 13, 2026. The security update on that date was the final ESU update. Those workloads now need migration or an operating-system upgrade, not a new Arc ESU enrollment ([Learn](https://learn.microsoft.com/azure/azure-arc/servers/cloud-native/licensing-cost-management#extended-security-updates-esus)).
+
 For cost planning, ESU is not a substitute for modernization. Treat it as a dated exception with a retirement plan:
 
 1. Identify servers by operating system version and business owner.
-2. Decide whether to migrate, upgrade, retire, or enroll in ESU.
+2. Decide whether to migrate, upgrade, retire, or enroll in ESU if the operating system still has an active ESU period.
 3. Track ESU coverage in Azure.
 4. Include ESU costs in the same showback view as Azure Monitor, Defender, and Sentinel.
 5. Review exceptions quarterly.
@@ -110,7 +112,8 @@ The outcome of the review should be a small set of actions, not a dashboard scre
 ## Sources
 
 - [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/overview#pricing)
-- [Cost governance for Azure Arc-enabled servers](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-cost-governance)
+- [Former CAF cost governance guidance (redirects to cloud-native licensing)](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-cost-governance)
+- [Azure Arc overview and pricing](https://learn.microsoft.com/azure/azure-arc/overview)
 - [Cloud-native licensing and cost management with Arc-enabled servers](https://learn.microsoft.com/azure/azure-arc/servers/cloud-native/licensing-cost-management)
 - [Windows Server Management enabled by Azure Arc](https://learn.microsoft.com/azure/azure-arc/servers/windows-server-management-overview)
 - [Azure Automanage for Machines Best Practices - Azure Arc-enabled servers](https://learn.microsoft.com/azure/automanage/automanage-arc)

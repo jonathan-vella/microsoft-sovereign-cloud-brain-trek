@@ -1,7 +1,7 @@
 ---
 title: "Financial services"
 description: "Design financial services workloads for DORA, PCI DSS, and sovereign control requirements across Microsoft cloud models."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 1
 ---
@@ -55,7 +55,7 @@ For workloads that can use public Azure, start with SLZ. For workloads that must
 | Data residency | SLZ Level 1 and Data Guardian where applicable | Keep customer data in approved regions and use Data Guardian for EU and EFTA remote-access oversight. |
 | Encryption at rest and in transit | SLZ Level 2, CMK, Managed HSM, private endpoints, TLS policies | Use customer-managed keys for regulated stores and private network paths for CDE services. |
 | Key isolation | [Managed HSM key sovereignty](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management) | Managed HSM is single-tenant and [FIPS 140-3 Level 3](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management). Place it in the SLZ security subscription. |
-| External keys | [Managed HSM external key management preview](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview) | EKM is preview, gated by Microsoft account-team enablement and an annual Azure revenue threshold. It excludes Azure Government and Azure China. Do not use it as a required control unless the account is approved. |
+| External keys | [Managed HSM external key management](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview) | EKM is generally available to all customers after automatically approved per-subscription registration. Azure Government and Azure China remain out of scope. |
 | Encryption in use | SLZ Level 3 and Azure confidential computing | Use confidential VMs, confidential AKS worker nodes, or confidential containers when the threat model includes host access to sensitive data in use. |
 | Microsoft support access | Customer Lockbox and Data Guardian | Use Customer Lockbox for supported services and Data Guardian where the EU oversight model applies. |
 
@@ -63,7 +63,7 @@ For workloads that can use public Azure, start with SLZ. For workloads that must
 
 CDE isolation reduces audit scope only when data movement is controlled. Do not connect AI, data lake, or fraud platforms directly to cardholder data. Build a tokenization service inside the CDE and publish only tokens, risk features, and decisions to analytics zones. If fraud models need raw card data, the model-serving and feature store components become part of the CDE.
 
-Managed HSM is the default high-control key store for Azure services that support it. EKM is different. It keeps the key-encryption key outside Microsoft through an EKM proxy, but it is still [preview](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview), has limited operation support, and has no SLA for external keys. Treat EKM as an exception path for a regulator-driven key requirement, not as a baseline financial-services pattern.
+Managed HSM is the default high-control key store for Azure services that support it. EKM keeps the key-encryption key outside Microsoft through an EKM proxy and is [generally available](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview). The Managed HSM service retains its SLA, but Microsoft provides no end-to-end SLA for external keys or coverage for the customer-operated proxy and HSM ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)). Treat EKM as an exception path for a regulator-driven key requirement, not as a baseline financial-services pattern.
 
 DORA also changes operations. A resilient architecture needs incident reporting paths, service health monitoring, supplier-risk evidence, and tested recovery. Build these into the landing zone runbook. Record who owns the Defender control, who reviews Customer Lockbox requests, who approves key rotation, and who can authorize failover from Azure to Azure Local.
 

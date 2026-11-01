@@ -1,7 +1,7 @@
 ---
 title: "Knowledge check: Azure Arc at scale"
 description: "Ten scenario questions on Azure Arc gateway, resource bridge, policy, Kubernetes governance, licensing, and cost planning."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 99
 ---
@@ -51,7 +51,7 @@ A platform team wants to use Arc gateway for a new Azure Local deployment and fo
 
 <KnowledgeCheck answer="B" reference="/level-200/module-02-arc/arc-advanced-management/">
 
-B is correct because Microsoft states that Arc gateway for Azure Local infrastructure and Azure Local VMs is generally available, while Arc gateway for AKS on Azure Local is still in preview. A and C reverse or invent the status. D is wrong because the Azure Local gateway article says it is enabled during new deployments for supported versions, not after deployment.
+B is correct because Microsoft states that Arc gateway for Azure Local infrastructure and Azure Local VMs is generally available, while Arc gateway for AKS on Azure Local is still in preview. A and C reverse or invent the status. D is wrong because enabling gateway after deployment is a preview for hyperconverged instances running Azure Local 2610 or later, not any existing deployment ([Learn](https://learn.microsoft.com/azure/azure-local/manage/enable-arc-gateway-after-deployment)).
 
 </KnowledgeCheck>
 
@@ -161,6 +161,8 @@ B is correct because Azure Arc-enabled data services support direct connectivity
 </KnowledgeCheck>
 
 ## Sources
+
+- [Enable Azure Arc gateway after deployment on Azure Local (preview)](https://learn.microsoft.com/azure/azure-local/manage/enable-arc-gateway-after-deployment)
 
 - [Simplify network configuration requirements with Azure Arc gateway](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway)
 - [About Azure Arc gateway for Azure Local](https://learn.microsoft.com/azure/azure-local/deploy/deployment-azure-arc-gateway-overview)

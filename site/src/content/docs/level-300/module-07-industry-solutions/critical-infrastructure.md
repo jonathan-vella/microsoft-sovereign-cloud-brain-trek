@@ -1,7 +1,7 @@
 ---
 title: "Critical infrastructure"
 description: "Design critical infrastructure patterns for NIS2, OT security, Azure IoT Operations, Defender for IoT, and Azure Local edge sites."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 4
 ---
@@ -22,7 +22,7 @@ Azure IoT Operations is documented as a current edge-connected IoT offering. Mic
 | --- | --- | --- | --- |
 | Plant telemetry and contextualization | Azure IoT Operations on Arc-enabled Kubernetes | MQTT broker, OPC UA connector, data flows, and cloud routing run at the edge. | The 72-hour offline limit is for Azure IoT Operations. It is not the same as Azure Local disconnected operations. |
 | OT asset visibility and threat detection | Defender for IoT sensors | Agentless network monitoring discovers OT devices and identifies vulnerabilities and threats. | Decide which sensors connect to Azure and which remain on-premises or air-gapped. |
-| Edge compute in regulated sites | Azure Local | VMs, AKS on Azure Local, and Azure Arc governance can run close to operations. | Azure Local disconnected operations require 2602 or later. AKS under disconnected operations remains preview. |
+| Edge compute in regulated sites | Azure Local | VMs, AKS on Azure Local, and Azure Arc governance can run close to operations. | Azure Local disconnected operations require 2602 or later. AKS under disconnected operations is generally available from disconnected operations release 2609. ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)) |
 | Small substations, factories, or remote sites | Azure Local small form factor | Microsoft documents small form factor as a deployment type for space and power constrained sites. | AI workloads and Foundry Local on small form factor are preview. Confirm hardware catalog support. |
 | Central compliance and posture | Defender for Cloud NIS2 standard, Azure Policy, Purview Compliance Manager | Central teams can track NIS2 controls while site systems continue operating locally. | Do not infer compliance from a dashboard alone. Map findings to process owners and evidence. |
 | Local collaboration for site teams | Microsoft 365 Local where required | Exchange Server, SharePoint Server, and Skype for Business Server can run on Azure Local. | Only use it when collaboration data also needs private-cloud placement. |
@@ -62,11 +62,11 @@ The pattern keeps operational control local. OT assets publish telemetry to loca
 
 ## Edge and disconnected operations
 
-Azure Local is the base platform when the site needs local compute, local storage, and Azure-consistent management. Connected Azure Local deployments can tolerate a period without Azure connectivity for running workloads, but disconnected operations are a separate mode with eligibility and deployment requirements. Microsoft documents Azure Local disconnected operations as requiring [Azure Local 2602 or later](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview), while [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview) remains preview.
+Azure Local is the base platform when the site needs local compute, local storage, and Azure-consistent management. Connected Azure Local deployments can tolerate a period without Azure connectivity for running workloads, but disconnected operations are a separate mode with eligibility and deployment requirements. Azure Local disconnected operations require [Azure Local 2602 or later](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview). AKS under disconnected operations is GA from disconnected operations release 2609 ([release notes](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)).
 
-Do not combine these statuses. An Azure Local platform can be ready for disconnected operations while Kubernetes workloads under that mode still carry preview constraints. If the site needs Kubernetes for Azure IoT Operations, validate the deployment mode, support level, and dependency list before promising disconnected operation.
+Check support for each workload independently of the platform's GA status. If the site needs Kubernetes for Azure IoT Operations, validate the deployment mode, support level, and dependency list before promising disconnected operation.
 
-Small form factor Azure Local can fit field sites with space or power limits. Use it for local telemetry processing, buffering, and selected VMs. If the design includes AI workloads or Foundry Local on small form factor, mark those components as preview because Microsoft documents that status for those workloads.
+Small form factor Azure Local can fit field sites with space or power limits. Its supported workloads include AKS, but not Azure Local VMs or Azure IoT Operations. AI workloads and Foundry Local on small form factor remain preview ([Learn](https://learn.microsoft.com/azure/azure-local/plan/find-your-deployment-type#workload-availability-by-deployment-type)). Check the workload table before choosing it for telemetry processing or buffering.
 
 ## OT security notes
 
@@ -87,3 +87,4 @@ Azure IoT Operations should not be the sole authority for safety-critical decisi
 - [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
 - [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview)
 - [Find your Azure Local deployment type](https://learn.microsoft.com/azure/azure-local/plan/find-your-deployment-type)
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)

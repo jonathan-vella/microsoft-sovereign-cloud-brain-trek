@@ -1,7 +1,7 @@
 ---
 title: "Level 300: Advanced"
 description: "Architect-level design for Microsoft Sovereign Cloud: Azure Local at scale, Sovereign Landing Zone, Foundry Local in production, Zero Trust, operations, and industry patterns."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   label: Overview
   order: 6
@@ -22,7 +22,7 @@ Kubernetes resources, so read access to a lab helps but is not required.
 
 | Topic | What you design | Status to plan around |
 |---|---|---|
-| Azure Local | Fleets of instances, multi-site, networking, certificates, disconnected operations | Disconnected operations are GA from 2602; AKS under disconnected operations is preview ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)) |
+| Azure Local | Fleets of instances, multi-site, networking, certificates, disconnected operations | Disconnected operations are GA from 2602; AKS under disconnected operations is generally available from disconnected operations release 2609 ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)) ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)) |
 | Sovereign Landing Zone | Management groups, Level 1 to 3 controls, accelerators | The `Microsoft.Sovereign` resource provider is at API version 2025-02-27-preview ([Learn](https://learn.microsoft.com/azure/templates/microsoft.sovereign/landingzoneaccounts)) |
 | Foundry Local | Multi-node inference, routing, model lifecycle | Foundry Local on Azure Local and Agentic Retrieval (formerly Edge RAG) are preview ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)) |
 | Zero Trust | Seven technology pillars, including SecOps | Current adoption model ([Learn](https://learn.microsoft.com/security/zero-trust/deploy/overview)) |
@@ -44,3 +44,4 @@ still has a maximum of 16 machines (hyperconverged), 64 (disaggregated), or 128 
 - [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
 - [Zero Trust deployment overview](https://learn.microsoft.com/security/zero-trust/deploy/overview)
 - [What is DORA?](https://learn.microsoft.com/compliance/dora/dora-what-is-dora)
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)

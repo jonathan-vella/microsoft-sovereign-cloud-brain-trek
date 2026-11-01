@@ -1,7 +1,7 @@
 ---
 title: "Data mesh sovereignty"
 description: "Apply data mesh patterns with Microsoft Purview, Microsoft Fabric, CMK, and domain residency controls."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 3
 ---
@@ -77,7 +77,7 @@ Purview can scan sources and capture metadata across a data estate. Use scans to
 
 For each data product, record the residency rule in the contract. A rule can be "EU regions only," "France regions only," "customer site only," or another approved boundary. The EU Data Boundary includes Azure, Dynamics 365, Power Platform, and Microsoft 365 across the EU and EFTA countries, but Azure scope follows the EU Data Boundary region where the customer deploys the service ([source](https://learn.microsoft.com/privacy/eudb/eu-data-boundary-learn)). Do not infer that a non-regional or globally managed feature is automatically in boundary.
 
-Use customer-managed keys when the classification requires customer key control and the service supports it. For higher-control designs, Azure Key Vault Managed HSM key sovereignty is GA, uses FIPS 140-3 Level 3 hardware security modules, and gives single-tenant isolation with customer-controlled security domains ([source](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management)). True Managed HSM External Key Management, where the key-encryption-key is held outside Microsoft through an EKM Proxy, is in preview ([source](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)).
+Use customer-managed keys when the classification requires customer key control and the service supports it. For higher-control designs, Azure Key Vault Managed HSM key sovereignty is GA, uses FIPS 140-3 Level 3 hardware security modules, and gives single-tenant isolation with customer-controlled security domains ([source](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management)). True Managed HSM External Key Management, where the key-encryption-key is held outside Microsoft through an EKM Proxy, is generally available ([source](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)).
 
 Key decisions:
 

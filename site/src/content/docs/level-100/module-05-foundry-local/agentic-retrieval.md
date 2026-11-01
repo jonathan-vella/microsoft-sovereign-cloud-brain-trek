@@ -1,7 +1,7 @@
 ---
 title: "Agentic Retrieval"
 description: "Map the former Edge RAG concepts to Agentic Retrieval in Foundry Local, including collections, APIs, MCP, and model endpoints."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 3
 ---

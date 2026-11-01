@@ -1,7 +1,7 @@
 ---
 title: "Data Guardian and Customer Lockbox"
 description: "Compare Data Guardian and Customer Lockbox for Microsoft remote access oversight, approval, logging, and service coverage."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 2
 ---

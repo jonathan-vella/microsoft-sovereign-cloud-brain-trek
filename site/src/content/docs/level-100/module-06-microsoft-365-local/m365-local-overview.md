@@ -1,7 +1,7 @@
 ---
 title: "Microsoft 365 Local overview"
 description: "Understand what Microsoft 365 Local includes, why it matters for sovereignty, and how its support commitment differs by server product."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 6.1
 ---

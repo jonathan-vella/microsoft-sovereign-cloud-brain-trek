@@ -1,7 +1,7 @@
 ---
 title: Sovereign Private Cloud
 description: "Learn how Sovereign Private Cloud uses Azure Local, Microsoft 365 Local, GitHub Enterprise Local, and Foundry Local in customer-operated environments."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 3
 ---
@@ -14,7 +14,7 @@ For a comparison of all three models, see [sovereign cloud models](/level-100/mo
 
 Sovereign Private Cloud supports connected, intermittently connected, and disconnected operation. Connected environments use Azure for services such as centralized monitoring, lifecycle management, and policy. Intermittently connected environments keep workloads running during temporary outages. Disconnected environments run the Azure control plane and management services locally.
 
-Azure Local disconnected operations require Azure Local 2602 or later and are [generally available](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2609). AKS on Azure Local with disconnected operations is still [preview](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview).
+Azure Local disconnected operations require Azure Local 2602 or later and are [generally available](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2609). AKS on Azure Local with disconnected operations is [generally available from disconnected operations release 2609](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview). ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new))
 
 ## Azure Local
 
@@ -57,3 +57,4 @@ This model adds operational responsibility. The customer or operating partner mu
 - [What is GitHub Enterprise Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/github-local/github-local-overview)
 - [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
 - [What is Agentic Retrieval in Agents and Tools with Foundry Local?](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)

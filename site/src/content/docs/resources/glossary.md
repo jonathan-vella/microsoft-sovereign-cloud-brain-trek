@@ -1,7 +1,7 @@
 ---
 title: Glossary
 description: "Definitions for current Microsoft Sovereign Cloud, Azure Local, Azure Arc, security, compliance, and AI terms."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 2
 ---
@@ -96,7 +96,7 @@ Digital sovereignty is the ability of an organization, government, or jurisdicti
 
 ### Disconnected operations
 
-Disconnected operations for Azure Local let approved customers deploy and manage Azure Local instances without a connection to the Azure public cloud by using a local control plane. Azure Local disconnected operations require Azure Local 2602 or later, while AKS under disconnected operations remains [preview](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview). See [Azure Local disconnected operations](/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/).
+Disconnected operations for Azure Local let approved customers deploy and manage Azure Local instances without a connection to the Azure public cloud by using a local control plane. Azure Local disconnected operations require Azure Local 2602 or later, while AKS under disconnected operations is [generally available from disconnected operations release 2609](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview). See [Azure Local disconnected operations](/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/). ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new))
 
 ### DORA
 
@@ -118,7 +118,7 @@ The EU Data Boundary is a defined boundary where Microsoft commits to store and 
 
 ### External Key Management (EKM)
 
-External Key Management means encryption keys are generated, stored, and managed outside cloud infrastructure while protecting cloud data. Managed HSM External Key Management is [in preview](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management) and delegates wrap and unwrap operations to a customer-run EKM Proxy.
+External Key Management means encryption keys are generated, stored, and managed outside cloud infrastructure while protecting cloud data. Managed HSM External Key Management is [generally available](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview) and delegates wrap and unwrap operations to a customer-run EKM Proxy.
 
 ## F
 
@@ -342,3 +342,5 @@ Zero Trust is a security approach based on "never trust, always verify." Microso
 - [What is DORA?](https://learn.microsoft.com/compliance/dora/dora-what-is-dora)
 - [What is Azure Government?](https://learn.microsoft.com/azure/azure-government/documentation-government-welcome)
 - [What is an Azure landing zone?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)
+- [What is Managed HSM external key management?](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)

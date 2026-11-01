@@ -1,7 +1,7 @@
 ---
 title: "Customer discovery"
 description: "Use a structured question bank to map sovereignty, regulatory, connectivity, control, and AI requirements to the right Microsoft model."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 1
 ---
@@ -43,7 +43,7 @@ Connectivity determines whether the Azure control plane can stay in Azure or mus
 | Intermittent | How long can sites lose internet access before operations must change? Which workloads must keep running? | Connected Azure Local can tolerate short disconnections, but management, update, and monitoring assumptions need testing. |
 | Disconnected | Does regulation, classification, or mission need no public-cloud connectivity for management? | Consider Azure Local disconnected operations. The local control plane requires a dedicated management cluster and an eligible agreement and support plan. |
 
-[Disconnected operations for Azure Local require Azure Local 2602 or later](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview), an eligible Microsoft agreement, and a Standard or higher support plan. [AKS on Azure Local with disconnected operations remains in preview](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview), so do not present container workloads in disconnected mode as fully general availability.
+[Disconnected operations for Azure Local require Azure Local 2602 or later](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview), an eligible Microsoft agreement, and a Standard or higher support plan. AKS on Azure Local with disconnected operations is generally available from disconnected operations release 2609 ([release notes](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)). Check each container workload's support separately.
 
 ## Map regulatory drivers to evidence
 
@@ -64,11 +64,11 @@ Sovereignty controls are design requirements, not product names to add after the
 
 | Control need | What to ask | What the answer points to |
 | --- | --- | --- |
-| Customer-controlled keys | Who owns the root key material? Must the key encryption key remain outside Microsoft? | Azure Key Vault Managed HSM for key sovereignty. Managed HSM External Key Management is in preview and needs account-team enablement. |
+| Customer-controlled keys | Who owns the root key material? Must the key encryption key remain outside Microsoft? | Azure Key Vault Managed HSM for key sovereignty. Managed HSM External Key Management is generally available and requires automatically approved per-subscription registration ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)). |
 | Confidential workloads | Must data stay protected while in use? Which workloads need attestation or trusted execution environments? | Azure confidential computing services, confidential VMs, confidential AKS worker nodes, or service-specific confidential features. |
 | Support access oversight | Must Microsoft engineer access be approved, monitored, or logged by regional personnel? | Data Guardian for EU and EFTA remote-access monitoring, and Customer Lockbox for explicit access approval where supported. |
 | Local productivity services | Must Exchange, SharePoint, or Skype for Business run on customer-owned infrastructure? | Microsoft 365 Local on Azure Local Premier Solutions through a certified partner. |
-| Local AI inference | Must generative AI run on-premises, close to data, or in a disconnected environment? | Foundry Local on Azure Local, which is in preview and request-only during preview. |
+| Local AI inference | Must generative AI run on-premises, close to data, or in a disconnected environment? | Foundry Local on Azure Local, which is in preview. ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/deploy-overview)) |
 
 ## Question bank
 
@@ -80,7 +80,7 @@ Use this table during qualification. It keeps the meeting focused on decision po
 | Which data categories are in scope? | Customer content, personal data, logs, model prompts, and telemetry can have different rules. | Boundary scoping for Azure regions, Microsoft 365 tenant location, logging, and support data. |
 | Is the required boundary country, EU Data Boundary, U.S. public sector, or another jurisdiction? | Region selection and service availability follow the required boundary. | Sovereign Public Cloud, Azure Government, National Partner Cloud, or private cloud. |
 | Can Microsoft operate the service if access is approved and logged? | Some customers need evidence and approval, not local operation. | Data Guardian, Customer Lockbox, and audit logging. |
-| Must encryption keys stay outside Microsoft control? | Key placement changes architecture, operations, and preview risk. | Managed HSM, customer-managed keys, or EKM preview assessment. |
+| Must encryption keys stay outside Microsoft control? | Key placement changes architecture, operations, and availability risk. | Managed HSM, customer-managed keys, or EKM availability assessment. ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)) |
 | Can the environment connect outbound to Azure at least every 30 days? | Azure Local connected mode depends on periodic outbound connectivity. | Connected Azure Local, intermittent operations plan, or disconnected operations. |
 | Does regulation require a local control plane? | A local control plane changes hardware, support, lifecycle, and cost. | Azure Local disconnected operations and a dedicated management cluster. |
 | Which workloads must run locally? | Workload support varies by Azure Local deployment type. | Hyperconverged or disaggregated for Microsoft 365 Local and GitHub Enterprise Local. |
@@ -107,6 +107,8 @@ This summary becomes the input for solution design, sizing, and cost estimation.
 
 ## Sources
 
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)
+
 - [What is Microsoft Sovereign Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/microsoft-sovereign-cloud)
 - [What is Sovereign Public Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-public-cloud)
 - [What is Sovereign Private Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud)
@@ -120,3 +122,5 @@ This summary becomes the input for solution design, sizing, and cost estimation.
 - [Customer Lockbox for Microsoft Azure](https://learn.microsoft.com/azure/security/fundamentals/customer-lockbox-overview)
 - [What is Microsoft 365 Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview)
 - [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
+- [Deploy Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/deploy-overview)
+- [What is Managed HSM external key management?](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)

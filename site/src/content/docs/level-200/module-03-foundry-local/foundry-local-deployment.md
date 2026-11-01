@@ -1,12 +1,12 @@
 ---
 title: "Foundry Local deployment"
 description: "Plan Foundry Local on Azure Local deployment requirements, model runtime choices, authentication, and ingress exposure."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 2
 ---
 
-Foundry Local on Azure Local serves AI models from an Arc-enabled Kubernetes cluster on Azure Local. The service is in preview, and deployment access is available by request during preview ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)).
+Foundry Local on Azure Local serves AI models from an Arc-enabled Kubernetes cluster on Azure Local. The service is in preview ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)). ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/deploy-overview))
 
 ![Azure Local and AKS Arc cluster running Foundry Local inference beside Agentic Retrieval services for ingestion, collections, agents, MCP, and chat.](/images/level-200/foundry-local-agentic-retrieval-2026.svg)
 
@@ -106,3 +106,4 @@ Disconnected design changes the operational checklist. You must stage expansion 
 - [Authentication and authorization in Foundry Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-authentication-authorization)
 - [What's new in Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/whats-new)
 - [vLLM runtime model reference for Foundry Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/reference-models)
+- [Deploy Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/deploy-overview)

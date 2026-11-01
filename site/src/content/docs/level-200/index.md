@@ -1,7 +1,7 @@
 ---
 title: "Level 200: Intermediate"
 description: "Intermediate design and pre-sales skills for Microsoft Sovereign Cloud: Azure Local, Azure Arc, Foundry Local, compliance, and sovereign controls."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   label: Overview
   order: 5
@@ -37,13 +37,15 @@ The ones to watch:
 | Product or feature | Status | Source |
 |---|---|---|
 | Azure Local disconnected operations | Generally available, Azure Local 2602 or later | [Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview) |
-| AKS on Azure Local under disconnected operations | Preview | [Learn](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview) |
+| AKS on Azure Local under disconnected operations | Generally available from disconnected operations release 2609 | [Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609) |
 | Microsoft 365 Local | Generally available | [Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview) |
-| Foundry Local on Azure Local | Preview, request-only deployment | [Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview) |
+| Foundry Local on Azure Local | Preview | [Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview) ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/deploy-overview)) |
 | Agentic Retrieval (called Edge RAG until June 2026) | Preview | [Learn](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new) |
-| Managed HSM External Key Management | Preview | [Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview) |
+| Managed HSM External Key Management | Generally available | [Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview) |
 
 ## Sources
+
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)
 
 - [Microsoft Sovereign Cloud](https://learn.microsoft.com/azure/azure-sovereign-clouds/microsoft-sovereign-cloud)
 - [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
@@ -52,3 +54,4 @@ The ones to watch:
 - [Foundry Local on Azure Local overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
 - [What's new in Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new)
 - [Managed HSM External Key Management](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)
+- [Deploy Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/deploy-overview)

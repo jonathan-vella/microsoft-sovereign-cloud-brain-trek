@@ -1,7 +1,7 @@
 ---
 title: "Visual assets index"
 description: "Catalog of the SVG diagrams used across the Brain Trek levels, the pages that show them, and how to add or replace a diagram."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 3
 ---
@@ -59,7 +59,7 @@ Not used on any page. These files stay published so their old URLs keep working:
 | Diagram | What it shows | Used on |
 |---|---|---|
 | [compliance-security-patterns-2026.svg](/images/level-200/compliance-security-patterns-2026.svg) | Compliance control map showing requirements, Microsoft tooling, and evidence outputs | [Compliance and security patterns](/level-200/module-05-compliance/compliance-security-patterns/) |
-| [encryption-key-hierarchy-2026.svg](/images/level-200/encryption-key-hierarchy-2026.svg) | Encryption key hierarchy for sovereign workloads showing Managed HSM, optional external HSM, key-encryption keys, data-encryption keys, protected services, attestation, and evidence logs. | [Encryption key management](/level-200/module-06-sovereign-public-cloud-controls/encryption-key-management/) |
+| [encryption-key-hierarchy-2026-11.svg](/images/level-200/encryption-key-hierarchy-2026-11.svg) | Encryption key hierarchy for sovereign workloads showing Managed HSM, optional external HSM, key-encryption keys, data-encryption keys, protected services, attestation, and evidence logs. | [Encryption key management](/level-200/module-06-sovereign-public-cloud-controls/encryption-key-management/) |
 | [enterprise-arc-topology-2026.svg](/images/level-200/enterprise-arc-topology-2026.svg) | Enterprise Azure Arc topology showing management groups, subscriptions, Arc gateway, Private Link, and hybrid resource groups | [Arc enterprise patterns](/level-200/module-02-arc/arc-enterprise-patterns/) |
 | [fedramp-boundaries-2026.svg](/images/level-200/fedramp-boundaries-2026.svg) | FedRAMP and Azure Government boundary map for Azure public regions, Azure Government regions, DoD regions, Secret, and Top Secret | [FedRAMP compliance](/level-200/module-05-compliance/fedramp-compliance/) |
 | [foundry-local-agentic-retrieval-2026.svg](/images/level-200/foundry-local-agentic-retrieval-2026.svg) | Azure Local and AKS Arc cluster running Foundry Local inference beside Agentic Retrieval services for ingestion, collections, agents, MCP, and chat. | [Foundry Local deployment](/level-200/module-03-foundry-local/foundry-local-deployment/) |
@@ -72,7 +72,7 @@ Not used on any page. These files stay published so their old URLs keep working:
 
 | Diagram | What it shows | Used on |
 |---|---|---|
-| [azure-local-disconnected-operations-2026.svg](/images/level-300/azure-local-disconnected-operations-2026.svg) | Disconnected operations: a management cluster hosts the local control plane and manages Azure Local workload instances inside the customer boundary, with no connection to Azure | [Azure Local disconnected operations](/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/) |
+| [azure-local-disconnected-operations-2026-11.svg](/images/level-300/azure-local-disconnected-operations-2026-11.svg) | Disconnected operations: a management cluster hosts the local control plane and manages Azure Local workload instances inside the customer boundary, with no connection to Azure | [Azure Local disconnected operations](/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/) |
 | [foundry-local-model-lifecycle-2026.svg](/images/level-300/foundry-local-model-lifecycle-2026.svg) | Foundry Local model lifecycle: get a model from the catalog, an imported expansion pack, or your own OCI registry, cache it on the cluster, define Model and ModelDeployment resources, evaluate on the cluster, then serve through the gateway and monitor | [Model lifecycle](/level-300/module-04-foundry-local-production/model-lifecycle/) |
 | [foundry-local-production-2026.svg](/images/level-300/foundry-local-production-2026.svg) | Foundry Local on Azure Local in production: clients and Agentic Retrieval call a Gateway API (Istio) endpoint, which routes to ONNX-GenAI deployments directly and, through the Endpoint Picker, to multi-replica vLLM deployments on GPU nodes of a multi-node AKS cluster on Azure Local, managed through Azure Arc | [Module 4: Foundry Local in production](/level-300/module-04-foundry-local-production/) |
 | [security-monitoring-flow.svg](/images/level-300/security-monitoring-flow.svg) | Security monitoring flow showing sources, Log Analytics, Sentinel, Defender for Cloud, and SOAR playbooks | [Zero Trust monitoring and compliance](/level-300/module-05-zero-trust/zero-trust-monitoring/) |

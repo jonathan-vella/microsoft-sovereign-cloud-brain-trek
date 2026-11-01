@@ -1,7 +1,7 @@
 ---
 title: Sovereign Public Cloud
 description: "Learn how Sovereign Public Cloud uses Azure public regions, policy, key control, access oversight, and posture tools for regulated workloads."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 2
 ---
@@ -16,7 +16,7 @@ Microsoft Learn lists four named Sovereign Public Cloud capabilities.
 
 **Data Guardian.** Data Guardian applies to Microsoft personnel remote access for EU and European Free Trade Association customers. Access is monitored by authorized European-resident staff and logged in a tamper-evident ledger built on Azure Confidential Ledger.
 
-**External Key Management.** The name covers two related key-control patterns. [Managed HSM key sovereignty is generally available](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management) and gives customers a single-tenant FIPS 140-3 Level 3 HSM with customer-controlled security domains. Managed HSM External Key Management is a separate [preview capability](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview) where the key-encryption key stays outside Microsoft through a customer-run EKM Proxy.
+**External Key Management.** The name covers two related key-control patterns. [Managed HSM key sovereignty is generally available](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management) and gives customers a single-tenant FIPS 140-3 Level 3 HSM with customer-controlled security domains. Managed HSM External Key Management is a separate [generally available capability](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview) where the key-encryption key stays outside Microsoft through a customer-run EKM Proxy.
 
 **Azure confidential computing.** Confidential computing protects data in use by running workloads in hardware-based trusted execution environments. Current Azure offerings include generally available confidential VM families, confidential AKS worker nodes, and confidential containers on Azure Container Instances.
 

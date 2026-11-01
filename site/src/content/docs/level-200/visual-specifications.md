@@ -1,7 +1,7 @@
 ---
 title: "Level 200 visual specifications"
 description: "Internal specifications for the Level 200 diagrams: the SVG files, the Mermaid diagrams, their sources, and the retired assets they replace."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   hidden: true
 ---
@@ -32,7 +32,7 @@ that stay on disk only so their URLs keep working.
 | `foundry-local-agentic-retrieval-2026.svg` | [Foundry Local deployment](/level-200/module-03-foundry-local/foundry-local-deployment/) | Azure Local with an AKS Arc cluster hosting two sibling Arc extensions: Foundry Local (inference operator, Model and ModelDeployment CRDs, ONNX Runtime or vLLM) and Agentic Retrieval `microsoft.arc.rag` (ingestion, Collections on Milvus and Postgres, agents runtime, MCP server with six search tools, chat UI). | `edge-rag-implementation.svg` |
 | `compliance-security-patterns-2026.svg` | [Compliance and security patterns](/level-200/module-05-compliance/compliance-security-patterns/) | Requirements (NIS2, DORA, GDPR, EU AI Act, FedRAMP, sovereign control levels) mapped to Defender for Cloud, Azure Policy, Compliance Manager, Microsoft Entra and Arc, then to evidence outputs. | `security-patterns-matrix.svg` |
 | `fedramp-boundaries-2026.svg` | [FedRAMP compliance](/level-200/module-05-compliance/fedramp-compliance/) | Azure commercial and Azure Government FedRAMP High P-ATO scope, the three US Gov regions (only Virginia with availability zones), the two DoD regions, Azure Government Secret, and Azure Government Top Secret. | `fedramp-control-families.svg` |
-| `encryption-key-hierarchy-2026.svg` | [Encryption key management](/level-200/module-06-sovereign-public-cloud-controls/encryption-key-management/) | Managed HSM (FIPS 140-3 Level 3, customer-controlled security domain) and the EKM preview path through a customer-run EKM Proxy (wrapKey and unwrapKey only), wrapping data-encryption keys for storage, confidential compute with Secure Key Release, and evidence. | `encryption-key-hierarchy.svg` |
+| `encryption-key-hierarchy-2026-11.svg` | [Encryption key management](/level-200/module-06-sovereign-public-cloud-controls/encryption-key-management/) | Managed HSM (FIPS 140-3 Level 3, customer-controlled security domain) and GA EKM through a customer-run EKM Proxy (wrapKey and unwrapKey only). Secure Key Release uses Managed HSM keys, not external EKM keys ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-key-lifecycle)). | `encryption-key-hierarchy.svg`, `encryption-key-hierarchy-2026.svg` ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)) |
 
 ## Mermaid diagrams
 

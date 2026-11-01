@@ -1,7 +1,7 @@
 ---
 title: Resources
 description: "Curated Microsoft Learn hubs and reference pages for Microsoft Sovereign Cloud training."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 7
 ---
@@ -25,7 +25,7 @@ Use these Microsoft sources when you need current product documentation, archite
 | Resource | What to use it for |
 |---|---|
 | [What is Data Guardian?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/data-guardian) | Understand monitored Microsoft personnel access and tamper-evident logging for EU and EFTA operational oversight. |
-| [What is External Key Management?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management) | Compare Managed HSM key sovereignty with Managed HSM External Key Management, which is in preview. |
+| [What is External Key Management?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management) | Compare Managed HSM key sovereignty with Managed HSM External Key Management, which is generally available. ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)) |
 | [Sovereign Control Panel](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/sovereign-control-panel) | Review the Discover, Control, and Act model for public cloud sovereignty posture management. |
 | [What is Azure Key Vault Managed HSM?](https://learn.microsoft.com/azure/key-vault/managed-hsm/overview) | Learn how Managed HSM provides single-tenant HSM key protection with FIPS 140-3 Level 3 validation. |
 
@@ -108,3 +108,4 @@ Use these Microsoft sources when you need current product documentation, archite
 - [What is an Azure landing zone?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/)
 - [Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/)
+- [What is Managed HSM external key management?](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)

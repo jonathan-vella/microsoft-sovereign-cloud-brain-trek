@@ -1,7 +1,7 @@
 ---
 title: "Azure Local disconnected operations"
 description: "Learn how Azure Local disconnected operations use a local control plane, eligible agreements, Premier hardware, and selected Arc-enabled services for isolated environments."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 4
 ---
@@ -24,10 +24,10 @@ Disconnected operations provide a local control plane for selected services. The
 | Access control | Role-based access control for subscriptions and resource groups. |
 | Identity for resources | System-assigned managed identity for resource types that support it. |
 | Compute | Azure Local device management, Azure Local VMs, and Arc-enabled servers. |
-| Containers | Arc-enabled Kubernetes clusters in preview and AKS enabled by Arc for Azure Local in preview. |
+| Containers | Arc-enabled Kubernetes clusters and AKS enabled by Arc for Azure Local. ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)) ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)) |
 | Platform services | Azure Container Registry, Azure Key Vault, and Azure Policy for supported local scenarios. |
 
-AKS on Azure Local with disconnected operations is preview. The AKS documentation has an explicit preview notice, and the Azure Local supported-services table labels both Arc-enabled Kubernetes clusters and AKS enabled by Arc for Azure Local as preview under disconnected operations ([AKS source](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview), [Azure Local source](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2609#supported-services)).
+AKS on Azure Local with disconnected operations is generally available from disconnected operations release 2609 ([release notes](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)). The current supported-services table includes both Arc-enabled Kubernetes clusters and AKS on Azure Local without preview labels ([Azure Local source](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview#supported-services)). Use the [AKS guidance](https://learn.microsoft.com/azure/aks/aksarc/disconnected-operations-aks) to check supported Kubernetes versions and limitations.
 
 Microsoft 365 Local can also run in fully disconnected environments on Azure Local. [Module 6: Microsoft 365 Local](/level-100/module-06-microsoft-365-local/) covers that workload.
 
@@ -63,6 +63,8 @@ For a connected environment that only needs resilience to temporary connectivity
 
 - [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2609)
 - [Dedicated management cluster for disconnected operations](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-control-plane-appliance?view=azloc-2609)
-- [AKS on Azure Local with disconnected operations (preview)](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview)
+- [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview)
+- [AKS on Azure Local with disconnected operations guidance](https://learn.microsoft.com/azure/aks/aksarc/disconnected-operations-aks)
 - [Find your Azure Local deployment type](https://learn.microsoft.com/azure/azure-local/plan/find-your-deployment-type?view=azloc-2609)
 - [Microsoft Sovereign Cloud adds governance, productivity and support for large AI models securely running even when completely disconnected](https://blogs.microsoft.com/blog/2026/02/24/microsoft-sovereign-cloud-adds-governance-productivity-and-support-for-large-ai-models-securely-running-even-when-completely-disconnected/)
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)

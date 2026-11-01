@@ -1,7 +1,7 @@
 ---
 title: "Sovereign Control Panel and policy"
 description: "Use Sovereign Control Panel and Azure Policy initiatives to evaluate, enforce, and prove sovereignty posture in Azure."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 5
 ---

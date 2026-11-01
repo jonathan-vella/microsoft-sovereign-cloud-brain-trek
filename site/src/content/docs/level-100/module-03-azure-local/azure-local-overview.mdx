@@ -1,7 +1,7 @@
 ---
 title: "Azure Local overview"
 description: "Learn what Azure Local is, how it supports Sovereign Private Cloud, and how current releases, support windows, billing, and licensing work."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 1
 ---
@@ -24,7 +24,7 @@ At Level 100, think of Azure Local as three layers:
 | Platform | Hyper-V, Storage Spaces Direct, Failover Clustering, software-defined networking, and update orchestration. | These components provide local compute, storage, resiliency, and lifecycle management. |
 | Workloads | Azure Local VMs enabled by Azure Arc, AKS on Azure Local, SQL Server, Microsoft 365 Local, Foundry Local, and other supported workloads. | Workload support varies by deployment type and connectivity mode. |
 
-Azure Local VMs enabled by Azure Arc provide VM lifecycle management through Azure, including start, stop, pause, memory and vCPU changes, and disk or network interface changes ([source](https://learn.microsoft.com/azure/azure-local/concepts/compare-vm-management-capabilities?view=azloc-2609)). AKS on Azure Local provides Kubernetes for containerized workloads on Azure Local. Under disconnected operations, AKS on Azure Local and Arc-enabled Kubernetes are still preview features ([source](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2609#supported-services)).
+Azure Local VMs enabled by Azure Arc provide VM lifecycle management through Azure, including start, stop, pause, memory and vCPU changes, and disk or network interface changes ([source](https://learn.microsoft.com/azure/azure-local/concepts/compare-vm-management-capabilities?view=azloc-2609)). AKS on Azure Local provides Kubernetes for containerized workloads on Azure Local. AKS under disconnected operations is generally available from disconnected operations release 2609 ([release notes](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)). Arc-enabled Kubernetes is also listed as supported without a preview label ([supported services](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview#supported-services)).
 
 ## Release train and support window
 
@@ -56,6 +56,8 @@ Azure Hybrid Benefit can waive the Azure Local host service fee when you exchang
 An OEM license is another option. The OEM license is sold with Azure Local hardware, remains valid for the hardware lifetime, covers up to 16 cores with add-ons for larger systems, and includes Azure Local, Windows Server Datacenter guest VMs, and AKS enabled by Azure Arc ([source](https://learn.microsoft.com/azure/azure-local/oem-license?view=azloc-2609#about-the-oem-license)).
 
 ## Sources
+
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)
 
 - [What are hyperconverged deployments of Azure Local?](https://learn.microsoft.com/azure/azure-local/overview/hyperconverged-overview?view=azloc-2609)
 - [Azure Local release information](https://learn.microsoft.com/azure/azure-local/release-information-23h2?view=azloc-2609)

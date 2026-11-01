@@ -1,7 +1,7 @@
 ---
 title: "Disconnected operations design"
 description: "Plan Azure Local disconnected operations, including the local control plane, eligibility, supported services, identity, DNS, PKI, and update model."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 2
 ---
@@ -33,14 +33,14 @@ For proof of concept work, Microsoft documents a four-node hardware configuratio
 
 ## Understand the local service set
 
-Disconnected operations provide a subset of Azure capabilities. Microsoft lists the supported services in the disconnected operations overview. Some are core control-plane services, some are infrastructure services, and Kubernetes-related services are preview.
+Disconnected operations provide a subset of Azure capabilities. Microsoft lists the supported control-plane, infrastructure, and Kubernetes services in the disconnected operations overview.
 
 | Status | Services |
 | --- | --- |
 | Supported | Azure portal, Azure Resource Manager, RBAC, system-assigned managed identity where supported, Arc-enabled servers, Azure Local VMs, Azure Local device management, Azure Container Registry, Azure Key Vault, Azure Policy |
-| Preview | Arc-enabled Kubernetes clusters and Azure Kubernetes Service enabled by Arc for Azure Local |
+| Supported Kubernetes services | Arc-enabled Kubernetes clusters and Azure Kubernetes Service enabled by Arc for Azure Local ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview#supported-services)) |
 
-Do not describe AKS disconnected operations as generally available. The Azure Local disconnected operations feature is available for Azure Local 2602 or later, but the supported-services table labels Arc-enabled Kubernetes and AKS enabled by Arc for Azure Local as preview ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview#supported-services)).
+Azure Local disconnected operations are GA from release 2602. AKS on Azure Local under disconnected operations is GA from disconnected operations release 2609 ([release notes](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)). Check the version and support requirements of each workload separately.
 
 Microsoft's February 24, 2026 blog states that Azure Local disconnected operations and Microsoft 365 Local disconnected are now available ([Microsoft Blog](https://blogs.microsoft.com/blog/2026/02/24/microsoft-sovereign-cloud-adds-governance-productivity-and-support-for-large-ai-models-securely-running-even-when-completely-disconnected/)). Use Learn for the service table and status details, and use the blog for announcement context.
 
@@ -88,6 +88,8 @@ Foundry Local on Azure Local supports disconnected environments while in preview
 Agentic Retrieval also supports disconnected deployments in preview. Its overview says it can run in disconnected environments by using a locally imported expansion pack and no internet connectivity at deployment time ([Learn](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)). Keep status language precise because both Agentic Retrieval and Foundry Local on Azure Local are preview.
 
 ## Sources
+
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)
 
 - [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
 - [Dedicated management cluster for disconnected operations](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-control-plane-appliance)

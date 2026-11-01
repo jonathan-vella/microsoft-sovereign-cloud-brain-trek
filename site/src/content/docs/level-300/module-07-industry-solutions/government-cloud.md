@@ -1,7 +1,7 @@
 ---
 title: "Government cloud"
 description: "Design government workloads for Azure Government, classified cloud tiers, sovereign public cloud, and partner cloud constraints."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 3
 ---
@@ -27,7 +27,7 @@ Microsoft Learn states that both Azure and Azure Government hold [FedRAMP High P
 | US classified workloads | Azure Government Secret or Azure Government Top Secret | Microsoft documents separate cloud environments for classified national-security workloads. | Do not map classified requirements to FedRAMP alone. |
 | Non-US government workloads with public-cloud fit | Sovereign Public Cloud | Data Guardian, Customer Lockbox, CMK, Managed HSM, confidential computing, and SLZ levels add sovereignty controls to Azure. | Use geopolitical data-boundary and support-access requirements to select controls. |
 | French or German sovereign requirements | National Partner Cloud when service scope is sufficient | Bleu France and Delos Cloud Germany combine Microsoft technology with partner-operated governance. | These are announced or building. Confirm service matrix, operations model, and latency. |
-| Local or disconnected government services | Azure Local and Microsoft 365 Local | Workloads and collaboration can run on customer-owned hardware. | Disconnected operations have eligibility requirements. AKS under disconnected operations remains preview. |
+| Local or disconnected government services | Azure Local and Microsoft 365 Local | Workloads and collaboration can run on customer-owned hardware. | Disconnected operations have eligibility requirements. AKS under disconnected operations is generally available from disconnected operations release 2609. ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)) |
 
 ## Reference architecture
 
@@ -59,7 +59,7 @@ The decision tree should be explicit in the architecture record. If the workload
 | AI assistant availability | Azure Copilot availability note | Exclude Azure Copilot from Azure Government designs because Microsoft says it is not available there. |
 | Data residency | SLZ Level 1 | Place data in approved regions or approved government cloud environments. |
 | Encryption at rest and in transit | SLZ Level 2, CMK, Managed HSM, private endpoints, TLS | Put Managed HSM in the security subscription or equivalent platform zone. |
-| External keys | Managed HSM EKM preview | The EKM preview excludes Azure Government and Azure China. Do not require it for Azure Government designs. |
+| External keys | Managed HSM EKM | EKM excludes Azure Government and Azure China. Do not require it for Azure Government designs. ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)) |
 | Encryption in use | SLZ Level 3 and confidential computing | Use confidential VMs, confidential AKS worker nodes, or confidential containers where available in the selected cloud. |
 | Support access | Customer Lockbox and Data Guardian | Use Customer Lockbox for supported Azure services. Use Data Guardian for EU and EFTA remote-access oversight in Sovereign Public Cloud. |
 
@@ -82,3 +82,4 @@ For non-US governments, Sovereign Public Cloud and National Partner Clouds solve
 - [National Partner Clouds](https://learn.microsoft.com/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds)
 - [What is External Key Management?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management)
 - [What is Managed HSM external key management?](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)

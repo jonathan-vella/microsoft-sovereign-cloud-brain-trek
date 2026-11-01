@@ -1,7 +1,7 @@
 ---
 title: Azure Arc knowledge check
 description: "Check your understanding of current Azure Arc facts for servers, Kubernetes, data services, gateway, resource bridge, licensing, and pricing."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 5
 ---
@@ -119,14 +119,14 @@ A is correct because Microsoft describes Arc-enabled Kubernetes as working with 
 
 How should you describe AKS on Azure Local with Arc in a sovereign design?
 
-- A) AKS on Azure Local uses Arc for Azure management, but disconnected operations for AKS on Azure Local remain preview.
+- A) AKS on Azure Local uses Arc for Azure management, and its disconnected operations are GA from disconnected operations release 2609.
 - B) AKS on Azure Local is unrelated to Azure Arc.
-- C) AKS on Azure Local disconnected operations are generally available for Kubernetes.
+- C) Every Arc Kubernetes extension is GA in disconnected operations.
 - D) Arc gateway for AKS on Azure Local has the same generally available status as Arc-enabled servers.
 
 <KnowledgeCheck answer="A" reference="/level-100/module-04-azure-arc/azure-arc-kubernetes/">
 
-A is correct because Arc is the Azure management connection for AKS on Azure Local, and Microsoft labels AKS on Azure Local disconnected operations as preview. B is wrong because Arc is part of the management model. C is wrong because disconnected Kubernetes support is not generally available. D is wrong because Arc gateway for AKS on Azure Local is still preview.
+A is correct because Arc is the Azure management connection for AKS on Azure Local, and disconnected AKS is GA from disconnected operations release 2609 ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)). B is wrong because Arc is part of the management model. C overstates the status of individual extensions. D is wrong because Arc gateway for AKS on Azure Local is still preview.
 
 </KnowledgeCheck>
 
@@ -161,6 +161,8 @@ A is correct because SQL Server enabled by Azure Arc manages existing SQL Server
 </KnowledgeCheck>
 
 ## Sources
+
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)
 
 - [Azure Arc overview](https://learn.microsoft.com/azure/azure-arc/overview)
 - [Azure Arc-enabled servers overview](https://learn.microsoft.com/azure/azure-arc/servers/overview)

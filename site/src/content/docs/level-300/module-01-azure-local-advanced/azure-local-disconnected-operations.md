@@ -1,25 +1,25 @@
 ---
 title: "Azure Local disconnected operations"
 description: "Design Azure Local disconnected operations with a local control plane, management cluster, PKI, identity, updates, and workload support."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 5
 ---
 
 Disconnected operations move selected Azure control-plane functions into the customer environment. Azure Local workloads and the local management plane run without a connection to Azure public cloud. Use this model when regulation, classification, remote operations, or network isolation prevents periodic connectivity to Azure.
 
-![Disconnected operations: a management cluster hosts the local control plane and manages Azure Local workload instances inside the customer boundary, with no connection to Azure](/images/level-300/azure-local-disconnected-operations-2026.svg)
+![Disconnected operations: a management cluster hosts the local control plane and manages Azure Local workload instances inside the customer boundary, with no connection to Azure](/images/level-300/azure-local-disconnected-operations-2026-11.svg)
 
-Microsoft introduced disconnected operations as a preview in the 2411 release. The current disconnected operations page states that [the feature requires Azure Local 2602 or later](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2609), and the February 24, 2026 Microsoft blog described "Azure Local disconnected operations" as now available. AKS under disconnected operations remains preview.
+Microsoft introduced disconnected operations as a preview in the 2411 release. The current disconnected operations page states that [the feature requires Azure Local 2602 or later](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview?view=azloc-2609), and the February 24, 2026 Microsoft blog described "Azure Local disconnected operations" as now available. AKS under disconnected operations is generally available from disconnected operations release 2609. ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new))
 
 ## What runs locally
 
-Disconnected operations provide a local Azure portal and Azure CLI experience through a local control plane. The supported-services table lists Azure portal, Azure Resource Manager, role-based access control, managed identity, Arc-enabled servers, Azure Local VMs, Arc-enabled Kubernetes clusters in preview, AKS enabled by Arc for Azure Local in preview, Azure Local device management, Azure Container Registry, Azure Key Vault, and Azure Policy.
+Disconnected operations provide a local Azure portal and Azure CLI experience through a local control plane. The supported-services table lists Azure portal, Azure Resource Manager, role-based access control, managed identity, Arc-enabled servers, Azure Local VMs, Arc-enabled Kubernetes clusters, AKS enabled by Arc for Azure Local, Azure Local device management, Azure Container Registry, Azure Key Vault, and Azure Policy. ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)) ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new))
 
 The architecture has two kinds of Azure Local clusters:
 
 - A dedicated management cluster that hosts the disconnected operations appliance and local control plane.
-- One or more workload clusters that run Azure Local VMs, AKS on Azure Local in preview, Microsoft 365 Local, and other supported workloads.
+- One or more workload clusters that run Azure Local VMs, AKS on Azure Local, Microsoft 365 Local, and other supported workloads. ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new))
 
 Keep those clusters separate. Microsoft states that production deployments require a dedicated three-node Azure Local management cluster and that tenant workloads should not run on that management cluster.
 
@@ -49,12 +49,12 @@ The supported workload picture is narrower than connected Azure Local:
 | Azure Container Registry | Supported locally for container images and artifacts. |
 | Azure Key Vault | Supported for local key vault management. |
 | Azure Policy | Supported for standards and governance when creating resources. |
-| Arc-enabled Kubernetes clusters | Preview. |
-| AKS enabled by Arc for Azure Local | Preview. |
+| Arc-enabled Kubernetes clusters | Supported without a preview label ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview#supported-services)). |
+| AKS enabled by Arc for Azure Local | Generally available from disconnected operations release 2609 ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)). |
 | Microsoft 365 Local disconnected | Now available, according to the February 24, 2026 Microsoft blog. |
 | Foundry Local disconnected | Supported in preview and requires Azure Local disconnected operations 2604.3.0 or later. |
 
-For AKS, do not state or imply general availability in disconnected operations. Microsoft labels AKS on Azure Local with disconnected operations as preview.
+Check the disconnected operations release before committing to AKS support. AKS reached GA in disconnected operations release 2609; this does not change the preview status of Foundry Local or Agentic Retrieval ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)).
 
 ## Management cluster sizing
 
@@ -116,7 +116,7 @@ Do not use connected operations with a plan to "just disconnect longer." The con
 - Reserve separate hardware for the management cluster.
 - Keep management and workload clusters isolated.
 - Select only supported deployment types.
-- Mark AKS and Arc-enabled Kubernetes under disconnected operations as preview.
+- Verify that the disconnected operations release includes GA AKS support and that each Kubernetes extension is supported ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)).
 - Build the PKI hierarchy, CRL reachability, and certificate rotation runbooks before deployment.
 - Document identity, operator roles, and recovery for lost operator access.
 - Store BitLocker recovery keys before updates.
@@ -135,3 +135,4 @@ Do not use connected operations with a plan to "just disconnect longer." The con
 - [What's new in Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/whats-new)
 - [What is Microsoft 365 Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview)
 - [Microsoft Sovereign Cloud adds governance, productivity and support for large AI models securely running even when completely disconnected](https://blogs.microsoft.com/blog/2026/02/24/microsoft-sovereign-cloud-adds-governance-productivity-and-support-for-large-ai-models-securely-running-even-when-completely-disconnected/)
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)
