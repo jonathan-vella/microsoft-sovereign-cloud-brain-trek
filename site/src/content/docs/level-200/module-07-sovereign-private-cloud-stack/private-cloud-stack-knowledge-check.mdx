@@ -1,7 +1,7 @@
 ---
 title: "Knowledge check: Sovereign Private Cloud stack"
 description: "Check your ability to design Azure Local, disconnected operations, Microsoft 365 Local, GitHub Enterprise Local, Foundry Local, and Agentic Retrieval scenarios."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 99
 ---
@@ -102,16 +102,16 @@ B is correct because Learn lists an eligible Microsoft agreement and Standard or
 
 ## Question 7: Classify AKS disconnected status
 
-A proposal says Azure Local disconnected operations are available, so AKS enabled by Arc for Azure Local in disconnected operations is also generally available. What should you change?
+A proposal says AKS is generally available in every Azure Local disconnected operations release. What should you change?
 
 - A) Leave it because all supported services have the same status.
-- B) State that AKS enabled by Arc for Azure Local in disconnected operations is preview.
+- B) State that AKS under disconnected operations is GA from disconnected operations release 2609.
 - C) Remove all Kubernetes support from the design.
 - D) Replace AKS with Microsoft 365 Local.
 
 <KnowledgeCheck answer="B" reference="/level-200/module-07-sovereign-private-cloud-stack/disconnected-operations-design/">
 
-B is correct because the disconnected operations supported-services table labels Azure Kubernetes Service enabled by Arc for Azure Local as preview. A is wrong because service status varies inside the supported-services table. C is wrong because preview does not mean unavailable, but it changes risk and approval language. D is wrong because Microsoft 365 Local is a productivity workload, not a Kubernetes replacement.
+B is correct because the release notes announce AKS GA in disconnected operations release 2609 ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)). A is wrong because support must be checked per service and version. C is wrong because AKS is supported. D is wrong because Microsoft 365 Local is a productivity workload, not a Kubernetes replacement.
 
 </KnowledgeCheck>
 
@@ -161,6 +161,8 @@ A is correct because the GitHub Enterprise Local Learn page labels the capabilit
 </KnowledgeCheck>
 
 ## Sources
+
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)
 
 - [What is Sovereign Private Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud)
 - [Connected operations overview](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/azure-local/connected-operations-overview)

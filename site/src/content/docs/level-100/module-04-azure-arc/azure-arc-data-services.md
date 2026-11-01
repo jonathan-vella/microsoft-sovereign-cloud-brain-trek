@@ -1,7 +1,7 @@
 ---
 title: Azure Arc data services
 description: "Understand current Azure Arc data services facts, including SQL Managed Instance direct connectivity and retired PostgreSQL and indirect modes."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 4
 ---

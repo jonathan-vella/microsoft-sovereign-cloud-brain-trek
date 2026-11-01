@@ -1,7 +1,7 @@
 ---
 title: "Module 3: Foundry Local on Azure Local"
 description: "Plan Foundry Local inference and Agentic Retrieval on Azure Local, including Kubernetes, GPUs, collections, operations, and RAG design."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 module:
   duration: "60-90 minutes"
   objectives:
@@ -17,7 +17,7 @@ sidebar:
   order: 3
 ---
 
-Foundry Local on Azure Local runs AI inference on an Arc-enabled Kubernetes cluster on Azure Local. It is in preview, and preview deployment is request-only during preview ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)). Agentic Retrieval in Agents and Tools with Foundry Local is a sibling Azure Arc extension for local RAG, agents, MCP tools, and chat. It is also in preview ([Learn](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)).
+Foundry Local on Azure Local runs AI inference on an Arc-enabled Kubernetes cluster on Azure Local. It is in preview ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)). Agentic Retrieval in Agents and Tools with Foundry Local is a sibling Azure Arc extension for local RAG, agents, MCP tools, and chat. It is also in preview ([Learn](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)). ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/deploy-overview))
 
 Agentic Retrieval was called Edge RAG until June 2026, when Microsoft renamed the extension and added an agentic layer for orchestration ([Learn](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new#june-2026)). Treat the two extensions as separate building blocks. Foundry Local serves the model endpoint. Agentic Retrieval handles ingestion, collections, search, agents, MCP access, and the chat experience.
 
@@ -31,3 +31,4 @@ This module assumes you can read AKS Arc and Azure Local requirements, reason ab
 - [Requirements for Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-requirements)
 - [What is Agentic Retrieval in Agents and Tools with Foundry Local?](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/overview)
 - [What's new in Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/whats-new)
+- [Deploy Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/deploy-overview)

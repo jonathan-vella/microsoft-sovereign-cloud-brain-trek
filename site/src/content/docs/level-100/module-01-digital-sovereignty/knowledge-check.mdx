@@ -1,7 +1,7 @@
 ---
 title: "Knowledge check"
 description: "Check your understanding of digital sovereignty, EU Data Boundary scope, operational controls, and current EU regulatory tooling."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 6
 ---
@@ -135,13 +135,13 @@ B is correct because Customer Lockbox lets customer approvers approve or reject 
 Which statement about external key management is current?
 
 - A) Managed HSM External Key Management is generally available for all Azure clouds.
-- B) Managed HSM key sovereignty is generally available, while Managed HSM External Key Management is in preview.
+- B) Managed HSM key sovereignty is generally available, and Managed HSM External Key Management is generally available in Azure public regions. ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview))
 - C) External Key Management supports all key operations, including sign, verify, encrypt, and decrypt.
 - D) External Key Management removes the need for customer-operated HSM availability planning.
 
 <KnowledgeCheck answer="B" reference="/level-100/module-01-digital-sovereignty/operational-sovereignty/">
 
-B is correct. Managed HSM key sovereignty is generally available, and Managed HSM External Key Management is in preview. A is wrong because the external key management preview excludes Azure Government and Azure operated by 21Vianet. C is wrong because the preview supports wrap and unwrap only. D is wrong because the customer or HSM vendor owns the proxy, HSM, networking, availability, and support.
+B is correct. Managed HSM key sovereignty is generally available, and Managed HSM External Key Management is generally available. A is wrong because external key management excludes Azure Government and Azure operated by 21Vianet. C is wrong because external keys support wrap and unwrap only. D is wrong because the customer or HSM vendor owns the proxy, HSM, networking, availability, and support. ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)) ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-key-lifecycle))
 
 </KnowledgeCheck>
 
@@ -200,3 +200,5 @@ B is correct because the module verified EU AI Act tooling in Defender for Cloud
 - [What is the EU Data Boundary?](https://learn.microsoft.com/privacy/eudb/eu-data-boundary-learn)
 - [What is DORA?](https://learn.microsoft.com/compliance/dora/dora-what-is-dora)
 - [Regulatory compliance standards in Microsoft Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/concept-regulatory-compliance-standards)
+- [External key lifecycle in Managed HSM external key management](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-key-lifecycle)
+- [What is Managed HSM external key management?](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)

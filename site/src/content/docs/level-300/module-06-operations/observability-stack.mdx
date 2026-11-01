@@ -1,7 +1,7 @@
 ---
 title: "Observability stack"
 description: "Design Azure Monitor and Azure Local observability so logs, metrics, alerts, and support data stay inside the intended boundary."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 1
 ---
@@ -102,7 +102,7 @@ Avoid one global dashboard that hides where the data lives. A better pattern is 
 
 ## Disconnected operations
 
-Connected Azure Local deployments can tolerate up to 30 days of Azure disconnection without workload impact, but management, monitoring, support, and updates still need design decisions. Azure Local disconnected operations require Azure Local 2602 or later, while AKS on Azure Local with disconnected operations remains [preview](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview). In disconnected mode, plan for local evidence capture, delayed upload, local dashboards where needed, and an explicit process for reconnecting or exporting logs to support.
+Connected Azure Local deployments can tolerate up to 30 days of Azure disconnection without workload impact, but management, monitoring, support, and updates still need design decisions. Azure Local disconnected operations require Azure Local 2602 or later, while AKS on Azure Local with disconnected operations is [generally available from disconnected operations release 2609](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview). In disconnected mode, plan for local evidence capture, delayed upload, local dashboards where needed, and an explicit process for reconnecting or exporting logs to support. ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new))
 
 Do not promise the same cloud-based alert and workbook behavior during a full disconnect. State which signals continue locally, which queue for upload, which require the management cluster, and which are unavailable until connectivity returns.
 
@@ -118,3 +118,4 @@ Do not promise the same cloud-based alert and workbook behavior during a full di
 - [Monitor a single Azure Local system with Insights](https://learn.microsoft.com/azure/azure-local/manage/monitor-single-23h2)
 - [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
 - [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview)
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)

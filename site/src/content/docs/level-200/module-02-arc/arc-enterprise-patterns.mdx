@@ -1,7 +1,7 @@
 ---
 title: "Arc enterprise patterns"
 description: "Design enterprise Azure Arc onboarding with landing zones, RBAC, tags, connectivity choices, resource bridge, and Kubernetes validation."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 3
 ---
@@ -18,9 +18,9 @@ Enterprise Azure Arc design starts with the Azure landing zone, not with an onbo
 
 ## Start from a landing zone
 
-Microsoft's Cloud Adoption Framework article for hybrid and multicloud adoption with Azure Arc says organizations should establish a structured Azure environment before governing hybrid and multicloud resources. It calls out Azure landing zones, resource organization, governance, monitoring, and security as the foundation for Arc resources ([Learn](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone)).
+Microsoft's current Cloud Adoption Framework landing zone guidance separates the platform foundation from workload landing zones. The platform establishes governance, security, shared resources, and the management group hierarchy ([Learn](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)). Place Arc resources within that governed environment.
 
-That CAF page is deprecated and scheduled for removal on October 30, 2026, so treat it as document lifecycle context, not as a product retirement ([Learn](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone)). Use its patterns while checking current Arc product pages for status, limits, and requirements.
+The [former hybrid landing zone URL](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone) now redirects to the general Azure landing zone guidance. This is a documentation change, not an Azure Arc product retirement. Use current Arc product pages for status, limits, and requirements.
 
 At minimum, an Arc landing zone needs:
 
@@ -34,7 +34,7 @@ At minimum, an Arc landing zone needs:
 
 ## Use RBAC for onboarding and operations separation
 
-Azure Arc-enabled servers expose Azure roles for onboarding and resource administration. The Cloud Adoption Framework cost governance page recommends least privilege with the Azure Connected Machine Onboarding role for onboarding and Azure Connected Machine Resource Administrator for administrators who need to manage connected machines ([Learn](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-cost-governance)).
+Azure Arc-enabled servers expose separate Azure roles for onboarding and resource administration. Use Azure Connected Machine Onboarding for accounts that connect new servers, and Azure Connected Machine Resource Administrator for accounts that manage existing connected machines ([Learn](https://learn.microsoft.com/azure/azure-arc/servers/security-identity-authorization#rbac-roles)).
 
 Separate these duties:
 
@@ -116,8 +116,9 @@ Each wave should end with an operational handoff. The owner should know how the 
 
 ## Sources
 
-- [Implement hybrid and multicloud adoption with Azure Arc and Azure landing zones](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone)
-- [Cost governance for Azure Arc-enabled servers](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-cost-governance)
+- [Former hybrid landing zone guidance (redirects to Azure landing zones)](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone)
+- [What is an Azure landing zone?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)
+- [Azure Arc-enabled servers identity and authorization](https://learn.microsoft.com/azure/azure-arc/servers/security-identity-authorization#rbac-roles)
 - [Simplify network configuration requirements with Azure Arc gateway](https://learn.microsoft.com/azure/azure-arc/servers/arc-gateway)
 - [Simplify network configuration requirements with Azure Arc Gateway](https://learn.microsoft.com/azure/azure-arc/kubernetes/arc-gateway-simplify-networking)
 - [Use Azure Private Link to securely connect servers to Azure Arc](https://learn.microsoft.com/azure/azure-arc/servers/private-link-security)

@@ -1,7 +1,7 @@
 ---
 title: "Industry solutions knowledge check"
 description: "Scenario questions for financial services, healthcare, government, and critical infrastructure sovereign architectures."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 10
 ---
@@ -31,12 +31,12 @@ A financial-services customer asks to require Managed HSM external key managemen
 
 - A) Require it everywhere because EKM is generally available in all Microsoft clouds.
 - B) Use it only for Azure Government because that is the only supported environment.
-- C) Treat it as an exception path because EKM is preview, gated, and excludes Azure Government and Azure China.
+- C) Treat it as an exception path because EKM requires external-component availability planning and excludes Azure Government and Azure China. ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview))
 - D) Replace Managed HSM with software keys because FIPS validation is not available.
 
 <KnowledgeCheck answer="C" reference="/level-300/module-07-industry-solutions/financial-services/">
 
-C is correct because [Managed HSM external key management](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview) is preview, gated through the Microsoft account team, and excludes Azure Government and Azure China. A is wrong because the feature is not generally available everywhere. B is wrong because Azure Government is excluded from the preview. D is wrong because Managed HSM key sovereignty is documented as [FIPS 140-3 Level 3](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management).
+C is correct because [Managed HSM external key management](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview) is generally available in Azure public regions, requires per-subscription registration, and excludes Azure Government and Azure China. A is wrong because the feature is not generally available everywhere. B is wrong because Azure Government is excluded from EKM support. D is wrong because Managed HSM key sovereignty is documented as [FIPS 140-3 Level 3](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/external-key-management).
 
 </KnowledgeCheck>
 
@@ -126,7 +126,7 @@ A manufacturing site has PLCs and industrial controllers that cannot run endpoin
 
 <KnowledgeCheck answer="A" reference="/level-300/module-07-industry-solutions/critical-infrastructure/">
 
-A is correct because [Defender for IoT](https://learn.microsoft.com/azure/defender-for-iot/organizations/overview) provides agentless network-layer monitoring for IoT and OT devices, vulnerabilities, and threats. B is for health data. C is a key-management preview. D is local collaboration software.
+A is correct because [Defender for IoT](https://learn.microsoft.com/azure/defender-for-iot/organizations/overview) provides agentless network-layer monitoring for IoT and OT devices, vulnerabilities, and threats. B is for health data. C is an external key-custody option. D is local collaboration software. ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview))
 
 </KnowledgeCheck>
 
@@ -149,14 +149,14 @@ B is correct because the [Azure IoT Operations overview](https://learn.microsoft
 
 A critical infrastructure customer wants Azure Local disconnected operations and AKS workloads under the same GA assumption. What should the architect document?
 
-- A) Azure Local disconnected operations require Azure Local 2602 or later, but AKS on Azure Local with disconnected operations remains preview.
+- A) Azure Local disconnected operations require Azure Local 2602 or later, and AKS on Azure Local with disconnected operations is generally available from disconnected operations release 2609. ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new))
 - B) Both Azure Local disconnected operations and AKS disconnected operations are retired.
 - C) AKS disconnected operations are GA only on Azure Government.
 - D) The status does not matter if the site uses private endpoints.
 
 <KnowledgeCheck answer="A" reference="/level-300/module-07-industry-solutions/critical-infrastructure/">
 
-A is correct because Microsoft documents Azure Local disconnected operations as requiring [Azure Local 2602 or later](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview), while [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview) is preview. B, C, and D are not Microsoft-documented status statements.
+A is correct because Azure Local disconnected operations require Azure Local 2602 or later, and AKS under disconnected operations is GA from disconnected operations release 2609 ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)). B, C, and D are not Microsoft-documented status statements.
 
 </KnowledgeCheck>
 
@@ -173,3 +173,4 @@ A is correct because Microsoft documents Azure Local disconnected operations as 
 - [What is Azure IoT Operations?](https://learn.microsoft.com/azure/iot-operations/overview-iot-operations)
 - [Disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)
 - [AKS on Azure Local with disconnected operations](https://learn.microsoft.com/azure/aks-hybrid-edge/local/disconnected-operations/overview)
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)

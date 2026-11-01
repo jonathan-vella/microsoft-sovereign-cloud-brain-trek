@@ -1,7 +1,7 @@
 ---
 title: "Operational sovereignty"
 description: "Understand Microsoft access controls, customer-held keys, confidential computing, and Sovereign Control Panel as operational sovereignty concepts."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 4
 ---
@@ -40,9 +40,9 @@ Key custody is one way to reduce reliance on provider access. Microsoft describe
 
 ### Managed HSM External Key Management
 
-[Managed HSM external key management is in preview](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview). It keeps the Key Encryption Key in a customer-owned and customer-operated HSM outside Microsoft infrastructure. Managed HSM delegates wrap and unwrap operations to that external HSM through a customer-run EKM Proxy.
+[Managed HSM external key management is generally available](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview). It keeps the Key Encryption Key in a customer-owned and customer-operated HSM outside Microsoft infrastructure. Managed HSM delegates wrap and unwrap operations to that external HSM through a customer-run EKM Proxy.
 
-Microsoft calls external key management a last-resort, gated option for organizations with a hard legal or contractual mandate. The preview supports wrap and unwrap only, has no SLA for external keys or the proxy, requires Microsoft account team enablement, and excludes Azure Government and Azure operated by 21Vianet during preview.
+Use external key management when a legal or contractual mandate requires external key custody. It is available to all customers after automatically approved per-subscription registration. Azure Government and Azure operated by 21Vianet remain out of scope. The Managed HSM service retains its SLA, but Microsoft provides no end-to-end SLA for external keys or coverage for the customer-operated proxy and HSM ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)).
 
 ## Confidential computing
 

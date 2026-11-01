@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting"
 description: "Troubleshoot Azure Local, Arc-enabled resources, AKS on Azure Local, disconnected operations, and support escalation with verified tools."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 3
 ---
@@ -44,7 +44,7 @@ flowchart LR
 | Networking | Cluster traffic slows, management endpoint fails, private link query or ingestion breaks. | DNS, proxy, firewall, AMPLS access mode, DCE membership, and storage or RDMA paths. | Azure Monitor private link checks, Network ATC status through support operations. |
 | Storage | High latency, volume or drive warning, repair needed, capacity thresholds. | Insights health fault, storage visualizations, cluster logs, and Health Service fault details. | Insights, Health Service faults, `Get-ClusterLog`. |
 | AKS on Azure Local | Cluster operation fails, image is not ready, node logs needed, preview feature unstable. | Kubernetes version, storage path health, logical network names, support policy, kubeconfig, SSH key. | `az aksarc get-logs`, `Get-AzAksArcLog`, Support.AksArc diagnostic tool. |
-| Disconnected operations | Cloud management or support workflow is unavailable. | Whether the estate is connected mode, disconnected operations, or AKS disconnected preview. | Local diagnostics, management cluster guidance, support process after reconnect. |
+| Disconnected operations | Cloud management or support workflow is unavailable. | Whether the estate is connected mode, disconnected operations, or AKS under disconnected operations. | Local diagnostics, management cluster guidance, support process after reconnect. ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)) |
 
 ## Tools and commands
 
@@ -108,3 +108,4 @@ Customer Lockbox is separate from Azure Local Remote Support. Customer Lockbox i
 - [What is Azure Service Health?](https://learn.microsoft.com/azure/service-health/overview)
 - [Create an Azure support request](https://learn.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request)
 - [Customer Lockbox for Microsoft Azure](https://learn.microsoft.com/azure/security/fundamentals/customer-lockbox-overview)
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)

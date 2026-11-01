@@ -1,7 +1,7 @@
 ---
 title: "Knowledge check: Sovereign Public Cloud controls"
 description: "Ten scenario questions covering EU Data Boundary scope, Data Guardian, Customer Lockbox, EKM, confidential computing, and policy."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 99
 ---
@@ -81,22 +81,22 @@ A bank needs customer-controlled, single-tenant HSM-backed keys with FIPS 140-3 
 
 <KnowledgeCheck answer="A" reference="/level-200/module-06-sovereign-public-cloud-controls/encryption-key-management/">
 
-A is correct because Managed HSM provides single-tenant HSM isolation, FIPS 140-3 Level 3 validation, and customer-controlled security domains. B is wrong because EKM is a preview, gated, last-resort pattern for mandates that require the key-encryption key outside Microsoft infrastructure. C and D do not meet the stated control requirement.
+A is correct because Managed HSM provides single-tenant HSM isolation, FIPS 140-3 Level 3 validation, and customer-controlled security domains. B is wrong because EKM adds external availability and operational dependencies for mandates that require the key-encryption key outside Microsoft infrastructure. C and D do not meet the stated control requirement. ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview))
 
 </KnowledgeCheck>
 
-## Question 6: EKM preview limits
+## Question 6: EKM operation limits
 
 A customer wants Managed HSM External Key Management for signing operations and Secure Key Release. What should you tell them?
 
-- A) EKM preview supports sign, verify, and Secure Key Release.
-- B) EKM preview supports only `wrapKey` and `unwrapKey`; sign, verify, encrypt, decrypt, Secure Key Release, and Confidential VM launch scenarios are out of scope.
-- C) EKM preview is available in Azure Government.
-- D) EKM preview has the same SLA as Managed HSM keys.
+- A) EKM supports sign, verify, and Secure Key Release.
+- B) External keys support only `wrapKey` and `unwrapKey`; direct signing operations and scenarios that release the external KEK into Azure are unsupported.
+- C) EKM is available in Azure Government.
+- D) EKM has the same end-to-end Microsoft SLA as Managed HSM keys.
 
 <KnowledgeCheck answer="B" reference="/level-200/module-06-sovereign-public-cloud-controls/encryption-key-management/">
 
-B is correct because the EKM preview supports only wrap and unwrap operations and excludes SKR and signing scenarios. A states unsupported operations. C is wrong because Azure Government and Azure China are out of scope for the preview. D is wrong because external keys have no SLA.
+B is correct because external keys support only wrap and unwrap key API operations. Signing and Secure Key Release are unsupported ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-key-lifecycle#supported-and-unsupported-operations)). A states unsupported operations. C is wrong because Azure Government and Azure China remain out of scope. D is wrong because the Managed HSM service SLA remains, but it does not cover the external proxy and HSM or provide end-to-end external key availability ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)).
 
 </KnowledgeCheck>
 
@@ -162,10 +162,12 @@ B is correct because the module uses the exact names from the Azure Policy built
 
 ## Sources
 
+- [External key lifecycle in Managed HSM external key management](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-key-lifecycle)
+
 - [What is the EU Data Boundary?](https://learn.microsoft.com/privacy/eudb/eu-data-boundary-learn)
 - [What is Data Guardian?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/data-guardian)
 - [Customer Lockbox for Microsoft Azure](https://learn.microsoft.com/azure/security/fundamentals/customer-lockbox-overview)
-- [What is Managed HSM external key management? (preview)](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)
+- [What is Managed HSM external key management?](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)
 - [Azure confidential computing offerings](https://learn.microsoft.com/azure/confidential-computing/overview-azure-products)
 - [Confidential containers on Azure Container Instances](https://learn.microsoft.com/azure/container-instances/container-instances-confidential-overview)
 - [Sovereign Control Panel (SCP)](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/sovereign-control-panel)

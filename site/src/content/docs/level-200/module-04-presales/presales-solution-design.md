@@ -1,7 +1,7 @@
 ---
 title: "Pre-sales solution design"
 description: "Turn discovery findings into a Microsoft Sovereign Cloud design that matches deployment model, connectivity, workload, and control needs."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 2
 ---
@@ -30,7 +30,7 @@ Common design elements include:
 - Sovereign Landing Zone policy assignments and management group structure.
 - Data Guardian when the customer needs EU and EFTA monitoring of Microsoft remote access.
 - Customer Lockbox when the customer needs explicit approval for Microsoft support access to supported services.
-- Azure Key Vault Managed HSM for key sovereignty, or External Key Management preview when the key encryption key must be held outside Microsoft.
+- Azure Key Vault Managed HSM for key sovereignty, or External Key Management when the key encryption key must be held outside Microsoft. ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview))
 - Confidential computing when workloads need hardware-backed protection in use.
 
 Use this model when the customer's requirement is control, evidence, and region scope, not ownership of the physical platform.
@@ -43,7 +43,7 @@ Use this model when the customer's requirement is control, evidence, and region 
 | --- | --- | --- |
 | Azure Local | Infrastructure for VMs, AKS enabled by Azure Arc, connected operations, and disconnected operations. | Choose the deployment type before sizing. Workload support changes by type. |
 | Microsoft 365 Local | Runs Exchange Server, SharePoint Server, and Skype for Business Server Subscription Editions on Azure Local. | Generally available, deployed on Azure Local Premier Solutions through a certified Microsoft 365 Local solution partner. |
-| Foundry Local on Azure Local | Runs local model serving on an Arc-enabled Kubernetes cluster. | In preview and request-only during preview. Size GPU, Kubernetes, gateway, certificate, and model cache requirements. |
+| Foundry Local on Azure Local | Runs local model serving on an Arc-enabled Kubernetes cluster. | In preview. Size GPU, Kubernetes, gateway, certificate, and model cache requirements. ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/deploy-overview)) |
 | Agentic Retrieval in Foundry Local | Adds local knowledge and agentic retrieval services on AKS Arc. | In preview. Combined mode needs embedding GPUs and a separate language model endpoint. |
 | GitHub Enterprise Local | Runs supported GitHub Enterprise workloads on Azure Local. | Supported on hyperconverged and disaggregated deployment types only. |
 
@@ -75,7 +75,7 @@ Use disconnected operations when the customer cannot depend on Azure public clou
 - Smaller service set than connected mode.
 - Separate management cluster cost and lifecycle.
 - Account-team approval and partner coordination.
-- Preview status for AKS under disconnected operations.
+- AKS GA support from disconnected operations release 2609, with release-specific requirements ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)).
 
 ## Design the workload zones
 
@@ -102,9 +102,9 @@ Preview status affects contracts, support expectations, and go-live plans.
 
 | Capability | Current status | Design action |
 | --- | --- | --- |
-| Foundry Local on Azure Local | Preview and request-only during preview | Use it in proof-of-concept or controlled production planning only after account-team review. |
+| Foundry Local on Azure Local | Preview | Confirm preview terms and support requirements before committing to production ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/deploy-overview)). |
 | Agentic Retrieval in Foundry Local | Preview | Size its own CPU and embedding GPU workers, then add a separate language model endpoint. |
-| AKS on Azure Local with disconnected operations | Preview | Do not position disconnected AKS as fully GA. Confirm acceptable preview risk. |
+| AKS on Azure Local with disconnected operations | Generally available from disconnected operations release 2609 | Check the supported Kubernetes versions and disconnected limitations ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)). |
 | Small form factor AI workloads and Foundry Local | Preview on small form factor | Use for edge validation only when the customer accepts preview status. |
 
 ## Design review checklist
@@ -121,6 +121,8 @@ Before leaving the design phase, confirm these items:
 
 ## Sources
 
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)
+
 - [What is Sovereign Public Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/overview-sovereign-public-cloud)
 - [What is Sovereign Private Cloud?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud)
 - [National Partner Clouds](https://learn.microsoft.com/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds)
@@ -133,3 +135,5 @@ Before leaving the design phase, confirm these items:
 - [What is Foundry Local on Azure Local?](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/overview)
 - [Requirements for Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/concept-requirements)
 - [What you need for Agentic Retrieval in Foundry Local](https://learn.microsoft.com/azure/azure-arc/agents-tools-foundry-local/requirements)
+- [Deploy Foundry Local on Azure Local](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/deploy-overview)
+- [What is Managed HSM external key management?](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)

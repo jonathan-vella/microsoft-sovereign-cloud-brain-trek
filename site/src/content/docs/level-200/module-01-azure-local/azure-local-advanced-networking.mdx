@@ -1,7 +1,7 @@
 ---
 title: "Azure Local advanced networking"
 description: "Plan Azure Local network intents, RDMA storage traffic, switched and switchless patterns, SDN enabled by Arc, and Arc gateway."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 4
 ---
@@ -70,9 +70,11 @@ The architecture adds two main components:
 - An Arc gateway resource in Azure that acts as a common entry point for Azure traffic.
 - Arc proxy on each Azure Local machine, running as the Azure Arc Proxy service and forwarding traffic for Arc agents and extensions.
 
-Plan the gateway before deployment. Microsoft documents that you cannot enable Arc gateway after deployment ([Learn](https://learn.microsoft.com/azure/azure-local/deploy/deployment-azure-arc-gateway-overview#supported-and-unsupported-scenarios)). Also confirm whether TLS-terminating proxies are in the path, because Arc gateway does not support them.
+Prefer planning Arc gateway before deployment. Enabling it on an existing hyperconverged instance is now preview and requires Azure Local 2610 or later. You cannot disable the gateway after enabling it in this preview, and existing AKS clusters do not automatically receive the proxy changes ([Learn](https://learn.microsoft.com/azure/azure-local/manage/enable-arc-gateway-after-deployment)). Also confirm whether TLS-terminating proxies are in the path, because Arc gateway does not support them.
 
 ## Sources
+
+- [Enable Azure Arc gateway after deployment on Azure Local (preview)](https://learn.microsoft.com/azure/azure-local/manage/enable-arc-gateway-after-deployment)
 
 - [Network ATC overview](https://learn.microsoft.com/azure/azure-local/concepts/network-atc-overview)
 - [Network considerations for cloud deployments of Azure Local](https://learn.microsoft.com/azure/azure-local/plan/cloud-deployment-network-considerations)

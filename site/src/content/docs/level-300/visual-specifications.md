@@ -1,7 +1,7 @@
 ---
 title: "Level 300 visual specifications"
 description: "Specifications for the Level 300 diagrams: what each SVG and Mermaid diagram shows, the facts it depends on, and the style rules."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   hidden: true
 ---
@@ -28,7 +28,7 @@ Microsoft Learn facts. Every SVG lives in `site/public/images/level-300/` and is
 
 | File | Used on | What it shows | Facts it depends on |
 |---|---|---|---|
-| `azure-local-disconnected-operations-2026.svg` | [Disconnected operations](/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/) | Customer datacenter with no Azure connection. A management cluster of three or more machines runs the local control plane (portal, Azure Resource Manager, RBAC, managed identity, Key Vault, Container Registry, Azure Policy, Arc-enabled servers) and manages workload instances with Azure Local VMs, AKS (preview), Arc-enabled Kubernetes (preview), and Microsoft 365 Local. Active Directory with AD FS, customer PKI, and transferred media feed the appliance. | GA from Azure Local 2602, supported services table, AKS preview, identity and PKI integration ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)) |
+| `azure-local-disconnected-operations-2026-11.svg` | [Disconnected operations](/level-300/module-01-azure-local-advanced/azure-local-disconnected-operations/) | Customer datacenter with no Azure connection. A management cluster of three or more machines runs the local control plane (portal, Azure Resource Manager, RBAC, managed identity, Key Vault, Container Registry, Azure Policy, Arc-enabled servers) and manages workload instances with Azure Local VMs, AKS, Arc-enabled Kubernetes, and Microsoft 365 Local. Active Directory with AD FS, customer PKI, and transferred media feed the appliance. | GA from Azure Local 2602, supported services table, AKS GA, identity and PKI integration ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview)) ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)) |
 | `sovereign-landing-zone-2026.svg` | [SLZ architecture](/level-300/module-02-sovereign-landing-zone/slz-architecture/) | Management group hierarchy. Platform with Management, Connectivity, Identity, and the added Security group with Managed HSM. Landing zones with Public, Online, Corp, and the added Confidential Online and Confidential Corp, each with its Level 1 to 3 badges. Sandbox and Decommissioned shown as ALZ carry-over groups. | Management group table and control levels ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/public/implement-controls-principles)) |
 | `foundry-local-production-2026.svg` | [Foundry Local in production](/level-300/module-04-foundry-local-production/) | Clients and Agentic Retrieval (formerly Edge RAG) call a Gateway API (Istio) endpoint with TLS. The gateway routes to ONNX-GenAI deployments directly, and the Endpoint Picker routes multi-replica vLLM deployments on NVIDIA GPU nodes by live inference signals. The inference operator, Model and ModelDeployment resources, and the StoreModel cache sit in a multi-node AKS cluster on Azure Local. Preview badge. | Components, runtimes, Gateway API and routing, multi-node, auth options ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/whats-new)) |
 | `foundry-local-model-lifecycle-2026.svg` | [Model lifecycle](/level-300/module-04-foundry-local-production/model-lifecycle/) | Six stages: source (catalog sync, expansion pack in the EdgeArtifacts registry, or your own OCI registry), cache, deploy, evaluate on the cluster, serve through the gateway, monitor. A loop shows a new model version. Preview badge. | Disconnected model sourcing and evaluation ([Learn](https://learn.microsoft.com/azure/azure-sovereign-clouds/private/foundry-local/disconnected-operations/concept-overview)) |
@@ -43,7 +43,7 @@ These files stay in the repository so old links keep working. Level 300 pages no
 |---|---|---|
 | `edge-rag-production.svg` | `foundry-local-production-2026.svg` | Edge RAG is now Agentic Retrieval. The old drawing showed bundled Phi-3 and Mistral models and AKS-HCI naming. |
 | `mlops-pipeline.svg` | `foundry-local-model-lifecycle-2026.svg` | Showed an Edge RAG fine-tuning pipeline that does not match the Foundry Local lifecycle. |
-| `air-gapped-architecture.svg` | `azure-local-disconnected-operations-2026.svg` | Showed Windows Admin Center as the management plane and no management cluster or local control plane. |
+| `air-gapped-architecture.svg` | `azure-local-disconnected-operations-2026-11.svg` | Showed Windows Admin Center as the management plane and no management cluster or local control plane. |
 | `sovereign-landing-zone.svg` | `sovereign-landing-zone-2026.svg` | Missing the Public, Confidential Online, Confidential Corp, and Security management groups. |
 | `zero-trust-architecture.svg` | `zero-trust-pillars-2026.svg` | Did not show the seven technology pillars. |
 | `azure-local-multisite.svg` | Mermaid on the multi-site page | Showed synchronous replication between sites, which current Azure Local guidance does not describe. |
@@ -82,3 +82,4 @@ labels that contain spaces, and update them with the page text.
 - [What is Microsoft Defender for Cloud?](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [Azure Key Vault Managed HSM overview](https://learn.microsoft.com/azure/key-vault/managed-hsm/overview)
 - [Azure architecture icons](https://learn.microsoft.com/azure/architecture/icons/)
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)

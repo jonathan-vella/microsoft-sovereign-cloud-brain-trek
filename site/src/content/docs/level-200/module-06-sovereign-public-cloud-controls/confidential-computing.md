@@ -1,7 +1,7 @@
 ---
 title: "Confidential computing"
 description: "Plan Azure confidential VMs, confidential containers, attestation, and Secure Key Release for encryption-in-use requirements."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 4
 ---
@@ -69,7 +69,7 @@ Secure Key Release ties key release to attestation. Azure Key Vault Premium and 
 
 This pattern is useful for Level 3 workloads because it joins encryption in use with key control. The data remains encrypted until the workload proves that it is running in the expected trusted environment. Then the key is released into that environment.
 
-Do not confuse SKR with Managed HSM External Key Management. SKR is an attestation-gated key release pattern. EKM is a preview key custody pattern that delegates wrap and unwrap operations to an external HSM. The EKM preview does not support SKR.
+Do not confuse SKR with Managed HSM External Key Management. SKR is an attestation-gated key release pattern. EKM is a generally available key custody pattern that delegates wrap and unwrap operations to an external HSM. EKM does not support SKR. ([Learn](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview))
 
 ## Level 3 design checklist
 
@@ -89,3 +89,4 @@ Do not confuse SKR with Managed HSM External Key Management. SKR is an attestati
 - [Confidential containers on Azure Container Instances](https://learn.microsoft.com/azure/container-instances/container-instances-confidential-overview)
 - [Microsoft Azure Attestation](https://learn.microsoft.com/azure/attestation/overview)
 - [Secure Key Release feature with AKV and Azure Confidential Computing](https://learn.microsoft.com/azure/confidential-computing/concept-skr-attestation)
+- [What is Managed HSM external key management?](https://learn.microsoft.com/azure/key-vault/managed-hsm/external-key-management-overview)

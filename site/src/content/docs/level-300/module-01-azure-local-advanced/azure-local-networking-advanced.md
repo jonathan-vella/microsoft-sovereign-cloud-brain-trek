@@ -1,7 +1,7 @@
 ---
 title: "Azure Local advanced networking"
 description: "Plan Azure Local host networking, Network ATC intents, RDMA, SDN, logical networks, Arc gateway, and multi-rack network boundaries."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 3
 ---
@@ -66,7 +66,7 @@ Do not mix SDN management methods. If SDN is enabled by Arc, manage it only with
 
 Connected Azure Local deployments need outbound access to Azure endpoints. [Arc gateway for Azure Local](https://learn.microsoft.com/azure/azure-local/deploy/deployment-azure-arc-gateway-overview?view=azloc-2609) can reduce the number of required endpoints. It introduces an Arc gateway resource in Azure and an Arc proxy service on Arc-enabled resources.
 
-Arc gateway for Azure Local infrastructure and Azure Local VMs is generally available. Arc gateway for AKS on Azure Local is still preview. You can enable it on new Azure Local deployments running software version 2506 or later, but Microsoft states that you cannot enable Arc gateway after deployment.
+Arc gateway for Azure Local infrastructure and Azure Local VMs is generally available. Arc gateway for AKS on Azure Local is still preview ([Learn](https://learn.microsoft.com/azure/azure-local/deploy/deployment-azure-arc-gateway-overview)). You can enable it on new deployments running version 2506 or later. Enabling it after deployment is now preview for hyperconverged instances running Azure Local 2610 or later. This preview cannot be disabled after enablement and does not automatically change existing AKS clusters' proxy settings ([Learn](https://learn.microsoft.com/azure/azure-local/manage/enable-arc-gateway-after-deployment)).
 
 Plan the exception list carefully. Arc gateway does not support HTTP traffic, so HTTP endpoints such as certificate revocation endpoints still need proxy or firewall access. It also does not support TLS terminating proxies. For Azure Local VMs, Arc HTTPS traffic can be sent to Arc gateway, but traffic for endpoints not managed by Arc gateway still routes through the enterprise proxy or firewall.
 
@@ -84,10 +84,12 @@ Do not apply small-cluster switchless assumptions to multi-rack. Multi-rack has 
 - Match RDMA protocol and DCB requirements to the adapter and switch design.
 - Treat logical networks as workload placement networks, not as site recovery.
 - Use Arc-managed SDN only for its supported resources.
-- Decide on Arc gateway during deployment, not after deployment.
+- Prefer configuring Arc gateway during deployment. For existing instances, review the 2610-or-later preview requirements and validate each existing AKS cluster separately ([Learn](https://learn.microsoft.com/azure/azure-local/manage/enable-arc-gateway-after-deployment)).
 - Keep proxy bypass lists, firewall rules, certificate revocation endpoints, and AKS subnet exceptions in the architecture record.
 
 ## Sources
+
+- [Enable Azure Arc gateway after deployment on Azure Local (preview)](https://learn.microsoft.com/azure/azure-local/manage/enable-arc-gateway-after-deployment)
 
 - [Deploy host networking with Network ATC](https://learn.microsoft.com/azure/azure-local/deploy/network-atc?view=azloc-2609)
 - [Network considerations for cloud deployments of Azure Local](https://learn.microsoft.com/azure/azure-local/plan/cloud-deployment-network-considerations?view=azloc-2609)

@@ -1,7 +1,7 @@
 ---
 title: "Knowledge check: Azure Local architecture"
 description: "Check your understanding of Azure Local deployment types, rack-aware clustering, releases, hardware, HA, networking, VM tiers, and AKS."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 99
 ---
@@ -77,11 +77,11 @@ A connected Azure Local site loses Azure connectivity for 12 days because of an 
 - A) Running workloads continue because connected operations tolerate intermittent disconnections up to 30 days.
 - B) All VMs shut down after 24 hours.
 - C) Azure Local immediately converts to disconnected operations.
-- D) AKS becomes generally available for disconnected operations.
+- D) The site automatically switches to GA disconnected AKS.
 
 <KnowledgeCheck answer="A" reference="/level-200/module-01-azure-local/azure-local-architecture-deep-dive/">
 
-A is correct because connected operations tolerate intermittent disconnections up to 30 days without affecting running workloads. B is wrong because 24 hours is not the documented limit. C is wrong because disconnected operations is a procured and planned mode, not an automatic conversion. D is wrong because AKS under disconnected operations is still preview.
+A is correct because connected operations tolerate intermittent disconnections up to 30 days without affecting running workloads. B is wrong because 24 hours is not the documented limit. C and D are wrong because disconnected operations are a separate, planned mode, not an automatic conversion. AKS under disconnected operations is GA from disconnected operations release 2609 ([Learn](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new#features-and-improvements-in-2609)).
 
 </KnowledgeCheck>
 
@@ -161,6 +161,8 @@ A is correct because KMS v2 is enabled by default for new AKS on Azure Local clu
 </KnowledgeCheck>
 
 ## Sources
+
+- [What's new in disconnected operations for Azure Local](https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-whats-new)
 
 - [Find your Azure Local deployment type](https://learn.microsoft.com/azure/azure-local/plan/find-your-deployment-type)
 - [Azure Local rack aware clustering overview](https://learn.microsoft.com/azure/azure-local/concepts/rack-aware-cluster-overview)

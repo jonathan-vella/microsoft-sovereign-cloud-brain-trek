@@ -1,7 +1,7 @@
 ---
 title: "SLZ implementation"
 description: "Compare Sovereign Landing Zone implementation paths, including Bicep, Terraform, Azure Landing Zones Library, and Microsoft.Sovereign resources."
-lastVerified: 2026-10-02
+lastVerified: 2026-11-01
 sidebar:
   order: 3
 ---
